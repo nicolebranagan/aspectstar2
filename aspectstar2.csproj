@@ -40,6 +40,8 @@
   <ItemGroup>
     <Compile Include="AdventureScreen.cs" />
     <Compile Include="Game.cs" />
+    <Compile Include="MapObject.cs" />
+    <Compile Include="MapScreen.cs" />
     <Compile Include="Master.cs" />
     <Compile Include="AdventureObject.cs" />
     <Compile Include="Program.cs" />

@@ -31,6 +31,11 @@ namespace aspectstar2
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+
+            // NES resolution: 256x240;
+            //graphics.PreferredBackBufferWidth = (256*2);
+            //graphics.PreferredBackBufferHeight = (240*2);
+            graphics.ApplyChanges();
         }
 
         /// <summary>
