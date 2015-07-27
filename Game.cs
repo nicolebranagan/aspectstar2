@@ -18,7 +18,7 @@ namespace aspectstar2
 
         public Screen Begin()
         {
-            return new AdventureScreen(this);
+            return new MapScreen(this);
         }
     }
 }
