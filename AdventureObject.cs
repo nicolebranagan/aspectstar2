@@ -12,7 +12,7 @@ namespace aspectstar2
         protected Texture2D texture;
         protected int currentFrame = 0;
         int stallCount = 0;
-        protected Vector2 offset = new Vector2(16,16);
+        protected Vector2 offset = new Vector2(16,32);
 
         public Master.Directions faceDir;
         public bool moving;
@@ -56,12 +56,13 @@ namespace aspectstar2
 
         public virtual void Draw(SpriteBatch spriteBatch, Color mask)
         {
-            int dim = 32;
+            int dim_x = 32;
+            int dim_y = 48;
             int column = ((int)faceDir * 2) + currentFrame;
             Vector2 screen_loc = location - offset;
 
-            Rectangle sourceRectangle = new Rectangle(dim * column, 0, dim, dim);
-            Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y, dim, dim);
+            Rectangle sourceRectangle = new Rectangle(dim_x * column, 0, dim_x, dim_y);
+            Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y, dim_x, dim_y);
 
             spriteBatch.Begin();
             spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, mask);
@@ -78,7 +79,7 @@ namespace aspectstar2
     {
         public AdventurePlayer()
         {
-            this.texture = Master.texCollection.texPlayer;
+            this.texture = Master.texCollection.texAdvPlayer;
             this.location = new Vector2(100, 100);
         }
 

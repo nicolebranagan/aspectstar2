@@ -84,7 +84,8 @@ namespace aspectstar2
             // Load in-game content
             texCollection.arcadeFont = Content.Load<Texture2D>("arcadefont");
             texCollection.worldTiles = Content.Load<Texture2D>("protoworld");
-            texCollection.texPlayer = Content.Load<Texture2D>("nadine_3col");
+            texCollection.texMapPlayer = Content.Load<Texture2D>("nadine_3col");
+            texCollection.texAdvPlayer = Content.Load<Texture2D>("advplayer");
 
             // Load title screen
             currentScreen = new TitleScreen(this);
@@ -150,8 +151,8 @@ namespace aspectstar2
 
         public Texture2D worldTiles;
 
-        public Texture2D texPlayer;
-
+        public Texture2D texMapPlayer;
+        public Texture2D texAdvPlayer;
     }
 
     public struct Controls

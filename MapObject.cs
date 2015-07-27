@@ -31,8 +31,7 @@ namespace aspectstar2
             }
         }
         public Vector2 location;
-        Vector2 target_loc;
-
+        
         int moveCount = 0;
         bool renewMove = false;
         public bool moving
@@ -55,7 +54,7 @@ namespace aspectstar2
         public MapPlayer(MapScreen parent)
         {
             this.parent = parent;
-            this.texture = Master.texCollection.texPlayer;
+            this.texture = Master.texCollection.texMapPlayer;
         }
 
         public void Update()
