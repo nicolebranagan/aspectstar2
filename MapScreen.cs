@@ -23,7 +23,7 @@ namespace aspectstar2
         {
             this.game = game;
             this.master = game.master;
-            this.player = new MapPlayer();
+            this.player = new MapPlayer(this);
             tileMap = Master.currentFile.map.tileMap;
             key = Master.currentFile.map.key;
         }
@@ -97,6 +97,15 @@ namespace aspectstar2
             {
                 player.moving = false;
             }
+        }
+
+        public bool tileSolid(int x, int y)
+        {
+            int i = x + (y * Mapfile.width);
+            if (i < 0)
+                return false;
+            else
+                return key[tileMap[i]] == 1;
         }
     }
 }

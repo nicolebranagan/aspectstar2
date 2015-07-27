@@ -42,6 +42,7 @@ namespace aspectstar2
             // NES resolution: 256x240;
             //graphics.PreferredBackBufferWidth = (256*2);
             //graphics.PreferredBackBufferHeight = (240*2);
+            Window.Title = "Aspect Star 2";
             graphics.ApplyChanges();
         }
 

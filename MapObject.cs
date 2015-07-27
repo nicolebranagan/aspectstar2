@@ -14,6 +14,8 @@ namespace aspectstar2
 
     class MapPlayer
     {
+        MapScreen parent;
+         
         protected Texture2D texture;
         protected int currentFrame = 0;
         int stallCount = 0;
@@ -49,13 +51,15 @@ namespace aspectstar2
             }
         }
 
-        public MapPlayer()
+        public MapPlayer(MapScreen parent)
         {
+            this.parent = parent;
+
             this.texture = Master.texCollection.texPlayer;
             this.location = new Vector2(32, 32);
         }
 
-        public virtual void Update()
+        public void Update()
         {
             if (stallCount == 10)
             {
@@ -95,9 +99,14 @@ namespace aspectstar2
                 if (this.moveCount == 0 & this.renewMove)
                     this.moveCount = 16;
             }
+            else if (moveCount == 0)
+            {
+                this.location.X = (float)Math.Floor(this.location.X / 32) * 32;
+                this.location.Y = (float)Math.Floor(this.location.Y / 32) * 32;
+            }
         }
 
-        public virtual void Draw(SpriteBatch spriteBatch, Color mask, Vector2 offset)
+        public void Draw(SpriteBatch spriteBatch, Color mask, Vector2 offset)
         {
             int dim = 32;
             int column = ((int)faceDir * 2) + currentFrame;
@@ -111,9 +120,33 @@ namespace aspectstar2
             spriteBatch.End();
         }
 
-        public virtual void Move(Vector2 move_dist)
+        public void Move(Vector2 move_dist)
         {
-            this.location = this.location + move_dist;
+            int x = (int)Math.Floor(location.X / 32);
+            int y = (int)Math.Floor(location.Y / 32);
+
+            switch (faceDir)
+            {
+                case Master.Directions.Down:
+                    y = y + 1;
+                    break;
+                case Master.Directions.Up:
+                    y = y - 1;
+                    break;
+                case Master.Directions.Left:
+                    x = x - 1;
+                    break;
+                case Master.Directions.Right:
+                    x = x + 1;
+                    break;
+                default:
+                    break; // Something has gone wrong
+            }
+
+            if (!parent.tileSolid(x, y))
+            {
+                this.location = this.location + move_dist;
+            }
         }
     }
 }
