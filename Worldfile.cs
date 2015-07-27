@@ -17,6 +17,8 @@ namespace aspectstar2
         public const int height = 100;
         public int[] tileMap;
         public int[] key;
+        public int startX;
+        public int startY;
     }
 
     public class Adventurefile

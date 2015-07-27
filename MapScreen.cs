@@ -26,6 +26,8 @@ namespace aspectstar2
             this.player = new MapPlayer(this);
             tileMap = Master.currentFile.map.tileMap;
             key = Master.currentFile.map.key;
+
+            player.location = new Vector2(Master.currentFile.map.startX * 32, Master.currentFile.map.startY * 32);
         }
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)

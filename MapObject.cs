@@ -31,6 +31,7 @@ namespace aspectstar2
             }
         }
         public Vector2 location;
+        Vector2 target_loc;
 
         int moveCount = 0;
         bool renewMove = false;
@@ -42,7 +43,7 @@ namespace aspectstar2
                 if (value)
                 {
                     if (moveCount == 0)
-                        moveCount = 16;
+                        Move();
                     else
                         renewMove = true;
                 }
@@ -54,9 +55,7 @@ namespace aspectstar2
         public MapPlayer(MapScreen parent)
         {
             this.parent = parent;
-
             this.texture = Master.texCollection.texPlayer;
-            this.location = new Vector2(32, 32);
         }
 
         public void Update()
@@ -94,10 +93,10 @@ namespace aspectstar2
                     default:
                         break; // Something has gone wrong
                 }
-                this.Move(move_dist);
+                this.location = this.location + move_dist;
                 this.moveCount--;
                 if (this.moveCount == 0 & this.renewMove)
-                    this.moveCount = 16;
+                    this.Move();
             }
             else if (moveCount == 0)
             {
@@ -119,8 +118,8 @@ namespace aspectstar2
             spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, mask);
             spriteBatch.End();
         }
-
-        public void Move(Vector2 move_dist)
+        
+        public void Move()
         {
             int x = (int)Math.Floor(location.X / 32);
             int y = (int)Math.Floor(location.Y / 32);
@@ -145,8 +144,10 @@ namespace aspectstar2
 
             if (!parent.tileSolid(x, y))
             {
-                this.location = this.location + move_dist;
+                this.moveCount = 16;
             }
+            else
+                this.moveCount = 0;
         }
     }
 }
