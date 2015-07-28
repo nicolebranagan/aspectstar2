@@ -307,7 +307,7 @@
       <int>7</int>
       <int>3</int>
       <int>0</int>
-      <int>5</int>
+      <int>0</int>
       <int>5</int>
       <int>9</int>
       <int>0</int>
@@ -727,7 +727,7 @@
       <int>5</int>
       <int>5</int>
       <int>5</int>
-      <int>5</int>
+      <int>0</int>
       <int>0</int>
       <int>0</int>
       <int>0</int>
@@ -10071,6 +10071,16 @@
     </key>
     <startX>4</startX>
     <startY>3</startY>
+    <objects>
+      <MapObject xsi:type="MapTeleporter">
+        <x>25</x>
+        <y>7</y>
+        <dest>-1</dest>
+        <destscreen>0</destscreen>
+        <destx>5</destx>
+        <desty>3</desty>
+      </MapObject>
+    </objects>
   </map>
   <adventures />
 </Worldfile>

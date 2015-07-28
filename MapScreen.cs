@@ -13,11 +13,12 @@ namespace aspectstar2
         Game game;
 
         MapPlayer player;
-        List<MapObject> objects = new List<MapObject>();
 
         Vector2 screenOffset = new Vector2(0, 0);
 
         int[] tileMap; int[] key;
+
+        List<MapObject> objects;
 
         public MapScreen(Game game)
         {
@@ -26,6 +27,7 @@ namespace aspectstar2
             this.player = new MapPlayer(this);
             tileMap = Master.currentFile.map.tileMap;
             key = Master.currentFile.map.key;
+            objects = Master.currentFile.map.objects;
 
             player.location = new Vector2(Master.currentFile.map.startX * 32, Master.currentFile.map.startY * 32);
         }
@@ -39,14 +41,14 @@ namespace aspectstar2
             spriteBatch.Begin();
 
             if (player.location.X > (Master.width / 2))
-            {
                 screenOffset.X = player.location.X - (Master.width / 2);
-            }
-            
+            else
+                screenOffset.X = 0;
+
             if (player.location.Y > (Master.height / 2))
-            {
                 screenOffset.Y = player.location.Y - (Master.height / 2);
-            }
+            else
+                screenOffset.Y = 0;
 
             for (int i = 0; i < (Mapfile.width * Mapfile.height); i++)
             {
@@ -108,6 +110,27 @@ namespace aspectstar2
                 return false;
             else
                 return key[tileMap[i]] == 1;
+        }
+
+        public void checkObjects(int x, int y)
+        {
+            foreach (MapObject m in objects)
+            {
+                if ((m.x == x) && (m.y == y))
+                {
+                    runObject(m);
+                }
+            }
+        }
+
+        void runObject(MapObject m)
+        {
+            if (m is MapTeleporter)
+            {
+                MapTeleporter mT = (MapTeleporter)m;
+                // TODO: Go to adventures
+                player.location = new Vector2(mT.destx*32, mT.desty*32);
+            }
         }
     }
 }

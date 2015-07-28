@@ -19,6 +19,7 @@ namespace aspectstar2
         public int[] key;
         public int startX;
         public int startY;
+        public List<MapObject> objects;
     }
 
     public class Adventurefile
