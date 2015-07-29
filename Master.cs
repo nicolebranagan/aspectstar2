@@ -61,6 +61,8 @@ namespace aspectstar2
             controls.Down = Keys.Down;
             controls.Left = Keys.Left;
             controls.Right = Keys.Right;
+            controls.A = Keys.X;
+            controls.B = Keys.Z;
 
             base.Initialize();
         }
@@ -87,6 +89,7 @@ namespace aspectstar2
             texCollection.dungeonTiles = Content.Load<Texture2D>("dungeon1");
             texCollection.texMapPlayer = Content.Load<Texture2D>("mapplayer");
             texCollection.texAdvPlayer = Content.Load<Texture2D>("advplayer");
+            texCollection.texShadows = Content.Load<Texture2D>("shadows");
 
             // Load title screen
             currentScreen = new TitleScreen(this);
@@ -160,10 +163,12 @@ namespace aspectstar2
 
         public Texture2D texMapPlayer;
         public Texture2D texAdvPlayer;
+
+        public Texture2D texShadows;
     }
 
     public struct Controls
     {
-        public Keys Up, Down, Left, Right;
+        public Keys Up, Down, Left, Right, A, B;
     }
 }

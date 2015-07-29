@@ -29,7 +29,7 @@ namespace aspectstar2
             this.tileMap = Master.currentFile.adventures[dest].rooms[roomX, roomY].tileMap;
 
             objects.Add(this.player);
-            player.location = new Vector2(x * 32, (y + 2) * 32);
+            player.location = new Vector2(x * 32, y * 32);
         }
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
@@ -53,7 +53,7 @@ namespace aspectstar2
                 y = i / 25;
                 sourceTile = Master.getMapTile(tileMap[i], Master.texCollection.dungeonTiles);
                 source = new Rectangle((int)sourceTile.X, (int)sourceTile.Y, 32, 32);
-                dest = new Rectangle(x * 32, (y + 2) * 32, 32, 32);
+                dest = new Rectangle(x * 32, y * 32, 32, 32);
                 spriteBatch.Draw(Master.texCollection.dungeonTiles, dest, source, Color.White);
             }
             spriteBatch.End();
@@ -94,6 +94,9 @@ namespace aspectstar2
             {
                 player.moving = false;
             }
+            
+            if (state.IsKeyDown(Master.controls.A))
+                player.Jump();
         }
     }
 }

@@ -17,6 +17,8 @@ namespace aspectstar2
         public Master.Directions faceDir;
         public bool moving;
         public Vector2 location;
+        int z = 0;
+        int vz = 0;
 
         public virtual void Update()
         {
@@ -29,6 +31,18 @@ namespace aspectstar2
             }
             else
                 stallCount++;
+
+            if ((stallCount % 4 == 0))
+            {
+                z = z + vz;
+                if (z > 0)
+                    vz = vz - 1;
+                else
+                {
+                    z = 0;
+                    vz = 0;
+                }
+            }
 
             if ((stallCount % 4 != 0) && (moving))
             {
@@ -62,7 +76,7 @@ namespace aspectstar2
             Vector2 screen_loc = location - offset;
 
             Rectangle sourceRectangle = new Rectangle(dim_x * column, 0, dim_x, dim_y);
-            Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y, dim_x, dim_y);
+            Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y - (z * 2), dim_x, dim_y);
 
             spriteBatch.Begin();
             spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, mask);
@@ -72,6 +86,12 @@ namespace aspectstar2
         public virtual void Move(Vector2 move_dist)
         {
             this.location = this.location + move_dist;
+        }
+
+        public void Jump()
+        {
+            if (this.z == 0)
+                this.vz = +5;
         }
     }
 
@@ -85,6 +105,19 @@ namespace aspectstar2
 
         public override void Draw(SpriteBatch spriteBatch, Color mask)
         {
+
+            int dim_x = 32;
+            int dim_y = 48;
+            int column = ((int)faceDir * 2) + currentFrame;
+            Vector2 screen_loc = location - offset;
+
+            Rectangle sourceRectangle = new Rectangle(dim_x * column, 0, dim_x, dim_y);
+            Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y, dim_x, dim_y);
+
+            spriteBatch.Begin();
+            spriteBatch.Draw(Master.texCollection.texShadows, destinationRectangle, sourceRectangle, mask);
+            spriteBatch.End();
+
             base.Draw(spriteBatch, mask);
         }
 
