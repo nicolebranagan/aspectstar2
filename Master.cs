@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 using System.IO;
 using System.Xml.Serialization;
 
@@ -149,6 +150,17 @@ namespace aspectstar2
             int height = map.Height / 32;
 
             return new Vector2(index % width * 32, index / width * 32);
+        }
+
+        public static int[] sumRooms(int[] roomleft, int[] roomright, int roomwidth, int roomheight)
+        {
+            int[] summed = new int[roomwidth * roomheight * 2];
+            for (int i = 0; i < roomheight; i++)
+            {
+                Array.Copy(roomleft, i * roomwidth, summed, 2 * i * roomwidth, roomwidth);
+                Array.Copy(roomright, i * roomwidth, summed, (2 * i + 1) * roomwidth, roomwidth);
+            }
+            return summed;
         }
     }
 

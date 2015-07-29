@@ -9,10 +9,14 @@ namespace aspectstar2
 {
     abstract class AdventureObject
     {
+        protected AdventureScreen parent;
         protected Texture2D texture;
+        
         protected int currentFrame = 0;
         int stallCount = 0;
-        protected Vector2 offset = new Vector2(16,32);
+        protected Vector2 offset = new Vector2(16,40);
+        protected int width = 14;
+        protected int height = 6;
 
         public Master.Directions faceDir;
         public bool moving;
@@ -85,7 +89,10 @@ namespace aspectstar2
 
         public virtual void Move(Vector2 move_dist)
         {
-            this.location = this.location + move_dist;
+            Vector2 test = move_dist + location;
+            if ((test.X - width) >= 0 && (test.Y - height) >= 0 && (test.X + width) < (25 * 32) && (test.Y + height) < (13 * 32) )
+                if (!this.parent.isSolid(test, z, width, height))
+                    this.location = test;
         }
 
         public void Jump()
@@ -97,10 +104,11 @@ namespace aspectstar2
 
     class AdventurePlayer : AdventureObject
     {
-        public AdventurePlayer()
+        public AdventurePlayer(AdventureScreen parent)
         {
             this.texture = Master.texCollection.texAdvPlayer;
             this.location = new Vector2(100, 100);
+            this.parent = parent;
         }
 
         public override void Draw(SpriteBatch spriteBatch, Color mask)
@@ -127,6 +135,21 @@ namespace aspectstar2
 
             if (!this.moving)
                 this.currentFrame = 0;
+        }
+
+        public override void Move(Vector2 move_dist)
+        {
+            Vector2 test = move_dist + location;
+            if ((test.X - width) <= 0)
+                parent.enterNewRoom(-1, 0);
+            else if ((test.Y - height) <= 0)
+                parent.enterNewRoom(0, -1);
+            else if ((test.X + width) >= (25 * 32))
+                parent.enterNewRoom(1, 0);
+            else if ((test.Y + height) >= (13 * 32))
+                parent.enterNewRoom(0, 1);
+            else
+                base.Move(move_dist);
         }
     }
 }
