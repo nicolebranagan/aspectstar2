@@ -16,6 +16,6 @@ namespace aspectstar2
 
     public class MapTeleporter : MapObject
     {
-        public int dest, destscreen, destx, desty; // if dest = -1, stay on map
+        public int dest, destroomX, destroomY, destx, desty; // if dest = -1, stay on map
     }
 }

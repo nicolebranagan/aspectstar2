@@ -20,5 +20,11 @@ namespace aspectstar2
         {
             return new MapScreen(this);
         }
+
+        public void enterAdventureFromMap(int dest, int destroomX, int destroomY, int destx, int desty)
+        {
+            AdventureScreen aS = new AdventureScreen(this, dest, destroomX, destroomY, destx, desty);
+            master.UpdateScreen(aS);
+        }
     }
 }

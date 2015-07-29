@@ -58,7 +58,7 @@ namespace aspectstar2
                 if ((x >= limitOffset.X) && (x <= limitOffset.X + Master.width) &&
                     (y >= limitOffset.Y) && (y <= limitOffset.Y + Master.height))
                 {
-                    sourceTile = Master.getMapTile(tileMap[i]);
+                    sourceTile = Master.getMapTile(tileMap[i], Master.texCollection.worldTiles);
                     source = new Rectangle((int)sourceTile.X, (int)sourceTile.Y, 32, 32);
                     dest = new Rectangle(x * 32 - (int)screenOffset.X, y * 32 - (int)screenOffset.Y, 32, 32);
                     spriteBatch.Draw(Master.texCollection.worldTiles, dest, source, Color.White);
@@ -128,8 +128,10 @@ namespace aspectstar2
             if (m is MapTeleporter)
             {
                 MapTeleporter mT = (MapTeleporter)m;
-                // TODO: Go to adventures
-                player.location = new Vector2(mT.destx*32, mT.desty*32);
+                if (mT.dest == -1)
+                    player.location = new Vector2(mT.destx * 32, mT.desty * 32);
+                else
+                    game.enterAdventureFromMap(mT.dest, mT.destroomX, mT.destroomY, mT.destx, mT.desty);
             }
         }
     }

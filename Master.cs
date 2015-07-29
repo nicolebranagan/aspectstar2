@@ -84,6 +84,7 @@ namespace aspectstar2
             // Load in-game content
             texCollection.arcadeFont = Content.Load<Texture2D>("arcadefont");
             texCollection.worldTiles = Content.Load<Texture2D>("protoworld");
+            texCollection.dungeonTiles = Content.Load<Texture2D>("dungeon1");
             texCollection.texMapPlayer = Content.Load<Texture2D>("mapplayer");
             texCollection.texAdvPlayer = Content.Load<Texture2D>("advplayer");
 
@@ -134,10 +135,15 @@ namespace aspectstar2
             currentScreen = currentGame.Begin();
         }
 
-        public static Vector2 getMapTile(int index)
+        public void UpdateScreen(Screen screen)
         {
-            int width = texCollection.worldTiles.Width / 32;
-            int height = texCollection.worldTiles.Height / 32;
+            this.currentScreen = screen;
+        }
+
+        public static Vector2 getMapTile(int index, Texture2D map)
+        {
+            int width = map.Width / 32;
+            int height = map.Height / 32;
 
             return new Vector2(index % width * 32, index / width * 32);
         }
@@ -150,6 +156,7 @@ namespace aspectstar2
         public Texture2D arcadeFont;
 
         public Texture2D worldTiles;
+        public Texture2D dungeonTiles;
 
         public Texture2D texMapPlayer;
         public Texture2D texAdvPlayer;
