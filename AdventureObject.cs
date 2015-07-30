@@ -145,12 +145,13 @@ namespace aspectstar2
 
         public void Drown(SpriteBatch spriteBatch, int animCount)
         {
+            currentFrame++;
             int dim_x = 32;
             int dim_y = 48;
-            int column = ((int)faceDir * 2) + currentFrame;
+            int column = (currentFrame % 16 > 8) ? 0 : 1;
             Vector2 screen_loc = location - offset;
 
-            Rectangle sourceRectangle = new Rectangle(dim_x * column, 0, dim_x, dim_y - ((24 - animCount) * 2));
+            Rectangle sourceRectangle = new Rectangle(dim_x * column, 48, dim_x, dim_y - ((24 - animCount) * 2));
             Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y + (24 - animCount) *2, dim_x, dim_y - ((24 - animCount)*2));
 
             spriteBatch.Begin();

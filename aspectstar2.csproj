@@ -39,6 +39,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AdventureScreen.cs" />
+    <Compile Include="PlaySound.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="MapObject.cs" />
     <Compile Include="MapPlayer.cs" />

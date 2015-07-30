@@ -60,10 +60,38 @@ namespace aspectstar2
                 }
             }
         }
+
+        public Adventure Clone()
+        {
+            Adventure newAdv = new Adventure();
+            newAdv.tileset = tileset;
+            newAdv.key = new int[key.Length];
+            key.CopyTo(newAdv.key, 0);
+
+            for (int i = 0; i < 16; i++)
+                for (int j = 0; j < 16; j++)
+                {
+                    if (rooms[i,j] != null)
+                        newAdv.rooms[i,j] = rooms[i,j].Clone();
+                }
+
+            return newAdv;
+        }
     }
 
     public class Room
     {
         public int[] tileMap;
+
+        public Room Clone()
+        {
+            Room newRoom = new Room();
+
+            newRoom.tileMap = new int[tileMap.Length];
+            tileMap.CopyTo(newRoom.tileMap, 0);
+
+            return newRoom;
+        }
+
     }
 }

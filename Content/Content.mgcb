@@ -90,3 +90,15 @@
 /processorParam:TextureFormat=Color
 /build:menu.png
 
+#begin die.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:die.wav
+
+#begin aspect.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:aspect.wav
+

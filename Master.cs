@@ -5,6 +5,7 @@ using System;
 using System.IO;
 using System.Xml.Serialization;
 using System.Drawing;
+using Microsoft.Xna.Framework.Audio;
 
 namespace aspectstar2
 {
@@ -94,7 +95,11 @@ namespace aspectstar2
             texCollection.texMapPlayer = Content.Load<Texture2D>("mapplayer");
             texCollection.texAdvPlayer = Content.Load<Texture2D>("advplayer");
             texCollection.texShadows = Content.Load<Texture2D>("shadows");
-            
+
+            // Load sound effects
+            PlaySound.die = Content.Load<SoundEffect>("die");
+            PlaySound.aspect = Content.Load<SoundEffect>("aspect");
+
             // Load title screen
             currentScreen = new TitleScreen(this);
         }
