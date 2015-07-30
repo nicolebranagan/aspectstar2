@@ -13,6 +13,7 @@ namespace aspectstar2
         public int life = 5;
         public int possibleLife = 10;
         AdventureScreen currentAdventure;
+        MapScreen currentMap;
 
         public Game(Master master)
         {
@@ -21,14 +22,27 @@ namespace aspectstar2
 
         public Screen Begin()
         {
-            return new MapScreen(this);
+            currentMap = new MapScreen(this);
+            return currentMap;
         }
 
         public void enterAdventureFromMap(int dest, int destroomX, int destroomY, int destx, int desty)
         {
             AdventureScreen aS = new AdventureScreen(this, dest, destroomX, destroomY, destx, desty);
+            aS.fromMap = true;
             currentAdventure = aS;
             master.UpdateScreen(aS);
+        }
+
+        public void exitAdventure()
+        {
+            if (currentAdventure.fromMap)
+            {
+                master.UpdateScreen(currentMap);
+                currentAdventure = null;
+            }
+            if (life == 0)
+                life = 5;
         }
     }
 }

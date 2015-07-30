@@ -13,6 +13,8 @@ namespace aspectstar2
     {
         Game game;
 
+        public bool fromMap;
+
         AdventurePlayer player;
         List<AdventureObject> objects = new List<AdventureObject>();
         Adventure adventure;
@@ -27,7 +29,8 @@ namespace aspectstar2
             runMode,
             drowning,
             scrollingX,
-            scrollingY
+            scrollingY,
+            fadeOut
         }
 
         enum tileType
@@ -35,7 +38,8 @@ namespace aspectstar2
             Clear = 0,
             Solid = 1,
             Crevasse = 2,
-            Injury = 3
+            Injury = 3,
+            Warp = 4
         }
 
         public AdventureScreen(Game game, int dest, int destroomX, int destroomY, int x, int y)
@@ -92,6 +96,45 @@ namespace aspectstar2
             return false;
         }
 
+        public void tileAction(Vector2 dest, int width, int height)
+        {
+            int i, x, y;
+            //Top Left
+            x = (int)Math.Floor((dest.X - width) / 32);
+            y = (int)Math.Floor((dest.Y - height) / 32);
+            i = x + (y * 25);
+            if ((tileType)key[tileMap[i]] == tileType.Injury)
+                tileAction(i);
+
+            // Bottom Left
+            x = (int)Math.Floor((dest.X + width) / 32);
+            y = (int)Math.Floor((dest.Y - height) / 32);
+            i = x + (y * 25);
+            if ((tileType)key[tileMap[i]] == tileType.Injury)
+                tileAction(i);
+
+            // Top Right
+            x = (int)Math.Floor((dest.X - width) / 32);
+            y = (int)Math.Floor((dest.Y + height) / 32);
+            i = x + (y * 25);
+            if ((tileType)key[tileMap[i]] == tileType.Injury)
+                tileAction(i);
+
+
+            // Bottom Right
+            x = (int)Math.Floor((dest.X + width) / 32);
+            y = (int)Math.Floor((dest.Y + height) / 32);
+            i = x + (y * 25);
+                tileAction(i);
+        }
+
+        void tileAction(int i)
+        {
+            tileType tile = (tileType)key[tileMap[i]];
+            if (tile == tileType.Warp)
+                game.exitAdventure();
+        }
+
         public bool isInjury(Vector2 dest, int width, int height)
         {
             // Checks for the solidity of a rectangle; width and height are measured from the center of the rectangle
@@ -142,7 +185,7 @@ namespace aspectstar2
                 case adventureModes.drowning:
                     if (animCount == 0)
                     {
-                        DrawRoom(spriteBatch);
+                        DrawRoom(spriteBatch, Color.White);
                         drawStatus(spriteBatch);
                         if (game.life > 2)
                         {
@@ -152,11 +195,14 @@ namespace aspectstar2
                             currentMode = adventureModes.runMode;
                         }
                         else
+                        {
                             game.life = 0;
+                            Die();
+                        }
                         return;
                     }
 
-                    DrawRoom(spriteBatch);
+                    DrawRoom(spriteBatch, Color.White);
                     player.Drown(spriteBatch, animCount);
 
                     if (stallCount > 0)
@@ -169,12 +215,23 @@ namespace aspectstar2
                         animCount--;
                     }
                     break;
+                case adventureModes.fadeOut:
+                    Color mask = Color.White;
+                    Color mask2 = Color.White;
+                    mask.G = (byte)(animCount / 2);
+                    mask.B = (byte)(animCount / 2);
+                    mask.R = (byte)(animCount);
+                    mask2.R = (byte)(animCount / 2);
+                    mask2.G = (byte)(animCount / 2);
+                    mask2.B = (byte)(animCount / 2);
+                    DrawRoom(spriteBatch, mask);
+                    break;
                 case adventureModes.scrollingX:
                 case adventureModes.scrollingY:
                     scroll(spriteBatch);
                     break;
                 case adventureModes.runMode:
-                    DrawRoom(spriteBatch);
+                    DrawRoom(spriteBatch, Color.White);
                     foreach (AdventureObject obj in this.objects)
                     {
                         obj.Draw(spriteBatch, Color.White);
@@ -184,7 +241,7 @@ namespace aspectstar2
             drawStatus(spriteBatch);
         }
 
-        void DrawRoom(SpriteBatch spriteBatch)
+        void DrawRoom(SpriteBatch spriteBatch, Color mask)
         {
             int x, y;
             Rectangle source, dest;
@@ -197,7 +254,7 @@ namespace aspectstar2
                 sourceTile = Master.getMapTile(tileMap[i], Master.texCollection.dungeonTiles);
                 source = new Rectangle((int)sourceTile.X, (int)sourceTile.Y, 32, 32);
                 dest = new Rectangle(x * 32, y * 32, 32, 32);
-                spriteBatch.Draw(Master.texCollection.dungeonTiles, dest, source, Color.White);
+                spriteBatch.Draw(Master.texCollection.dungeonTiles, dest, source, mask);
             }
             spriteBatch.End();
         }
@@ -394,6 +451,11 @@ namespace aspectstar2
         {
             switch (currentMode)
             {
+                case adventureModes.fadeOut:
+                    animCount = animCount - 2;
+                    if (animCount == 0)
+                        game.exitAdventure();
+                    break;
                 case adventureModes.runMode:
                     UpdateRoom();
                     break;
@@ -438,6 +500,12 @@ namespace aspectstar2
             
             if (state.IsKeyDown(Master.controls.A))
                 player.Jump();
+        }
+
+        public void Die()
+        {
+            animCount = 250;
+            currentMode = adventureModes.fadeOut;
         }
     }
 }

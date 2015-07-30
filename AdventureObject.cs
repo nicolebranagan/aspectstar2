@@ -165,6 +165,9 @@ namespace aspectstar2
                 game.life = game.life - 1;
                 Flicker();
             }
+
+            if (game.life <= 0)
+                parent.Die();
         }
 
         public void Flicker()
@@ -193,11 +196,12 @@ namespace aspectstar2
                 parent.enterNewRoom(0, 1);
             else
             {
+                base.Move(move_dist);
                 if ((z == 0) && (parent.isInjury(test, width, height)))
                 {
                     Hurt();
                 }
-                base.Move(move_dist);
+                parent.tileAction(test, width, height);
             }
         }
     }
