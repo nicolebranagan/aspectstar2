@@ -17,6 +17,7 @@ namespace aspectstar2
         List<AdventureObject> objects = new List<AdventureObject>();
         Adventure adventure;
         int roomX, roomY;
+        Vector2 first_pos;
         int[] tileMap, key;
 
         int animCount, stallCount;
@@ -33,14 +34,15 @@ namespace aspectstar2
         {
             Clear = 0,
             Solid = 1,
-            Crevasse = 2
+            Crevasse = 2,
+            Injury = 3
         }
 
         public AdventureScreen(Game game, int dest, int destroomX, int destroomY, int x, int y)
         {
             this.game = game;
             this.master = game.master;
-            this.player = new AdventurePlayer(this);
+            this.player = new AdventurePlayer(this, game);
 
             this.adventure = Master.currentFile.adventures[dest];
             this.key = Master.currentFile.adventures[dest].key;
@@ -49,6 +51,7 @@ namespace aspectstar2
             this.tileMap = Master.currentFile.adventures[dest].rooms[roomX, roomY].tileMap;
 
             objects.Add(this.player);
+            this.first_pos = new Vector2(x * 32, y * 32);
             player.location = new Vector2(x * 32, y * 32);
         }
 
@@ -89,6 +92,43 @@ namespace aspectstar2
             return false;
         }
 
+        public bool isInjury(Vector2 dest, int width, int height)
+        {
+            // Checks for the solidity of a rectangle; width and height are measured from the center of the rectangle
+
+            int i, x, y;
+            //Top Left
+            x = (int)Math.Floor((dest.X - width) / 32);
+            y = (int)Math.Floor((dest.Y - height) / 32);
+            i = x + (y * 25);
+            if ((tileType)key[tileMap[i]] == tileType.Injury)
+                return true;
+
+            // Bottom Left
+            x = (int)Math.Floor((dest.X + width) / 32);
+            y = (int)Math.Floor((dest.Y - height) / 32);
+            i = x + (y * 25);
+            if ((tileType)key[tileMap[i]] == tileType.Injury)
+                return true;
+
+            // Top Right
+            x = (int)Math.Floor((dest.X - width) / 32);
+            y = (int)Math.Floor((dest.Y + height) / 32);
+            i = x + (y * 25);
+            if ((tileType)key[tileMap[i]] == tileType.Injury)
+                return true;
+
+
+            // Bottom Right
+            x = (int)Math.Floor((dest.X + width) / 32);
+            y = (int)Math.Floor((dest.Y + height) / 32);
+            i = x + (y * 25);
+            if ((tileType)key[tileMap[i]] == tileType.Injury)
+                return true;
+
+            return false;
+        }
+
         public void Drown()
         {
             currentMode = adventureModes.drowning;
@@ -103,6 +143,16 @@ namespace aspectstar2
                     if (animCount == 0)
                     {
                         DrawRoom(spriteBatch);
+                        drawStatus(spriteBatch);
+                        if (game.life > 2)
+                        {
+                            game.life = game.life - 2;
+                            player.location = first_pos;
+                            player.Flicker();
+                            currentMode = adventureModes.runMode;
+                        }
+                        else
+                            game.life = 0;
                         return;
                     }
 
@@ -131,6 +181,7 @@ namespace aspectstar2
                     }
                     break;
             }
+            drawStatus(spriteBatch);
         }
 
         void DrawRoom(SpriteBatch spriteBatch)
@@ -148,6 +199,47 @@ namespace aspectstar2
                 dest = new Rectangle(x * 32, y * 32, 32, 32);
                 spriteBatch.Draw(Master.texCollection.dungeonTiles, dest, source, Color.White);
             }
+            spriteBatch.End();
+        }
+
+        void drawStatus(SpriteBatch spriteBatch)
+        {
+            int x, y;
+            Rectangle source, dest;
+            spriteBatch.Begin();
+
+            // Controls icons
+            x = 18;
+            y = 13;
+            source = new Rectangle(0, 0, 64, 64);
+            dest = new Rectangle(x * 32, y * 32, 64, 64);
+            spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
+
+            x = 21;
+            y = 13;
+            source = new Rectangle(64, 0, 64, 64);
+            dest = new Rectangle(x * 32, y * 32, 64, 64);
+            spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
+            
+            // A icon
+            source = new Rectangle(0, 64, 32, 32);
+            dest = new Rectangle((int)(18.5 * 32), (int)(13.5 * 32), 32, 32);
+            spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
+
+            // Hearts
+            int hearts = (int)Math.Ceiling((double)game.possibleLife / 2);
+            for (int i = 1; i <= hearts; i++)
+            {
+                if (game.life == (i * 2 - 1))
+                    source = new Rectangle((128 + 16), 0, 16, 16);
+                else if ((i * 2) > game.life)
+                    source = new Rectangle((128 + 32), 0, 16, 16);
+                else
+                    source = new Rectangle(128, 0, 16, 16);
+                dest = new Rectangle((int)(1 * 32 + (i * 16)), (int)(13 * 32 + 16), 16, 16);
+                spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
+            }
+
             spriteBatch.End();
         }
 
@@ -224,9 +316,6 @@ namespace aspectstar2
                 }
             }
 
-            if (Xscroll)
-                ;
-
             for (int i = 0; i < (width * height); i++)
             {
                 x = i % width;
@@ -285,6 +374,7 @@ namespace aspectstar2
                         player.location.X = 14;
                     else if (del_y == 1)
                         player.location.Y = 7;
+                    this.first_pos = player.location;
 
                     if (del_y != 0)
                     {

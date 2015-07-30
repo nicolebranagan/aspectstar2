@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Input;
 using System;
 using System.IO;
 using System.Xml.Serialization;
+using System.Drawing;
 
 namespace aspectstar2
 {
@@ -43,6 +44,7 @@ namespace aspectstar2
             // NES resolution: 256x240;
             //graphics.PreferredBackBufferWidth = (256*2);
             //graphics.PreferredBackBufferHeight = (240*2);
+            
             Window.Title = "Aspect Star 2";
             graphics.ApplyChanges();
         }
@@ -92,7 +94,7 @@ namespace aspectstar2
             texCollection.texMapPlayer = Content.Load<Texture2D>("mapplayer");
             texCollection.texAdvPlayer = Content.Load<Texture2D>("advplayer");
             texCollection.texShadows = Content.Load<Texture2D>("shadows");
-
+            
             // Load title screen
             currentScreen = new TitleScreen(this);
         }
@@ -115,7 +117,7 @@ namespace aspectstar2
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-
+            
             currentScreen.Update(gameTime);
 
             base.Update(gameTime);
@@ -163,6 +165,21 @@ namespace aspectstar2
             }
             return summed;
         }
+
+        public Texture2D TakeScreenshot()
+        {
+            int w, h;
+            w = GraphicsDevice.PresentationParameters.BackBufferWidth;
+            h = GraphicsDevice.PresentationParameters.BackBufferHeight;
+            RenderTarget2D screenshot;
+            screenshot = new RenderTarget2D(GraphicsDevice, w, h, false, SurfaceFormat.Bgra32, DepthFormat.None);
+            GraphicsDevice.SetRenderTarget(screenshot);
+            // _lastUpdatedGameTime is a variable typed GameTime, used to record the time last updated and create a common time standard for some game components
+            Draw(new GameTime());
+            GraphicsDevice.Present();
+            GraphicsDevice.SetRenderTarget(null);
+            return screenshot;
+        }
     }
 
     public struct Textures
@@ -185,4 +202,5 @@ namespace aspectstar2
     {
         public Keys Up, Down, Left, Right, A, B;
     }
+    
 }

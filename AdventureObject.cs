@@ -9,6 +9,7 @@ namespace aspectstar2
 {
     abstract class AdventureObject
     {
+        protected Game game;
         protected AdventureScreen parent;
         protected Texture2D texture;
         
@@ -21,7 +22,7 @@ namespace aspectstar2
         public Master.Directions faceDir;
         public bool moving;
         public Vector2 location;
-        int z = 0;
+        protected int z = 0;
         int vz = 0;
 
         public virtual void Update()
@@ -109,11 +110,13 @@ namespace aspectstar2
 
     class AdventurePlayer : AdventureObject
     {
-        public AdventurePlayer(AdventureScreen parent)
+        int flickerCount = 1;
+
+        public AdventurePlayer(AdventureScreen parent, Game game)
         {
             this.texture = Master.texCollection.texAdvPlayer;
-            this.location = new Vector2(100, 100);
             this.parent = parent;
+            this.game = game;
         }
 
         public override void Draw(SpriteBatch spriteBatch, Color mask)
@@ -128,9 +131,15 @@ namespace aspectstar2
             Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y, dim_x, dim_y);
 
             spriteBatch.Begin();
-            spriteBatch.Draw(Master.texCollection.texShadows, destinationRectangle, sourceRectangle, mask);
+            spriteBatch.Draw(Master.texCollection.texShadows, destinationRectangle, sourceRectangle, Color.White);
             spriteBatch.End();
 
+            if (flickerCount > 0)
+            {
+                flickerCount--;
+                if (flickerCount % 7 == 0)
+                    mask = Color.Red;
+            }
             base.Draw(spriteBatch, mask);
         }
 
@@ -147,6 +156,20 @@ namespace aspectstar2
             spriteBatch.Begin();
             spriteBatch.Draw(Master.texCollection.texAdvPlayer, destinationRectangle, sourceRectangle, Color.White);
             spriteBatch.End();
+        }
+
+        public void Hurt()
+        {
+            if (flickerCount == 0)
+            {
+                game.life = game.life - 1;
+                Flicker();
+            }
+        }
+
+        public void Flicker()
+        {
+            this.flickerCount = 80;
         }
 
         public override void Update()
@@ -169,7 +192,13 @@ namespace aspectstar2
             else if ((test.Y + height) >= (13 * 32))
                 parent.enterNewRoom(0, 1);
             else
+            {
+                if ((z == 0) && (parent.isInjury(test, width, height)))
+                {
+                    Hurt();
+                }
                 base.Move(move_dist);
+            }
         }
     }
 }

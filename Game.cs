@@ -10,6 +10,9 @@ namespace aspectstar2
         // The game class. Maintains all information about the current game.
 
         public Master master { get; private set; }
+        public int life = 5;
+        public int possibleLife = 10;
+        AdventureScreen currentAdventure;
 
         public Game(Master master)
         {
@@ -24,6 +27,7 @@ namespace aspectstar2
         public void enterAdventureFromMap(int dest, int destroomX, int destroomY, int destx, int desty)
         {
             AdventureScreen aS = new AdventureScreen(this, dest, destroomX, destroomY, destx, desty);
+            currentAdventure = aS;
             master.UpdateScreen(aS);
         }
     }
