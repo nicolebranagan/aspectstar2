@@ -86,6 +86,7 @@ namespace aspectstar2
 
             // Load in-game content
             texCollection.arcadeFont = Content.Load<Texture2D>("arcadefont");
+            texCollection.controls = Content.Load<Texture2D>("menu");
             texCollection.worldTiles = Content.Load<Texture2D>("protoworld");
             texCollection.dungeonTiles = Content.Load<Texture2D>("dungeon1");
             texCollection.texMapPlayer = Content.Load<Texture2D>("mapplayer");
@@ -168,6 +169,7 @@ namespace aspectstar2
     {
         // Game textures
 
+        public Texture2D controls;
         public Texture2D arcadeFont;
 
         public Texture2D worldTiles;

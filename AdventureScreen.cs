@@ -13,7 +13,7 @@ namespace aspectstar2
     {
         Game game;
 
-        AdventureObject player;
+        AdventurePlayer player;
         List<AdventureObject> objects = new List<AdventureObject>();
         Adventure adventure;
         int roomX, roomY;
@@ -24,6 +24,7 @@ namespace aspectstar2
         enum adventureModes
         {
             runMode,
+            drowning,
             scrollingX,
             scrollingY
         }
@@ -88,10 +89,36 @@ namespace aspectstar2
             return false;
         }
 
+        public void Drown()
+        {
+            currentMode = adventureModes.drowning;
+            animCount = 24;
+        }
+
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
             switch (currentMode)
             {
+                case adventureModes.drowning:
+                    if (animCount == 0)
+                    {
+                        DrawRoom(spriteBatch);
+                        return;
+                    }
+
+                    DrawRoom(spriteBatch);
+                    player.Drown(spriteBatch, animCount);
+
+                    if (stallCount > 0)
+                    {
+                        stallCount = stallCount - 1;
+                    }
+                    else
+                    {
+                        stallCount = 3;
+                        animCount--;
+                    }
+                    break;
                 case adventureModes.scrollingX:
                 case adventureModes.scrollingY:
                     scroll(spriteBatch);

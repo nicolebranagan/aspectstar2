@@ -45,6 +45,11 @@ namespace aspectstar2
                 {
                     z = 0;
                     vz = 0;
+                    if (parent.isSolid(this.location, 0, 0, 0))
+                    {
+                        moving = false;
+                        parent.Drown();
+                    }
                 }
             }
 
@@ -127,6 +132,21 @@ namespace aspectstar2
             spriteBatch.End();
 
             base.Draw(spriteBatch, mask);
+        }
+
+        public void Drown(SpriteBatch spriteBatch, int animCount)
+        {
+            int dim_x = 32;
+            int dim_y = 48;
+            int column = ((int)faceDir * 2) + currentFrame;
+            Vector2 screen_loc = location - offset;
+
+            Rectangle sourceRectangle = new Rectangle(dim_x * column, 0, dim_x, dim_y - ((24 - animCount) * 2));
+            Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y + (24 - animCount) *2, dim_x, dim_y - ((24 - animCount)*2));
+
+            spriteBatch.Begin();
+            spriteBatch.Draw(Master.texCollection.texAdvPlayer, destinationRectangle, sourceRectangle, Color.White);
+            spriteBatch.End();
         }
 
         public override void Update()
