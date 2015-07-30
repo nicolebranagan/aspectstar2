@@ -22,6 +22,8 @@ namespace aspectstar2
         Vector2 first_pos;
         int[] tileMap, key;
 
+        int Keys = 0;
+
         int animCount, stallCount;
         adventureModes currentMode = adventureModes.runMode;
         enum adventureModes
@@ -41,7 +43,8 @@ namespace aspectstar2
             Crevasse = 2,
             Injury = 3,
             Warp = 4,
-            Heal = 5
+            Heal = 5,
+            Lock = 6
         }
 
         public AdventureScreen(Game game, int dest, int destroomX, int destroomY, int x, int y)
@@ -64,27 +67,30 @@ namespace aspectstar2
         public bool isSolid(Vector2 dest, int z, int width, int height)
         {
             // Checks for the solidity of a rectangle; width and height are measured from the center of the rectangle
-            
+
             int i, x, y;
             //Top Left
             x = (int)Math.Floor((dest.X - width) / 32);
             y = (int)Math.Floor((dest.Y - height) / 32);
             i = x + (y * 25);
-            if (((tileType)key[tileMap[i]] == tileType.Solid) || (((tileType)key[tileMap[i]] == tileType.Crevasse) && z == 0))
+            if (((tileType)key[tileMap[i]] == tileType.Solid) || ((tileType)key[tileMap[i]] == tileType.Lock) ||
+                (((tileType)key[tileMap[i]] == tileType.Crevasse) && z == 0))
                 return true;
 
             // Bottom Left
             x = (int)Math.Floor((dest.X + width) / 32);
             y = (int)Math.Floor((dest.Y - height) / 32);
             i = x + (y * 25);
-            if (((tileType)key[tileMap[i]] == tileType.Solid) || (((tileType)key[tileMap[i]] == tileType.Crevasse) && z == 0))
+            if (((tileType)key[tileMap[i]] == tileType.Solid) || ((tileType)key[tileMap[i]] == tileType.Lock) ||
+                (((tileType)key[tileMap[i]] == tileType.Crevasse) && z == 0))
                 return true;
 
             // Top Right
             x = (int)Math.Floor((dest.X - width) / 32);
             y = (int)Math.Floor((dest.Y + height) / 32);
             i = x + (y * 25);
-            if (((tileType)key[tileMap[i]] == tileType.Solid) || (((tileType)key[tileMap[i]] == tileType.Crevasse) && z == 0))
+            if (((tileType)key[tileMap[i]] == tileType.Solid) || ((tileType)key[tileMap[i]] == tileType.Lock) ||
+                (((tileType)key[tileMap[i]] == tileType.Crevasse) && z == 0))
                 return true;
 
 
@@ -92,7 +98,8 @@ namespace aspectstar2
             x = (int)Math.Floor((dest.X + width) / 32);
             y = (int)Math.Floor((dest.Y + height) / 32);
             i = x + (y * 25);
-            if (((tileType)key[tileMap[i]] == tileType.Solid) || (((tileType)key[tileMap[i]] == tileType.Crevasse) && z == 0))
+            if (((tileType)key[tileMap[i]] == tileType.Solid) || ((tileType)key[tileMap[i]] == tileType.Lock) ||
+                (((tileType)key[tileMap[i]] == tileType.Crevasse) && z == 0))
                 return true;
 
             return false;
@@ -105,10 +112,34 @@ namespace aspectstar2
             x = (int)Math.Floor((dest.X) / 32);
             y = (int)Math.Floor((dest.Y) / 32);
             i = x + (y * 25);
-                tileAction(i);
+                tileStepAction(i);
+            
+            //Top Left
+            x = (int)Math.Floor((dest.X - width) / 32);
+            y = (int)Math.Floor((dest.Y - height) / 32);
+            i = x + (y * 25);
+            tileTouchAction(i);
+
+            // Bottom Left
+            x = (int)Math.Floor((dest.X + width) / 32);
+            y = (int)Math.Floor((dest.Y - height) / 32);
+            i = x + (y * 25);
+            tileTouchAction(i);
+
+            // Top Right
+            x = (int)Math.Floor((dest.X - width) / 32);
+            y = (int)Math.Floor((dest.Y + height) / 32);
+            i = x + (y * 25);
+            tileTouchAction(i);
+
+            // Bottom Right
+            x = (int)Math.Floor((dest.X + width) / 32);
+            y = (int)Math.Floor((dest.Y + height) / 32);
+            i = x + (y * 25);
+            tileTouchAction(i);
         }
 
-        void tileAction(int i)
+        void tileStepAction(int i)
         {
             tileType tile = (tileType)key[tileMap[i]];
             if (tile == tileType.Warp)
@@ -121,6 +152,20 @@ namespace aspectstar2
                 if (game.life != game.possibleLife)
                 {
                     game.life = game.possibleLife;
+                    PlaySound.Aspect();
+                    tileMap[i] = 0;
+                }
+            }
+        }
+
+        void tileTouchAction(int i)
+        {
+            tileType tile = (tileType)key[tileMap[i]];
+            if (tile == tileType.Lock)
+            {
+                if (Keys > 0)
+                {
+                    Keys--;
                     PlaySound.Aspect();
                     tileMap[i] = 0;
                 }
@@ -167,6 +212,7 @@ namespace aspectstar2
         public void Drown()
         {
             currentMode = adventureModes.drowning;
+            PlaySound.Drown();
             animCount = 24;
         }
 
@@ -293,7 +339,18 @@ namespace aspectstar2
                 spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
             }
 
+            // Keys
+            source = new Rectangle((128 + 48), 0, 16, 16);
+            dest = new Rectangle((int)(10 * 32), (int)(13*32 + 16), 16, 16);
+            spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
+            source = new Rectangle((128 + 64), 0, 16, 16);
+            dest = new Rectangle((int)(10 * 32), (int)(13 * 32 + 32), 16, 16);
+            spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
             spriteBatch.End();
+
+            WriteText(spriteBatch, game.goldKeys.ToString(), new Vector2(10*32 + 16, 13 * 32 + 16), Color.White);
+
+            WriteText(spriteBatch, Keys.ToString(), new Vector2(10 * 32 + 16, 14 * 32), Color.White);
         }
 
         void scroll(SpriteBatch spriteBatch)

@@ -12,6 +12,7 @@ namespace aspectstar2
         public Master master { get; private set; }
         public int life = 5;
         public int possibleLife = 10;
+        public int goldKeys = 0;
         AdventureScreen currentAdventure;
         MapScreen currentMap;
 
@@ -32,6 +33,7 @@ namespace aspectstar2
             aS.fromMap = true;
             currentAdventure = aS;
             master.UpdateScreen(aS);
+            PlaySound.Enter();
         }
 
         public void exitAdventure()

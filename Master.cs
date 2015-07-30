@@ -96,10 +96,15 @@ namespace aspectstar2
             texCollection.texAdvPlayer = Content.Load<Texture2D>("advplayer");
             texCollection.texShadows = Content.Load<Texture2D>("shadows");
 
-            // Load sound effects
+            // Load sound effects (made in sfxr)
             PlaySound.die = Content.Load<SoundEffect>("die");
             PlaySound.aspect = Content.Load<SoundEffect>("aspect");
-
+            PlaySound.jump = Content.Load<SoundEffect>("jump");
+            PlaySound.enter = Content.Load<SoundEffect>("enter");
+            PlaySound.hurt = Content.Load<SoundEffect>("hurt");
+            PlaySound.drown = Content.Load<SoundEffect>("drown");
+            PlaySound.Initialize();
+                
             // Load title screen
             currentScreen = new TitleScreen(this);
         }
@@ -169,21 +174,6 @@ namespace aspectstar2
                 Array.Copy(roomright, i * roomwidth, summed, (2 * i + 1) * roomwidth, roomwidth);
             }
             return summed;
-        }
-
-        public Texture2D TakeScreenshot()
-        {
-            int w, h;
-            w = GraphicsDevice.PresentationParameters.BackBufferWidth;
-            h = GraphicsDevice.PresentationParameters.BackBufferHeight;
-            RenderTarget2D screenshot;
-            screenshot = new RenderTarget2D(GraphicsDevice, w, h, false, SurfaceFormat.Bgra32, DepthFormat.None);
-            GraphicsDevice.SetRenderTarget(screenshot);
-            // _lastUpdatedGameTime is a variable typed GameTime, used to record the time last updated and create a common time standard for some game components
-            Draw(new GameTime());
-            GraphicsDevice.Present();
-            GraphicsDevice.SetRenderTarget(null);
-            return screenshot;
         }
     }
 

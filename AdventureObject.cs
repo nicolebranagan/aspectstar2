@@ -101,7 +101,7 @@ namespace aspectstar2
                     this.location = test;
         }
 
-        public void Jump()
+        public virtual void Jump()
         {
             if (this.z == 0)
                 this.vz = +5;
@@ -159,12 +159,20 @@ namespace aspectstar2
             spriteBatch.End();
         }
 
+        public override void Jump()
+        {
+            if (z == 0)
+                PlaySound.Jump();
+            base.Jump();
+        }
+
         public void Hurt()
         {
             if (flickerCount == 0)
             {
                 game.life = game.life - 1;
                 Flicker();
+                PlaySound.Hurt();
             }
 
             if (game.life <= 0)
