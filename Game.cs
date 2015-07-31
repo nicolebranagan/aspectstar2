@@ -5,7 +5,7 @@ using System.Text;
 
 namespace aspectstar2
 {
-    class Game
+    public class Game
     {
         // The game class. Maintains all information about the current game.
 

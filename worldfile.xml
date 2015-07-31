@@ -10489,6 +10489,7 @@
           <int>8</int>
           <int>8</int>
         </tileMap>
+        <storedObjects />
       </templateRoom>
       <xmlRooms>
         <Room xsi:nil="true" />
@@ -11013,6 +11014,7 @@
             <int>19</int>
             <int>19</int>
           </tileMap>
+          <storedObjects />
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -11356,6 +11358,7 @@
             <int>8</int>
             <int>8</int>
           </tileMap>
+          <storedObjects />
         </Room>
         <Room>
           <tileMap>
@@ -11685,6 +11688,7 @@
             <int>8</int>
             <int>8</int>
           </tileMap>
+          <storedObjects />
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -12028,6 +12032,7 @@
             <int>8</int>
             <int>8</int>
           </tileMap>
+          <storedObjects />
         </Room>
         <Room>
           <tileMap>
@@ -12357,6 +12362,7 @@
             <int>8</int>
             <int>8</int>
           </tileMap>
+          <storedObjects />
         </Room>
         <Room>
           <tileMap>
@@ -12686,6 +12692,18 @@
             <int>8</int>
             <int>8</int>
           </tileMap>
+          <storedObjects>
+            <StoredObject>
+              <x>368</x>
+              <y>240</y>
+              <type>key</type>
+            </StoredObject>
+            <StoredObject>
+              <x>464</x>
+              <y>240</y>
+              <type>key</type>
+            </StoredObject>
+          </storedObjects>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />

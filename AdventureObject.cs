@@ -7,7 +7,7 @@ using System.Text;
 
 namespace aspectstar2
 {
-    abstract class AdventureObject
+    public abstract class AdventureObject
     {
         protected Game game;
         protected AdventureScreen parent;
@@ -24,6 +24,14 @@ namespace aspectstar2
         public Vector2 location;
         protected int z = 0;
         int vz = 0;
+
+        public bool active = true;
+
+        public void Initialize(AdventureScreen parent, Game game)
+        {
+            this.parent = parent;
+            this.game = game;
+        }
 
         public virtual void Update()
         {
@@ -106,6 +114,10 @@ namespace aspectstar2
             if (this.z == 0)
                 this.vz = +5;
         }
+
+        public abstract void Touch() ;
+
+        public abstract void inRange(Vector2 playerloc) ;
     }
 
     class AdventurePlayer : AdventureObject
@@ -212,6 +224,16 @@ namespace aspectstar2
                 }
                 parent.tileAction(test, width, height);
             }
+        }
+
+        public override void Touch()
+        {
+            // Do nothing
+        }
+
+        public override void inRange(Vector2 playerloc)
+        {
+            // Do nothing
         }
     }
 }

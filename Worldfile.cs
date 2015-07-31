@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Xna.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -82,6 +83,8 @@ namespace aspectstar2
     public class Room
     {
         public int[] tileMap;
+        public List<StoredObject> storedObjects;
+        public List<AdventureObject> adventureObjects; 
 
         public Room Clone()
         {
@@ -90,8 +93,33 @@ namespace aspectstar2
             newRoom.tileMap = new int[tileMap.Length];
             tileMap.CopyTo(newRoom.tileMap, 0);
 
+            newRoom.adventureObjects = new List<AdventureObject>();
+            foreach (StoredObject sO in storedObjects)
+                newRoom.adventureObjects.Add(sO.getAdventureObject());
+
             return newRoom;
         }
+    }
 
+    public class StoredObject
+    {
+        public float x, y;
+        public ObjectType type;
+
+        public enum ObjectType
+        {
+            key = 0,
+        }
+
+        public AdventureObject getAdventureObject()
+        {
+            switch (type)
+            {
+                default:
+                    AdventureKey key = new AdventureKey();
+                    key.location = new Vector2(x, y);
+                    return key;
+            }
+        }
     }
 }

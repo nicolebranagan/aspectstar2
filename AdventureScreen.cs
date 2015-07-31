@@ -9,7 +9,7 @@ using System.Diagnostics;
 
 namespace aspectstar2
 {
-    class AdventureScreen : Screen
+    public class AdventureScreen : Screen
     {
         Game game;
 
@@ -22,7 +22,7 @@ namespace aspectstar2
         Vector2 first_pos;
         int[] tileMap, key;
 
-        int Keys = 0;
+        public int Keys = 0;
 
         int animCount, stallCount;
         adventureModes currentMode = adventureModes.runMode;
@@ -55,11 +55,11 @@ namespace aspectstar2
 
             this.adventure = Master.currentFile.adventures[dest].Clone();
             this.key = adventure.key;
-            this.roomX = destroomX;
-            this.roomY = destroomY;
-            this.tileMap = adventure.rooms[roomX, roomY].tileMap;
+            //this.roomX = destroomX;
+            //this.roomY = destroomY;
+            //this.tileMap = adventure.rooms[roomX, roomY].tileMap;
+            LoadRoom(destroomX, destroomY);
 
-            objects.Add(this.player);
             this.first_pos = new Vector2(x * 32, y * 32);
             player.location = new Vector2(x * 32, y * 32);
         }
@@ -170,6 +170,16 @@ namespace aspectstar2
                     tileMap[i] = 0;
                 }
             }
+
+            int x, y, j;
+            foreach (AdventureObject obj in objects)
+            {
+                x = (int)Math.Floor(obj.location.X / 32);
+                y = (int)Math.Floor(obj.location.Y / 32);
+                j = x + (y * 25);
+                if (j == i)
+                    obj.Touch();
+            }
         }
 
         public bool isInjury(Vector2 dest, int width, int height)
@@ -278,6 +288,7 @@ namespace aspectstar2
                     {
                         obj.Draw(spriteBatch, Color.White);
                     }
+                    player.Draw(spriteBatch, Color.White);
                     break;
             }
             drawStatus(spriteBatch);
@@ -473,18 +484,17 @@ namespace aspectstar2
             if (x >= 0 && y >= 0 && x < 16 && y < 16)
                 if (adventure.rooms[x,y] != null)
                 {
-                    roomX = x;
-                    roomY = y;
-                    this.tileMap = adventure.rooms[x, y].tileMap;
                     if (del_x == -1)
-                        player.location.X = 25 * 32 - 14;
+                        player.location.X = 25 * 32 - 14 - 2;
                     else if (del_y == -1)
-                        player.location.Y = 13 * 32 - 7;
+                        player.location.Y = 13 * 32 - 6 - 2;
                     else if (del_x == 1)
-                        player.location.X = 14;
+                        player.location.X = 14 + 2;
                     else if (del_y == 1)
-                        player.location.Y = 7;
+                        player.location.Y = 6 + 2;
                     this.first_pos = player.location;
+
+                    LoadRoom(x, y);
 
                     if (del_y != 0)
                     {
@@ -498,6 +508,19 @@ namespace aspectstar2
                     }
                 }
 
+        }
+
+        public void LoadRoom(int x, int y)
+        {
+            roomX = x; roomY = y;
+            Room newRoom = adventure.rooms[x, y];
+            this.tileMap = newRoom.tileMap;
+            this.objects = new List<AdventureObject>();
+            foreach (AdventureObject aO in newRoom.adventureObjects)
+            {
+                aO.Initialize(this, game);
+                objects.Add(aO);
+            }
         }
 
         public override void Update(GameTime gameTime)
@@ -517,6 +540,8 @@ namespace aspectstar2
                 case adventureModes.runMode:
                     UpdateRoom();
                     break;
+                default:
+                    break;
             }
         }
 
@@ -527,6 +552,8 @@ namespace aspectstar2
             {
                 obj.Update();
             }
+            objects.RemoveAll(isInactive);
+            player.Update();
 
             // Get keyboard input
             KeyboardState state = Keyboard.GetState();
@@ -565,6 +592,11 @@ namespace aspectstar2
             animCount = 250;
             currentMode = adventureModes.deathFade;
             PlaySound.Die();
+        }
+
+        public static bool isInactive(AdventureObject obj)
+        {
+            return !(obj.active);
         }
     }
 }
