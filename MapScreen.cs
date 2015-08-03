@@ -71,6 +71,7 @@ namespace aspectstar2
 
         public override void Update(GameTime gameTime)
         {
+            
             // Update
             player.Update();
 

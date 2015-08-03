@@ -103,6 +103,7 @@ namespace aspectstar2
             PlaySound.enter = Content.Load<SoundEffect>("enter");
             PlaySound.hurt = Content.Load<SoundEffect>("hurt");
             PlaySound.drown = Content.Load<SoundEffect>("drown");
+            PlaySound.key = Content.Load<SoundEffect>("key"); 
             PlaySound.Initialize();
                 
             // Load title screen

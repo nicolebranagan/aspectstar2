@@ -48,6 +48,7 @@ namespace aspectstar2
             {
                 active = false;
                 parent.Keys = parent.Keys + 1;
+                PlaySound.Key();
             }
         }
     }

@@ -53,6 +53,9 @@
     <Compile Include="Worldfile.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Jint">
+      <HintPath>..\..\..\..\..\Programs\Jint.dll</HintPath>
+    </Reference>
     <Reference Include="MonoGame.Framework">
       <HintPath>$(MSBuildProgramFiles32)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
     </Reference>

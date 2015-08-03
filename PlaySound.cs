@@ -14,16 +14,19 @@ namespace aspectstar2
         public static SoundEffect hurt;
         public static SoundEffect enter;
         public static SoundEffect drown;
+        public static SoundEffect key;
 
         static SoundEffectInstance hurtInst;
         static SoundEffectInstance jumpInst;
         static SoundEffectInstance drowInst;
+        static SoundEffectInstance keysInst;
 
         public static void Initialize()
         {
             hurtInst = hurt.CreateInstance();
             jumpInst = jump.CreateInstance();
             drowInst = drown.CreateInstance();
+            keysInst = key.CreateInstance();
         }
 
         public static void Die()
@@ -59,6 +62,12 @@ namespace aspectstar2
         {
             if (drowInst.State != SoundState.Playing)
                 drowInst.Play();
+        }
+
+        public static void Key()
+        {
+            if (keysInst.State != SoundState.Playing)
+                keysInst.Play();
         }
     }
 }

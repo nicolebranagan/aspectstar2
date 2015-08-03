@@ -84,7 +84,8 @@ namespace aspectstar2
     {
         public int[] tileMap;
         public List<StoredObject> storedObjects;
-        public List<AdventureObject> adventureObjects; 
+        public List<AdventureObject> adventureObjects;
+        public string code;
 
         public Room Clone()
         {
@@ -96,6 +97,8 @@ namespace aspectstar2
             newRoom.adventureObjects = new List<AdventureObject>();
             foreach (StoredObject sO in storedObjects)
                 newRoom.adventureObjects.Add(sO.getAdventureObject());
+
+            newRoom.code = code;
 
             return newRoom;
         }

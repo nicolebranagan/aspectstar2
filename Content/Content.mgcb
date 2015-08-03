@@ -126,3 +126,9 @@
 /processorParam:Quality=Best
 /build:drown.wav
 
+#begin key.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:key.wav
+

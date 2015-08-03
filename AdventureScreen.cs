@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Diagnostics;
+using Jint;
 
 namespace aspectstar2
 {
@@ -21,6 +22,7 @@ namespace aspectstar2
         int roomX, roomY;
         Vector2 first_pos;
         int[] tileMap, key;
+        Engine jintEngine;
 
         public int Keys = 0;
 
@@ -521,6 +523,21 @@ namespace aspectstar2
                 aO.Initialize(this, game);
                 objects.Add(aO);
             }
+
+
+            // Run room code
+            string code = adventure.rooms[roomX, roomY].code;
+            if (code != null)
+            {
+                jintEngine = new Engine()
+                .SetValue("playerX", player.location.X)
+                .SetValue("playerY", player.location.Y)
+                .SetValue("spawnKey", new Action<int, int>(this.SpawnKey))
+                .Execute(code);
+
+                jintEngine.Execute("onLoad()");
+            }
+
         }
 
         public override void Update(GameTime gameTime)
@@ -547,6 +564,9 @@ namespace aspectstar2
 
         public void UpdateRoom()
         {
+            if (jintEngine != null)
+                jintEngine.Execute("update();");
+
             // Update
             foreach (AdventureObject obj in this.objects)
             {
@@ -592,6 +612,15 @@ namespace aspectstar2
             animCount = 250;
             currentMode = adventureModes.deathFade;
             PlaySound.Die();
+        }
+
+        void SpawnKey(int x, int y)
+        {
+            AdventureKey aK = new AdventureKey();
+            aK.location.X = 32 * x + 16;
+            aK.location.Y = 32 * y + 16;
+            objects.Add(aK);
+            PlaySound.Aspect();
         }
 
         public static bool isInactive(AdventureObject obj)
