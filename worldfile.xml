@@ -12346,6 +12346,14 @@
             <int>8</int>
           </tileMap>
           <storedObjects />
+          <code>function onLoad() { }
+function update() {
+if (!getFlag('done') &amp;&amp;(playerX == 7) &amp;&amp; (playerY == 9)) {
+spawnKey(4,7);
+setFlag('done', true);
+}
+
+}</code>
         </Room>
         <Room>
           <tileMap>

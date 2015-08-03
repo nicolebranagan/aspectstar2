@@ -526,17 +526,7 @@ namespace aspectstar2
 
 
             // Run room code
-            string code = adventure.rooms[roomX, roomY].code;
-            if (code != null)
-            {
-                jintEngine = new Engine()
-                .SetValue("playerX", player.location.X)
-                .SetValue("playerY", player.location.Y)
-                .SetValue("spawnKey", new Action<int, int>(this.SpawnKey))
-                .Execute(code);
-
-                jintEngine.Execute("onLoad()");
-            }
+            ActivateScript();
 
         }
 
@@ -565,7 +555,12 @@ namespace aspectstar2
         public void UpdateRoom()
         {
             if (jintEngine != null)
+            {
+                jintEngine.Execute(String.Concat(
+                    "playerX = ", Math.Floor(player.location.X / 32), 
+                    "; playerY = ", Math.Floor(player.location.Y / 32)));
                 jintEngine.Execute("update();");
+            }
 
             // Update
             foreach (AdventureObject obj in this.objects)
@@ -614,13 +609,45 @@ namespace aspectstar2
             PlaySound.Die();
         }
 
+        public void ActivateScript()
+        {
+            string code = adventure.rooms[roomX, roomY].code;
+            if (code != null)
+            {
+                jintEngine = new Engine(cfg => cfg.AllowClr())
+                .SetValue("spawnKey", new Action<int, int>(this.SpawnKey))
+                .SetValue("getFlag", new Func<string, bool>(this.GetFlag))
+                .SetValue("setFlag", new Action<string, bool>(this.SetFlag))
+                .Execute(code);
+
+                jintEngine.Execute("onLoad()");
+            }
+        }
+
         void SpawnKey(int x, int y)
         {
             AdventureKey aK = new AdventureKey();
+            aK.Initialize(this, game);
             aK.location.X = 32 * x + 16;
             aK.location.Y = 32 * y + 16;
             objects.Add(aK);
             PlaySound.Aspect();
+        }
+
+        Dictionary<string, bool> flags = new Dictionary<string, bool>();
+
+        void SetFlag(string flag, bool value)
+        {
+            if (flags.ContainsKey(flag))
+                flags.Remove(flag);
+            flags.Add(flag, value);
+        }
+
+        bool GetFlag(string flag)
+        {
+            if (flags.ContainsKey(flag))
+                return flags[flag];
+            return false;
         }
 
         public static bool isInactive(AdventureObject obj)
