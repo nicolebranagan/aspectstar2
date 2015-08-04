@@ -19,8 +19,9 @@ namespace aspectstar2
             // Do nothing
         }
 
-        public override void inRange(Vector2 playerloc)
+        public override bool inRange(AdventurePlayer player)
         {
+            return false;
             // Do nothing
         }
     }

@@ -127,6 +127,7 @@ namespace aspectstar2
             {
                 case ObjectType.enemy:
                     AdventureEnemy enemy = new AdventureEnemy(Master.currentFile.bestiary[enemyType]);
+                    enemy.location = new Vector2(x, y);
                     return enemy;
                 case ObjectType.goldkey:
                     AdventureGoldKey goldkey = new AdventureGoldKey();

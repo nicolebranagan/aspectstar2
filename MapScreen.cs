@@ -109,15 +109,18 @@ namespace aspectstar2
         {
             Rectangle source, dest;
 
-            spriteBatch.Begin();
+            if (game.goldKeys != 0)
+            {
+                spriteBatch.Begin();
 
-            source = new Rectangle((128 + 48), 0, 16, 16);
-            dest = new Rectangle(Master.width - 64, 32, 16, 16);
-            spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
+                source = new Rectangle((128 + 48), 0, 16, 16);
+                dest = new Rectangle(Master.width - 64, 32, 16, 16);
+                spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
 
-            spriteBatch.End();
+                spriteBatch.End();
 
-            WriteText(spriteBatch, game.goldKeys.ToString(), new Vector2(Master.width - 48, 32), Color.White);
+                WriteText(spriteBatch, game.goldKeys.ToString(), new Vector2(Master.width - 48, 32), Color.White);
+            }
         }
 
         public bool tileSolid(int x, int y)

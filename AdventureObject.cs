@@ -54,11 +54,6 @@ namespace aspectstar2
                 {
                     z = 0;
                     vz = 0;
-                    if (parent.isSolid(this.location, 0, 0, 0))
-                    {
-                        moving = false;
-                        parent.Drown();
-                    }
                 }
             }
 
@@ -117,10 +112,10 @@ namespace aspectstar2
 
         public abstract void Touch() ;
 
-        public abstract void inRange(Vector2 playerloc) ;
+        public abstract bool inRange(AdventurePlayer player) ;
     }
 
-    class AdventurePlayer : AdventureObject
+    public class AdventurePlayer : AdventureObject
     {
         int flickerCount = 1;
 
@@ -196,9 +191,64 @@ namespace aspectstar2
             this.flickerCount = 80;
         }
 
+        public void Recoil()
+        {
+            switch (this.faceDir)
+            {
+                case Master.Directions.Up:
+                    faceDir = Master.Directions.Down;
+                    break;
+                case Master.Directions.Down:
+                    faceDir = Master.Directions.Up;
+                    break;
+                case Master.Directions.Left:
+                    faceDir = Master.Directions.Right;
+                    break;
+                case Master.Directions.Right:
+                    faceDir = Master.Directions.Left;
+                    break;
+            }
+
+            Vector2 move_dist = new Vector2(0, 0);
+            switch (faceDir)
+            {
+                case Master.Directions.Down:
+                    move_dist = new Vector2(0, 4);
+                    break;
+                case Master.Directions.Up:
+                    move_dist = new Vector2(0, -4);
+                    break;
+                case Master.Directions.Left:
+                    move_dist = new Vector2(-4, 0);
+                    break;
+                case Master.Directions.Right:
+                    move_dist = new Vector2(4, 0);
+                    break;
+                default:
+                    break; // Something has gone wrong
+            }
+            Vector2 test = location + move_dist;
+            if ((test.X - width) <= 0)
+                parent.enterNewRoom(-1, 0);
+            else if ((test.Y - height) <= 0)
+                parent.enterNewRoom(0, -1);
+            else if ((test.X + width) >= (25 * 32))
+                parent.enterNewRoom(1, 0);
+            else if ((test.Y + height) >= (13 * 32))
+                parent.enterNewRoom(0, 1);
+            else
+                location = test;
+        }
+
         public override void Update()
         {
             base.Update();
+
+            if ((z == 0) && (parent.isSolid(this.location, 0, 0, 0)))
+            {
+                moving = false;
+                parent.Drown();
+            }
 
             if (!this.moving)
                 this.currentFrame = 0;
@@ -215,6 +265,8 @@ namespace aspectstar2
                 parent.enterNewRoom(1, 0);
             else if ((test.Y + height) >= (13 * 32))
                 parent.enterNewRoom(0, 1);
+            else if (parent.Collide())
+                ;
             else
             {
                 base.Move(move_dist);
@@ -231,9 +283,10 @@ namespace aspectstar2
             // Do nothing
         }
 
-        public override void inRange(Vector2 playerloc)
+        public override bool inRange(AdventurePlayer player)
         {
             // Do nothing
+            return false;
         }
     }
 }

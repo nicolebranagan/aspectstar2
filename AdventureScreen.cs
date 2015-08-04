@@ -183,6 +183,17 @@ namespace aspectstar2
             }
         }
 
+        public bool Collide()
+        {
+            bool collided = false;
+            foreach(AdventureObject obj in objects)
+            {
+                if (obj.inRange(player))
+                    collided = true;
+            }
+            return collided;
+        }
+
         public bool isInjury(Vector2 dest, int width, int height)
         {
             // Checks for the solidity of a rectangle; width and height are measured from the center of the rectangle
@@ -285,7 +296,7 @@ namespace aspectstar2
                     break;
                 case adventureModes.runMode:
                     DrawRoom(spriteBatch, Color.White);
-                    foreach (AdventureObject obj in this.objects)
+                    foreach (AdventureObject obj in objects)
                     {
                         obj.Draw(spriteBatch, Color.White);
                     }

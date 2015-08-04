@@ -10990,7 +10990,6 @@
               <x>400</x>
               <y>272</y>
               <type>goldkey</type>
-              <enemyType>0</enemyType>
             </StoredObject>
           </storedObjects>
         </Room>
@@ -14007,7 +14006,6 @@ function update() { }</code>
               <x>144</x>
               <y>240</y>
               <type>key</type>
-              <enemyType>0</enemyType>
             </StoredObject>
           </storedObjects>
         </Room>
@@ -15346,14 +15344,7 @@ setFlag('arrowroom', true);
             <int>8</int>
             <int>8</int>
           </tileMap>
-          <storedObjects>
-            <StoredObject>
-              <x>368</x>
-              <y>176</y>
-              <type>enemy</type>
-              <enemyType>0</enemyType>
-            </StoredObject>
-          </storedObjects>
+          <storedObjects />
           <code>
 function onLoad() {
 
@@ -16027,13 +16018,11 @@ function update() {
               <x>368</x>
               <y>240</y>
               <type>key</type>
-              <enemyType>0</enemyType>
             </StoredObject>
             <StoredObject>
               <x>464</x>
               <y>240</y>
               <type>key</type>
-              <enemyType>0</enemyType>
             </StoredObject>
           </storedObjects>
         </Room>
@@ -17045,7 +17034,6 @@ function update() {
               <x>416</x>
               <y>240</y>
               <type>heart</type>
-              <enemyType>0</enemyType>
             </StoredObject>
           </storedObjects>
         </Room>
@@ -17062,14 +17050,4 @@ function update() {
       </xmlRooms>
     </Adventure>
   </adventures>
-  <bestiary>
-    <BestiaryEntry>
-      <name>Snake</name>
-      <graphicsRow>1</graphicsRow>
-      <speed>0</speed>
-      <decisiveness>0</decisiveness>
-      <intelligence>0</intelligence>
-      <movementType>stationary</movementType>
-    </BestiaryEntry>
-  </bestiary>
 </Worldfile>
