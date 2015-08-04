@@ -29,6 +29,7 @@ namespace aspectstar2
         public int tileset;
         public int[] key;
         public Room templateRoom;
+        public string name = "DUNGEON";
 
         [XmlIgnore]
         public Room[,] rooms = new Room[16,16];
@@ -66,6 +67,7 @@ namespace aspectstar2
         {
             Adventure newAdv = new Adventure();
             newAdv.tileset = tileset;
+            newAdv.name = name.ToUpper();
             newAdv.key = new int[key.Length];
             key.CopyTo(newAdv.key, 0);
 
@@ -112,12 +114,22 @@ namespace aspectstar2
         public enum ObjectType
         {
             key = 0,
+            heart = 1,
+            goldkey = 2,
         }
 
         public AdventureObject getAdventureObject()
         {
             switch (type)
             {
+                case ObjectType.goldkey:
+                    AdventureGoldKey goldkey = new AdventureGoldKey();
+                    goldkey.location = new Vector2(x, y);
+                    return goldkey;
+                case ObjectType.heart:
+                    AdventureHeart heart = new AdventureHeart();
+                    heart.location = new Vector2(x, y);
+                    return heart;
                 default:
                     AdventureKey key = new AdventureKey();
                     key.location = new Vector2(x, y);

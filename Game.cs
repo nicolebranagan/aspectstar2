@@ -16,9 +16,17 @@ namespace aspectstar2
         AdventureScreen currentAdventure;
         MapScreen currentMap;
 
+        public bool[] beaten;
+        int dest;
+
         public Game(Master master)
         {
             this.master = master;
+            beaten = new bool[Master.currentFile.adventures.Count];
+            for (int i = 0; i < beaten.Length; i++)
+            {
+                beaten[i] = false;
+            }
         }
 
         public Screen Begin()
@@ -29,15 +37,18 @@ namespace aspectstar2
 
         public void enterAdventureFromMap(int dest, int destroomX, int destroomY, int destx, int desty)
         {
-            AdventureScreen aS = new AdventureScreen(this, dest, destroomX, destroomY, destx, desty);
+            AdventureScreen aS = new AdventureScreen(this, dest, destroomX, destroomY, destx, desty, beaten[dest]);
+            this.dest = dest;
             aS.fromMap = true;
             currentAdventure = aS;
             master.UpdateScreen(aS);
             PlaySound.Enter();
         }
 
-        public void exitAdventure()
+        public void exitAdventure(bool beat)
         {
+            beaten[dest] = beat;
+
             if (currentAdventure.fromMap)
             {
                 master.UpdateScreen(currentMap);

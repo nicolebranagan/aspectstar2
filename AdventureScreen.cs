@@ -15,6 +15,7 @@ namespace aspectstar2
         Game game;
 
         public bool fromMap;
+        public bool beaten;
 
         AdventurePlayer player;
         List<AdventureObject> objects = new List<AdventureObject>();
@@ -49,7 +50,7 @@ namespace aspectstar2
             Lock = 6
         }
 
-        public AdventureScreen(Game game, int dest, int destroomX, int destroomY, int x, int y)
+        public AdventureScreen(Game game, int dest, int destroomX, int destroomY, int x, int y, bool beaten)
         {
             this.game = game;
             this.master = game.master;
@@ -57,9 +58,7 @@ namespace aspectstar2
 
             this.adventure = Master.currentFile.adventures[dest].Clone();
             this.key = adventure.key;
-            //this.roomX = destroomX;
-            //this.roomY = destroomY;
-            //this.tileMap = adventure.rooms[roomX, roomY].tileMap;
+            this.beaten = beaten;
             LoadRoom(destroomX, destroomY);
 
             this.first_pos = new Vector2(x * 32, y * 32);
@@ -338,6 +337,7 @@ namespace aspectstar2
             dest = new Rectangle((int)(18.5 * 32), (int)(13.5 * 32), 32, 32);
             spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
 
+
             // Hearts
             int hearts = (int)Math.Ceiling((double)game.possibleLife / 2);
             for (int i = 1; i <= hearts; i++)
@@ -361,8 +361,12 @@ namespace aspectstar2
             spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
             spriteBatch.End();
 
-            WriteText(spriteBatch, game.goldKeys.ToString(), new Vector2(10*32 + 16, 13 * 32 + 16), Color.White);
 
+            // Name
+            WriteText(spriteBatch, adventure.name, new Vector2(48, 14 * 32), Color.White);
+
+            // Key counts
+            WriteText(spriteBatch, game.goldKeys.ToString(), new Vector2(10*32 + 16, 13 * 32 + 16), Color.White);
             WriteText(spriteBatch, Keys.ToString(), new Vector2(10 * 32 + 16, 14 * 32), Color.White);
         }
 
@@ -524,10 +528,8 @@ namespace aspectstar2
                 objects.Add(aO);
             }
 
-
             // Run room code
             ActivateScript();
-
         }
 
         public override void Update(GameTime gameTime)
@@ -537,12 +539,12 @@ namespace aspectstar2
                 case adventureModes.fadeOut:
                     animCount = animCount - 2;
                     if (animCount <= 0)
-                        game.exitAdventure();
+                        game.exitAdventure(beaten);
                     break;
                 case adventureModes.deathFade:
                     animCount = animCount - 3;
                     if (animCount <= 0)
-                        game.exitAdventure();
+                        game.exitAdventure(beaten);
                     break;
                 case adventureModes.runMode:
                     UpdateRoom();

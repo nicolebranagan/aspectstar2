@@ -52,4 +52,69 @@ namespace aspectstar2
             }
         }
     }
+
+    public class AdventureHeart : AdventureItem
+    {
+        public AdventureHeart()
+        {
+            this.texture = Master.texCollection.controls;
+        }
+
+        public override void Draw(SpriteBatch spriteBatch, Color mask)
+        {
+            Rectangle sourceRectangle = new Rectangle(128, 0, 16, 16);
+            Rectangle destinationRectangle = new Rectangle((int)(this.location.X - 8), (int)(this.location.Y - 8), 16, 16);
+
+            spriteBatch.Begin();
+            spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, Color.White);
+            spriteBatch.End();
+        }
+
+        public override void Touch()
+        {
+            if (active)
+            {
+                active = false;
+                game.life = game.life + 2;
+                if (game.life > game.possibleLife)
+                    game.life = game.possibleLife;
+                PlaySound.Aspect();
+            }
+        }
+    }
+
+    public class AdventureGoldKey : AdventureItem
+    {
+        public AdventureGoldKey()
+        {
+            this.texture = Master.texCollection.controls;
+        }
+
+        public override void Draw(SpriteBatch spriteBatch, Color mask)
+        {
+            Rectangle sourceRectangle = new Rectangle((128 + 48), 0, 16, 16);
+            Rectangle destinationRectangle = new Rectangle((int)(this.location.X - 8), (int)(this.location.Y - 8), 16, 16);
+
+            spriteBatch.Begin();
+            spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, Color.White);
+            spriteBatch.End();
+        }
+
+        public override void Update()
+        {
+            if (parent.beaten)
+                active = false; // Gold keys can not be collected from beaten dungeons!!
+        }
+
+        public override void Touch()
+        {
+            if (active)
+            {
+                active = false;
+                game.goldKeys = game.goldKeys + 1;
+                parent.beaten = true;
+                PlaySound.Key();
+            }
+        }
+    }
 }
