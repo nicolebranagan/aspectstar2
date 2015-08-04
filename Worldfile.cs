@@ -11,6 +11,7 @@ namespace aspectstar2
     {
         public Mapfile map;
         public List<Adventure> adventures;
+        public List<BestiaryEntry> bestiary;
     }
 
     public class Mapfile
@@ -110,18 +111,23 @@ namespace aspectstar2
     {
         public float x, y;
         public ObjectType type;
+        public int enemyType;
 
         public enum ObjectType
         {
             key = 0,
             heart = 1,
             goldkey = 2,
+            enemy = 3,
         }
 
         public AdventureObject getAdventureObject()
         {
             switch (type)
             {
+                case ObjectType.enemy:
+                    AdventureEnemy enemy = new AdventureEnemy(Master.currentFile.bestiary[enemyType]);
+                    return enemy;
                 case ObjectType.goldkey:
                     AdventureGoldKey goldkey = new AdventureGoldKey();
                     goldkey.location = new Vector2(x, y);
