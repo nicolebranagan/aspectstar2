@@ -40,6 +40,7 @@
   <ItemGroup>
     <Compile Include="AdventureEnemy.cs" />
     <Compile Include="AdventureItem.cs" />
+    <Compile Include="AdventurePlayer.cs" />
     <Compile Include="AdventureProjectile.cs" />
     <Compile Include="AdventureScreen.cs" />
     <Compile Include="BestiaryEntry.cs" />
