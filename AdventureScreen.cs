@@ -17,6 +17,9 @@ namespace aspectstar2
         public bool fromMap;
         public bool beaten;
 
+        Weapon weaponA = new JumpWeapon();
+        Weapon weaponB = new ProjectileWeapon();
+
         AdventurePlayer player;
         List<AdventureObject> objects = new List<AdventureObject>();
         Adventure adventure;
@@ -113,8 +116,8 @@ namespace aspectstar2
             x = (int)Math.Floor((dest.X) / 32);
             y = (int)Math.Floor((dest.Y) / 32);
             i = x + (y * 25);
-                tileStepAction(i);
-            
+            tileStepAction(i);
+
             //Top Left
             x = (int)Math.Floor((dest.X - width) / 32);
             y = (int)Math.Floor((dest.Y - height) / 32);
@@ -186,7 +189,7 @@ namespace aspectstar2
         public bool Collide()
         {
             bool collided = false;
-            foreach(AdventureObject obj in objects)
+            foreach (AdventureObject obj in objects)
             {
                 if (obj.inRange(player))
                     collided = true;
@@ -296,11 +299,11 @@ namespace aspectstar2
                     break;
                 case adventureModes.runMode:
                     DrawRoom(spriteBatch, Color.White);
+                    player.Draw(spriteBatch, Color.White);
                     foreach (AdventureObject obj in objects)
                     {
                         obj.Draw(spriteBatch, Color.White);
                     }
-                    player.Draw(spriteBatch, Color.White);
                     break;
             }
             drawStatus(spriteBatch);
@@ -342,11 +345,11 @@ namespace aspectstar2
             source = new Rectangle(64, 0, 64, 64);
             dest = new Rectangle(x * 32, y * 32, 64, 64);
             spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
-            
+
             // A icon
-            source = new Rectangle(0, 64, 32, 32);
-            dest = new Rectangle((int)(18.5 * 32), (int)(13.5 * 32), 32, 32);
-            spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
+            //source = new Rectangle(0, 64, 32, 32);
+            //dest = new Rectangle((int)(18.5 * 32), (int)(13.5 * 32), 32, 32);
+            //spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
 
 
             // Hearts
@@ -365,20 +368,23 @@ namespace aspectstar2
 
             // Keys
             source = new Rectangle((128 + 48), 0, 16, 16);
-            dest = new Rectangle((int)(10 * 32), (int)(13*32 + 16), 16, 16);
+            dest = new Rectangle((int)(10 * 32), (int)(13 * 32 + 16), 16, 16);
             spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
             source = new Rectangle((128 + 64), 0, 16, 16);
             dest = new Rectangle((int)(10 * 32), (int)(13 * 32 + 32), 16, 16);
             spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
             spriteBatch.End();
 
-
             // Name
             WriteText(spriteBatch, adventure.name, new Vector2(48, 14 * 32), Color.White);
 
             // Key counts
-            WriteText(spriteBatch, game.goldKeys.ToString(), new Vector2(10*32 + 16, 13 * 32 + 16), Color.White);
+            WriteText(spriteBatch, game.goldKeys.ToString(), new Vector2(10 * 32 + 16, 13 * 32 + 16), Color.White);
             WriteText(spriteBatch, Keys.ToString(), new Vector2(10 * 32 + 16, 14 * 32), Color.White);
+
+            // Weapons
+            weaponA.Draw(spriteBatch, (int)(18.5 * 32), (int)(13.5 * 32));
+            weaponB.Draw(spriteBatch, (int)(21.5 * 32), (int)(13.5 * 32));
         }
 
         void scroll(SpriteBatch spriteBatch)
@@ -499,7 +505,7 @@ namespace aspectstar2
             int y = roomY + del_y;
 
             if (x >= 0 && y >= 0 && x < 16 && y < 16)
-                if (adventure.rooms[x,y] != null)
+                if (adventure.rooms[x, y] != null)
                 {
                     if (del_x == -1)
                         player.location.X = 25 * 32 - 14 - 2;
@@ -570,7 +576,7 @@ namespace aspectstar2
             if (jintEngine != null)
             {
                 jintEngine.Execute(String.Concat(
-                    "playerX = ", Math.Floor(player.location.X / 32), 
+                    "playerX = ", Math.Floor(player.location.X / 32),
                     "; playerY = ", Math.Floor(player.location.Y / 32)));
                 jintEngine.Execute("update();");
             }
@@ -582,6 +588,11 @@ namespace aspectstar2
             }
             objects.RemoveAll(isInactive);
             player.Update();
+
+            foreach (AdventureProjectile proj in this.objects.Where(isProjectile))
+            {
+                proj.projectileUpdate(objects);
+            }
 
             // Get keyboard input
             KeyboardState state = Keyboard.GetState();
@@ -610,9 +621,14 @@ namespace aspectstar2
             {
                 player.moving = false;
             }
-            
+
             if (state.IsKeyDown(Master.controls.A))
-                player.Jump();
+                weaponA.Activate(player, this);
+            else if (state.IsKeyDown(Master.controls.B))
+                weaponB.Activate(player, this);
+
+            weaponA.Update();
+            weaponB.Update();
         }
 
         public void Die()
@@ -620,6 +636,12 @@ namespace aspectstar2
             animCount = 250;
             currentMode = adventureModes.deathFade;
             PlaySound.Die();
+        }
+
+        public void fireProjectile(AdventureProjectile advProj)
+        {
+            advProj.Initialize(this, game);
+            objects.Add(advProj);
         }
 
         public void ActivateScript()
@@ -666,6 +688,14 @@ namespace aspectstar2
         public static bool isInactive(AdventureObject obj)
         {
             return !(obj.active);
+        }
+
+        public static bool isProjectile(AdventureObject proj)
+        {
+            if (proj is AdventureProjectile)
+                return true;
+            else
+                return false;
         }
     }
 }

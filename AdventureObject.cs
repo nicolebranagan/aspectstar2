@@ -14,7 +14,7 @@ namespace aspectstar2
         protected Texture2D texture;
         
         protected int currentFrame = 0;
-        int stallCount = 0;
+        protected int stallCount = 0;
         protected Vector2 offset = new Vector2(16,40);
         protected int width = 14;
         protected int height = 6;
@@ -22,7 +22,7 @@ namespace aspectstar2
         public Master.Directions faceDir;
         public bool moving;
         public Vector2 location;
-        protected int z = 0;
+        public int z = 0;
         int vz = 0;
 
         public bool active = true;
@@ -266,7 +266,7 @@ namespace aspectstar2
             else if ((test.Y + height) >= (13 * 32))
                 parent.enterNewRoom(0, 1);
             else if (parent.Collide())
-                ;
+                ; // Deliberately left blank
             else
             {
                 base.Move(move_dist);

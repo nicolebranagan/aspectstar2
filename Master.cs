@@ -22,6 +22,8 @@ namespace aspectstar2
         public const int width = 800;
         public const int height = 480;
 
+        public static Random globalRandom;
+
         public enum Directions
         {
             Up = 1,
@@ -68,6 +70,8 @@ namespace aspectstar2
             controls.A = Keys.X;
             controls.B = Keys.Z;
 
+            globalRandom = new Random();
+
             base.Initialize();
         }
 
@@ -96,6 +100,7 @@ namespace aspectstar2
             texCollection.texAdvPlayer = Content.Load<Texture2D>("advplayer");
             texCollection.texShadows = Content.Load<Texture2D>("shadows");
             texCollection.texEnemies = Content.Load<Texture2D>("enemies");
+            texCollection.texProjectile = Content.Load<Texture2D>("projectile");
 
             // Load sound effects (made in sfxr)
             PlaySound.die = Content.Load<SoundEffect>("die");
@@ -192,6 +197,7 @@ namespace aspectstar2
         public Texture2D texMapPlayer;
         public Texture2D texAdvPlayer;
         public Texture2D texEnemies;
+        public Texture2D texProjectile;
 
         public Texture2D texShadows;
     }

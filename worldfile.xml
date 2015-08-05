@@ -15351,7 +15351,7 @@ setFlag('arrowroom', true);
               <x>368</x>
               <y>176</y>
               <type>enemy</type>
-              <enemyType>0</enemyType>
+              <enemyType>1</enemyType>
             </StoredObject>
           </storedObjects>
           <code>
@@ -17070,6 +17070,14 @@ function update() {
       <decisiveness>0</decisiveness>
       <intelligence>0</intelligence>
       <movementType>stationary</movementType>
+    </BestiaryEntry>
+    <BestiaryEntry>
+      <name>Dumb Mouse</name>
+      <graphicsRow>0</graphicsRow>
+      <speed>2</speed>
+      <decisiveness>8</decisiveness>
+      <intelligence>0</intelligence>
+      <movementType>random</movementType>
     </BestiaryEntry>
   </bestiary>
 </Worldfile>

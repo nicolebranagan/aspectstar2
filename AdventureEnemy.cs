@@ -24,6 +24,35 @@ namespace aspectstar2
                 default:
                     //Stationary
                     break;
+                case BestiaryEntry.MovementTypes.random:
+                    if (stallCount % (definition.speed) != 0)
+                    {
+                        if (Master.globalRandom.Next(0, 10) > definition.decisiveness)
+                            faceDir = (Master.Directions)Master.globalRandom.Next(0, 4);
+                        else
+                        {
+                            Vector2 move_dist = new Vector2(0, 0);
+                            switch (faceDir)
+                            {
+                                case Master.Directions.Down:
+                                    move_dist = new Vector2(0, 2);
+                                    break;
+                                case Master.Directions.Up:
+                                    move_dist = new Vector2(0, -2);
+                                    break;
+                                case Master.Directions.Left:
+                                    move_dist = new Vector2(-2, 0);
+                                    break;
+                                case Master.Directions.Right:
+                                    move_dist = new Vector2(2, 0);
+                                    break;
+                                default:
+                                    break; // Something has gone wrong
+                            }
+                            this.Move(move_dist);
+                        }
+                    }
+                    break;
             }
 
             base.Update();
@@ -43,6 +72,12 @@ namespace aspectstar2
             spriteBatch.Begin();
             spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, mask);
             spriteBatch.End();
+        }
+
+        public void Hurt()
+        {
+            // TODO: health, etc
+            this.active = false;
         }
 
         public override bool inRange(AdventurePlayer player)
