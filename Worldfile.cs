@@ -119,12 +119,17 @@ namespace aspectstar2
             heart = 1,
             goldkey = 2,
             enemy = 3,
+            shooter = 4,
         }
 
         public AdventureObject getAdventureObject()
         {
             switch (type)
             {
+                case ObjectType.shooter:
+                    AdventureShooter shooter = new AdventureShooter();
+                    shooter.location = new Vector2(x, y);
+                    return shooter;
                 case ObjectType.enemy:
                     AdventureEnemy enemy = new AdventureEnemy(Master.currentFile.bestiary[enemyType]);
                     enemy.location = new Vector2(x, y);

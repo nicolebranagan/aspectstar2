@@ -57,9 +57,10 @@ namespace aspectstar2
             if ((cooldown == 0) && (player.z == 0))
             {
                 Vector2 location = new Vector2(player.location.X, player.location.Y - 16);
-                AdventureProjectile proj = new AdventureProjectile(true, player.faceDir, location, 40);
-                screen.fireProjectile(proj);
-                cooldown = 20;
+                AdventureProjectile proj = new AdventureProjectile(true, player.faceDir, location, 30);
+                screen.addObject(proj);
+                cooldown = 30;
+                PlaySound.Pew();
             }
         }
 

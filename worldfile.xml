@@ -10123,7 +10123,7 @@
         <int>0</int>
         <int>0</int>
         <int>0</int>
-        <int>0</int>
+        <int>1</int>
         <int>0</int>
         <int>1</int>
         <int>6</int>
@@ -11667,7 +11667,32 @@
             <int>19</int>
             <int>19</int>
           </tileMap>
-          <storedObjects />
+          <storedObjects>
+            <StoredObject>
+              <x>656</x>
+              <y>240</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>144</x>
+              <y>240</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>528</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>272</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+            </StoredObject>
+          </storedObjects>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -12054,339 +12079,370 @@
             <int>9</int>
             <int>9</int>
             <int>9</int>
+            <int>27</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>27</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>8</int>
+            <int>8</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>8</int>
+            <int>8</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>8</int>
+            <int>8</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>28</int>
+            <int>11</int>
+            <int>28</int>
+            <int>11</int>
+            <int>28</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>9</int>
+            <int>8</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>9</int>
+            <int>8</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>28</int>
+            <int>11</int>
+            <int>28</int>
+            <int>11</int>
+            <int>28</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>11</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>0</int>
+            <int>8</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>6</int>
+            <int>11</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>0</int>
+            <int>8</int>
+            <int>11</int>
+            <int>11</int>
+            <int>28</int>
+            <int>11</int>
+            <int>28</int>
+            <int>11</int>
+            <int>28</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>28</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>8</int>
+            <int>8</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>8</int>
+            <int>8</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>28</int>
+            <int>11</int>
+            <int>28</int>
+            <int>11</int>
+            <int>28</int>
+            <int>11</int>
+            <int>11</int>
+            <int>28</int>
+            <int>11</int>
+            <int>28</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>8</int>
+            <int>8</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>8</int>
+            <int>8</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>8</int>
+          </tileMap>
+          <storedObjects>
+            <StoredObject>
+              <x>176</x>
+              <y>272</y>
+              <type>enemy</type>
+              <enemyType>0</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>112</x>
+              <y>272</y>
+              <type>heart</type>
+              <enemyType>0</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>368</x>
+              <y>336</y>
+              <type>enemy</type>
+              <enemyType>0</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>144</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>272</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+            </StoredObject>
+          </storedObjects>
+        </Room>
+        <Room>
+          <tileMap>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
             <int>14</int>
             <int>9</int>
             <int>9</int>
             <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
             <int>14</int>
             <int>9</int>
             <int>9</int>
             <int>9</int>
-            <int>8</int>
-            <int>8</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>8</int>
-            <int>8</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>8</int>
-            <int>8</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>28</int>
-            <int>11</int>
-            <int>28</int>
-            <int>11</int>
-            <int>28</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>9</int>
-            <int>8</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>9</int>
-            <int>8</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>28</int>
-            <int>11</int>
-            <int>28</int>
-            <int>11</int>
-            <int>28</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>6</int>
-            <int>6</int>
-            <int>6</int>
-            <int>6</int>
-            <int>6</int>
-            <int>11</int>
-            <int>6</int>
-            <int>6</int>
-            <int>6</int>
-            <int>0</int>
-            <int>8</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>6</int>
-            <int>11</int>
-            <int>6</int>
-            <int>6</int>
-            <int>6</int>
-            <int>6</int>
-            <int>6</int>
-            <int>6</int>
-            <int>0</int>
-            <int>8</int>
-            <int>11</int>
-            <int>11</int>
-            <int>28</int>
-            <int>11</int>
-            <int>28</int>
-            <int>11</int>
-            <int>28</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>28</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>8</int>
-            <int>8</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>8</int>
-            <int>8</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>28</int>
-            <int>11</int>
-            <int>28</int>
-            <int>11</int>
-            <int>28</int>
-            <int>11</int>
-            <int>11</int>
-            <int>28</int>
-            <int>11</int>
-            <int>28</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>8</int>
-            <int>8</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>8</int>
-            <int>8</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>8</int>
-          </tileMap>
-          <storedObjects />
-        </Room>
-        <Room>
-          <tileMap>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
-            <int>9</int>
             <int>9</int>
             <int>9</int>
             <int>9</int>
@@ -12669,7 +12725,38 @@
             <int>8</int>
             <int>8</int>
           </tileMap>
-          <storedObjects />
+          <storedObjects>
+            <StoredObject>
+              <x>528</x>
+              <y>176</y>
+              <type>enemy</type>
+              <enemyType>1</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>624</x>
+              <y>304</y>
+              <type>enemy</type>
+              <enemyType>1</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>240</x>
+              <y>336</y>
+              <type>enemy</type>
+              <enemyType>1</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>240</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>496</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+            </StoredObject>
+          </storedObjects>
         </Room>
         <Room>
           <tileMap>
@@ -12999,7 +13086,14 @@
             <int>8</int>
             <int>8</int>
           </tileMap>
-          <storedObjects />
+          <storedObjects>
+            <StoredObject>
+              <x>368</x>
+              <y>176</y>
+              <type>enemy</type>
+              <enemyType>0</enemyType>
+            </StoredObject>
+          </storedObjects>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -13046,7 +13140,7 @@
             <int>9</int>
             <int>9</int>
             <int>9</int>
-            <int>9</int>
+            <int>27</int>
             <int>9</int>
             <int>9</int>
             <int>9</int>
@@ -13055,7 +13149,7 @@
             <int>9</int>
             <int>9</int>
             <int>9</int>
-            <int>9</int>
+            <int>27</int>
             <int>9</int>
             <int>9</int>
             <int>9</int>
@@ -13340,7 +13434,14 @@
             <int>8</int>
             <int>8</int>
           </tileMap>
-          <storedObjects />
+          <storedObjects>
+            <StoredObject>
+              <x>336</x>
+              <y>208</y>
+              <type>enemy</type>
+              <enemyType>1</enemyType>
+            </StoredObject>
+          </storedObjects>
           <code>function onLoad() { }
 function update() { }</code>
         </Room>
@@ -13672,7 +13773,32 @@ function update() { }</code>
             <int>8</int>
             <int>8</int>
           </tileMap>
-          <storedObjects />
+          <storedObjects>
+            <StoredObject>
+              <x>368</x>
+              <y>240</y>
+              <type>enemy</type>
+              <enemyType>1</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>688</x>
+              <y>368</y>
+              <type>enemy</type>
+              <enemyType>1</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>304</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>496</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+            </StoredObject>
+          </storedObjects>
         </Room>
         <Room>
           <tileMap>
@@ -14009,6 +14135,24 @@ function update() { }</code>
               <type>key</type>
               <enemyType>0</enemyType>
             </StoredObject>
+            <StoredObject>
+              <x>656</x>
+              <y>80</y>
+              <type>enemy</type>
+              <enemyType>0</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>496</x>
+              <y>304</y>
+              <type>enemy</type>
+              <enemyType>1</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>48</x>
+              <y>176</y>
+              <type>enemy</type>
+              <enemyType>1</enemyType>
+            </StoredObject>
           </storedObjects>
         </Room>
         <Room>
@@ -14375,7 +14519,7 @@ function update() { }</code>
             <int>9</int>
             <int>9</int>
             <int>9</int>
-            <int>9</int>
+            <int>14</int>
             <int>9</int>
             <int>9</int>
             <int>9</int>
@@ -14386,7 +14530,7 @@ function update() { }</code>
             <int>9</int>
             <int>9</int>
             <int>9</int>
-            <int>9</int>
+            <int>14</int>
             <int>9</int>
             <int>9</int>
             <int>9</int>
@@ -14669,7 +14813,32 @@ function update() { }</code>
             <int>8</int>
             <int>8</int>
           </tileMap>
-          <storedObjects />
+          <storedObjects>
+            <StoredObject>
+              <x>240</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>592</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>624</x>
+              <y>208</y>
+              <type>enemy</type>
+              <enemyType>0</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>208</x>
+              <y>304</y>
+              <type>enemy</type>
+              <enemyType>0</enemyType>
+            </StoredObject>
+          </storedObjects>
         </Room>
         <Room>
           <tileMap>
@@ -14705,6 +14874,7 @@ function update() { }</code>
             <int>9</int>
             <int>9</int>
             <int>9</int>
+            <int>14</int>
             <int>9</int>
             <int>9</int>
             <int>9</int>
@@ -14714,8 +14884,7 @@ function update() { }</code>
             <int>9</int>
             <int>9</int>
             <int>9</int>
-            <int>9</int>
-            <int>9</int>
+            <int>27</int>
             <int>9</int>
             <int>9</int>
             <int>9</int>
@@ -14999,7 +15168,38 @@ function update() { }</code>
             <int>8</int>
             <int>8</int>
           </tileMap>
-          <storedObjects />
+          <storedObjects>
+            <StoredObject>
+              <x>560</x>
+              <y>208</y>
+              <type>enemy</type>
+              <enemyType>1</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>336</x>
+              <y>336</y>
+              <type>enemy</type>
+              <enemyType>1</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>176</x>
+              <y>176</y>
+              <type>enemy</type>
+              <enemyType>1</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>752</x>
+              <y>368</y>
+              <type>enemy</type>
+              <enemyType>0</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>240</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+            </StoredObject>
+          </storedObjects>
           <code>function onLoad() { }
 function update() { 
 if (!getFlag('arrowroom') &amp;&amp; (playerX == 23) &amp;&amp; (playerY == 11)) {
@@ -15054,12 +15254,12 @@ setFlag('arrowroom', true);
             <int>9</int>
             <int>9</int>
             <int>9</int>
-            <int>14</int>
+            <int>27</int>
             <int>9</int>
             <int>0</int>
             <int>0</int>
             <int>9</int>
-            <int>14</int>
+            <int>27</int>
             <int>9</int>
             <int>9</int>
             <int>9</int>
@@ -15348,10 +15548,16 @@ setFlag('arrowroom', true);
           </tileMap>
           <storedObjects>
             <StoredObject>
-              <x>368</x>
+              <x>336</x>
               <y>176</y>
               <type>enemy</type>
-              <enemyType>1</enemyType>
+              <enemyType>0</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>432</x>
+              <y>176</y>
+              <type>enemy</type>
+              <enemyType>0</enemyType>
             </StoredObject>
           </storedObjects>
           <code>
@@ -15395,12 +15601,12 @@ function update() {
             <int>9</int>
             <int>9</int>
             <int>9</int>
-            <int>14</int>
+            <int>27</int>
             <int>9</int>
             <int>9</int>
             <int>9</int>
             <int>9</int>
-            <int>14</int>
+            <int>27</int>
             <int>9</int>
             <int>9</int>
             <int>0</int>
@@ -15408,7 +15614,7 @@ function update() {
             <int>9</int>
             <int>9</int>
             <int>9</int>
-            <int>14</int>
+            <int>27</int>
             <int>9</int>
             <int>9</int>
             <int>9</int>
@@ -15692,7 +15898,32 @@ function update() {
             <int>8</int>
             <int>8</int>
           </tileMap>
-          <storedObjects />
+          <storedObjects>
+            <StoredObject>
+              <x>208</x>
+              <y>272</y>
+              <type>enemy</type>
+              <enemyType>0</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>752</x>
+              <y>176</y>
+              <type>enemy</type>
+              <enemyType>1</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>560</x>
+              <y>208</y>
+              <type>enemy</type>
+              <enemyType>0</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>688</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+            </StoredObject>
+          </storedObjects>
         </Room>
         <Room>
           <tileMap>
@@ -16365,7 +16596,32 @@ function update() {
             <int>8</int>
             <int>8</int>
           </tileMap>
-          <storedObjects />
+          <storedObjects>
+            <StoredObject>
+              <x>272</x>
+              <y>304</y>
+              <type>enemy</type>
+              <enemyType>1</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>432</x>
+              <y>144</y>
+              <type>enemy</type>
+              <enemyType>1</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>528</x>
+              <y>240</y>
+              <type>enemy</type>
+              <enemyType>1</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>688</x>
+              <y>304</y>
+              <type>enemy</type>
+              <enemyType>1</enemyType>
+            </StoredObject>
+          </storedObjects>
         </Room>
         <Room>
           <tileMap>
@@ -16403,7 +16659,7 @@ function update() {
             <int>9</int>
             <int>9</int>
             <int>9</int>
-            <int>14</int>
+            <int>27</int>
             <int>9</int>
             <int>9</int>
             <int>0</int>
@@ -16695,7 +16951,32 @@ function update() {
             <int>8</int>
             <int>8</int>
           </tileMap>
-          <storedObjects />
+          <storedObjects>
+            <StoredObject>
+              <x>624</x>
+              <y>240</y>
+              <type>enemy</type>
+              <enemyType>1</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>208</x>
+              <y>336</y>
+              <type>enemy</type>
+              <enemyType>1</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>336</x>
+              <y>112</y>
+              <type>enemy</type>
+              <enemyType>1</enemyType>
+            </StoredObject>
+            <StoredObject>
+              <x>528</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+            </StoredObject>
+          </storedObjects>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />

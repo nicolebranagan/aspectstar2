@@ -20,8 +20,9 @@ namespace aspectstar2
         Weapon weaponA = new JumpWeapon();
         Weapon weaponB = new ProjectileWeapon();
 
-        AdventurePlayer player;
+        public AdventurePlayer player;
         List<AdventureObject> objects = new List<AdventureObject>();
+        List<AdventureObject> newobjects = new List<AdventureObject>();
         Adventure adventure;
         int roomX, roomY;
         Vector2 first_pos;
@@ -299,8 +300,9 @@ namespace aspectstar2
                     break;
                 case adventureModes.runMode:
                     DrawRoom(spriteBatch, Color.White);
-                    player.Draw(spriteBatch, Color.White);
-                    foreach (AdventureObject obj in objects)
+                    //player.Draw(spriteBatch, Color.White);
+                    List<AdventureObject> sortedList = objects.OrderBy(o => o.location.Y).ToList();
+                    foreach (AdventureObject obj in sortedList)
                     {
                         obj.Draw(spriteBatch, Color.White);
                     }
@@ -539,6 +541,7 @@ namespace aspectstar2
             Room newRoom = adventure.rooms[x, y];
             this.tileMap = newRoom.tileMap;
             this.objects = new List<AdventureObject>();
+            objects.Add(player);
             foreach (AdventureObject aO in newRoom.adventureObjects)
             {
                 aO.Initialize(this, game);
@@ -587,7 +590,9 @@ namespace aspectstar2
                 obj.Update();
             }
             objects.RemoveAll(isInactive);
-            player.Update();
+            objects = objects.Concat(newobjects).ToList();
+            newobjects = new List<AdventureObject>();
+            //player.Update();
 
             foreach (AdventureProjectile proj in this.objects.Where(isProjectile))
             {
@@ -638,10 +643,10 @@ namespace aspectstar2
             PlaySound.Die();
         }
 
-        public void fireProjectile(AdventureProjectile advProj)
+        public void addObject(AdventureObject obj)
         {
-            advProj.Initialize(this, game);
-            objects.Add(advProj);
+            obj.Initialize(this, game);
+            newobjects.Add(obj);
         }
 
         public void ActivateScript()

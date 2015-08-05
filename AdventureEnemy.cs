@@ -22,7 +22,7 @@ namespace aspectstar2
             switch (definition.movementType)
             {
                 default:
-                    //Stationary
+                    // Stationary
                     break;
                 case BestiaryEntry.MovementTypes.random:
                     if (stallCount % (definition.speed) != 0)
@@ -77,7 +77,14 @@ namespace aspectstar2
         public void Hurt()
         {
             // TODO: health, etc
-            this.active = false;
+            PlaySound.Boom();
+            active = false;
+            if (Master.globalRandom.Next(0,10) <= 1)
+            {
+                AdventureHeart aH = new AdventureHeart();
+                aH.location = location;
+                parent.addObject(aH);
+            }
         }
 
         public override bool inRange(AdventurePlayer player)
@@ -87,7 +94,7 @@ namespace aspectstar2
             if (Math.Sqrt( Math.Pow(location.X - playerloc.X, 2) + Math.Pow(location.Y - playerloc.Y, 2) ) <= Math.Max(width, height))
             {
                 player.Hurt();
-                player.Recoil();
+                player.Recoil(location);
                 return true;
             }
             return false;

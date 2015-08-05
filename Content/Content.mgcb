@@ -154,3 +154,15 @@
 /processorParam:TextureFormat=Color
 /build:projectile.png
 
+#begin boom.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:boom.wav
+
+#begin pew.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:pew.wav
+

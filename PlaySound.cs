@@ -15,11 +15,14 @@ namespace aspectstar2
         public static SoundEffect enter;
         public static SoundEffect drown;
         public static SoundEffect key;
+        public static SoundEffect boom;
+        public static SoundEffect pew;
 
         static SoundEffectInstance hurtInst;
         static SoundEffectInstance jumpInst;
         static SoundEffectInstance drowInst;
         static SoundEffectInstance keysInst;
+        static SoundEffectInstance pewwInst;
 
         public static void Initialize()
         {
@@ -27,6 +30,7 @@ namespace aspectstar2
             jumpInst = jump.CreateInstance();
             drowInst = drown.CreateInstance();
             keysInst = key.CreateInstance();
+            pewwInst = pew.CreateInstance();
         }
 
         public static void Die()
@@ -68,6 +72,17 @@ namespace aspectstar2
         {
             if (keysInst.State != SoundState.Playing)
                 keysInst.Play();
+        }
+
+        public static void Boom()
+        {
+            boom.Play();
+        }
+
+        public static void Pew()
+        {
+            if (pewwInst.State != SoundState.Playing)
+                pewwInst.Play();
         }
     }
 }

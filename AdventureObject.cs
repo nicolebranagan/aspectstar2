@@ -115,6 +115,41 @@ namespace aspectstar2
         public abstract bool inRange(AdventurePlayer player) ;
     }
 
+    public class AdventureShooter : AdventureObject
+    {
+        public AdventureShooter()
+        {
+            stallCount = Master.globalRandom.Next(0, 80);
+        }
+
+        public override bool inRange(AdventurePlayer player)
+        {
+            return false;
+        }
+
+        public override void Draw(SpriteBatch spriteBatch, Color mask)
+        {
+            //
+        }
+
+        public override void Update()
+        {
+            if (stallCount <= 0)
+            {
+                SeekerProjectile seeker = new SeekerProjectile(parent, location, 300);
+                parent.addObject(seeker);
+                stallCount = 90;
+            }
+            else
+                stallCount = stallCount - 1;
+        }
+
+        public override void Touch()
+        {
+            //
+        }
+    }
+
     public class AdventurePlayer : AdventureObject
     {
         int flickerCount = 1;
@@ -191,22 +226,24 @@ namespace aspectstar2
             this.flickerCount = 80;
         }
 
-        public void Recoil()
+        public void Recoil(Vector2 far_location)
         {
-            switch (this.faceDir)
+            int del_x = (int)(location.X - far_location.X);
+            int del_y = (int)(location.Y - far_location.Y);
+
+            if (Math.Abs(del_x) > Math.Abs(del_y))
             {
-                case Master.Directions.Up:
-                    faceDir = Master.Directions.Down;
-                    break;
-                case Master.Directions.Down:
-                    faceDir = Master.Directions.Up;
-                    break;
-                case Master.Directions.Left:
+                if (del_x > 0)
                     faceDir = Master.Directions.Right;
-                    break;
-                case Master.Directions.Right:
+                else
                     faceDir = Master.Directions.Left;
-                    break;
+            }
+            else
+            {
+                if (del_y > 0)
+                    faceDir = Master.Directions.Down;
+                else
+                    faceDir = Master.Directions.Up;
             }
 
             Vector2 move_dist = new Vector2(0, 0);
