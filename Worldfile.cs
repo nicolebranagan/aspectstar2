@@ -120,12 +120,18 @@ namespace aspectstar2
             goldkey = 2,
             enemy = 3,
             shooter = 4,
+            boss = 5,
         }
 
         public AdventureObject getAdventureObject()
         {
             switch (type)
             {
+                case ObjectType.boss:
+                    // will eventually depend on enemyType
+                    AdventureBoss1 boss = new AdventureBoss1();
+                    boss.location = new Vector2(x, y);
+                    return boss;
                 case ObjectType.shooter:
                     AdventureShooter shooter = new AdventureShooter();
                     shooter.location = new Vector2(x, y);

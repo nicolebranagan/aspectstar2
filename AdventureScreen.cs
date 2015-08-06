@@ -550,7 +550,7 @@ namespace aspectstar2
             Room newRoom = adventure.rooms[x, y];
             this.tileMap = newRoom.tileMap;
             this.objects = new List<AdventureObject>();
-            this.newobjects = new List<AdventureObject>();
+            this.newobjects = new List<AdventureObject>(); 
             objects.Add(player);
             foreach (AdventureObject aO in newRoom.adventureObjects)
             {

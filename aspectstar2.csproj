@@ -38,6 +38,7 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AdventureBoss.cs" />
     <Compile Include="AdventureEnemy.cs" />
     <Compile Include="AdventureItem.cs" />
     <Compile Include="AdventurePlayer.cs" />

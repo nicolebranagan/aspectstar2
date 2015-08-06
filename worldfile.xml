@@ -11124,31 +11124,32 @@
             <int>21</int>
             <int>0</int>
             <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
+            <int>10</int>
+            <int>10</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>10</int>
+            <int>10</int>
             <int>13</int>
             <int>0</int>
             <int>19</int>
             <int>0</int>
             <int>0</int>
             <int>13</int>
+            <int>10</int>
             <int>13</int>
             <int>13</int>
             <int>13</int>
@@ -11166,39 +11167,14 @@
             <int>13</int>
             <int>13</int>
             <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>0</int>
-            <int>19</int>
-            <int>19</int>
-            <int>0</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
+            <int>10</int>
             <int>13</int>
             <int>0</int>
             <int>19</int>
             <int>19</int>
             <int>0</int>
             <int>13</int>
+            <int>10</int>
             <int>13</int>
             <int>13</int>
             <int>13</int>
@@ -11216,14 +11192,14 @@
             <int>13</int>
             <int>13</int>
             <int>13</int>
-            <int>13</int>
-            <int>13</int>
+            <int>10</int>
             <int>13</int>
             <int>0</int>
             <int>19</int>
             <int>19</int>
             <int>0</int>
             <int>13</int>
+            <int>10</int>
             <int>13</int>
             <int>13</int>
             <int>13</int>
@@ -11241,8 +11217,32 @@
             <int>13</int>
             <int>13</int>
             <int>13</int>
+            <int>10</int>
             <int>13</int>
+            <int>0</int>
+            <int>19</int>
+            <int>19</int>
+            <int>0</int>
             <int>13</int>
+            <int>10</int>
+            <int>10</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>10</int>
+            <int>10</int>
             <int>13</int>
             <int>0</int>
             <int>19</int>
@@ -11322,7 +11322,14 @@
             <int>19</int>
             <int>19</int>
           </tileMap>
-          <storedObjects />
+          <storedObjects>
+            <StoredObject>
+              <x>400</x>
+              <y>240</y>
+              <type>boss</type>
+              <enemyType>0</enemyType>
+            </StoredObject>
+          </storedObjects>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
