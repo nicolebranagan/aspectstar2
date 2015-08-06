@@ -668,11 +668,16 @@ namespace aspectstar2
                 .SetValue("spawnKey", new Action<int, int>(this.SpawnKey))
                 .SetValue("getFlag", new Func<string, bool>(this.GetFlag))
                 .SetValue("setFlag", new Action<string, bool>(this.SetFlag))
+                .SetValue("overwriteTile", new Action<int, int, int>(this.OverwriteTile))
+                .SetValue("playSoundEffect", new Action<int>(this.PlaySoundEffect))
+                .SetValue("anyEnemies", new Func<bool>(this.AnyEnemies))
                 .Execute(code);
 
                 jintEngine.Execute("onLoad()");
             }
         }
+
+        // Relevant to code
 
         void SpawnKey(int x, int y)
         {
@@ -680,8 +685,38 @@ namespace aspectstar2
             aK.Initialize(this, game);
             aK.location.X = 32 * x + 16;
             aK.location.Y = 32 * y + 16;
-            objects.Add(aK);
+            newobjects.Add(aK);
+            adventure.rooms[roomX, roomY].adventureObjects.Add(aK); // So that the key respawns even if you leave the room, but not the adventure
             PlaySound.Aspect();
+        }
+
+        void OverwriteTile(int x, int y, int newTile)
+        {
+            int i = x + (y * 25);
+            tileMap[i] = newTile;
+        }
+
+        void PlaySoundEffect(int i)
+        {
+            switch (i)
+            {
+                case 0:
+                    PlaySound.Aspect();
+                    break;
+                case 1:
+                    PlaySound.Boom();
+                    break;
+            }
+        }
+
+        bool AnyEnemies()
+        {
+            foreach (AdventureObject aO in objects)
+            {
+                if (aO is AdventureEnemy)
+                    return true;
+            }
+            return false;
         }
 
         Dictionary<string, bool> flags = new Dictionary<string, bool>();
@@ -699,6 +734,8 @@ namespace aspectstar2
                 return flags[flag];
             return false;
         }
+
+        // Predicates
 
         public static bool isInactive(AdventureObject obj)
         {
