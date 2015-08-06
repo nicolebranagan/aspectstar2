@@ -112,6 +112,7 @@ namespace aspectstar2
             PlaySound.key = Content.Load<SoundEffect>("key"); 
             PlaySound.pew = Content.Load<SoundEffect>("pew");
             PlaySound.boom = Content.Load<SoundEffect>("boom");
+            PlaySound.leave = Content.Load<SoundEffect>("leave");
             PlaySound.Initialize();
                 
             // Load title screen

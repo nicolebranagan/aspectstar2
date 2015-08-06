@@ -138,7 +138,7 @@ namespace aspectstar2
         {
             base.Update();
 
-            if ((z == 0) && (parent.isSolid(this.location, 0, 0, 0)))
+            if ((z == 0) && (parent.isSolid(this.location, 0, 0, 0, faceDir)))
             {
                 moving = false;
                 parent.Drown();

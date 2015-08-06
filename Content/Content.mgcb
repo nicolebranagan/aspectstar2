@@ -166,3 +166,9 @@
 /processorParam:Quality=Best
 /build:pew.wav
 
+#begin leave.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:leave.wav
+

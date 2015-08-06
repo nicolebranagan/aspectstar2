@@ -69,43 +69,51 @@ namespace aspectstar2
             player.location = new Vector2(x * 32, y * 32);
         }
 
-        public bool isSolid(Vector2 dest, int z, int width, int height)
+        public bool isSolid(Vector2 dest, int z, int width, int height, Master.Directions faceDir)
         {
             // Checks for the solidity of a rectangle; width and height are measured from the center of the rectangle
 
             int i, x, y;
-            //Top Left
-            x = (int)Math.Floor((dest.X - width) / 32);
-            y = (int)Math.Floor((dest.Y - height) / 32);
-            i = x + (y * 25);
-            if (((tileType)key[tileMap[i]] == tileType.Solid) || ((tileType)key[tileMap[i]] == tileType.Lock) ||
-                (((tileType)key[tileMap[i]] == tileType.Crevasse) && z == 0))
-                return true;
 
-            // Bottom Left
-            x = (int)Math.Floor((dest.X + width) / 32);
-            y = (int)Math.Floor((dest.Y - height) / 32);
-            i = x + (y * 25);
-            if (((tileType)key[tileMap[i]] == tileType.Solid) || ((tileType)key[tileMap[i]] == tileType.Lock) ||
-                (((tileType)key[tileMap[i]] == tileType.Crevasse) && z == 0))
-                return true;
+            if ((faceDir == Master.Directions.Up) || (faceDir == Master.Directions.Left))
+            {
+                x = (int)Math.Floor((dest.X - width) / 32);
+                y = (int)Math.Floor((dest.Y - height) / 32);
+                i = x + (y * 25);
+                if (((tileType)key[tileMap[i]] == tileType.Solid) || ((tileType)key[tileMap[i]] == tileType.Lock) ||
+                    (((tileType)key[tileMap[i]] == tileType.Crevasse) && z == 0))
+                    return true;
+            }
 
-            // Top Right
-            x = (int)Math.Floor((dest.X - width) / 32);
-            y = (int)Math.Floor((dest.Y + height) / 32);
-            i = x + (y * 25);
-            if (((tileType)key[tileMap[i]] == tileType.Solid) || ((tileType)key[tileMap[i]] == tileType.Lock) ||
-                (((tileType)key[tileMap[i]] == tileType.Crevasse) && z == 0))
-                return true;
+            if ((faceDir == Master.Directions.Up) || (faceDir == Master.Directions.Right))
+            {
+                x = (int)Math.Floor((dest.X + width) / 32);
+                y = (int)Math.Floor((dest.Y - height) / 32);
+                i = x + (y * 25);
+                if (((tileType)key[tileMap[i]] == tileType.Solid) || ((tileType)key[tileMap[i]] == tileType.Lock) ||
+                    (((tileType)key[tileMap[i]] == tileType.Crevasse) && z == 0))
+                    return true;
+            }
 
+            if ((faceDir == Master.Directions.Down) || (faceDir == Master.Directions.Left))
+            {
+                x = (int)Math.Floor((dest.X - width) / 32);
+                y = (int)Math.Floor((dest.Y + height) / 32);
+                i = x + (y * 25);
+                if (((tileType)key[tileMap[i]] == tileType.Solid) || ((tileType)key[tileMap[i]] == tileType.Lock) ||
+                    (((tileType)key[tileMap[i]] == tileType.Crevasse) && z == 0))
+                    return true;
+            }
 
-            // Bottom Right
-            x = (int)Math.Floor((dest.X + width) / 32);
-            y = (int)Math.Floor((dest.Y + height) / 32);
-            i = x + (y * 25);
-            if (((tileType)key[tileMap[i]] == tileType.Solid) || ((tileType)key[tileMap[i]] == tileType.Lock) ||
-                (((tileType)key[tileMap[i]] == tileType.Crevasse) && z == 0))
-                return true;
+            if ((faceDir == Master.Directions.Down) || (faceDir == Master.Directions.Right))
+            {
+                x = (int)Math.Floor((dest.X + width) / 32);
+                y = (int)Math.Floor((dest.Y + height) / 32);
+                i = x + (y * 25);
+                if (((tileType)key[tileMap[i]] == tileType.Solid) || ((tileType)key[tileMap[i]] == tileType.Lock) ||
+                    (((tileType)key[tileMap[i]] == tileType.Crevasse) && z == 0))
+                    return true;
+            }
 
             return false;
         }
@@ -149,6 +157,7 @@ namespace aspectstar2
             tileType tile = (tileType)key[tileMap[i]];
             if (tile == tileType.Warp)
             {
+                PlaySound.Leave();
                 currentMode = adventureModes.fadeOut;
                 animCount = 250;
             }
@@ -541,6 +550,7 @@ namespace aspectstar2
             Room newRoom = adventure.rooms[x, y];
             this.tileMap = newRoom.tileMap;
             this.objects = new List<AdventureObject>();
+            this.newobjects = new List<AdventureObject>();
             objects.Add(player);
             foreach (AdventureObject aO in newRoom.adventureObjects)
             {

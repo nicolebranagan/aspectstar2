@@ -100,7 +100,7 @@ namespace aspectstar2
         {
             Vector2 test = move_dist + location;
             if ((test.X - width) >= 0 && (test.Y - height) >= 0 && (test.X + width) < (25 * 32) && (test.Y + height) < (13 * 32) )
-                if (!this.parent.isSolid(test, z, width, height))
+                if (!this.parent.isSolid(test, z, width, height, faceDir))
                     this.location = test;
         }
 

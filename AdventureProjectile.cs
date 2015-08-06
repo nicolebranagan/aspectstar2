@@ -98,7 +98,7 @@ namespace aspectstar2
             Vector2 test = move_dist + location;
             if ((test.X - width) >= 0 && (test.Y - height) >= 0 && (test.X + width) < (25 * 32) && (test.Y + height) < (13 * 32))
             {
-                if (!this.parent.isSolid(test, 1, width, height))
+                if (!this.parent.isSolid(test, 1, width, height, faceDir))
                     this.location = test;
                 else
                     this.active = false;
@@ -129,6 +129,7 @@ namespace aspectstar2
             this.deathTimer = deathTimer;
             this.texture = Master.texCollection.texProjectile;
             this.moving = true;
+            this.faceDir = Master.Directions.Down;
             z = 1;
             width = 4;
             height = 4;
