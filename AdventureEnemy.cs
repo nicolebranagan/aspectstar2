@@ -170,6 +170,7 @@ namespace aspectstar2
                 if (health == 0)
                 {
                     active = false;
+                    parent.addObject(new AdventureExplosion(this.location));
                     if (Master.globalRandom.Next(0, 10) <= 1)
                     {
                         AdventureHeart aH = new AdventureHeart();

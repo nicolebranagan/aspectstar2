@@ -150,5 +150,47 @@ namespace aspectstar2
         }
     }
 
-    
+    public class AdventureExplosion : AdventureObject
+    {
+        const int frameCount = 10;
+        int animCountMax = 4 * frameCount;
+        int animCount = 0;
+
+        public AdventureExplosion(Vector2 location)
+        {
+            this.location = location;
+            this.texture = Master.texCollection.texPlosion;
+        }
+
+        public override void Draw(SpriteBatch spriteBatch, Color mask)
+        {
+            int dim_x = 32;
+            int dim_y = 32;
+            Vector2 screen_loc = Master.getMapTile(animCount / 4, Master.texCollection.texPlosion);
+
+            Rectangle sourceRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y, dim_x, dim_y);
+            Rectangle destinationRectangle = new Rectangle((int)location.X - 16, (int)location.Y - 16, dim_x, dim_y);
+
+            spriteBatch.Begin();
+            spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, mask);
+            spriteBatch.End();
+        }
+
+        public override void Update()
+        {
+            animCount++;
+            if (animCount > animCountMax)
+                this.active = false;
+        }
+
+        public override bool inRange(AdventurePlayer player)
+        {
+            return false;
+        }
+
+        public override void Touch()
+        {
+            //
+        }
+    }
 }

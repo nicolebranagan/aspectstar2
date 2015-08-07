@@ -130,7 +130,7 @@ namespace aspectstar2
                 parent.enterNewRoom(1, 0);
             else if ((test.Y + height) >= (13 * 32))
                 parent.enterNewRoom(0, 1);
-            else
+            else if (!parent.isSolid(test, 1, width, height, faceDir))
                 location = test;
         }
 

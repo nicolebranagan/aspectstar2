@@ -102,6 +102,7 @@ namespace aspectstar2
             texCollection.texEnemies = Content.Load<Texture2D>("enemies");
             texCollection.texProjectile = Content.Load<Texture2D>("projectile");
             texCollection.bigMouse = Content.Load<Texture2D>("bigmouse");
+            texCollection.texPlosion = Content.Load<Texture2D>("explosion");
 
             // Load sound effects (made in sfxr)
             PlaySound.die = Content.Load<SoundEffect>("die");
@@ -206,6 +207,7 @@ namespace aspectstar2
         public Texture2D bigMouse;
 
         public Texture2D texShadows;
+        public Texture2D texPlosion;
     }
 
     public struct Controls

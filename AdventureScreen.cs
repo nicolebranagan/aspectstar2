@@ -688,12 +688,14 @@ namespace aspectstar2
             newobjects.Add(aK);
             adventure.rooms[roomX, roomY].adventureObjects.Add(aK); // So that the key respawns even if you leave the room, but not the adventure
             PlaySound.Aspect();
+            
         }
 
         void OverwriteTile(int x, int y, int newTile)
         {
             int i = x + (y * 25);
             tileMap[i] = newTile;
+            first_pos = new Vector2(player.location.X, player.location.Y);
         }
 
         void PlaySoundEffect(int i)
