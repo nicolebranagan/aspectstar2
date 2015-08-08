@@ -246,9 +246,10 @@ namespace aspectstar2
 
         public void Drown()
         {
+            animCount = 24;
             currentMode = adventureModes.drowning;
             PlaySound.Drown();
-            animCount = 24;
+            //objects.RemoveAll(isProjectile);
         }
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
@@ -602,7 +603,9 @@ namespace aspectstar2
             objects.RemoveAll(isInactive);
             objects = objects.Concat(newobjects).ToList();
             newobjects = new List<AdventureObject>();
-            //player.Update();
+
+            if (currentMode == adventureModes.drowning)
+                objects.RemoveAll(isProjectile);
 
             foreach (AdventureProjectile proj in this.objects.Where(isProjectile))
             {
@@ -659,19 +662,25 @@ namespace aspectstar2
             newobjects.Add(obj);
         }
 
-        public void ActivateScript()
+        public Engine ActivateEngine(string code)
         {
-            string code = adventure.rooms[roomX, roomY].code;
-            if (code != null)
-            {
-                jintEngine = new Engine(cfg => cfg.AllowClr())
+            return new Engine(cfg => cfg.AllowClr())
                 .SetValue("spawnKey", new Action<int, int>(this.SpawnKey))
                 .SetValue("getFlag", new Func<string, bool>(this.GetFlag))
                 .SetValue("setFlag", new Action<string, bool>(this.SetFlag))
                 .SetValue("overwriteTile", new Action<int, int, int>(this.OverwriteTile))
                 .SetValue("playSoundEffect", new Action<int>(this.PlaySoundEffect))
                 .SetValue("anyEnemies", new Func<bool>(this.AnyEnemies))
+                .SetValue("clearObjects", new Action(this.ClearObjects))
                 .Execute(code);
+        }
+
+        void ActivateScript()
+        {
+            string code = adventure.rooms[roomX, roomY].code;
+            if (code != null)
+            {
+                jintEngine = ActivateEngine(code);
 
                 jintEngine.Execute("onLoad()");
             }
@@ -719,6 +728,15 @@ namespace aspectstar2
                     return true;
             }
             return false;
+        }
+
+        void ClearObjects()
+        {
+            foreach (AdventureObject obj in objects)
+            {
+                if (!(obj is AdventurePlayer))
+                    obj.active = false;
+            }
         }
 
         Dictionary<string, bool> flags = new Dictionary<string, bool>();

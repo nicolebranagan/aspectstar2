@@ -11158,32 +11158,7 @@
             <int>13</int>
             <int>13</int>
             <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>10</int>
-            <int>13</int>
-            <int>11</int>
-            <int>19</int>
-            <int>19</int>
-            <int>11</int>
-            <int>13</int>
-            <int>10</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
+            <int>0</int>
             <int>13</int>
             <int>13</int>
             <int>13</int>
@@ -11207,8 +11182,33 @@
             <int>13</int>
             <int>13</int>
             <int>13</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
             <int>13</int>
             <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>10</int>
+            <int>13</int>
+            <int>11</int>
+            <int>19</int>
+            <int>19</int>
+            <int>11</int>
+            <int>13</int>
+            <int>10</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>0</int>
             <int>13</int>
             <int>13</int>
             <int>13</int>
@@ -11348,7 +11348,7 @@ if (!(getFlag("enterBoss")) &amp;&amp; playerY == 11) {
 overwriteTile(11,12,19);
 overwriteTile(12,12,19);
 overwriteTile(13,12,19);
-playSoundEffect(0);
+playSoundEffect(1);
 setFlag("enterBoss", true);
 }
 
@@ -11360,6 +11360,7 @@ overwriteTile(0,4,21);
 overwriteTile(12,7,20);
 playSoundEffect(0);
 setFlag("beatBoss", true);
+clearObjects();
 }
 }</code>
         </Room>
