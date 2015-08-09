@@ -331,10 +331,10 @@ namespace aspectstar2
             {
                 x = i % 25;
                 y = i / 25;
-                sourceTile = Master.getMapTile(tileMap[i], Master.texCollection.dungeonTiles);
+                sourceTile = Master.getMapTile(tileMap[i], Master.texCollection.adventureTiles[adventure.tileset]);
                 source = new Rectangle((int)sourceTile.X, (int)sourceTile.Y, 32, 32);
                 dest = new Rectangle(x * 32, y * 32, 32, 32);
-                spriteBatch.Draw(Master.texCollection.dungeonTiles, dest, source, mask);
+                spriteBatch.Draw(Master.texCollection.adventureTiles[adventure.tileset], dest, source, mask);
             }
             spriteBatch.End();
         }
@@ -480,11 +480,11 @@ namespace aspectstar2
                 if ((x >= limitOffset.X) && (x <= limitOffset.X + Master.width) &&
                     (y >= limitOffset.Y) && (y <= limitOffset.Y + (Master.height)))
                 {
-                    sourceTile = Master.getMapTile(room[i], Master.texCollection.dungeonTiles);
+                    sourceTile = Master.getMapTile(room[i], Master.texCollection.adventureTiles[adventure.tileset]);
                     source = new Rectangle((int)sourceTile.X, (int)sourceTile.Y, 32, 32);
                     dest = new Rectangle(x * 32 - (int)screenOffset.X, y * 32 - (int)screenOffset.Y, 32, 32);
                     if (y - (int)limitOffset.Y < 13)
-                        spriteBatch.Draw(Master.texCollection.dungeonTiles, dest, source, Color.White);
+                        spriteBatch.Draw(Master.texCollection.adventureTiles[adventure.tileset], dest, source, Color.White);
                 }
             }
             spriteBatch.End();
