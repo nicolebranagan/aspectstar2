@@ -734,8 +734,12 @@ namespace aspectstar2
         {
             foreach (AdventureObject obj in objects)
             {
-                if (!(obj is AdventurePlayer))
+                if (!(obj is AdventurePlayer) && !(obj is AdventureExplosion))
                     obj.active = false;
+                if ((obj is AdventureEnemy) || (obj is AdventureShooter))
+                {
+                    addObject(new AdventureExplosion(obj.location));
+                }
             }
         }
 
