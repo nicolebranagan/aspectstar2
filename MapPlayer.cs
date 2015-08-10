@@ -15,7 +15,7 @@ namespace aspectstar2
         int currentFrame = 0;
         int stallCount = 0;
 
-        Master.Directions _faceDir;
+        Master.Directions _faceDir, _nextDir;
         public Master.Directions faceDir
         {
             get { return _faceDir; }
@@ -24,7 +24,10 @@ namespace aspectstar2
                 if (!moving)
                 {
                     _faceDir = value;
+                    _nextDir = value;
                 }
+                else if (value != _faceDir)
+                    _nextDir = value;
             }
         }
         public Vector2 location;
@@ -94,7 +97,10 @@ namespace aspectstar2
                 if (this.moveCount == 0)
                     parent.checkObjects((int)Math.Floor(this.location.X / 32), (int)Math.Floor(this.location.Y / 32));
                 if (this.moveCount == 0 & this.renewMove)
+                {
+                    _faceDir = _nextDir;
                     this.Move();
+                }
             }
             else if (moveCount == 0)
             {
