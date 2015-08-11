@@ -34,7 +34,6 @@ namespace aspectstar2
             weapons = new List<Weapon>();
             weapons.Add(new JumpWeapon());
             weapons.Add(new ProjectileWeapon());
-            weapons.Add(new NullWeapon());
             weaponA = weapons[0];
             weaponB = weapons[1];
         }

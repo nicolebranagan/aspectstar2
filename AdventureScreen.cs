@@ -329,7 +329,7 @@ namespace aspectstar2
             drawStatus(spriteBatch);
         }
 
-        void DrawRoom(SpriteBatch spriteBatch, Color mask)
+        public void DrawRoom(SpriteBatch spriteBatch, Color mask)
         {
             int x, y;
             Rectangle source, dest;
