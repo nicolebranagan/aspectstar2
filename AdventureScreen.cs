@@ -17,9 +17,6 @@ namespace aspectstar2
         public bool fromMap;
         public bool beaten;
 
-        Weapon weaponA = new JumpWeapon();
-        Weapon weaponB = new ProjectileWeapon();
-
         public AdventurePlayer player;
         List<AdventureObject> objects = new List<AdventureObject>();
         List<AdventureObject> newobjects = new List<AdventureObject>();
@@ -31,7 +28,7 @@ namespace aspectstar2
 
         public int Keys = 0;
 
-        int animCount, stallCount;
+        int animCount, stallCount, lag;
         string textString;
         adventureModes currentMode = adventureModes.runMode;
         enum adventureModes
@@ -350,7 +347,7 @@ namespace aspectstar2
             spriteBatch.End();
         }
 
-        void drawStatus(SpriteBatch spriteBatch)
+        public void drawStatus(SpriteBatch spriteBatch)
         {
             int x, y;
             Rectangle source, dest;
@@ -406,8 +403,8 @@ namespace aspectstar2
             WriteText(spriteBatch, Keys.ToString(), new Vector2(10 * 32 + 16, 14 * 32), Color.White);
 
             // Weapons
-            weaponA.Draw(spriteBatch, (int)(18.5 * 32), (int)(13.5 * 32));
-            weaponB.Draw(spriteBatch, (int)(21.5 * 32), (int)(13.5 * 32));
+            game.weaponA.Draw(spriteBatch, (int)(18.5 * 32), (int)(13.5 * 32));
+            game.weaponB.Draw(spriteBatch, (int)(21.5 * 32), (int)(13.5 * 32));
         }
 
         void scroll(SpriteBatch spriteBatch)
@@ -657,12 +654,19 @@ namespace aspectstar2
             }
 
             if (state.IsKeyDown(Master.controls.A))
-                weaponA.Activate(player, this);
+                game.weaponA.Activate(player, this);
             else if (state.IsKeyDown(Master.controls.B))
-                weaponB.Activate(player, this);
+                game.weaponB.Activate(player, this);
+            else if (state.IsKeyDown(Master.controls.Start) && lag == 0)
+            {
+                game.Pause();
+                lag = 20;
+            }
+            if (lag != 0)
+                lag = lag - 1;
 
-            weaponA.Update();
-            weaponB.Update();
+            game.weaponA.Update();
+            game.weaponB.Update();
         }
 
         public void Die()

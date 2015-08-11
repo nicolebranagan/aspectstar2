@@ -69,6 +69,7 @@ namespace aspectstar2
             controls.Right = Keys.Right;
             controls.A = Keys.X;
             controls.B = Keys.Z;
+            controls.Start = Keys.Enter;
 
             globalRandom = new Random();
 
@@ -220,7 +221,7 @@ namespace aspectstar2
 
     public struct Controls
     {
-        public Keys Up, Down, Left, Right, A, B;
+        public Keys Up, Down, Left, Right, A, B, Start;
     }
     
 }

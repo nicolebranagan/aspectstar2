@@ -19,6 +19,10 @@ namespace aspectstar2
         public bool[] beaten;
         int dest;
 
+        public Weapon weaponA;
+        public Weapon weaponB;
+        public List<Weapon> weapons;
+
         public Game(Master master)
         {
             this.master = master;
@@ -27,6 +31,12 @@ namespace aspectstar2
             {
                 beaten[i] = false;
             }
+            weapons = new List<Weapon>();
+            weapons.Add(new JumpWeapon());
+            weapons.Add(new ProjectileWeapon());
+            weapons.Add(new NullWeapon());
+            weaponA = weapons[0];
+            weaponB = weapons[1];
         }
 
         public Screen Begin()
@@ -56,6 +66,16 @@ namespace aspectstar2
             }
             if (life == 0)
                 life = 5;
+        }
+
+        public void Pause()
+        {
+            master.UpdateScreen(new PauseScreen(currentAdventure, this));
+        }
+
+        public void Unpause()
+        {
+            master.UpdateScreen(currentAdventure);
         }
     }
 }

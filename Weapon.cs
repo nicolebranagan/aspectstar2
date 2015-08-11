@@ -7,10 +7,11 @@ using System.Text;
 
 namespace aspectstar2
 {
-    abstract class Weapon
+    public abstract class Weapon
     {
         public abstract void Activate(AdventurePlayer player, AdventureScreen screen);
         public abstract void Draw(SpriteBatch spriteBatch, int x, int y);
+        public abstract string getLabel();
 
         public virtual void Update()
         {
@@ -29,6 +30,11 @@ namespace aspectstar2
         {
             //
         }
+
+        public override string getLabel()
+        {
+            return " ";
+        }
     }
 
     class JumpWeapon : Weapon
@@ -45,6 +51,11 @@ namespace aspectstar2
             spriteBatch.Begin();
             spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
             spriteBatch.End();
+        }
+
+        public override string getLabel()
+        {
+            return "JUMP";
         }
     }
 
@@ -81,6 +92,11 @@ namespace aspectstar2
             }
             else
                 cooldown = 0;
+        }
+
+        public override string getLabel()
+        {
+            return "BULLET A";
         }
     }
 }

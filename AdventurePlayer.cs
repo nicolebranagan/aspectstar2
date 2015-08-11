@@ -146,6 +146,9 @@ namespace aspectstar2
 
             if (!this.moving)
                 this.currentFrame = 0;
+
+            if (z != 0)
+                this.currentFrame = 1;
         }
 
         public override void Move(Vector2 move_dist)
