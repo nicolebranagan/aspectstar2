@@ -32,6 +32,7 @@ namespace aspectstar2
         public int Keys = 0;
 
         int animCount, stallCount;
+        string textString;
         adventureModes currentMode = adventureModes.runMode;
         enum adventureModes
         {
@@ -40,7 +41,8 @@ namespace aspectstar2
             scrollingX,
             scrollingY,
             deathFade,
-            fadeOut
+            fadeOut,
+            textBox,
         }
 
         enum tileType
@@ -256,6 +258,15 @@ namespace aspectstar2
         {
             switch (currentMode)
             {
+                case adventureModes.textBox:
+                    DrawRoom(spriteBatch, Color.White);
+                    List<AdventureObject> sortList = objects.OrderBy(o => o.location.Y).ToList();
+                    foreach (AdventureObject obj in sortList)
+                    {
+                        obj.Draw(spriteBatch, Color.White);
+                    }
+                    DrawTextBox(spriteBatch, textString);
+                    break;
                 case adventureModes.drowning:
                     if (animCount == 0)
                     {
@@ -567,6 +578,11 @@ namespace aspectstar2
         {
             switch (currentMode)
             {
+                case adventureModes.textBox:
+                    KeyboardState state = Keyboard.GetState();
+                    if (state.IsKeyDown(Master.controls.A) || state.IsKeyDown(Master.controls.B))
+                        currentMode = adventureModes.runMode;
+                    break;
                 case adventureModes.fadeOut:
                     animCount = animCount - 2;
                     if (animCount <= 0)
@@ -662,6 +678,31 @@ namespace aspectstar2
             newobjects.Add(obj);
         }
 
+        void DrawTextBox(SpriteBatch spriteBatch, string text)
+        {
+            int height = 4 * 32 + 16;
+            spriteBatch.Begin();
+            spriteBatch.Draw(Master.texCollection.blank, new Rectangle(0, 0, Master.width, height), Color.Black);
+            spriteBatch.End();
+
+            text = text.ToUpper();
+            int tiles = (int)Math.Floor((double)(Master.width - 64) / 16);
+            bool moreText = true; int i = 0; string dummy;
+            while (moreText)
+            {
+                if ((text.Length - (i * tiles)) >= tiles)
+                    dummy = text.Substring(i * tiles, tiles);
+                else
+                {
+                    dummy = text.Substring(i * tiles, text.Length - (i * tiles));
+                    moreText = false;
+                }
+                WriteText(spriteBatch, dummy, new Vector2(32, 16 + (i * 32)), Color.White);
+
+                i++;
+            }
+        }
+
         public Engine ActivateEngine(string code)
         {
             return new Engine(cfg => cfg.AllowClr())
@@ -672,6 +713,8 @@ namespace aspectstar2
                 .SetValue("playSoundEffect", new Action<int>(this.PlaySoundEffect))
                 .SetValue("anyEnemies", new Func<bool>(this.AnyEnemies))
                 .SetValue("clearObjects", new Action(this.ClearObjects))
+                .SetValue("TextBox", new Action<string>(this.TextBox))
+                .SetValue("callMethod", new Action<string,string>(this.CallMethod))
                 .Execute(code);
         }
 
@@ -741,6 +784,25 @@ namespace aspectstar2
                     addObject(new AdventureExplosion(obj.location));
                 }
             }
+        }
+
+        public void TextBox(string text)
+        {
+            textString = text;
+            currentMode = adventureModes.textBox;
+        }
+
+        void CallMethod(string name, string message)
+        {
+            AdventureEntity ent;
+
+            foreach (AdventureObject obj in objects)
+                if (obj is AdventureEntity)
+                {
+                    ent = (AdventureEntity)obj;
+                    if (ent.name == name)
+                        ent.Execute(message);
+                }
         }
 
         Dictionary<string, bool> flags = new Dictionary<string, bool>();

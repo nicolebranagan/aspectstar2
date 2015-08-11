@@ -18,6 +18,7 @@ namespace aspectstar2
         protected Vector2 offset = new Vector2(16,40);
         protected int width = 14;
         protected int height = 6;
+        protected int graphicsRow = 0;
 
         public Master.Directions faceDir;
         public bool moving;
@@ -27,7 +28,7 @@ namespace aspectstar2
 
         public bool active = true;
 
-        public void Initialize(AdventureScreen parent, Game game)
+        public virtual void Initialize(AdventureScreen parent, Game game)
         {
             this.parent = parent;
             this.game = game;
@@ -86,9 +87,10 @@ namespace aspectstar2
             int dim_x = 32;
             int dim_y = 48;
             int column = ((int)faceDir * 2) + currentFrame;
+            int row = graphicsRow;
             Vector2 screen_loc = location - offset;
 
-            Rectangle sourceRectangle = new Rectangle(dim_x * column, 0, dim_x, dim_y);
+            Rectangle sourceRectangle = new Rectangle(dim_x * column, row * dim_y, dim_x, dim_y);
             Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y - (z * 2), dim_x, dim_y);
 
             spriteBatch.Begin();

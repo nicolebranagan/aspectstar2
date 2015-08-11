@@ -91,6 +91,10 @@ namespace aspectstar2
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            // Draw textures
+            texCollection.blank = new Texture2D(GraphicsDevice, 1, 1);
+            texCollection.blank.SetData(new Color[] { Color.White });
+
             // Load in-game content
             texCollection.arcadeFont = Content.Load<Texture2D>("arcadefont");
             texCollection.controls = Content.Load<Texture2D>("menu");
@@ -198,6 +202,7 @@ namespace aspectstar2
 
         public Texture2D controls;
         public Texture2D arcadeFont;
+        public Texture2D blank;
 
         public Texture2D worldTiles;
         public Texture2D[] adventureTiles;
