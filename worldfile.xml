@@ -11000,6 +11000,10 @@
               <y>272</y>
               <type>goldkey</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
           </storedObjects>
         </Room>
@@ -11337,18 +11341,30 @@
               <y>240</y>
               <type>boss</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>176</x>
               <y>48</y>
               <type>shooter</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>624</x>
               <y>48</y>
               <type>shooter</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -11722,24 +11738,40 @@ clearObjects();
               <y>240</y>
               <type>shooter</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>144</x>
               <y>240</y>
               <type>shooter</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>272</x>
               <y>48</y>
               <type>shooter</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>720</x>
               <y>144</y>
               <type>heart</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
           </storedObjects>
         </Room>
@@ -11754,7 +11786,360 @@ clearObjects();
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
-        <Room xsi:nil="true" />
+        <Room>
+          <tileMap>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>19</int>
+            <int>19</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>19</int>
+            <int>19</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>19</int>
+            <int>19</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>19</int>
+            <int>19</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>0</int>
+            <int>0</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>0</int>
+            <int>0</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>19</int>
+            <int>19</int>
+            <int>11</int>
+            <int>11</int>
+            <int>0</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>2</int>
+            <int>0</int>
+            <int>2</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>0</int>
+            <int>11</int>
+            <int>11</int>
+            <int>19</int>
+            <int>19</int>
+            <int>11</int>
+            <int>11</int>
+            <int>0</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>0</int>
+            <int>3</int>
+            <int>0</int>
+            <int>3</int>
+            <int>0</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>0</int>
+            <int>11</int>
+            <int>11</int>
+            <int>19</int>
+            <int>19</int>
+            <int>11</int>
+            <int>11</int>
+            <int>0</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>0</int>
+            <int>11</int>
+            <int>11</int>
+            <int>19</int>
+            <int>19</int>
+            <int>11</int>
+            <int>11</int>
+            <int>18</int>
+            <int>0</int>
+            <int>0</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>0</int>
+            <int>0</int>
+            <int>18</int>
+            <int>11</int>
+            <int>11</int>
+            <int>19</int>
+            <int>19</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>18</int>
+            <int>18</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>18</int>
+            <int>18</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>19</int>
+            <int>19</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>17</int>
+            <int>17</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>0</int>
+            <int>0</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+          </tileMap>
+          <storedObjects>
+            <StoredObject>
+              <x>400</x>
+              <y>240</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>chest</name>
+                <code>function onLoad() {
+overrideSettings(false, false);
+}
+function update() { }
+function inRange() { }
+function touch() {
+giveWeapon(0);
+playSoundEffect(0);
+TextBox("               CONGRATULATIONS                                 YOU  FOUND                                   PROJECTILE                    ");
+die();
+}
+function hurt() { }</code>
+                <graphics>12</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+            </StoredObject>
+          </storedObjects>
+        </Room>
         <Room>
           <tileMap>
             <int>19</int>
@@ -12419,30 +12804,50 @@ clearObjects();
               <y>272</y>
               <type>enemy</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>112</x>
               <y>272</y>
               <type>heart</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>368</x>
               <y>336</y>
               <type>enemy</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>144</x>
               <y>48</y>
               <type>shooter</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>272</x>
               <y>48</y>
               <type>shooter</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
           </storedObjects>
         </Room>
@@ -12780,30 +13185,50 @@ clearObjects();
               <y>176</y>
               <type>enemy</type>
               <enemyType>1</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>624</x>
               <y>304</y>
               <type>enemy</type>
               <enemyType>1</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>240</x>
               <y>336</y>
               <type>enemy</type>
               <enemyType>1</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>240</x>
               <y>48</y>
               <type>shooter</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>496</x>
               <y>48</y>
               <type>shooter</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
           </storedObjects>
         </Room>
@@ -13141,24 +13566,40 @@ clearObjects();
               <y>176</y>
               <type>enemy</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>432</x>
               <y>176</y>
               <type>enemy</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>304</x>
               <y>176</y>
               <type>enemy</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>368</x>
               <y>240</y>
               <type>enemy</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
           </storedObjects>
         </Room>
@@ -13186,7 +13627,7 @@ clearObjects();
             <int>8</int>
             <int>8</int>
             <int>8</int>
-            <int>11</int>
+            <int>0</int>
             <int>0</int>
             <int>8</int>
             <int>8</int>
@@ -13211,7 +13652,7 @@ clearObjects();
             <int>9</int>
             <int>9</int>
             <int>9</int>
-            <int>11</int>
+            <int>18</int>
             <int>18</int>
             <int>9</int>
             <int>9</int>
@@ -13507,6 +13948,30 @@ clearObjects();
               <y>208</y>
               <type>enemy</type>
               <enemyType>1</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+            </StoredObject>
+            <StoredObject>
+              <x>752</x>
+              <y>208</y>
+              <type>enemy</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+            </StoredObject>
+            <StoredObject>
+              <x>752</x>
+              <y>240</y>
+              <type>enemy</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -13846,24 +14311,40 @@ function update() { }</code>
               <y>240</y>
               <type>enemy</type>
               <enemyType>1</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>688</x>
               <y>368</y>
               <type>enemy</type>
               <enemyType>1</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>304</x>
               <y>48</y>
               <type>shooter</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>496</x>
               <y>48</y>
               <type>shooter</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
           </storedObjects>
         </Room>
@@ -14201,24 +14682,40 @@ function update() { }</code>
               <y>240</y>
               <type>key</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>656</x>
               <y>80</y>
               <type>enemy</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>496</x>
               <y>304</y>
               <type>enemy</type>
               <enemyType>1</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>48</x>
               <y>176</y>
               <type>enemy</type>
               <enemyType>1</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
           </storedObjects>
         </Room>
@@ -14886,24 +15383,40 @@ function update() { }</code>
               <y>48</y>
               <type>shooter</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>592</x>
               <y>48</y>
               <type>shooter</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>624</x>
               <y>208</y>
               <type>enemy</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>208</x>
               <y>304</y>
               <type>enemy</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
           </storedObjects>
         </Room>
@@ -15241,30 +15754,50 @@ function update() { }</code>
               <y>208</y>
               <type>enemy</type>
               <enemyType>1</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>336</x>
               <y>336</y>
               <type>enemy</type>
               <enemyType>1</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>176</x>
               <y>176</y>
               <type>enemy</type>
               <enemyType>1</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>752</x>
               <y>368</y>
               <type>enemy</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>240</x>
               <y>48</y>
               <type>shooter</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -15619,12 +16152,20 @@ setFlag('arrowroom', true);
               <y>176</y>
               <type>enemy</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>432</x>
               <y>176</y>
               <type>enemy</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
           </storedObjects>
           <code>
@@ -15971,24 +16512,40 @@ function update() {
               <y>272</y>
               <type>enemy</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>752</x>
               <y>176</y>
               <type>enemy</type>
               <enemyType>1</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>560</x>
               <y>208</y>
               <type>enemy</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>688</x>
               <y>48</y>
               <type>shooter</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
           </storedObjects>
         </Room>
@@ -16326,12 +16883,20 @@ function update() {
               <y>240</y>
               <type>key</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>464</x>
               <y>240</y>
               <type>key</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
           </storedObjects>
         </Room>
@@ -16669,24 +17234,40 @@ function update() {
               <y>304</y>
               <type>enemy</type>
               <enemyType>1</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>432</x>
               <y>144</y>
               <type>enemy</type>
               <enemyType>1</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>528</x>
               <y>240</y>
               <type>enemy</type>
               <enemyType>1</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>688</x>
               <y>304</y>
               <type>enemy</type>
               <enemyType>1</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
           </storedObjects>
         </Room>
@@ -17024,24 +17605,40 @@ function update() {
               <y>240</y>
               <type>enemy</type>
               <enemyType>1</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>208</x>
               <y>336</y>
               <type>enemy</type>
               <enemyType>1</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>336</x>
               <y>112</y>
               <type>enemy</type>
               <enemyType>1</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
             <StoredObject>
               <x>528</x>
               <y>48</y>
               <type>shooter</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
           </storedObjects>
         </Room>
@@ -17394,6 +17991,10 @@ function update() {
               <y>240</y>
               <type>heart</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
           </storedObjects>
         </Room>
@@ -18342,6 +18943,10 @@ function update() {
               <y>112</y>
               <type>heart</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
             </StoredObject>
           </storedObjects>
         </Room>
@@ -19017,7 +19622,25 @@ function update() {
             <int>12</int>
             <int>12</int>
           </tileMap>
-          <storedObjects />
+          <storedObjects>
+            <StoredObject>
+              <x>464</x>
+              <y>208</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>snake</name>
+                <code>function onLoad() { }
+function update() { }
+function inRange() { }
+function touch() { 
+TextBox("IM A SNAKE");
+}</code>
+                <graphics>1</graphics>
+                <gfxtype>Enemies</gfxtype>
+              </data>
+            </StoredObject>
+          </storedObjects>
         </Room>
         <Room>
           <tileMap>

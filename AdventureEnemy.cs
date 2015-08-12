@@ -105,7 +105,7 @@ namespace aspectstar2
                                             newDir = Master.Directions.Right;
                                         break;
                                 }
-                                faceDir = newDir;
+                                //faceDir = newDir;
                             }
                         else
                         {

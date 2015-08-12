@@ -17,6 +17,8 @@ namespace aspectstar2
         public bool fromMap;
         public bool beaten;
 
+        public int tileset;
+
         public AdventurePlayer player;
         List<AdventureObject> objects = new List<AdventureObject>();
         List<AdventureObject> newobjects = new List<AdventureObject>();
@@ -60,6 +62,7 @@ namespace aspectstar2
             this.player = new AdventurePlayer(this, game);
 
             this.adventure = Master.currentFile.adventures[dest].Clone();
+            this.tileset = adventure.tileset;
             this.key = adventure.key;
             this.beaten = beaten;
             LoadRoom(destroomX, destroomY);
@@ -690,7 +693,8 @@ namespace aspectstar2
             spriteBatch.End();
 
             text = text.ToUpper();
-            int tiles = (int)Math.Floor((double)(Master.width - 64) / 16);
+            int tiles = 46; // (int)Math.Floor((double)(Master.width - 64) / 16);
+            Debug.WriteLine(tiles);
             bool moreText = true; int i = 0; string dummy;
             while (moreText)
             {
@@ -719,6 +723,7 @@ namespace aspectstar2
                 .SetValue("clearObjects", new Action(this.ClearObjects))
                 .SetValue("TextBox", new Action<string>(this.TextBox))
                 .SetValue("callMethod", new Action<string,string>(this.CallMethod))
+                .SetValue("giveWeapon", new Action<int>(this.GiveWeapon))
                 .Execute(code);
         }
 
@@ -807,6 +812,16 @@ namespace aspectstar2
                     if (ent.name == name)
                         ent.Execute(message);
                 }
+        }
+
+        void GiveWeapon(int weapon)
+        {
+            switch (weapon)
+            {
+                case 0:
+                    game.GetWeapon(new ProjectileWeapon());
+                    break;
+            }
         }
 
         Dictionary<string, bool> flags = new Dictionary<string, bool>();

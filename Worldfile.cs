@@ -112,6 +112,7 @@ namespace aspectstar2
         public float x, y;
         public ObjectType type;
         public int enemyType;
+        public EntityData data;
 
         public enum ObjectType
         {
@@ -121,12 +122,17 @@ namespace aspectstar2
             enemy = 3,
             shooter = 4,
             boss = 5,
+            entity = 6,
         }
 
         public AdventureObject getAdventureObject()
         {
             switch (type)
             {
+                case ObjectType.entity:
+                    AdventureEntity entity = new AdventureEntity(data);
+                    entity.location = new Vector2(x, y);
+                    return entity;
                 case ObjectType.boss:
                     // will eventually depend on enemyType
                     AdventureBoss1 boss = new AdventureBoss1();
@@ -153,6 +159,21 @@ namespace aspectstar2
                     key.location = new Vector2(x, y);
                     return key;
             }
+        }
+    }
+
+
+    public struct EntityData
+    {
+        public string name;
+        public string code;
+        public int graphics;
+        public GraphicsType gfxtype;
+
+        public enum GraphicsType
+        {
+            Maptile = 0,
+            Enemies = 1,
         }
     }
 }

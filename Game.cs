@@ -33,9 +33,9 @@ namespace aspectstar2
             }
             weapons = new List<Weapon>();
             weapons.Add(new JumpWeapon());
-            weapons.Add(new ProjectileWeapon());
+            //weapons.Add(new ProjectileWeapon());
             weaponA = weapons[0];
-            weaponB = weapons[1];
+            weaponB = new NullWeapon();
         }
 
         public Screen Begin()
@@ -75,6 +75,26 @@ namespace aspectstar2
         public void Unpause()
         {
             master.UpdateScreen(currentAdventure);
+        }
+
+        public void GetWeapon(Weapon newWeapon)
+        {
+            bool condition = false;
+            foreach (Weapon w in weapons)
+                if (w.GetType() == newWeapon.GetType())
+                {
+                    condition = true;
+                    w.Extra(newWeapon);
+                }
+            
+            if (!condition)
+            {
+                weapons.Add(newWeapon);
+                if (weaponA is NullWeapon)
+                    weaponA = newWeapon;
+                else if (weaponB is NullWeapon)
+                    weaponB = newWeapon;
+            }
         }
     }
 }

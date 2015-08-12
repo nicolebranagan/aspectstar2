@@ -17,6 +17,11 @@ namespace aspectstar2
         {
 
         }
+
+        public virtual void Extra(Weapon weapon)
+        {
+            
+        }
     }
 
     class NullWeapon : Weapon
@@ -96,7 +101,7 @@ namespace aspectstar2
 
         public override string getLabel()
         {
-            return "BULLET A";
+            return "PROJECTILE";
         }
     }
 }
