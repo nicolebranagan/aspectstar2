@@ -3847,6 +3847,10 @@
       <int>7</int>
       <int>7</int>
       <int>7</int>
+      <int>1</int>
+      <int>15</int>
+      <int>15</int>
+      <int>2</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -3943,6 +3947,10 @@
       <int>7</int>
       <int>7</int>
       <int>7</int>
+      <int>16</int>
+      <int>0</int>
+      <int>12</int>
+      <int>17</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -4039,6 +4047,10 @@
       <int>7</int>
       <int>7</int>
       <int>7</int>
+      <int>16</int>
+      <int>6</int>
+      <int>12</int>
+      <int>17</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -4134,6 +4146,12 @@
       <int>7</int>
       <int>7</int>
       <int>7</int>
+      <int>1</int>
+      <int>0</int>
+      <int>6</int>
+      <int>0</int>
+      <int>0</int>
+      <int>2</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -4225,6 +4243,18 @@
       <int>7</int>
       <int>7</int>
       <int>7</int>
+      <int>1</int>
+      <int>15</int>
+      <int>15</int>
+      <int>0</int>
+      <int>0</int>
+      <int>6</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>15</int>
+      <int>15</int>
+      <int>2</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -4313,6 +4343,18 @@
       <int>7</int>
       <int>7</int>
       <int>7</int>
+      <int>16</int>
+      <int>12</int>
+      <int>12</int>
+      <int>0</int>
+      <int>0</int>
+      <int>10</int>
+      <int>13</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>12</int>
+      <int>17</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -4401,6 +4443,18 @@
       <int>7</int>
       <int>7</int>
       <int>7</int>
+      <int>16</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>12</int>
+      <int>0</int>
+      <int>17</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -4489,6 +4543,18 @@
       <int>7</int>
       <int>7</int>
       <int>7</int>
+      <int>3</int>
+      <int>14</int>
+      <int>14</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>14</int>
+      <int>14</int>
+      <int>4</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -4580,6 +4646,12 @@
       <int>7</int>
       <int>7</int>
       <int>7</int>
+      <int>3</int>
+      <int>0</int>
+      <int>0</int>
+      <int>12</int>
+      <int>0</int>
+      <int>4</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -4675,6 +4747,10 @@
       <int>7</int>
       <int>7</int>
       <int>7</int>
+      <int>16</int>
+      <int>12</int>
+      <int>12</int>
+      <int>17</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -4771,6 +4847,10 @@
       <int>7</int>
       <int>7</int>
       <int>7</int>
+      <int>16</int>
+      <int>0</int>
+      <int>0</int>
+      <int>17</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -4867,90 +4947,10 @@
       <int>7</int>
       <int>7</int>
       <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
+      <int>3</int>
+      <int>14</int>
+      <int>14</int>
+      <int>4</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -10069,8 +10069,8 @@
       <int>0</int>
       <int>0</int>
     </key>
-    <startX>4</startX>
-    <startY>3</startY>
+    <startX>46</startX>
+    <startY>39</startY>
     <objects>
       <MapObject xsi:type="MapTeleporter">
         <x>25</x>
@@ -10097,6 +10097,15 @@
         <destroomX>7</destroomX>
         <destroomY>13</destroomY>
         <destx>12</destx>
+        <desty>11</desty>
+      </MapObject>
+      <MapObject xsi:type="MapTeleporter">
+        <x>47</x>
+        <y>43</y>
+        <dest>0</dest>
+        <destroomX>1</destroomX>
+        <destroomY>14</destroomY>
+        <destx>11</destx>
         <desty>11</desty>
       </MapObject>
     </objects>
@@ -11819,6 +11828,31 @@ clearObjects();
             <int>21</int>
             <int>21</int>
             <int>21</int>
+            <int>14</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>14</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>14</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>19</int>
+            <int>19</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
             <int>21</int>
             <int>21</int>
             <int>21</int>
@@ -11839,82 +11873,57 @@ clearObjects();
             <int>21</int>
             <int>19</int>
             <int>19</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
+            <int>13</int>
+            <int>13</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>13</int>
+            <int>13</int>
+            <int>19</int>
+            <int>19</int>
+            <int>13</int>
+            <int>18</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>18</int>
+            <int>13</int>
             <int>19</int>
             <int>19</int>
             <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>19</int>
-            <int>19</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>19</int>
-            <int>19</int>
-            <int>11</int>
             <int>11</int>
             <int>11</int>
             <int>0</int>
@@ -11936,7 +11945,7 @@ clearObjects();
             <int>0</int>
             <int>11</int>
             <int>11</int>
-            <int>11</int>
+            <int>18</int>
             <int>19</int>
             <int>19</int>
             <int>11</int>
@@ -11947,13 +11956,13 @@ clearObjects();
             <int>13</int>
             <int>13</int>
             <int>13</int>
-            <int>13</int>
-            <int>13</int>
+            <int>0</int>
             <int>2</int>
             <int>0</int>
+            <int>0</int>
+            <int>0</int>
             <int>2</int>
-            <int>13</int>
-            <int>13</int>
+            <int>0</int>
             <int>13</int>
             <int>13</int>
             <int>13</int>
@@ -11971,15 +11980,15 @@ clearObjects();
             <int>13</int>
             <int>13</int>
             <int>13</int>
-            <int>13</int>
-            <int>13</int>
+            <int>0</int>
             <int>0</int>
             <int>3</int>
             <int>0</int>
+            <int>0</int>
+            <int>0</int>
             <int>3</int>
             <int>0</int>
-            <int>13</int>
-            <int>13</int>
+            <int>0</int>
             <int>13</int>
             <int>13</int>
             <int>13</int>
@@ -11997,13 +12006,13 @@ clearObjects();
             <int>13</int>
             <int>13</int>
             <int>13</int>
-            <int>13</int>
-            <int>13</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>13</int>
-            <int>13</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
             <int>13</int>
             <int>13</int>
             <int>13</int>
@@ -12039,7 +12048,7 @@ clearObjects();
             <int>11</int>
             <int>19</int>
             <int>19</int>
-            <int>11</int>
+            <int>13</int>
             <int>11</int>
             <int>11</int>
             <int>18</int>
@@ -12061,11 +12070,11 @@ clearObjects();
             <int>18</int>
             <int>11</int>
             <int>11</int>
-            <int>11</int>
+            <int>13</int>
             <int>19</int>
             <int>19</int>
-            <int>11</int>
-            <int>11</int>
+            <int>13</int>
+            <int>13</int>
             <int>11</int>
             <int>11</int>
             <int>11</int>
@@ -12075,18 +12084,18 @@ clearObjects();
             <int>18</int>
             <int>18</int>
             <int>17</int>
+            <int>18</int>
             <int>17</int>
             <int>18</int>
             <int>18</int>
             <int>18</int>
             <int>18</int>
             <int>18</int>
-            <int>18</int>
             <int>11</int>
             <int>11</int>
             <int>11</int>
-            <int>11</int>
-            <int>11</int>
+            <int>13</int>
+            <int>13</int>
             <int>19</int>
             <int>19</int>
             <int>19</int>
@@ -12099,9 +12108,9 @@ clearObjects();
             <int>19</int>
             <int>19</int>
             <int>19</int>
-            <int>0</int>
-            <int>0</int>
-            <int>19</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
             <int>19</int>
             <int>19</int>
             <int>19</int>
@@ -12130,7 +12139,7 @@ function inRange() { }
 function touch() {
 giveWeapon(0);
 playSoundEffect(0);
-TextBox("               CONGRATULATIONS                                 YOU  FOUND                                   PROJECTILE                    ");
+TextBox("               CONGRATULATIONS                                 YOU  FOUND                                    PROJECTILE                    ");
 die();
 }
 function hurt() { }</code>
@@ -13627,9 +13636,9 @@ function hurt() { }</code>
             <int>8</int>
             <int>8</int>
             <int>8</int>
-            <int>0</int>
-            <int>0</int>
-            <int>8</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
             <int>8</int>
             <int>8</int>
             <int>8</int>
@@ -13652,8 +13661,9 @@ function hurt() { }</code>
             <int>9</int>
             <int>9</int>
             <int>9</int>
-            <int>18</int>
-            <int>18</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
             <int>9</int>
             <int>9</int>
             <int>9</int>
@@ -13664,7 +13674,6 @@ function hurt() { }</code>
             <int>9</int>
             <int>9</int>
             <int>9</int>
-            <int>9</int>
             <int>8</int>
             <int>8</int>
             <int>9</int>
@@ -13678,8 +13687,8 @@ function hurt() { }</code>
             <int>9</int>
             <int>9</int>
             <int>0</int>
-            <int>11</int>
-            <int>9</int>
+            <int>0</int>
+            <int>0</int>
             <int>9</int>
             <int>9</int>
             <int>9</int>
@@ -13701,66 +13710,41 @@ function hurt() { }</code>
             <int>18</int>
             <int>0</int>
             <int>0</int>
-            <int>0</int>
-            <int>18</int>
-            <int>11</int>
+            <int>2</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
+            <int>2</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>18</int>
             <int>18</int>
             <int>18</int>
             <int>18</int>
             <int>18</int>
-            <int>8</int>
-            <int>8</int>
             <int>18</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>11</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
             <int>2</int>
             <int>9</int>
             <int>8</int>
-            <int>11</int>
             <int>18</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>0</int>
-            <int>7</int>
-            <int>0</int>
+            <int>11</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>7</int>
-            <int>0</int>
+            <int>3</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
+            <int>3</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>11</int>
             <int>11</int>
             <int>11</int>
             <int>0</int>
@@ -13768,20 +13752,37 @@ function hurt() { }</code>
             <int>9</int>
             <int>8</int>
             <int>11</int>
+            <int>18</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>11</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>8</int>
+            <int>11</int>
             <int>11</int>
             <int>18</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>15</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>15</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -13790,6 +13791,14 @@ function hurt() { }</code>
             <int>0</int>
             <int>0</int>
             <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>29</int>
             <int>0</int>
             <int>8</int>
             <int>11</int>
@@ -13818,7 +13827,7 @@ function hurt() { }</code>
             <int>0</int>
             <int>8</int>
             <int>11</int>
-            <int>11</int>
+            <int>0</int>
             <int>11</int>
             <int>18</int>
             <int>18</int>
@@ -13834,7 +13843,7 @@ function hurt() { }</code>
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>0</int>
+            <int>18</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -13842,9 +13851,9 @@ function hurt() { }</code>
             <int>2</int>
             <int>8</int>
             <int>8</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
             <int>11</int>
             <int>11</int>
             <int>18</int>
@@ -13858,8 +13867,8 @@ function hurt() { }</code>
             <int>10</int>
             <int>10</int>
             <int>0</int>
-            <int>0</int>
-            <int>0</int>
+            <int>18</int>
+            <int>11</int>
             <int>0</int>
             <int>0</int>
             <int>18</int>
@@ -13867,10 +13876,10 @@ function hurt() { }</code>
             <int>3</int>
             <int>8</int>
             <int>8</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
+            <int>18</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
             <int>11</int>
             <int>11</int>
             <int>18</int>
@@ -13883,8 +13892,8 @@ function hurt() { }</code>
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>18</int>
-            <int>18</int>
+            <int>11</int>
+            <int>11</int>
             <int>18</int>
             <int>18</int>
             <int>11</int>
@@ -13893,9 +13902,9 @@ function hurt() { }</code>
             <int>8</int>
             <int>8</int>
             <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
             <int>11</int>
             <int>11</int>
             <int>11</int>
@@ -13955,7 +13964,7 @@ function hurt() { }</code>
             </StoredObject>
             <StoredObject>
               <x>752</x>
-              <y>208</y>
+              <y>240</y>
               <type>enemy</type>
               <enemyType>0</enemyType>
               <data>
@@ -13965,7 +13974,7 @@ function hurt() { }</code>
             </StoredObject>
             <StoredObject>
               <x>752</x>
-              <y>240</y>
+              <y>176</y>
               <type>enemy</type>
               <enemyType>0</enemyType>
               <data>
@@ -14054,7 +14063,7 @@ function update() { }</code>
             <int>9</int>
             <int>9</int>
             <int>8</int>
-            <int>8</int>
+            <int>9</int>
             <int>18</int>
             <int>18</int>
             <int>18</int>
@@ -14104,7 +14113,7 @@ function update() { }</code>
             <int>11</int>
             <int>11</int>
             <int>8</int>
-            <int>9</int>
+            <int>0</int>
             <int>0</int>
             <int>11</int>
             <int>11</int>
@@ -14240,57 +14249,57 @@ function update() { }</code>
             <int>11</int>
             <int>11</int>
             <int>11</int>
-            <int>0</int>
-            <int>0</int>
-            <int>15</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>8</int>
-            <int>8</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
             <int>7</int>
             <int>0</int>
-            <int>0</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
             <int>15</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>8</int>
+            <int>8</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>15</int>
+            <int>0</int>
+            <int>0</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>0</int>
             <int>0</int>
             <int>0</int>
             <int>8</int>
@@ -16191,9 +16200,9 @@ function update() {
             <int>8</int>
             <int>8</int>
             <int>8</int>
-            <int>8</int>
             <int>0</int>
             <int>0</int>
+            <int>0</int>
             <int>8</int>
             <int>8</int>
             <int>8</int>
@@ -16206,6 +16215,9 @@ function update() {
             <int>8</int>
             <int>8</int>
             <int>8</int>
+            <int>9</int>
+            <int>9</int>
+            <int>27</int>
             <int>9</int>
             <int>9</int>
             <int>9</int>
@@ -16213,10 +16225,7 @@ function update() {
             <int>9</int>
             <int>9</int>
             <int>9</int>
-            <int>9</int>
-            <int>27</int>
-            <int>9</int>
-            <int>9</int>
+            <int>0</int>
             <int>0</int>
             <int>0</int>
             <int>9</int>
@@ -16241,7 +16250,7 @@ function update() {
             <int>9</int>
             <int>9</int>
             <int>9</int>
-            <int>9</int>
+            <int>0</int>
             <int>0</int>
             <int>0</int>
             <int>9</int>
@@ -16265,7 +16274,7 @@ function update() {
             <int>18</int>
             <int>18</int>
             <int>18</int>
-            <int>18</int>
+            <int>0</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -16290,8 +16299,8 @@ function update() {
             <int>11</int>
             <int>11</int>
             <int>11</int>
-            <int>11</int>
             <int>18</int>
+            <int>0</int>
             <int>0</int>
             <int>0</int>
             <int>18</int>
@@ -16316,7 +16325,7 @@ function update() {
             <int>11</int>
             <int>11</int>
             <int>11</int>
-            <int>11</int>
+            <int>18</int>
             <int>18</int>
             <int>18</int>
             <int>11</int>
@@ -16542,6 +16551,16 @@ function update() {
               <y>48</y>
               <type>shooter</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+            </StoredObject>
+            <StoredObject>
+              <x>432</x>
+              <y>304</y>
+              <type>enemy</type>
+              <enemyType>1</enemyType>
               <data>
                 <graphics>0</graphics>
                 <gfxtype>Maptile</gfxtype>
@@ -16936,6 +16955,7 @@ function update() {
             <int>9</int>
             <int>9</int>
             <int>9</int>
+            <int>14</int>
             <int>9</int>
             <int>9</int>
             <int>9</int>
@@ -16944,8 +16964,7 @@ function update() {
             <int>9</int>
             <int>9</int>
             <int>9</int>
-            <int>9</int>
-            <int>9</int>
+            <int>27</int>
             <int>9</int>
             <int>9</int>
             <int>9</int>
@@ -17264,6 +17283,16 @@ function update() {
               <y>304</y>
               <type>enemy</type>
               <enemyType>1</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+            </StoredObject>
+            <StoredObject>
+              <x>304</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
               <data>
                 <graphics>0</graphics>
                 <gfxtype>Maptile</gfxtype>

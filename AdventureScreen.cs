@@ -694,7 +694,6 @@ namespace aspectstar2
 
             text = text.ToUpper();
             int tiles = 46; // (int)Math.Floor((double)(Master.width - 64) / 16);
-            Debug.WriteLine(tiles);
             bool moreText = true; int i = 0; string dummy;
             while (moreText)
             {
@@ -705,7 +704,7 @@ namespace aspectstar2
                     dummy = text.Substring(i * tiles, text.Length - (i * tiles));
                     moreText = false;
                 }
-                WriteText(spriteBatch, dummy, new Vector2(32, 16 + (i * 32)), Color.White);
+                WriteText(spriteBatch, dummy, new Vector2(32, 32 + (i * 32)), Color.White);
 
                 i++;
             }

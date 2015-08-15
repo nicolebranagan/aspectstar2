@@ -58,7 +58,8 @@ namespace aspectstar2
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
-            WriteText(spriteBatch, "ASPECT STAR 2", new Vector2(0, 0), Color.White);
+            WriteText(spriteBatch, "ASPECT STAR 2", new Vector2((Master.width / 2) - (8 * 13), (Master.height / 2) - 24), Color.White);
+            WriteText(spriteBatch, "PRE RELEASE DEMO", new Vector2((Master.width / 2) - (8 * 16), (Master.height / 2) - 8), Color.White);
         }
 
         public override void Update(GameTime gameTime)

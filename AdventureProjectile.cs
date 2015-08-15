@@ -42,7 +42,7 @@ namespace aspectstar2
             foreach (AdventureObject obj in objects)
             {
                 if (obj != this)
-                    if ( Math.Sqrt( Math.Pow(location.X - obj.location.X, 2) + Math.Pow(location.Y - obj.location.Y - (obj.z * 2), 2) ) < 16)
+                    if ( Math.Sqrt( Math.Pow(location.X - obj.location.X, 2) + Math.Pow(location.Y - obj.location.Y + (obj.z * 2), 2) ) < 16)
                     {
                         if (obj is AdventurePlayer)
                         {
