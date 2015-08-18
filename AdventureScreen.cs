@@ -579,8 +579,8 @@ namespace aspectstar2
             switch (currentMode)
             {
                 case adventureModes.textBox:
-                    KeyboardState state = Keyboard.GetState();
-                    if (state.IsKeyDown(Master.controls.A) || state.IsKeyDown(Master.controls.B))
+                    //KeyboardState state = Keyboard.GetState();
+                    if (Master.controls.A || Master.controls.B)
                         currentMode = adventureModes.runMode;
                     break;
                 case adventureModes.fadeOut:
@@ -629,24 +629,24 @@ namespace aspectstar2
             }
 
             // Get keyboard input
-            KeyboardState state = Keyboard.GetState();
+            //KeyboardState state = Keyboard.GetState();
 
-            if (state.IsKeyDown(Master.controls.Up))
+            if (Master.controls.Up)
             {
                 player.moving = true;
                 player.faceDir = Master.Directions.Up;
             }
-            else if (state.IsKeyDown(Master.controls.Down))
+            else if (Master.controls.Down)
             {
                 player.moving = true;
                 player.faceDir = Master.Directions.Down;
             }
-            else if (state.IsKeyDown(Master.controls.Left))
+            else if (Master.controls.Left)
             {
                 player.moving = true;
                 player.faceDir = Master.Directions.Left;
             }
-            else if (state.IsKeyDown(Master.controls.Right))
+            else if (Master.controls.Right)
             {
                 player.moving = true;
                 player.faceDir = Master.Directions.Right;
@@ -656,11 +656,18 @@ namespace aspectstar2
                 player.moving = false;
             }
 
-            if (state.IsKeyDown(Master.controls.A))
-                game.weaponA.Activate(player, this);
-            else if (state.IsKeyDown(Master.controls.B))
-                game.weaponB.Activate(player, this);
-            else if (state.IsKeyDown(Master.controls.Start) && lag == 0)
+            if (stallCount <= 0)
+            {
+                if (Master.controls.A)
+                    game.weaponA.Activate(player, this);
+                else if (Master.controls.B)
+                    game.weaponB.Activate(player, this);
+            }
+            else
+                stallCount--;
+
+
+            if (Master.controls.Start && lag == 0)
             {
                 game.Pause();
                 lag = 20;

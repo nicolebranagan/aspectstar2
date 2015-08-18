@@ -55,36 +55,36 @@ namespace aspectstar2
                 lag = lag - 1;
             else
             {
-                KeyboardState state = Keyboard.GetState();
-                if (state.IsKeyDown(Master.controls.Left))
+                //KeyboardState state = Keyboard.GetState();
+                if (Master.controls.Left)
                 {
                     selection = selection - 1;
                     if (selection < 0)
                         selection = 0;
                     lag = 15;
                 }
-                else if (state.IsKeyDown(Master.controls.Right))
+                else if (Master.controls.Right)
                 {
                     selection = selection + 1;
                     if (selection == game.weapons.Count)
                         selection = selection - 1;
                     lag = 15;
                 }
-                else if (state.IsKeyDown(Master.controls.A))
+                else if (Master.controls.A)
                 {
                     game.weaponA = game.weapons[selection];
                     if (game.weaponA == game.weaponB)
                         game.weaponB = new NullWeapon();
                     lag = 15;
                 }
-                else if (state.IsKeyDown(Master.controls.B))
+                else if (Master.controls.B)
                 {
                     game.weaponB = game.weapons[selection];
                     if (game.weaponB == game.weaponA)
                         game.weaponA = new NullWeapon();
                     lag = 15;
                 }
-                else if (state.IsKeyDown(Master.controls.Start))
+                else if (Master.controls.Start)
                 {
                     game.Unpause();
                 }

@@ -77,24 +77,24 @@ namespace aspectstar2
             player.Update();
 
             // Get keyboard input
-            KeyboardState state = Keyboard.GetState();
+            //KeyboardState state = Keyboard.GetState();
 
-            if (state.IsKeyDown(Master.controls.Up))
+            if (Master.controls.Up)
             {
                 player.faceDir = Master.Directions.Up;
                 player.moving = true;
             }
-            else if (state.IsKeyDown(Master.controls.Down))
+            else if (Master.controls.Down)
             {
                 player.faceDir = Master.Directions.Down;
                 player.moving = true;
             }
-            else if (state.IsKeyDown(Master.controls.Left))
+            else if (Master.controls.Left)
             {
                 player.faceDir = Master.Directions.Left;
                 player.moving = true;
             }
-            else if (state.IsKeyDown(Master.controls.Right))
+            else if (Master.controls.Right)
             {
                 player.faceDir = Master.Directions.Right;
                 player.moving = true;

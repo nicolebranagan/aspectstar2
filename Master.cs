@@ -6,6 +6,7 @@ using System.IO;
 using System.Xml.Serialization;
 using System.Drawing;
 using Microsoft.Xna.Framework.Audio;
+using System.Collections.Generic;
 
 namespace aspectstar2
 {
@@ -63,13 +64,13 @@ namespace aspectstar2
             // TODO: Add your initialization logic here
             // Set default controls
             Master.controls = new Controls();
-            controls.Up = Keys.Up;
+            /*controls.Up = Keys.Up;
             controls.Down = Keys.Down;
             controls.Left = Keys.Left;
             controls.Right = Keys.Right;
             controls.A = Keys.X;
             controls.B = Keys.Z;
-            controls.Start = Keys.Enter;
+            controls.Start = Keys.Enter;*/
 
             globalRandom = new Random();
 
@@ -147,7 +148,8 @@ namespace aspectstar2
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-            
+
+            Master.controls.Update();
             currentScreen.Update(gameTime);
 
             base.Update(gameTime);
@@ -219,9 +221,50 @@ namespace aspectstar2
         public Texture2D texPlosion;
     }
 
-    public struct Controls
+    public class Controls
     {
-        public Keys Up, Down, Left, Right, A, B, Start;
+        // First step towards gamepad support? Though I need a gamepad to actually add that
+
+        public bool Up, Down, Left, Right, A, B, Start;
+
+        Dictionary<Key, Keys> definitions = new Dictionary<Key, Keys>();
+
+        public enum Key
+        {
+            Up,
+            Down,
+            Left,
+            Right,
+            A,
+            B,
+            Start,
+        }
+
+        public Controls()
+        {
+            // Default controls are now here
+
+            definitions.Add(Key.Up, Keys.Up);
+            definitions.Add(Key.Down, Keys.Down);
+            definitions.Add(Key.Left, Keys.Left);
+            definitions.Add(Key.Right, Keys.Right);
+            definitions.Add(Key.A, Keys.X);
+            definitions.Add(Key.B, Keys.Z);
+            definitions.Add(Key.Start, Keys.Enter);
+        }
+
+        public void Update()
+        {
+            KeyboardState state = Keyboard.GetState();
+
+            Up = state.IsKeyDown(definitions[Key.Up]);
+            Down = state.IsKeyDown(definitions[Key.Down]);
+            Left = state.IsKeyDown(definitions[Key.Left]);
+            Right = state.IsKeyDown(definitions[Key.Right]);
+            A = state.IsKeyDown(definitions[Key.A]);
+            B = state.IsKeyDown(definitions[Key.B]);
+            Start = state.IsKeyDown(definitions[Key.Start]);
+        }
     }
     
 }

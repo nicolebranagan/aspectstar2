@@ -89,7 +89,7 @@ namespace aspectstar2
                             }
                             else
                             {
-                                Master.Directions newDir = (Master.Directions)Master.globalRandom.Next(0, 3);
+                                /*Master.Directions newDir = (Master.Directions)Master.globalRandom.Next(0, 3);
                                 switch (faceDir)
                                 {
                                     case Master.Directions.Down:
@@ -105,7 +105,7 @@ namespace aspectstar2
                                             newDir = Master.Directions.Right;
                                         break;
                                 }
-                                //faceDir = newDir;
+                                faceDir = newDir;*/
                             }
                         else
                         {

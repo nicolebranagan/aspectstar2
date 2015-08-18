@@ -64,9 +64,9 @@ namespace aspectstar2
 
         public override void Update(GameTime gameTime)
         {
-            KeyboardState state = Keyboard.GetState();
+            //KeyboardState state = Keyboard.GetState();
 
-            if (state.IsKeyDown(Keys.Enter))
+            if (Master.controls.Start)
             {
                 // begin game
                 this.master.NewGame();
