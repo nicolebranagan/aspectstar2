@@ -46,7 +46,7 @@ namespace aspectstar2
 
             WriteText(spriteBatch, game.weapons[selection].getLabel(), new Vector2(32, 128), Color.White);
 
-            screen.drawStatus(spriteBatch);
+            screen.DrawStatus(spriteBatch);
         }
 
         public override void Update(GameTime gameTime)

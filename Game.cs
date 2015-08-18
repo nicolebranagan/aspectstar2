@@ -13,6 +13,7 @@ namespace aspectstar2
         public int life = 5;
         public int possibleLife = 10;
         public int goldKeys = 0;
+        public int bells = 0;
         AdventureScreen currentAdventure;
         MapScreen currentMap;
 
@@ -33,7 +34,7 @@ namespace aspectstar2
             }
             weapons = new List<Weapon>();
             weapons.Add(new JumpWeapon());
-            //weapons.Add(new ProjectileWeapon());
+
             weaponA = weapons[0];
             weaponB = new NullWeapon();
         }
@@ -95,6 +96,30 @@ namespace aspectstar2
                 else if (weaponB is NullWeapon)
                     weaponB = newWeapon;
             }
+        }
+
+        public void RemoveWeapon(Weapon oldWeapon)
+        {
+            weapons.RemoveAll(o => o.GetType() == oldWeapon.GetType());
+
+            if (weaponA == oldWeapon)
+                weaponA = new NullWeapon();
+            else if (weaponB == oldWeapon)
+                weaponB = new NullWeapon();
+        }
+
+        public AdventureItem getRandomItem()
+        {
+            List<AdventureItem> items = new List<AdventureItem>();
+            items.Add(new AdventureHeart());
+            items.Add(new AdventureHeart());
+            items.Add(new AdventureBell());
+            return items[Master.globalRandom.Next(items.Count)];
+        }
+
+        void isWeapon(Weapon newWeapon)
+        {
+
         }
     }
 }

@@ -68,6 +68,7 @@ namespace aspectstar2
                 .SetValue("move", new Action<int, int>(CommandMove))
                 .SetValue("hurtPlayer", new Action(parent.player.Hurt))
                 .SetValue("die", new Action(Die))
+                .SetValue("questionBox", new Action<string, string, string>(QuestionBox))
                 .Execute("onLoad()");
         }
 
@@ -137,6 +138,22 @@ namespace aspectstar2
         void Die()
         {
             active = false;
+        }
+
+        void QuestionBox(string text, string callYes, string callNo)
+        {
+            parent.QuestionBox(text, getChooser(this, callYes, callNo));
+        }
+
+        static Action<bool> getChooser(AdventureEntity ent, string callYes, string callNo)
+        {
+            return delegate (bool x)
+            {
+                if (x)
+                    ent.jintEngine.Execute(callYes);
+                else
+                    ent.jintEngine.Execute(callNo);
+            };
         }
     }
 }

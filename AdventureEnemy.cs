@@ -161,11 +161,11 @@ namespace aspectstar2
                 {
                     active = false;
                     parent.addObject(new AdventureExplosion(this.location));
-                    if (Master.globalRandom.Next(0, 10) <= 1)
+                    if (Master.globalRandom.Next(0, 10) <= 2)
                     {
-                        AdventureHeart aH = new AdventureHeart();
-                        aH.location = location;
-                        parent.addObject(aH);
+                        AdventureItem aI = game.getRandomItem();
+                        aI.location = location;
+                        parent.addObject(aI);
                     }
                 }
             }

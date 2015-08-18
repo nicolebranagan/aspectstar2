@@ -19666,8 +19666,21 @@ function update() {
 function update() { }
 function inRange() { }
 function touch() {
-TextBox("IM A SNAKE");
-}</code>
+var bells = getCounter("_bells");
+if (bells &gt;= 2)
+	questionBox("DO YOU WANT TO BUY HEARTS FOR 2 BELLS", "yes()", "no()");
+else
+	TextBox("YOU ARE TOO POOR TO BUY MY WARES");
+}
+
+function yes() {
+var bells = getCounter("_bells");
+setCounter("_bells", bells - 2);
+giveWeapon(1);
+playSoundEffect(0);
+}
+
+function no() { TextBox("SO BE IT"); }</code>
                 <graphics>1</graphics>
                 <gfxtype>Enemies</gfxtype>
               </data>

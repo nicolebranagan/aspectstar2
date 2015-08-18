@@ -31,7 +31,8 @@ namespace aspectstar2
         public int Keys = 0;
 
         int animCount, stallCount, lag;
-        string textString;
+        string textString; int choice = 1; Action<bool> chooser;
+
         adventureModes currentMode = adventureModes.runMode;
         enum adventureModes
         {
@@ -266,12 +267,21 @@ namespace aspectstar2
                         obj.Draw(spriteBatch, Color.White);
                     }
                     DrawTextBox(spriteBatch, textString);
+                    if (choice != -1)
+                    {
+                        WriteText(spriteBatch, "YES", new Vector2((Master.width / 2)- (16 * 11), 16 * 6), Color.White);
+                        WriteText(spriteBatch, "NO", new Vector2((Master.width / 2) + (16 * 8), 16 * 6), Color.White);
+                        if (choice == 0)
+                            WriteText(spriteBatch, "O", new Vector2((Master.width / 2) - (16 * 13), 16 * 6), Color.White);
+                        else if (choice == 1)
+                            WriteText(spriteBatch, "O", new Vector2((Master.width / 2) + (16 * 6), 16 * 6), Color.White);
+                    }
                     break;
                 case adventureModes.drowning:
                     if (animCount == 0)
                     {
                         DrawRoom(spriteBatch, Color.White);
-                        drawStatus(spriteBatch);
+                        DrawStatus(spriteBatch);
                         if (game.life > 2)
                         {
                             game.life = game.life - 2;
@@ -329,7 +339,7 @@ namespace aspectstar2
                     }
                     break;
             }
-            drawStatus(spriteBatch);
+            DrawStatus(spriteBatch);
         }
 
         public void DrawRoom(SpriteBatch spriteBatch, Color mask)
@@ -350,7 +360,7 @@ namespace aspectstar2
             spriteBatch.End();
         }
 
-        public void drawStatus(SpriteBatch spriteBatch)
+        public void DrawStatus(SpriteBatch spriteBatch)
         {
             int x, y;
             Rectangle source, dest;
@@ -389,12 +399,17 @@ namespace aspectstar2
                 spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
             }
 
+            // Bells
+            source = new Rectangle(208, 0, 16, 16);
+            dest = new Rectangle((int)(10 * 32), (int)(12 * 32 + 48), 16, 16);
+            spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
+
             // Keys
             source = new Rectangle((128 + 48), 0, 16, 16);
-            dest = new Rectangle((int)(10 * 32), (int)(13 * 32 + 16), 16, 16);
+            dest = new Rectangle((int)(10 * 32), (int)(13 * 32 + 32), 16, 16);
             spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
             source = new Rectangle((128 + 64), 0, 16, 16);
-            dest = new Rectangle((int)(10 * 32), (int)(13 * 32 + 32), 16, 16);
+            dest = new Rectangle((int)(10 * 32 + (16 * 4)), (int)(13 * 32 + 32), 16, 16);
             spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
             spriteBatch.End();
 
@@ -402,8 +417,9 @@ namespace aspectstar2
             WriteText(spriteBatch, adventure.name, new Vector2(48, 14 * 32), Color.White);
 
             // Key counts
-            WriteText(spriteBatch, game.goldKeys.ToString(), new Vector2(10 * 32 + 16, 13 * 32 + 16), Color.White);
-            WriteText(spriteBatch, Keys.ToString(), new Vector2(10 * 32 + 16, 14 * 32), Color.White);
+            WriteText(spriteBatch, game.bells.ToString(), new Vector2(10 * 32 + 16, 13 * 32 + 16), Color.White);
+            WriteText(spriteBatch, game.goldKeys.ToString(), new Vector2(10 * 32 + 16, 14 * 32), Color.White);
+            WriteText(spriteBatch, Keys.ToString(), new Vector2(10 * 32 + 16 * 5, 14 * 32), Color.White);
 
             // Weapons
             game.weaponA.Draw(spriteBatch, (int)(18.5 * 32), (int)(13.5 * 32));
@@ -579,9 +595,23 @@ namespace aspectstar2
             switch (currentMode)
             {
                 case adventureModes.textBox:
-                    //KeyboardState state = Keyboard.GetState();
-                    if (Master.controls.A || Master.controls.B)
+                    if (stallCount > 0)
+                        stallCount--;
+                    if (stallCount <= 0 &&  (Master.controls.A || Master.controls.B))
+                    {
                         currentMode = adventureModes.runMode;
+                        stallCount = 20;
+                        if (choice != -1)
+                            chooser(choice == 0);
+                    }
+                    else if (choice != -1 && Master.controls.Left)
+                    {
+                        choice = 0;
+                    }
+                    else if (choice != -1 && Master.controls.Right)
+                    {
+                        choice = 1;
+                    }
                     break;
                 case adventureModes.fadeOut:
                     animCount = animCount - 2;
@@ -653,9 +683,9 @@ namespace aspectstar2
             if (stallCount <= 0)
             {
                 if (Master.controls.A)
-                    game.weaponA.Activate(player, this);
+                    game.weaponA.Activate(player, this, game);
                 else if (Master.controls.B)
-                    game.weaponB.Activate(player, this);
+                    game.weaponB.Activate(player, this, game);
             }
             else
                 stallCount--;
@@ -726,6 +756,8 @@ namespace aspectstar2
                 .SetValue("giveWeapon", new Action<int>(this.GiveWeapon))
                 .SetValue("getPlayerX", new Func<int>(this.GetPlayerX))
                 .SetValue("getPlayerY", new Func<int>(this.GetPlayerY))
+                .SetValue("setCounter", new Action<string, int>(this.SetCounter))
+                .SetValue("getCounter", new Func<string, int>(this.GetCounter))
                 .Execute(code);
         }
 
@@ -800,6 +832,16 @@ namespace aspectstar2
         public void TextBox(string text)
         {
             textString = text;
+            choice = -1;
+            currentMode = adventureModes.textBox;
+        }
+
+        public void QuestionBox(string text, Action<bool> choose)
+        {
+            textString = text;
+            choice = 1;
+            chooser = choose;
+            stallCount = 20;
             currentMode = adventureModes.textBox;
         }
 
@@ -822,6 +864,9 @@ namespace aspectstar2
             {
                 case 0:
                     game.GetWeapon(new ProjectileWeapon());
+                    break;
+                case 1:
+                    game.GetWeapon(new HeartWeapon());
                     break;
             }
         }
@@ -850,6 +895,46 @@ namespace aspectstar2
             if (flags.ContainsKey(flag))
                 return flags[flag];
             return false;
+        }
+
+        Dictionary<string, int> counters = new Dictionary<string, int>();
+
+        void SetCounter(string flag, int value)
+        {
+            if (flag == "_bells")
+                game.bells = value;
+            else if (flag == "_life")
+            {
+                game.life = value;
+                if (game.life > game.possibleLife)
+                    game.life = game.possibleLife;
+            }
+            else if (flag == "_possibleLife")
+            {
+                game.possibleLife = value;
+                if (game.life > game.possibleLife)
+                    game.life = game.possibleLife;
+            }
+            else
+            {
+                if (counters.ContainsKey(flag))
+                    counters.Remove(flag);
+                counters.Add(flag, value);
+            }
+        }
+
+        int GetCounter(string flag)
+        {
+            if (flag == "_bells")
+                return game.bells;
+            else if (flag == "_life")
+                return game.life;
+            else if (flag == "_possibleLife")
+                return game.possibleLife;
+            else if (counters.ContainsKey(flag))
+                return counters[flag];
+            else
+                return 0;
         }
 
         // Predicates

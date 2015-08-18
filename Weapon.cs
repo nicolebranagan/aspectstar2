@@ -9,7 +9,7 @@ namespace aspectstar2
 {
     public abstract class Weapon
     {
-        public abstract void Activate(AdventurePlayer player, AdventureScreen screen);
+        public abstract void Activate(AdventurePlayer player, AdventureScreen screen, Game game);
         public abstract void Draw(SpriteBatch spriteBatch, int x, int y);
         public abstract string getLabel();
 
@@ -26,7 +26,7 @@ namespace aspectstar2
 
     class NullWeapon : Weapon
     {
-        public override void Activate(AdventurePlayer player, AdventureScreen screen)
+        public override void Activate(AdventurePlayer player, AdventureScreen screen, Game game)
         {
             //
         }
@@ -44,7 +44,7 @@ namespace aspectstar2
 
     class JumpWeapon : Weapon
     {
-        public override void Activate(AdventurePlayer player, AdventureScreen screen)
+        public override void Activate(AdventurePlayer player, AdventureScreen screen, Game game)
         {
             player.Jump();
         }
@@ -68,7 +68,7 @@ namespace aspectstar2
     {
         int cooldown = 0;
 
-        public override void Activate(AdventurePlayer player, AdventureScreen screen)
+        public override void Activate(AdventurePlayer player, AdventureScreen screen, Game game)
         {
             if ((cooldown == 0) && (player.z == 0))
             {
@@ -102,6 +102,60 @@ namespace aspectstar2
         public override string getLabel()
         {
             return "PROJECTILE";
+        }
+    }
+
+    class HeartWeapon : Weapon
+    {
+        int count = 1;
+        int lag = 0;
+
+        public override void Activate(AdventurePlayer player, AdventureScreen screen, Game game)
+        {
+            if (lag < 1 && count > 0)
+            {
+                game.life = game.life + 2;
+                if (game.life > game.possibleLife)
+                    game.life = game.possibleLife;
+                PlaySound.Aspect();
+                count--;
+                lag = 20;
+
+                if (count == 0)
+                    game.RemoveWeapon(this);
+            }
+        }
+
+        public override void Draw(SpriteBatch spriteBatch, int x, int y)
+        {
+            Rectangle sourceRectangle = new Rectangle(128, 0, 16, 16);
+            Rectangle destinationRectangle = new Rectangle(x, y, 16, 16);
+
+            if (count > 0)
+            {
+                spriteBatch.Begin();
+                spriteBatch.Draw(Master.texCollection.controls, destinationRectangle, sourceRectangle, Color.White);
+
+                sourceRectangle = new Rectangle(16 * count, 0, 16, 16);
+                destinationRectangle = new Rectangle(x + 16, y + 16, 16, 16);
+                spriteBatch.Draw(Master.texCollection.arcadeFont, destinationRectangle, sourceRectangle, Color.White);
+                spriteBatch.End();
+            }
+        }
+
+        public override void Extra(Weapon weapon)
+        {
+            count = count + 1;
+        }
+
+        public override void Update()
+        {
+            lag = lag - 1;
+        }
+
+        public override string getLabel()
+        {
+            return "HEARTS";
         }
     }
 }
