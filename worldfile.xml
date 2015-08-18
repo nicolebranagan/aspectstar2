@@ -10069,8 +10069,8 @@
       <int>0</int>
       <int>0</int>
     </key>
-    <startX>46</startX>
-    <startY>39</startY>
+    <startX>4</startX>
+    <startY>3</startY>
     <objects>
       <MapObject xsi:type="MapTeleporter">
         <x>25</x>
@@ -11346,16 +11346,6 @@
           </tileMap>
           <storedObjects>
             <StoredObject>
-              <x>400</x>
-              <y>240</y>
-              <type>boss</type>
-              <enemyType>0</enemyType>
-              <data>
-                <graphics>0</graphics>
-                <gfxtype>Maptile</gfxtype>
-              </data>
-            </StoredObject>
-            <StoredObject>
               <x>176</x>
               <y>48</y>
               <type>shooter</type>
@@ -11375,13 +11365,26 @@
                 <gfxtype>Maptile</gfxtype>
               </data>
             </StoredObject>
+            <StoredObject>
+              <x>400</x>
+              <y>176</y>
+              <type>boss</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+            </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
 function update() {
-if (!(getFlag("enterBoss")) &amp;&amp; playerY == 11) {
+if (!(getFlag("enterBoss")) &amp;&amp; getPlayerY() == 10) {
 overwriteTile(11,12,19);
 overwriteTile(12,12,19);
 overwriteTile(13,12,19);
+overwriteTile(11,11,18);
+overwriteTile(12,11,18);
+overwriteTile(13,11,18);
 playSoundEffect(1);
 setFlag("enterBoss", true);
 }
@@ -15811,7 +15814,7 @@ function update() { }</code>
           </storedObjects>
           <code>function onLoad() { }
 function update() { 
-if (!getFlag('arrowroom') &amp;&amp; (playerX == 23) &amp;&amp; (playerY == 11)) {
+if (!getFlag('arrowroom') &amp;&amp; (getPlayerX() == 23) &amp;&amp; (getPlayerY() == 11)) {
 spawnKey(2,7);
 setFlag('arrowroom', true);
 }
@@ -19662,7 +19665,7 @@ function update() {
                 <code>function onLoad() { }
 function update() { }
 function inRange() { }
-function touch() { 
+function touch() {
 TextBox("IM A SNAKE");
 }</code>
                 <graphics>1</graphics>
@@ -20050,6 +20053,7 @@ TextBox("IM A SNAKE");
       <speed>0</speed>
       <decisiveness>0</decisiveness>
       <intelligence>0</intelligence>
+      <health>1</health>
       <movementType>stationary</movementType>
     </BestiaryEntry>
     <BestiaryEntry>
@@ -20058,6 +20062,7 @@ TextBox("IM A SNAKE");
       <speed>2</speed>
       <decisiveness>8</decisiveness>
       <intelligence>0</intelligence>
+      <health>1</health>
       <movementType>random</movementType>
     </BestiaryEntry>
   </bestiary>

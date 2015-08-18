@@ -604,14 +604,8 @@ namespace aspectstar2
         public void UpdateRoom()
         {
             if (jintEngine != null)
-            {
-                jintEngine.Execute(String.Concat(
-                    "playerX = ", Math.Floor(player.location.X / 32),
-                    "; playerY = ", Math.Floor(player.location.Y / 32)));
-                jintEngine.Execute("update();");
-            }
+                jintEngine.Execute("update()");
 
-            // Update
             foreach (AdventureObject obj in this.objects)
             {
                 obj.Update();
@@ -730,6 +724,8 @@ namespace aspectstar2
                 .SetValue("TextBox", new Action<string>(this.TextBox))
                 .SetValue("callMethod", new Action<string,string>(this.CallMethod))
                 .SetValue("giveWeapon", new Action<int>(this.GiveWeapon))
+                .SetValue("getPlayerX", new Func<int>(this.GetPlayerX))
+                .SetValue("getPlayerY", new Func<int>(this.GetPlayerY))
                 .Execute(code);
         }
 
@@ -828,6 +824,16 @@ namespace aspectstar2
                     game.GetWeapon(new ProjectileWeapon());
                     break;
             }
+        }
+
+        int GetPlayerX()
+        {
+            return (int)Math.Floor(player.location.X / 32);
+        }
+
+        int GetPlayerY()
+        {
+            return (int)Math.Floor(player.location.Y / 32);
         }
 
         Dictionary<string, bool> flags = new Dictionary<string, bool>();

@@ -82,14 +82,15 @@ namespace aspectstar2
         public override bool inRange(AdventurePlayer player)
         {
             Vector2 playerloc = player.location;
-
-            if (Math.Sqrt(Math.Pow(location.X - playerloc.X, 2) + Math.Pow(location.Y - playerloc.Y, 2)) <= Math.Max(width, height))
+            double del = Math.Sqrt(Math.Pow(location.X - playerloc.X, 2) + Math.Pow(location.Y - playerloc.Y, 2));
+            if (del <= Math.Max(width, height))
             {
                 jintEngine.Execute("inRange()");
                 player.Recoil(this.location);
                 return solid;
             }
-            return false;
+            else
+                return false;
         }
 
         public override void Touch()
