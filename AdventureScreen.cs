@@ -874,7 +874,7 @@ namespace aspectstar2
                     game.GetWeapon(new ProjectileWeapon());
                     break;
                 case 1:
-                    game.GetWeapon(new HeartWeapon());
+                    game.GetWeapon(new FishWeapon());
                     break;
             }
         }

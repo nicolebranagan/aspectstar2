@@ -153,6 +153,18 @@ namespace aspectstar2
                 else
                     game.enterAdventureFromMap(mT.dest, mT.destroomX, mT.destroomY, mT.destx, mT.desty);
             }
+            else if (m is MapLock && ((MapLock)m).active)
+            {
+                if (game.goldKeys > 0)
+                {
+                    MapLock mL = (MapLock)m;
+                    int i = mL.x + (mL.y * Mapfile.width);
+                    PlaySound.Aspect();
+                    game.goldKeys = game.goldKeys - 1;
+                    mL.active = false;
+                    tileMap[i] = mL.tile;
+                }
+            }
         }
     }
 }

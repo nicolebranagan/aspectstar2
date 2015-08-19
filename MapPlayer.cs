@@ -151,7 +151,10 @@ namespace aspectstar2
                 this.moveCount = 16;
             }
             else
+            {
                 this.moveCount = 0;
+                parent.checkObjects(x, y);
+            }
         }
     }
 }

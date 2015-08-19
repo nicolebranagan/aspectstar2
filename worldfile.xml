@@ -417,11 +417,11 @@
       <int>17</int>
       <int>7</int>
       <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
+      <int>1</int>
+      <int>15</int>
+      <int>15</int>
+      <int>15</int>
+      <int>2</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -514,14 +514,14 @@
       <int>16</int>
       <int>0</int>
       <int>0</int>
+      <int>19</int>
+      <int>20</int>
+      <int>20</int>
+      <int>20</int>
+      <int>20</int>
+      <int>21</int>
       <int>0</int>
-      <int>15</int>
-      <int>15</int>
-      <int>15</int>
-      <int>15</int>
-      <int>15</int>
-      <int>15</int>
-      <int>15</int>
+      <int>0</int>
       <int>15</int>
       <int>15</int>
       <int>15</int>
@@ -613,15 +613,15 @@
       <int>13</int>
       <int>5</int>
       <int>5</int>
-      <int>5</int>
       <int>9</int>
+      <int>22</int>
       <int>12</int>
-      <int>12</int>
-      <int>11</int>
-      <int>5</int>
-      <int>5</int>
-      <int>5</int>
-      <int>9</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>21</int>
+      <int>0</int>
       <int>0</int>
       <int>0</int>
       <int>0</int>
@@ -713,15 +713,15 @@
       <int>0</int>
       <int>0</int>
       <int>0</int>
-      <int>0</int>
       <int>6</int>
+      <int>22</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
       <int>12</int>
-      <int>12</int>
-      <int>6</int>
+      <int>23</int>
       <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>10</int>
       <int>5</int>
       <int>5</int>
       <int>5</int>
@@ -813,14 +813,14 @@
       <int>12</int>
       <int>12</int>
       <int>0</int>
-      <int>0</int>
       <int>6</int>
-      <int>12</int>
-      <int>12</int>
-      <int>6</int>
+      <int>24</int>
       <int>0</int>
       <int>0</int>
       <int>12</int>
+      <int>0</int>
+      <int>0</int>
+      <int>25</int>
       <int>12</int>
       <int>12</int>
       <int>12</int>
@@ -913,14 +913,14 @@
       <int>12</int>
       <int>11</int>
       <int>5</int>
-      <int>5</int>
       <int>8</int>
-      <int>12</int>
-      <int>12</int>
-      <int>6</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
+      <int>26</int>
+      <int>27</int>
+      <int>27</int>
+      <int>33</int>
+      <int>27</int>
+      <int>27</int>
+      <int>28</int>
       <int>12</int>
       <int>0</int>
       <int>0</int>
@@ -1205,11 +1205,11 @@
       <int>7</int>
       <int>7</int>
       <int>16</int>
-      <int>12</int>
-      <int>17</int>
-      <int>7</int>
-      <int>7</int>
-      <int>16</int>
+      <int>29</int>
+      <int>30</int>
+      <int>32</int>
+      <int>32</int>
+      <int>31</int>
       <int>0</int>
       <int>6</int>
       <int>0</int>
@@ -1409,7 +1409,7 @@
       <int>7</int>
       <int>7</int>
       <int>1</int>
-      <int>0</int>
+      <int>12</int>
       <int>0</int>
       <int>6</int>
       <int>0</int>
@@ -1515,7 +1515,7 @@
       <int>5</int>
       <int>5</int>
       <int>5</int>
-      <int>5</int>
+      <int>18</int>
       <int>5</int>
       <int>5</int>
       <int>5</int>
@@ -10022,17 +10022,17 @@
       <int>0</int>
       <int>0</int>
       <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
+      <int>1</int>
       <int>0</int>
       <int>0</int>
       <int>0</int>
@@ -10091,15 +10091,6 @@
         <desty>11</desty>
       </MapObject>
       <MapObject xsi:type="MapTeleporter">
-        <x>9</x>
-        <y>11</y>
-        <dest>1</dest>
-        <destroomX>7</destroomX>
-        <destroomY>13</destroomY>
-        <destx>12</destx>
-        <desty>11</desty>
-      </MapObject>
-      <MapObject xsi:type="MapTeleporter">
         <x>47</x>
         <y>43</y>
         <dest>0</dest>
@@ -10107,6 +10098,20 @@
         <destroomY>14</destroomY>
         <destx>11</destx>
         <desty>11</desty>
+      </MapObject>
+      <MapObject xsi:type="MapTeleporter">
+        <x>3</x>
+        <y>12</y>
+        <dest>1</dest>
+        <destroomX>7</destroomX>
+        <destroomY>13</destroomY>
+        <destx>12</destx>
+        <desty>11</desty>
+      </MapObject>
+      <MapObject xsi:type="MapLock">
+        <x>13</x>
+        <y>15</y>
+        <tile>5</tile>
       </MapObject>
     </objects>
   </map>
@@ -19665,19 +19670,18 @@ function update() {
                 <code>function onLoad() { }
 function update() { }
 function inRange() { }
-function touch() {
-var bells = getCounter("_bells");
-if (bells &gt;= 2)
-	questionBox("DO YOU WANT TO BUY HEARTS FOR 2 BELLS", "yes()", "no()");
-else
-	TextBox("YOU ARE TOO POOR TO BUY MY WARES");
-}
+function touch() { questionBox("DO YOU WANT TO BUY A FISH FOR 2 BELLS", "yes()", "no()"); }
 
 function yes() {
 var bells = getCounter("_bells");
+if (bells &gt;= 2) {
 setCounter("_bells", bells - 2);
 giveWeapon(1);
 playSoundEffect(0);
+}
+else {
+TextBox("YOU ARE TOO POOR TO AFFORD MY WARES");
+}
 }
 
 function no() { TextBox("SO BE IT"); }</code>

@@ -105,7 +105,7 @@ namespace aspectstar2
         }
     }
 
-    class HeartWeapon : Weapon
+    class FishWeapon : Weapon
     {
         int count = 1;
         int lag = 0;
@@ -128,8 +128,8 @@ namespace aspectstar2
 
         public override void Draw(SpriteBatch spriteBatch, int x, int y)
         {
-            Rectangle sourceRectangle = new Rectangle(128, 0, 16, 16);
-            Rectangle destinationRectangle = new Rectangle(x, y, 16, 16);
+            Rectangle sourceRectangle = new Rectangle(64, 64, 32, 32);
+            Rectangle destinationRectangle = new Rectangle(x, y, 32, 32);
 
             if (count > 0)
             {
@@ -137,7 +137,7 @@ namespace aspectstar2
                 spriteBatch.Draw(Master.texCollection.controls, destinationRectangle, sourceRectangle, Color.White);
 
                 sourceRectangle = new Rectangle(16 * count, 0, 16, 16);
-                destinationRectangle = new Rectangle(x + 16, y + 16, 16, 16);
+                destinationRectangle = new Rectangle(x + 16, y, 16, 16);
                 spriteBatch.Draw(Master.texCollection.arcadeFont, destinationRectangle, sourceRectangle, Color.White);
                 spriteBatch.End();
             }
@@ -145,7 +145,8 @@ namespace aspectstar2
 
         public override void Extra(Weapon weapon)
         {
-            count = count + 1;
+            if (count != 9)
+                count = count + 1;
         }
 
         public override void Update()
@@ -155,7 +156,7 @@ namespace aspectstar2
 
         public override string getLabel()
         {
-            return "HEARTS";
+            return "FISH RESTORES 1 HEART";
         }
     }
 }

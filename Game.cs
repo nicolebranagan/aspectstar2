@@ -13,7 +13,7 @@ namespace aspectstar2
         public int life = 5;
         public int possibleLife = 10;
         public int goldKeys = 0;
-        public int bells = 0;
+        public int bells = 3;
         AdventureScreen currentAdventure;
         MapScreen currentMap;
 
