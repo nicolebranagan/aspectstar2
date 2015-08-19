@@ -271,10 +271,18 @@ namespace aspectstar2
                     {
                         WriteText(spriteBatch, "YES", new Vector2((Master.width / 2)- (16 * 11), 16 * 6), Color.White);
                         WriteText(spriteBatch, "NO", new Vector2((Master.width / 2) + (16 * 8), 16 * 6), Color.White);
+
+                        spriteBatch.Begin();
+                        Rectangle source = new Rectangle(128, 16, 16, 16);
+                        Rectangle dest;
+
                         if (choice == 0)
-                            WriteText(spriteBatch, "O", new Vector2((Master.width / 2) - (16 * 13), 16 * 6), Color.White);
-                        else if (choice == 1)
-                            WriteText(spriteBatch, "O", new Vector2((Master.width / 2) + (16 * 6), 16 * 6), Color.White);
+                            dest = new Rectangle((Master.width / 2) - (16 * 13), 16 * 6, 16, 16);
+                        else
+                            dest = new Rectangle((Master.width / 2) + (16 * 6), 16 * 6, 16, 16);
+                        
+                        spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
+                        spriteBatch.End();
                     }
                     break;
                 case adventureModes.drowning:

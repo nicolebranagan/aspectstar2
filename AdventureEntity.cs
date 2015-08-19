@@ -99,7 +99,7 @@ namespace aspectstar2
             if (touchLag == 0)
             {
                 jintEngine.Execute("touch()");
-                touchLag = 20;
+                touchLag = 40;
             }
         }
 
