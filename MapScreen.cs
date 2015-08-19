@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace aspectstar2
 {
-    class MapScreen : Screen
+    public class MapScreen : Screen
     {
         Game game;
 
@@ -28,6 +28,8 @@ namespace aspectstar2
             tileMap = Master.currentFile.map.tileMap;
             key = Master.currentFile.map.key;
             objects = Master.currentFile.map.objects;
+            foreach (MapObject obj in objects)
+                obj.Initialize(this, game);
 
             player.location = new Vector2(Master.currentFile.map.startX * 32, Master.currentFile.map.startY * 32);
         }
@@ -138,33 +140,20 @@ namespace aspectstar2
             {
                 if ((m.x == x) && (m.y == y))
                 {
-                    runObject(m);
+                    m.Activate();
                 }
             }
         }
 
-        void runObject(MapObject m)
+        public void LocalTeleport(int x, int y)
         {
-            if (m is MapTeleporter)
-            {
-                MapTeleporter mT = (MapTeleporter)m;
-                if (mT.dest == -1)
-                    player.location = new Vector2(mT.destx * 32, mT.desty * 32);
-                else
-                    game.enterAdventureFromMap(mT.dest, mT.destroomX, mT.destroomY, mT.destx, mT.desty);
-            }
-            else if (m is MapLock && ((MapLock)m).active)
-            {
-                if (game.goldKeys > 0)
-                {
-                    MapLock mL = (MapLock)m;
-                    int i = mL.x + (mL.y * Mapfile.width);
-                    PlaySound.Aspect();
-                    game.goldKeys = game.goldKeys - 1;
-                    mL.active = false;
-                    tileMap[i] = mL.tile;
-                }
-            }
+            player.location = new Vector2(x * 32, y * 32);
+        }
+        
+        public void ChangeTile(int x, int y, int tile)
+        {
+            int i = x + (y * Mapfile.width);
+            tileMap[i] = tile;
         }
     }
 }

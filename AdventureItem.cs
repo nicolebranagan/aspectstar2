@@ -146,4 +146,29 @@ namespace aspectstar2
             }
         }
     }
+
+    public class AdventureTeleporter : AdventureItem
+    {
+        int dest, destx, desty, destroomX, destroomY;
+        
+        public AdventureTeleporter(int dest, int destx, int desty, int destroomX, int destroomY)
+        {
+            this.dest = dest;
+            this.destx = destx;
+            this.desty = desty;
+            this.destroomX = destroomX;
+            this.destroomY = destroomY;
+        }
+
+        public override void Draw(SpriteBatch spriteBatch, Color mask)
+        {
+            // Do nothing
+        }
+
+        public override void Touch()
+        {
+            //game.exitAdventure(parent.beaten, dest, destroomX, destroomY, destx, desty);
+            parent.leaveAdventure(dest, destx, desty, destroomX, destroomY);
+        }
+    }
 }

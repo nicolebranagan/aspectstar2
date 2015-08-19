@@ -145,7 +145,7 @@ namespace aspectstar2
 
         public override void Extra(Weapon weapon)
         {
-            if (count != 9)
+            //if (count != 9)
                 count = count + 1;
         }
 

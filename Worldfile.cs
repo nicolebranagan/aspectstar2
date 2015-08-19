@@ -114,6 +114,8 @@ namespace aspectstar2
         public int enemyType;
         public EntityData data;
 
+        public int dest, destx, desty, destroomX, destroomY;
+
         public enum ObjectType
         {
             key = 0,
@@ -123,12 +125,17 @@ namespace aspectstar2
             shooter = 4,
             boss = 5,
             entity = 6,
+            teleporter = 7,
         }
 
         public AdventureObject getAdventureObject()
         {
             switch (type)
             {
+                case ObjectType.teleporter:
+                    AdventureTeleporter exit = new AdventureTeleporter(dest, destx, desty, destroomX, destroomY);
+                    exit.location = new Vector2(x, y);
+                    return exit;
                 case ObjectType.entity:
                     AdventureEntity entity = new AdventureEntity(data);
                     entity.location = new Vector2(x, y);

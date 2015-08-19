@@ -17,7 +17,7 @@ namespace aspectstar2
         public bool fromMap;
         public bool beaten;
 
-        public int tileset;
+        public int tileset, adv;
 
         public AdventurePlayer player;
         List<AdventureObject> objects = new List<AdventureObject>();
@@ -32,6 +32,7 @@ namespace aspectstar2
 
         int animCount, stallCount, lag;
         string textString; int choice = 1; Action<bool> chooser;
+        Action<bool> leaver;
 
         adventureModes currentMode = adventureModes.runMode;
         enum adventureModes
@@ -61,6 +62,7 @@ namespace aspectstar2
             this.game = game;
             this.master = game.master;
             this.player = new AdventurePlayer(this, game);
+            this.adv = dest;
 
             this.adventure = Master.currentFile.adventures[dest].Clone();
             this.tileset = adventure.tileset;
@@ -68,8 +70,8 @@ namespace aspectstar2
             this.beaten = beaten;
             LoadRoom(destroomX, destroomY);
 
-            this.first_pos = new Vector2(x * 32, y * 32);
-            player.location = new Vector2(x * 32, y * 32);
+            this.first_pos = new Vector2(x * 32 + 16, y * 32 + 16);
+            player.location = new Vector2(x * 32 + 16, y * 32 + 16);
         }
 
         public bool isSolid(Vector2 dest, int z, int width, int height, Master.Directions faceDir)
@@ -161,6 +163,7 @@ namespace aspectstar2
             if (tile == tileType.Warp)
             {
                 PlaySound.Leave();
+                leaver = x => game.warpAdventure(x);
                 currentMode = adventureModes.fadeOut;
                 animCount = 250;
             }
@@ -624,12 +627,13 @@ namespace aspectstar2
                 case adventureModes.fadeOut:
                     animCount = animCount - 2;
                     if (animCount <= 0)
-                        game.exitAdventure(beaten);
+                        leaver(beaten);
+                        //game.warpAdventure(beaten);
                     break;
                 case adventureModes.deathFade:
                     animCount = animCount - 3;
                     if (animCount <= 0)
-                        game.exitAdventure(beaten);
+                        game.warpAdventure(beaten);
                     break;
                 case adventureModes.runMode:
                     UpdateRoom();
@@ -747,6 +751,14 @@ namespace aspectstar2
 
                 i++;
             }
+        }
+
+        public void leaveAdventure(int dest, int destx, int desty, int destroomX, int destroomY)
+        {
+            leaver = x => game.exitAdventure(x, dest, destroomX, destroomY, destx, desty);
+            currentMode = adventureModes.fadeOut;
+            animCount = 250;
+            PlaySound.Leave();
         }
 
         public Engine ActivateEngine(string code)

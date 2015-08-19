@@ -13,8 +13,9 @@ namespace aspectstar2
         public int life = 5;
         public int possibleLife = 10;
         public int goldKeys = 0;
-        public int bells = 3;
+        public int bells = 0;
         AdventureScreen currentAdventure;
+        Stack<AdventureScreen> adventureStack = new Stack<AdventureScreen>();
         MapScreen currentMap;
 
         public bool[] beaten;
@@ -55,17 +56,34 @@ namespace aspectstar2
             PlaySound.Enter();
         }
 
-        public void exitAdventure(bool beat)
+        public void exitAdventure(bool beat, int dest, int destroomX, int destroomY, int destx, int desty)
         {
-            beaten[dest] = beat;
+            beaten[this.dest] = beat;
 
-            if (currentAdventure.fromMap)
+            if (dest == -1)
             {
+                if (destx != -1 && desty != -1)
+                    currentMap.LocalTeleport(destx, desty);
                 master.UpdateScreen(currentMap);
                 currentAdventure = null;
             }
+            else
+            {
+                AdventureScreen aS = new AdventureScreen(this, dest, destroomX, destroomY, destx, desty, beaten[dest]);
+                this.dest = dest;
+                aS.fromMap = false;
+                currentAdventure = aS;
+                master.UpdateScreen(aS);
+                PlaySound.Enter();
+            }
+
             if (life == 0)
                 life = 5;
+        }
+
+        public void warpAdventure(bool beat)
+        {
+            exitAdventure(beat, -1, 0, 0, -1, -1);
         }
 
         public void Pause()
@@ -115,11 +133,6 @@ namespace aspectstar2
             items.Add(new AdventureHeart());
             items.Add(new AdventureBell());
             return items[Master.globalRandom.Next(items.Count)];
-        }
-
-        void isWeapon(Weapon newWeapon)
-        {
-
         }
     }
 }
