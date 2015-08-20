@@ -89,6 +89,7 @@ namespace aspectstar2
         public List<StoredObject> storedObjects;
         public List<AdventureObject> adventureObjects;
         public string code;
+        public bool dark;
 
         public Room Clone()
         {
@@ -102,6 +103,7 @@ namespace aspectstar2
                 newRoom.adventureObjects.Add(sO.getAdventureObject());
 
             newRoom.code = code;
+            newRoom.dark = dark;
 
             return newRoom;
         }

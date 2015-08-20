@@ -31,6 +31,7 @@ namespace aspectstar2
             JumpWeapon = 1,
             ProjectileWeapon = 2,
             FishWeapon = 3,
+            TorchWeapon = 4,
         }
 
         public storedWeapon packWeapon()
@@ -42,6 +43,8 @@ namespace aspectstar2
                 type = (int)WeaponType.ProjectileWeapon;
             else if (this is FishWeapon)
                 type = (int)WeaponType.FishWeapon;
+            else if (this is TorchWeapon)
+                type = (int)WeaponType.TorchWeapon;
 
             storedWeapon sW = new storedWeapon();
             sW.type = type;
@@ -209,6 +212,75 @@ namespace aspectstar2
         public override string getLabel()
         {
             return "FISH RESTORES 1 HEART";
+        }
+    }
+
+    class TorchWeapon : Weapon
+    {
+        int activityCount = 0;
+        AdventureScreen currentScreen;
+
+        public TorchWeapon()
+        {
+            count = 5;
+        }
+
+        public override void Extra(Weapon weapon)
+        {
+            count = count + 5;
+        }
+
+        public override void Activate(AdventurePlayer player, AdventureScreen screen, Game game)
+        {
+            currentScreen = screen;
+
+            if (count > 0 && activityCount <= 10)
+            {
+                activityCount += 500;
+                count = count - 1;
+                if (!screen.lit)
+                    PlaySound.Aspect();
+            }
+        }
+
+        public override void Draw(SpriteBatch spriteBatch, int x, int y)
+        {
+            Rectangle sourceRectangle = new Rectangle(96, 64, 32, 32);
+            Rectangle destinationRectangle = new Rectangle(x, y, 32, 32);
+
+            if (count > 0)
+            {
+                spriteBatch.Begin();
+                spriteBatch.Draw(Master.texCollection.controls, destinationRectangle, sourceRectangle, Color.White);
+
+                sourceRectangle = new Rectangle(16 * count, 0, 16, 16);
+                destinationRectangle = new Rectangle(x + 16, y, 16, 16);
+                spriteBatch.Draw(Master.texCollection.arcadeFont, destinationRectangle, sourceRectangle, Color.White);
+                spriteBatch.End();
+            }
+        }
+
+        public override void Update()
+        {
+            if (activityCount > 1)
+            {
+                activityCount = activityCount - 1;
+                if (currentScreen != null)
+                {
+                    currentScreen.lit = true;
+                }
+            }
+            if (activityCount == 1)
+            {
+                activityCount = 0;
+                PlaySound.Boom();
+                currentScreen.lit = false;
+            }
+        }
+
+        public override string getLabel()
+        {
+            return "TORCHES";
         }
     }
 }

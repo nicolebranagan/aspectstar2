@@ -35,6 +35,7 @@ namespace aspectstar2
             {
                 case EntityData.GraphicsType.Maptile:
                     texture = Master.texCollection.adventureTiles[parent.tileset];
+                    this.width = 16; this.height = 16;
                     break;
                 case EntityData.GraphicsType.Enemies:
                     texture = Master.texCollection.texEnemies;

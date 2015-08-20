@@ -30,6 +30,9 @@ namespace aspectstar2
 
         public int Keys = 0;
 
+        public bool dark = false;
+        public bool lit = false;
+
         int animCount, stallCount, lag;
         string textString; int choice = 1; Action<bool> chooser;
         Action<bool> leaver;
@@ -340,12 +343,12 @@ namespace aspectstar2
                     scroll(spriteBatch);
                     break;
                 case adventureModes.runMode:
-                    DrawRoom(spriteBatch, Color.White);
-                    //player.Draw(spriteBatch, Color.White);
+                    Color roomColor = (!dark || lit) ? Color.White : Color.FromNonPremultiplied(15,15,15,255);
+                    DrawRoom(spriteBatch, roomColor);
                     List<AdventureObject> sortedList = objects.OrderBy(o => o.location.Y).ToList();
                     foreach (AdventureObject obj in sortedList)
                     {
-                        obj.Draw(spriteBatch, Color.White);
+                        obj.Draw(spriteBatch, roomColor);
                     }
                     break;
             }
@@ -588,7 +591,8 @@ namespace aspectstar2
             Room newRoom = adventure.rooms[x, y];
             this.tileMap = newRoom.tileMap;
             this.objects = new List<AdventureObject>();
-            this.newobjects = new List<AdventureObject>(); 
+            this.newobjects = new List<AdventureObject>();
+            this.dark = newRoom.dark;
             objects.Add(player);
             foreach (AdventureObject aO in newRoom.adventureObjects)
             {
@@ -886,6 +890,9 @@ namespace aspectstar2
                     break;
                 case 1:
                     game.GetWeapon(new FishWeapon());
+                    break;
+                case 2:
+                    game.GetWeapon(new TorchWeapon());
                     break;
             }
         }

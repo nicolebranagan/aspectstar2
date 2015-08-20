@@ -24,7 +24,8 @@ namespace aspectstar2
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
-            screen.DrawRoom(spriteBatch, Color.FromNonPremultiplied(255,255,255,100));
+            if (!screen.dark || screen.lit)
+                screen.DrawRoom(spriteBatch, Color.FromNonPremultiplied(255,255,255,100));
 
             WriteText(spriteBatch, "ABILITIES AND WEAPONS", new Vector2(32, 32), Color.White);
 
