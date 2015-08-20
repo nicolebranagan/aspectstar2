@@ -7,6 +7,7 @@ using System.Xml.Serialization;
 using System.Drawing;
 using Microsoft.Xna.Framework.Audio;
 using System.Collections.Generic;
+using System.Xml;
 
 namespace aspectstar2
 {
@@ -48,7 +49,7 @@ namespace aspectstar2
             // NES resolution: 256x240;
             //graphics.PreferredBackBufferWidth = (256*2);
             //graphics.PreferredBackBufferHeight = (240*2);
-            
+
             Window.Title = "Aspect Star 2";
             graphics.ApplyChanges();
         }
@@ -120,12 +121,12 @@ namespace aspectstar2
             PlaySound.enter = Content.Load<SoundEffect>("enter");
             PlaySound.hurt = Content.Load<SoundEffect>("hurt");
             PlaySound.drown = Content.Load<SoundEffect>("drown");
-            PlaySound.key = Content.Load<SoundEffect>("key"); 
+            PlaySound.key = Content.Load<SoundEffect>("key");
             PlaySound.pew = Content.Load<SoundEffect>("pew");
             PlaySound.boom = Content.Load<SoundEffect>("boom");
             PlaySound.leave = Content.Load<SoundEffect>("leave");
             PlaySound.Initialize();
-                
+
             // Load title screen
             currentScreen = new TitleScreen(this);
         }
@@ -162,7 +163,7 @@ namespace aspectstar2
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.Black);
-            
+
             currentScreen.Draw(spriteBatch, gameTime);
 
             base.Draw(gameTime);
@@ -177,6 +178,41 @@ namespace aspectstar2
         public void UpdateScreen(Screen screen)
         {
             this.currentScreen = screen;
+        }
+
+        public void SaveGame(SavedGame game)
+        {
+            XmlSerializer xS = new XmlSerializer(typeof(SavedGame));
+            try
+            {
+                StreamWriter sW = new StreamWriter("saved.xml");
+                xS.Serialize(sW, game);
+                sW.Close();
+            }
+            catch
+            {
+
+            }
+        }
+
+        public bool LoadGame()
+        {
+            try
+            {
+                XmlSerializer xS = new XmlSerializer(typeof(SavedGame));
+                FileStream fS = new FileStream("saved.xml", FileMode.Open);
+                XmlTextReader xTR = new XmlTextReader(fS);
+                SavedGame sG;
+                sG = (SavedGame)xS.Deserialize(xTR);
+
+                currentGame = new Game(this);
+                currentScreen = currentGame.BeginFromSaved(sG);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         public static Vector2 getMapTile(int index, Texture2D map)

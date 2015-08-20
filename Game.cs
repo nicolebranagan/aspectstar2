@@ -15,7 +15,6 @@ namespace aspectstar2
         public int goldKeys = 0;
         public int bells = 0;
         AdventureScreen currentAdventure;
-        Stack<AdventureScreen> adventureStack = new Stack<AdventureScreen>();
         MapScreen currentMap;
 
         public bool[] beaten;
@@ -28,6 +27,7 @@ namespace aspectstar2
         public Game(Master master)
         {
             this.master = master;
+
             beaten = new bool[Master.currentFile.adventures.Count];
             for (int i = 0; i < beaten.Length; i++)
             {
@@ -45,6 +45,49 @@ namespace aspectstar2
             currentMap = new MapScreen(this);
             return currentMap;
         }
+
+        public Screen BeginFromSaved(SavedGame sG)
+        {
+            MapScreen mS = new MapScreen(this);
+
+            mS.ApplyChanges(sG.mapChanges);
+            mS.LocalTeleport(sG.x, sG.y);
+
+            weapons = new List<Weapon>();
+            foreach (var stored in sG.weapons)
+                weapons.Add(Weapon.unpackWeapon(stored));
+
+            if (weapons.Count > 0)
+                weaponA = weapons[0];
+            else
+                weaponA = new NullWeapon();
+
+            if (weapons.Count > 1)
+                weaponB = weapons[1];
+            else
+                weaponB = new NullWeapon();
+
+            if (sG.beaten.Length < Master.currentFile.adventures.Count)
+            {
+                beaten = new bool[Master.currentFile.adventures.Count];
+                for (int i = 0; i < beaten.Length; i++)
+                {
+                    if (i < sG.beaten.Length)
+                        beaten[i] = sG.beaten[i];
+                    else
+                        beaten[i] = false;
+                }
+            }
+            else
+                beaten = sG.beaten;
+
+            goldKeys = sG.goldKeys;
+            bells = sG.bells;
+
+            currentMap = mS;
+            return mS;
+        }
+
 
         public void enterAdventureFromMap(int dest, int destroomX, int destroomY, int destx, int desty)
         {
@@ -133,6 +176,27 @@ namespace aspectstar2
             items.Add(new AdventureHeart());
             items.Add(new AdventureBell());
             return items[Master.globalRandom.Next(items.Count)];
+        }
+
+        public void saveGame()
+        {
+            SavedGame game = new SavedGame();
+            game.x = (int)(Math.Floor(currentMap.playerloc.X / 32));
+            game.y = (int)(Math.Floor(currentMap.playerloc.Y / 32));
+            game.mapChanges = new List<mapChange>();
+            foreach (var mC in currentMap.mapChanges)
+                game.mapChanges.Add(mC);
+
+            game.weapons = new List<storedWeapon>();
+            foreach (var w in weapons)
+                game.weapons.Add(w.packWeapon());
+
+            game.beaten = beaten;
+
+            game.goldKeys = goldKeys;
+            game.bells = bells;
+
+            master.SaveGame(game);
         }
     }
 }

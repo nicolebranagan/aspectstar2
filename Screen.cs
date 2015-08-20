@@ -17,7 +17,6 @@ namespace aspectstar2
         abstract public void Update(GameTime gameTime);
         abstract public void Draw(SpriteBatch spriteBatch, GameTime gameTime);
 
-
         protected void WriteText(SpriteBatch spriteBatch, string text, Vector2 pos, Color textColor)
         {
             Rectangle destRect;
@@ -51,6 +50,18 @@ namespace aspectstar2
 
     public class TitleScreen : Screen
     {
+        Selections selection = Selections.NewGame;
+        bool saveFailed = false;
+
+        enum Selections
+        {
+            NewGame = 0,
+            Continue = 1,
+            Options = 2,
+        }
+
+        int lag = 20;
+
         public TitleScreen(Master master)
         {
             this.master = master;
@@ -58,18 +69,58 @@ namespace aspectstar2
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
-            WriteText(spriteBatch, "ASPECT STAR 2", new Vector2((Master.width / 2) - (8 * 13), (Master.height / 2) - 24), Color.White);
-            WriteText(spriteBatch, "PRE RELEASE DEMO", new Vector2((Master.width / 2) - (8 * 16), (Master.height / 2) - 8), Color.White);
+            WriteText(spriteBatch, "ASPECT STAR 2", new Vector2((Master.width / 2) - (8 * 13), (Master.height / 2) - 128), Color.White);
+            WriteText(spriteBatch, "PRE RELEASE DEMO", new Vector2((Master.width / 2) - (8 * 16), (Master.height / 2) - 96), Color.White);
+
+            WriteText(spriteBatch, "NEW GAME", new Vector2((Master.width / 2) - (2 * 16), (Master.height / 2) - 40), Color.White);
+            if (saveFailed)
+                WriteText(spriteBatch, "NO SAVED GAME", new Vector2((Master.width / 2) - (2 * 16), (Master.height / 2) - 8), Color.White);
+            else
+            WriteText(spriteBatch, "CONTINUE", new Vector2((Master.width / 2) - (2 * 16), (Master.height / 2) - 8), Color.White);
+            WriteText(spriteBatch, "OPTIONS", new Vector2((Master.width / 2) - (2 * 16), (Master.height / 2) + 24), Color.White);
+
+            spriteBatch.Begin();
+            Rectangle source = new Rectangle(128, 16, 16, 16);
+
+            Rectangle dest = new Rectangle((Master.width / 2) - (4 * 16), (Master.height / 2) - 40 + (32 * (int)selection), 16, 16);
+
+            spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.Blue);
+            spriteBatch.End();
         }
 
         public override void Update(GameTime gameTime)
         {
+            if (lag > 0)
+                lag = lag - 1;
+
             //KeyboardState state = Keyboard.GetState();
 
-            if (Master.controls.Start)
+            if (lag == 0)
             {
-                // begin game
-                this.master.NewGame();
+                if (Master.controls.Up && selection != 0)
+                {
+                    selection = (Selections)((int)selection - 1);
+                    lag = 20;
+                }
+                else if (Master.controls.Down && (int)selection != 2)
+                {
+                    selection = (Selections)((int)selection + 1);
+                    lag = 20;
+                }
+                else if (Master.controls.Start || Master.controls.A || Master.controls.B)
+                {
+                    switch (selection)
+                    {
+                        case Selections.NewGame:
+                            // begin game
+                            master.NewGame();
+                            break;
+                        case Selections.Continue:
+                            if (!saveFailed)
+                                saveFailed = !(master.LoadGame());
+                            break;
+                    }
+                }
             }
         }
     }

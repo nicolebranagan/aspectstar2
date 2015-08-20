@@ -9,6 +9,8 @@ namespace aspectstar2
 {
     public abstract class Weapon
     {
+        protected int count = 1;
+
         public abstract void Activate(AdventurePlayer player, AdventureScreen screen, Game game);
         public abstract void Draw(SpriteBatch spriteBatch, int x, int y);
         public abstract string getLabel();
@@ -21,6 +23,47 @@ namespace aspectstar2
         public virtual void Extra(Weapon weapon)
         {
             
+        }
+
+        enum WeaponType
+        {
+            NullWeapon = 0,
+            JumpWeapon = 1,
+            ProjectileWeapon = 2,
+            FishWeapon = 3,
+        }
+
+        public storedWeapon packWeapon()
+        {
+            int type = 0;
+            if (this is JumpWeapon)
+                type = (int)WeaponType.JumpWeapon;
+            else if (this is ProjectileWeapon)
+                type = (int)WeaponType.ProjectileWeapon;
+            else if (this is FishWeapon)
+                type = (int)WeaponType.FishWeapon;
+
+            storedWeapon sW = new storedWeapon();
+            sW.type = type;
+            sW.count = count;
+            return sW;
+        }
+
+        public static Weapon unpackWeapon(storedWeapon packedWeapon)
+        {
+            WeaponType type = (WeaponType)packedWeapon.type;
+            switch (type)
+            {
+                case WeaponType.JumpWeapon:
+                    return new JumpWeapon();
+                case WeaponType.ProjectileWeapon:
+                    return new ProjectileWeapon();
+                case WeaponType.FishWeapon:
+                    return new FishWeapon(packedWeapon.count);
+
+                default:
+                    return new NullWeapon();
+            }
         }
     }
 
@@ -107,8 +150,17 @@ namespace aspectstar2
 
     class FishWeapon : Weapon
     {
-        int count = 1;
         int lag = 0;
+
+        public FishWeapon()
+        {
+
+        }
+
+        public FishWeapon(int count)
+        {
+            this.count = count;
+        }
 
         public override void Activate(AdventurePlayer player, AdventureScreen screen, Game game)
         {

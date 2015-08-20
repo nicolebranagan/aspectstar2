@@ -56,6 +56,7 @@
     <Compile Include="AdventureObject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SavedGame.cs" />
     <Compile Include="Screen.cs" />
     <Compile Include="Weapon.cs" />
     <Compile Include="Worldfile.cs" />

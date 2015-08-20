@@ -17,7 +17,7 @@ namespace aspectstar2
         public bool fromMap;
         public bool beaten;
 
-        public int tileset, adv;
+        public int tileset;
 
         public AdventurePlayer player;
         List<AdventureObject> objects = new List<AdventureObject>();
@@ -62,7 +62,6 @@ namespace aspectstar2
             this.game = game;
             this.master = game.master;
             this.player = new AdventurePlayer(this, game);
-            this.adv = dest;
 
             this.adventure = Master.currentFile.adventures[dest].Clone();
             this.tileset = adventure.tileset;
