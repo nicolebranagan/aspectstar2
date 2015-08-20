@@ -16,7 +16,7 @@ namespace aspectstar2
         protected int currentFrame = 0;
         protected int stallCount = 0;
         protected Vector2 offset = new Vector2(16,40);
-        protected int width = 14;
+        protected int width = 10;
         protected int height = 6;
         protected int graphicsRow = 0;
 

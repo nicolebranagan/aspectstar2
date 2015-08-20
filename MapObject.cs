@@ -47,13 +47,19 @@ namespace aspectstar2
 
         public override void Activate()
         {
-            if (game.goldKeys > 0)
+            if (parent.tileSolid(x, y))
             {
-                
-                PlaySound.Aspect();
-                game.goldKeys = game.goldKeys - 1;
+                if (game.goldKeys > 0)
+                {
+                    PlaySound.Aspect();
+                    game.goldKeys = game.goldKeys - 1;
+                    active = false;
+                    parent.ChangeTile(x, y, tile);
+                }
+            }
+            else
+            {
                 active = false;
-                parent.ChangeTile(x, y, tile);
             }
         }
     }

@@ -205,6 +205,7 @@ namespace aspectstar2
                             currentMode = mapModes.menuMode;
                             saved = false;
                             controlLag = 20;
+                            PlaySound.Pause();
                         }
                     }
                     break;
@@ -245,6 +246,7 @@ namespace aspectstar2
                 if ((m.x == x) && (m.y == y))
                 {
                     m.Activate();
+                    player.moving = false;
                 }
             }
         }
@@ -252,6 +254,7 @@ namespace aspectstar2
         public void LocalTeleport(int x, int y)
         {
             player.location = new Vector2(x * 32, y * 32);
+            player.faceDir = Master.Directions.Down;
         }
         
         public void ChangeTile(int x, int y, int tile)
@@ -270,6 +273,7 @@ namespace aspectstar2
             foreach (var change in mapChanges)
             {
                 tileMap[change.i] = change.tile;
+                this.mapChanges.Add(change);
             }
         }
     }

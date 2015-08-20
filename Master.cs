@@ -110,9 +110,10 @@ namespace aspectstar2
             texCollection.bigMouse = Content.Load<Texture2D>("bigmouse");
             texCollection.texPlosion = Content.Load<Texture2D>("explosion");
 
-            texCollection.adventureTiles = new Texture2D[2];
+            texCollection.adventureTiles = new Texture2D[3];
             texCollection.adventureTiles[0] = Content.Load<Texture2D>("dungeon1");
             texCollection.adventureTiles[1] = Content.Load<Texture2D>("town");
+            texCollection.adventureTiles[2] = Content.Load<Texture2D>("dungeon2");
 
             // Load sound effects (made in sfxr)
             PlaySound.die = Content.Load<SoundEffect>("die");
@@ -125,6 +126,7 @@ namespace aspectstar2
             PlaySound.pew = Content.Load<SoundEffect>("pew");
             PlaySound.boom = Content.Load<SoundEffect>("boom");
             PlaySound.leave = Content.Load<SoundEffect>("leave");
+            PlaySound.pause = Content.Load<SoundEffect>("pause");
             PlaySound.Initialize();
 
             // Load title screen
@@ -207,6 +209,7 @@ namespace aspectstar2
 
                 currentGame = new Game(this);
                 currentScreen = currentGame.BeginFromSaved(sG);
+                fS.Close();
                 return true;
             }
             catch (Exception)

@@ -114,6 +114,7 @@ namespace aspectstar2
                         case Selections.NewGame:
                             // begin game
                             master.NewGame();
+                            PlaySound.Aspect();
                             break;
                         case Selections.Continue:
                             if (!saveFailed)

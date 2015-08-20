@@ -84,6 +84,11 @@ namespace aspectstar2
             goldKeys = sG.goldKeys;
             bells = sG.bells;
 
+            if (sG.possibleLife > possibleLife)
+                possibleLife = sG.possibleLife;
+            if (sG.life > life)
+                sG.life = life;
+
             currentMap = mS;
             return mS;
         }
@@ -195,6 +200,8 @@ namespace aspectstar2
 
             game.goldKeys = goldKeys;
             game.bells = bells;
+            game.life = life;
+            game.possibleLife = possibleLife;
 
             master.SaveGame(game);
         }
