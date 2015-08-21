@@ -87,7 +87,7 @@ namespace aspectstar2
             if (sG.possibleLife > possibleLife)
                 possibleLife = sG.possibleLife;
             if (sG.life > life)
-                sG.life = life;
+                life = sG.life;
 
             currentMap = mS;
             return mS;
@@ -126,7 +126,7 @@ namespace aspectstar2
             }
 
             if (life == 0)
-                life = 5;
+                life = possibleLife / 2;
         }
 
         public void warpAdventure(bool beat)

@@ -20,18 +20,20 @@ namespace aspectstar2
 
         public override void Draw(SpriteBatch spriteBatch, Color mask)
         {
+            if (!parent.isInjury(location, width, height) || z != 0)
+            {
+                int dim_x = 32;
+                int dim_y = 48;
+                int column = ((int)faceDir * 2) + currentFrame;
+                Vector2 screen_loc = location - offset;
 
-            int dim_x = 32;
-            int dim_y = 48;
-            int column = ((int)faceDir * 2) + currentFrame;
-            Vector2 screen_loc = location - offset;
+                Rectangle sourceRectangle = new Rectangle(dim_x * column, 0, dim_x, dim_y);
+                Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y, dim_x, dim_y);
 
-            Rectangle sourceRectangle = new Rectangle(dim_x * column, 0, dim_x, dim_y);
-            Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y, dim_x, dim_y);
-
-            spriteBatch.Begin();
-            spriteBatch.Draw(Master.texCollection.texShadows, destinationRectangle, sourceRectangle, Color.White);
-            spriteBatch.End();
+                spriteBatch.Begin();
+                spriteBatch.Draw(Master.texCollection.texShadows, destinationRectangle, sourceRectangle, Color.White);
+                spriteBatch.End();
+            }
 
             if (flickerCount > 0)
             {

@@ -31,7 +31,18 @@ namespace aspectstar2
         public int Keys = 0;
 
         public bool dark = false;
-        public bool lit = false;
+        public bool lit
+        {
+            get { return !(torchCount == 0); }
+            set
+            {
+                if (torchCount == 0)
+                    PlaySound.Aspect();
+                torchCount += 400;
+            }
+        }
+        int torchCount = 0;
+        
 
         int animCount, stallCount, lag;
         string textString; int choice = 1; Action<bool> chooser;
@@ -651,6 +662,16 @@ namespace aspectstar2
             if (jintEngine != null)
                 jintEngine.Execute("update()");
 
+            if (torchCount > 1)
+            {
+                torchCount = torchCount - 1;
+            }
+            else if (torchCount == 1)
+            {
+                torchCount = 0;
+                PlaySound.Boom();
+            }
+
             foreach (AdventureObject obj in this.objects)
             {
                 obj.Update();
@@ -793,6 +814,8 @@ namespace aspectstar2
 
                 jintEngine.Execute("onLoad()");
             }
+            else
+                jintEngine = null;
         }
 
         // Relevant to code

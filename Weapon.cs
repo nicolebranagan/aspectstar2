@@ -217,7 +217,6 @@ namespace aspectstar2
 
     class TorchWeapon : Weapon
     {
-        int activityCount = 0;
         AdventureScreen currentScreen;
 
         public TorchWeapon()
@@ -234,9 +233,9 @@ namespace aspectstar2
         {
             currentScreen = screen;
 
-            if (count > 0 && activityCount <= 10)
+            if (count > 0 && !screen.lit)
             {
-                activityCount += 500;
+                screen.lit = true;
                 count = count - 1;
                 if (!screen.lit)
                     PlaySound.Aspect();
@@ -257,24 +256,6 @@ namespace aspectstar2
                 destinationRectangle = new Rectangle(x + 16, y, 16, 16);
                 spriteBatch.Draw(Master.texCollection.arcadeFont, destinationRectangle, sourceRectangle, Color.White);
                 spriteBatch.End();
-            }
-        }
-
-        public override void Update()
-        {
-            if (activityCount > 1)
-            {
-                activityCount = activityCount - 1;
-                if (currentScreen != null)
-                {
-                    currentScreen.lit = true;
-                }
-            }
-            if (activityCount == 1)
-            {
-                activityCount = 0;
-                PlaySound.Boom();
-                currentScreen.lit = false;
             }
         }
 

@@ -85,12 +85,17 @@ namespace aspectstar2
         public virtual void Draw(SpriteBatch spriteBatch, Color mask)
         {
             int dim_x = 32;
-            int dim_y = 48;
+            int dim_y;
+            if (parent.isInjury(location, width, height) && z == 0)
+                dim_y = 40;
+            else
+                dim_y = 48;
+
             int column = ((int)faceDir * 2) + currentFrame;
             int row = graphicsRow;
             Vector2 screen_loc = location - offset;
 
-            Rectangle sourceRectangle = new Rectangle(dim_x * column, row * dim_y, dim_x, dim_y);
+            Rectangle sourceRectangle = new Rectangle(dim_x * column, row * 48, dim_x, dim_y);
             Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y - (z * 2), dim_x, dim_y);
 
             spriteBatch.Begin();
