@@ -107,13 +107,14 @@ namespace aspectstar2
             texCollection.texShadows = Content.Load<Texture2D>("shadows");
             texCollection.texEnemies = Content.Load<Texture2D>("enemies");
             texCollection.texProjectile = Content.Load<Texture2D>("projectile");
-            texCollection.bigMouse = Content.Load<Texture2D>("bigmouse");
+            texCollection.texBosses = Content.Load<Texture2D>("bosses");
             texCollection.texPlosion = Content.Load<Texture2D>("explosion");
 
-            texCollection.adventureTiles = new Texture2D[3];
+            texCollection.adventureTiles = new Texture2D[4];
             texCollection.adventureTiles[0] = Content.Load<Texture2D>("dungeon1");
             texCollection.adventureTiles[1] = Content.Load<Texture2D>("town");
             texCollection.adventureTiles[2] = Content.Load<Texture2D>("dungeon2");
+            texCollection.adventureTiles[3] = Content.Load<Texture2D>("dungeon3");
 
             // Load sound effects (made in sfxr)
             PlaySound.die = Content.Load<SoundEffect>("die");
@@ -253,8 +254,7 @@ namespace aspectstar2
         public Texture2D texAdvPlayer;
         public Texture2D texEnemies;
         public Texture2D texProjectile;
-
-        public Texture2D bigMouse;
+        public Texture2D texBosses;
 
         public Texture2D texShadows;
         public Texture2D texPlosion;

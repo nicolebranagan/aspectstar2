@@ -1531,7 +1531,7 @@
       <int>12</int>
       <int>12</int>
       <int>0</int>
-      <int>0</int>
+      <int>12</int>
       <int>0</int>
       <int>0</int>
       <int>7</int>
@@ -1631,8 +1631,8 @@
       <int>12</int>
       <int>12</int>
       <int>0</int>
-      <int>0</int>
-      <int>0</int>
+      <int>12</int>
+      <int>12</int>
       <int>0</int>
       <int>7</int>
       <int>7</int>
@@ -1731,8 +1731,8 @@
       <int>12</int>
       <int>12</int>
       <int>12</int>
-      <int>0</int>
-      <int>0</int>
+      <int>12</int>
+      <int>12</int>
       <int>0</int>
       <int>7</int>
       <int>7</int>
@@ -1833,7 +1833,7 @@
       <int>12</int>
       <int>12</int>
       <int>12</int>
-      <int>0</int>
+      <int>12</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -1932,8 +1932,8 @@
       <int>20</int>
       <int>20</int>
       <int>21</int>
-      <int>0</int>
-      <int>0</int>
+      <int>12</int>
+      <int>12</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -2032,8 +2032,8 @@
       <int>0</int>
       <int>0</int>
       <int>23</int>
-      <int>0</int>
-      <int>0</int>
+      <int>12</int>
+      <int>12</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -2112,10 +2112,10 @@
       <int>12</int>
       <int>12</int>
       <int>12</int>
-      <int>12</int>
-      <int>12</int>
-      <int>12</int>
-      <int>12</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
       <int>22</int>
       <int>0</int>
       <int>0</int>
@@ -2132,8 +2132,8 @@
       <int>12</int>
       <int>0</int>
       <int>23</int>
-      <int>0</int>
-      <int>0</int>
+      <int>12</int>
+      <int>12</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -2210,12 +2210,12 @@
       <int>12</int>
       <int>12</int>
       <int>12</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
       <int>12</int>
       <int>12</int>
-      <int>12</int>
-      <int>12</int>
-      <int>12</int>
-      <int>12</int>
+      <int>0</int>
       <int>22</int>
       <int>0</int>
       <int>0</int>
@@ -2232,9 +2232,9 @@
       <int>0</int>
       <int>0</int>
       <int>23</int>
-      <int>0</int>
-      <int>0</int>
-      <int>7</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -2310,12 +2310,12 @@
       <int>12</int>
       <int>12</int>
       <int>12</int>
+      <int>0</int>
       <int>12</int>
       <int>12</int>
       <int>12</int>
       <int>12</int>
-      <int>12</int>
-      <int>12</int>
+      <int>0</int>
       <int>22</int>
       <int>0</int>
       <int>0</int>
@@ -2332,9 +2332,9 @@
       <int>0</int>
       <int>0</int>
       <int>23</int>
-      <int>0</int>
-      <int>0</int>
-      <int>7</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -2410,12 +2410,12 @@
       <int>12</int>
       <int>12</int>
       <int>12</int>
+      <int>0</int>
       <int>12</int>
       <int>12</int>
       <int>12</int>
-      <int>12</int>
-      <int>12</int>
-      <int>12</int>
+      <int>0</int>
+      <int>0</int>
       <int>22</int>
       <int>0</int>
       <int>12</int>
@@ -2432,10 +2432,10 @@
       <int>21</int>
       <int>0</int>
       <int>23</int>
-      <int>0</int>
-      <int>0</int>
-      <int>7</int>
-      <int>7</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -2510,11 +2510,11 @@
       <int>12</int>
       <int>12</int>
       <int>12</int>
+      <int>0</int>
       <int>12</int>
       <int>12</int>
       <int>12</int>
-      <int>12</int>
-      <int>12</int>
+      <int>0</int>
       <int>12</int>
       <int>22</int>
       <int>0</int>
@@ -2532,9 +2532,9 @@
       <int>25</int>
       <int>0</int>
       <int>23</int>
-      <int>0</int>
-      <int>0</int>
-      <int>7</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -2610,11 +2610,11 @@
       <int>12</int>
       <int>12</int>
       <int>12</int>
+      <int>0</int>
       <int>12</int>
       <int>12</int>
       <int>12</int>
-      <int>12</int>
-      <int>12</int>
+      <int>0</int>
       <int>12</int>
       <int>24</int>
       <int>0</int>
@@ -2632,9 +2632,9 @@
       <int>28</int>
       <int>0</int>
       <int>25</int>
-      <int>0</int>
-      <int>0</int>
-      <int>7</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -2707,14 +2707,14 @@
       <int>12</int>
       <int>12</int>
       <int>12</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
       <int>12</int>
       <int>12</int>
       <int>12</int>
-      <int>12</int>
-      <int>12</int>
-      <int>12</int>
-      <int>12</int>
-      <int>12</int>
+      <int>0</int>
       <int>12</int>
       <int>26</int>
       <int>24</int>
@@ -2732,9 +2732,9 @@
       <int>0</int>
       <int>25</int>
       <int>28</int>
-      <int>0</int>
-      <int>0</int>
-      <int>7</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -2804,18 +2804,18 @@
       <int>7</int>
       <int>7</int>
       <int>16</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
       <int>0</int>
       <int>26</int>
       <int>24</int>
@@ -2831,10 +2831,10 @@
       <int>0</int>
       <int>25</int>
       <int>28</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>7</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -2904,19 +2904,19 @@
       <int>7</int>
       <int>7</int>
       <int>16</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
       <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>12</int>
       <int>0</int>
       <int>26</int>
       <int>24</int>
@@ -2930,93 +2930,93 @@
       <int>0</int>
       <int>25</int>
       <int>28</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>3</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>14</int>
+      <int>14</int>
+      <int>14</int>
+      <int>14</int>
       <int>0</int>
       <int>0</int>
       <int>0</int>
-      <int>0</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
       <int>0</int>
       <int>0</int>
       <int>26</int>
@@ -3030,94 +3030,94 @@
       <int>25</int>
       <int>28</int>
       <int>0</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>3</int>
+      <int>14</int>
+      <int>14</int>
+      <int>14</int>
+      <int>14</int>
+      <int>4</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>16</int>
       <int>0</int>
       <int>0</int>
       <int>0</int>
-      <int>0</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
       <int>0</int>
       <int>0</int>
       <int>26</int>
@@ -3129,195 +3129,95 @@
       <int>27</int>
       <int>28</int>
       <int>0</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>29</int>
       <int>0</int>
       <int>0</int>
       <int>0</int>
-      <int>0</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>6</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
       <int>0</int>
       <int>0</int>
       <int>0</int>
@@ -3327,458 +3227,16 @@
       <int>0</int>
       <int>0</int>
       <int>0</int>
-      <int>7</int>
       <int>0</int>
       <int>0</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
       <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>0</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -3850,35 +3308,35 @@
       <int>1</int>
       <int>15</int>
       <int>15</int>
-      <int>2</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
+      <int>15</int>
+      <int>15</int>
+      <int>15</int>
+      <int>15</int>
+      <int>15</int>
+      <int>15</int>
+      <int>11</int>
+      <int>5</int>
+      <int>5</int>
+      <int>5</int>
+      <int>5</int>
+      <int>5</int>
+      <int>5</int>
+      <int>5</int>
+      <int>5</int>
+      <int>8</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>0</int>
+      <int>0</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -3949,36 +3407,36 @@
       <int>7</int>
       <int>16</int>
       <int>0</int>
+      <int>11</int>
+      <int>5</int>
+      <int>5</int>
+      <int>5</int>
+      <int>5</int>
+      <int>5</int>
+      <int>5</int>
+      <int>8</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>19</int>
+      <int>21</int>
+      <int>0</int>
       <int>12</int>
-      <int>17</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>0</int>
+      <int>0</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -4048,6 +3506,548 @@
       <int>7</int>
       <int>7</int>
       <int>16</int>
+      <int>0</int>
+      <int>6</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>19</int>
+      <int>21</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>19</int>
+      <int>20</int>
+      <int>12</int>
+      <int>25</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>19</int>
+      <int>20</int>
+      <int>21</int>
+      <int>6</int>
+      <int>19</int>
+      <int>20</int>
+      <int>20</int>
+      <int>20</int>
+      <int>20</int>
+      <int>20</int>
+      <int>20</int>
+      <int>22</int>
+      <int>23</int>
+      <int>20</int>
+      <int>20</int>
+      <int>20</int>
+      <int>0</int>
+      <int>25</int>
+      <int>27</int>
+      <int>28</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>22</int>
+      <int>0</int>
+      <int>23</int>
+      <int>6</int>
+      <int>22</int>
+      <int>0</int>
+      <int>0</int>
+      <int>12</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>24</int>
+      <int>25</int>
+      <int>0</int>
+      <int>12</int>
+      <int>0</int>
+      <int>25</int>
+      <int>28</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>22</int>
+      <int>0</int>
+      <int>23</int>
+      <int>18</int>
+      <int>22</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>26</int>
+      <int>28</int>
+      <int>0</int>
+      <int>0</int>
+      <int>25</int>
+      <int>28</int>
+      <int>0</int>
+      <int>0</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>1</int>
+      <int>15</int>
+      <int>15</int>
+      <int>2</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>22</int>
+      <int>0</int>
+      <int>23</int>
+      <int>6</int>
+      <int>22</int>
+      <int>0</int>
+      <int>0</int>
+      <int>25</int>
+      <int>27</int>
+      <int>24</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>25</int>
+      <int>28</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>16</int>
+      <int>0</int>
+      <int>12</int>
+      <int>17</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>22</int>
+      <int>0</int>
+      <int>23</int>
+      <int>18</int>
+      <int>22</int>
+      <int>12</int>
+      <int>25</int>
+      <int>28</int>
+      <int>12</int>
+      <int>26</int>
+      <int>27</int>
+      <int>27</int>
+      <int>27</int>
+      <int>27</int>
+      <int>28</int>
+      <int>0</int>
+      <int>0</int>
+      <int>12</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>7</int>
+      <int>16</int>
       <int>6</int>
       <int>12</int>
       <int>17</int>
@@ -4104,39 +4104,39 @@
       <int>7</int>
       <int>7</int>
       <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
+      <int>24</int>
+      <int>0</int>
+      <int>25</int>
+      <int>6</int>
+      <int>24</int>
+      <int>25</int>
+      <int>28</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>12</int>
+      <int>12</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -4204,39 +4204,39 @@
       <int>7</int>
       <int>7</int>
       <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
+      <int>26</int>
+      <int>27</int>
+      <int>28</int>
+      <int>6</int>
+      <int>26</int>
+      <int>28</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -4304,39 +4304,39 @@
       <int>7</int>
       <int>7</int>
       <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
+      <int>16</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>12</int>
+      <int>12</int>
+      <int>12</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -4404,23 +4404,23 @@
       <int>7</int>
       <int>7</int>
       <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
-      <int>7</int>
+      <int>16</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -4514,8 +4514,8 @@
       <int>7</int>
       <int>7</int>
       <int>7</int>
-      <int>7</int>
-      <int>7</int>
+      <int>0</int>
+      <int>0</int>
       <int>7</int>
       <int>7</int>
       <int>7</int>
@@ -10136,6 +10136,24 @@
         <destx>12</destx>
         <desty>11</desty>
       </MapObject>
+      <MapObject xsi:type="MapTeleporter">
+        <x>22</x>
+        <y>27</y>
+        <dest>3</dest>
+        <destroomX>10</destroomX>
+        <destroomY>5</destroomY>
+        <destx>12</destx>
+        <desty>12</desty>
+      </MapObject>
+      <MapObject xsi:type="MapTeleporter">
+        <x>5</x>
+        <y>27</y>
+        <dest>4</dest>
+        <destroomX>12</destroomX>
+        <destroomY>11</destroomY>
+        <destx>12</destx>
+        <desty>11</desty>
+      </MapObject>
     </objects>
   </map>
   <adventures>
@@ -11414,7 +11432,7 @@
               <x>400</x>
               <y>176</y>
               <type>boss</type>
-              <enemyType>0</enemyType>
+              <enemyType>1</enemyType>
               <data>
                 <graphics>0</graphics>
                 <gfxtype>Maptile</gfxtype>
@@ -25289,6 +25307,21 @@ setFlag("cave1", true);
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
             </StoredObject>
+            <StoredObject>
+              <x>400</x>
+              <y>112</y>
+              <type>teleporter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>-1</dest>
+              <destx>26</destx>
+              <desty>26</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+            </StoredObject>
           </storedObjects>
           <dark>false</dark>
         </Room>
@@ -26895,7 +26928,43 @@ function hurt() { }</code>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
             </StoredObject>
+            <StoredObject>
+              <x>400</x>
+              <y>144</y>
+              <type>boss</type>
+              <enemyType>2</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+            </StoredObject>
           </storedObjects>
+          <code>function onLoad() { }
+function update() {
+if (!(getFlag("enterBoss")) &amp;&amp; getPlayerY() == 11) {
+overwriteTile(11,12,9);
+overwriteTile(12,12,9);
+overwriteTile(13,12,9);
+playSoundEffect(1);
+setFlag("enterBoss", true);
+}
+
+if (!(getFlag("beatBoss")) &amp;&amp; !(anyEnemies())) {
+overwriteTile(12,2,0);
+overwriteTile(12,3,0);
+overwriteTile(12,4,0);
+overwriteTile(12,5,0);
+overwriteTile(12,6,0);
+playSoundEffect(0);
+setFlag("beatBoss", true);
+clearObjects();
+}
+}</code>
           <dark>false</dark>
         </Room>
         <Room xsi:nil="true" />
@@ -28197,9 +28266,9 @@ spawnKey(6,5);
             <int>2</int>
             <int>3</int>
             <int>8</int>
+            <int>19</int>
             <int>0</int>
-            <int>0</int>
-            <int>0</int>
+            <int>19</int>
             <int>8</int>
             <int>3</int>
             <int>2</int>
@@ -28272,9 +28341,9 @@ spawnKey(6,5);
             <int>0</int>
             <int>0</int>
             <int>8</int>
+            <int>19</int>
             <int>0</int>
-            <int>0</int>
-            <int>0</int>
+            <int>19</int>
             <int>8</int>
             <int>0</int>
             <int>0</int>
@@ -28338,18 +28407,18 @@ spawnKey(6,5);
             <int>4</int>
             <int>0</int>
             <int>0</int>
+            <int>19</int>
             <int>0</int>
             <int>0</int>
+            <int>19</int>
             <int>0</int>
             <int>0</int>
+            <int>19</int>
             <int>0</int>
             <int>0</int>
+            <int>19</int>
             <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
+            <int>19</int>
             <int>8</int>
             <int>0</int>
             <int>19</int>
@@ -28388,18 +28457,18 @@ spawnKey(6,5);
             <int>4</int>
             <int>0</int>
             <int>0</int>
+            <int>19</int>
             <int>0</int>
             <int>0</int>
+            <int>19</int>
             <int>0</int>
             <int>0</int>
+            <int>19</int>
             <int>0</int>
             <int>0</int>
+            <int>19</int>
             <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
+            <int>19</int>
             <int>8</int>
             <int>0</int>
             <int>19</int>
@@ -28589,7 +28658,7 @@ spawnKey(6,5);
               <destroomY>0</destroomY>
             </StoredObject>
           </storedObjects>
-          <dark>false</dark>
+          <dark>true</dark>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -29819,7 +29888,7 @@ function hurt() { }</code>
               <destroomY>0</destroomY>
             </StoredObject>
           </storedObjects>
-          <dark>false</dark>
+          <dark>true</dark>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -29956,6 +30025,1402 @@ function hurt() { }</code>
         <Room xsi:nil="true" />
       </xmlRooms>
     </Adventure>
+    <Adventure>
+      <tileset>3</tileset>
+      <key>
+        <int>0</int>
+        <int>1</int>
+        <int>1</int>
+        <int>1</int>
+        <int>1</int>
+        <int>1</int>
+        <int>1</int>
+        <int>1</int>
+        <int>2</int>
+        <int>2</int>
+        <int>1</int>
+        <int>6</int>
+        <int>5</int>
+        <int>1</int>
+        <int>1</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>3</int>
+        <int>0</int>
+        <int>4</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+      </key>
+      <templateRoom>
+        <tileMap>
+          <int>1</int>
+          <int>2</int>
+          <int>2</int>
+          <int>2</int>
+          <int>2</int>
+          <int>2</int>
+          <int>2</int>
+          <int>2</int>
+          <int>2</int>
+          <int>2</int>
+          <int>2</int>
+          <int>2</int>
+          <int>2</int>
+          <int>2</int>
+          <int>2</int>
+          <int>2</int>
+          <int>2</int>
+          <int>2</int>
+          <int>2</int>
+          <int>2</int>
+          <int>2</int>
+          <int>2</int>
+          <int>2</int>
+          <int>2</int>
+          <int>1</int>
+          <int>3</int>
+          <int>6</int>
+          <int>6</int>
+          <int>6</int>
+          <int>6</int>
+          <int>6</int>
+          <int>6</int>
+          <int>6</int>
+          <int>6</int>
+          <int>6</int>
+          <int>6</int>
+          <int>6</int>
+          <int>6</int>
+          <int>6</int>
+          <int>6</int>
+          <int>6</int>
+          <int>6</int>
+          <int>6</int>
+          <int>6</int>
+          <int>6</int>
+          <int>6</int>
+          <int>6</int>
+          <int>6</int>
+          <int>6</int>
+          <int>4</int>
+          <int>3</int>
+          <int>7</int>
+          <int>7</int>
+          <int>7</int>
+          <int>7</int>
+          <int>7</int>
+          <int>7</int>
+          <int>7</int>
+          <int>7</int>
+          <int>7</int>
+          <int>7</int>
+          <int>7</int>
+          <int>7</int>
+          <int>7</int>
+          <int>7</int>
+          <int>7</int>
+          <int>7</int>
+          <int>7</int>
+          <int>7</int>
+          <int>7</int>
+          <int>7</int>
+          <int>7</int>
+          <int>7</int>
+          <int>7</int>
+          <int>4</int>
+          <int>3</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>4</int>
+          <int>3</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>4</int>
+          <int>3</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>4</int>
+          <int>3</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>4</int>
+          <int>3</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>4</int>
+          <int>3</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>4</int>
+          <int>3</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>4</int>
+          <int>3</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>4</int>
+          <int>3</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>0</int>
+          <int>4</int>
+          <int>1</int>
+          <int>5</int>
+          <int>5</int>
+          <int>5</int>
+          <int>5</int>
+          <int>5</int>
+          <int>5</int>
+          <int>5</int>
+          <int>5</int>
+          <int>5</int>
+          <int>5</int>
+          <int>5</int>
+          <int>5</int>
+          <int>5</int>
+          <int>5</int>
+          <int>5</int>
+          <int>5</int>
+          <int>5</int>
+          <int>5</int>
+          <int>5</int>
+          <int>5</int>
+          <int>5</int>
+          <int>5</int>
+          <int>5</int>
+          <int>1</int>
+        </tileMap>
+        <storedObjects />
+        <dark>false</dark>
+      </templateRoom>
+      <name>Fantasy Forest</name>
+      <xmlRooms>
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room>
+          <tileMap>
+            <int>1</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>0</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>1</int>
+            <int>3</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>16</int>
+            <int>6</int>
+            <int>6</int>
+            <int>0</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>16</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>4</int>
+            <int>3</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>0</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>4</int>
+            <int>3</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>3</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>2</int>
+            <int>3</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>6</int>
+            <int>3</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>7</int>
+            <int>3</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>0</int>
+            <int>3</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>3</int>
+            <int>14</int>
+            <int>14</int>
+            <int>14</int>
+            <int>14</int>
+            <int>15</int>
+            <int>14</int>
+            <int>14</int>
+            <int>14</int>
+            <int>14</int>
+            <int>14</int>
+            <int>14</int>
+            <int>14</int>
+            <int>14</int>
+            <int>14</int>
+            <int>14</int>
+            <int>14</int>
+            <int>14</int>
+            <int>14</int>
+            <int>15</int>
+            <int>14</int>
+            <int>14</int>
+            <int>14</int>
+            <int>14</int>
+            <int>4</int>
+            <int>3</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>9</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>9</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>4</int>
+            <int>3</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>9</int>
+            <int>0</int>
+            <int>9</int>
+            <int>8</int>
+            <int>9</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>9</int>
+            <int>8</int>
+            <int>9</int>
+            <int>0</int>
+            <int>9</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>4</int>
+            <int>1</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>1</int>
+          </tileMap>
+          <storedObjects>
+            <StoredObject>
+              <x>528</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+            </StoredObject>
+            <StoredObject>
+              <x>304</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+            </StoredObject>
+          </storedObjects>
+          <dark>false</dark>
+        </Room>
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room>
+          <tileMap>
+            <int>1</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>1</int>
+            <int>3</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>16</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>4</int>
+            <int>3</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>4</int>
+            <int>3</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>2</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>6</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>0</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>0</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>7</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>9</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>9</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>11</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>3</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>3</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>3</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>3</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>1</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>1</int>
+          </tileMap>
+          <storedObjects>
+            <StoredObject>
+              <x>176</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+            </StoredObject>
+            <StoredObject>
+              <x>560</x>
+              <y>240</y>
+              <type>enemy</type>
+              <enemyType>2</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+            </StoredObject>
+            <StoredObject>
+              <x>144</x>
+              <y>208</y>
+              <type>enemy</type>
+              <enemyType>2</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+            </StoredObject>
+          </storedObjects>
+          <dark>false</dark>
+        </Room>
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+        <Room xsi:nil="true" />
+      </xmlRooms>
+    </Adventure>
   </adventures>
   <bestiary>
     <BestiaryEntry>
@@ -29965,6 +31430,8 @@ function hurt() { }</code>
       <decisiveness>0</decisiveness>
       <intelligence>0</intelligence>
       <health>1</health>
+      <xOffset>16</xOffset>
+      <yOffset>40</yOffset>
       <movementType>stationary</movementType>
     </BestiaryEntry>
     <BestiaryEntry>
@@ -29974,6 +31441,8 @@ function hurt() { }</code>
       <decisiveness>8</decisiveness>
       <intelligence>0</intelligence>
       <health>1</health>
+      <xOffset>16</xOffset>
+      <yOffset>40</yOffset>
       <movementType>random</movementType>
     </BestiaryEntry>
     <BestiaryEntry>
@@ -29983,6 +31452,8 @@ function hurt() { }</code>
       <decisiveness>7</decisiveness>
       <intelligence>0</intelligence>
       <health>1</health>
+      <xOffset>16</xOffset>
+      <yOffset>40</yOffset>
       <movementType>random</movementType>
     </BestiaryEntry>
     <BestiaryEntry>
@@ -29992,6 +31463,8 @@ function hurt() { }</code>
       <decisiveness>6</decisiveness>
       <intelligence>5</intelligence>
       <health>3</health>
+      <xOffset>16</xOffset>
+      <yOffset>30</yOffset>
       <movementType>intelligent</movementType>
     </BestiaryEntry>
   </bestiary>

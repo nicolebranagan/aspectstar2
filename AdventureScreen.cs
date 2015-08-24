@@ -87,6 +87,13 @@ namespace aspectstar2
             player.location = new Vector2(x * 32 + 16, y * 32 + 16);
         }
 
+        public bool isSolid(int x, int y)
+        {
+            int i = x + (y * 25);
+
+            return (((tileType)key[tileMap[i]] == tileType.Solid) || ((tileType)key[tileMap[i]] == tileType.Lock));
+        }
+
         public bool isSolid(Vector2 dest, int z, int width, int height, Master.Directions faceDir)
         {
             // Checks for the solidity of a rectangle; width and height are measured from the center of the rectangle

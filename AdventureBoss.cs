@@ -11,7 +11,7 @@ namespace aspectstar2
     {
         public AdventureBoss1()
         {
-            this.texture = Master.texCollection.bigMouse;
+            this.texture = Master.texCollection.texBosses;
             this.offset = new Vector2(32, 32);
             this.width = 30;
             this.height = 30;
@@ -50,6 +50,104 @@ namespace aspectstar2
         public override void Touch()
         {
             //
+        }
+    }
+
+
+    public class AdventureBoss2 : AdventureEnemy
+    {
+        bool left = true;
+        bool aboveWater = true;
+
+        public AdventureBoss2()
+        {
+            this.texture = Master.texCollection.texBosses;
+            this.offset = new Vector2(32, 32);
+            this.width = 30;
+            this.height = 30;
+
+            this.health = 4;
+        }
+
+        public override void Draw(SpriteBatch spriteBatch, Color mask)
+        {
+            if (flickerCount > 0)
+            {
+                flickerCount--;
+                if (currentFrame == 1)
+                    mask = Color.Red;
+            }
+
+            int dim_x = 64;
+            int dim_y = 64;
+
+            int column = 0;
+            if (aboveWater)
+                column += 4;
+            if (!left)
+                column += 2;
+            column = column + currentFrame;
+
+            Vector2 screen_loc = location - offset;
+
+            Rectangle sourceRectangle = new Rectangle(dim_x * column, 64, dim_x, dim_y);
+            Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y - (z * 2), dim_x, dim_y);
+
+            spriteBatch.Begin();
+            spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, mask);
+            spriteBatch.End();
+        }
+
+        public override void Touch()
+        {
+            //
+        }
+
+        public override void Update()
+        {
+            if (stallCount == 10)
+            {
+                stallCount = 0;
+                currentFrame = currentFrame + 1;
+                if (currentFrame == 2)
+                    currentFrame = 0;
+            }
+            else
+                stallCount++;
+
+            // Move
+            if (location.X + width + 32 >= Master.width)
+                left = true;
+            else if (location.X - width - 32 <= 0)
+                left = false;
+
+            if (stallCount % 4 != 0)
+            {
+                location = new Vector2(location.X + (left ? -2 : 2), location.Y);
+
+                if (aboveWater && Master.globalRandom.Next(30) < 1)
+                {
+                    aboveWater = false;
+                }
+                else if (!aboveWater && Master.globalRandom.Next(30) < 5)
+                {
+                    aboveWater = true;
+                    PlaySound.Pew();
+                }
+
+                if (aboveWater && Master.globalRandom.Next(60) < 2)
+                {
+                    var aP = new AdventureProjectile(false, Master.Directions.Down, location, 300);
+                    parent.addObject(aP);
+                    PlaySound.Pew();
+                }
+            }
+        }
+
+        public override void Hurt()
+        {
+            if (aboveWater)
+                base.Hurt();
         }
     }
 }

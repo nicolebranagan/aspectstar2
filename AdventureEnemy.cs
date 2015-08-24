@@ -23,6 +23,7 @@ namespace aspectstar2
             this.texture = Master.texCollection.texEnemies;
             this.health = definition.health;
             this.graphicsRow = definition.graphicsRow;
+            this.offset = new Vector2(definition.xOffset, definition.yOffset);
         }
 
         public override void Update()
@@ -148,10 +149,8 @@ namespace aspectstar2
             base.Draw(spriteBatch, mask);
         }
 
-        public void Hurt()
+        public virtual void Hurt()
         {
-            // TODO: health, etc
-
             if (this.flickerCount == 0)
             {
                 PlaySound.Boom();

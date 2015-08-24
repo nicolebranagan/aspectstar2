@@ -13,6 +13,10 @@ namespace aspectstar2
         public int decisiveness = 0;
         public int intelligence = 0;
         public int health = 1;
+
+        public int xOffset = 16;
+        public int yOffset = 40;
+
         public MovementTypes movementType = MovementTypes.stationary;
 
         public enum MovementTypes

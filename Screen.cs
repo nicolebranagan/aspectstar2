@@ -117,6 +117,7 @@ namespace aspectstar2
                             PlaySound.Aspect();
                             break;
                         case Selections.Continue:
+                            PlaySound.Pause();
                             if (!saveFailed)
                                 saveFailed = !(master.LoadGame());
                             break;

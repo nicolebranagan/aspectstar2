@@ -121,6 +121,7 @@ namespace aspectstar2
     public class SeekerProjectile : AdventureProjectile
     {
         Vector2 move_dist;
+        int speed = 4;
 
         public SeekerProjectile(AdventureScreen parent, Vector2 location, int deathTimer)
         {
@@ -145,7 +146,7 @@ namespace aspectstar2
 
         public override void Update()
         {   
-            if (deathTimer % 4 != 0)
+            if (deathTimer % speed != 0)
                 Move(move_dist);
 
             this.deathTimer--;

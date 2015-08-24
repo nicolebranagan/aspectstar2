@@ -143,10 +143,18 @@ namespace aspectstar2
                     entity.location = new Vector2(x, y);
                     return entity;
                 case ObjectType.boss:
-                    // will eventually depend on enemyType
-                    AdventureBoss1 boss = new AdventureBoss1();
-                    boss.location = new Vector2(x, y);
-                    return boss;
+                    if (enemyType == 2)
+                    {
+                        AdventureBoss2 boss2 = new AdventureBoss2();
+                        boss2.location = new Vector2(x, y);
+                        return boss2;
+                    }
+                    else
+                    {
+                        AdventureBoss1 boss1 = new AdventureBoss1();
+                        boss1.location = new Vector2(x, y);
+                        return boss1;
+                    }
                 case ObjectType.shooter:
                     AdventureShooter shooter = new AdventureShooter();
                     shooter.location = new Vector2(x, y);
