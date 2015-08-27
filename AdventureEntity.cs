@@ -41,6 +41,10 @@ namespace aspectstar2
                     texture = Master.texCollection.texEnemies;
                     graphicsRow = data.graphics;
                     break;
+                case EntityData.GraphicsType.Characters:
+                    texture = Master.texCollection.texCharacters;
+                    graphicsRow = data.graphics;
+                    break;
             }
         }
 
@@ -102,6 +106,11 @@ namespace aspectstar2
                 jintEngine.Execute("touch()");
                 touchLag = 40;
             }
+        }
+
+        public void Hurt()
+        {
+            jintEngine.Execute("hurt()");
         }
 
         public void Execute(string exec)

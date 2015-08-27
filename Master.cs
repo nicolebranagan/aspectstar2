@@ -106,6 +106,7 @@ namespace aspectstar2
             texCollection.texAdvPlayer = Content.Load<Texture2D>("advplayer");
             texCollection.texShadows = Content.Load<Texture2D>("shadows");
             texCollection.texEnemies = Content.Load<Texture2D>("enemies");
+            texCollection.texCharacters = Content.Load<Texture2D>("characters");
             texCollection.texProjectile = Content.Load<Texture2D>("projectile");
             texCollection.texBosses = Content.Load<Texture2D>("bosses");
             texCollection.texPlosion = Content.Load<Texture2D>("explosion");
@@ -253,6 +254,7 @@ namespace aspectstar2
         public Texture2D texMapPlayer;
         public Texture2D texAdvPlayer;
         public Texture2D texEnemies;
+        public Texture2D texCharacters;
         public Texture2D texProjectile;
         public Texture2D texBosses;
 

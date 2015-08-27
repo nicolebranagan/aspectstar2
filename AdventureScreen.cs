@@ -68,7 +68,8 @@ namespace aspectstar2
             Injury = 3,
             Warp = 4,
             Heal = 5,
-            Lock = 6
+            Lock = 6,
+            Wood = 7,
         }
 
         public AdventureScreen(Game game, int dest, int destroomX, int destroomY, int x, int y, bool beaten)
@@ -91,7 +92,7 @@ namespace aspectstar2
         {
             int i = x + (y * 25);
 
-            return (((tileType)key[tileMap[i]] == tileType.Solid) || ((tileType)key[tileMap[i]] == tileType.Lock));
+            return (((tileType)key[tileMap[i]] == tileType.Solid) || ((tileType)key[tileMap[i]] == tileType.Lock)) || ((tileType)key[tileMap[i]] == tileType.Wood);
         }
 
         public bool isSolid(Vector2 dest, int z, int width, int height, Master.Directions faceDir)
@@ -105,7 +106,7 @@ namespace aspectstar2
                 x = (int)Math.Floor((dest.X - width) / 32);
                 y = (int)Math.Floor((dest.Y - height) / 32);
                 i = x + (y * 25);
-                if (((tileType)key[tileMap[i]] == tileType.Solid) || ((tileType)key[tileMap[i]] == tileType.Lock) ||
+                if (((tileType)key[tileMap[i]] == tileType.Solid) || ((tileType)key[tileMap[i]] == tileType.Lock) || ((tileType)key[tileMap[i]] == tileType.Wood) ||
                     (((tileType)key[tileMap[i]] == tileType.Crevasse) && z == 0))
                     return true;
             }
@@ -115,7 +116,7 @@ namespace aspectstar2
                 x = (int)Math.Floor((dest.X + width) / 32);
                 y = (int)Math.Floor((dest.Y - height) / 32);
                 i = x + (y * 25);
-                if (((tileType)key[tileMap[i]] == tileType.Solid) || ((tileType)key[tileMap[i]] == tileType.Lock) ||
+                if (((tileType)key[tileMap[i]] == tileType.Solid) || ((tileType)key[tileMap[i]] == tileType.Lock) || ((tileType)key[tileMap[i]] == tileType.Wood) ||
                     (((tileType)key[tileMap[i]] == tileType.Crevasse) && z == 0))
                     return true;
             }
@@ -125,7 +126,7 @@ namespace aspectstar2
                 x = (int)Math.Floor((dest.X - width) / 32);
                 y = (int)Math.Floor((dest.Y + height) / 32);
                 i = x + (y * 25);
-                if (((tileType)key[tileMap[i]] == tileType.Solid) || ((tileType)key[tileMap[i]] == tileType.Lock) ||
+                if (((tileType)key[tileMap[i]] == tileType.Solid) || ((tileType)key[tileMap[i]] == tileType.Lock) || ((tileType)key[tileMap[i]] == tileType.Wood) ||
                     (((tileType)key[tileMap[i]] == tileType.Crevasse) && z == 0))
                     return true;
             }
@@ -135,7 +136,7 @@ namespace aspectstar2
                 x = (int)Math.Floor((dest.X + width) / 32);
                 y = (int)Math.Floor((dest.Y + height) / 32);
                 i = x + (y * 25);
-                if (((tileType)key[tileMap[i]] == tileType.Solid) || ((tileType)key[tileMap[i]] == tileType.Lock) ||
+                if (((tileType)key[tileMap[i]] == tileType.Solid) || ((tileType)key[tileMap[i]] == tileType.Lock) || ((tileType)key[tileMap[i]] == tileType.Wood) ||
                     (((tileType)key[tileMap[i]] == tileType.Crevasse) && z == 0))
                     return true;
             }
@@ -231,6 +232,20 @@ namespace aspectstar2
                     collided = true;
             }
             return collided;
+        }
+
+        public void Burn(Vector2 dest)
+        {
+            int i, x, y;
+            x = (int)Math.Floor((dest.X) / 32);
+            y = (int)Math.Floor((dest.Y) / 32);
+            i = x + (y * 25);
+
+            if ((tileType)key[tileMap[i]] == tileType.Wood)
+            {
+                tileMap[i] = 0;
+                PlaySound.Boom();
+            }
         }
 
         public bool isInjury(Vector2 dest, int width, int height)
@@ -924,6 +939,9 @@ namespace aspectstar2
                 case 2:
                     game.GetWeapon(new TorchWeapon());
                     break;
+                case 3:
+                    game.GetWeapon(new FireballWeapon());
+                    break;
             }
         }
 
@@ -941,15 +959,32 @@ namespace aspectstar2
 
         void SetFlag(string flag, bool value)
         {
-            if (flags.ContainsKey(flag))
-                flags.Remove(flag);
-            flags.Add(flag, value);
+            if (flag.StartsWith("!"))
+            {
+                if (game.globalFlags.ContainsKey(flag))
+                    game.globalFlags.Remove(flag);
+                game.globalFlags.Add(flag, value);
+            }
+            else
+            {
+                if (flags.ContainsKey(flag))
+                    flags.Remove(flag);
+                flags.Add(flag, value);
+            }
         }
 
         bool GetFlag(string flag)
         {
-            if (flags.ContainsKey(flag))
-                return flags[flag];
+            if (flag.StartsWith("!"))
+            {
+                if (game.globalFlags.ContainsKey(flag))
+                    return game.globalFlags[flag];
+            }
+            else
+            {
+                if (flags.ContainsKey(flag))
+                    return flags[flag];
+            }
             return false;
         }
 

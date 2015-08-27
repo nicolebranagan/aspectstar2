@@ -12,6 +12,8 @@ namespace aspectstar2
         protected bool friendly;
         protected int deathTimer;
 
+        bool fiery;
+
         public AdventureProjectile()
         { }
 
@@ -27,11 +29,22 @@ namespace aspectstar2
             width = 4;
             height = 4;
         }
+
+        public static AdventureProjectile getFieryProjectile(bool friendly, Master.Directions faceDir, Vector2 location, int deathTimer)
+        {
+            AdventureProjectile aP = new AdventureProjectile(friendly, faceDir, location, deathTimer);
+            aP.fiery = true;
+            return aP;
+        }
         
         public override void Draw(SpriteBatch spriteBatch, Color mask)
         {
             spriteBatch.Begin();
-            Rectangle source = new Rectangle(0, friendly ? 0 : 16, 16, 16);
+            Rectangle source = new Rectangle(0, 0, 16, 16);
+            if (!friendly)
+                source.Y = 16;
+            if (fiery)
+                source.Y = 32;
             Rectangle dest = new Rectangle((int)location.X - 8, (int)location.Y - 8, 16, 16);
             spriteBatch.Draw(texture, dest, source, Color.White);
             spriteBatch.End();
@@ -57,6 +70,12 @@ namespace aspectstar2
                         {
                             AdventureEnemy enemy = (AdventureEnemy)obj;
                             enemy.Hurt();
+                            active = false;
+                        }
+                        else if (obj is AdventureEntity)
+                        {
+                            AdventureEntity entity = (AdventureEntity)obj;
+                            entity.Hurt();
                             active = false;
                         }
                         else if (friendly)
@@ -85,6 +104,9 @@ namespace aspectstar2
                 default:
                     break; // Something has gone wrong
             }
+            if (fiery)
+                parent.Burn(move_dist + location);
+
             if (deathTimer % 4 != 0)
                 Move(move_dist);
 
@@ -96,9 +118,10 @@ namespace aspectstar2
         public override void Move(Vector2 move_dist)
         {
             Vector2 test = move_dist + location;
+            int z = (fiery) ? 0 : 1;
             if ((test.X - width) >= 0 && (test.Y - height) >= 0 && (test.X + width) < (25 * 32) && (test.Y + height) < (13 * 32))
             {
-                if (!this.parent.isSolid(test, 1, width, height, faceDir))
+                if (!this.parent.isSolid(test, z, 0, 0, faceDir))
                     this.location = test;
                 else
                     this.active = false;

@@ -10,6 +10,7 @@ namespace aspectstar2
         public int x, y, possibleLife, life, goldKeys, bells;
         public List<mapChange> mapChanges;
         public List<storedWeapon> weapons;
+        public List<storedDictionaryEntry> globalFlags;
         public bool[] beaten;
     }
 
@@ -21,5 +22,11 @@ namespace aspectstar2
     public struct storedWeapon
     {
         public int type, count;
+    }
+
+    public struct storedDictionaryEntry
+    {
+        public string flag;
+        public bool value;
     }
 }

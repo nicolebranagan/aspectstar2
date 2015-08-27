@@ -17,6 +17,9 @@ namespace aspectstar2
         public int xOffset = 16;
         public int yOffset = 40;
 
+        public int width = 10;
+        public int height = 6;
+
         public MovementTypes movementType = MovementTypes.stationary;
 
         public enum MovementTypes

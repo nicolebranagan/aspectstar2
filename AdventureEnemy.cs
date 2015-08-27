@@ -24,6 +24,8 @@ namespace aspectstar2
             this.health = definition.health;
             this.graphicsRow = definition.graphicsRow;
             this.offset = new Vector2(definition.xOffset, definition.yOffset);
+            this.width = definition.width;
+            this.height = definition.height;
         }
 
         public override void Update()

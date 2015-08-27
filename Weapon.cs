@@ -112,7 +112,7 @@ namespace aspectstar2
 
     class ProjectileWeapon : Weapon
     {
-        int cooldown = 0;
+        protected int cooldown = 0;
 
         public override void Activate(AdventurePlayer player, AdventureScreen screen, Game game)
         {
@@ -262,6 +262,35 @@ namespace aspectstar2
         public override string getLabel()
         {
             return "TORCHES";
+        }
+    }
+
+    class FireballWeapon : ProjectileWeapon
+    {
+        public override void Activate(AdventurePlayer player, AdventureScreen screen, Game game)
+        {
+            if ((cooldown == 0) && (player.z == 0))
+            {
+                Vector2 location = new Vector2(player.location.X, player.location.Y - 16);
+                AdventureProjectile proj = AdventureProjectile.getFieryProjectile(true, player.faceDir, location, 20);
+                screen.addObject(proj);
+                cooldown = 30;
+                PlaySound.Pew();
+            }
+        }
+
+        public override void Draw(SpriteBatch spriteBatch, int x, int y)
+        {
+            Rectangle source = new Rectangle(128, 64, 32, 32);
+            Rectangle dest = new Rectangle(x, y, 32, 32);
+            spriteBatch.Begin();
+            spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
+            spriteBatch.End();
+        }
+
+        public override string getLabel()
+        {
+            return "FIREBALL";
         }
     }
 }

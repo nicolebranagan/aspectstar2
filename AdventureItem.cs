@@ -35,12 +35,15 @@ namespace aspectstar2
 
         public override void Draw(SpriteBatch spriteBatch, Color mask)
         {
-            Rectangle sourceRectangle = new Rectangle((128 + 64), 0, 16, 16);
-            Rectangle destinationRectangle = new Rectangle((int)(this.location.X - 8), (int)(this.location.Y - 8), 16, 16);
+            if (!parent.isSolid(location, 0, 0, 0, 0))
+            {
+                Rectangle sourceRectangle = new Rectangle((128 + 64), 0, 16, 16);
+                Rectangle destinationRectangle = new Rectangle((int)(this.location.X - 8), (int)(this.location.Y - 8), 16, 16);
 
-            spriteBatch.Begin();
-            spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, Color.White);
-            spriteBatch.End();
+                spriteBatch.Begin();
+                spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, Color.White);
+                spriteBatch.End();
+            }
         }
 
         public override void Touch()

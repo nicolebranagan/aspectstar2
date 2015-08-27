@@ -24,6 +24,8 @@ namespace aspectstar2
         public Weapon weaponB;
         public List<Weapon> weapons;
 
+        public Dictionary<string, bool> globalFlags = new Dictionary<string, bool>();
+
         public Game(Master master)
         {
             this.master = master;
@@ -52,6 +54,9 @@ namespace aspectstar2
 
             mS.ApplyChanges(sG.mapChanges);
             mS.LocalTeleport(sG.x, sG.y);
+
+            foreach (var stored in sG.globalFlags)
+                globalFlags.Add(stored.flag, stored.value);
 
             weapons = new List<Weapon>();
             foreach (var stored in sG.weapons)
@@ -195,6 +200,15 @@ namespace aspectstar2
             game.weapons = new List<storedWeapon>();
             foreach (var w in weapons)
                 game.weapons.Add(w.packWeapon());
+
+            game.globalFlags = new List<storedDictionaryEntry>();
+            foreach (var f in globalFlags)
+            {
+                storedDictionaryEntry sD = new storedDictionaryEntry();
+                sD.flag = f.Key;
+                sD.value = f.Value;
+                game.globalFlags.Add(sD);
+            }
 
             game.beaten = beaten;
 

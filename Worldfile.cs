@@ -191,6 +191,7 @@ namespace aspectstar2
         {
             Maptile = 0,
             Enemies = 1,
+            Characters = 2,
         }
     }
 }
