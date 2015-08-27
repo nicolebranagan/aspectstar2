@@ -32,6 +32,7 @@ namespace aspectstar2
             ProjectileWeapon = 2,
             FishWeapon = 3,
             TorchWeapon = 4,
+            FireballWeapon = 5,
         }
 
         public storedWeapon packWeapon()
@@ -39,6 +40,8 @@ namespace aspectstar2
             int type = 0;
             if (this is JumpWeapon)
                 type = (int)WeaponType.JumpWeapon;
+            else if (this is FireballWeapon)
+                type = (int)WeaponType.FireballWeapon;
             else if (this is ProjectileWeapon)
                 type = (int)WeaponType.ProjectileWeapon;
             else if (this is FishWeapon)
@@ -63,7 +66,10 @@ namespace aspectstar2
                     return new ProjectileWeapon();
                 case WeaponType.FishWeapon:
                     return new FishWeapon(packedWeapon.count);
-
+                case WeaponType.TorchWeapon:
+                    return new TorchWeapon(packedWeapon.count);
+                case WeaponType.FireballWeapon:
+                    return new FireballWeapon();
                 default:
                     return new NullWeapon();
             }
@@ -222,6 +228,11 @@ namespace aspectstar2
         public TorchWeapon()
         {
             count = 5;
+        }
+
+        public TorchWeapon(int count)
+        {
+            this.count = count;
         }
 
         public override void Extra(Weapon weapon)
