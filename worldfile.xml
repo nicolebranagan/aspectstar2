@@ -10154,6 +10154,15 @@
         <destx>12</destx>
         <desty>11</desty>
       </MapObject>
+      <MapObject xsi:type="MapTeleporter">
+        <x>12</x>
+        <y>32</y>
+        <dest>4</dest>
+        <destroomX>7</destroomX>
+        <destroomY>11</destroomY>
+        <destx>2</destx>
+        <desty>3</desty>
+      </MapObject>
     </objects>
   </map>
   <adventures>
@@ -35488,7 +35497,6 @@ setFlag("room2b", true);
             <int>14</int>
             <int>14</int>
             <int>14</int>
-            <int>15</int>
             <int>14</int>
             <int>14</int>
             <int>14</int>
@@ -35498,6 +35506,7 @@ setFlag("room2b", true);
             <int>14</int>
             <int>5</int>
             <int>5</int>
+            <int>14</int>
             <int>14</int>
             <int>14</int>
             <int>14</int>
@@ -35520,9 +35529,9 @@ setFlag("room2b", true);
             <int>0</int>
             <int>0</int>
             <int>0</int>
+            <int>2</int>
+            <int>2</int>
             <int>0</int>
-            <int>2</int>
-            <int>2</int>
             <int>0</int>
             <int>9</int>
             <int>9</int>
@@ -35545,13 +35554,14 @@ setFlag("room2b", true);
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>0</int>
-            <int>16</int>
             <int>6</int>
+            <int>16</int>
+            <int>0</int>
             <int>0</int>
             <int>0</int>
             <int>8</int>
             <int>8</int>
+            <int>0</int>
             <int>0</int>
             <int>0</int>
             <int>5</int>
@@ -35569,16 +35579,16 @@ setFlag("room2b", true);
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>0</int>
-            <int>0</int>
             <int>7</int>
             <int>7</int>
+            <int>0</int>
             <int>0</int>
             <int>0</int>
             <int>17</int>
             <int>8</int>
             <int>0</int>
             <int>0</int>
+            <int>0</int>
             <int>2</int>
             <int>2</int>
             <int>0</int>
@@ -35599,9 +35609,9 @@ setFlag("room2b", true);
             <int>0</int>
             <int>0</int>
             <int>0</int>
+            <int>8</int>
+            <int>8</int>
             <int>0</int>
-            <int>8</int>
-            <int>8</int>
             <int>0</int>
             <int>0</int>
             <int>16</int>
@@ -35624,14 +35634,13 @@ setFlag("room2b", true);
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>0</int>
             <int>8</int>
             <int>8</int>
             <int>0</int>
             <int>0</int>
-            <int>7</int>
-            <int>7</int>
             <int>0</int>
+            <int>7</int>
+            <int>7</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -35834,7 +35843,22 @@ setFlag("room2b", true);
               <destroomY>0</destroomY>
             </StoredObject>
             <StoredObject>
-              <x>112</x>
+              <x>400</x>
+              <y>80</y>
+              <type>boss</type>
+              <enemyType>3</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+            </StoredObject>
+            <StoredObject>
+              <x>144</x>
               <y>176</y>
               <type>shooter</type>
               <enemyType>0</enemyType>
@@ -35849,6 +35873,22 @@ setFlag("room2b", true);
               <destroomY>0</destroomY>
             </StoredObject>
           </storedObjects>
+          <code>function onLoad() { }
+function update() {
+if (!(getFlag("enterBoss")) &amp;&amp; getPlayerX() == 23) {
+overwriteTile(24,3,8);
+overwriteTile(24,10,8);
+playSoundEffect(1);
+setFlag("enterBoss", true);
+}
+
+if (!(getFlag("beatBoss")) &amp;&amp; !(anyEnemies())) {
+overwriteTile(12,0,15);
+playSoundEffect(0);
+setFlag("beatBoss", true);
+clearObjects();
+}
+}</code>
           <dark>false</dark>
         </Room>
         <Room>
@@ -41556,6 +41596,19 @@ spawnKey(12,7);
       <width>10</width>
       <height>6</height>
       <movementType>intelligent</movementType>
+    </BestiaryEntry>
+    <BestiaryEntry>
+      <name>Bunny</name>
+      <graphicsRow>6</graphicsRow>
+      <speed>4</speed>
+      <decisiveness>8</decisiveness>
+      <intelligence>0</intelligence>
+      <health>1</health>
+      <xOffset>16</xOffset>
+      <yOffset>40</yOffset>
+      <width>10</width>
+      <height>6</height>
+      <movementType>random</movementType>
     </BestiaryEntry>
   </bestiary>
 </Worldfile>
