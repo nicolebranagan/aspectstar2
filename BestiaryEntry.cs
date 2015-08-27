@@ -20,6 +20,8 @@ namespace aspectstar2
         public int width = 10;
         public int height = 6;
 
+        public bool ghost = false;
+
         public MovementTypes movementType = MovementTypes.stationary;
 
         public enum MovementTypes

@@ -144,10 +144,10 @@ namespace aspectstar2
             }
         }
 
-        public override void Hurt()
+        public override void Hurt(bool ghost)
         {
             if (aboveWater)
-                base.Hurt();
+                base.Hurt(ghost);
         }
     }
     public class AdventureBoss3 : AdventureEnemy

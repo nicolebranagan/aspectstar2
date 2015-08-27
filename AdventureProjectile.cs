@@ -13,6 +13,7 @@ namespace aspectstar2
         protected int deathTimer;
 
         bool fiery;
+        bool ghostly;
 
         public AdventureProjectile()
         { }
@@ -36,7 +37,14 @@ namespace aspectstar2
             aP.fiery = true;
             return aP;
         }
-        
+
+        public static AdventureProjectile getGhostlyProjectile(bool friendly, Master.Directions faceDir, Vector2 location, int deathTimer)
+        {
+            AdventureProjectile aP = new AdventureProjectile(friendly, faceDir, location, deathTimer);
+            aP.ghostly = true;
+            return aP;
+        }
+
         public override void Draw(SpriteBatch spriteBatch, Color mask)
         {
             spriteBatch.Begin();
@@ -69,7 +77,7 @@ namespace aspectstar2
                         else if (friendly && obj is AdventureEnemy)
                         {
                             AdventureEnemy enemy = (AdventureEnemy)obj;
-                            enemy.Hurt();
+                            enemy.Hurt(ghostly);
                             active = false;
                         }
                         else if (obj is AdventureEntity)

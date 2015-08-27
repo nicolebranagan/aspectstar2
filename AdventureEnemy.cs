@@ -12,6 +12,7 @@ namespace aspectstar2
         protected BestiaryEntry definition;
         protected int health;
         protected int flickerCount;
+        protected bool ghost;
 
         public AdventureEnemy()
         {
@@ -26,6 +27,7 @@ namespace aspectstar2
             this.offset = new Vector2(definition.xOffset, definition.yOffset);
             this.width = definition.width;
             this.height = definition.height;
+            this.ghost = definition.ghost;
         }
 
         public override void Update()
@@ -141,19 +143,26 @@ namespace aspectstar2
 
         public override void Draw(SpriteBatch spriteBatch, Color mask)
         {
+            bool drawGhost = true;
+
             if (flickerCount > 0)
             {
                 flickerCount--;
                 if (flickerCount % 7 == 0)
                     mask = Color.Red;
+                drawGhost = false;
             }
 
-            base.Draw(spriteBatch, mask);
+            if (Master.globalRandom.Next(0, 35) == 9)
+                flickerCount = 6;
+
+            if (!ghost || drawGhost)
+                base.Draw(spriteBatch, mask);
         }
 
-        public virtual void Hurt()
+        public virtual void Hurt(bool ghostly)
         {
-            if (this.flickerCount == 0)
+            if (ghostly == ghost && this.flickerCount == 0)
             {
                 PlaySound.Boom();
                 health = health - 1;
