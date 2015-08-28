@@ -131,7 +131,7 @@ namespace aspectstar2
             }
 
             if (life == 0)
-                life = possibleLife / 2;
+                life = (possibleLife - 5);
         }
 
         public void warpAdventure(bool beat)

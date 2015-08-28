@@ -153,7 +153,7 @@ namespace aspectstar2
                 drawGhost = false;
             }
 
-            if (Master.globalRandom.Next(0, 35) == 9)
+            if (ghost && Master.globalRandom.Next(0, 35) == 9)
                 flickerCount = 6;
 
             if (!ghost || drawGhost)

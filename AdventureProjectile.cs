@@ -53,6 +53,8 @@ namespace aspectstar2
                 source.Y = 16;
             if (fiery)
                 source.Y = 32;
+            if (ghostly)
+                source.Y = 48;
             Rectangle dest = new Rectangle((int)location.X - 8, (int)location.Y - 8, 16, 16);
             spriteBatch.Draw(texture, dest, source, Color.White);
             spriteBatch.End();
@@ -129,7 +131,7 @@ namespace aspectstar2
             int z = (fiery) ? 0 : 1;
             if ((test.X - width) >= 0 && (test.Y - height) >= 0 && (test.X + width) < (25 * 32) && (test.Y + height) < (13 * 32))
             {
-                if (!this.parent.isSolid(test, z, 0, 0, faceDir))
+                if (!this.parent.isSolid(test, z, 0, 0, faceDir) || ghostly)
                     this.location = test;
                 else
                     this.active = false;

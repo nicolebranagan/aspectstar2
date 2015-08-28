@@ -33,12 +33,12 @@ namespace aspectstar2
         public bool dark = false;
         public bool lit
         {
-            get { return !(torchCount == 0); }
+            get { return (torchCount > 0); }
             set
             {
                 if (torchCount == 0)
                     PlaySound.Aspect();
-                torchCount += 400;
+                torchCount += 900;
             }
         }
         int torchCount = 0;
@@ -376,7 +376,13 @@ namespace aspectstar2
                     scroll(spriteBatch);
                     break;
                 case adventureModes.runMode:
-                    Color roomColor = (!dark || lit) ? Color.White : Color.FromNonPremultiplied(15,15,15,255);
+                    //Color roomColor = (!dark || lit) ? Color.White : Color.FromNonPremultiplied(15,15,15,255);
+                    Color roomColor = Color.White;
+                    if (dark)
+                    {
+                        if (lit) roomColor = Color.FromNonPremultiplied(200, 200, 200, 255);
+                        else roomColor = Color.FromNonPremultiplied(15, 15, 15, 255);
+                    }
                     DrawRoom(spriteBatch, roomColor);
                     List<AdventureObject> sortedList = objects.OrderBy(o => o.location.Y).ToList();
                     foreach (AdventureObject obj in sortedList)
@@ -942,6 +948,9 @@ namespace aspectstar2
                 case 3:
                     game.GetWeapon(new FireballWeapon());
                     break;
+                case 4:
+                    game.GetWeapon(new GhostlyWeapon());
+                    break;
             }
         }
 
@@ -965,6 +974,11 @@ namespace aspectstar2
                     game.globalFlags.Remove(flag);
                 game.globalFlags.Add(flag, value);
             }
+            else if (flag == "_dark")
+            {
+                dark = value;
+                adventure.rooms[roomX, roomY].dark = value;
+            }
             else
             {
                 if (flags.ContainsKey(flag))
@@ -979,6 +993,10 @@ namespace aspectstar2
             {
                 if (game.globalFlags.ContainsKey(flag))
                     return game.globalFlags[flag];
+            }
+            else if (flag == "_dark")
+            {
+                return dark;
             }
             else
             {

@@ -33,6 +33,7 @@ namespace aspectstar2
             FishWeapon = 3,
             TorchWeapon = 4,
             FireballWeapon = 5,
+            GhostlyWeapon = 6,
         }
 
         public storedWeapon packWeapon()
@@ -42,6 +43,8 @@ namespace aspectstar2
                 type = (int)WeaponType.JumpWeapon;
             else if (this is FireballWeapon)
                 type = (int)WeaponType.FireballWeapon;
+            else if (this is GhostlyWeapon)
+                type = (int)WeaponType.GhostlyWeapon;
             else if (this is ProjectileWeapon)
                 type = (int)WeaponType.ProjectileWeapon;
             else if (this is FishWeapon)
@@ -70,6 +73,8 @@ namespace aspectstar2
                     return new TorchWeapon(packedWeapon.count);
                 case WeaponType.FireballWeapon:
                     return new FireballWeapon();
+                case WeaponType.GhostlyWeapon:
+                    return new GhostlyWeapon();
                 default:
                     return new NullWeapon();
             }
@@ -227,7 +232,7 @@ namespace aspectstar2
 
         public TorchWeapon()
         {
-            count = 5;
+            count = 6;
         }
 
         public TorchWeapon(int count)
@@ -237,7 +242,7 @@ namespace aspectstar2
 
         public override void Extra(Weapon weapon)
         {
-            count = count + 5;
+            count = count + 6;
         }
 
         public override void Activate(AdventurePlayer player, AdventureScreen screen, Game game)
@@ -302,6 +307,35 @@ namespace aspectstar2
         public override string getLabel()
         {
             return "FIREBALL";
+        }
+    }
+
+    class GhostlyWeapon : ProjectileWeapon
+    {
+        public override void Activate(AdventurePlayer player, AdventureScreen screen, Game game)
+        {
+            if ((cooldown == 0) && (player.z == 0))
+            {
+                Vector2 location = new Vector2(player.location.X, player.location.Y - 16);
+                AdventureProjectile proj = AdventureProjectile.getGhostlyProjectile(true, player.faceDir, location, 20);
+                screen.addObject(proj);
+                cooldown = 30;
+                PlaySound.Pew();
+            }
+        }
+
+        public override void Draw(SpriteBatch spriteBatch, int x, int y)
+        {
+            Rectangle source = new Rectangle(128 + 32, 64, 32, 32);
+            Rectangle dest = new Rectangle(x, y, 32, 32);
+            spriteBatch.Begin();
+            spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
+            spriteBatch.End();
+        }
+
+        public override string getLabel()
+        {
+            return "ECTO-SHOT";
         }
     }
 }
