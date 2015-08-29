@@ -212,4 +212,68 @@ namespace aspectstar2
             base.Update();
         }
     }
+
+    public class AdventureBoss4 : AdventureEnemy
+    {
+        int visibleCounter = 25;
+
+        public AdventureBoss4()
+        {
+            this.texture = Master.texCollection.texBosses;
+            this.offset = new Vector2(32, 32);
+            this.width = 30;
+            this.height = 30;
+
+            BestiaryEntry bossEntry = new BestiaryEntry();
+            bossEntry.movementType = BestiaryEntry.MovementTypes.intelligent;
+            bossEntry.speed = 5;
+            bossEntry.intelligence = 7;
+            bossEntry.decisiveness = 6;
+            definition = bossEntry;
+            health = 10;
+            ghost = true;
+        }
+
+        public override void Draw(SpriteBatch spriteBatch, Color mask)
+        {
+            if (flickerCount > 0)
+            {
+                flickerCount--;
+                if (flickerCount % 7 == 0)
+                    mask = Color.Red;
+            }
+            else
+                if (visibleCounter % 6 != 1) return;
+
+            int dim_x = 64;
+            int dim_y = 64;
+            int column = ((int)faceDir * 2) + currentFrame;
+            Vector2 screen_loc = location - offset;
+
+            Rectangle sourceRectangle = new Rectangle(dim_x * column, 192, dim_x, dim_y);
+            Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y - (z * 2), dim_x, dim_y);
+
+            spriteBatch.Begin();
+            spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, mask);
+            spriteBatch.End();
+        }
+
+        public override void Touch()
+        {
+            //
+        }
+
+        public override void Update()
+        {
+            if (visibleCounter == 0)
+            {
+                if (Master.globalRandom.Next(0, 30) == 19)
+                    visibleCounter = 25;
+            }
+            else
+                visibleCounter--;
+
+            base.Update();
+        }
+    }
 }

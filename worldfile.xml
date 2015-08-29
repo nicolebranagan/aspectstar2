@@ -10158,10 +10158,10 @@
         <x>26</x>
         <y>32</y>
         <dest>5</dest>
-        <destroomX>4</destroomX>
-        <destroomY>14</destroomY>
-        <destx>12</destx>
-        <desty>11</desty>
+        <destroomX>6</destroomX>
+        <destroomY>10</destroomY>
+        <destx>15</destx>
+        <desty>12</desty>
       </MapObject>
     </objects>
   </map>
@@ -42865,13 +42865,13 @@ spawnKey(12,4);
             <int>23</int>
             <int>21</int>
             <int>21</int>
-            <int>14</int>
+            <int>27</int>
             <int>21</int>
             <int>21</int>
             <int>14</int>
             <int>21</int>
             <int>21</int>
-            <int>14</int>
+            <int>27</int>
             <int>21</int>
             <int>21</int>
             <int>23</int>
@@ -43157,7 +43157,68 @@ spawnKey(12,4);
             <int>1</int>
             <int>1</int>
           </tileMap>
-          <storedObjects />
+          <storedObjects>
+            <StoredObject>
+              <x>400</x>
+              <y>176</y>
+              <type>boss</type>
+              <enemyType>4</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+            </StoredObject>
+            <StoredObject>
+              <x>112</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+            </StoredObject>
+            <StoredObject>
+              <x>400</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+            </StoredObject>
+            <StoredObject>
+              <x>688</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+            </StoredObject>
+          </storedObjects>
           <dark>false</dark>
         </Room>
         <Room xsi:nil="true" />
