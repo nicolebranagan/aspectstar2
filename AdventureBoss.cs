@@ -230,12 +230,13 @@ namespace aspectstar2
             bossEntry.intelligence = 7;
             bossEntry.decisiveness = 6;
             definition = bossEntry;
-            health = 10;
+            health = 12;
             ghost = true;
         }
 
         public override void Draw(SpriteBatch spriteBatch, Color mask)
         {
+            mask = Color.Black;
             if (flickerCount > 0)
             {
                 flickerCount--;
