@@ -30,6 +30,9 @@ namespace aspectstar2
 
         public int Keys = 0;
 
+        string label;
+        Color playerColor = Color.White;
+
         public bool dark = false;
         public bool lit
         {
@@ -83,6 +86,7 @@ namespace aspectstar2
             this.key = adventure.key;
             this.beaten = beaten;
             LoadRoom(destroomX, destroomY);
+            label = adventure.name;
 
             this.first_pos = new Vector2(x * 32 + 16, y * 32 + 16);
             player.location = new Vector2(x * 32 + 16, y * 32 + 16);
@@ -378,8 +382,10 @@ namespace aspectstar2
                 case adventureModes.runMode:
                     //Color roomColor = (!dark || lit) ? Color.White : Color.FromNonPremultiplied(15,15,15,255);
                     Color roomColor = Color.White;
+                    bool usePlayerColor = true;
                     if (dark)
                     {
+                        usePlayerColor = false;
                         if (lit) roomColor = Color.FromNonPremultiplied(200, 200, 200, 255);
                         else roomColor = Color.FromNonPremultiplied(15, 15, 15, 255);
                     }
@@ -387,7 +393,10 @@ namespace aspectstar2
                     List<AdventureObject> sortedList = objects.OrderBy(o => o.location.Y).ToList();
                     foreach (AdventureObject obj in sortedList)
                     {
-                        obj.Draw(spriteBatch, roomColor);
+                        if (obj is AdventurePlayer)
+                            obj.Draw(spriteBatch, usePlayerColor ? playerColor : roomColor);
+                        else
+                            obj.Draw(spriteBatch, roomColor);
                     }
                     break;
             }
@@ -466,7 +475,7 @@ namespace aspectstar2
             spriteBatch.End();
 
             // Name
-            WriteText(spriteBatch, adventure.name, new Vector2(48, 14 * 32), Color.White);
+            WriteText(spriteBatch, label, new Vector2(48, 14 * 32), Color.White);
 
             // Key counts
             WriteText(spriteBatch, game.bells.ToString(), new Vector2(10 * 32 + 16, 13 * 32 + 16), Color.White);
@@ -830,6 +839,8 @@ namespace aspectstar2
                 .SetValue("getPlayerY", new Func<int>(this.GetPlayerY))
                 .SetValue("setCounter", new Action<string, int>(this.SetCounter))
                 .SetValue("getCounter", new Func<string, int>(this.GetCounter))
+                .SetValue("setPlayerColor", new Action<int, int, int, int>(this.SetPlayerColor))
+                .SetValue("setName", new Action<string>(this.SetName))
                 .Execute(code);
         }
 
@@ -964,6 +975,16 @@ namespace aspectstar2
             return (int)Math.Floor(player.location.Y / 32);
         }
 
+        void SetPlayerColor(int r, int g, int b, int a)
+        {
+            playerColor = Color.FromNonPremultiplied(r, g, b, a);
+        }
+
+        void SetName(string name)
+        {
+            label = name;
+        }
+
         Dictionary<string, bool> flags = new Dictionary<string, bool>();
 
         void SetFlag(string flag, bool value)
@@ -987,7 +1008,7 @@ namespace aspectstar2
             }
         }
 
-        bool GetFlag(string flag)
+        public bool GetFlag(string flag)
         {
             if (flag.StartsWith("!"))
             {

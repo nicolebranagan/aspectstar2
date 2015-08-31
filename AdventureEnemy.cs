@@ -162,6 +162,9 @@ namespace aspectstar2
 
         public virtual void Hurt(bool ghostly)
         {
+            if (definition.dependent != "" && !parent.GetFlag(definition.dependent))
+                return; // Flag "dependent" must be on
+
             if (ghostly == ghost && this.flickerCount == 0)
             {
                 PlaySound.Boom();

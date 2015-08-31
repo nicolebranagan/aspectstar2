@@ -21,6 +21,7 @@ namespace aspectstar2
         public int height = 6;
 
         public bool ghost = false;
+        public string dependent = "";
 
         public MovementTypes movementType = MovementTypes.stationary;
 

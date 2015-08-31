@@ -61,7 +61,7 @@ namespace aspectstar2
                 spriteBatch.Draw(texture, dest, source, mask);
                 spriteBatch.End();
             }
-            else
+            else if (data.gfxtype != EntityData.GraphicsType.Null)
                 base.Draw(spriteBatch, mask);
         }
 
@@ -92,7 +92,7 @@ namespace aspectstar2
             if (del <= Math.Max(width, height))
             {
                 jintEngine.Execute("inRange()");
-                player.Recoil(this.location);
+                if (solid) player.Recoil(this.location);
                 return solid;
             }
             else

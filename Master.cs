@@ -111,11 +111,12 @@ namespace aspectstar2
             texCollection.texBosses = Content.Load<Texture2D>("bosses");
             texCollection.texPlosion = Content.Load<Texture2D>("explosion");
 
-            texCollection.adventureTiles = new Texture2D[4];
+            texCollection.adventureTiles = new Texture2D[5];
             texCollection.adventureTiles[0] = Content.Load<Texture2D>("dungeon1");
             texCollection.adventureTiles[1] = Content.Load<Texture2D>("town");
             texCollection.adventureTiles[2] = Content.Load<Texture2D>("dungeon2");
             texCollection.adventureTiles[3] = Content.Load<Texture2D>("dungeon3");
+            texCollection.adventureTiles[4] = Content.Load<Texture2D>("dungeon4");
 
             // Load sound effects (made in sfxr)
             PlaySound.die = Content.Load<SoundEffect>("die");
