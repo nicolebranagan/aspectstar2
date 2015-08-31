@@ -12,6 +12,7 @@ namespace aspectstar2
         public Mapfile map;
         public List<Adventure> adventures;
         public List<BestiaryEntry> bestiary;
+        public List<EntityData> stockEntities;
     }
 
     public class Mapfile
@@ -128,12 +129,17 @@ namespace aspectstar2
             boss = 5,
             entity = 6,
             teleporter = 7,
+            stock = 8,
         }
 
         public AdventureObject getAdventureObject()
         {
             switch (type)
             {
+                case ObjectType.stock:
+                    AdventureEntity entityFromStock = new AdventureEntity(Master.currentFile.stockEntities[enemyType]);
+                    entityFromStock.location = new Vector2(x, y);
+                    return entityFromStock;
                 case ObjectType.teleporter:
                     AdventureTeleporter exit = new AdventureTeleporter(dest, destx, desty, destroomX, destroomY);
                     exit.location = new Vector2(x, y);
