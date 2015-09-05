@@ -104,6 +104,7 @@ namespace aspectstar2
             texCollection.controls = Content.Load<Texture2D>("menu");
             texCollection.worldTiles = Content.Load<Texture2D>("protoworld");
             texCollection.texMapPlayer = Content.Load<Texture2D>("mapplayer");
+            texCollection.specialTiles = Content.Load<Texture2D>("specialstage");
             texCollection.texAdvPlayer = Content.Load<Texture2D>("advplayer");
             texCollection.texShadows = Content.Load<Texture2D>("shadows");
             texCollection.texEnemies = Content.Load<Texture2D>("enemies");
@@ -254,6 +255,7 @@ namespace aspectstar2
 
         public Texture2D worldTiles;
         public Texture2D[] adventureTiles;
+        public Texture2D specialTiles;
 
         public Texture2D texMapPlayer;
         public Texture2D texAdvPlayer;
