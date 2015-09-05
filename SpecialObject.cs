@@ -19,6 +19,7 @@ namespace aspectstar2
         protected int width = 32;
 
         public bool active = true;
+        public int radius = 24;
 
         protected int stallCount = 0;
 
@@ -34,7 +35,7 @@ namespace aspectstar2
             Rectangle dest = new Rectangle((int)location.X - 16, (int)location.Y - 16, width, height);
 
             spriteBatch.Begin();
-            spriteBatch.Draw(Master.texCollection.specialTiles, dest, source, Color.White);
+            spriteBatch.Draw(Master.texCollection.texSpecial, dest, source, Color.White);
             spriteBatch.End();
         }
 
@@ -48,10 +49,15 @@ namespace aspectstar2
                 stallCount = 0;
         }
 
+        public virtual void Hurt()
+        {
+            active = false;
+        }
+
         public bool Move(Vector2 move)
         {
             Vector2 test = location + move;
-            if ((test.X > 0) && (test.X < Master.width) && (test.Y > 0) && (test.Y < Master.height))
+            if ((test.X > 0) && (test.X < SpecialScreen.width) && (test.Y > 0) && (test.Y < SpecialScreen.height))
             {
                 next_loc = test;
                 return true;
@@ -68,16 +74,23 @@ namespace aspectstar2
             this.parent = parent;
             graphicsRow = 0;
             height = 48;
-            location = new Vector2(Master.width / 2, Master.height - 48);
+            location = new Vector2(SpecialScreen.width / 2, SpecialScreen.height - 48);
             next_loc = location;
+        }
+
+        public override void Hurt()
+        {
+            parent.addObject(new SpecialExplosion(location));
+            PlaySound.Boom();
+            base.Hurt();
         }
     }
 
     class SpecialEnemy : SpecialObject
     {
         //  Behavior
-        int shootingRate = 30;
-        int speed = 1;
+        int shootingRate = 20;
+        int speed = 3;
         int amplitude = 10;
         int time = 5;
         Behaviors currentBehavior;
@@ -101,7 +114,7 @@ namespace aspectstar2
             graphicsRow = row;
             location = loc;
             next_loc = location;
-            currentBehavior = Behaviors.Boustrophedon;
+            currentBehavior = Behaviors.SpaceInvaders;
         }
 
         public override void Update()
@@ -190,11 +203,18 @@ namespace aspectstar2
                     countRate--;
             }
         }
+
+        public override void Hurt()
+        {
+            parent.addObject(new SpecialExplosion(location));
+            PlaySound.Boom();
+            base.Hurt();
+        }
     }
 
     class SpecialProjectile : SpecialObject
     {
-        bool friendly, fiery, ghostly;
+        public bool friendly, fiery, ghostly;
         Vector2 direction;
 
         public SpecialProjectile(SpecialScreen parent, Vector2 location, Vector2 direction, 
@@ -236,6 +256,30 @@ namespace aspectstar2
             location = location + direction;
             if (!Move(direction))
                 active = false;
+        }
+    }
+
+    class SpecialExplosion : SpecialObject
+    {
+        AdventureExplosion exp;
+
+        public SpecialExplosion(Vector2 location)
+        {
+            exp = new AdventureExplosion(location);
+        }
+
+        public override void Draw(SpriteBatch spriteBatch, Color mask)
+        {
+            exp.Draw(spriteBatch, mask);
+        }
+
+        public override void Update()
+        {
+            exp.Update();
+        }
+
+        public override void Hurt()
+        {
         }
     }
 }

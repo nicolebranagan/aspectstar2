@@ -13,6 +13,7 @@ namespace aspectstar2
         public List<Adventure> adventures;
         public List<BestiaryEntry> bestiary;
         public List<EntityData> stockEntities;
+        public List<SpecialStage> specialStages;
     }
 
     public class Mapfile
@@ -212,5 +213,11 @@ namespace aspectstar2
             Characters = 2,
             Null = 3,
         }
+    }
+
+    public class SpecialStage
+    {
+        public int height;
+        public int[] tileMap;
     }
 }
