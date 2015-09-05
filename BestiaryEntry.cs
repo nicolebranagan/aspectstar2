@@ -24,6 +24,7 @@ namespace aspectstar2
         public string dependent = "";
 
         public MovementTypes movementType = MovementTypes.stationary;
+        public bool wanderer = false;
 
         public enum MovementTypes
         {

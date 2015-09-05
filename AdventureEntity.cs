@@ -16,7 +16,7 @@ namespace aspectstar2
         EntityData data;
 
         bool floating = false;
-        bool solid = true;
+        public bool solid = true;
 
         int touchLag = 0;
 

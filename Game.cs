@@ -111,27 +111,35 @@ namespace aspectstar2
 
         public void exitAdventure(bool beat, int dest, int destroomX, int destroomY, int destx, int desty)
         {
-            beaten[this.dest] = beat;
-
-            if (dest == -1)
+            if (dest != this.dest)
             {
-                if (destx != -1 && desty != -1)
-                    currentMap.LocalTeleport(destx, desty);
-                master.UpdateScreen(currentMap);
-                currentAdventure = null;
+                beaten[this.dest] = beat;
+
+                if (dest == -1)
+                {
+                    if (destx != -1 && desty != -1)
+                        currentMap.LocalTeleport(destx, desty);
+                    master.UpdateScreen(currentMap);
+                    currentAdventure = null;
+                }
+                else
+                {
+                    AdventureScreen aS = new AdventureScreen(this, dest, destroomX, destroomY, destx, desty, beaten[dest]);
+                    this.dest = dest;
+                    aS.fromMap = false;
+                    currentAdventure = aS;
+                    master.UpdateScreen(aS);
+                    PlaySound.Enter();
+                }
+
+                if (life == 0)
+                    life = (possibleLife - 5);
             }
             else
             {
-                AdventureScreen aS = new AdventureScreen(this, dest, destroomX, destroomY, destx, desty, beaten[dest]);
-                this.dest = dest;
-                aS.fromMap = false;
-                currentAdventure = aS;
-                master.UpdateScreen(aS);
-                PlaySound.Enter();
+                // same adventure
+                currentAdventure.EnterNewRoom(destroomX, destroomY, destx, desty);
             }
-
-            if (life == 0)
-                life = (possibleLife - 5);
         }
 
         public void warpAdventure(bool beat)

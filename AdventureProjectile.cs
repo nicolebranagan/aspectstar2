@@ -85,8 +85,11 @@ namespace aspectstar2
                         else if (obj is AdventureEntity)
                         {
                             AdventureEntity entity = (AdventureEntity)obj;
-                            entity.Hurt();
-                            active = false;
+                            if (entity.solid)
+                            {
+                                entity.Hurt();
+                                active = false;
+                            }
                         }
                         else if (friendly)
                             active = false;

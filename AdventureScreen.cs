@@ -60,6 +60,7 @@ namespace aspectstar2
             scrollingY,
             deathFade,
             fadeOut,
+            fadeIn,
             textBox,
         }
 
@@ -375,6 +376,14 @@ namespace aspectstar2
                     DrawRoom(spriteBatch, mask2);
                     player.Draw(spriteBatch, mask2);
                     break;
+                case adventureModes.fadeIn:
+                    Color mask3 = Color.White;
+                    mask3.R = (byte)(255 - animCount / 2);
+                    mask3.G = (byte)(255 - animCount / 2);
+                    mask3.B = (byte)(255 - animCount / 2);
+                    DrawRoom(spriteBatch, mask3);
+                    player.Draw(spriteBatch, mask3);
+                    break;
                 case adventureModes.scrollingX:
                 case adventureModes.scrollingY:
                     scroll(spriteBatch);
@@ -633,6 +642,15 @@ namespace aspectstar2
 
         }
 
+        public void EnterNewRoom(int room_x, int room_y, int x, int y)
+        {
+            LoadRoom(room_x, room_y);
+            first_pos = new Vector2(x * 32 + 16, y * 32 + 16);
+            player.location = new Vector2(x * 32 + 16, y * 32 + 16);
+            animCount = 250;
+            currentMode = adventureModes.fadeIn;
+        }
+
         public void LoadRoom(int x, int y)
         {
             roomX = x; roomY = y;
@@ -680,6 +698,12 @@ namespace aspectstar2
                     if (animCount <= 0)
                         leaver(beaten);
                         //game.warpAdventure(beaten);
+                    break;
+                case adventureModes.fadeIn:
+                    animCount = animCount - 8;
+                    if (animCount <= 0)
+                        currentMode = adventureModes.runMode;
+                    //game.warpAdventure(beaten);
                     break;
                 case adventureModes.deathFade:
                     animCount = animCount - 3;

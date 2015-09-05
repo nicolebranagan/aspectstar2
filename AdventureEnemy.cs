@@ -70,6 +70,7 @@ namespace aspectstar2
                     if (stallCount % (definition.speed) != 0)
                     {
                         if (Master.globalRandom.Next(0, 10) > definition.decisiveness)
+                        {
                             if (Master.globalRandom.Next(0, 10) < definition.intelligence)
                             {
                                 // Code from Aspect Star 1
@@ -92,9 +93,9 @@ namespace aspectstar2
                                 }
                                 this.faceDir = targetDir;
                             }
-                            else
+                            else if (definition.wanderer)
                             {
-                                /*Master.Directions newDir = (Master.Directions)Master.globalRandom.Next(0, 3);
+                                Master.Directions newDir = (Master.Directions)Master.globalRandom.Next(0, 3);
                                 switch (faceDir)
                                 {
                                     case Master.Directions.Down:
@@ -110,8 +111,9 @@ namespace aspectstar2
                                             newDir = Master.Directions.Right;
                                         break;
                                 }
-                                faceDir = newDir;*/
+                                faceDir = newDir;
                             }
+                        }
                         else
                         {
                             Vector2 move_dist = new Vector2(0, 0);

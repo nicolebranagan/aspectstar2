@@ -99,6 +99,7 @@ namespace aspectstar2
             texCollection.blank.SetData(new Color[] { Color.White });
 
             // Load in-game content
+            texCollection.title = Content.Load<Texture2D>("title");
             texCollection.arcadeFont = Content.Load<Texture2D>("arcadefont");
             texCollection.controls = Content.Load<Texture2D>("menu");
             texCollection.worldTiles = Content.Load<Texture2D>("protoworld");
@@ -111,12 +112,13 @@ namespace aspectstar2
             texCollection.texBosses = Content.Load<Texture2D>("bosses");
             texCollection.texPlosion = Content.Load<Texture2D>("explosion");
 
-            texCollection.adventureTiles = new Texture2D[5];
+            texCollection.adventureTiles = new Texture2D[6];
             texCollection.adventureTiles[0] = Content.Load<Texture2D>("dungeon1");
             texCollection.adventureTiles[1] = Content.Load<Texture2D>("town");
             texCollection.adventureTiles[2] = Content.Load<Texture2D>("dungeon2");
             texCollection.adventureTiles[3] = Content.Load<Texture2D>("dungeon3");
             texCollection.adventureTiles[4] = Content.Load<Texture2D>("dungeon4");
+            texCollection.adventureTiles[5] = Content.Load<Texture2D>("dungeon5");
 
             // Load sound effects (made in sfxr)
             PlaySound.die = Content.Load<SoundEffect>("die");
@@ -245,6 +247,7 @@ namespace aspectstar2
     {
         // Game textures
 
+        public Texture2D title;
         public Texture2D controls;
         public Texture2D arcadeFont;
         public Texture2D blank;

@@ -69,22 +69,29 @@ namespace aspectstar2
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
-            WriteText(spriteBatch, "ASPECT STAR 2", new Vector2((Master.width / 2) - (8 * 13), (Master.height / 2) - 128), Color.White);
-            WriteText(spriteBatch, "PRE RELEASE DEMO", new Vector2((Master.width / 2) - (8 * 16), (Master.height / 2) - 96), Color.White);
+            //WriteText(spriteBatch, "ASPECT STAR 2", new Vector2((Master.width / 2) - (8 * 13), (Master.height / 2) - 128), Color.White);
+            //WriteText(spriteBatch, "PRE RELEASE DEMO", new Vector2((Master.width / 2) - (8 * 16), (Master.height / 2) - 96), Color.White);
 
             WriteText(spriteBatch, "NEW GAME", new Vector2((Master.width / 2) - (2 * 16), (Master.height / 2) - 40), Color.White);
             if (saveFailed)
                 WriteText(spriteBatch, "NO SAVED GAME", new Vector2((Master.width / 2) - (2 * 16), (Master.height / 2) - 8), Color.White);
             else
-            WriteText(spriteBatch, "CONTINUE", new Vector2((Master.width / 2) - (2 * 16), (Master.height / 2) - 8), Color.White);
+                WriteText(spriteBatch, "CONTINUE", new Vector2((Master.width / 2) - (2 * 16), (Master.height / 2) - 8), Color.White);
             WriteText(spriteBatch, "OPTIONS", new Vector2((Master.width / 2) - (2 * 16), (Master.height / 2) + 24), Color.White);
+
+            WriteText(spriteBatch, "PRE RELEASE DEMO", new Vector2((Master.width / 2) - (8 * 16), (Master.height / 2) + 96 - 16), Color.White);
+            WriteText(spriteBatch, "NICOLE 2015", new Vector2((Master.width / 2) - (8 * 10), (Master.height / 2) + 96), Color.White);
 
             spriteBatch.Begin();
             Rectangle source = new Rectangle(128, 16, 16, 16);
+            Rectangle dest = new Rectangle((Master.width / 2) - Master.texCollection.title.Width / 2, (Master.height / 2) - 192,
+                Master.texCollection.title.Width, Master.texCollection.title.Height);
 
-            Rectangle dest = new Rectangle((Master.width / 2) - (4 * 16), (Master.height / 2) - 40 + (32 * (int)selection), 16, 16);
+            spriteBatch.Draw(Master.texCollection.title, dest, Color.White);
 
-            spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.Blue);
+            dest = new Rectangle((Master.width / 2) - (4 * 16), (Master.height / 2) - 40 + (32 * (int)selection), 16, 16);
+
+            spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.Cyan);
             spriteBatch.End();
         }
 
