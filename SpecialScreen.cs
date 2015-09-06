@@ -16,6 +16,8 @@ namespace aspectstar2
         SpecialPlayer player;
         List<SpecialObject> objects = new List<SpecialObject>();
         List<SpecialObject> newobjects = new List<SpecialObject>();
+        List<StoredSpecial> potential = new List<StoredSpecial>();
+
         float yoffset = 0;
 
         int[] currentMap;
@@ -38,6 +40,10 @@ namespace aspectstar2
             yoffset = levelheight * 32;
             
             objects.Add(player);
+            foreach (StoredSpecial sS in Master.currentFile.specialStages[stage].objects)
+            {
+                potential.Add(sS.Clone());
+            }
         }
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
@@ -121,6 +127,16 @@ namespace aspectstar2
 
             if (yoffset > Master.height)
                 yoffset = yoffset - (float)0.5;
+
+            if (potential.Count > 0)
+            {
+                foreach (StoredSpecial sS in potential.Where(o => o.y > (yoffset - Master.height - 32)))
+                {
+                    objects.Add(sS.getEnemy(this));
+                    sS.used = true;
+                }
+                potential.RemoveAll(o => o.used == true);
+            }
         }
 
         public void addObject(SpecialObject obj)

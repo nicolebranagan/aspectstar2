@@ -93,6 +93,7 @@ namespace aspectstar2
         int speed;
         int amplitude;
         int time;
+        bool track;
         Behaviors currentBehavior;
 
         // Internal tracking
@@ -108,7 +109,7 @@ namespace aspectstar2
             Sinusoidal = 3,
         }
 
-        public SpecialEnemy(SpecialScreen parent, int row, int x, int y, int shootingrate, int behavior, int speed, int amplitude, int time)
+        public SpecialEnemy(SpecialScreen parent, int row, int x, int y, int shootingrate, int behavior, int speed, int amplitude, int time, bool track)
         {
             this.parent = parent;
             graphicsRow = row;
@@ -120,6 +121,7 @@ namespace aspectstar2
             this.speed = speed;
             this.amplitude = amplitude;
             this.time = time;
+            this.track = track;
         }
 
         public override void Update()
@@ -201,7 +203,10 @@ namespace aspectstar2
             {
                 if (countRate == 0)
                 {
-                    parent.addObject(new SpecialProjectile(parent, location, new Vector2(0, 2), false, true));
+                    if (track)
+                        parent.addObject(new SpecialProjectile(parent, location, new Vector2(0, 2), false, true));
+                    else
+                        parent.addObject(new SpecialProjectile(parent, location, new Vector2(0, 2), false, false));
                     countRate = 100 - shootingRate;
                 }
                 else

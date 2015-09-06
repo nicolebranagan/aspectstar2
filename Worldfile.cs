@@ -225,10 +225,27 @@ namespace aspectstar2
     public class StoredSpecial
     {
         public int row, x, y, shootingrate, behavior, speed, amplitude, time;
+        public bool track, used;
 
         public SpecialEnemy getEnemy(SpecialScreen parent)
         {
-            return new SpecialEnemy(parent, row, x, y, shootingrate, behavior, speed, amplitude, time);
+            return new SpecialEnemy(parent, row, x, 0, shootingrate, behavior, speed, amplitude, time, track);
+        }
+
+        public StoredSpecial Clone()
+        {
+            StoredSpecial sS = new StoredSpecial();
+            sS.row = row;
+            sS.x = x;
+            sS.y = y;
+            sS.shootingrate = shootingrate;
+            sS.behavior = behavior;
+            sS.speed = speed;
+            sS.amplitude = amplitude;
+            sS.time = time;
+            sS.track = track;
+            sS.used = false;
+            return sS;
         }
     }
 }

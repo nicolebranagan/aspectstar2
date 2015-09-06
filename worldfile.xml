@@ -66591,7 +66591,7 @@ function hurt() { }</code>
   </stockEntities>
   <specialStages>
     <SpecialStage>
-      <height>40</height>
+      <height>50</height>
       <tileMap>
         <int>0</int>
         <int>0</int>
@@ -66821,6 +66821,9 @@ function hurt() { }</code>
         <int>0</int>
         <int>0</int>
         <int>0</int>
+        <int>3</int>
+        <int>3</int>
+        <int>4</int>
         <int>0</int>
         <int>0</int>
         <int>0</int>
@@ -66837,12 +66840,9 @@ function hurt() { }</code>
         <int>0</int>
         <int>0</int>
         <int>0</int>
-        <int>0</int>
-        <int>0</int>
-        <int>0</int>
-        <int>0</int>
-        <int>0</int>
-        <int>0</int>
+        <int>6</int>
+        <int>6</int>
+        <int>7</int>
         <int>0</int>
         <int>0</int>
         <int>0</int>
@@ -66859,6 +66859,9 @@ function hurt() { }</code>
         <int>0</int>
         <int>0</int>
         <int>0</int>
+        <int>17</int>
+        <int>6</int>
+        <int>7</int>
         <int>0</int>
         <int>0</int>
         <int>0</int>
@@ -66875,6 +66878,9 @@ function hurt() { }</code>
         <int>0</int>
         <int>0</int>
         <int>0</int>
+        <int>4</int>
+        <int>6</int>
+        <int>7</int>
         <int>0</int>
         <int>0</int>
         <int>0</int>
@@ -66891,6 +66897,9 @@ function hurt() { }</code>
         <int>0</int>
         <int>0</int>
         <int>0</int>
+        <int>7</int>
+        <int>6</int>
+        <int>7</int>
         <int>0</int>
         <int>0</int>
         <int>0</int>
@@ -66907,6 +66916,9 @@ function hurt() { }</code>
         <int>0</int>
         <int>0</int>
         <int>0</int>
+        <int>7</int>
+        <int>6</int>
+        <int>7</int>
         <int>0</int>
         <int>0</int>
         <int>0</int>
@@ -66923,6 +66935,9 @@ function hurt() { }</code>
         <int>0</int>
         <int>0</int>
         <int>0</int>
+        <int>10</int>
+        <int>6</int>
+        <int>7</int>
         <int>0</int>
         <int>0</int>
         <int>0</int>
@@ -66939,24 +66954,9 @@ function hurt() { }</code>
         <int>0</int>
         <int>0</int>
         <int>0</int>
-        <int>0</int>
-        <int>0</int>
-        <int>0</int>
-        <int>0</int>
-        <int>0</int>
-        <int>0</int>
-        <int>0</int>
-        <int>0</int>
-        <int>0</int>
-        <int>0</int>
-        <int>0</int>
-        <int>0</int>
-        <int>0</int>
-        <int>0</int>
-        <int>0</int>
-        <int>0</int>
-        <int>0</int>
-        <int>0</int>
+        <int>9</int>
+        <int>9</int>
+        <int>10</int>
         <int>0</int>
         <int>0</int>
         <int>0</int>
@@ -67353,8 +67353,221 @@ function hurt() { }</code>
         <int>0</int>
         <int>0</int>
         <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
       </tileMap>
-      <objects />
+      <objects>
+        <StoredSpecial>
+          <row>2</row>
+          <x>75</x>
+          <y>1375</y>
+          <shootingrate>40</shootingrate>
+          <behavior>2</behavior>
+          <speed>2</speed>
+          <amplitude>0</amplitude>
+          <time>0</time>
+          <track>false</track>
+        </StoredSpecial>
+        <StoredSpecial>
+          <row>3</row>
+          <x>405</x>
+          <y>1387</y>
+          <shootingrate>50</shootingrate>
+          <behavior>2</behavior>
+          <speed>3</speed>
+          <amplitude>0</amplitude>
+          <time>0</time>
+          <track>false</track>
+        </StoredSpecial>
+      </objects>
     </SpecialStage>
   </specialStages>
 </Worldfile>
