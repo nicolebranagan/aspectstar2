@@ -19,7 +19,7 @@ namespace aspectstar2
         protected int width = 32;
 
         public bool active = true;
-        public int radius = 24;
+        public int radius = 12;
 
         protected int stallCount = 0;
 

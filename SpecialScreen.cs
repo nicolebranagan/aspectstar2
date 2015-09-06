@@ -108,7 +108,7 @@ namespace aspectstar2
                 foreach (SpecialObject sO in objects)
                 {
                     if (sO != sP && (!sP.friendly || !(sO is SpecialPlayer)) && (sP.friendly || !(sO is SpecialEnemy)) &&
-                        (Math.Pow(sO.location.X - sP.location.X, 2) + Math.Pow(sO.location.Y - sP.location.Y, 2) < sO.radius))
+                        (Math.Pow(sO.location.X - sP.location.X, 2) + Math.Pow(sO.location.Y - sP.location.Y, 2) < Math.Pow(sO.radius,2)))
                     {
                         sP.active = false;
                         sO.Hurt();
@@ -144,7 +144,7 @@ namespace aspectstar2
 
             if (potential.Count > 0)
             {
-                foreach (StoredSpecial sS in potential.Where(o => o.y > (yoffset - Master.height - 32)))
+                foreach (StoredSpecial sS in potential.Where(o => o.y > (yoffset - Master.height)))
                 {
                     objects.Add(sS.getEnemy(this));
                     sS.used = true;
