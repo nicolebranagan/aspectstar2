@@ -219,5 +219,16 @@ namespace aspectstar2
     {
         public int height;
         public int[] tileMap;
+        public List<StoredSpecial> objects;
+    }
+
+    public class StoredSpecial
+    {
+        public int row, x, y, shootingrate, behavior, speed, amplitude, time;
+
+        public SpecialEnemy getEnemy(SpecialScreen parent)
+        {
+            return new SpecialEnemy(parent, row, x, y, shootingrate, behavior, speed, amplitude, time);
+        }
     }
 }

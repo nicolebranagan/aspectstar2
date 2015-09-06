@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace aspectstar2
 {
-    class SpecialScreen : Screen
+    public class SpecialScreen : Screen
     {
         public const int width = Master.width - (32 * 6);
         public const int height = Master.height;
@@ -36,9 +36,7 @@ namespace aspectstar2
 
             player = new SpecialPlayer(this);
             yoffset = levelheight * 32;
-
-            objects.Add(new SpecialEnemy(this, Master.globalRandom.Next(1,4), new Vector2(100,32)));
-            objects.Add(new SpecialEnemy(this, Master.globalRandom.Next(1, 4), new Vector2(500, 32)));
+            
             objects.Add(player);
         }
 

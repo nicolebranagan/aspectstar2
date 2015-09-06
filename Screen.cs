@@ -80,7 +80,7 @@ namespace aspectstar2
             WriteText(spriteBatch, "TEST SPECIAL SCREEN", new Vector2((Master.width / 2) - (2 * 16), (Master.height / 2) + 24), Color.White);
 
             WriteText(spriteBatch, "PRE RELEASE DEMO", new Vector2((Master.width / 2) - (8 * 16), (Master.height / 2) + 96 - 16), Color.White);
-            WriteText(spriteBatch, "NICOLE 2015", new Vector2((Master.width / 2) - (8 * 10), (Master.height / 2) + 96), Color.White);
+            WriteText(spriteBatch, "NICOLE 2015", new Vector2((Master.width / 2) - (8 * 10), (Master.height / 2) + 96 ), Color.White);
 
             spriteBatch.Begin();
             Rectangle source = new Rectangle(128, 16, 16, 16);

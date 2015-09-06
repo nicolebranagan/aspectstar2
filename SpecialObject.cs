@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace aspectstar2
 {
-    abstract class SpecialObject
+    public abstract class SpecialObject
     {
         protected SpecialScreen parent;
 
@@ -86,13 +86,13 @@ namespace aspectstar2
         }
     }
 
-    class SpecialEnemy : SpecialObject
+    public class SpecialEnemy : SpecialObject
     {
         //  Behavior
-        int shootingRate = 20;
-        int speed = 3;
-        int amplitude = 10;
-        int time = 5;
+        int shootingRate;
+        int speed;
+        int amplitude;
+        int time;
         Behaviors currentBehavior;
 
         // Internal tracking
@@ -108,13 +108,18 @@ namespace aspectstar2
             Sinusoidal = 3,
         }
 
-        public SpecialEnemy(SpecialScreen parent, int row, Vector2 loc)
+        public SpecialEnemy(SpecialScreen parent, int row, int x, int y, int shootingrate, int behavior, int speed, int amplitude, int time)
         {
             this.parent = parent;
             graphicsRow = row;
-            location = loc;
+            location = new Vector2(x, y);
             next_loc = location;
-            currentBehavior = Behaviors.SpaceInvaders;
+
+            shootingRate = shootingrate;
+            currentBehavior = (Behaviors)behavior;
+            this.speed = speed;
+            this.amplitude = amplitude;
+            this.time = time;
         }
 
         public override void Update()
