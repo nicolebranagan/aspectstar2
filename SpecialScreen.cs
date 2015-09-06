@@ -76,6 +76,20 @@ namespace aspectstar2
 
             foreach (SpecialObject obj in sortedList)
                 obj.Draw(spriteBatch, Color.White);
+
+            DrawStatusBar(spriteBatch);
+        }
+
+        void DrawStatusBar(SpriteBatch spriteBatch)
+        {
+            spriteBatch.Begin();
+            spriteBatch.Draw(Master.texCollection.blank, new Rectangle(width, 0, Master.width - width, height), Color.Black);
+            for (int i = 0; i < (Master.height / 16); i++)
+            {
+                spriteBatch.Draw(Master.texCollection.controls, new Rectangle(width, i * 16, 16, 16),
+                    new Rectangle(0, 16, 16, 16), Color.White);
+            }
+            spriteBatch.End();
         }
 
         public override void Update(GameTime gameTime)
@@ -108,11 +122,11 @@ namespace aspectstar2
 
             if (Master.controls.Up)
                 player.Move(new Vector2(0, -movedist));
-            else if (Master.controls.Down)
+            if (Master.controls.Down)
                 player.Move(new Vector2(0, movedist));
-            else if (Master.controls.Left)
+            if (Master.controls.Left)
                 player.Move(new Vector2(-movedist, 0));
-            else if (Master.controls.Right)
+            if (Master.controls.Right)
                 player.Move(new Vector2(movedist, 0));
 
             if (Master.controls.A && lag == 0)

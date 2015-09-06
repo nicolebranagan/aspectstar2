@@ -56,8 +56,8 @@ namespace aspectstar2
 
         public bool Move(Vector2 move)
         {
-            Vector2 test = location + move;
-            if ((test.X > 0) && (test.X < SpecialScreen.width) && (test.Y > 0) && (test.Y < SpecialScreen.height))
+            Vector2 test = next_loc + move;
+            if ((next_loc - location != move) && (test.X > 0) && (test.X < SpecialScreen.width) && (test.Y > 0) && (test.Y < SpecialScreen.height))
             {
                 next_loc = test;
                 return true;
