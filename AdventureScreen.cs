@@ -845,6 +845,21 @@ namespace aspectstar2
             PlaySound.Leave();
         }
 
+        public void enterSpecialStage(int screen, int key)
+        {
+            // TODO: Get a better sound effect
+            PlaySound.Jump();
+            leaver = x => game.enterSpecialStageFromAdventure(screen, key);
+            currentMode = adventureModes.fadeOut;
+            animCount = 250;
+        }
+
+        public void FadeIn()
+        {
+            animCount = 250;
+            currentMode = adventureModes.fadeIn;
+        }
+
         public bool interenemyCollide(Vector2 location, int radius, AdventureObject self)
         {
             foreach (AdventureObject obj in objects)

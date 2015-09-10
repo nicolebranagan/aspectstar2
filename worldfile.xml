@@ -11120,6 +11120,8 @@
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -11467,6 +11469,8 @@
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -11482,6 +11486,8 @@
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -11497,6 +11503,8 @@
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -11883,6 +11891,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>144</x>
@@ -11898,6 +11908,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>272</x>
@@ -11913,6 +11925,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>720</x>
@@ -11928,6 +11942,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -12299,6 +12315,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -12977,6 +12995,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>112</x>
@@ -12992,6 +13012,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>368</x>
@@ -13007,6 +13029,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>144</x>
@@ -13022,6 +13046,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>272</x>
@@ -13037,6 +13063,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -13384,6 +13412,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -13399,6 +13429,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>240</x>
@@ -13414,6 +13446,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>240</x>
@@ -13429,6 +13463,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>496</x>
@@ -13444,6 +13480,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -13791,6 +13829,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>432</x>
@@ -13806,6 +13846,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>304</x>
@@ -13821,6 +13863,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>368</x>
@@ -13836,6 +13880,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -14194,6 +14240,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>752</x>
@@ -14209,6 +14257,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>752</x>
@@ -14224,6 +14274,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -14573,6 +14625,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>688</x>
@@ -14588,6 +14642,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>304</x>
@@ -14603,6 +14659,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>496</x>
@@ -14618,6 +14676,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -14965,6 +15025,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>656</x>
@@ -14980,6 +15042,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>496</x>
@@ -14995,6 +15059,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>48</x>
@@ -15010,6 +15076,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -15688,6 +15756,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>592</x>
@@ -15703,6 +15773,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -15718,6 +15790,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>208</x>
@@ -15733,6 +15807,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -16080,6 +16156,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>336</x>
@@ -16095,6 +16173,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>176</x>
@@ -16110,6 +16190,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>752</x>
@@ -16125,6 +16207,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>240</x>
@@ -16140,6 +16224,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -16504,6 +16590,8 @@ setFlag('arrowroom', true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>432</x>
@@ -16519,6 +16607,8 @@ setFlag('arrowroom', true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>
@@ -16875,6 +16965,8 @@ function update() {
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>752</x>
@@ -16890,6 +16982,8 @@ function update() {
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>560</x>
@@ -16905,6 +16999,8 @@ function update() {
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>688</x>
@@ -16920,6 +17016,8 @@ function update() {
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>432</x>
@@ -16935,6 +17033,8 @@ function update() {
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -17282,6 +17382,8 @@ function update() {
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>464</x>
@@ -17297,6 +17399,8 @@ function update() {
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -17644,6 +17748,8 @@ function update() {
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>432</x>
@@ -17659,6 +17765,8 @@ function update() {
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>528</x>
@@ -17674,6 +17782,8 @@ function update() {
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>688</x>
@@ -17689,6 +17799,8 @@ function update() {
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>304</x>
@@ -17704,6 +17816,8 @@ function update() {
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -18051,6 +18165,8 @@ function update() {
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>208</x>
@@ -18066,6 +18182,8 @@ function update() {
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>336</x>
@@ -18081,6 +18199,8 @@ function update() {
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>528</x>
@@ -18096,6 +18216,8 @@ function update() {
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -18458,6 +18580,8 @@ function update() {
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -20737,6 +20861,8 @@ function update() {
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -20760,6 +20886,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>176</x>
@@ -20783,6 +20911,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -21138,6 +21268,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -21518,6 +21650,8 @@ function no() { TextBox("ENJOY THE TOWN"); }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>240</x>
@@ -21541,6 +21675,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -21896,6 +22032,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -22824,6 +22962,8 @@ function hurt() { }</code>
               <desty>5</desty>
               <destroomX>7</destroomX>
               <destroomY>6</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -23215,6 +23355,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -23573,6 +23715,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>112</x>
@@ -23601,6 +23745,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>368</x>
@@ -23616,6 +23762,8 @@ function hurt() { }</code>
               <desty>26</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -23631,6 +23779,8 @@ function hurt() { }</code>
               <desty>26</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>432</x>
@@ -23646,6 +23796,8 @@ function hurt() { }</code>
               <desty>26</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>176</x>
@@ -23661,6 +23813,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>528</x>
@@ -23676,6 +23830,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -24063,6 +24219,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>176</x>
@@ -24078,6 +24236,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>560</x>
@@ -24093,6 +24253,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>752</x>
@@ -24108,6 +24270,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>368</x>
@@ -24123,6 +24287,8 @@ function hurt() { }</code>
               <desty>20</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -24138,6 +24304,8 @@ function hurt() { }</code>
               <desty>20</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>432</x>
@@ -24153,6 +24321,8 @@ function hurt() { }</code>
               <desty>20</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -24523,6 +24693,8 @@ setFlag("cave1", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>240</x>
@@ -24538,6 +24710,8 @@ setFlag("cave1", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>560</x>
@@ -24553,6 +24727,8 @@ setFlag("cave1", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -24568,6 +24744,8 @@ setFlag("cave1", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>176</x>
@@ -24583,6 +24761,8 @@ setFlag("cave1", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>240</x>
@@ -24598,6 +24778,8 @@ setFlag("cave1", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>560</x>
@@ -24613,6 +24795,8 @@ setFlag("cave1", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -24628,6 +24812,8 @@ setFlag("cave1", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -24992,6 +25178,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>592</x>
@@ -25015,6 +25203,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>432</x>
@@ -25046,6 +25236,8 @@ TextBox("A DANGEROUS ANSWER");
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -25400,6 +25592,8 @@ TextBox("A DANGEROUS ANSWER");
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -25415,6 +25609,8 @@ TextBox("A DANGEROUS ANSWER");
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>48</x>
@@ -25430,6 +25626,8 @@ TextBox("A DANGEROUS ANSWER");
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>688</x>
@@ -25445,6 +25643,8 @@ TextBox("A DANGEROUS ANSWER");
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>720</x>
@@ -25460,6 +25660,8 @@ TextBox("A DANGEROUS ANSWER");
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -25475,6 +25677,8 @@ TextBox("A DANGEROUS ANSWER");
               <desty>10</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>368</x>
@@ -25490,6 +25694,8 @@ TextBox("A DANGEROUS ANSWER");
               <desty>10</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>432</x>
@@ -25505,6 +25711,8 @@ TextBox("A DANGEROUS ANSWER");
               <desty>10</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -26361,6 +26569,8 @@ setFlag("cave1", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>304</x>
@@ -26376,6 +26586,8 @@ setFlag("cave1", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>560</x>
@@ -26391,6 +26603,8 @@ setFlag("cave1", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>272</x>
@@ -26406,6 +26620,8 @@ setFlag("cave1", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>688</x>
@@ -26421,6 +26637,8 @@ setFlag("cave1", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>592</x>
@@ -26436,6 +26654,8 @@ setFlag("cave1", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>592</x>
@@ -26451,6 +26671,8 @@ setFlag("cave1", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
@@ -26798,6 +27020,8 @@ setFlag("cave1", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>592</x>
@@ -26813,6 +27037,8 @@ setFlag("cave1", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>592</x>
@@ -26828,6 +27054,8 @@ setFlag("cave1", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>656</x>
@@ -26843,6 +27071,8 @@ setFlag("cave1", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>208</x>
@@ -26858,6 +27088,8 @@ setFlag("cave1", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
@@ -27206,6 +27438,8 @@ setFlag("cave1", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -27221,6 +27455,8 @@ setFlag("cave1", true);
               <desty>26</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -27590,6 +27826,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -27937,6 +28175,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>304</x>
@@ -27952,6 +28192,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>496</x>
@@ -27967,6 +28209,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>496</x>
@@ -27982,6 +28226,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -27997,6 +28243,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>176</x>
@@ -28012,6 +28260,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -28027,6 +28277,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -28374,6 +28626,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -28389,6 +28643,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>560</x>
@@ -28404,6 +28660,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -28419,6 +28677,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>240</x>
@@ -28434,6 +28694,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>176</x>
@@ -28449,6 +28711,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -28464,6 +28728,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
@@ -28812,6 +29078,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>112</x>
@@ -28827,6 +29095,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -28842,6 +29112,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -29222,6 +29494,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -29237,6 +29511,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>176</x>
@@ -29252,6 +29528,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>80</x>
@@ -29267,6 +29545,8 @@ clearObjects();
               <desty>9</desty>
               <destroomX>11</destroomX>
               <destroomY>8</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -29614,6 +29894,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>80</x>
@@ -29629,6 +29911,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>144</x>
@@ -29644,6 +29928,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>272</x>
@@ -29659,6 +29945,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>80</x>
@@ -29674,6 +29962,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>336</x>
@@ -29689,6 +29979,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -30044,6 +30336,8 @@ spawnKey(6,5);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>240</x>
@@ -30059,6 +30353,8 @@ spawnKey(6,5);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>528</x>
@@ -30074,6 +30370,8 @@ spawnKey(6,5);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>528</x>
@@ -30089,6 +30387,8 @@ spawnKey(6,5);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>112</x>
@@ -30104,6 +30404,8 @@ spawnKey(6,5);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>656</x>
@@ -30119,6 +30421,8 @@ spawnKey(6,5);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -30134,6 +30438,8 @@ spawnKey(6,5);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>368</x>
@@ -30149,6 +30455,8 @@ spawnKey(6,5);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -30496,6 +30804,8 @@ spawnKey(6,5);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>176</x>
@@ -30511,6 +30821,8 @@ spawnKey(6,5);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -30526,6 +30838,8 @@ spawnKey(6,5);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>592</x>
@@ -30541,6 +30855,8 @@ spawnKey(6,5);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>208</x>
@@ -30556,6 +30872,8 @@ spawnKey(6,5);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
@@ -30916,6 +31234,8 @@ spawnKey(6,5);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>272</x>
@@ -30931,6 +31251,8 @@ spawnKey(6,5);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>208</x>
@@ -30946,6 +31268,8 @@ spawnKey(6,5);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>496</x>
@@ -30961,6 +31285,8 @@ spawnKey(6,5);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>656</x>
@@ -30976,6 +31302,8 @@ spawnKey(6,5);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>80</x>
@@ -31002,6 +31330,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -31349,6 +31679,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -31364,6 +31696,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>176</x>
@@ -31379,6 +31713,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>592</x>
@@ -31394,6 +31730,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
@@ -31741,6 +32079,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>496</x>
@@ -31756,6 +32096,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>688</x>
@@ -31771,6 +32113,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>304</x>
@@ -31786,6 +32130,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -31801,6 +32147,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
@@ -32838,6 +33186,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -33185,6 +33535,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>336</x>
@@ -33200,6 +33552,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -33215,6 +33569,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -33230,6 +33586,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>272</x>
@@ -33245,6 +33603,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>272</x>
@@ -33260,6 +33620,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>336</x>
@@ -33275,6 +33637,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>336</x>
@@ -33290,6 +33654,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -33637,6 +34003,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>144</x>
@@ -33652,6 +34020,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>272</x>
@@ -33667,6 +34037,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>496</x>
@@ -33682,6 +34054,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -34043,6 +34417,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>496</x>
@@ -34058,6 +34434,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>496</x>
@@ -34073,6 +34451,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>112</x>
@@ -34088,6 +34468,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -34435,6 +34817,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>368</x>
@@ -34450,6 +34834,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>112</x>
@@ -34465,6 +34851,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>688</x>
@@ -34480,6 +34868,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>176</x>
@@ -34495,6 +34885,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>208</x>
@@ -34510,6 +34902,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>752</x>
@@ -34525,6 +34919,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>176</x>
@@ -34540,6 +34936,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>496</x>
@@ -34555,6 +34953,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>656</x>
@@ -34570,6 +34970,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -35256,6 +35658,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -35604,6 +36008,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>592</x>
@@ -35619,6 +36025,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>432</x>
@@ -35634,6 +36042,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>720</x>
@@ -35649,6 +36059,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -35664,6 +36076,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>176</x>
@@ -35679,6 +36093,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -35694,6 +36110,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>464</x>
@@ -35709,6 +36127,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>336</x>
@@ -35724,6 +36144,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>176</x>
@@ -35739,6 +36161,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -36087,6 +36511,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>560</x>
@@ -36102,6 +36528,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -36117,6 +36545,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>176</x>
@@ -36132,6 +36562,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -36480,6 +36912,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>304</x>
@@ -36495,6 +36929,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -36510,6 +36946,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>656</x>
@@ -36525,6 +36963,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>112</x>
@@ -36540,6 +36980,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -36887,6 +37329,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>272</x>
@@ -36902,6 +37346,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>688</x>
@@ -36917,6 +37363,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>720</x>
@@ -36932,6 +37380,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -37324,6 +37774,8 @@ setFlag("room2b", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>592</x>
@@ -37339,6 +37791,8 @@ setFlag("room2b", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -37354,6 +37808,8 @@ setFlag("room2b", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>144</x>
@@ -37369,6 +37825,8 @@ setFlag("room2b", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -38063,6 +38521,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>272</x>
@@ -38078,6 +38538,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>528</x>
@@ -38093,6 +38555,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>688</x>
@@ -38108,6 +38572,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -38455,6 +38921,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>336</x>
@@ -38470,6 +38938,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -38817,6 +39287,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -39495,6 +39967,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>560</x>
@@ -39510,6 +39984,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>144</x>
@@ -39525,6 +40001,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -39540,6 +40018,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -39900,6 +40380,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>240</x>
@@ -39915,6 +40397,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>720</x>
@@ -39930,6 +40414,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -39945,6 +40431,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -39960,6 +40448,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -40308,6 +40798,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>688</x>
@@ -40323,6 +40815,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -40338,6 +40832,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -40716,6 +41212,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -41073,6 +41571,8 @@ setFlag("torchwood", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>560</x>
@@ -41088,6 +41588,8 @@ setFlag("torchwood", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>240</x>
@@ -41103,6 +41605,8 @@ setFlag("torchwood", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -41450,6 +41954,8 @@ setFlag("torchwood", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>176</x>
@@ -41465,6 +41971,8 @@ setFlag("torchwood", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -41821,6 +42329,8 @@ setFlag("2locks", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>208</x>
@@ -41836,6 +42346,8 @@ setFlag("2locks", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -42183,6 +42695,8 @@ setFlag("2locks", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>720</x>
@@ -42198,6 +42712,8 @@ setFlag("2locks", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>336</x>
@@ -42213,6 +42729,8 @@ setFlag("2locks", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>112</x>
@@ -42228,6 +42746,8 @@ setFlag("2locks", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -42587,6 +43107,8 @@ setFlag("2locks", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -42935,6 +43457,8 @@ setFlag("2locks", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>752</x>
@@ -42950,6 +43474,8 @@ setFlag("2locks", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -42965,6 +43491,8 @@ setFlag("2locks", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -42980,6 +43508,8 @@ setFlag("2locks", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -43909,6 +44439,8 @@ spawnKey(12,7);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -44269,6 +44801,8 @@ spawnKey(12,7);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>496</x>
@@ -44284,6 +44818,8 @@ spawnKey(12,7);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>272</x>
@@ -44299,6 +44835,8 @@ spawnKey(12,7);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>560</x>
@@ -44314,6 +44852,8 @@ spawnKey(12,7);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -44671,6 +45211,8 @@ spawnKey(12,4);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>112</x>
@@ -44686,6 +45228,8 @@ spawnKey(12,4);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -44701,6 +45245,8 @@ spawnKey(12,4);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>688</x>
@@ -44716,6 +45262,8 @@ spawnKey(12,4);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -45106,6 +45654,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -45453,6 +46003,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -45468,6 +46020,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -45840,6 +46394,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -46188,6 +46744,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>368</x>
@@ -46203,6 +46761,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>432</x>
@@ -46218,6 +46778,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>112</x>
@@ -46244,6 +46806,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -46591,6 +47155,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>720</x>
@@ -46606,6 +47172,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>240</x>
@@ -46621,6 +47189,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>496</x>
@@ -46636,6 +47206,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
@@ -46983,6 +47555,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>432</x>
@@ -46998,6 +47572,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>752</x>
@@ -47013,6 +47589,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>240</x>
@@ -47028,6 +47606,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
@@ -47375,6 +47955,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>144</x>
@@ -47390,6 +47972,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>240</x>
@@ -47405,6 +47989,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>336</x>
@@ -47420,6 +48006,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>432</x>
@@ -47435,6 +48023,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>528</x>
@@ -47450,6 +48040,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -47465,6 +48057,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>720</x>
@@ -47480,6 +48074,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
@@ -47836,6 +48432,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>240</x>
@@ -47851,6 +48449,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>752</x>
@@ -47866,6 +48466,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>688</x>
@@ -47881,6 +48483,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
@@ -48230,6 +48834,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>496</x>
@@ -48245,6 +48851,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>304</x>
@@ -48260,6 +48868,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>496</x>
@@ -48275,6 +48885,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -48650,6 +49262,8 @@ setFlag("2ghosthall",true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
@@ -48997,6 +49611,8 @@ setFlag("2ghosthall",true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>592</x>
@@ -49012,6 +49628,8 @@ setFlag("2ghosthall",true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>720</x>
@@ -49027,6 +49645,8 @@ setFlag("2ghosthall",true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>272</x>
@@ -49042,6 +49662,8 @@ setFlag("2ghosthall",true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>240</x>
@@ -49057,6 +49679,8 @@ setFlag("2ghosthall",true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>112</x>
@@ -49072,6 +49696,8 @@ setFlag("2ghosthall",true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>208</x>
@@ -49087,6 +49713,8 @@ setFlag("2ghosthall",true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
@@ -49434,6 +50062,8 @@ setFlag("2ghosthall",true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>304</x>
@@ -49449,6 +50079,8 @@ setFlag("2ghosthall",true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>720</x>
@@ -49464,6 +50096,8 @@ setFlag("2ghosthall",true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>592</x>
@@ -49479,6 +50113,8 @@ setFlag("2ghosthall",true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -49494,6 +50130,8 @@ setFlag("2ghosthall",true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>688</x>
@@ -49509,6 +50147,8 @@ setFlag("2ghosthall",true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>80</x>
@@ -49524,6 +50164,8 @@ setFlag("2ghosthall",true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -49878,6 +50520,8 @@ spawnKey(12,7);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
@@ -50248,6 +50892,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -50596,6 +51242,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -50611,6 +51259,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -50626,6 +51276,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -50641,6 +51293,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -50656,6 +51310,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>240</x>
@@ -50682,6 +51338,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -51029,6 +51687,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>656</x>
@@ -51044,6 +51704,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>528</x>
@@ -51070,6 +51732,8 @@ playSoundEffect(1);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -52028,6 +52692,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>112</x>
@@ -52043,6 +52709,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>688</x>
@@ -52058,6 +52726,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>496</x>
@@ -52073,6 +52743,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>592</x>
@@ -52088,6 +52760,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -52103,6 +52777,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>208</x>
@@ -52118,6 +52794,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -52465,6 +53143,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>208</x>
@@ -52480,6 +53160,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>720</x>
@@ -52495,6 +53177,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>528</x>
@@ -52510,6 +53194,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -52525,6 +53211,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>272</x>
@@ -52540,6 +53228,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>368</x>
@@ -52555,6 +53245,8 @@ function update() { }</code>
               <desty>41</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -52570,6 +53262,8 @@ function update() { }</code>
               <desty>41</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>432</x>
@@ -52585,6 +53279,8 @@ function update() { }</code>
               <desty>41</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -52600,6 +53296,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -52960,6 +53658,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>432</x>
@@ -52975,6 +53675,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>304</x>
@@ -52990,6 +53692,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>208</x>
@@ -53005,6 +53709,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -53020,6 +53726,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>208</x>
@@ -53035,6 +53743,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -53382,6 +54092,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>464</x>
@@ -53397,6 +54109,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -53412,6 +54126,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>720</x>
@@ -53427,6 +54143,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>368</x>
@@ -53442,6 +54160,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -53457,6 +54177,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>240</x>
@@ -53472,6 +54194,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>688</x>
@@ -53487,6 +54211,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>592</x>
@@ -53502,6 +54228,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -53863,6 +54591,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>80</x>
@@ -53878,6 +54608,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>528</x>
@@ -53893,6 +54625,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>336</x>
@@ -53908,6 +54642,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>688</x>
@@ -53923,6 +54659,8 @@ function update() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>368</x>
@@ -53938,6 +54676,8 @@ function update() { }</code>
               <desty>46</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -53953,6 +54693,8 @@ function update() { }</code>
               <desty>46</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>432</x>
@@ -53968,6 +54710,8 @@ function update() { }</code>
               <desty>46</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -54899,6 +55643,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -55246,6 +55992,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>432</x>
@@ -55261,6 +56009,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>336</x>
@@ -55276,6 +56026,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>464</x>
@@ -55291,6 +56043,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -55306,6 +56060,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>784</x>
@@ -55321,6 +56077,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -55336,6 +56094,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>144</x>
@@ -55351,6 +56111,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>688</x>
@@ -55366,6 +56128,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -55713,6 +56477,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>304</x>
@@ -55728,6 +56494,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>592</x>
@@ -55743,6 +56511,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>432</x>
@@ -55758,6 +56528,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>752</x>
@@ -55773,6 +56545,8 @@ function hurt() { }</code>
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -56128,6 +56902,8 @@ playSoundEffect(0);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>240</x>
@@ -56143,6 +56919,8 @@ playSoundEffect(0);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>560</x>
@@ -56158,6 +56936,8 @@ playSoundEffect(0);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -56173,6 +56953,8 @@ playSoundEffect(0);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -56188,6 +56970,8 @@ playSoundEffect(0);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -56203,6 +56987,8 @@ playSoundEffect(0);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>176</x>
@@ -56218,6 +57004,8 @@ playSoundEffect(0);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>304</x>
@@ -56233,6 +57021,8 @@ playSoundEffect(0);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>496</x>
@@ -56248,6 +57038,8 @@ playSoundEffect(0);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -56634,6 +57426,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>656</x>
@@ -56649,6 +57443,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>176</x>
@@ -56664,6 +57460,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>240</x>
@@ -56679,6 +57477,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>560</x>
@@ -56694,6 +57494,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -56709,6 +57511,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>336</x>
@@ -56724,6 +57528,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>464</x>
@@ -56739,6 +57545,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -56754,6 +57562,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>208</x>
@@ -56769,6 +57579,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>592</x>
@@ -56784,6 +57596,8 @@ clearObjects();
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -57155,6 +57969,8 @@ overwriteTile(13,3,0);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -57515,6 +58331,8 @@ overwriteTile(13,3,0);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>496</x>
@@ -57530,6 +58348,8 @@ overwriteTile(13,3,0);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>304</x>
@@ -57545,6 +58365,8 @@ overwriteTile(13,3,0);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -57560,6 +58382,8 @@ overwriteTile(13,3,0);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>496</x>
@@ -57575,6 +58399,8 @@ overwriteTile(13,3,0);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -57590,6 +58416,8 @@ overwriteTile(13,3,0);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>560</x>
@@ -57605,6 +58433,8 @@ overwriteTile(13,3,0);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>336</x>
@@ -57620,6 +58450,8 @@ overwriteTile(13,3,0);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -57635,6 +58467,8 @@ overwriteTile(13,3,0);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>240</x>
@@ -57650,6 +58484,8 @@ overwriteTile(13,3,0);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -58009,6 +58845,8 @@ overwriteTile(13,3,0);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>336</x>
@@ -58024,6 +58862,8 @@ overwriteTile(13,3,0);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>464</x>
@@ -58039,6 +58879,8 @@ overwriteTile(13,3,0);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -58386,6 +59228,8 @@ overwriteTile(13,3,0);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>272</x>
@@ -58401,6 +59245,8 @@ overwriteTile(13,3,0);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>528</x>
@@ -58416,6 +59262,8 @@ overwriteTile(13,3,0);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>560</x>
@@ -58431,6 +59279,8 @@ overwriteTile(13,3,0);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>592</x>
@@ -58446,6 +59296,8 @@ overwriteTile(13,3,0);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>272</x>
@@ -58461,6 +59313,8 @@ overwriteTile(13,3,0);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -58815,6 +59669,8 @@ setFlag("roomupup", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -58830,6 +59686,8 @@ setFlag("roomupup", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>432</x>
@@ -58845,6 +59703,8 @@ setFlag("roomupup", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>48</x>
@@ -58860,6 +59720,8 @@ setFlag("roomupup", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>112</x>
@@ -58875,6 +59737,8 @@ setFlag("roomupup", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>688</x>
@@ -58890,6 +59754,8 @@ setFlag("roomupup", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>752</x>
@@ -58905,6 +59771,8 @@ setFlag("roomupup", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>240</x>
@@ -58920,6 +59788,8 @@ setFlag("roomupup", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -58935,6 +59805,8 @@ setFlag("roomupup", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>592</x>
@@ -58950,6 +59822,8 @@ setFlag("roomupup", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -59304,6 +60178,8 @@ spawnKey(12,4);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>528</x>
@@ -59319,6 +60195,8 @@ spawnKey(12,4);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -59334,6 +60212,8 @@ spawnKey(12,4);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -59692,6 +60572,8 @@ spawnKey(12,4);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>528</x>
@@ -59707,6 +60589,8 @@ spawnKey(12,4);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>144</x>
@@ -59722,6 +60606,8 @@ spawnKey(12,4);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>688</x>
@@ -59737,6 +60623,8 @@ spawnKey(12,4);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -59752,6 +60640,8 @@ spawnKey(12,4);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>336</x>
@@ -59767,6 +60657,8 @@ spawnKey(12,4);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>496</x>
@@ -59782,6 +60674,8 @@ spawnKey(12,4);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>176</x>
@@ -59797,6 +60691,8 @@ spawnKey(12,4);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -59812,6 +60708,8 @@ spawnKey(12,4);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -60167,6 +61065,8 @@ spawnKey(12,4);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -60182,6 +61082,8 @@ spawnKey(12,4);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>560</x>
@@ -60197,6 +61099,8 @@ spawnKey(12,4);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>240</x>
@@ -60212,6 +61116,8 @@ spawnKey(12,4);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -60227,6 +61133,8 @@ spawnKey(12,4);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -60575,6 +61483,8 @@ spawnKey(12,4);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>144</x>
@@ -60590,6 +61500,8 @@ spawnKey(12,4);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>368</x>
@@ -60605,6 +61517,8 @@ spawnKey(12,4);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>432</x>
@@ -60620,6 +61534,8 @@ spawnKey(12,4);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -60635,6 +61551,8 @@ spawnKey(12,4);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>336</x>
@@ -60650,6 +61568,8 @@ spawnKey(12,4);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>464</x>
@@ -60665,6 +61585,8 @@ spawnKey(12,4);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -61031,6 +61953,8 @@ setFlag("noseRoom", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>336</x>
@@ -61046,6 +61970,8 @@ setFlag("noseRoom", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>464</x>
@@ -61061,6 +61987,8 @@ setFlag("noseRoom", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -61408,6 +62336,8 @@ setFlag("noseRoom", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -61423,6 +62353,8 @@ setFlag("noseRoom", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>272</x>
@@ -61438,6 +62370,8 @@ setFlag("noseRoom", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>752</x>
@@ -61453,6 +62387,8 @@ setFlag("noseRoom", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>432</x>
@@ -61468,6 +62404,8 @@ setFlag("noseRoom", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>496</x>
@@ -61483,6 +62421,8 @@ setFlag("noseRoom", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -61837,6 +62777,8 @@ spawnKey(14,5);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -61852,6 +62794,8 @@ spawnKey(14,5);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>464</x>
@@ -61867,6 +62811,8 @@ spawnKey(14,5);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>240</x>
@@ -61882,6 +62828,8 @@ spawnKey(14,5);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>176</x>
@@ -61897,6 +62845,8 @@ spawnKey(14,5);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -61912,6 +62862,8 @@ spawnKey(14,5);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>400</x>
@@ -61927,6 +62879,8 @@ spawnKey(14,5);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -62282,6 +63236,8 @@ spawnKey(14,8);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>336</x>
@@ -62297,6 +63253,8 @@ spawnKey(14,8);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>496</x>
@@ -62312,6 +63270,8 @@ spawnKey(14,8);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>624</x>
@@ -62327,6 +63287,8 @@ spawnKey(14,8);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>560</x>
@@ -62342,6 +63304,8 @@ spawnKey(14,8);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>528</x>
@@ -62357,6 +63321,8 @@ spawnKey(14,8);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>240</x>
@@ -62372,6 +63338,8 @@ spawnKey(14,8);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>272</x>
@@ -62387,6 +63355,8 @@ spawnKey(14,8);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>240</x>
@@ -62402,6 +63372,8 @@ spawnKey(14,8);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>560</x>
@@ -62417,6 +63389,8 @@ spawnKey(14,8);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -62771,6 +63745,8 @@ setFlag("room5", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>432</x>
@@ -62786,6 +63762,8 @@ setFlag("room5", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>144</x>
@@ -62801,6 +63779,8 @@ setFlag("room5", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>528</x>
@@ -62816,6 +63796,8 @@ setFlag("room5", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
@@ -63169,7 +64151,25 @@ setFlag("room5right", true);
             <int>1</int>
             <int>1</int>
           </tileMap>
-          <storedObjects />
+          <storedObjects>
+            <StoredObject>
+              <x>400</x>
+              <y>272</y>
+              <type>special</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+          </storedObjects>
           <dark>false</dark>
         </Room>
         <Room xsi:nil="true" />
@@ -64416,6 +65416,8 @@ setFlag("room5right", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>528</x>
@@ -64431,6 +65433,8 @@ setFlag("room5right", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>720</x>
@@ -64446,6 +65450,8 @@ setFlag("room5right", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>16</x>
@@ -64461,6 +65467,8 @@ setFlag("room5right", true);
               <desty>35</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>16</x>
@@ -64476,6 +65484,8 @@ setFlag("room5right", true);
               <desty>35</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
             <StoredObject>
               <x>496</x>
@@ -64491,6 +65501,8 @@ setFlag("room5right", true);
               <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>

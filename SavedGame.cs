@@ -12,6 +12,8 @@ namespace aspectstar2
         public List<storedWeapon> weapons;
         public List<storedDictionaryEntry> globalFlags;
         public bool[] beaten;
+        public bool[] crystalKeys;
+        public int[] top;
     }
 
     public struct mapChange

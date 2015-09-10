@@ -10,6 +10,8 @@ namespace aspectstar2
 {
     public class SpecialScreen : Screen
     {
+        Game game;
+
         public const int width = Master.width - (32 * 6);
         public const int height = Master.height;
 
@@ -22,23 +24,36 @@ namespace aspectstar2
 
         int[] currentMap;
         int levelheight;
-        int score;
+        int stage, key;
+        int top;
 
         int animCount = 200;
 
         int lag = 0;
         Action<bool> leaver;
 
-        SpecialModes _currentMode = SpecialModes.runMode;
         int modeLag = 20;
         int introLag = 400;
         string[] introText =
         {
-            "PRESS A TO FIRE  B TO SPEED UP",
+            "PRESS A TO FIRE  B TO SLOW DOWN",
             "COMPLETE LEVEL",
             "TO EARN CRYSTAL KEY"
         };
 
+        int _score;
+        int score
+        {
+            get { return _score; }
+            set
+            {
+                if (value > top)
+                    top = value;
+                _score = value;
+            }
+        }
+
+        SpecialModes _currentMode = SpecialModes.runMode;
         SpecialModes currentMode
         {
             get { return _currentMode; }
@@ -67,9 +82,12 @@ namespace aspectstar2
             private set {; }
         }
 
-        public SpecialScreen(int stage, Action<bool> leaver)
+        public SpecialScreen(Game game, int stage, int key, Action<bool> leaver)
         {
+            this.game = game;
             this.leaver = leaver;
+            this.stage = stage;
+            this.key = key;
 
             currentMap = Master.currentFile.specialStages[stage].tileMap;
             levelheight = Master.currentFile.specialStages[stage].height;
@@ -78,10 +96,16 @@ namespace aspectstar2
             yoffset = levelheight * 32;
             
             objects.Add(player);
+
             foreach (StoredSpecial sS in Master.currentFile.specialStages[stage].objects)
             {
                 potential.Add(sS.Clone());
             }
+            if (game.top[stage] == 0)
+                top = potential.Count * 50;
+            else
+                top = game.top[stage];
+            
         }
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
@@ -122,7 +146,7 @@ namespace aspectstar2
                     obj.Draw(spriteBatch, Color.White);
             }
 
-            if (currentMode == SpecialModes.runMode && introLag > 0 && (introLag / 35) % 2 == 1)
+            if (currentMode == SpecialModes.runMode && introLag > 0 && (introLag / 35) % 3 != 1)
                 DrawText(spriteBatch, introText);
 
             DrawStatusBar(spriteBatch);
@@ -139,11 +163,15 @@ namespace aspectstar2
             }
             spriteBatch.End();
 
-            if (currentMode == SpecialModes.runMode || (currentMode == SpecialModes.Paused && animCount > 100))
-                WriteText(spriteBatch, "SCORE", new Vector2(width + 32, 32), Color.White);
-            else
+            if (currentMode == SpecialModes.Paused && animCount < 100)
                 WriteText(spriteBatch, "PAUSED", new Vector2(width + 32, 32), Color.White);
-            WriteText(spriteBatch, score.ToString("000000"), new Vector2(Master.width - 8 * 16, 32 + 16), Color.White);
+            else
+                WriteText(spriteBatch, "TOP", new Vector2(width + 32, 32), Color.White);
+            WriteText(spriteBatch, top.ToString("000000"), new Vector2(Master.width - 8 * 16, 32 + 16), Color.White);
+
+            WriteText(spriteBatch, "SCORE", new Vector2(width + 32, 64), Color.White);
+            WriteText(spriteBatch, score.ToString("000000"), new Vector2(Master.width - 8 * 16, 64 + 16), Color.White);
+
         }
 
         void DrawText(SpriteBatch spriteBatch, string[] text)
@@ -176,7 +204,7 @@ namespace aspectstar2
                     if (animCount > 0)
                         animCount = animCount - 1;
                     else
-                        leaver(false);
+                        LeaveStage(false);
 
                     foreach (SpecialObject obj in objects)
                         obj.Update();
@@ -193,16 +221,17 @@ namespace aspectstar2
                     {
                         foreach (SpecialObject sO in objects)
                         {
-                            double distance = Math.Pow(sO.location.X - sP.location.X, 2) + Math.Pow(sO.location.Y - sP.location.Y, 2);
+                            double distance = Vector2.Distance(sO.location, sP.location); // Math.Pow(sO.location.X - sP.location.X, 2) + Math.Pow(sO.location.Y - sP.location.Y, 2);
                             if (sO != sP && (!sP.friendly || !(sO is SpecialPlayer)) && (sP.friendly || !(sO is SpecialEnemy)) &&
-                                (distance < Math.Pow(sO.radius, 2)))
+                                (distance < sO.radius))
                             {
                                 sP.active = false;
+                                int y_dist = (int)Math.Abs(sO.location.Y - sP.location.Y);
                                 if (sO.Hurt())
                                 {
-                                    if (distance < Math.Pow(sO.radius / 4, 2))
+                                    if (y_dist < (sO.radius / 8))
                                         score += 100;
-                                    else if (distance < Math.Pow(sO.radius / 2, 2))
+                                    else if (y_dist < (sO.radius / 2))
                                         score += 75;
                                     else
                                         score += 50;
@@ -268,6 +297,15 @@ namespace aspectstar2
         public void addObject(SpecialObject obj)
         {
             newobjects.Add(obj);
+        }
+
+        void LeaveStage(bool win)
+        {
+            if (key > 0 && key < game.crystalKeys.Length && !game.crystalKeys[key])
+                game.crystalKeys[key] = win;
+            game.top[stage] = top;
+
+            leaver(win);
         }
     }
 }

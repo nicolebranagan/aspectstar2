@@ -129,7 +129,7 @@ namespace aspectstar2
                                 saveFailed = !(master.LoadGame());
                             break;
                         case Selections.Options:
-                            master.UpdateScreen(new SpecialScreen(0, x => master.UpdateScreen(this)));
+                            master.UpdateScreen(new SpecialScreen(new Game(master), 0, 0, x => master.UpdateScreen(this)));
                             break;
                     }
                 }

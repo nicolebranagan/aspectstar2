@@ -119,6 +119,7 @@ namespace aspectstar2
         public EntityData data;
 
         public int dest, destx, desty, destroomX, destroomY;
+        public int screen, key;
 
         public enum ObjectType
         {
@@ -131,12 +132,17 @@ namespace aspectstar2
             entity = 6,
             teleporter = 7,
             stock = 8,
+            special = 9,
         }
 
         public AdventureObject getAdventureObject()
         {
             switch (type)
             {
+                case ObjectType.special:
+                    AdventureSpecial special = new AdventureSpecial(screen, key - 1);
+                    special.location = new Vector2(x, y);
+                    return special;
                 case ObjectType.stock:
                     AdventureEntity entityFromStock = new AdventureEntity(Master.currentFile.stockEntities[enemyType]);
                     entityFromStock.location = new Vector2(x, y);
@@ -197,9 +203,9 @@ namespace aspectstar2
                     heart.location = new Vector2(x, y);
                     return heart;
                 default:
-                    AdventureKey key = new AdventureKey();
-                    key.location = new Vector2(x, y);
-                    return key;
+                    AdventureKey key_ = new AdventureKey();
+                    key_.location = new Vector2(x, y);
+                    return key_;
             }
         }
     }

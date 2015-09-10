@@ -25,6 +25,7 @@ namespace aspectstar2
             }
             private set {; }
         }
+        public int[] top;
         int dest;
 
         public Weapon weaponA;
@@ -36,6 +37,8 @@ namespace aspectstar2
         public Game(Master master)
         {
             this.master = master;
+
+            top = new int[Master.currentFile.specialStages.Count];
 
             beaten = new bool[Master.currentFile.adventures.Count];
             for (int i = 0; i < beaten.Length; i++)
@@ -93,8 +96,18 @@ namespace aspectstar2
             else
                 beaten = sG.beaten;
 
+            if (sG.top.Length < Master.currentFile.specialStages.Count)
+            {
+                top = new int[Master.currentFile.specialStages.Count];
+                for (int i = 0; i < sG.top.Length; i++)
+                    top[i] = sG.top[i];
+            }
+            else
+                top = sG.top;
+
             goldKeys = sG.goldKeys;
             bells = sG.bells;
+            crystalKeys = sG.crystalKeys;
 
             if (sG.possibleLife > possibleLife)
                 possibleLife = sG.possibleLife;
@@ -152,6 +165,16 @@ namespace aspectstar2
         public void warpAdventure(bool beat)
         {
             exitAdventure(beat, -1, 0, 0, -1, -1);
+        }
+
+        public void enterSpecialStageFromAdventure(int stage, int key)
+        {
+            master.UpdateScreen(new SpecialScreen(this, stage, key,
+                x =>
+                {
+                    currentAdventure.FadeIn();
+                    master.UpdateScreen(currentAdventure);
+                }));
         }
 
         public void Pause()
@@ -228,6 +251,8 @@ namespace aspectstar2
             game.beaten = beaten;
 
             game.goldKeys = goldKeys;
+            game.crystalKeys = crystalKeys;
+            game.top = top;
             game.bells = bells;
             game.life = life;
             game.possibleLife = possibleLife;

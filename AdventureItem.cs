@@ -174,4 +174,37 @@ namespace aspectstar2
             parent.leaveAdventure(dest, destx, desty, destroomX, destroomY);
         }
     }
+    public class AdventureSpecial : AdventureItem
+    {
+        int screen, key;
+        Vector2 lastloc;
+        bool works = true;
+
+        public AdventureSpecial(int screen, int key)
+        {
+            this.screen = screen;
+            this.key = key;
+        }
+
+        public override void Draw(SpriteBatch spriteBatch, Color mask)
+        {
+            // Do nothing
+        }
+
+        public override void Touch()
+        {
+            if (works)
+            {
+                parent.enterSpecialStage(screen, key);
+                works = false;
+                lastloc = parent.player.location;
+            }
+        }
+
+        public override void Update()
+        {
+            if (!works && Vector2.Distance(lastloc, parent.player.location) > 32)
+                works = true;
+        }
+    }
 }
