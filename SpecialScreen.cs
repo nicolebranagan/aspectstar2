@@ -27,6 +27,24 @@ namespace aspectstar2
         int stage, key;
         int top;
 
+        SpecialStage.WinCondition winCondition;
+        int _killCount;
+        public int killCount
+        {
+            get
+            {
+                return _killCount;
+            }
+            set
+            {
+                _killCount = value;
+                if (value <= 0 && winCondition == SpecialStage.WinCondition.KillEnemies)
+                {
+                    Win();
+                }
+            }
+        }
+
         int animCount = 200;
 
         int lag = 0;
@@ -74,6 +92,7 @@ namespace aspectstar2
             runMode,
             Paused,
             DeathAnim,
+            WinAnim,
         }
 
         public Vector2 playerloc
@@ -91,6 +110,14 @@ namespace aspectstar2
 
             currentMap = Master.currentFile.specialStages[stage].tileMap;
             levelheight = Master.currentFile.specialStages[stage].height;
+            winCondition = Master.currentFile.specialStages[stage].winCondition;
+
+            switch (winCondition)
+            {
+                case SpecialStage.WinCondition.KillEnemies:
+                    introText[1] = "KILL ALL ENEMIES";
+                    break;
+            }
 
             player = new SpecialPlayer(this);
             yoffset = levelheight * 32;
@@ -101,6 +128,7 @@ namespace aspectstar2
             {
                 potential.Add(sS.Clone());
             }
+            killCount = potential.Count;
             if (game.top[stage] == 0)
                 top = potential.Count * 50;
             else
@@ -146,7 +174,8 @@ namespace aspectstar2
                     obj.Draw(spriteBatch, Color.White);
             }
 
-            if ((currentMode == SpecialModes.runMode && introLag > 0 && (introLag / 35) % 3 != 1) || currentMode == SpecialModes.DeathAnim)
+            if ((currentMode == SpecialModes.runMode && introLag > 0 && (introLag / 35) % 3 != 1) || 
+                currentMode == SpecialModes.DeathAnim || currentMode == SpecialModes.WinAnim)
                 DrawText(spriteBatch, introText, Color.Black);
             else if (currentMode == SpecialModes.Paused)
                 DrawText(spriteBatch, introText, Color.White);
@@ -212,6 +241,12 @@ namespace aspectstar2
                         obj.Update();
 
                     break;
+                case SpecialModes.WinAnim:
+                    if (animCount > 0)
+                        animCount = animCount - 1;
+                    else
+                        LeaveStage(true);
+                    break;
                 case SpecialModes.runMode:
                     if (introLag > 0)
                         introLag--;
@@ -244,11 +279,7 @@ namespace aspectstar2
 
                     if (player.active == false)
                     {
-                        _currentMode = SpecialModes.DeathAnim;
-                        animCount = 80;
-                        introLag = 80;
-                        introText = new string[1];
-                        introText[0] = "NICE TRY";
+                        Die();
                     }
 
                     if (Master.controls.Start)
@@ -306,11 +337,46 @@ namespace aspectstar2
 
         void LeaveStage(bool win)
         {
-            if (key > 0 && key < game.crystalKeys.Length && !game.crystalKeys[key])
+            if (key >= 0 && key < game.crystalKeys.Length && !game.crystalKeys[key])
                 game.crystalKeys[key] = win;
             game.top[stage] = top;
 
             leaver(win);
+        }
+
+        void Win()
+        {
+            _currentMode = SpecialModes.WinAnim;
+            animCount = 80;
+            introLag = 80;
+            introText = new string[2];
+            introText[0] = "CONGRATULATIONS";
+            if (key >= 0)
+            {
+                introText[1] = "YOU GOT A CRYSTAL KEY";
+            }
+            else
+                introText[1] = "YOU HAVE WON";
+
+            PlaySound.Aspect();
+        }
+
+        void Die()
+        {
+            _currentMode = SpecialModes.DeathAnim;
+            animCount = 80;
+            introLag = 80;
+            introText = new string[1];
+            introText[0] = "NICE TRY";
+        }
+
+        public void HitBottom()
+        {
+            if (winCondition == SpecialStage.WinCondition.KillEnemies)
+            {
+                player.Hurt();
+                Die();
+            }
         }
     }
 }

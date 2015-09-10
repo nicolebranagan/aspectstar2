@@ -232,6 +232,13 @@ namespace aspectstar2
         public int height;
         public int[] tileMap;
         public List<StoredSpecial> objects;
+        public WinCondition winCondition = WinCondition.ReachEnd;
+
+        public enum WinCondition
+        {
+            ReachEnd = 0,
+            KillEnemies = 1,
+        }
     }
 
     public class StoredSpecial

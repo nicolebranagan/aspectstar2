@@ -64167,7 +64167,7 @@ setFlag("room5right", true);
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
               <screen>0</screen>
-              <key>0</key>
+              <key>1</key>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
@@ -68914,6 +68914,7 @@ function hurt() { }</code>
           <track>false</track>
         </StoredSpecial>
       </objects>
+      <winCondition>KillEnemies</winCondition>
     </SpecialStage>
   </specialStages>
 </Worldfile>

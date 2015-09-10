@@ -82,7 +82,7 @@ namespace aspectstar2
         public override bool Hurt()
         {
             parent.addObject(new SpecialExplosion(location));
-            PlaySound.Boom();
+            PlaySound.Die();
             base.Hurt();
             return false;
         }
@@ -201,6 +201,12 @@ namespace aspectstar2
                     break;
             }
 
+            if (location.Y >= SpecialScreen.height - 4)
+            {
+                this.active = false;
+                parent.HitBottom();
+            }
+
             if (shootingRate != 0)
             {
                 if (countRate == 0)
@@ -221,6 +227,7 @@ namespace aspectstar2
             parent.addObject(new SpecialExplosion(location));
             PlaySound.Boom();
             base.Hurt();
+            parent.killCount = parent.killCount - 1;
             return true;
         }
     }
