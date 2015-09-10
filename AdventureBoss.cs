@@ -277,4 +277,113 @@ namespace aspectstar2
             base.Update();
         }
     }
+
+    public class AdventureBoss5 : AdventureEnemy
+    {
+        Aspects _aspect;
+        Aspects currentAspect
+        {
+            get { return _aspect; }
+            set
+            {
+                PlaySound.Aspect();
+                _aspect = value;
+                switch (value)
+                {
+                    case Aspects.Blue:
+                        definition.dependent = "_blue";
+                        break;
+                    case Aspects.Green:
+                        definition.dependent = "_green";
+                        break;
+                    case Aspects.Red:
+                        definition.dependent = "_red";
+                        break;
+                }
+            }
+        }
+
+        enum Aspects
+        {
+            Blue = 0,
+            Green = 1,
+            Red = 2
+        }
+
+        public AdventureBoss5()
+        {
+            this.texture = Master.texCollection.texBosses;
+            this.offset = new Vector2(32, 32);
+            this.width = 30;
+            this.height = 30;
+            this.radius = 32;
+
+            BestiaryEntry bossEntry = new BestiaryEntry();
+            bossEntry.movementType = BestiaryEntry.MovementTypes.intelligent;
+            bossEntry.speed = 5;
+            bossEntry.intelligence = 8;
+            bossEntry.decisiveness = 7;
+            bossEntry.wanderer = true;
+            definition = bossEntry;
+            health = 5;
+            currentAspect = (Aspects)Master.globalRandom.Next(0, 3);
+        }
+
+        public override void Draw(SpriteBatch spriteBatch, Color mask)
+        {
+            if (flickerCount > 0)
+            {
+                flickerCount--;
+                if (flickerCount % 7 == 0)
+                    mask = Color.Red;
+            }
+
+            int dim_x = 64;
+            int dim_y = 64;
+            int column = ((int)faceDir * 2) + currentFrame;
+            int row;
+
+            switch (currentAspect)
+            {
+                case Aspects.Green:
+                    row = 4;
+                    break;
+                case Aspects.Red:
+                    row = 5;
+                    break;
+                default:
+                    row = 0;
+                    break;
+            }
+
+            Vector2 screen_loc = location - offset;
+
+            Rectangle sourceRectangle = new Rectangle(dim_x * column, row * dim_y, dim_x, dim_y);
+            Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y - (z * 2), dim_x, dim_y);
+
+            spriteBatch.Begin();
+            spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, mask);
+            spriteBatch.End();
+        }
+
+        public override void Update()
+        {
+            base.Update();
+
+            int x = (int)Math.Floor(location.X / 32);
+            int y = (int)Math.Floor(location.Y / 32);
+
+            if (x == 5 && y == 7 && currentAspect != Aspects.Blue)
+                currentAspect = Aspects.Blue;
+            else if (x == 12 && y == 4 && currentAspect != Aspects.Red)
+                currentAspect = Aspects.Red;
+            else if (x == 19 && y == 7 && currentAspect != Aspects.Green)
+                currentAspect = Aspects.Green;
+        }
+
+        public override void Touch()
+        {
+            //
+        }
+    }
 }

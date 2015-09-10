@@ -13,6 +13,7 @@ namespace aspectstar2
         protected int health;
         protected int flickerCount;
         protected bool ghost;
+        protected int radius = 16;
 
         public AdventureEnemy()
         {
@@ -197,6 +198,12 @@ namespace aspectstar2
                 return true;
             }
             return false;
+        }
+
+        public override void Move(Vector2 move_dist)
+        {
+            if (!parent.interenemyCollide(location + move_dist, radius, this))
+                base.Move(move_dist);
         }
 
         public override void Touch()

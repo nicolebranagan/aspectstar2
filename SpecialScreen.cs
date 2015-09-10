@@ -22,6 +22,35 @@ namespace aspectstar2
 
         int[] currentMap;
         int levelheight;
+        int score;
+
+        int animCount = 200;
+
+        int lag = 0;
+        Action<bool> leaver;
+
+        SpecialModes _currentMode = SpecialModes.runMode;
+        int modeLag = 20;
+
+        SpecialModes currentMode
+        {
+            get { return _currentMode; }
+            set { if (modeLag == 0)
+                {
+                    if (value == SpecialModes.Paused)
+                        PlaySound.Pause();
+                    _currentMode = value;
+                    modeLag = 20;
+                }
+            }
+        }
+
+        enum SpecialModes
+        {
+            runMode,
+            Paused,
+            DeathAnim,
+        }
 
         public Vector2 playerloc
         {
@@ -29,10 +58,10 @@ namespace aspectstar2
             private set {; }
         }
 
-        int lag = 0;
-
-        public SpecialScreen(int stage)
+        public SpecialScreen(int stage, Action<bool> leaver)
         {
+            this.leaver = leaver;
+
             currentMap = Master.currentFile.specialStages[stage].tileMap;
             levelheight = Master.currentFile.specialStages[stage].height;
 
@@ -53,7 +82,11 @@ namespace aspectstar2
             Vector2 sourceTile;
             source = new Rectangle(0, 0, 32, 32);
             int stageheight = levelheight * 32;
-            
+            Color levelMask = Color.White;
+
+            if (currentMode == SpecialModes.Paused)
+                levelMask = Color.DarkOrchid;
+
             screenOffset = (int)yoffset - (Master.height);
 
             spriteBatch.Begin();
@@ -67,15 +100,18 @@ namespace aspectstar2
                     sourceTile = Master.getMapTile(currentMap[x + y * (width / 32)], Master.texCollection.worldTiles);
                     source = new Rectangle((int)sourceTile.X, (int)sourceTile.Y, 32, 32);
                     dest = new Rectangle(x * 32, (y * 32 - (int)screenOffset), 32, 32);
-                    spriteBatch.Draw(Master.texCollection.specialTiles, dest, source, Color.White);
+                    spriteBatch.Draw(Master.texCollection.specialTiles, dest, source, levelMask);
                 }
             }
             spriteBatch.End();
 
-            List<SpecialObject> sortedList = objects.OrderBy(o => o.location.Y).ToList();
+            if (currentMode == SpecialModes.runMode || (currentMode == SpecialModes.DeathAnim))
+            {
+                List<SpecialObject> sortedList = objects.OrderBy(o => o.location.Y).ToList();
 
-            foreach (SpecialObject obj in sortedList)
-                obj.Draw(spriteBatch, Color.White);
+                foreach (SpecialObject obj in sortedList)
+                    obj.Draw(spriteBatch, Color.White);
+            }
 
             DrawStatusBar(spriteBatch);
         }
@@ -90,66 +126,120 @@ namespace aspectstar2
                     new Rectangle(0, 16, 16, 16), Color.White);
             }
             spriteBatch.End();
+
+            if (currentMode == SpecialModes.runMode || (currentMode == SpecialModes.Paused && animCount > 100))
+                WriteText(spriteBatch, "SCORE", new Vector2(width + 32, 32), Color.White);
+            else
+                WriteText(spriteBatch, "PAUSED", new Vector2(width + 32, 32), Color.White);
+            WriteText(spriteBatch, score.ToString("000000"), new Vector2(Master.width - 8 * 16, 32 + 16), Color.White);
         }
 
         public override void Update(GameTime gameTime)
         {
+            if (modeLag > 0)
+                modeLag = modeLag - 1;
 
-            objects.AddRange(newobjects);
-            newobjects = new List<SpecialObject>();
+            System.Diagnostics.Debug.WriteLine(animCount);
 
-            foreach (SpecialObject obj in objects)
-                obj.Update();
-
-            objects.RemoveAll(x => x.active == false);
-
-            foreach (SpecialProjectile sP in objects.Where(x => x is SpecialProjectile))
+            switch (currentMode)
             {
-                foreach (SpecialObject sO in objects)
-                {
-                    if (sO != sP && (!sP.friendly || !(sO is SpecialPlayer)) && (sP.friendly || !(sO is SpecialEnemy)) &&
-                        (Math.Pow(sO.location.X - sP.location.X, 2) + Math.Pow(sO.location.Y - sP.location.Y, 2) < Math.Pow(sO.radius,2)))
+                case SpecialModes.Paused:
+                    if (Master.controls.Start)
                     {
-                        sP.active = false;
-                        sO.Hurt();
+                        currentMode = SpecialModes.runMode;
                     }
-                }
-            }
+                    if (animCount > 0)
+                        animCount = animCount - 1;
+                    else
+                        animCount = 200;
+                    break;
+                case SpecialModes.DeathAnim:
+                    if (animCount > 0)
+                        animCount = animCount - 1;
+                    else
+                        leaver(false);
 
-            int movedist = 4;
-            if (Master.controls.B)
-                movedist = 2;
+                    foreach (SpecialObject obj in objects)
+                        obj.Update();
 
-            if (Master.controls.Up)
-                player.Move(new Vector2(0, -movedist));
-            if (Master.controls.Down)
-                player.Move(new Vector2(0, movedist));
-            if (Master.controls.Left)
-                player.Move(new Vector2(-movedist, 0));
-            if (Master.controls.Right)
-                player.Move(new Vector2(movedist, 0));
+                    break;
+                case SpecialModes.runMode:
+                    foreach (SpecialObject obj in objects)
+                        obj.Update();
 
-            if (Master.controls.A && lag == 0)
-            {
-                newobjects.Add(new SpecialProjectile(this, player.location, new Vector2(0, -4), true));
-                PlaySound.Pew();
-                lag = 10;
-            }
+                    foreach (SpecialProjectile sP in objects.Where(x => x is SpecialProjectile))
+                    {
+                        foreach (SpecialObject sO in objects)
+                        {
+                            double distance = Math.Pow(sO.location.X - sP.location.X, 2) + Math.Pow(sO.location.Y - sP.location.Y, 2);
+                            if (sO != sP && (!sP.friendly || !(sO is SpecialPlayer)) && (sP.friendly || !(sO is SpecialEnemy)) &&
+                                (distance < Math.Pow(sO.radius, 2)))
+                            {
+                                sP.active = false;
+                                if (sO.Hurt())
+                                {
+                                    if (distance < Math.Pow(sO.radius / 4, 2))
+                                        score += 100;
+                                    else if (distance < Math.Pow(sO.radius / 2, 2))
+                                        score += 75;
+                                    else
+                                        score += 50;
+                                }
+                            }
+                        }
+                    }
 
-            if (lag > 0)
-                lag = lag - 1;
+                    if (player.active == false)
+                    {
+                        _currentMode = SpecialModes.DeathAnim;
+                        animCount = 50;
+                    }
 
-            if (yoffset > Master.height)
-                yoffset = yoffset - (float)0.5;
+                    if (Master.controls.Start)
+                        currentMode = SpecialModes.Paused;
 
-            if (potential.Count > 0)
-            {
-                foreach (StoredSpecial sS in potential.Where(o => o.y > (yoffset - Master.height)))
-                {
-                    objects.Add(sS.getEnemy(this));
-                    sS.used = true;
-                }
-                potential.RemoveAll(o => o.used == true);
+                    int movedist = 4;
+                    if (Master.controls.B)
+                        movedist = 2;
+
+                    if (Master.controls.Up)
+                        player.Move(new Vector2(0, -movedist));
+                    if (Master.controls.Down)
+                        player.Move(new Vector2(0, movedist));
+                    if (Master.controls.Left)
+                        player.Move(new Vector2(-movedist, 0));
+                    if (Master.controls.Right)
+                        player.Move(new Vector2(movedist, 0));
+
+                    if (Master.controls.A && lag == 0)
+                    {
+                        newobjects.Add(new SpecialProjectile(this, player.location, new Vector2(0, -4), true));
+                        PlaySound.Pew();
+                        lag = 10;
+                    }
+
+                    if (lag > 0)
+                        lag = lag - 1;
+
+                    if (yoffset > Master.height)
+                        yoffset = yoffset - (float)0.4;
+
+                    objects.RemoveAll(x => x.active == false);
+                    objects.AddRange(newobjects);
+                    newobjects = new List<SpecialObject>();
+
+                    if (potential.Count > 0)
+                    {
+                        foreach (StoredSpecial sS in potential.Where(o => o.y > (yoffset - Master.height)))
+                        {
+                            SpecialEnemy enemy = sS.getEnemy(this);
+                            enemy.location.Y = sS.y - yoffset + Master.height;
+                            objects.Add(enemy);
+                            sS.used = true;
+                        }
+                        potential.RemoveAll(o => o.used == true);
+                    }
+                    break;
             }
         }
 

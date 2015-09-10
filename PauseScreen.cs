@@ -14,6 +14,7 @@ namespace aspectstar2
         Game game;
         int selection = 0;
         int lag = 10;
+        int animCount = 0;
 
         public PauseScreen(AdventureScreen screen, Game game)
         {
@@ -48,11 +49,54 @@ namespace aspectstar2
 
             WriteText(spriteBatch, game.weapons[selection].getLabel(), new Vector2(32, 128), Color.White);
 
+            if (game.crystalKeyCount > 0)
+            {
+
+
+                WriteText(spriteBatch, "CRYSTAL KEYS", new Vector2(32, 256 + 80), Color.White);
+                for (int j = 0; j < game.crystalKeys.Length; j++)
+                {
+                    if (game.crystalKeys[j])
+                    {
+                        spriteBatch.Begin();
+                        Rectangle source = new Rectangle(128, 32, 32, 32);
+                        Rectangle dest = new Rectangle(32 + j * (32 + 16), 256 + 80 + 32, 32, 32);
+                        spriteBatch.Draw(Master.texCollection.controls, dest, source, getCrystalMask(animCount + 20 * j));
+                        spriteBatch.End();
+                    }
+                }
+            }
+
             screen.DrawStatus(spriteBatch);
+        }
+
+        Color getCrystalMask(int animCount)
+        {
+            while (animCount < 0)
+                animCount = animCount + 160;
+
+            while (animCount > 160)
+                animCount = animCount - 160;
+
+            Color crystalMask = Color.White;
+            if (animCount > 120)
+                ;
+            else if (animCount > 80)
+                crystalMask.R = 0;
+            else if (animCount > 40)
+                crystalMask.G = 0;
+            else
+                crystalMask.B = 0;
+
+            return crystalMask;
         }
 
         public override void Update(GameTime gameTime)
         {
+            if (animCount == 0)
+                animCount = 160;
+            else animCount--;
+
             if (lag > 0)
                 lag = lag - 1;
             else

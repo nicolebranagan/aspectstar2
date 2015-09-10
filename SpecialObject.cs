@@ -49,9 +49,10 @@ namespace aspectstar2
                 stallCount = 0;
         }
 
-        public virtual void Hurt()
+        public virtual bool Hurt()
         {
             active = false;
+            return false; // Return true if points should be gained
         }
 
         public bool Move(Vector2 move)
@@ -78,11 +79,12 @@ namespace aspectstar2
             next_loc = location;
         }
 
-        public override void Hurt()
+        public override bool Hurt()
         {
             parent.addObject(new SpecialExplosion(location));
             PlaySound.Boom();
             base.Hurt();
+            return false;
         }
     }
 
@@ -133,28 +135,28 @@ namespace aspectstar2
                 case Behaviors.SpaceInvaders:
                     if (stallCount % speed == 0)
                     {
-                        if (animCount < 3)
+                        if (animCount < 9)
                         {
                             Move(new Vector2(2, 0));
                             animCount++;
                         }
-                        else if (animCount < 6)
+                        else if (animCount < 18)
                             animCount++;
-                        else if (animCount < 9)
+                        else if (animCount < 27)
                         {
                             Move(new Vector2(0, 2));
                             animCount++;
                         }
-                        else if (animCount < 12)
+                        else if (animCount < 36)
                             animCount++;
-                        else if (animCount < 15)
+                        else if (animCount < 45)
                         {
                             Move(new Vector2(-2, 0));
                             animCount++;
                         }
-                        else if (animCount < 18)
+                        else if (animCount < 54)
                             animCount++;
-                        else if (animCount < 21)
+                        else if (animCount < 63)
                         {
                             Move(new Vector2(0, 2));
                             animCount++;
@@ -214,11 +216,12 @@ namespace aspectstar2
             }
         }
 
-        public override void Hurt()
+        public override bool Hurt()
         {
             parent.addObject(new SpecialExplosion(location));
             PlaySound.Boom();
             base.Hurt();
+            return true;
         }
     }
 
@@ -288,8 +291,9 @@ namespace aspectstar2
             exp.Update();
         }
 
-        public override void Hurt()
+        public override bool Hurt()
         {
+            return false;
         }
     }
 }

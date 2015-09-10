@@ -5,7 +5,6 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using System.Diagnostics;
 using Jint;
 
 namespace aspectstar2
@@ -846,6 +845,19 @@ namespace aspectstar2
             PlaySound.Leave();
         }
 
+        public bool interenemyCollide(Vector2 location, int radius, AdventureObject self)
+        {
+            foreach (AdventureObject obj in objects)
+            {
+                if (obj is AdventureEnemy && obj != self)
+                {
+                    if (Vector2.Distance(obj.location, location) < radius)
+                        return true;
+                }
+            }
+            return false;
+        }
+
         public Engine ActivateEngine(string code)
         {
             return new Engine(cfg => cfg.AllowClr())
@@ -1069,6 +1081,10 @@ namespace aspectstar2
                 if (game.life > game.possibleLife)
                     game.life = game.possibleLife;
             }
+            else if (flag == "_keys")
+                Keys = value;
+            else if (flag == "_goldKeys")
+                game.goldKeys = value;
             else
             {
                 if (counters.ContainsKey(flag))
@@ -1085,6 +1101,12 @@ namespace aspectstar2
                 return game.life;
             else if (flag == "_possibleLife")
                 return game.possibleLife;
+            else if (flag == "_crystalKeys")
+                return game.crystalKeyCount;
+            else if (flag == "_keys")
+                return Keys;
+            else if (flag == "_goldKeys")
+                return game.goldKeys;
             else if (counters.ContainsKey(flag))
                 return counters[flag];
             else

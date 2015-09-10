@@ -18,6 +18,13 @@ namespace aspectstar2
         MapScreen currentMap;
 
         public bool[] beaten;
+        public bool[] crystalKeys = { true, true, true, false, true, false, false, true };
+        public int crystalKeyCount { get
+            {
+                return crystalKeys.Count(o => o == true);
+            }
+            private set {; }
+        }
         int dest;
 
         public Weapon weaponA;

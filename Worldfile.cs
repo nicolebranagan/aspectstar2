@@ -168,6 +168,12 @@ namespace aspectstar2
                         boss4.location = new Vector2(x, y);
                         return boss4;
                     }
+                    else if (enemyType == 5)
+                    {
+                        AdventureBoss5 boss5 = new AdventureBoss5();
+                        boss5.location = new Vector2(x, y);
+                        return boss5;
+                    }
                     else
                     {
                         AdventureBoss1 boss1 = new AdventureBoss1();
