@@ -31,6 +31,13 @@ namespace aspectstar2
 
         SpecialModes _currentMode = SpecialModes.runMode;
         int modeLag = 20;
+        int introLag = 400;
+        string[] introText =
+        {
+            "PRESS A TO FIRE  B TO SPEED UP",
+            "COMPLETE LEVEL",
+            "TO EARN CRYSTAL KEY"
+        };
 
         SpecialModes currentMode
         {
@@ -38,7 +45,9 @@ namespace aspectstar2
             set { if (modeLag == 0)
                 {
                     if (value == SpecialModes.Paused)
+                    {
                         PlaySound.Pause();
+                    }
                     _currentMode = value;
                     modeLag = 20;
                 }
@@ -113,6 +122,9 @@ namespace aspectstar2
                     obj.Draw(spriteBatch, Color.White);
             }
 
+            if (currentMode == SpecialModes.runMode && introLag > 0 && (introLag / 35) % 2 == 1)
+                DrawText(spriteBatch, introText);
+
             DrawStatusBar(spriteBatch);
         }
 
@@ -134,12 +146,19 @@ namespace aspectstar2
             WriteText(spriteBatch, score.ToString("000000"), new Vector2(Master.width - 8 * 16, 32 + 16), Color.White);
         }
 
+        void DrawText(SpriteBatch spriteBatch, string[] text)
+        {
+            for (int i = 0; i < text.Length; i++)
+            {
+                WriteText(spriteBatch, text[i], new Vector2(width / 2 - (8 * text[i].Length) - 2, 32 + i * 32 - 2), Color.DarkGray);
+                WriteText(spriteBatch, text[i], new Vector2(width / 2 - (8 * text[i].Length), 32 + i * 32), Color.Black);
+            }
+        }
+
         public override void Update(GameTime gameTime)
         {
             if (modeLag > 0)
                 modeLag = modeLag - 1;
-
-            System.Diagnostics.Debug.WriteLine(animCount);
 
             switch (currentMode)
             {
@@ -164,6 +183,9 @@ namespace aspectstar2
 
                     break;
                 case SpecialModes.runMode:
+                    if (introLag > 0)
+                        introLag--;
+
                     foreach (SpecialObject obj in objects)
                         obj.Update();
 
