@@ -299,3 +299,9 @@
 /processorParam:TextureFormat=Color
 /build:special.png
 
+#begin computer.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:computer.wav
+

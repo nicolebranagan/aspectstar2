@@ -184,11 +184,18 @@ namespace aspectstar2
         {
             this.screen = screen;
             this.key = key;
+
+            texture = Master.texCollection.controls;
         }
 
         public override void Draw(SpriteBatch spriteBatch, Color mask)
         {
-            // Do nothing
+            Rectangle sourceRectangle = new Rectangle(160, 32, 32, 32);
+            Rectangle destinationRectangle = new Rectangle((int)(this.location.X - 16), (int)(this.location.Y - 16), 32, 32);
+
+            spriteBatch.Begin();
+            spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, Color.White);
+            spriteBatch.End();
         }
 
         public override void Touch()

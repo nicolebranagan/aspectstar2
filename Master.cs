@@ -134,6 +134,7 @@ namespace aspectstar2
             PlaySound.boom = Content.Load<SoundEffect>("boom");
             PlaySound.leave = Content.Load<SoundEffect>("leave");
             PlaySound.pause = Content.Load<SoundEffect>("pause");
+            PlaySound.special = Content.Load<SoundEffect>("computer");
             PlaySound.Initialize();
 
             // Load title screen

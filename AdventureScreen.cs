@@ -847,8 +847,7 @@ namespace aspectstar2
 
         public void enterSpecialStage(int screen, int key)
         {
-            // TODO: Get a better sound effect
-            PlaySound.Jump();
+            PlaySound.Special();
             leaver = x => game.enterSpecialStageFromAdventure(screen, key);
             currentMode = adventureModes.fadeOut;
             animCount = 250;

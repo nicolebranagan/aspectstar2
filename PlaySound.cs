@@ -19,6 +19,7 @@ namespace aspectstar2
         public static SoundEffect pew;
         public static SoundEffect leave;
         public static SoundEffect pause;
+        public static SoundEffect special;
 
         static SoundEffectInstance hurtInst;
         static SoundEffectInstance jumpInst;
@@ -95,6 +96,11 @@ namespace aspectstar2
         public static void Pause()
         {
             pause.Play();
+        }
+
+        public static void Special()
+        {
+            special.Play();
         }
     }
 }

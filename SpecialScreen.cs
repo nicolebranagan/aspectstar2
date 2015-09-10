@@ -146,8 +146,10 @@ namespace aspectstar2
                     obj.Draw(spriteBatch, Color.White);
             }
 
-            if (currentMode == SpecialModes.runMode && introLag > 0 && (introLag / 35) % 3 != 1)
-                DrawText(spriteBatch, introText);
+            if ((currentMode == SpecialModes.runMode && introLag > 0 && (introLag / 35) % 3 != 1) || currentMode == SpecialModes.DeathAnim)
+                DrawText(spriteBatch, introText, Color.Black);
+            else if (currentMode == SpecialModes.Paused)
+                DrawText(spriteBatch, introText, Color.White);
 
             DrawStatusBar(spriteBatch);
         }
@@ -174,12 +176,12 @@ namespace aspectstar2
 
         }
 
-        void DrawText(SpriteBatch spriteBatch, string[] text)
+        void DrawText(SpriteBatch spriteBatch, string[] text, Color textColor)
         {
             for (int i = 0; i < text.Length; i++)
             {
-                WriteText(spriteBatch, text[i], new Vector2(width / 2 - (8 * text[i].Length) - 2, 32 + i * 32 - 2), Color.DarkGray);
-                WriteText(spriteBatch, text[i], new Vector2(width / 2 - (8 * text[i].Length), 32 + i * 32), Color.Black);
+                WriteText(spriteBatch, text[i], new Vector2(width / 2 - (8 * text[i].Length), 32 + i * 32), Color.DarkGray);
+                WriteText(spriteBatch, text[i], new Vector2(width / 2 - (8 * text[i].Length) + 2, 32 + i * 32 + 2), textColor);
             }
         }
 
@@ -243,7 +245,10 @@ namespace aspectstar2
                     if (player.active == false)
                     {
                         _currentMode = SpecialModes.DeathAnim;
-                        animCount = 50;
+                        animCount = 80;
+                        introLag = 80;
+                        introText = new string[1];
+                        introText[0] = "NICE TRY";
                     }
 
                     if (Master.controls.Start)
