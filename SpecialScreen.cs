@@ -55,7 +55,7 @@ namespace aspectstar2
         string[] introText =
         {
             "PRESS A TO FIRE  B TO SLOW DOWN",
-            "COMPLETE LEVEL",
+            "COMPLETE LEVEL ",
             "TO EARN CRYSTAL KEY"
         };
 
@@ -115,7 +115,7 @@ namespace aspectstar2
             switch (winCondition)
             {
                 case SpecialStage.WinCondition.KillEnemies:
-                    introText[1] = "KILL ALL ENEMIES";
+                    introText[1] = "KILL ALL ENEMIES ";
                     break;
             }
 
@@ -300,7 +300,7 @@ namespace aspectstar2
 
                     if (Master.controls.A && lag == 0)
                     {
-                        newobjects.Add(new SpecialProjectile(this, player.location, new Vector2(0, -4), true));
+                        newobjects.Add(new SpecialProjectile(this, player.location - new Vector2(0, 2), new Vector2(0, -4), true));
                         PlaySound.Pew();
                         lag = 10;
                     }

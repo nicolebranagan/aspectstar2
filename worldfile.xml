@@ -52644,7 +52644,7 @@ function update() { }</code>
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>19</int>
+            <int>0</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -53832,9 +53832,9 @@ function update() { }</code>
             <int>0</int>
             <int>13</int>
             <int>0</int>
-            <int>10</int>
-            <int>0</int>
             <int>13</int>
+            <int>0</int>
+            <int>10</int>
             <int>0</int>
             <int>13</int>
             <int>0</int>
@@ -53858,56 +53858,6 @@ function update() { }</code>
             <int>13</int>
             <int>13</int>
             <int>13</int>
-            <int>13</int>
-            <int>10</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>10</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>10</int>
-            <int>10</int>
-            <int>13</int>
-            <int>4</int>
-            <int>0</int>
-            <int>0</int>
-            <int>13</int>
-            <int>0</int>
-            <int>13</int>
-            <int>0</int>
-            <int>10</int>
-            <int>0</int>
-            <int>13</int>
-            <int>0</int>
-            <int>13</int>
-            <int>0</int>
-            <int>10</int>
-            <int>0</int>
-            <int>13</int>
-            <int>0</int>
-            <int>10</int>
-            <int>0</int>
-            <int>13</int>
-            <int>0</int>
-            <int>13</int>
-            <int>0</int>
-            <int>10</int>
-            <int>0</int>
-            <int>4</int>
-            <int>3</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
             <int>10</int>
             <int>13</int>
             <int>13</int>
@@ -53926,7 +53876,17 @@ function update() { }</code>
             <int>13</int>
             <int>13</int>
             <int>4</int>
-            <int>3</int>
+            <int>0</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
             <int>0</int>
             <int>13</int>
             <int>0</int>
@@ -53935,16 +53895,6 @@ function update() { }</code>
             <int>13</int>
             <int>0</int>
             <int>10</int>
-            <int>0</int>
-            <int>13</int>
-            <int>0</int>
-            <int>13</int>
-            <int>0</int>
-            <int>13</int>
-            <int>0</int>
-            <int>13</int>
-            <int>0</int>
-            <int>13</int>
             <int>0</int>
             <int>13</int>
             <int>0</int>
@@ -53956,53 +53906,8 @@ function update() { }</code>
             <int>13</int>
             <int>13</int>
             <int>13</int>
-            <int>13</int>
             <int>10</int>
             <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>10</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>10</int>
-            <int>13</int>
-            <int>10</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>4</int>
-            <int>3</int>
-            <int>0</int>
-            <int>13</int>
-            <int>0</int>
-            <int>10</int>
-            <int>0</int>
-            <int>13</int>
-            <int>0</int>
-            <int>13</int>
-            <int>0</int>
-            <int>13</int>
-            <int>0</int>
-            <int>13</int>
-            <int>0</int>
-            <int>10</int>
-            <int>0</int>
-            <int>13</int>
-            <int>0</int>
-            <int>13</int>
-            <int>0</int>
-            <int>13</int>
-            <int>0</int>
-            <int>13</int>
-            <int>0</int>
-            <int>4</int>
-            <int>3</int>
-            <int>10</int>
             <int>13</int>
             <int>13</int>
             <int>13</int>
@@ -54012,11 +53917,6 @@ function update() { }</code>
             <int>13</int>
             <int>13</int>
             <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>10</int>
-            <int>10</int>
             <int>13</int>
             <int>13</int>
             <int>10</int>
@@ -54028,7 +53928,11 @@ function update() { }</code>
             <int>4</int>
             <int>3</int>
             <int>0</int>
-            <int>10</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
             <int>0</int>
             <int>13</int>
             <int>0</int>
@@ -54039,6 +53943,102 @@ function update() { }</code>
             <int>13</int>
             <int>0</int>
             <int>13</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>4</int>
+            <int>3</int>
+            <int>13</int>
+            <int>13</int>
+            <int>10</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>10</int>
+            <int>13</int>
+            <int>13</int>
+            <int>10</int>
+            <int>13</int>
+            <int>13</int>
+            <int>10</int>
+            <int>13</int>
+            <int>13</int>
+            <int>4</int>
+            <int>3</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>4</int>
+            <int>3</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>10</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>10</int>
+            <int>10</int>
+            <int>10</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>4</int>
+            <int>3</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>10</int>
             <int>0</int>
             <int>13</int>
             <int>0</int>
@@ -64151,25 +64151,7 @@ setFlag("room5right", true);
             <int>1</int>
             <int>1</int>
           </tileMap>
-          <storedObjects>
-            <StoredObject>
-              <x>400</x>
-              <y>272</y>
-              <type>special</type>
-              <enemyType>0</enemyType>
-              <data>
-                <graphics>0</graphics>
-                <gfxtype>Maptile</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>1</key>
-            </StoredObject>
-          </storedObjects>
+          <storedObjects />
           <dark>false</dark>
         </Room>
         <Room xsi:nil="true" />
