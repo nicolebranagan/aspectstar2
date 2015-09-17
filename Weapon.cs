@@ -263,16 +263,13 @@ namespace aspectstar2
             Rectangle sourceRectangle = new Rectangle(96, 64, 32, 32);
             Rectangle destinationRectangle = new Rectangle(x, y, 32, 32);
 
-            if (count > 0)
-            {
-                spriteBatch.Begin();
-                spriteBatch.Draw(Master.texCollection.controls, destinationRectangle, sourceRectangle, Color.White);
+            spriteBatch.Begin();
+            spriteBatch.Draw(Master.texCollection.controls, destinationRectangle, sourceRectangle, Color.White);
 
-                sourceRectangle = new Rectangle(16 * count, 0, 16, 16);
-                destinationRectangle = new Rectangle(x + 16, y, 16, 16);
-                spriteBatch.Draw(Master.texCollection.arcadeFont, destinationRectangle, sourceRectangle, Color.White);
-                spriteBatch.End();
-            }
+            sourceRectangle = new Rectangle(16 * count, 0, 16, 16);
+            destinationRectangle = new Rectangle(x + 16, y, 16, 16);
+            spriteBatch.Draw(Master.texCollection.arcadeFont, destinationRectangle, sourceRectangle, Color.White);
+            spriteBatch.End();
         }
 
         public override string getLabel()

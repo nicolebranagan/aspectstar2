@@ -85,7 +85,7 @@ namespace aspectstar2
             this.flickerCount = 80;
         }
 
-        public void Recoil(Vector2 far_location)
+        public void Recoil(Vector2 far_location, AdventureObject recoiler)
         {
             int del_x = (int)(location.X - far_location.X);
             int del_y = (int)(location.Y - far_location.Y);
@@ -134,6 +134,8 @@ namespace aspectstar2
                 parent.enterNewRoom(0, 1);
             else if (!parent.isSolid(test, 1, width, height, faceDir))
                 location = test;
+            else
+                recoiler.Move(-move_dist);
         }
 
         public override void Update()

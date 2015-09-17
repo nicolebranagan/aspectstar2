@@ -14,6 +14,7 @@ namespace aspectstar2
         protected int flickerCount;
         protected bool ghost;
         protected int radius = 16;
+        protected bool interenemycollide = false;
 
         public AdventureEnemy()
         {
@@ -165,7 +166,7 @@ namespace aspectstar2
 
         public virtual void Hurt(bool ghostly)
         {
-            if (definition.dependent != "" && !parent.GetFlag(definition.dependent))
+            if (definition != null && definition.dependent != "" && !parent.GetFlag(definition.dependent))
                 return; // Flag "dependent" must be on
 
             if (ghostly == ghost && this.flickerCount == 0)
@@ -194,7 +195,7 @@ namespace aspectstar2
             if (Math.Sqrt( Math.Pow(location.X - playerloc.X, 2) + Math.Pow(location.Y - playerloc.Y, 2) ) <= Math.Max(width, height))
             {
                 player.Hurt();
-                player.Recoil(location);
+                player.Recoil(location, this);
                 return true;
             }
             return false;
@@ -202,7 +203,7 @@ namespace aspectstar2
 
         public override void Move(Vector2 move_dist)
         {
-            if (!parent.interenemyCollide(location + move_dist, radius, this))
+            if (interenemycollide || !parent.interenemyCollide(location + move_dist, radius, this))
                 base.Move(move_dist);
         }
 

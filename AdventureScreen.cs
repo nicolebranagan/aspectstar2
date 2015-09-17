@@ -925,7 +925,8 @@ namespace aspectstar2
         {
             int i = x + (y * 25);
             tileMap[i] = newTile;
-            first_pos = new Vector2(player.location.X, player.location.Y);
+            if (Math.Floor(first_pos.X / 32) == x && Math.Floor(first_pos.Y / 32) == y) 
+                first_pos = new Vector2(player.location.X, player.location.Y);
         }
 
         void PlaySoundEffect(int i)

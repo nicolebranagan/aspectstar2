@@ -92,7 +92,7 @@ namespace aspectstar2
             if (del <= Math.Max(width, height))
             {
                 jintEngine.Execute("inRange()");
-                if (solid) player.Recoil(this.location);
+                if (solid) player.Recoil(this.location, this);
                 return solid;
             }
             else
@@ -121,7 +121,7 @@ namespace aspectstar2
         void HurtPlayer()
         {
             parent.player.Hurt();
-            parent.player.Recoil(location);
+            parent.player.Recoil(location, this);
         }
 
         void SetDimensions(int width, int height)

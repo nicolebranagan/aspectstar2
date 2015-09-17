@@ -158,6 +158,7 @@ namespace aspectstar2
             this.offset = new Vector2(32, 32);
             this.width = 25;
             this.height = 25;
+            this.interenemycollide = true;
 
             BestiaryEntry bossEntry = new BestiaryEntry();
             bossEntry.movementType = BestiaryEntry.MovementTypes.intelligent;
