@@ -122,20 +122,9 @@ namespace aspectstar2
             texCollection.adventureTiles[4] = Content.Load<Texture2D>("dungeon4");
             texCollection.adventureTiles[5] = Content.Load<Texture2D>("dungeon5");
 
-            // Load sound effects (made in sfxr)
-            PlaySound.die = Content.Load<SoundEffect>("die");
-            PlaySound.aspect = Content.Load<SoundEffect>("aspect");
-            PlaySound.jump = Content.Load<SoundEffect>("jump");
-            PlaySound.enter = Content.Load<SoundEffect>("enter");
-            PlaySound.hurt = Content.Load<SoundEffect>("hurt");
-            PlaySound.drown = Content.Load<SoundEffect>("drown");
-            PlaySound.key = Content.Load<SoundEffect>("key");
-            PlaySound.pew = Content.Load<SoundEffect>("pew");
-            PlaySound.boom = Content.Load<SoundEffect>("boom");
-            PlaySound.leave = Content.Load<SoundEffect>("leave");
-            PlaySound.pause = Content.Load<SoundEffect>("pause");
-            PlaySound.special = Content.Load<SoundEffect>("computer");
-            PlaySound.Initialize();
+            // Load sound effects (made in sfxr) and songs
+            PlaySound.Initialize(Content);
+            PlaySong.Initialize(Content);
 
             // Load title screen
             currentScreen = new TitleScreen(this);

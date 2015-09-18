@@ -140,6 +140,7 @@ namespace aspectstar2
                     if (destx != -1 && desty != -1)
                         currentMap.LocalTeleport(destx, desty);
                     master.UpdateScreen(currentMap);
+                    PlaySong.Play(PlaySong.SongName.WorldMap);
                     currentAdventure = null;
                 }
                 else

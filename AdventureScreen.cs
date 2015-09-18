@@ -665,6 +665,11 @@ namespace aspectstar2
                 objects.Add(aO);
             }
 
+            if (newRoom.music != -1)
+                PlaySong.Play((PlaySong.SongName)newRoom.music);
+            else
+                PlaySong.Play((PlaySong.SongName)adventure.music);
+
             // Run room code
             ActivateScript();
         }

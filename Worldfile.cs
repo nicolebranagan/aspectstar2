@@ -30,6 +30,7 @@ namespace aspectstar2
     public class Adventure
     {
         public int tileset;
+        public int music = -1;
         public int[] key;
         public Room templateRoom;
         public string name = "DUNGEON";
@@ -70,6 +71,7 @@ namespace aspectstar2
         {
             Adventure newAdv = new Adventure();
             newAdv.tileset = tileset;
+            newAdv.music = music;
             newAdv.name = name.ToUpper();
             newAdv.key = new int[key.Length];
             key.CopyTo(newAdv.key, 0);
@@ -87,6 +89,7 @@ namespace aspectstar2
 
     public class Room
     {
+        public int music;
         public int[] tileMap;
         public List<StoredObject> storedObjects;
         public List<AdventureObject> adventureObjects;
@@ -97,6 +100,7 @@ namespace aspectstar2
         {
             Room newRoom = new Room();
 
+            newRoom.music = music;
             newRoom.tileMap = new int[tileMap.Length];
             tileMap.CopyTo(newRoom.tileMap, 0);
 

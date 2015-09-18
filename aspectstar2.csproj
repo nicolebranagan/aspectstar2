@@ -51,6 +51,7 @@
     <Compile Include="AdventureScreen.cs" />
     <Compile Include="BestiaryEntry.cs" />
     <Compile Include="PauseScreen.cs" />
+    <Compile Include="PlaySong.cs" />
     <Compile Include="PlaySound.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="MapObject.cs" />

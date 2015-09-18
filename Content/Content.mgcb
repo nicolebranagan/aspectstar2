@@ -305,3 +305,63 @@
 /processorParam:Quality=Best
 /build:computer.wav
 
+#begin music_visager14.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:music_visager14.mp3
+
+#begin music_visager02.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:music_visager02.mp3
+
+#begin music_visager03.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:music_visager03.mp3
+
+#begin music_visager04.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:music_visager04.mp3
+
+#begin music_visager06.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:music_visager06.mp3
+
+#begin music_visager07.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:music_visager07.mp3
+
+#begin music_visager08.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:music_visager08.mp3
+
+#begin music_visager09.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:music_visager09.mp3
+
+#begin music_visager10.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:music_visager10.mp3
+
+#begin music_visager11.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:music_visager11.mp3
+

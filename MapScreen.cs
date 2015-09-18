@@ -57,6 +57,7 @@ namespace aspectstar2
             objects = Master.currentFile.map.objects;
             foreach (MapObject obj in objects)
                 obj.Initialize(this, game);
+            PlaySong.Play(PlaySong.SongName.WorldMap);
 
             player.location = new Vector2(Master.currentFile.map.startX * 32, Master.currentFile.map.startY * 32);
         }

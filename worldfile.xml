@@ -10236,6 +10236,7 @@
   </map>
   <adventures>
     <Adventure>
+      <music>6</music>
       <tileset>0</tileset>
       <key>
         <int>0</int>
@@ -10633,6 +10634,7 @@
         </tileMap>
         <storedObjects />
         <dark>false</dark>
+        <music>-1</music>
       </templateRoom>
       <name>Flooded Fort</name>
       <xmlRooms>
@@ -11148,6 +11150,7 @@
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -11555,6 +11558,7 @@ clearObjects();
 }
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -11970,6 +11974,7 @@ clearObjects();
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -12343,6 +12348,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -12674,6 +12680,7 @@ function hurt() { }</code>
           </tileMap>
           <storedObjects />
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -13091,6 +13098,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -13508,6 +13516,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -13908,6 +13917,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -14304,6 +14314,7 @@ function hurt() { }</code>
           <code>function onLoad() { }
 function update() { }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -14704,6 +14715,7 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -15104,6 +15116,7 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -15435,6 +15448,7 @@ function update() { }</code>
           </tileMap>
           <storedObjects />
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -15835,6 +15849,7 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -16259,6 +16274,7 @@ setFlag('arrowroom', true);
 }
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -16644,6 +16660,7 @@ function onLoad() {
 function update() {
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -17147,6 +17164,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -17513,6 +17531,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -17930,6 +17949,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -18330,6 +18350,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -18725,6 +18746,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -19076,6 +19098,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -19090,6 +19113,7 @@ function hurt() { }</code>
       </xmlRooms>
     </Adventure>
     <Adventure>
+      <music>-1</music>
       <tileset>1</tileset>
       <key>
         <int>0</int>
@@ -19487,6 +19511,7 @@ function hurt() { }</code>
         </tileMap>
         <storedObjects />
         <dark>false</dark>
+        <music>-1</music>
       </templateRoom>
       <name>Town</name>
       <xmlRooms>
@@ -19919,6 +19944,7 @@ function hurt() { }</code>
           </tileMap>
           <storedObjects />
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -20264,6 +20290,7 @@ function hurt() { }</code>
           </tileMap>
           <storedObjects />
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -20595,6 +20622,7 @@ function hurt() { }</code>
           </tileMap>
           <storedObjects />
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -20941,6 +20969,7 @@ function hurt() { }</code>
           </tileMap>
           <storedObjects />
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -21407,6 +21436,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -21764,6 +21794,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -22171,6 +22202,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -22528,6 +22560,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -22571,6 +22604,7 @@ function hurt() { }</code>
       </xmlRooms>
     </Adventure>
     <Adventure>
+      <music>-1</music>
       <tileset>0</tileset>
       <key>
         <int>0</int>
@@ -22968,6 +23002,7 @@ function hurt() { }</code>
         </tileMap>
         <storedObjects />
         <dark>false</dark>
+        <music>-1</music>
       </templateRoom>
       <name />
       <xmlRooms>
@@ -23466,6 +23501,7 @@ setFlag("cave4",true);
 }
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -23851,6 +23887,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -24326,6 +24363,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -24825,6 +24863,7 @@ setFlag("cave1", true);
 }
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -25310,6 +25349,7 @@ setFlag("cave1", true);
           <code>function onLoad() { }
 function update() { }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -25732,6 +25772,7 @@ TextBox("A DANGEROUS ANSWER");
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -26215,6 +26256,7 @@ setFlag("cave1", true);
 }
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -26246,6 +26288,7 @@ setFlag("cave1", true);
       </xmlRooms>
     </Adventure>
     <Adventure>
+      <music>9</music>
       <tileset>2</tileset>
       <key>
         <int>0</int>
@@ -26643,6 +26686,7 @@ setFlag("cave1", true);
         </tileMap>
         <storedObjects />
         <dark>false</dark>
+        <music>-1</music>
       </templateRoom>
       <name>Lava Lab</name>
       <xmlRooms>
@@ -27167,6 +27211,7 @@ setFlag("cave1", true);
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -27584,6 +27629,7 @@ setFlag("cave1", true);
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room>
@@ -27951,6 +27997,7 @@ setFlag("cave1", true);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -28322,6 +28369,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -28773,6 +28821,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -29224,6 +29273,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room>
@@ -29629,6 +29679,7 @@ clearObjects();
 }
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -30041,6 +30092,7 @@ clearObjects();
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -30484,6 +30536,7 @@ overwriteTile(6,5,18);
 }
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -30952,6 +31005,7 @@ overwriteTile(6,5,18);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -31369,6 +31423,7 @@ overwriteTile(6,5,18);
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -31827,6 +31882,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -32227,6 +32283,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -32644,6 +32701,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -32781,6 +32839,7 @@ function hurt() { }</code>
       </xmlRooms>
     </Adventure>
     <Adventure>
+      <music>-1</music>
       <tileset>3</tileset>
       <key>
         <int>0</int>
@@ -33178,6 +33237,7 @@ function hurt() { }</code>
         </tileMap>
         <storedObjects />
         <dark>false</dark>
+        <music>-1</music>
       </templateRoom>
       <name>Fantasy Forest</name>
       <xmlRooms>
@@ -33683,6 +33743,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -34151,6 +34212,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -34551,6 +34613,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -34965,6 +35028,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -35467,6 +35531,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -35806,6 +35871,7 @@ function hurt() { }</code>
           </tileMap>
           <storedObjects />
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -36223,6 +36289,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room>
@@ -36726,6 +36793,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room>
@@ -37127,6 +37195,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room>
@@ -37545,6 +37614,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -37982,6 +38052,7 @@ setFlag("room2b", true);
 }
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -38406,6 +38477,7 @@ clearObjects();
 }
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -38737,6 +38809,7 @@ clearObjects();
           </tileMap>
           <storedObjects />
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -39137,6 +39210,7 @@ clearObjects();
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -39520,6 +39594,7 @@ clearObjects();
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -39869,6 +39944,7 @@ clearObjects();
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -40200,6 +40276,7 @@ clearObjects();
           </tileMap>
           <storedObjects />
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -40636,6 +40713,7 @@ clearObjects();
           <code>function onLoad() { }
 function update() { }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -41064,6 +41142,7 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room>
@@ -41456,6 +41535,7 @@ setFlag("1lock", true);
 }
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -41838,6 +41918,7 @@ setFlag("torchwood", true);
 }
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -42221,6 +42302,7 @@ setFlag("torchwood", true);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -42596,6 +42678,7 @@ setFlag("2locks", true);
 }
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -42962,6 +43045,7 @@ setFlag("2locks", true);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -43362,6 +43446,7 @@ setFlag("2locks", true);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -43723,6 +43808,7 @@ setFlag("2locks", true);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room>
@@ -44132,6 +44218,7 @@ spawnKey(12,7);
 }
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -44157,6 +44244,7 @@ spawnKey(12,7);
       </xmlRooms>
     </Adventure>
     <Adventure>
+      <music>-1</music>
       <tileset>0</tileset>
       <key>
         <int>0</int>
@@ -44554,6 +44642,7 @@ spawnKey(12,7);
         </tileMap>
         <storedObjects />
         <dark>false</dark>
+        <music>-1</music>
       </templateRoom>
       <name>Gloomy Garrison</name>
       <xmlRooms>
@@ -45055,6 +45144,7 @@ spawnKey(12,7);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -45477,6 +45567,7 @@ spawnKey(12,4);
 }
 }</code>
           <dark>true</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room>
@@ -45896,6 +45987,7 @@ clearObjects();
 }
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -46270,6 +46362,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -46650,6 +46743,7 @@ overwriteTile(0,10,13);
 }
 }</code>
           <dark>true</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -47010,6 +47104,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room>
@@ -47422,6 +47517,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -47822,6 +47918,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -48222,6 +48319,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -48690,6 +48788,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -49099,6 +49198,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -49517,6 +49617,7 @@ setFlag("2ghosthall",true);
 }
 }</code>
           <dark>true</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -49878,6 +49979,7 @@ setFlag("2ghosthall",true);
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -50329,6 +50431,7 @@ setFlag("2ghosthall",true);
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -50787,6 +50890,7 @@ spawnKey(12,7);
 }
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -51136,6 +51240,7 @@ spawnKey(12,7);
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -51508,6 +51613,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room>
@@ -51954,6 +52060,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -52350,6 +52457,7 @@ playSoundEffect(1);
           <code>function onLoad() { }
 function update() { }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -52381,6 +52489,7 @@ function update() { }</code>
       </xmlRooms>
     </Adventure>
     <Adventure>
+      <music>-1</music>
       <tileset>3</tileset>
       <key>
         <int>0</int>
@@ -52778,6 +52887,7 @@ function update() { }</code>
         </tileMap>
         <storedObjects />
         <dark>false</dark>
+        <music>-1</music>
       </templateRoom>
       <name>Forest Path</name>
       <xmlRooms>
@@ -53410,6 +53520,7 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -53912,6 +54023,7 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -54359,6 +54471,7 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -54912,6 +55025,7 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -55394,6 +55508,7 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -55443,6 +55558,7 @@ function update() { }</code>
       </xmlRooms>
     </Adventure>
     <Adventure>
+      <music>-1</music>
       <tileset>4</tileset>
       <key>
         <int>0</int>
@@ -55840,6 +55956,7 @@ function update() { }</code>
         </tileMap>
         <storedObjects />
         <dark>false</dark>
+        <music>-1</music>
       </templateRoom>
       <name>Aspect Alley</name>
       <xmlRooms>
@@ -56327,6 +56444,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -56812,6 +56930,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -57237,6 +57356,7 @@ playSoundEffect(0);
 }
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -57748,6 +57868,7 @@ clearObjects();
 }
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -58303,6 +58424,7 @@ overwriteTile(13,3,0);
 }
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room>
@@ -58653,6 +58775,7 @@ overwriteTile(13,3,0);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -59168,6 +59291,7 @@ overwriteTile(13,3,0);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -59563,6 +59687,7 @@ overwriteTile(13,3,0);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -60004,6 +60129,7 @@ setFlag("roomupup", true);
 }
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -60513,6 +60639,7 @@ spawnKey(12,4);
 }
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -60896,6 +61023,7 @@ spawnKey(12,4);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -61399,6 +61527,7 @@ spawnKey(12,4);
 }
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room>
@@ -61817,6 +61946,7 @@ spawnKey(12,4);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room>
@@ -62277,6 +62407,7 @@ setFlag("noseRoom", true);
 }
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -62671,6 +62802,7 @@ setFlag("noseRoom", true);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -63112,6 +63244,7 @@ spawnKey(14,5);
 }
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -63571,6 +63704,7 @@ spawnKey(14,8);
 }
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -64080,6 +64214,7 @@ setFlag("room5", true);
 }
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -64488,6 +64623,7 @@ setFlag("room5right", true);
 }
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -64832,6 +64968,7 @@ setFlag("room5right", true);
           </tileMap>
           <storedObjects />
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -64876,6 +65013,7 @@ setFlag("room5right", true);
       </xmlRooms>
     </Adventure>
     <Adventure>
+      <music>-1</music>
       <tileset>5</tileset>
       <key>
         <int>0</int>
@@ -65273,6 +65411,7 @@ setFlag("room5right", true);
         </tileMap>
         <storedObjects />
         <dark>false</dark>
+        <music>-1</music>
       </templateRoom>
       <name>Railway Rampage</name>
       <xmlRooms>
@@ -65807,6 +65946,7 @@ setFlag("room5right", true);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -66253,6 +66393,7 @@ setFlag("room5right", true);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -66648,6 +66789,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -67107,6 +67249,7 @@ playSoundEffect(1);
 }
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -67600,6 +67743,7 @@ setFlag("room4", true);
 }
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -67763,11 +67907,11 @@ setFlag("room4", true);
             <int>0</int>
             <int>7</int>
             <int>7</int>
-            <int>9</int>
-            <int>9</int>
+            <int>8</int>
+            <int>8</int>
             <int>7</int>
-            <int>9</int>
-            <int>9</int>
+            <int>8</int>
+            <int>8</int>
             <int>7</int>
             <int>7</int>
             <int>0</int>
@@ -67931,31 +68075,6 @@ setFlag("room4", true);
           </tileMap>
           <storedObjects>
             <StoredObject>
-              <x>624</x>
-              <y>144</y>
-              <type>entity</type>
-              <enemyType>0</enemyType>
-              <data>
-                <name>passenger</name>
-                <code>function onLoad() { }
-function update() { }
-function inRange() { }
-function touch() {
-TextBox("SOME KIND OF RABBIT CAUSING TROUBLE AHEAD");
-}
-function hurt() { }</code>
-                <graphics>2</graphics>
-                <gfxtype>Characters</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>0</key>
-            </StoredObject>
-            <StoredObject>
               <x>176</x>
               <y>208</y>
               <type>enemy</type>
@@ -67972,8 +68091,34 @@ function hurt() { }</code>
               <screen>0</screen>
               <key>0</key>
             </StoredObject>
+            <StoredObject>
+              <x>624</x>
+              <y>144</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>passenger</name>
+                <code>function onLoad() { }
+function update() { }
+function inRange() { }
+function touch() {
+TextBox("SOME KIND OF MOUSE CAUSING TROUBLE AHEAD");
+}
+function hurt() { }</code>
+                <graphics>2</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -68415,6 +68560,7 @@ clearObjects();
 }
 }</code>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room>
           <tileMap>
@@ -68746,6 +68892,7 @@ clearObjects();
           </tileMap>
           <storedObjects />
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -68871,6 +69018,7 @@ clearObjects();
       </xmlRooms>
     </Adventure>
     <Adventure>
+      <music>-1</music>
       <tileset>2</tileset>
       <key>
         <int>0</int>
@@ -69268,6 +69416,7 @@ clearObjects();
         </tileMap>
         <storedObjects />
         <dark>false</dark>
+        <music>-1</music>
       </templateRoom>
       <name>Techno Terror</name>
       <xmlRooms>
@@ -69913,6 +70062,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -69956,6 +70106,7 @@ function hurt() { }</code>
       </xmlRooms>
     </Adventure>
     <Adventure>
+      <music>-1</music>
       <tileset>3</tileset>
       <key>
         <int>0</int>
@@ -70353,6 +70504,7 @@ function hurt() { }</code>
         </tileMap>
         <storedObjects />
         <dark>false</dark>
+        <music>-1</music>
       </templateRoom>
       <name>Lost Labyrinth</name>
       <xmlRooms>
@@ -71019,6 +71171,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -71400,6 +71553,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />

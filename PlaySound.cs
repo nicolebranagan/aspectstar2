@@ -1,25 +1,27 @@
 ﻿using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.Xna.Framework.Media;
 
 namespace aspectstar2
 {
     public static class PlaySound
     {
-        public static SoundEffect die;
-        public static SoundEffect aspect;
-        public static SoundEffect jump;
-        public static SoundEffect hurt;
-        public static SoundEffect enter;
-        public static SoundEffect drown;
-        public static SoundEffect key;
-        public static SoundEffect boom;
-        public static SoundEffect pew;
-        public static SoundEffect leave;
-        public static SoundEffect pause;
-        public static SoundEffect special;
+        static SoundEffect die;
+        static SoundEffect aspect;
+        static SoundEffect jump;
+        static SoundEffect hurt;
+        static SoundEffect enter;
+        static SoundEffect drown;
+        static SoundEffect key;
+        static SoundEffect boom;
+        static SoundEffect pew;
+        static SoundEffect leave;
+        static SoundEffect pause;
+        static SoundEffect special;
 
         static SoundEffectInstance hurtInst;
         static SoundEffectInstance jumpInst;
@@ -27,8 +29,21 @@ namespace aspectstar2
         static SoundEffectInstance keysInst;
         static SoundEffectInstance pewwInst;
 
-        public static void Initialize()
+        public static void Initialize(Microsoft.Xna.Framework.Content.ContentManager Content)
         {
+            PlaySound.die = Content.Load<SoundEffect>("die");
+            PlaySound.aspect = Content.Load<SoundEffect>("aspect");
+            PlaySound.jump = Content.Load<SoundEffect>("jump");
+            PlaySound.enter = Content.Load<SoundEffect>("enter");
+            PlaySound.hurt = Content.Load<SoundEffect>("hurt");
+            PlaySound.drown = Content.Load<SoundEffect>("drown");
+            PlaySound.key = Content.Load<SoundEffect>("key");
+            PlaySound.pew = Content.Load<SoundEffect>("pew");
+            PlaySound.boom = Content.Load<SoundEffect>("boom");
+            PlaySound.leave = Content.Load<SoundEffect>("leave");
+            PlaySound.pause = Content.Load<SoundEffect>("pause");
+            PlaySound.special = Content.Load<SoundEffect>("computer");
+
             hurtInst = hurt.CreateInstance();
             jumpInst = jump.CreateInstance();
             drowInst = drown.CreateInstance();
@@ -91,6 +106,7 @@ namespace aspectstar2
         public static void Leave()
         {
             leave.Play();
+            MediaPlayer.Stop();
         }
 
         public static void Pause()

@@ -65,6 +65,7 @@ namespace aspectstar2
         public TitleScreen(Master master)
         {
             this.master = master;
+            PlaySong.Play(PlaySong.SongName.Title);
         }
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
