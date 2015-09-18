@@ -51,7 +51,7 @@ namespace aspectstar2
             {
                 if (game.goldKeys > 0)
                 {
-                    PlaySound.Aspect();
+                    PlaySound.Play(PlaySound.SoundEffectName.Aspect);
                     game.goldKeys = game.goldKeys - 1;
                     active = false;
                     parent.ChangeTile(x, y, tile);

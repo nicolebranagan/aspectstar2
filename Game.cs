@@ -126,7 +126,7 @@ namespace aspectstar2
             aS.fromMap = true;
             currentAdventure = aS;
             master.UpdateScreen(aS);
-            PlaySound.Enter();
+            PlaySound.Play(PlaySound.SoundEffectName.Enter);
         }
 
         public void exitAdventure(bool beat, int dest, int destroomX, int destroomY, int destx, int desty)
@@ -150,7 +150,7 @@ namespace aspectstar2
                     aS.fromMap = false;
                     currentAdventure = aS;
                     master.UpdateScreen(aS);
-                    PlaySound.Enter();
+                    PlaySound.Play(PlaySound.SoundEffectName.Enter);
                 }
 
                 if (life == 0)

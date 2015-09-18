@@ -39,7 +39,7 @@ namespace aspectstar2
             set
             {
                 if (torchCount == 0)
-                    PlaySound.Aspect();
+                    PlaySound.Play(PlaySound.SoundEffectName.Aspect);
                 torchCount += 900;
             }
         }
@@ -187,7 +187,8 @@ namespace aspectstar2
             tileType tile = (tileType)key[tileMap[i]];
             if (tile == tileType.Warp)
             {
-                PlaySound.Leave();
+                PlaySound.Play(PlaySound.SoundEffectName.Leave);
+                PlaySong.Play(PlaySong.SongName.None);
                 leaver = x => game.warpAdventure(x);
                 currentMode = adventureModes.fadeOut;
                 animCount = 250;
@@ -197,7 +198,7 @@ namespace aspectstar2
                 if (game.life != game.possibleLife)
                 {
                     game.life = game.possibleLife;
-                    PlaySound.Aspect();
+                    PlaySound.Play(PlaySound.SoundEffectName.Aspect);
                     tileMap[i] = 0;
                 }
             }
@@ -211,7 +212,7 @@ namespace aspectstar2
                 if (Keys > 0)
                 {
                     Keys--;
-                    PlaySound.Aspect();
+                    PlaySound.Play(PlaySound.SoundEffectName.Aspect);
                     tileMap[i] = 0;
                 }
             }
@@ -248,7 +249,7 @@ namespace aspectstar2
             if ((tileType)key[tileMap[i]] == tileType.Wood)
             {
                 tileMap[i] = 0;
-                PlaySound.Boom();
+                PlaySound.Play(PlaySound.SoundEffectName.Boom);
             }
         }
 
@@ -293,7 +294,7 @@ namespace aspectstar2
         {
             animCount = 24;
             currentMode = adventureModes.drowning;
-            PlaySound.Drown();
+            PlaySound.Play(PlaySound.SoundEffectName.Drown);
             //objects.RemoveAll(isProjectile);
         }
 
@@ -734,7 +735,7 @@ namespace aspectstar2
             else if (torchCount == 1)
             {
                 torchCount = 0;
-                PlaySound.Boom();
+                PlaySound.Play(PlaySound.SoundEffectName.Boom);
             }
 
             foreach (AdventureObject obj in this.objects)
@@ -808,7 +809,7 @@ namespace aspectstar2
         {
             animCount = 250;
             currentMode = adventureModes.deathFade;
-            PlaySound.Die();
+            PlaySound.Play(PlaySound.SoundEffectName.Die);
         }
 
         public void addObject(AdventureObject obj)
@@ -847,12 +848,12 @@ namespace aspectstar2
             leaver = x => game.exitAdventure(x, dest, destroomX, destroomY, destx, desty);
             currentMode = adventureModes.fadeOut;
             animCount = 250;
-            PlaySound.Leave();
+            PlaySound.Play(PlaySound.SoundEffectName.Leave);
         }
 
         public void enterSpecialStage(int screen, int key)
         {
-            PlaySound.Special();
+            PlaySound.Play(PlaySound.SoundEffectName.Special);
             leaver = x => game.enterSpecialStageFromAdventure(screen, key);
             currentMode = adventureModes.fadeOut;
             animCount = 250;
@@ -922,8 +923,8 @@ namespace aspectstar2
             aK.location.Y = 32 * y + 16;
             newobjects.Add(aK);
             adventure.rooms[roomX, roomY].adventureObjects.Add(aK); // So that the key respawns even if you leave the room, but not the adventure
-            PlaySound.Aspect();
-            
+            PlaySound.Play(PlaySound.SoundEffectName.Aspect);
+
         }
 
         void OverwriteTile(int x, int y, int newTile)
@@ -936,6 +937,8 @@ namespace aspectstar2
 
         void PlaySoundEffect(int i)
         {
+            PlaySound.Play((PlaySound.SoundEffectName)i);
+            /*
             switch (i)
             {
                 case 0:
@@ -944,7 +947,7 @@ namespace aspectstar2
                 case 1:
                     PlaySound.Boom();
                     break;
-            }
+            }*/
         }
 
         bool AnyEnemies()

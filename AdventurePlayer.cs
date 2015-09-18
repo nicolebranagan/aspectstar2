@@ -63,7 +63,7 @@ namespace aspectstar2
         public override void Jump()
         {
             if (z == 0)
-                PlaySound.Jump();
+                PlaySound.Play(PlaySound.SoundEffectName.Jump);
             base.Jump();
         }
 
@@ -73,7 +73,7 @@ namespace aspectstar2
             {
                 game.life = game.life - 1;
                 Flicker();
-                PlaySound.Hurt();
+                PlaySound.Play(PlaySound.SoundEffectName.Hurt);
             }
 
             if (game.life <= 0)

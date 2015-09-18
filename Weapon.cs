@@ -133,7 +133,7 @@ namespace aspectstar2
                 AdventureProjectile proj = new AdventureProjectile(true, player.faceDir, location, 30);
                 screen.addObject(proj);
                 cooldown = 30;
-                PlaySound.Pew();
+                PlaySound.Play(PlaySound.SoundEffectName.Pew);
             }
         }
 
@@ -183,7 +183,7 @@ namespace aspectstar2
                 game.life = game.life + 2;
                 if (game.life > game.possibleLife)
                     game.life = game.possibleLife;
-                PlaySound.Aspect();
+                PlaySound.Play(PlaySound.SoundEffectName.Aspect);
                 count--;
                 lag = 20;
 
@@ -232,7 +232,7 @@ namespace aspectstar2
 
         public TorchWeapon()
         {
-            count = 6;
+            count = 5;
         }
 
         public TorchWeapon(int count)
@@ -242,7 +242,7 @@ namespace aspectstar2
 
         public override void Extra(Weapon weapon)
         {
-            count = count + 6;
+            count = count + 5;
         }
 
         public override void Activate(AdventurePlayer player, AdventureScreen screen, Game game)
@@ -254,7 +254,7 @@ namespace aspectstar2
                 screen.lit = true;
                 count = count - 1;
                 if (!screen.lit)
-                    PlaySound.Aspect();
+                    PlaySound.Play(PlaySound.SoundEffectName.Aspect);
             }
         }
 
@@ -288,7 +288,7 @@ namespace aspectstar2
                 AdventureProjectile proj = AdventureProjectile.getFieryProjectile(true, player.faceDir, location, 20);
                 screen.addObject(proj);
                 cooldown = 30;
-                PlaySound.Pew();
+                PlaySound.Play(PlaySound.SoundEffectName.Pew);
             }
         }
 
@@ -317,7 +317,7 @@ namespace aspectstar2
                 AdventureProjectile proj = AdventureProjectile.getGhostlyProjectile(true, player.faceDir, location, 20);
                 screen.addObject(proj);
                 cooldown = 30;
-                PlaySound.Pew();
+                PlaySound.Play(PlaySound.SoundEffectName.Pew);
             }
         }
 

@@ -37,7 +37,6 @@ namespace aspectstar2
 
         public static void Initialize(Microsoft.Xna.Framework.Content.ContentManager Content)
         {
-            MediaPlayer.Volume = 0.3f;
             try
             {
                 Songs[SongName.WorldMap] = Content.Load<Song>("music_visager14");
@@ -67,6 +66,8 @@ namespace aspectstar2
                 {
                     MediaPlayer.Play(Songs[song]);
                 }
+                MediaPlayer.Volume = 0.6f;
+                MediaPlayer.IsRepeating = true;
             }
         }
     }

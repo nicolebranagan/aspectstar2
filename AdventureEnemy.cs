@@ -171,7 +171,7 @@ namespace aspectstar2
 
             if (ghostly == ghost && this.flickerCount == 0)
             {
-                PlaySound.Boom();
+                PlaySound.Play(PlaySound.SoundEffectName.Boom);
                 health = health - 1;
                 flickerCount = 40;
                 if (health == 0)

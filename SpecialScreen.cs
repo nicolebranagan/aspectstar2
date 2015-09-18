@@ -79,7 +79,7 @@ namespace aspectstar2
                 {
                     if (value == SpecialModes.Paused)
                     {
-                        PlaySound.Pause();
+                        PlaySound.Play(PlaySound.SoundEffectName.Pause);
                     }
                     _currentMode = value;
                     modeLag = 20;
@@ -301,7 +301,7 @@ namespace aspectstar2
                     if (Master.controls.A && lag == 0)
                     {
                         newobjects.Add(new SpecialProjectile(this, player.location - new Vector2(0, 2), new Vector2(0, -4), true));
-                        PlaySound.Pew();
+                        PlaySound.Play(PlaySound.SoundEffectName.Pew);
                         lag = 10;
                     }
 
@@ -358,7 +358,7 @@ namespace aspectstar2
             else
                 introText[1] = "YOU HAVE WON";
 
-            PlaySound.Aspect();
+            PlaySound.Play(PlaySound.SoundEffectName.Aspect);
         }
 
         void Die()

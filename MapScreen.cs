@@ -206,7 +206,7 @@ namespace aspectstar2
                             currentMode = mapModes.menuMode;
                             saved = false;
                             controlLag = 20;
-                            PlaySound.Pause();
+                            PlaySound.Play(PlaySound.SoundEffectName.Pause);
                         }
                     }
                     break;

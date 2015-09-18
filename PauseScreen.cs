@@ -20,7 +20,7 @@ namespace aspectstar2
         {
             this.screen = screen;
             this.game = game;
-            PlaySound.Pause();
+            PlaySound.Play(PlaySound.SoundEffectName.Pause);
         }
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)

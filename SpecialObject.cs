@@ -82,7 +82,7 @@ namespace aspectstar2
         public override bool Hurt()
         {
             parent.addObject(new SpecialExplosion(location));
-            PlaySound.Die();
+            PlaySound.Play(PlaySound.SoundEffectName.Die);
             base.Hurt();
             return false;
         }
@@ -225,7 +225,7 @@ namespace aspectstar2
         public override bool Hurt()
         {
             parent.addObject(new SpecialExplosion(location));
-            PlaySound.Boom();
+            PlaySound.Play(PlaySound.SoundEffectName.Boom);
             base.Hurt();
             parent.killCount = parent.killCount - 1;
             return true;

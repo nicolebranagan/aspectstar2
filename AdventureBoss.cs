@@ -132,14 +132,14 @@ namespace aspectstar2
                 else if (!aboveWater && Master.globalRandom.Next(30) < 5)
                 {
                     aboveWater = true;
-                    PlaySound.Pew();
+                    PlaySound.Play(PlaySound.SoundEffectName.Pew);
                 }
 
                 if (aboveWater && Master.globalRandom.Next(60) < 2)
                 {
                     var aP = new AdventureProjectile(false, Master.Directions.Down, location, 300);
                     parent.addObject(aP);
-                    PlaySound.Pew();
+                    PlaySound.Play(PlaySound.SoundEffectName.Pew);
                 }
             }
         }
@@ -206,7 +206,7 @@ namespace aspectstar2
                     bunny.location = new Vector2(location.X, location.Y - 2);
                     bunny.faceDir = faceDir;
                     parent.addObject(bunny);
-                    PlaySound.Aspect();
+                    PlaySound.Play(PlaySound.SoundEffectName.Aspect);
                 }
             }
 
@@ -287,7 +287,7 @@ namespace aspectstar2
             get { return _aspect; }
             set
             {
-                PlaySound.Aspect();
+                PlaySound.Play(PlaySound.SoundEffectName.Aspect);
                 _aspect = value;
                 switch (value)
                 {

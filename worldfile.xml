@@ -2109,7 +2109,7 @@
       <int>7</int>
       <int>16</int>
       <int>12</int>
-      <int>12</int>
+      <int>37</int>
       <int>37</int>
       <int>12</int>
       <int>36</int>
@@ -2209,7 +2209,7 @@
       <int>1</int>
       <int>12</int>
       <int>12</int>
-      <int>12</int>
+      <int>36</int>
       <int>36</int>
       <int>37</int>
       <int>36</int>
@@ -2309,7 +2309,7 @@
       <int>0</int>
       <int>12</int>
       <int>37</int>
-      <int>12</int>
+      <int>36</int>
       <int>35</int>
       <int>35</int>
       <int>35</int>
@@ -2409,7 +2409,7 @@
       <int>37</int>
       <int>37</int>
       <int>36</int>
-      <int>12</int>
+      <int>36</int>
       <int>0</int>
       <int>0</int>
       <int>0</int>
@@ -2509,7 +2509,7 @@
       <int>36</int>
       <int>36</int>
       <int>35</int>
-      <int>12</int>
+      <int>36</int>
       <int>0</int>
       <int>12</int>
       <int>37</int>
@@ -2609,7 +2609,7 @@
       <int>36</int>
       <int>35</int>
       <int>12</int>
-      <int>12</int>
+      <int>35</int>
       <int>0</int>
       <int>12</int>
       <int>36</int>
@@ -2724,7 +2724,7 @@
       <int>0</int>
       <int>12</int>
       <int>6</int>
-      <int>13</int>
+      <int>38</int>
       <int>0</int>
       <int>0</int>
       <int>0</int>
@@ -11558,7 +11558,7 @@ clearObjects();
 }
 }</code>
           <dark>false</dark>
-          <music>-1</music>
+          <music>4</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -12348,7 +12348,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
-          <music>-1</music>
+          <music>5</music>
         </Room>
         <Room>
           <tileMap>
@@ -12680,7 +12680,7 @@ function hurt() { }</code>
           </tileMap>
           <storedObjects />
           <dark>false</dark>
-          <music>-1</music>
+          <music>5</music>
         </Room>
         <Room>
           <tileMap>
@@ -16900,11 +16900,11 @@ function update() {
             <int>11</int>
             <int>11</int>
             <int>11</int>
+            <int>29</int>
             <int>0</int>
+            <int>29</int>
             <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
+            <int>29</int>
             <int>11</int>
             <int>11</int>
             <int>11</int>
@@ -19098,7 +19098,7 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
-          <music>-1</music>
+          <music>5</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -19113,7 +19113,7 @@ function hurt() { }</code>
       </xmlRooms>
     </Adventure>
     <Adventure>
-      <music>-1</music>
+      <music>2</music>
       <tileset>1</tileset>
       <key>
         <int>0</int>
@@ -22604,7 +22604,7 @@ function hurt() { }</code>
       </xmlRooms>
     </Adventure>
     <Adventure>
-      <music>-1</music>
+      <music>6</music>
       <tileset>0</tileset>
       <key>
         <int>0</int>
@@ -25369,13 +25369,13 @@ function update() { }</code>
             <int>19</int>
             <int>19</int>
             <int>19</int>
-            <int>19</int>
-            <int>19</int>
-            <int>19</int>
-            <int>19</int>
-            <int>19</int>
-            <int>19</int>
-            <int>19</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
             <int>19</int>
             <int>19</int>
             <int>19</int>
@@ -25395,11 +25395,11 @@ function update() { }</code>
             <int>21</int>
             <int>19</int>
             <int>19</int>
-            <int>19</int>
-            <int>19</int>
-            <int>19</int>
-            <int>19</int>
-            <int>19</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
             <int>19</int>
             <int>19</int>
             <int>21</int>
@@ -25420,11 +25420,11 @@ function update() { }</code>
             <int>21</int>
             <int>21</int>
             <int>19</int>
-            <int>19</int>
-            <int>19</int>
-            <int>19</int>
-            <int>19</int>
-            <int>19</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
             <int>19</int>
             <int>21</int>
             <int>21</int>
@@ -25445,11 +25445,11 @@ function update() { }</code>
             <int>0</int>
             <int>21</int>
             <int>19</int>
-            <int>19</int>
-            <int>19</int>
-            <int>19</int>
-            <int>19</int>
-            <int>19</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
             <int>19</int>
             <int>21</int>
             <int>0</int>
@@ -26288,7 +26288,7 @@ setFlag("cave1", true);
       </xmlRooms>
     </Adventure>
     <Adventure>
-      <music>9</music>
+      <music>7</music>
       <tileset>2</tileset>
       <key>
         <int>0</int>
@@ -32839,7 +32839,7 @@ function hurt() { }</code>
       </xmlRooms>
     </Adventure>
     <Adventure>
-      <music>-1</music>
+      <music>8</music>
       <tileset>3</tileset>
       <key>
         <int>0</int>
@@ -44244,7 +44244,7 @@ spawnKey(12,7);
       </xmlRooms>
     </Adventure>
     <Adventure>
-      <music>-1</music>
+      <music>9</music>
       <tileset>0</tileset>
       <key>
         <int>0</int>
@@ -52489,7 +52489,7 @@ function update() { }</code>
       </xmlRooms>
     </Adventure>
     <Adventure>
-      <music>-1</music>
+      <music>8</music>
       <tileset>3</tileset>
       <key>
         <int>0</int>
@@ -55558,7 +55558,7 @@ function update() { }</code>
       </xmlRooms>
     </Adventure>
     <Adventure>
-      <music>-1</music>
+      <music>10</music>
       <tileset>4</tileset>
       <key>
         <int>0</int>
@@ -65013,7 +65013,7 @@ setFlag("room5right", true);
       </xmlRooms>
     </Adventure>
     <Adventure>
-      <music>-1</music>
+      <music>11</music>
       <tileset>5</tileset>
       <key>
         <int>0</int>
@@ -69018,7 +69018,7 @@ clearObjects();
       </xmlRooms>
     </Adventure>
     <Adventure>
-      <music>-1</music>
+      <music>12</music>
       <tileset>2</tileset>
       <key>
         <int>0</int>
@@ -69663,7 +69663,7 @@ clearObjects();
             <int>2</int>
             <int>2</int>
             <int>3</int>
-            <int>4</int>
+            <int>1</int>
             <int>1</int>
             <int>1</int>
             <int>1</int>
@@ -69687,8 +69687,8 @@ clearObjects();
             <int>1</int>
             <int>1</int>
             <int>1</int>
-            <int>4</int>
-            <int>4</int>
+            <int>1</int>
+            <int>1</int>
             <int>1</int>
             <int>1</int>
             <int>1</int>
@@ -69712,8 +69712,8 @@ clearObjects();
             <int>1</int>
             <int>1</int>
             <int>1</int>
-            <int>4</int>
-            <int>4</int>
+            <int>1</int>
+            <int>9</int>
             <int>9</int>
             <int>9</int>
             <int>9</int>
@@ -69737,8 +69737,24 @@ clearObjects();
             <int>9</int>
             <int>9</int>
             <int>9</int>
-            <int>4</int>
-            <int>4</int>
+            <int>9</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>18</int>
+            <int>18</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
             <int>8</int>
             <int>8</int>
             <int>8</int>
@@ -69752,22 +69768,6 @@ clearObjects();
             <int>8</int>
             <int>18</int>
             <int>18</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>4</int>
-            <int>4</int>
-            <int>8</int>
-            <int>8</int>
-            <int>18</int>
-            <int>18</int>
             <int>18</int>
             <int>18</int>
             <int>8</int>
@@ -69787,8 +69787,8 @@ clearObjects();
             <int>8</int>
             <int>8</int>
             <int>8</int>
-            <int>4</int>
-            <int>3</int>
+            <int>8</int>
+            <int>0</int>
             <int>8</int>
             <int>8</int>
             <int>18</int>
@@ -69812,9 +69812,9 @@ clearObjects();
             <int>8</int>
             <int>8</int>
             <int>8</int>
-            <int>3</int>
-            <int>18</int>
-            <int>18</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
             <int>18</int>
             <int>18</int>
             <int>8</int>
@@ -69836,10 +69836,10 @@ clearObjects();
             <int>18</int>
             <int>18</int>
             <int>18</int>
-            <int>18</int>
-            <int>18</int>
-            <int>3</int>
-            <int>8</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>9</int>
             <int>8</int>
             <int>8</int>
             <int>8</int>
@@ -69861,9 +69861,9 @@ clearObjects();
             <int>8</int>
             <int>8</int>
             <int>8</int>
-            <int>8</int>
-            <int>3</int>
-            <int>4</int>
+            <int>9</int>
+            <int>0</int>
+            <int>9</int>
             <int>8</int>
             <int>8</int>
             <int>8</int>
@@ -69887,8 +69887,8 @@ clearObjects();
             <int>8</int>
             <int>8</int>
             <int>8</int>
-            <int>4</int>
-            <int>4</int>
+            <int>9</int>
+            <int>8</int>
             <int>8</int>
             <int>8</int>
             <int>8</int>
@@ -69912,8 +69912,8 @@ clearObjects();
             <int>8</int>
             <int>8</int>
             <int>8</int>
-            <int>4</int>
-            <int>4</int>
+            <int>8</int>
+            <int>8</int>
             <int>8</int>
             <int>8</int>
             <int>8</int>
@@ -69937,32 +69937,32 @@ clearObjects();
             <int>8</int>
             <int>8</int>
             <int>8</int>
-            <int>4</int>
-            <int>3</int>
-            <int>2</int>
-            <int>2</int>
-            <int>2</int>
-            <int>2</int>
-            <int>2</int>
-            <int>2</int>
-            <int>2</int>
-            <int>2</int>
-            <int>2</int>
-            <int>2</int>
-            <int>2</int>
-            <int>2</int>
-            <int>2</int>
-            <int>2</int>
-            <int>2</int>
-            <int>2</int>
-            <int>2</int>
-            <int>2</int>
-            <int>2</int>
-            <int>2</int>
-            <int>2</int>
-            <int>2</int>
-            <int>2</int>
-            <int>3</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
           </tileMap>
           <storedObjects>
             <StoredObject>
@@ -70106,7 +70106,7 @@ function hurt() { }</code>
       </xmlRooms>
     </Adventure>
     <Adventure>
-      <music>-1</music>
+      <music>13</music>
       <tileset>3</tileset>
       <key>
         <int>0</int>

@@ -52,7 +52,7 @@ namespace aspectstar2
             {
                 active = false;
                 parent.Keys = parent.Keys + 1;
-                PlaySound.Key();
+                PlaySound.Play(PlaySound.SoundEffectName.Key);
             }
         }
     }
@@ -85,7 +85,7 @@ namespace aspectstar2
                 game.life = game.life + 2;
                 if (game.life > game.possibleLife)
                     game.life = game.possibleLife;
-                PlaySound.Aspect();
+                PlaySound.Play(PlaySound.SoundEffectName.Aspect);
             }
         }
     }
@@ -120,7 +120,7 @@ namespace aspectstar2
                 active = false;
                 game.goldKeys = game.goldKeys + 1;
                 parent.beaten = true;
-                PlaySound.Key();
+                PlaySound.Play(PlaySound.SoundEffectName.Key);
             }
         }
     }
@@ -148,7 +148,7 @@ namespace aspectstar2
             {
                 active = false;
                 game.bells++;
-                PlaySound.Key();
+                PlaySound.Play(PlaySound.SoundEffectName.Key);
             }
         }
     }

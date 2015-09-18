@@ -10,6 +10,22 @@ namespace aspectstar2
 {
     public static class PlaySound
     {
+        public enum SoundEffectName
+        {
+            Aspect = 0,
+            Boom = 1,
+            Die = 2,
+            Jump = 3,
+            Hurt = 4,
+            Enter = 5,
+            Drown = 6,
+            Key = 7,
+            Pew = 8,
+            Leave = 9,
+            Pause = 10,
+            Special = 11,
+        }
+
         static SoundEffect die;
         static SoundEffect aspect;
         static SoundEffect jump;
@@ -51,72 +67,54 @@ namespace aspectstar2
             pewwInst = pew.CreateInstance();
         }
 
-        public static void Die()
+        public static void Play(SoundEffectName name)
         {
-            if (hurtInst.State == SoundState.Playing)
-                hurtInst.Stop();
-            die.Play();
-        }
-
-        public static void Aspect()
-        {
-            aspect.Play();
-        }
-
-        public static void Jump()
-        {
-            if (jumpInst.State != SoundState.Playing)
-                jumpInst.Play();
-        }
-
-        public static void Enter()
-        {
-            enter.Play();
-        }
-
-        public static void Hurt()
-        {
-            if (hurtInst.State != SoundState.Playing)
-                hurtInst.Play();
-        }
-
-        public static void Drown()
-        {
-            if (drowInst.State != SoundState.Playing)
-                drowInst.Play();
-        }
-
-        public static void Key()
-        {
-            if (keysInst.State != SoundState.Playing)
-                keysInst.Play();
-        }
-
-        public static void Boom()
-        {
-            boom.Play();
-        }
-
-        public static void Pew()
-        {
-            if (pewwInst.State != SoundState.Playing)
-                pewwInst.Play();
-        }
-
-        public static void Leave()
-        {
-            leave.Play();
-            MediaPlayer.Stop();
-        }
-
-        public static void Pause()
-        {
-            pause.Play();
-        }
-
-        public static void Special()
-        {
-            special.Play();
+            switch (name)
+            {
+                case SoundEffectName.Aspect:
+                    aspect.Play();
+                    break;
+                case SoundEffectName.Boom:
+                    boom.Play();
+                    break;
+                case SoundEffectName.Die:
+                    if (hurtInst.State == SoundState.Playing)
+                        hurtInst.Stop();
+                    die.Play();
+                    break;
+                case SoundEffectName.Jump:
+                    if (jumpInst.State != SoundState.Playing)
+                        jumpInst.Play();
+                    break;
+                case SoundEffectName.Hurt:
+                    if (hurtInst.State != SoundState.Playing)
+                        hurtInst.Play();
+                    break;
+                case SoundEffectName.Enter:
+                    enter.Play();
+                    break;
+                case SoundEffectName.Drown:
+                    if (drowInst.State != SoundState.Playing)
+                        drowInst.Play();
+                    break;
+                case SoundEffectName.Key:
+                    if (keysInst.State != SoundState.Playing)
+                        keysInst.Play();
+                    break;
+                case SoundEffectName.Pew:
+                    if (pewwInst.State != SoundState.Playing)
+                        pewwInst.Play();
+                    break;
+                case SoundEffectName.Leave:
+                    leave.Play();
+                    break;
+                case SoundEffectName.Pause:
+                    pause.Play();
+                    break;
+                case SoundEffectName.Special:
+                    special.Play();
+                    break;
+            }
         }
     }
 }
