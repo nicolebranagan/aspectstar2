@@ -78,7 +78,7 @@ namespace aspectstar2
                 WriteText(spriteBatch, "NO SAVED GAME", new Vector2((Master.width / 2) - (2 * 16), (Master.height / 2) - 8), Color.White);
             else
                 WriteText(spriteBatch, "CONTINUE", new Vector2((Master.width / 2) - (2 * 16), (Master.height / 2) - 8), Color.White);
-            WriteText(spriteBatch, "TEST SPECIAL SCREEN", new Vector2((Master.width / 2) - (2 * 16), (Master.height / 2) + 24), Color.White);
+            WriteText(spriteBatch, "OPTIONS", new Vector2((Master.width / 2) - (2 * 16), (Master.height / 2) + 24), Color.White);
 
             WriteText(spriteBatch, "PRE RELEASE DEMO", new Vector2((Master.width / 2) - (8 * 16), (Master.height / 2) + 96 - 16), Color.White);
             WriteText(spriteBatch, "NICOLE 2015", new Vector2((Master.width / 2) - (8 * 10), (Master.height / 2) + 96 ), Color.White);

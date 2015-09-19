@@ -68,12 +68,13 @@ namespace aspectstar2
         Engine ActivateEngine(Engine engine)
         {
             return engine
-                .SetValue("setDimensions", new Action<int,int>(SetDimensions))
+                .SetValue("setDimensions", new Action<int, int>(SetDimensions))
                 .SetValue("overrideSettings", new Action<bool, bool>(OverrideSettings))
                 .SetValue("move", new Action<int, int>(CommandMove))
                 .SetValue("hurtPlayer", new Action(parent.player.Hurt))
                 .SetValue("die", new Action(Die))
                 .SetValue("questionBox", new Action<string, string, string>(QuestionBox))
+                .SetValue("setLocation", new Action<int, int>(SetLocation))
                 .Execute("onLoad()");
         }
 
@@ -153,6 +154,11 @@ namespace aspectstar2
         void QuestionBox(string text, string callYes, string callNo)
         {
             parent.QuestionBox(text, getChooser(this, callYes, callNo));
+        }
+
+        void SetLocation(int x, int y)
+        {
+            location = new Vector2(x * 32 + 16, y * 32 + 16);
         }
 
         static Action<bool> getChooser(AdventureEntity ent, string callYes, string callNo)

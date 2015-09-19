@@ -30,6 +30,7 @@ namespace aspectstar2
             Dungeon9b = 15,
             FinalBoss = 16,
             Credits = 17,
+            Silent = 18,
         }
 
         static Dictionary<SongName, Song> Songs = new Dictionary<SongName, Song>();
@@ -57,7 +58,7 @@ namespace aspectstar2
 
         public static void Play(SongName song)
         {
-            System.Diagnostics.Debug.WriteLine(song.ToString());
+            //System.Diagnostics.Debug.WriteLine(song.ToString());
             if (currentSong != song)
             {
                 MediaPlayer.Stop();
