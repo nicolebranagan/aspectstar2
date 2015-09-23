@@ -40,6 +40,7 @@ namespace aspectstar2
         {
             try
             {
+                Songs[SongName.Title] = Content.Load<Song>("music_azureflux06");
                 Songs[SongName.WorldMap] = Content.Load<Song>("music_visager14");
                 Songs[SongName.Town] = Content.Load<Song>("music_visager10");
                 Songs[SongName.Boss] = Content.Load<Song>("music_visager09");
@@ -48,7 +49,9 @@ namespace aspectstar2
                 Songs[SongName.Dungeon2] = Content.Load<Song>("music_visager02");
                 Songs[SongName.Dungeon3] = Content.Load<Song>("music_visager04");
                 Songs[SongName.Dungeon4] = Content.Load<Song>("music_visager07");
+                Songs[SongName.Dungeon5] = Content.Load<Song>("music_azureflux05");
                 Songs[SongName.Dungeon6] = Content.Load<Song>("music_visager08");
+                Songs[SongName.Dungeon7] = Content.Load<Song>("music_azureflux03");
                 Songs[SongName.Dungeon8] = Content.Load<Song>("music_visager11");
             }
             catch { 
@@ -67,7 +70,7 @@ namespace aspectstar2
                 {
                     MediaPlayer.Play(Songs[song]);
                 }
-                MediaPlayer.Volume = 0.6f;
+                MediaPlayer.Volume = 0.4f;
                 MediaPlayer.IsRepeating = true;
             }
         }

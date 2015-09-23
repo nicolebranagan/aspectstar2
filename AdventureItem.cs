@@ -174,7 +174,8 @@ namespace aspectstar2
         public override void Touch()
         {
             //game.exitAdventure(parent.beaten, dest, destroomX, destroomY, destx, desty);
-            parent.leaveAdventure(dest, destx, desty, destroomX, destroomY);
+            if (parent.player.z == 0)
+                parent.leaveAdventure(dest, destx, desty, destroomX, destroomY);
         }
     }
     public class AdventureSpecial : AdventureItem

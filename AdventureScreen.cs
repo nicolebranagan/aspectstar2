@@ -185,7 +185,8 @@ namespace aspectstar2
         void tileStepAction(int i)
         {
             tileType tile = (tileType)key[tileMap[i]];
-            if (tile == tileType.Warp)
+            if (tile == tileType.Warp && (player.z == 0 || 
+                (tileMap.Length > i && (tileType)tileMap[i+1] == tileType.Warp) || (i > 0 && (tileType)tileMap[i-1] == tileType.Warp)))
             {
                 PlaySound.Play(PlaySound.SoundEffectName.Leave);
                 PlaySong.Play(PlaySong.SongName.None);
@@ -228,12 +229,14 @@ namespace aspectstar2
             }
         }
 
-        public bool Collide()
+        public bool Collide(int flickerCount)
         {
             bool collided = false;
             foreach (AdventureObject obj in objects)
             {
-                if (obj.inRange(player))
+                if (obj.inRange(player) && 
+                    (flickerCount <= 0 || 
+                    (obj is AdventureEnemy && ((AdventureEnemy)obj).isStationary())))
                     collided = true;
             }
             return collided;
@@ -471,15 +474,15 @@ namespace aspectstar2
 
             // Bells
             source = new Rectangle(208, 0, 16, 16);
-            dest = new Rectangle((int)(10 * 32), (int)(12 * 32 + 48), 16, 16);
+            dest = new Rectangle((int)(12 * 32), (int)(12 * 32 + 48), 16, 16);
             spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
 
             // Keys
             source = new Rectangle((128 + 48), 0, 16, 16);
-            dest = new Rectangle((int)(10 * 32), (int)(13 * 32 + 32), 16, 16);
+            dest = new Rectangle((int)(12 * 32), (int)(13 * 32 + 32), 16, 16);
             spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
             source = new Rectangle((128 + 64), 0, 16, 16);
-            dest = new Rectangle((int)(10 * 32 + (16 * 4)), (int)(13 * 32 + 32), 16, 16);
+            dest = new Rectangle((int)(12 * 32 + (16 * 4)), (int)(13 * 32 + 32), 16, 16);
             spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
             spriteBatch.End();
 
@@ -487,9 +490,9 @@ namespace aspectstar2
             WriteText(spriteBatch, label, new Vector2(48, 14 * 32), Color.White);
 
             // Key counts
-            WriteText(spriteBatch, game.bells.ToString(), new Vector2(10 * 32 + 16, 13 * 32 + 16), Color.White);
-            WriteText(spriteBatch, game.goldKeys.ToString(), new Vector2(10 * 32 + 16, 14 * 32), Color.White);
-            WriteText(spriteBatch, Keys.ToString(), new Vector2(10 * 32 + 16 * 5, 14 * 32), Color.White);
+            WriteText(spriteBatch, game.bells.ToString(), new Vector2(12 * 32 + 16, 13 * 32 + 16), Color.White);
+            WriteText(spriteBatch, game.goldKeys.ToString(), new Vector2(12 * 32 + 16, 14 * 32), Color.White);
+            WriteText(spriteBatch, Keys.ToString(), new Vector2(12 * 32 + 16 * 5, 14 * 32), Color.White);
 
             // Weapons
             game.weaponA.Draw(spriteBatch, (int)(18.5 * 32), (int)(13.5 * 32));

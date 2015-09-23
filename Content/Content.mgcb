@@ -365,3 +365,21 @@
 /processorParam:Quality=Best
 /build:music_visager11.mp3
 
+#begin music_azureflux03.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:music_azureflux03.mp3
+
+#begin music_azureflux05.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:music_azureflux05.mp3
+
+#begin music_azureflux06.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:music_azureflux06.mp3
+

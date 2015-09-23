@@ -211,5 +211,13 @@ namespace aspectstar2
         {
             // Enemies are defined by their dependence on inRange
         }
+
+        public bool isStationary()
+        {
+            if (definition == null)
+                return false;
+            else
+                return definition.movementType == BestiaryEntry.MovementTypes.stationary;
+        }
     }
 }

@@ -23,7 +23,7 @@ namespace aspectstar2
         public bool ghost = false;
         public string dependent = "";
 
-        public MovementTypes movementType = MovementTypes.stationary;
+        public MovementTypes movementType = MovementTypes.random;
         public bool wanderer = false;
 
         public enum MovementTypes
