@@ -15,6 +15,8 @@ namespace aspectstar2
         bool fiery;
         bool ghostly;
 
+        bool intangible;
+
         public AdventureProjectile()
         { }
 
@@ -42,6 +44,13 @@ namespace aspectstar2
         {
             AdventureProjectile aP = new AdventureProjectile(friendly, faceDir, location, deathTimer);
             aP.ghostly = true;
+            return aP;
+        }
+
+        public static AdventureProjectile getIntangibleProjectile(bool friendly, Master.Directions faceDir, Vector2 location, int deathTimer)
+        {
+            AdventureProjectile aP = new AdventureProjectile(friendly, faceDir, location, deathTimer);
+            aP.intangible = true;
             return aP;
         }
 
@@ -134,7 +143,7 @@ namespace aspectstar2
             int z = (fiery) ? 0 : 1;
             if ((test.X - width) >= 0 && (test.Y - height) >= 0 && (test.X + width) < (25 * 32) && (test.Y + height) < (13 * 32))
             {
-                if (!this.parent.isSolid(test, z, 0, 0, faceDir) || ghostly)
+                if (!this.parent.isSolid(test, z, 0, 0, faceDir) || ghostly || intangible)
                     this.location = test;
                 else
                     this.active = false;

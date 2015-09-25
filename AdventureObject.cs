@@ -124,8 +124,11 @@ namespace aspectstar2
 
     public class AdventureShooter : AdventureObject
     {
-        public AdventureShooter()
+        bool track;
+
+        public AdventureShooter(bool track)
         {
+            this.track = track;
             stallCount = Master.globalRandom.Next(0, 80);
         }
 
@@ -141,14 +144,48 @@ namespace aspectstar2
 
         public override void Update()
         {
-            if (stallCount <= 0)
+            if (!track)
             {
-                SeekerProjectile seeker = new SeekerProjectile(parent, location, 300);
-                parent.addObject(seeker);
-                stallCount = 90;
+                if (stallCount <= 0)
+                {
+                    SeekerProjectile seeker = new SeekerProjectile(parent, location, 300);
+                    parent.addObject(seeker);
+                    stallCount = 90;
+                }
+                else
+                    stallCount = stallCount - 1;
             }
             else
-                stallCount = stallCount - 1;
+            {
+                if (((Math.Floor(location.Y / 32) == Math.Floor(parent.player.location.Y / 32)) ||
+                    (Math.Floor(location.X / 32) == Math.Floor(parent.player.location.X / 32))) &&
+                   stallCount == 0)
+                {
+                    Master.Directions closeDir;
+                    int del_x = (int)(parent.player.location.X - location.X);
+                    int del_y = (int)(parent.player.location.Y - location.Y);
+
+                    if (Math.Abs(del_x) > Math.Abs(del_y))
+                    {
+                        if (del_x > 0)
+                            closeDir = Master.Directions.Right;
+                        else
+                            closeDir = Master.Directions.Left;
+                    }
+                    else
+                    {
+                        if (del_y > 0)
+                            closeDir = Master.Directions.Down;
+                        else
+                            closeDir = Master.Directions.Up;
+                    }
+                    AdventureProjectile aP = AdventureProjectile.getIntangibleProjectile(false, closeDir, location, 300);
+                    parent.addObject(aP);
+                    stallCount = 5;
+                }
+                else if (stallCount > 0)
+                    stallCount = stallCount - 1;
+            }
         }
 
         public override void Touch()

@@ -191,7 +191,7 @@ namespace aspectstar2
                         return boss1;
                     }
                 case ObjectType.shooter:
-                    AdventureShooter shooter = new AdventureShooter();
+                    AdventureShooter shooter = new AdventureShooter(enemyType == 1);
                     shooter.location = new Vector2(x, y);
                     return shooter;
                 case ObjectType.enemy:
