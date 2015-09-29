@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Worldfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <opening>IT IS A TIME OF PEACE
+AND NICOLE LOOKS
+FORWARD TO A NICE TIME
+WITH HER GIRLFRIEND
+PRINCESS MARY
+
+HOWEVER WHEN SHE HEADS OUT
+TO MEET THE PRINCESS
+SHE FINDS THAT SHE IS GONE
+
+KIDNAPPED BY HER TRUSTED
+LIEUTENANT NAMED
+GENERAL FOX
+
+NICOLE MUST BLAZE A TRAIL
+ACROSS THE LAND TO SAVE THE
+PRINCESS AND ENJOY A NICE
+AFTERNOON</opening>
   <map>
     <tileMap>
       <int>7</int>

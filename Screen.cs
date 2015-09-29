@@ -137,4 +137,42 @@ namespace aspectstar2
             }
         }
     }
+
+    public class TextScreen : Screen
+    {
+        Game game;
+
+        int lag = 20;
+
+        int timeCount;
+        string[] text;
+
+        public TextScreen(Game game, string text)
+        {
+            this.text = text.Split(Environment.NewLine.ToCharArray());
+            this.game = game;
+            timeCount = Master.height;
+        }
+
+        public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
+        {
+            for(int i = 0; i < text.Length; i++)
+            {
+                WriteText(spriteBatch, text[i], new Vector2(Master.width / 2 - text[i].Length * 8, timeCount + 32 * i), Color.White);
+            }
+        }
+
+        public override void Update(GameTime gameTime)
+        {
+            if (timeCount > Math.Min(-text.Length * 32 + (Master.height / 2), 0))
+                timeCount = timeCount - 1;
+            else
+                game.Begin();
+
+            if (lag > 0)
+                lag--;
+            else if (Master.controls.Start)
+                game.Begin();
+        }
+    }
 }

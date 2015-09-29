@@ -9,6 +9,7 @@ namespace aspectstar2
 {
     public class Worldfile
     {
+        public string opening;
         public Mapfile map;
         public List<Adventure> adventures;
         public List<BestiaryEntry> bestiary;

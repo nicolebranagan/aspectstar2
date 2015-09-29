@@ -52,10 +52,10 @@ namespace aspectstar2
             weaponB = new NullWeapon();
         }
 
-        public Screen Begin()
+        public void Begin()
         {
             currentMap = new MapScreen(this);
-            return currentMap;
+            master.UpdateScreen(currentMap);
         }
 
         public Screen BeginFromSaved(SavedGame sG)

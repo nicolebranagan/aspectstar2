@@ -172,7 +172,12 @@ namespace aspectstar2
         public void NewGame()
         {
             currentGame = new Game(this);
-            currentScreen = currentGame.Begin();
+            if (currentFile.opening != null)
+            {
+                UpdateScreen(new TextScreen(currentGame, currentFile.opening));
+            }
+            else
+                currentGame.Begin();
         }
 
         public void UpdateScreen(Screen screen)
