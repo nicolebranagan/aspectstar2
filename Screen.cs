@@ -164,7 +164,7 @@ namespace aspectstar2
 
         public override void Update(GameTime gameTime)
         {
-            if (timeCount > Math.Min(-text.Length * 32 + (Master.height / 2), 0))
+            if (timeCount > Math.Min(-text.Length * 32, 0))
                 timeCount = timeCount - 1;
             else
                 game.Begin();
