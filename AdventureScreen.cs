@@ -1133,6 +1133,8 @@ namespace aspectstar2
                 return Keys;
             else if (flag == "_goldKeys")
                 return game.goldKeys;
+            else if (flag == "_deaths")
+                return game.deaths;
             else if (counters.ContainsKey(flag))
                 return counters[flag];
             else

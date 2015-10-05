@@ -14,6 +14,7 @@ namespace aspectstar2
         public int possibleLife = 10;
         public int goldKeys = 0;
         public int bells = 0;
+        public int deaths = 0;
         AdventureScreen currentAdventure;
         MapScreen currentMap;
 
@@ -108,6 +109,7 @@ namespace aspectstar2
             goldKeys = sG.goldKeys;
             bells = sG.bells;
             crystalKeys = sG.crystalKeys;
+            deaths = sG.deaths;
 
             if (sG.possibleLife > possibleLife)
                 possibleLife = sG.possibleLife;
@@ -154,7 +156,10 @@ namespace aspectstar2
                 }
 
                 if (life == 0)
+                {
+                    deaths = deaths + 1;
                     life = (possibleLife - 5);
+                }
             }
             else
             {
@@ -257,6 +262,7 @@ namespace aspectstar2
             game.bells = bells;
             game.life = life;
             game.possibleLife = possibleLife;
+            game.deaths = deaths;
 
             master.SaveGame(game);
         }
