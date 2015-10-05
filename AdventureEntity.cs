@@ -17,6 +17,7 @@ namespace aspectstar2
 
         bool floating = false;
         public bool solid = true;
+        bool wander = false;
 
         int touchLag = 0;
 
@@ -75,6 +76,7 @@ namespace aspectstar2
                 .SetValue("die", new Action(Die))
                 .SetValue("questionBox", new Action<string, string, string>(QuestionBox))
                 .SetValue("setLocation", new Action<int, int>(SetLocation))
+                .SetValue("setWander", new Action<bool>(SetWander))
                 .Execute("onLoad()");
         }
 
@@ -82,6 +84,54 @@ namespace aspectstar2
         {
             if (touchLag > 0)
                 touchLag = touchLag - 1;
+            if (wander)
+            {
+                if (stallCount % (3) == 0)
+                {
+                    if (Master.globalRandom.Next(0, 10) > 8)
+                    {
+                        Master.Directions newDir = (Master.Directions)Master.globalRandom.Next(0, 3);
+                        switch (faceDir)
+                        {
+                            case Master.Directions.Down:
+                                if (newDir == Master.Directions.Up)
+                                    newDir = Master.Directions.Right;
+                                break;
+                            case Master.Directions.Up:
+                                if (newDir == Master.Directions.Down)
+                                    newDir = Master.Directions.Right;
+                                break;
+                            case Master.Directions.Right:
+                                if (newDir == Master.Directions.Left)
+                                    newDir = Master.Directions.Right;
+                                break;
+                        }
+                        faceDir = newDir;
+                    }
+                    else
+                    {
+                        Vector2 move_dist = new Vector2(0, 0);
+                        switch (faceDir)
+                        {
+                            case Master.Directions.Down:
+                                move_dist = new Vector2(0, 2);
+                                break;
+                            case Master.Directions.Up:
+                                move_dist = new Vector2(0, -2);
+                                break;
+                            case Master.Directions.Left:
+                                move_dist = new Vector2(-2, 0);
+                                break;
+                            case Master.Directions.Right:
+                                move_dist = new Vector2(2, 0);
+                                break;
+                            default:
+                                break; // Something has gone wrong
+                        }
+                        this.Move(move_dist);
+                    }
+                }
+            }
             base.Update();
             jintEngine.Execute("update()");
         }
@@ -159,6 +209,11 @@ namespace aspectstar2
         void SetLocation(int x, int y)
         {
             location = new Vector2(x * 32 + 16, y * 32 + 16);
+        }
+
+        void SetWander(bool wander)
+        {
+            this.wander = wander;
         }
 
         static Action<bool> getChooser(AdventureEntity ent, string callYes, string callNo)

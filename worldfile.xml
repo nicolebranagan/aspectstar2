@@ -21436,7 +21436,7 @@ function hurt() { }</code>
               <enemyType>0</enemyType>
               <data>
                 <name>guy</name>
-                <code>function onLoad() { }
+                <code>function onLoad() { setWander(true); }
 function update() { }
 function inRange() {
 TextBox("FOLLOW THE YELLOW BRICK ROAD");
@@ -21794,7 +21794,8 @@ function hurt() { }</code>
               <enemyType>0</enemyType>
               <data>
                 <name>girl</name>
-                <code>function onLoad() { }
+                <code>function onLoad() { setWander(true); }
+
 function update() { }
 function inRange() {
 TextBox("ITS SO PEACEFUL HERE");
@@ -22051,11 +22052,11 @@ function hurt() { }</code>
             <int>24</int>
             <int>24</int>
             <int>24</int>
+            <int>0</int>
             <int>24</int>
             <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
+            <int>0</int>
+            <int>0</int>
             <int>24</int>
             <int>10</int>
             <int>0</int>
@@ -22160,15 +22161,43 @@ function hurt() { }</code>
           </tileMap>
           <storedObjects>
             <StoredObject>
+              <x>240</x>
+              <y>208</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>guard</name>
+                <code>function onLoad() { }
+function update() { }
+function inRange() {
+TextBox("LONG LIVE THE PRINCESS");
+}
+function touch() { }
+function hurt() { }</code>
+                <graphics>0</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
               <x>464</x>
               <y>208</y>
               <type>entity</type>
               <enemyType>0</enemyType>
               <data>
                 <name>seller</name>
-                <code>function onLoad() { }
+                <code>function onLoad() { setWander(true); }
+
 function update() { }
+
 function inRange() { }
+
 function touch() { questionBox("DO YOU WANT TO BUY A FISH FOR 2 BELLS", "yes()", "no()"); }
 
 function yes() {
@@ -22185,31 +22214,6 @@ TextBox("YOU ARE TOO POOR TO AFFORD MY WARES");
 
 function no() { TextBox("ENJOY THE TOWN"); }</code>
                 <graphics>1</graphics>
-                <gfxtype>Characters</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>0</key>
-            </StoredObject>
-            <StoredObject>
-              <x>240</x>
-              <y>208</y>
-              <type>entity</type>
-              <enemyType>0</enemyType>
-              <data>
-                <name>guard</name>
-                <code>function onLoad() { }
-function update() { }
-function inRange() {
-TextBox("LONG LIVE THE PRINCESS");
-}
-function touch() { }
-function hurt() { }</code>
-                <graphics>0</graphics>
                 <gfxtype>Characters</gfxtype>
               </data>
               <dest>0</dest>
@@ -22247,7 +22251,7 @@ function hurt() { }</code>
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>0</int>
+            <int>24</int>
             <int>24</int>
             <int>0</int>
             <int>10</int>
@@ -22273,7 +22277,7 @@ function hurt() { }</code>
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>24</int>
+            <int>0</int>
             <int>0</int>
             <int>10</int>
             <int>0</int>
@@ -22298,7 +22302,7 @@ function hurt() { }</code>
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>24</int>
+            <int>0</int>
             <int>0</int>
             <int>10</int>
             <int>0</int>
@@ -22323,7 +22327,7 @@ function hurt() { }</code>
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>24</int>
+            <int>0</int>
             <int>0</int>
             <int>10</int>
             <int>0</int>
@@ -22347,8 +22351,8 @@ function hurt() { }</code>
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>24</int>
-            <int>24</int>
+            <int>0</int>
+            <int>0</int>
             <int>0</int>
             <int>10</int>
             <int>0</int>
@@ -22371,8 +22375,8 @@ function hurt() { }</code>
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>24</int>
-            <int>24</int>
+            <int>0</int>
+            <int>0</int>
             <int>0</int>
             <int>11</int>
             <int>11</int>
@@ -22382,8 +22386,8 @@ function hurt() { }</code>
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>24</int>
-            <int>24</int>
+            <int>0</int>
+            <int>0</int>
             <int>24</int>
             <int>24</int>
             <int>24</int>
@@ -22395,7 +22399,7 @@ function hurt() { }</code>
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>24</int>
+            <int>0</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -22406,8 +22410,8 @@ function hurt() { }</code>
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>24</int>
-            <int>24</int>
+            <int>0</int>
+            <int>0</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -22427,10 +22431,10 @@ function hurt() { }</code>
             <int>26</int>
             <int>26</int>
             <int>24</int>
-            <int>24</int>
             <int>0</int>
-            <int>24</int>
-            <int>24</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -22453,7 +22457,7 @@ function hurt() { }</code>
             <int>25</int>
             <int>0</int>
             <int>0</int>
-            <int>24</int>
+            <int>0</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
