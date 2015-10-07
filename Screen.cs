@@ -141,16 +141,18 @@ namespace aspectstar2
     public class TextScreen : Screen
     {
         Game game;
+        Action<bool> activator;
 
         int lag = 20;
 
         int timeCount;
         string[] text;
 
-        public TextScreen(Game game, string text)
+        public TextScreen(Game game, string text, Action<bool> activator)
         {
             this.text = text.Split(Environment.NewLine.ToCharArray());
             this.game = game;
+            this.activator = activator;
             timeCount = Master.height;
         }
 
@@ -167,12 +169,12 @@ namespace aspectstar2
             if (timeCount > Math.Min(-text.Length * 32, 0))
                 timeCount = timeCount - 1;
             else
-                game.Begin();
+                activator(true);
 
             if (lag > 0)
                 lag--;
             else if (Master.controls.Start)
-                game.Begin();
+                activator(false); //game.Begin();
         }
     }
 }
