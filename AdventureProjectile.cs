@@ -17,10 +17,12 @@ namespace aspectstar2
 
         bool intangible;
 
+        int damage = 1;
+
         public AdventureProjectile()
         { }
 
-        public AdventureProjectile(bool friendly, Master.Directions faceDir, Vector2 location, int deathTimer)
+        public AdventureProjectile(bool friendly, Master.Directions faceDir, Vector2 location, int deathTimer, int damage)
         {
             this.friendly = friendly;
             this.faceDir = faceDir;
@@ -28,6 +30,7 @@ namespace aspectstar2
             this.deathTimer = deathTimer;
             this.texture = Master.texCollection.texProjectile;
             this.moving = true;
+            this.damage = damage;
             //z = 1;
             width = 4;
             height = 4;
@@ -35,21 +38,21 @@ namespace aspectstar2
 
         public static AdventureProjectile getFieryProjectile(bool friendly, Master.Directions faceDir, Vector2 location, int deathTimer)
         {
-            AdventureProjectile aP = new AdventureProjectile(friendly, faceDir, location, deathTimer);
+            AdventureProjectile aP = new AdventureProjectile(friendly, faceDir, location, deathTimer, 1);
             aP.fiery = true;
             return aP;
         }
 
         public static AdventureProjectile getGhostlyProjectile(bool friendly, Master.Directions faceDir, Vector2 location, int deathTimer)
         {
-            AdventureProjectile aP = new AdventureProjectile(friendly, faceDir, location, deathTimer);
+            AdventureProjectile aP = new AdventureProjectile(friendly, faceDir, location, deathTimer, 1);
             aP.ghostly = true;
             return aP;
         }
 
         public static AdventureProjectile getIntangibleProjectile(bool friendly, Master.Directions faceDir, Vector2 location, int deathTimer)
         {
-            AdventureProjectile aP = new AdventureProjectile(friendly, faceDir, location, deathTimer);
+            AdventureProjectile aP = new AdventureProjectile(friendly, faceDir, location, deathTimer, 1);
             aP.intangible = true;
             return aP;
         }
@@ -88,7 +91,7 @@ namespace aspectstar2
                         else if (friendly && obj is AdventureEnemy)
                         {
                             AdventureEnemy enemy = (AdventureEnemy)obj;
-                            enemy.Hurt(ghostly);
+                            enemy.Hurt(ghostly, damage);
                             active = false;
                         }
                         else if (obj is AdventureEntity)

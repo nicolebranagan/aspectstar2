@@ -1024,6 +1024,9 @@ namespace aspectstar2
                 case 4:
                     game.GetWeapon(new GhostlyWeapon());
                     break;
+                case 5:
+                    game.GetWeapon(new FarWeapon());
+                    break;
             }
         }
 

@@ -137,17 +137,17 @@ namespace aspectstar2
 
                 if (aboveWater && Master.globalRandom.Next(60) < 2)
                 {
-                    var aP = new AdventureProjectile(false, Master.Directions.Down, location, 300);
+                    var aP = new AdventureProjectile(false, Master.Directions.Down, location, 300, 1);
                     parent.addObject(aP);
                     PlaySound.Play(PlaySound.SoundEffectName.Pew);
                 }
             }
         }
 
-        public override void Hurt(bool ghost)
+        public override void Hurt(bool ghost, int damage)
         {
             if (aboveWater)
-                base.Hurt(ghost);
+                base.Hurt(ghost, damage);
         }
     }
     public class AdventureBoss3 : AdventureEnemy

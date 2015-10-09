@@ -161,7 +161,7 @@ namespace aspectstar2
 
         public void Hurt()
         {
-            jintEngine.Execute("hurt()");
+            jintEngine.Execute("hurt(0)");
         }
 
         public void Execute(string exec)

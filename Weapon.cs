@@ -34,6 +34,7 @@ namespace aspectstar2
             TorchWeapon = 4,
             FireballWeapon = 5,
             GhostlyWeapon = 6,
+            FarWeapon = 7,
         }
 
         public storedWeapon packWeapon()
@@ -45,6 +46,8 @@ namespace aspectstar2
                 type = (int)WeaponType.FireballWeapon;
             else if (this is GhostlyWeapon)
                 type = (int)WeaponType.GhostlyWeapon;
+            else if (this is FarWeapon)
+                type = (int)WeaponType.FarWeapon;
             else if (this is ProjectileWeapon)
                 type = (int)WeaponType.ProjectileWeapon;
             else if (this is FishWeapon)
@@ -75,6 +78,8 @@ namespace aspectstar2
                     return new FireballWeapon();
                 case WeaponType.GhostlyWeapon:
                     return new GhostlyWeapon();
+                case WeaponType.FarWeapon:
+                    return new FarWeapon();
                 default:
                     return new NullWeapon();
             }
@@ -130,7 +135,7 @@ namespace aspectstar2
             if ((cooldown == 0) && (player.z == 0))
             {
                 Vector2 location = new Vector2(player.location.X, player.location.Y - 16);
-                AdventureProjectile proj = new AdventureProjectile(true, player.faceDir, location, 30);
+                AdventureProjectile proj = new AdventureProjectile(true, player.faceDir, location, 30, 1);
                 screen.addObject(proj);
                 cooldown = 30;
                 PlaySound.Play(PlaySound.SoundEffectName.Pew);
@@ -333,6 +338,43 @@ namespace aspectstar2
         public override string getLabel()
         {
             return "ECTO-SHOT";
+        }
+    }
+
+    class FarWeapon : ProjectileWeapon
+    {
+        int internalCount = 0;
+
+        public override void Activate(AdventurePlayer player, AdventureScreen screen, Game game)
+        {
+            if (cooldown == 0)
+            {
+                Vector2 location = new Vector2(player.location.X, player.location.Y - 16);
+                AdventureProjectile proj = new AdventureProjectile(true, player.faceDir, location, 50, 3);
+                screen.addObject(proj);
+                cooldown = 40;
+                PlaySound.Play(PlaySound.SoundEffectName.Pew);
+            }
+        }
+
+        public override void Draw(SpriteBatch spriteBatch, int x, int y)
+        {
+            Rectangle source = new Rectangle(128 + 64, 64, 32, 32);
+            Rectangle dest = new Rectangle(x, y, 32, 32);
+            spriteBatch.Begin();
+            spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
+            spriteBatch.End();
+        }
+
+        public override string getLabel()
+        {
+            internalCount++;
+            if (internalCount == 151)
+                internalCount = 0;
+            if (internalCount > 90)
+                return "ELECTRIC BOOGALOO";
+            else
+                return "PROJECTILE 2";
         }
     }
 }

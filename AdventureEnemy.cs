@@ -164,7 +164,7 @@ namespace aspectstar2
                 base.Draw(spriteBatch, mask);
         }
 
-        public virtual void Hurt(bool ghostly)
+        public virtual void Hurt(bool ghostly, int damage)
         {
             if (definition != null && definition.dependent != "" && !parent.GetFlag(definition.dependent))
                 return; // Flag "dependent" must be on
@@ -172,7 +172,7 @@ namespace aspectstar2
             if (ghostly == ghost && this.flickerCount == 0)
             {
                 PlaySound.Play(PlaySound.SoundEffectName.Boom);
-                health = health - 1;
+                health = health - damage;
                 flickerCount = 40;
                 if (health == 0)
                 {
