@@ -28,7 +28,7 @@ namespace aspectstar2
         }
         public int[] top;
         int dest;
-
+        
         public Weapon weaponA;
         public Weapon weaponB;
         public List<Weapon> weapons;
@@ -82,6 +82,11 @@ namespace aspectstar2
                 weaponB = weapons[1];
             else
                 weaponB = new NullWeapon();
+
+            if (sG.weaponA != -1)
+                weaponA = weapons[sG.weaponA];
+            if (sG.weaponB != -1)
+                weaponB = weapons[sG.weaponB];
 
             if (sG.beaten.Length < Master.currentFile.adventures.Count)
             {
@@ -252,6 +257,14 @@ namespace aspectstar2
                 sD.flag = f.Key;
                 sD.value = f.Value;
                 game.globalFlags.Add(sD);
+            }
+
+            for (int i = 0; i < weapons.Count; i++)
+            {
+                if (weapons[i] == weaponA)
+                    game.weaponA = i;
+                if (weapons[i] == weaponB)
+                    game.weaponB = i;
             }
 
             game.beaten = beaten;

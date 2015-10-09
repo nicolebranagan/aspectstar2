@@ -67,6 +67,8 @@ namespace aspectstar2
                 source.Y = 32;
             if (ghostly)
                 source.Y = 48;
+            if (damage > 2)
+                source.Y = 64;
             Rectangle dest = new Rectangle((int)location.X - 8, (int)location.Y - 8, 16, 16);
             spriteBatch.Draw(texture, dest, source, Color.White);
             spriteBatch.End();
@@ -99,12 +101,20 @@ namespace aspectstar2
                             AdventureEntity entity = (AdventureEntity)obj;
                             if (entity.solid)
                             {
-                                entity.Hurt();
+                                entity.Hurt(damage);
                                 active = false;
                             }
                         }
-                        else if (friendly)
-                            active = false;
+                        else if (obj is AdventureProjectile)
+                        {
+                            AdventureProjectile proj = (AdventureProjectile)obj;
+                            if (proj.damage > damage)
+                                active = false;
+                            else if (damage > proj.damage)
+                                proj.active = false;
+                            else if (friendly)
+                                active = false;
+                        }
                     }
             }
         }

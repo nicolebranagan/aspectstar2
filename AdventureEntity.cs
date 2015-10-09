@@ -159,9 +159,9 @@ namespace aspectstar2
             }
         }
 
-        public void Hurt()
+        public void Hurt(int damage)
         {
-            jintEngine.Execute("hurt(0)");
+            jintEngine.Execute(String.Concat("hurt(",damage.ToString(),")"));
         }
 
         public void Execute(string exec)

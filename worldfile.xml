@@ -75700,7 +75700,7 @@ setFlag("mouseghost", true);
             <int>1</int>
             <int>1</int>
             <int>1</int>
-            <int>5</int>
+            <int>1</int>
             <int>1</int>
             <int>1</int>
             <int>4</int>
@@ -75708,7 +75708,7 @@ setFlag("mouseghost", true);
             <int>4</int>
             <int>1</int>
             <int>1</int>
-            <int>5</int>
+            <int>1</int>
             <int>1</int>
             <int>1</int>
             <int>1</int>
@@ -76064,40 +76064,6 @@ setFlag("mouseghost", true);
             </StoredObject>
             <StoredObject>
               <x>112</x>
-              <y>48</y>
-              <type>shooter</type>
-              <enemyType>0</enemyType>
-              <data>
-                <graphics>0</graphics>
-                <gfxtype>Maptile</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>0</key>
-            </StoredObject>
-            <StoredObject>
-              <x>272</x>
-              <y>48</y>
-              <type>shooter</type>
-              <enemyType>0</enemyType>
-              <data>
-                <graphics>0</graphics>
-                <gfxtype>Maptile</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>0</key>
-            </StoredObject>
-            <StoredObject>
-              <x>528</x>
               <y>48</y>
               <type>shooter</type>
               <enemyType>0</enemyType>
@@ -78619,15 +78585,7 @@ die();
             <int>1</int>
             <int>1</int>
             <int>1</int>
-            <int>5</int>
             <int>1</int>
-            <int>1</int>
-            <int>1</int>
-            <int>5</int>
-            <int>1</int>
-            <int>1</int>
-            <int>1</int>
-            <int>18</int>
             <int>1</int>
             <int>1</int>
             <int>1</int>
@@ -78635,6 +78593,10 @@ die();
             <int>1</int>
             <int>1</int>
             <int>1</int>
+            <int>18</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
             <int>5</int>
             <int>1</int>
             <int>1</int>
@@ -78652,6 +78614,10 @@ die();
             <int>1</int>
             <int>1</int>
             <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
             <int>18</int>
             <int>1</int>
             <int>1</int>
@@ -78702,22 +78668,6 @@ die();
             <int>8</int>
             <int>8</int>
             <int>8</int>
-            <int>8</int>
-            <int>18</int>
-            <int>8</int>
-            <int>18</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
             <int>18</int>
             <int>18</int>
             <int>18</int>
@@ -78731,6 +78681,22 @@ die();
             <int>8</int>
             <int>8</int>
             <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>18</int>
             <int>8</int>
             <int>8</int>
             <int>8</int>
@@ -78780,13 +78746,13 @@ die();
             <int>17</int>
             <int>8</int>
             <int>8</int>
-            <int>8</int>
             <int>18</int>
-            <int>8</int>
             <int>18</int>
-            <int>8</int>
             <int>18</int>
-            <int>8</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
+            <int>18</int>
             <int>18</int>
             <int>0</int>
             <int>0</int>
@@ -78830,7 +78796,7 @@ die();
             <int>0</int>
             <int>0</int>
             <int>8</int>
-            <int>8</int>
+            <int>18</int>
             <int>8</int>
             <int>8</int>
             <int>8</int>
@@ -78918,23 +78884,6 @@ die();
           </tileMap>
           <storedObjects>
             <StoredObject>
-              <x>144</x>
-              <y>48</y>
-              <type>shooter</type>
-              <enemyType>0</enemyType>
-              <data>
-                <graphics>0</graphics>
-                <gfxtype>Maptile</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>0</key>
-            </StoredObject>
-            <StoredObject>
               <x>272</x>
               <y>48</y>
               <type>shooter</type>
@@ -78953,23 +78902,6 @@ die();
             </StoredObject>
             <StoredObject>
               <x>528</x>
-              <y>48</y>
-              <type>shooter</type>
-              <enemyType>0</enemyType>
-              <data>
-                <graphics>0</graphics>
-                <gfxtype>Maptile</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>0</key>
-            </StoredObject>
-            <StoredObject>
-              <x>656</x>
               <y>48</y>
               <type>shooter</type>
               <enemyType>0</enemyType>
@@ -79448,10 +79380,10 @@ function hurt() { }</code>
               <key>0</key>
             </StoredObject>
             <StoredObject>
-              <x>784</x>
-              <y>144</y>
+              <x>688</x>
+              <y>112</y>
               <type>enemy</type>
-              <enemyType>16</enemyType>
+              <enemyType>0</enemyType>
               <data>
                 <graphics>0</graphics>
                 <gfxtype>Maptile</gfxtype>
@@ -79465,10 +79397,10 @@ function hurt() { }</code>
               <key>0</key>
             </StoredObject>
             <StoredObject>
-              <x>688</x>
-              <y>112</y>
+              <x>624</x>
+              <y>208</y>
               <type>enemy</type>
-              <enemyType>0</enemyType>
+              <enemyType>16</enemyType>
               <data>
                 <graphics>0</graphics>
                 <gfxtype>Maptile</gfxtype>

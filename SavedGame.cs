@@ -8,6 +8,8 @@ namespace aspectstar2
     public class SavedGame
     {
         public int x, y, possibleLife, life, goldKeys, bells, deaths;
+        public int weaponA = -1;
+        public int weaponB = -1;
         public List<mapChange> mapChanges;
         public List<storedWeapon> weapons;
         public List<storedDictionaryEntry> globalFlags;
