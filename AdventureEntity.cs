@@ -20,6 +20,7 @@ namespace aspectstar2
         bool wander = false;
 
         int touchLag = 0;
+        Color filter = Color.White;
 
         public AdventureEntity(EntityData data)
         {
@@ -51,6 +52,10 @@ namespace aspectstar2
 
         public override void Draw(SpriteBatch spriteBatch, Color mask)
         {
+            // Overwrite mask
+            if (filter != Color.White)
+                mask = filter;
+
             if (data.gfxtype == EntityData.GraphicsType.Maptile)
             {
                 Rectangle source, dest;
@@ -77,6 +82,8 @@ namespace aspectstar2
                 .SetValue("questionBox", new Action<string, string, string>(QuestionBox))
                 .SetValue("setLocation", new Action<int, int>(SetLocation))
                 .SetValue("setWander", new Action<bool>(SetWander))
+                .SetValue("setColor", new Action<int, int, int, int>(SetColor))
+                .SetValue("becomeEnemy", new Action<int>(BecomeEnemy))
                 .Execute("onLoad()");
         }
 
@@ -214,6 +221,17 @@ namespace aspectstar2
         void SetWander(bool wander)
         {
             this.wander = wander;
+        }
+
+        void SetColor(int r, int g, int b, int a)
+        {
+            filter = Color.FromNonPremultiplied(r, g, b, a);
+        }
+
+        void BecomeEnemy(int enemy)
+        {
+            parent.addObject(new AdventureEnemy(Master.currentFile.bestiary[enemy]));
+            active = false;
         }
 
         static Action<bool> getChooser(AdventureEntity ent, string callYes, string callNo)

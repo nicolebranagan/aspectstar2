@@ -65,8 +65,7 @@ namespace aspectstar2
             this.offset = new Vector2(32, 32);
             this.width = 30;
             this.height = 30;
-
-            this.health = 4;
+            this.health = 6;
         }
 
         public override void Draw(SpriteBatch spriteBatch, Color mask)
@@ -135,12 +134,12 @@ namespace aspectstar2
                     PlaySound.Play(PlaySound.SoundEffectName.Pew);
                 }
 
-                if (aboveWater && Master.globalRandom.Next(60) < 2)
+                /*if (aboveWater && Master.globalRandom.Next(60) < 2)
                 {
                     var aP = new AdventureProjectile(false, Master.Directions.Down, location, 300, 1);
                     parent.addObject(aP);
                     PlaySound.Play(PlaySound.SoundEffectName.Pew);
-                }
+                }*/
             }
         }
 

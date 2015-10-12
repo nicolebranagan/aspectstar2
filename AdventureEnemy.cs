@@ -174,7 +174,7 @@ namespace aspectstar2
                 PlaySound.Play(PlaySound.SoundEffectName.Boom);
                 health = health - damage;
                 flickerCount = 40;
-                if (health == 0)
+                if (health <= 0)
                 {
                     active = false;
                     parent.addObject(new AdventureExplosion(this.location));

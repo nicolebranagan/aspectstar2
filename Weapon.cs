@@ -349,8 +349,8 @@ namespace aspectstar2
         {
             if (cooldown == 0)
             {
-                Vector2 location = new Vector2(player.location.X, player.location.Y - 16);
-                AdventureProjectile proj = new AdventureProjectile(true, player.faceDir, location, 50, 3);
+                Vector2 location = new Vector2(player.location.X, player.location.Y - 16 - player.z * 2);
+                AdventureProjectile proj = new AdventureProjectile(true, player.faceDir, location, 60, 3);
                 screen.addObject(proj);
                 cooldown = 40;
                 PlaySound.Play(PlaySound.SoundEffectName.Pew);
@@ -369,12 +369,20 @@ namespace aspectstar2
         public override string getLabel()
         {
             internalCount++;
-            if (internalCount == 151)
+            if (internalCount == 351)
                 internalCount = 0;
-            if (internalCount > 90)
+            if (internalCount > 290)
                 return "ELECTRIC BOOGALOO";
             else
                 return "PROJECTILE 2";
+        }
+
+        public override void Update()
+        {
+            if (internalCount > 0)
+                internalCount = 0;
+
+            base.Update();
         }
     }
 }
