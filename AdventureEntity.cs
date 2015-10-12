@@ -36,6 +36,7 @@ namespace aspectstar2
             switch (data.gfxtype)
             {
                 case EntityData.GraphicsType.Maptile:
+                    graphicsRow = data.graphics;
                     texture = Master.texCollection.adventureTiles[parent.tileset];
                     this.width = 16; this.height = 16;
                     break;
@@ -61,7 +62,7 @@ namespace aspectstar2
                 Rectangle source, dest;
                 Vector2 sourceTile;
                 spriteBatch.Begin();
-                sourceTile = Master.getMapTile(data.graphics, texture);
+                sourceTile = Master.getMapTile(graphicsRow, texture);
                 source = new Rectangle((int)sourceTile.X, (int)sourceTile.Y, 32, 32);
                 dest = new Rectangle((int)location.X - 16, (int)location.Y - 16, 32, 32);
                 spriteBatch.Draw(texture, dest, source, mask);
@@ -84,6 +85,8 @@ namespace aspectstar2
                 .SetValue("setWander", new Action<bool>(SetWander))
                 .SetValue("setColor", new Action<int, int, int, int>(SetColor))
                 .SetValue("becomeEnemy", new Action<int>(BecomeEnemy))
+                .SetValue("spawnShooter", new Action<int, int, bool>(SpawnShooter))
+                .SetValue("changeFace", new Action<int>(ChangeFace))
                 .Execute("onLoad()");
         }
 
@@ -232,6 +235,18 @@ namespace aspectstar2
         {
             parent.addObject(new AdventureEnemy(Master.currentFile.bestiary[enemy]));
             active = false;
+        }
+
+        void SpawnShooter(int x, int y, bool inline)
+        {
+            AdventureShooter shoot = new AdventureShooter(inline);
+            shoot.location = new Vector2(x * 32 + 16, y * 32 + 16);
+            parent.addObject(shoot);
+        }
+
+        void ChangeFace(int face)
+        {
+            graphicsRow = face;
         }
 
         static Action<bool> getChooser(AdventureEntity ent, string callYes, string callNo)
