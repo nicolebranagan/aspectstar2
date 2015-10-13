@@ -10282,8 +10282,8 @@ THANKS FOR PLAYING</credits>
         <x>56</x>
         <y>33</y>
         <dest>10</dest>
-        <destroomX>12</destroomX>
-        <destroomY>13</destroomY>
+        <destroomX>4</destroomX>
+        <destroomY>6</destroomY>
         <destx>1</destx>
         <desty>7</desty>
       </MapObject>
@@ -80625,7 +80625,7 @@ setCounter("timer", timer);
         <int>1</int>
         <int>0</int>
         <int>0</int>
-        <int>0</int>
+        <int>1</int>
         <int>0</int>
         <int>0</int>
         <int>0</int>
@@ -81788,9 +81788,9 @@ setCounter("timer", timer);
             <int>1</int>
             <int>2</int>
             <int>23</int>
+            <int>25</int>
             <int>23</int>
-            <int>23</int>
-            <int>23</int>
+            <int>25</int>
             <int>23</int>
             <int>22</int>
             <int>22</int>
@@ -81804,9 +81804,9 @@ setCounter("timer", timer);
             <int>22</int>
             <int>22</int>
             <int>23</int>
+            <int>28</int>
             <int>23</int>
-            <int>23</int>
-            <int>23</int>
+            <int>28</int>
             <int>23</int>
             <int>2</int>
             <int>1</int>
@@ -81819,14 +81819,14 @@ setCounter("timer", timer);
             <int>23</int>
             <int>23</int>
             <int>23</int>
-            <int>23</int>
+            <int>28</int>
             <int>23</int>
             <int>24</int>
             <int>24</int>
             <int>24</int>
             <int>23</int>
             <int>23</int>
-            <int>23</int>
+            <int>28</int>
             <int>23</int>
             <int>23</int>
             <int>23</int>
@@ -81847,7 +81847,7 @@ setCounter("timer", timer);
             <int>23</int>
             <int>23</int>
             <int>24</int>
-            <int>24</int>
+            <int>10</int>
             <int>24</int>
             <int>23</int>
             <int>23</int>
@@ -81940,22 +81940,22 @@ setCounter("timer", timer);
             <int>0</int>
             <int>0</int>
             <int>0</int>
+            <int>10</int>
             <int>0</int>
             <int>0</int>
+            <int>10</int>
             <int>0</int>
             <int>0</int>
+            <int>10</int>
             <int>0</int>
             <int>0</int>
+            <int>10</int>
             <int>0</int>
             <int>0</int>
+            <int>10</int>
             <int>0</int>
             <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
+            <int>10</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -82015,22 +82015,22 @@ setCounter("timer", timer);
             <int>0</int>
             <int>0</int>
             <int>0</int>
+            <int>10</int>
             <int>0</int>
             <int>0</int>
+            <int>10</int>
             <int>0</int>
             <int>0</int>
+            <int>10</int>
             <int>0</int>
             <int>0</int>
+            <int>10</int>
             <int>0</int>
             <int>0</int>
+            <int>10</int>
             <int>0</int>
             <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
+            <int>10</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -82086,7 +82086,161 @@ setCounter("timer", timer);
             <int>1</int>
             <int>1</int>
           </tileMap>
-          <storedObjects />
+          <storedObjects>
+            <StoredObject>
+              <x>368</x>
+              <y>112</y>
+              <type>stock</type>
+              <enemyType>7</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>432</x>
+              <y>112</y>
+              <type>stock</type>
+              <enemyType>7</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>112</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>176</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>176</x>
+              <y>288</y>
+              <type>stock</type>
+              <enemyType>8</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>656</x>
+              <y>144</y>
+              <type>enemy</type>
+              <enemyType>6</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>688</x>
+              <y>336</y>
+              <type>enemy</type>
+              <enemyType>6</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>176</x>
+              <y>144</y>
+              <type>enemy</type>
+              <enemyType>6</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>48</x>
+              <y>208</y>
+              <type>enemy</type>
+              <enemyType>6</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+          </storedObjects>
           <dark>false</dark>
           <music>-1</music>
         </Room>
@@ -82122,21 +82276,21 @@ setCounter("timer", timer);
             <int>6</int>
             <int>6</int>
             <int>6</int>
+            <int>16</int>
             <int>6</int>
             <int>6</int>
             <int>6</int>
+            <int>16</int>
+            <int>6</int>
+            <int>6</int>
+            <int>16</int>
+            <int>6</int>
+            <int>6</int>
+            <int>16</int>
             <int>6</int>
             <int>6</int>
             <int>6</int>
-            <int>6</int>
-            <int>6</int>
-            <int>6</int>
-            <int>6</int>
-            <int>6</int>
-            <int>6</int>
-            <int>6</int>
-            <int>6</int>
-            <int>6</int>
+            <int>16</int>
             <int>6</int>
             <int>6</int>
             <int>6</int>
@@ -82243,32 +82397,32 @@ setCounter("timer", timer);
             <int>0</int>
             <int>7</int>
             <int>0</int>
+            <int>11</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>10</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>10</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
+            <int>10</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -82295,25 +82449,25 @@ setCounter("timer", timer);
             <int>3</int>
             <int>0</int>
             <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>10</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
+            <int>10</int>
             <int>0</int>
+            <int>10</int>
             <int>0</int>
+            <int>10</int>
             <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
+            <int>10</int>
             <int>0</int>
             <int>0</int>
             <int>4</int>
@@ -82418,7 +82572,161 @@ setCounter("timer", timer);
             <int>1</int>
             <int>1</int>
           </tileMap>
-          <storedObjects />
+          <storedObjects>
+            <StoredObject>
+              <x>240</x>
+              <y>368</y>
+              <type>enemy</type>
+              <enemyType>7</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>592</x>
+              <y>272</y>
+              <type>enemy</type>
+              <enemyType>7</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>528</x>
+              <y>112</y>
+              <type>enemy</type>
+              <enemyType>7</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>176</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>304</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>496</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>400</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>624</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>144</x>
+              <y>240</y>
+              <type>enemy</type>
+              <enemyType>7</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+          </storedObjects>
           <dark>false</dark>
           <music>-1</music>
         </Room>
@@ -82426,6 +82734,31 @@ setCounter("timer", timer);
           <tileMap>
             <int>1</int>
             <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
             <int>2</int>
             <int>2</int>
             <int>2</int>
@@ -82474,47 +82807,47 @@ setCounter("timer", timer);
             <int>6</int>
             <int>2</int>
             <int>1</int>
+            <int>2</int>
+            <int>6</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>6</int>
             <int>1</int>
             <int>6</int>
             <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>6</int>
-            <int>4</int>
-            <int>2</int>
-            <int>7</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>9</int>
+            <int>9</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -82523,32 +82856,7 @@ setCounter("timer", timer);
             <int>0</int>
             <int>0</int>
             <int>7</int>
-            <int>4</int>
-            <int>6</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>4</int>
+            <int>1</int>
             <int>7</int>
             <int>0</int>
             <int>0</int>
@@ -82562,51 +82870,43 @@ setCounter("timer", timer);
             <int>0</int>
             <int>0</int>
             <int>0</int>
+            <int>24</int>
+            <int>24</int>
+            <int>8</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>0</int>
+            <int>0</int>
+            <int>1</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>0</int>
+            <int>13</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>8</int>
             <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>4</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>4</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
+            <int>10</int>
+            <int>1</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -82623,7 +82923,15 @@ setCounter("timer", timer);
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>24</int>
+            <int>24</int>
+            <int>8</int>
+            <int>9</int>
+            <int>0</int>
+            <int>1</int>
             <int>3</int>
             <int>0</int>
             <int>0</int>
@@ -82643,12 +82951,37 @@ setCounter("timer", timer);
             <int>0</int>
             <int>0</int>
             <int>0</int>
+            <int>24</int>
+            <int>24</int>
+            <int>8</int>
+            <int>8</int>
+            <int>0</int>
+            <int>1</int>
+            <int>3</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
+            <int>13</int>
             <int>0</int>
             <int>0</int>
-            <int>4</int>
+            <int>13</int>
+            <int>0</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>8</int>
+            <int>0</int>
+            <int>0</int>
+            <int>1</int>
             <int>3</int>
             <int>0</int>
             <int>0</int>
@@ -82662,59 +82995,34 @@ setCounter("timer", timer);
             <int>0</int>
             <int>0</int>
             <int>0</int>
+            <int>24</int>
+            <int>24</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>8</int>
             <int>0</int>
             <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>4</int>
-            <int>3</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>4</int>
+            <int>1</int>
             <int>1</int>
             <int>5</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>9</int>
+            <int>8</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -82750,7 +83058,110 @@ setCounter("timer", timer);
             <int>1</int>
             <int>1</int>
           </tileMap>
-          <storedObjects />
+          <storedObjects>
+            <StoredObject>
+              <x>400</x>
+              <y>304</y>
+              <type>enemy</type>
+              <enemyType>6</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>400</x>
+              <y>144</y>
+              <type>enemy</type>
+              <enemyType>6</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>112</x>
+              <y>240</y>
+              <type>enemy</type>
+              <enemyType>6</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>656</x>
+              <y>256</y>
+              <type>stock</type>
+              <enemyType>8</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>752</x>
+              <y>304</y>
+              <type>stock</type>
+              <enemyType>7</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>752</x>
+              <y>256</y>
+              <type>key</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+          </storedObjects>
           <dark>false</dark>
           <music>-1</music>
         </Room>
@@ -91340,11 +91751,11 @@ setDimensions(24,24);
 }
 function update() {
 if (getFlag("_active")) {
-changeFace(0);
+setColor(255,255,255,0);
 overrideSettings(true, false);
 }
 else {
-changeFace(29);
+setColor(255,255,255,255);
 overrideSettings(true, true);
 }
 }
@@ -91362,6 +91773,8 @@ function update() {
 if (timer &gt; 0) {
 timer = timer - 1;
 changeFace(26);
+if (timer == 1)
+	playSoundEffect(1);
 }
 else {
 setFlag("_active", false);
@@ -91374,6 +91787,7 @@ function hurt() {
 if (timer == 0) {
 setFlag("_active", true);
 timer = 200;
+playSoundEffect(5);
 }
 }</code>
       <graphics>27</graphics>
