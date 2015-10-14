@@ -125,6 +125,10 @@ namespace aspectstar2
                                 active = false;
                             else if (damage > proj.damage)
                                 proj.active = false;
+                            else if (proj.fiery && !fiery)
+                                active = false;
+                            else if (fiery && !proj.fiery)
+                                proj.active = false;
                             else if (friendly)
                                 active = false;
                         }
