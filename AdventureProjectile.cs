@@ -19,6 +19,8 @@ namespace aspectstar2
 
         int damage = 1;
 
+        int frameCounter = 0;
+
         public AdventureProjectile()
         { }
 
@@ -59,18 +61,29 @@ namespace aspectstar2
 
         public override void Draw(SpriteBatch spriteBatch, Color mask)
         {
+            frameCounter++;
+            if (frameCounter >= 20)
+                frameCounter = 0;
+
+            int frame = frameCounter / 5;
+
             spriteBatch.Begin();
             Rectangle source = new Rectangle(0, 0, 16, 16);
             if (!friendly)
+            {
                 source.Y = 16;
+                frame = 0;
+            }
             if (fiery)
                 source.Y = 32;
             if (ghostly)
                 source.Y = 48;
             if (damage > 2)
+            {
                 source.Y = 64;
-            Rectangle dest = new Rectangle((int)location.X - 8, (int)location.Y - 8, 16, 16);
-            spriteBatch.Draw(texture, dest, source, Color.White);
+                frame = 0;
+            }
+            spriteBatch.Draw(texture, location, source, Color.White, (float)Math.PI * frame / 2, new Vector2(8,8), 1, SpriteEffects.None, 0);
             spriteBatch.End();
         }
 
