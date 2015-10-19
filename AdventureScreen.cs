@@ -885,6 +885,7 @@ namespace aspectstar2
         {
             return new Engine(cfg => cfg.AllowClr())
                 .SetValue("spawnKey", new Action<int, int>(this.SpawnKey))
+                .SetValue("spawnGoldKey", new Action<int, int>(this.SpawnGoldKey))
                 .SetValue("getFlag", new Func<string, bool>(this.GetFlag))
                 .SetValue("setFlag", new Action<string, bool>(this.SetFlag))
                 .SetValue("overwriteTile", new Action<int, int, int>(this.OverwriteTile))
@@ -930,6 +931,16 @@ namespace aspectstar2
 
         }
 
+        void SpawnGoldKey(int x, int y)
+        {
+            AdventureGoldKey aK = new AdventureGoldKey();
+            aK.Initialize(this, game);
+            aK.location.X = 32 * x + 16;
+            aK.location.Y = 32 * y + 16;
+            newobjects.Add(aK);
+            adventure.rooms[roomX, roomY].adventureObjects.Add(aK); // So that the key respawns even if you leave the room, but not the adventure
+        }
+
         void OverwriteTile(int x, int y, int newTile)
         {
             int i = x + (y * 25);
@@ -967,7 +978,7 @@ namespace aspectstar2
         {
             foreach (AdventureObject obj in objects)
             {
-                if (!(obj is AdventurePlayer) && !(obj is AdventureExplosion))
+                if (!(obj is AdventurePlayer) && !(obj is AdventureExplosion) && !(obj is AdventureTeleporter))
                     obj.active = false;
                 if ((obj is AdventureEnemy) || (obj is AdventureShooter))
                 {
@@ -1052,7 +1063,7 @@ namespace aspectstar2
 
         Dictionary<string, bool> flags = new Dictionary<string, bool>();
 
-        void SetFlag(string flag, bool value)
+        public void SetFlag(string flag, bool value)
         {
             if (flag.StartsWith("!"))
             {

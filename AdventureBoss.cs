@@ -386,4 +386,71 @@ namespace aspectstar2
             //
         }
     }
+
+    public class AdventureBoss6 : AdventureEnemy
+    {
+        int frameCount = 0;
+
+        public AdventureBoss6()
+        {
+            this.texture = Master.texCollection.texBosses;
+            this.offset = new Vector2(32, 96);
+            this.width = 32;
+            this.height = 32;
+            this.radius = 32;
+
+            BestiaryEntry bossEntry = new BestiaryEntry();
+            bossEntry.movementType = BestiaryEntry.MovementTypes.stationary;
+            definition = bossEntry;
+            health = 5;
+
+            defense = true;
+        }
+
+        public override void Draw(SpriteBatch spriteBatch, Color mask)
+        {
+            frameCount++;
+            if (frameCount == 30)
+                frameCount = 0;
+            int frame = frameCount / 10;
+            if (flickerCount > 0)
+            {
+                if (frame == 1)
+                    flickerCount--;
+                switch (frame)
+                {
+                    case 0:
+                        frame = 2;
+                        break;
+                    case 2:
+                        frame = 0;
+                        break;
+                }
+
+                frame = frame + 3;
+
+            }
+
+            Vector2 screen_loc = location - offset;
+
+            Rectangle sourceRectangle = new Rectangle(frame * 64, 384, 64, 128);
+            Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y - (z * 2), 64, 128);
+
+            spriteBatch.Begin();
+            spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, mask);
+            spriteBatch.End();
+        }
+
+        public override void Update()
+        {
+            parent.SetFlag("_redlight", flickerCount > 0);
+            base.Update();
+        }
+
+        public override void Die()
+        {
+            parent.SetFlag("_die", true);
+            base.Die();
+        }
+    }
 }

@@ -15,6 +15,7 @@ namespace aspectstar2
         protected bool ghost;
         protected int radius = 16;
         protected bool interenemycollide = false;
+        protected bool defense = false;
 
         public AdventureEnemy()
         {
@@ -172,19 +173,24 @@ namespace aspectstar2
             if (ghostly == ghost && this.flickerCount == 0)
             {
                 PlaySound.Play(PlaySound.SoundEffectName.Boom);
-                health = health - damage;
+                health = health - (defense ? 1 : damage);
                 flickerCount = 40;
                 if (health <= 0)
                 {
                     active = false;
-                    parent.addObject(new AdventureExplosion(this.location));
-                    if (Master.globalRandom.Next(0, 10) <= 2)
-                    {
-                        AdventureItem aI = game.getRandomItem();
-                        aI.location = location;
-                        parent.addObject(aI);
-                    }
+                    Die();
                 }
+            }
+        }
+
+        public virtual void Die()
+        {
+            parent.addObject(new AdventureExplosion(this.location));
+            if (Master.globalRandom.Next(0, 10) <= 2)
+            {
+                AdventureItem aI = game.getRandomItem();
+                aI.location = location;
+                parent.addObject(aI);
             }
         }
 
@@ -192,7 +198,8 @@ namespace aspectstar2
         {
             Vector2 playerloc = player.location;
 
-            if (Math.Sqrt( Math.Pow(location.X - playerloc.X, 2) + Math.Pow(location.Y - playerloc.Y, 2) ) <= Math.Max(width, height))
+            //if (Math.Sqrt( Math.Pow(location.X - playerloc.X, 2) + Math.Pow(location.Y - playerloc.Y, 2) ) <= Math.Max(width, height))
+            if (Math.Abs(location.X - playerloc.X) < width && Math.Abs(location.Y - playerloc.Y) < height)
             {
                 player.Hurt();
                 player.Recoil(location, this);

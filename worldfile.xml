@@ -10250,11 +10250,6 @@ THANKS FOR PLAYING</credits>
         <destx>12</destx>
         <desty>11</desty>
       </MapObject>
-      <MapObject xsi:type="MapLock">
-        <x>44</x>
-        <y>43</y>
-        <tile>5</tile>
-      </MapObject>
       <MapObject xsi:type="MapTeleporter">
         <x>54</x>
         <y>32</y>
@@ -10285,11 +10280,16 @@ THANKS FOR PLAYING</credits>
       <MapObject xsi:type="MapTeleporter">
         <x>56</x>
         <y>33</y>
-        <dest>10</dest>
-        <destroomX>4</destroomX>
-        <destroomY>6</destroomY>
+        <dest>8</dest>
+        <destroomX>11</destroomX>
+        <destroomY>8</destroomY>
         <destx>1</destx>
         <desty>7</desty>
+      </MapObject>
+      <MapObject xsi:type="MapLock">
+        <x>44</x>
+        <y>41</y>
+        <tile>5</tile>
       </MapObject>
     </objects>
   </map>
@@ -71657,7 +71657,7 @@ function hurt() { }</code>
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>0</int>
+            <int>29</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -71682,7 +71682,7 @@ function hurt() { }</code>
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>0</int>
+            <int>35</int>
             <int>4</int>
             <int>0</int>
             <int>21</int>
@@ -71885,21 +71885,21 @@ function hurt() { }</code>
             <int>4</int>
             <int>2</int>
             <int>7</int>
+            <int>9</int>
             <int>7</int>
             <int>7</int>
             <int>7</int>
             <int>7</int>
             <int>7</int>
             <int>7</int>
+            <int>9</int>
             <int>7</int>
             <int>7</int>
             <int>7</int>
             <int>7</int>
             <int>7</int>
             <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
+            <int>9</int>
             <int>7</int>
             <int>7</int>
             <int>7</int>
@@ -71983,7 +71983,7 @@ function hurt() { }</code>
             <int>33</int>
             <int>33</int>
             <int>2</int>
-            <int>32</int>
+            <int>31</int>
             <int>33</int>
             <int>33</int>
             <int>33</int>
@@ -72008,7 +72008,7 @@ function hurt() { }</code>
             <int>33</int>
             <int>33</int>
             <int>2</int>
-            <int>32</int>
+            <int>37</int>
             <int>33</int>
             <int>33</int>
             <int>33</int>
@@ -72184,7 +72184,184 @@ function hurt() { }</code>
             <int>18</int>
             <int>16</int>
           </tileMap>
-          <storedObjects />
+          <storedObjects>
+            <StoredObject>
+              <x>400</x>
+              <y>176</y>
+              <type>boss</type>
+              <enemyType>6</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>208</x>
+              <y>208</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>bob1</name>
+                <code>var count = 25;
+function onLoad() { }
+function update() {
+count--;
+if (count &lt;= 0) {
+if (getFlag("_redlight"))
+count = 99;
+else
+count = 175;
+becomeEnemy(15, false);
+playSoundEffect(5);
+}
+}
+function inRange() { }
+function touch() { }
+function hurt() { }</code>
+                <graphics>41</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>624</x>
+              <y>208</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>bob2</name>
+                <code>var count = 60;
+function onLoad() { }
+function update() {
+count--;
+if (count &lt;= 0) {
+if (getFlag("_redlight"))
+count = 99;
+else
+count = 175;
+becomeEnemy(15, false);
+playSoundEffect(5);
+}
+}
+function inRange() { }
+function touch() { }
+function hurt() { }</code>
+                <graphics>41</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>80</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>304</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>528</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>400</x>
+              <y>400</y>
+              <type>teleporter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>-1</dest>
+              <destx>49</destx>
+              <desty>35</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+          </storedObjects>
+          <code>function onLoad() { }
+function update() {
+if (getPlayerX() == 1 &amp;&amp; !getFlag("lockedDoors")) {
+setFlag("lockedDoors", true);
+overwriteTile(0,2,2);
+overwriteTile(0,3,2);
+overwriteTile(0,4,2);
+overwriteTile(0,5,2);
+overwriteTile(0,6,2);
+overwriteTile(0,7,2);
+playSoundEffect(1);
+}
+
+if (getFlag("_die")) {
+setFlag("_die", false);
+clearObjects();
+overwriteTile(12,9,36);
+overwriteTile(12,10,36);
+overwriteTile(12,11,36);
+overwriteTile(12,12,36);
+spawnGoldKey(12,10);
+}
+}</code>
           <dark>false</dark>
           <music>-1</music>
         </Room>

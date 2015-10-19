@@ -84,7 +84,7 @@ namespace aspectstar2
                 .SetValue("setLocation", new Action<int, int>(SetLocation))
                 .SetValue("setWander", new Action<bool>(SetWander))
                 .SetValue("setColor", new Action<int, int, int, int>(SetColor))
-                .SetValue("becomeEnemy", new Action<int>(BecomeEnemy))
+                .SetValue("becomeEnemy", new Action<int, bool>(BecomeEnemy))
                 .SetValue("spawnShooter", new Action<int, int, bool>(SpawnShooter))
                 .SetValue("changeFace", new Action<int>(ChangeFace))
                 .Execute("onLoad()");
@@ -231,10 +231,13 @@ namespace aspectstar2
             filter = Color.FromNonPremultiplied(r, g, b, a);
         }
 
-        void BecomeEnemy(int enemy)
+        void BecomeEnemy(int enemy, bool fatal)
         {
-            parent.addObject(new AdventureEnemy(Master.currentFile.bestiary[enemy]));
-            active = false;
+            AdventureEnemy aE = new AdventureEnemy(Master.currentFile.bestiary[enemy]);
+            aE.location = location;
+            parent.addObject(aE);
+            if (fatal)
+                active = false;
         }
 
         void SpawnShooter(int x, int y, bool inline)
