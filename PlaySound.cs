@@ -45,6 +45,8 @@ namespace aspectstar2
         static SoundEffectInstance keysInst;
         static SoundEffectInstance pewwInst;
 
+        public static bool enabled = true;
+
         public static void Initialize(Microsoft.Xna.Framework.Content.ContentManager Content)
         {
             PlaySound.die = Content.Load<SoundEffect>("die");
@@ -69,6 +71,9 @@ namespace aspectstar2
 
         public static void Play(SoundEffectName name)
         {
+            if (!enabled)
+                return;
+
             switch (name)
             {
                 case SoundEffectName.Aspect:

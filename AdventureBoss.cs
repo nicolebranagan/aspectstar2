@@ -389,52 +389,108 @@ namespace aspectstar2
 
     public class AdventureBoss6 : AdventureEnemy
     {
-        int frameCount = 0;
+            int frameCount = 0;
 
-        public AdventureBoss6()
+            public AdventureBoss6()
+            {
+                this.texture = Master.texCollection.texBosses;
+                this.offset = new Vector2(32, 96);
+                this.width = 32;
+                this.height = 32;
+                this.radius = 32;
+
+                BestiaryEntry bossEntry = new BestiaryEntry();
+                bossEntry.movementType = BestiaryEntry.MovementTypes.stationary;
+                definition = bossEntry;
+                health = 5;
+
+                defense = true;
+            }
+
+            public override void Draw(SpriteBatch spriteBatch, Color mask)
+            {
+                frameCount++;
+                if (frameCount == 30)
+                    frameCount = 0;
+                int frame = frameCount / 10;
+                if (flickerCount > 0)
+                {
+                    if (frame == 1)
+                        flickerCount--;
+                    switch (frame)
+                    {
+                        case 0:
+                            frame = 2;
+                            break;
+                        case 2:
+                            frame = 0;
+                            break;
+                    }
+
+                    frame = frame + 3;
+
+                }
+
+                Vector2 screen_loc = location - offset;
+
+                Rectangle sourceRectangle = new Rectangle(frame * 64, 384, 64, 128);
+                Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y - (z * 2), 64, 128);
+
+                spriteBatch.Begin();
+                spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, mask);
+                spriteBatch.End();
+            }
+
+            public override void Update()
+            {
+                parent.SetFlag("_redlight", flickerCount > 0);
+                base.Update();
+            }
+
+            public override void Die()
+            {
+                parent.SetFlag("_die", true);
+                base.Die();
+            }
+        }
+
+    public class AdventureBoss7 : AdventureEnemy
+    {
+        bool forward = true;
+
+        public AdventureBoss7()
         {
             this.texture = Master.texCollection.texBosses;
-            this.offset = new Vector2(32, 96);
-            this.width = 32;
-            this.height = 32;
-            this.radius = 32;
+            this.offset = new Vector2(32, 32);
+            this.width = 30;
+            this.height = 30;
 
             BestiaryEntry bossEntry = new BestiaryEntry();
-            bossEntry.movementType = BestiaryEntry.MovementTypes.stationary;
+            bossEntry.movementType = BestiaryEntry.MovementTypes.intelligent;
+            bossEntry.speed = 4;
+            bossEntry.intelligence = 7;
+            bossEntry.decisiveness = 6;
+            bossEntry.wanderer = true;
             definition = bossEntry;
-            health = 5;
-
-            defense = true;
+            health = 12;
         }
 
         public override void Draw(SpriteBatch spriteBatch, Color mask)
         {
-            frameCount++;
-            if (frameCount == 30)
-                frameCount = 0;
-            int frame = frameCount / 10;
             if (flickerCount > 0)
             {
-                if (frame == 1)
-                    flickerCount--;
-                switch (frame)
-                {
-                    case 0:
-                        frame = 2;
-                        break;
-                    case 2:
-                        frame = 0;
-                        break;
-                }
-
-                frame = frame + 3;
-
+                flickerCount--;
+                if (flickerCount % 7 == 0)
+                    return;
             }
 
+            int dim_x = 64;
+            int dim_y = 64;
+            int column = forward ? 0 : 1;
             Vector2 screen_loc = location - offset;
 
-            Rectangle sourceRectangle = new Rectangle(frame * 64, 384, 64, 128);
-            Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y - (z * 2), 64, 128);
+            Rectangle sourceRectangle = new Rectangle(dim_x * column, 512, dim_x, dim_y);
+            Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y - (z * 2), dim_x, dim_y);
 
             spriteBatch.Begin();
             spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, mask);
@@ -443,14 +499,25 @@ namespace aspectstar2
 
         public override void Update()
         {
-            parent.SetFlag("_redlight", flickerCount > 0);
+            if (!forward && faceDir == Master.Directions.Down)
+                forward = true;
+            else if (forward && faceDir == Master.Directions.Up)
+                forward = false;
+
             base.Update();
         }
 
-        public override void Die()
+        public override void Move(Vector2 move_dist)
         {
-            parent.SetFlag("_die", true);
-            base.Die();
+            Vector2 test = move_dist + location;
+            if ((test.X - width) >= 0 && (test.Y - height) >= 0 && (test.X + width) < (25 * 32) && (test.Y + height) < (13 * 32))
+                location = test;
+            base.Move(move_dist);
+        }
+
+        public override void Touch()
+        {
+            //
         }
     }
 }

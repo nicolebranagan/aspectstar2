@@ -216,7 +216,7 @@ namespace aspectstar2
             Rectangle destinationRectangle = new Rectangle((int)location.X - 16, (int)location.Y - 16, dim_x, dim_y);
 
             spriteBatch.Begin();
-            spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, mask);
+            spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, Color.White);
             spriteBatch.End();
         }
 
