@@ -145,6 +145,7 @@ namespace aspectstar2
             if ((z == 0) && (parent.isSolid(this.location, 0, 0, 0, faceDir)))
             {
                 moving = false;
+                Flicker();
                 parent.Drown();
             }
 
