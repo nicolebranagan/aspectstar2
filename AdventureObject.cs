@@ -100,6 +100,7 @@ namespace aspectstar2
 
             spriteBatch.Begin();
             spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, mask);
+            //spriteBatch.Draw(Master.texCollection.blank, new Rectangle((int)location.X - width, (int)location.Y - height, width * 2, height * 2), Color.Red);
             spriteBatch.End();
         }
 

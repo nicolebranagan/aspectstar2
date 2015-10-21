@@ -43,12 +43,16 @@ VISAGER
 AZUREFLUX
 
 SPECIAL THANKS TO
-MARION
+YY
 ASPECT STAR 1 TEAM
+
+***
+MARION
 
 
 
 A NICOLE PRODUCTION
+
 THANKS FOR PLAYING</credits>
   <map>
     <tileMap>
@@ -92526,8 +92530,8 @@ spawnKey(12,2);
           </tileMap>
           <storedObjects>
             <StoredObject>
-              <x>176</x>
-              <y>272</y>
+              <x>560</x>
+              <y>208</y>
               <type>enemy</type>
               <enemyType>6</enemyType>
               <data>
@@ -92543,8 +92547,8 @@ spawnKey(12,2);
               <key>0</key>
             </StoredObject>
             <StoredObject>
-              <x>560</x>
-              <y>208</y>
+              <x>176</x>
+              <y>272</y>
               <type>enemy</type>
               <enemyType>6</enemyType>
               <data>
@@ -94157,8 +94161,8 @@ spawnKey(12,2);
       <decisiveness>8</decisiveness>
       <intelligence>0</intelligence>
       <health>1</health>
-      <xOffset>16</xOffset>
-      <yOffset>40</yOffset>
+      <xOffset>18</xOffset>
+      <yOffset>36</yOffset>
       <width>10</width>
       <height>6</height>
       <movementType>random</movementType>
@@ -94335,8 +94339,8 @@ spawnKey(12,2);
       <health>2</health>
       <xOffset>16</xOffset>
       <yOffset>20</yOffset>
-      <width>30</width>
-      <height>6</height>
+      <width>14</width>
+      <height>20</height>
       <movementType>random</movementType>
       <wanderer>false</wanderer>
       <ghost>false</ghost>

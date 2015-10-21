@@ -31,11 +31,26 @@ namespace aspectstar2
                 destRect = new Rectangle((int)pos.X + i * 16, (int)pos.Y, 16, 16);
 
                 asc = (int)(text[i]);
-                if ((asc >= 48) && (asc <= 57))
+                if (asc == 42)
+                {
+                    sourceRect = new Rectangle((128), 0, 16, 16);
+                    spriteBatch.Draw(Master.texCollection.controls, destRect, sourceRect, Color.White);
+                }
+                else if ((asc >= 48) && (asc <= 57))
                 {
                     asc = asc - 48;
                     sourceRect = new Rectangle(16 * asc, 0, 16, 16);
                     spriteBatch.Draw(font, destRect, sourceRect, textColor);
+                }
+                else if (asc == 60)
+                {
+                    sourceRect = new Rectangle(128, 16, 16, 16);
+                    spriteBatch.Draw(Master.texCollection.controls, new Vector2(destRect.X - 2, destRect.Y - 2), sourceRect, textColor, (float)Math.PI, new Vector2(16,16), 1, SpriteEffects.None, 0);
+                }
+                else if (asc == 62)
+                {
+                    sourceRect = new Rectangle(128, 16, 16, 16);
+                    spriteBatch.Draw(Master.texCollection.controls, destRect, sourceRect, textColor);
                 }
                 else if ((asc >= 65) && (asc <= 90))
                 {
