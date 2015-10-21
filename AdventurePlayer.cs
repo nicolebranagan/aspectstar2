@@ -134,7 +134,7 @@ namespace aspectstar2
                 parent.enterNewRoom(0, 1);
             else if (!parent.isSolid(test, 1, width, height, faceDir))
                 location = test;
-            else
+            else if (flickerCount <= 0)
                 recoiler.Move(-move_dist);
         }
 

@@ -1058,7 +1058,10 @@ namespace aspectstar2
 
         void SetName(string name)
         {
-            label = name;
+            if (name != "")
+                label = name;
+            else
+                label = adventure.name;
         }
 
         Dictionary<string, bool> flags = new Dictionary<string, bool>();
