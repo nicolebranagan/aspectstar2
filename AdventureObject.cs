@@ -86,7 +86,7 @@ namespace aspectstar2
         {
             int dim_x = 32;
             int dim_y;
-            if (parent.isInjury(location, width, height) && z == 0)
+            if (parent.isInjury(location, 0, 0) && z == 0)
                 dim_y = 40;
             else
                 dim_y = 48;

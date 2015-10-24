@@ -315,7 +315,7 @@ namespace aspectstar2
                     DrawTextBox(spriteBatch, textString);
                     if (choice != -1)
                     {
-                        WriteText(spriteBatch, "YES", new Vector2((Master.width / 2)- (16 * 11), 16 * 6), Color.White);
+                        WriteText(spriteBatch, "YES", new Vector2((Master.width / 2) - (16 * 11), 16 * 6), Color.White);
                         WriteText(spriteBatch, "NO", new Vector2((Master.width / 2) + (16 * 8), 16 * 6), Color.White);
 
                         spriteBatch.Begin();
@@ -689,8 +689,7 @@ namespace aspectstar2
                     {
                         currentMode = adventureModes.runMode;
                         stallCount = 20;
-                        if (choice != -1)
-                            chooser(choice == 0);
+                        chooser(choice == 0);
                     }
                     else if (choice != -1 && Master.controls.Left)
                     {
@@ -986,19 +985,37 @@ namespace aspectstar2
                 }
             }
         }
+        
+        Queue<string> textStack = new Queue<string>();
 
         public void TextBox(string text)
         {
-            textString = text;
-            choice = -1;
-            currentMode = adventureModes.textBox;
+            if (currentMode != adventureModes.textBox)
+            {
+                textString = text;
+                choice = -1;
+                currentMode = adventureModes.textBox;
+            }
+            else
+            {
+                textStack.Enqueue(text);
+            }
+
+            chooser = delegate (bool b)
+            {
+                if (textStack.Count != 0)
+                    TextBox(textStack.Dequeue());
+            };
         }
 
         public void QuestionBox(string text, Action<bool> choose)
         {
             textString = text;
             choice = 1;
-            chooser = choose;
+            chooser = delegate (bool b)
+            {
+                choose(b);
+            };
             stallCount = 20;
             currentMode = adventureModes.textBox;
         }

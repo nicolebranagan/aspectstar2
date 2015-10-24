@@ -55,8 +55,9 @@ namespace aspectstar2
                 Songs[SongName.Dungeon7] = Content.Load<Song>("music_azureflux03");
                 Songs[SongName.Dungeon8] = Content.Load<Song>("music_visager11");
             }
-            catch { 
+            catch {
                 // No Music
+                enabled = false;
             }
         }
 

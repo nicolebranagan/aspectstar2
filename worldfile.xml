@@ -22228,31 +22228,6 @@ function hurt() { }</code>
           </tileMap>
           <storedObjects>
             <StoredObject>
-              <x>240</x>
-              <y>208</y>
-              <type>entity</type>
-              <enemyType>0</enemyType>
-              <data>
-                <name>guard</name>
-                <code>function onLoad() { }
-function update() { }
-function inRange() {
-TextBox("LONG LIVE THE PRINCESS");
-}
-function touch() { }
-function hurt() { }</code>
-                <graphics>0</graphics>
-                <gfxtype>Characters</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>0</key>
-            </StoredObject>
-            <StoredObject>
               <x>464</x>
               <y>208</y>
               <type>entity</type>
@@ -22281,6 +22256,39 @@ TextBox("YOU ARE TOO POOR TO AFFORD MY WARES");
 
 function no() { TextBox("ENJOY THE TOWN"); }</code>
                 <graphics>1</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>240</x>
+              <y>208</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>guard</name>
+                <code>function onLoad() { }
+
+function update() { }
+
+function inRange() {
+
+TextBox("LONG LIVE THE PRINCESS");
+
+TextBox("NO SERIOUSLY");
+TextBox("SHE IS THE BEST");
+}
+
+function touch() { }
+
+function hurt() { }</code>
+                <graphics>0</graphics>
                 <gfxtype>Characters</gfxtype>
               </data>
               <dest>0</dest>
@@ -96122,7 +96130,7 @@ overwriteTile(13,7,12);
       <intelligence>0</intelligence>
       <health>1</health>
       <xOffset>16</xOffset>
-      <yOffset>32</yOffset>
+      <yOffset>38</yOffset>
       <width>16</width>
       <height>16</height>
       <movementType>stationary</movementType>
