@@ -891,7 +891,7 @@ namespace aspectstar2
                 .SetValue("playSoundEffect", new Action<int>(this.PlaySoundEffect))
                 .SetValue("anyEnemies", new Func<bool>(this.AnyEnemies))
                 .SetValue("clearObjects", new Action(this.ClearObjects))
-                .SetValue("TextBox", new Action<string>(this.TextBox))
+                .SetValue("TextBox", new Action<string>(this._textBox))
                 .SetValue("callMethod", new Action<string,string>(this.CallMethod))
                 .SetValue("giveWeapon", new Action<int>(this.GiveWeapon))
                 .SetValue("getPlayerX", new Func<int>(this.GetPlayerX))
@@ -900,6 +900,7 @@ namespace aspectstar2
                 .SetValue("getCounter", new Func<string, int>(this.GetCounter))
                 .SetValue("setPlayerColor", new Action<int, int, int, int>(this.SetPlayerColor))
                 .SetValue("setName", new Action<string>(this.SetName))
+                .SetValue("spawnBoss", new Action<int, int>(this.SpawnBoss))
                 .Execute(code);
         }
 
@@ -987,8 +988,13 @@ namespace aspectstar2
         }
         
         Queue<string> textStack = new Queue<string>();
+        
+        void _textBox(string text)
+        {
+            TextBox(text, true);
+        }
 
-        public void TextBox(string text)
+        public void TextBox(string text, bool replace)
         {
             if (currentMode != adventureModes.textBox)
             {
@@ -1001,23 +1007,40 @@ namespace aspectstar2
                 textStack.Enqueue(text);
             }
 
-            chooser = delegate (bool b)
+            if (replace)
             {
-                if (textStack.Count != 0)
-                    TextBox(textStack.Dequeue());
-            };
+                chooser = delegate (bool b)
+                {
+                    if (textStack.Count != 0)
+                        TextBox(textStack.Dequeue(), false);
+                };
+            }
         }
 
         public void QuestionBox(string text, Action<bool> choose)
         {
-            textString = text;
-            choice = 1;
-            chooser = delegate (bool b)
+            if (currentMode != adventureModes.textBox)
             {
-                choose(b);
-            };
-            stallCount = 20;
-            currentMode = adventureModes.textBox;
+                textString = text;
+                choice = 1;
+                chooser = delegate (bool b)
+                {
+                    choose(b);
+                };
+                stallCount = 20;
+                currentMode = adventureModes.textBox;
+            }
+            else
+            {
+                textStack.Enqueue(text);
+                chooser = delegate (bool b)
+                {
+                    if (textStack.Count == 1)
+                        QuestionBox(textStack.Dequeue(), choose);
+                    else
+                        TextBox(textStack.Dequeue(), false);
+                };
+             }
         }
 
         void CallMethod(string name, string message)
@@ -1115,6 +1138,10 @@ namespace aspectstar2
             {
                 return dark;
             }
+            else if (flag == "_beaten")
+            {
+                return beaten;
+            }
             else
             {
                 if (flags.ContainsKey(flag))
@@ -1173,6 +1200,13 @@ namespace aspectstar2
                 return counters[flag];
             else
                 return 0;
+        }
+
+        void SpawnBoss(int x, int y)
+        {
+            AdventureBoss1 boss1 = new AdventureBoss1();
+            boss1.location = new Vector2(x * 32 + 16, y * 32 + 16);
+            addObject(boss1);
         }
 
         // Predicates

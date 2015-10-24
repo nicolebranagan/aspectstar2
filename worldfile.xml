@@ -10286,15 +10286,6 @@ THANKS FOR PLAYING</credits>
         <y>41</y>
         <tile>5</tile>
       </MapObject>
-      <MapObject xsi:type="MapTeleporter">
-        <x>56</x>
-        <y>33</y>
-        <dest>11</dest>
-        <destroomX>7</destroomX>
-        <destroomY>14</destroomY>
-        <destx>12</destx>
-        <desty>11</desty>
-      </MapObject>
       <MapObject xsi:type="MapLock">
         <x>58</x>
         <y>33</y>
@@ -10316,6 +10307,15 @@ THANKS FOR PLAYING</credits>
         <dest>11</dest>
         <destroomX>7</destroomX>
         <destroomY>14</destroomY>
+        <destx>12</destx>
+        <desty>11</desty>
+      </MapObject>
+      <MapObject xsi:type="MapTeleporter">
+        <x>56</x>
+        <y>33</y>
+        <dest>2</dest>
+        <destroomX>12</destroomX>
+        <destroomY>13</destroomY>
         <destx>12</destx>
         <desty>11</desty>
       </MapObject>
@@ -11604,12 +11604,47 @@ THANKS FOR PLAYING</credits>
             </StoredObject>
             <StoredObject>
               <x>400</x>
-              <y>176</y>
-              <type>boss</type>
-              <enemyType>1</enemyType>
+              <y>240</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
               <data>
-                <graphics>0</graphics>
-                <gfxtype>Maptile</gfxtype>
+                <name>evil</name>
+                <code>var counter = -1;
+var talked = false;
+function onLoad() { }
+function update() {
+if (counter == 99) {
+playSoundEffect(11);
+}
+if (counter &gt; 0) {
+setColor(255,255,255,255 * counter / 100);
+counter--;
+}
+else if (counter == 0) {
+spawnBoss(12,5);
+setFlag("startBattle", true);
+playSoundEffect(5);
+die();
+}
+}
+function inRange() {
+if (!talked) {
+TextBox("IT WAS ME WHO KIDNAPPED THE PRINCESS");
+TextBox("AND I TELL YOU YOU WILL NEVER SEE YOUR        PRECIOUS MARY AGAIN UNLESS YOU BRAVE MY       CHALLENGES");
+TextBox("NOW DIE");
+counter = 100;
+talked = true;
+}
+}
+function touch() { }
+function hurt() {
+if (!talked) {
+playSoundEffect(7);
+TextBox("DONT WASTE YOUR TIME WITH THOSE PUNY BULLETS");
+}
+}</code>
+                <graphics>6</graphics>
+                <gfxtype>Characters</gfxtype>
               </data>
               <dest>0</dest>
               <destx>0</destx>
@@ -11621,28 +11656,49 @@ THANKS FOR PLAYING</credits>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
+
 function update() {
+
 if (!(getFlag("enterBoss")) &amp;&amp; getPlayerY() == 10) {
+
 overwriteTile(11,12,19);
+
 overwriteTile(12,12,19);
+
 overwriteTile(13,12,19);
+
 overwriteTile(11,11,18);
+
 overwriteTile(12,11,18);
+
 overwriteTile(13,11,18);
+
 playSoundEffect(1);
+
 setFlag("enterBoss", true);
+
 }
 
-if (!(getFlag("beatBoss")) &amp;&amp; !(anyEnemies())) {
+
+if (getFlag("startBattle") &amp;&amp; !(getFlag("beatBoss")) &amp;&amp; !(anyEnemies())) {
+
 overwriteTile(1,6,6);
+
 overwriteTile(0,6,0);
+
 overwriteTile(0,5,21);
+
 overwriteTile(0,4,21);
+
 overwriteTile(12,7,20);
+
 playSoundEffect(0);
+
 setFlag("beatBoss", true);
+
 clearObjects();
 }
+
 }</code>
           <dark>false</dark>
           <music>4</music>
@@ -22228,45 +22284,6 @@ function hurt() { }</code>
           </tileMap>
           <storedObjects>
             <StoredObject>
-              <x>464</x>
-              <y>208</y>
-              <type>entity</type>
-              <enemyType>0</enemyType>
-              <data>
-                <name>seller</name>
-                <code>function onLoad() { setWander(true); }
-
-function update() { }
-
-function inRange() { }
-
-function touch() { questionBox("DO YOU WANT TO BUY A FISH FOR 2 BELLS", "yes()", "no()"); }
-
-function yes() {
-var bells = getCounter("_bells");
-if (bells &gt;= 2) {
-setCounter("_bells", bells - 2);
-giveWeapon(1);
-playSoundEffect(0);
-}
-else {
-TextBox("YOU ARE TOO POOR TO AFFORD MY WARES");
-}
-}
-
-function no() { TextBox("ENJOY THE TOWN"); }</code>
-                <graphics>1</graphics>
-                <gfxtype>Characters</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>0</key>
-            </StoredObject>
-            <StoredObject>
               <x>240</x>
               <y>208</y>
               <type>entity</type>
@@ -22289,6 +22306,60 @@ function touch() { }
 
 function hurt() { }</code>
                 <graphics>0</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>464</x>
+              <y>208</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>seller</name>
+                <code>function onLoad() { setWander(true); }
+
+function update() { }
+
+function inRange() { }
+
+function touch() { 
+questionBox("DO YOU WANT TO BUY A FISH FOR 2 BELLS", "yes()", "no()"); 
+}
+
+
+function yes() {
+
+var bells = getCounter("_bells");
+
+if (bells &gt;= 2) {
+setCounter("_bells", bells - 2);
+
+giveWeapon(1);
+
+playSoundEffect(0);
+
+}
+
+else {
+
+TextBox("YOU ARE TOO POOR TO AFFORD MY WARES");
+
+}
+
+}
+
+
+function no() {
+TextBox("ENJOY THE TOWN");
+}</code>
+                <graphics>1</graphics>
                 <gfxtype>Characters</gfxtype>
               </data>
               <dest>0</dest>
@@ -25858,6 +25929,31 @@ TextBox("PRAISE HER");
 function no() {
 TextBox("A DANGEROUS ANSWER");
 }</code>
+                <graphics>0</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>176</x>
+              <y>176</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>guard4</name>
+                <code>function onLoad() { }
+function update() { }
+function inRange() {
+TextBox("LOOKING AT OUT OF PLACE COLUMNS MAY VIOLATE   THE STATE SECRETS LAW");
+}
+function touch() { }
+function hurt() { }</code>
                 <graphics>0</graphics>
                 <gfxtype>Characters</gfxtype>
               </data>
@@ -65082,7 +65178,57 @@ setFlag("room5right", true);
             <int>1</int>
             <int>1</int>
           </tileMap>
-          <storedObjects />
+          <storedObjects>
+            <StoredObject>
+              <x>400</x>
+              <y>112</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>evil</name>
+                <code>var counter = -1;
+var talked = false;
+function onLoad() { }
+function update() {
+if (counter == 99) {
+playSoundEffect(11);
+}
+if (counter &gt; 0) {
+setColor(255,255,255,255*(counter / 100));
+counter--;
+}
+else if (counter == 0) {
+die();
+}
+}
+function inRange() {
+if (!talked) {
+TextBox("I AM VERY IMPRESSED YOU GOT THIS FAR");
+TextBox("BUT NO MATTER FOR HERE IN THIS ABANDONED      FLOATING CITY I HAVE SET UP A NEW ARRAY OF    TRAPS FOR YOU");
+TextBox("IT MIGHT JUST REMIND YOU OF YOUR PAST QUEST")
+counter = 100;
+talked = true;
+}
+}
+function touch() { }
+function hurt() {
+if (!talked) {
+playSoundEffect(7);
+TextBox("DONT WASTE YOUR TIME WITH THOSE PUNY BULLETS");
+}
+}</code>
+                <graphics>6</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+          </storedObjects>
           <dark>false</dark>
           <music>-1</music>
         </Room>
