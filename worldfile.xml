@@ -10313,11 +10313,11 @@ THANKS FOR PLAYING</credits>
       <MapObject xsi:type="MapTeleporter">
         <x>56</x>
         <y>33</y>
-        <dest>2</dest>
-        <destroomX>12</destroomX>
-        <destroomY>13</destroomY>
-        <destx>12</destx>
-        <desty>11</desty>
+        <dest>9</dest>
+        <destroomX>8</destroomX>
+        <destroomY>9</destroomY>
+        <destx>11</destx>
+        <desty>1</desty>
       </MapObject>
     </objects>
   </map>
@@ -11569,40 +11569,6 @@ THANKS FOR PLAYING</credits>
           </tileMap>
           <storedObjects>
             <StoredObject>
-              <x>176</x>
-              <y>48</y>
-              <type>shooter</type>
-              <enemyType>0</enemyType>
-              <data>
-                <graphics>0</graphics>
-                <gfxtype>Maptile</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>0</key>
-            </StoredObject>
-            <StoredObject>
-              <x>624</x>
-              <y>48</y>
-              <type>shooter</type>
-              <enemyType>0</enemyType>
-              <data>
-                <graphics>0</graphics>
-                <gfxtype>Maptile</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>0</key>
-            </StoredObject>
-            <StoredObject>
               <x>400</x>
               <y>240</y>
               <type>entity</type>
@@ -11615,6 +11581,7 @@ function onLoad() { }
 function update() {
 if (counter == 99) {
 playSoundEffect(11);
+changeDirection(1);
 }
 if (counter &gt; 0) {
 setColor(255,255,255,255 * counter / 100);
@@ -11622,6 +11589,8 @@ counter--;
 }
 else if (counter == 0) {
 spawnBoss(12,5);
+spawnShooter(5,1,false);
+spawnShooter(19,1,false);
 setFlag("startBattle", true);
 playSoundEffect(5);
 die();
@@ -11629,7 +11598,7 @@ die();
 }
 function inRange() {
 if (!talked) {
-TextBox("IT WAS ME WHO KIDNAPPED THE PRINCESS");
+TextBox("IT IS I THE DARK LADY MARION AND IT WAS ME WHOKIDNAPPED THE PRINCESS");
 TextBox("AND I TELL YOU YOU WILL NEVER SEE YOUR        PRECIOUS MARY AGAIN UNLESS YOU BRAVE MY       CHALLENGES");
 TextBox("NOW DIE");
 counter = 100;
@@ -23629,7 +23598,7 @@ function hurt() { }</code>
             <int>8</int>
             <int>8</int>
             <int>8</int>
-            <int>13</int>
+            <int>0</int>
             <int>8</int>
             <int>8</int>
             <int>8</int>
@@ -23671,7 +23640,7 @@ setFlag("cave4",true);
 }
 }</code>
           <dark>false</dark>
-          <music>-1</music>
+          <music>7</music>
         </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -24073,7 +24042,7 @@ function hurt() { }</code>
             <int>8</int>
             <int>8</int>
             <int>8</int>
-            <int>13</int>
+            <int>0</int>
             <int>8</int>
             <int>8</int>
             <int>8</int>
@@ -24098,7 +24067,7 @@ function hurt() { }</code>
             <int>9</int>
             <int>9</int>
             <int>8</int>
-            <int>13</int>
+            <int>0</int>
             <int>8</int>
             <int>9</int>
             <int>9</int>
@@ -29467,7 +29436,7 @@ function hurt() { }</code>
               <key>0</key>
             </StoredObject>
           </storedObjects>
-          <dark>true</dark>
+          <dark>false</dark>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -32332,8 +32301,8 @@ function hurt() { }</code>
             <int>9</int>
             <int>3</int>
             <int>0</int>
-            <int>0</int>
-            <int>0</int>
+            <int>19</int>
+            <int>19</int>
             <int>0</int>
             <int>8</int>
             <int>0</int>
@@ -32708,7 +32677,7 @@ function hurt() { }</code>
             <int>8</int>
             <int>4</int>
             <int>3</int>
-            <int>8</int>
+            <int>9</int>
             <int>14</int>
             <int>14</int>
             <int>14</int>
@@ -32759,27 +32728,27 @@ function hurt() { }</code>
             <int>4</int>
             <int>4</int>
             <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
             <int>8</int>
             <int>4</int>
             <int>3</int>
@@ -63908,12 +63877,19 @@ spawnKey(14,5);
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
+
 function update() {
+
 if (!getFlag("room0") &amp;&amp; !anyEnemies()) {
+
 setFlag("room0", true);
-spawnKey(10,8);
-spawnKey(14,8);
+
+spawnKey(10,7);
+
+spawnKey(14,7);
+
 }
+
 }</code>
           <dark>false</dark>
           <music>-1</music>
@@ -65192,6 +65168,7 @@ function onLoad() { }
 function update() {
 if (counter == 99) {
 playSoundEffect(11);
+changeDirection(1);
 }
 if (counter &gt; 0) {
 setColor(255,255,255,255*(counter / 100));
@@ -65320,9 +65297,9 @@ TextBox("DONT WASTE YOUR TIME WITH THOSE PUNY BULLETS");
         <int>2</int>
         <int>0</int>
         <int>0</int>
-        <int>0</int>
-        <int>0</int>
-        <int>0</int>
+        <int>1</int>
+        <int>1</int>
+        <int>1</int>
         <int>0</int>
         <int>0</int>
         <int>0</int>
@@ -68188,11 +68165,23 @@ function hurt() { }</code>
               <data>
                 <name>passenger</name>
                 <code>function onLoad() { }
+
 function update() { }
+
 function inRange() { }
+
 function touch() {
-TextBox("TRAIN HAS TO WAIT UNTIL AFTER MARYS USUAL     AFTERNOON NAP TIME");
+
+if (getFlag("_beaten")) {
+TextBox("APPARENTLY THE TRAIN HAS SUFFERED A WARP CORE BREACH");
+TextBox("PERHAPS I SHOULD RUN");
 }
+else {
+TextBox("TRAIN HAS TO WAIT UNTIL AFTER MARYS USUAL     AFTERNOON NAP TIME");
+
+}
+}
+
 function hurt() { }</code>
                 <graphics>1</graphics>
                 <gfxtype>Characters</gfxtype>
@@ -69518,6 +69507,13 @@ function hurt() { }</code>
               <key>0</key>
             </StoredObject>
           </storedObjects>
+          <code>function onLoad() { }
+function update() {
+if (!getFlag("!rrcutscene") &amp;&amp; getPlayerX() == 24) {
+setFlag("!rrcutscene", true);
+TextBox("YOU HEAR MARYS VOICE CRY OUT FOR YOU");
+}
+}</code>
           <dark>false</dark>
           <music>-1</music>
         </Room>
@@ -69851,64 +69847,51 @@ function hurt() { }</code>
           </tileMap>
           <storedObjects>
             <StoredObject>
-              <x>176</x>
-              <y>48</y>
-              <type>shooter</type>
+              <x>400</x>
+              <y>176</y>
+              <type>entity</type>
               <enemyType>0</enemyType>
               <data>
-                <graphics>0</graphics>
-                <gfxtype>Maptile</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>0</key>
-            </StoredObject>
-            <StoredObject>
-              <x>528</x>
-              <y>48</y>
-              <type>shooter</type>
-              <enemyType>0</enemyType>
-              <data>
-                <graphics>0</graphics>
-                <gfxtype>Maptile</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>0</key>
-            </StoredObject>
-            <StoredObject>
-              <x>592</x>
-              <y>304</y>
-              <type>shooter</type>
-              <enemyType>0</enemyType>
-              <data>
-                <graphics>0</graphics>
-                <gfxtype>Maptile</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>0</key>
-            </StoredObject>
-            <StoredObject>
-              <x>688</x>
-              <y>144</y>
-              <type>boss</type>
-              <enemyType>1</enemyType>
-              <data>
-                <graphics>0</graphics>
-                <gfxtype>Maptile</gfxtype>
+                <name>evil</name>
+                <code>var counter = -1;
+var talked = false;
+function onLoad() { changeDirection(1); }
+function update() {
+if (counter == 99) {
+playSoundEffect(11);
+}
+if (counter &gt; 0) {
+setColor(255,255,255,255 * counter / 100);
+counter--;
+}
+else if (counter == 0) {
+spawnBoss(21,4);
+spawnShooter(5,1,false);
+spawnShooter(16,1,false);
+spawnShooter(18,9,false);
+setFlag("startBattle", true);
+playSoundEffect(5);
+die();
+}
+}
+function inRange() {
+if (!talked) {
+TextBox("OH LOOKING FOR MARY");
+TextBox("I GUESS YOU ARE LATE AGAIN");
+TextBox("IT IS ALMOST A PITY");
+counter = 100;
+talked = true;
+}
+}
+function touch() { }
+function hurt() {
+if (!talked) {
+playSoundEffect(7);
+TextBox("DONT WASTE YOUR TIME WITH THOSE PUNY BULLETS");
+}
+}</code>
+                <graphics>6</graphics>
+                <gfxtype>Characters</gfxtype>
               </data>
               <dest>0</dest>
               <destx>0</destx>
@@ -69920,28 +69903,51 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
+
 function update() {
+
 if (!getFlag("room6") &amp;&amp; getPlayerX() == 1) {
+
 overwriteTile(0,2,2);
+
 overwriteTile(0,3,2);
+
 overwriteTile(0,4,2);
+
 overwriteTile(0,5,2);
+
 overwriteTile(0,6,2);
+
 overwriteTile(0,7,2);
+
 setFlag("room6", true);
+
 playSoundEffect(1);
+
 }
-else if (!getFlag("room7") &amp;&amp; !anyEnemies()) {
+
+else if (!getFlag("room7") &amp;&amp; getFlag("startBattle") &amp;&amp; !anyEnemies()) {
+
 overwriteTile(24,2,5);
+
 overwriteTile(24,3,7);
+
 overwriteTile(24,4,7);
+
 overwriteTile(24,5,0);
+
 overwriteTile(24,6,0);
+
 overwriteTile(24,7,3);
+
 setFlag("room7", true);
+
 playSoundEffect(0);
+
 clearObjects();
+
 }
+
 }</code>
           <dark>false</dark>
           <music>-1</music>
@@ -69974,56 +69980,56 @@ clearObjects();
             <int>1</int>
             <int>4</int>
             <int>2</int>
-            <int>7</int>
-            <int>8</int>
-            <int>8</int>
-            <int>7</int>
-            <int>7</int>
-            <int>8</int>
-            <int>8</int>
-            <int>7</int>
-            <int>7</int>
-            <int>8</int>
-            <int>8</int>
-            <int>7</int>
-            <int>8</int>
-            <int>8</int>
-            <int>7</int>
-            <int>7</int>
-            <int>8</int>
-            <int>8</int>
-            <int>7</int>
-            <int>7</int>
-            <int>8</int>
-            <int>8</int>
-            <int>7</int>
+            <int>45</int>
+            <int>42</int>
+            <int>42</int>
+            <int>44</int>
+            <int>45</int>
+            <int>42</int>
+            <int>42</int>
+            <int>44</int>
+            <int>45</int>
+            <int>42</int>
+            <int>42</int>
+            <int>46</int>
+            <int>42</int>
+            <int>42</int>
+            <int>44</int>
+            <int>45</int>
+            <int>42</int>
+            <int>42</int>
+            <int>44</int>
+            <int>45</int>
+            <int>42</int>
+            <int>42</int>
+            <int>44</int>
             <int>2</int>
             <int>6</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
+            <int>47</int>
+            <int>43</int>
+            <int>43</int>
+            <int>46</int>
+            <int>47</int>
+            <int>43</int>
+            <int>43</int>
+            <int>46</int>
+            <int>47</int>
+            <int>43</int>
+            <int>43</int>
+            <int>19</int>
+            <int>43</int>
             <int>19</int>
             <int>19</int>
             <int>19</int>
             <int>19</int>
             <int>19</int>
-            <int>7</int>
+            <int>46</int>
             <int>19</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
+            <int>43</int>
+            <int>43</int>
+            <int>46</int>
             <int>5</int>
-            <int>8</int>
+            <int>42</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -70034,8 +70040,8 @@ clearObjects();
             <int>0</int>
             <int>0</int>
             <int>21</int>
-            <int>0</int>
-            <int>0</int>
+            <int>19</int>
+            <int>19</int>
             <int>19</int>
             <int>20</int>
             <int>20</int>
@@ -70047,8 +70053,8 @@ clearObjects();
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>8</int>
-            <int>7</int>
+            <int>42</int>
+            <int>43</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -70059,20 +70065,20 @@ clearObjects();
             <int>0</int>
             <int>0</int>
             <int>22</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
             <int>0</int>
             <int>0</int>
-            <int>20</int>
-            <int>20</int>
-            <int>20</int>
-            <int>20</int>
-            <int>20</int>
-            <int>20</int>
-            <int>20</int>
             <int>0</int>
             <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>7</int>
+            <int>43</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -70385,56 +70391,56 @@ setFlag("_dark", true);
             <int>1</int>
             <int>4</int>
             <int>2</int>
-            <int>7</int>
-            <int>8</int>
-            <int>8</int>
-            <int>7</int>
-            <int>7</int>
-            <int>8</int>
-            <int>8</int>
-            <int>7</int>
-            <int>7</int>
-            <int>8</int>
-            <int>8</int>
+            <int>45</int>
+            <int>42</int>
+            <int>42</int>
+            <int>44</int>
+            <int>45</int>
+            <int>42</int>
+            <int>42</int>
+            <int>44</int>
+            <int>45</int>
+            <int>42</int>
+            <int>42</int>
             <int>9</int>
-            <int>8</int>
-            <int>8</int>
-            <int>7</int>
-            <int>7</int>
-            <int>8</int>
-            <int>8</int>
-            <int>7</int>
-            <int>7</int>
-            <int>8</int>
-            <int>8</int>
-            <int>7</int>
+            <int>42</int>
+            <int>42</int>
+            <int>44</int>
+            <int>45</int>
+            <int>42</int>
+            <int>42</int>
+            <int>44</int>
+            <int>45</int>
+            <int>42</int>
+            <int>42</int>
+            <int>44</int>
             <int>2</int>
             <int>6</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
+            <int>47</int>
+            <int>43</int>
+            <int>43</int>
+            <int>46</int>
+            <int>47</int>
+            <int>43</int>
+            <int>43</int>
             <int>19</int>
-            <int>7</int>
+            <int>47</int>
             <int>19</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
-            <int>7</int>
+            <int>43</int>
+            <int>46</int>
+            <int>43</int>
+            <int>43</int>
+            <int>46</int>
+            <int>47</int>
+            <int>43</int>
+            <int>43</int>
+            <int>46</int>
+            <int>47</int>
+            <int>43</int>
+            <int>43</int>
+            <int>46</int>
             <int>5</int>
-            <int>8</int>
+            <int>42</int>
             <int>0</int>
             <int>21</int>
             <int>0</int>
@@ -70458,8 +70464,8 @@ setFlag("_dark", true);
             <int>0</int>
             <int>21</int>
             <int>0</int>
-            <int>8</int>
-            <int>7</int>
+            <int>42</int>
+            <int>43</int>
             <int>0</int>
             <int>22</int>
             <int>0</int>
@@ -70483,7 +70489,7 @@ setFlag("_dark", true);
             <int>0</int>
             <int>22</int>
             <int>0</int>
-            <int>7</int>
+            <int>43</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -76405,9 +76411,9 @@ function update() { }</code>
             <int>3</int>
             <int>8</int>
             <int>8</int>
-            <int>8</int>
+            <int>9</int>
             <int>0</int>
-            <int>8</int>
+            <int>9</int>
             <int>8</int>
             <int>8</int>
             <int>8</int>
@@ -76522,8 +76528,9 @@ function update() { }</code>
             <int>18</int>
             <int>8</int>
             <int>8</int>
-            <int>8</int>
+            <int>9</int>
             <int>0</int>
+            <int>9</int>
             <int>8</int>
             <int>8</int>
             <int>8</int>
@@ -76538,12 +76545,11 @@ function update() { }</code>
             <int>8</int>
             <int>8</int>
             <int>8</int>
-            <int>8</int>
-            <int>8</int>
+            <int>9</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>8</int>
+            <int>9</int>
             <int>18</int>
             <int>8</int>
             <int>8</int>
@@ -76565,9 +76571,9 @@ function update() { }</code>
             <int>8</int>
             <int>8</int>
             <int>16</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
             <int>8</int>
             <int>18</int>
             <int>8</int>
@@ -93225,11 +93231,11 @@ spawnKey(12,2);
       </xmlRooms>
     </Adventure>
     <Adventure>
-      <music>10</music>
+      <music>9</music>
       <tileset>6</tileset>
       <key>
         <int>0</int>
-        <int>0</int>
+        <int>2</int>
         <int>1</int>
         <int>1</int>
         <int>1</int>
@@ -93282,7 +93288,7 @@ spawnKey(12,2);
         <int>0</int>
         <int>0</int>
         <int>0</int>
-        <int>0</int>
+        <int>5</int>
         <int>0</int>
         <int>0</int>
         <int>0</int>
@@ -93812,6 +93818,500 @@ spawnKey(12,2);
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
+        <Room>
+          <tileMap>
+            <int>2</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>2</int>
+            <int>4</int>
+            <int>9</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>9</int>
+            <int>9</int>
+            <int>5</int>
+            <int>5</int>
+            <int>9</int>
+            <int>5</int>
+            <int>5</int>
+            <int>11</int>
+            <int>5</int>
+            <int>5</int>
+            <int>9</int>
+            <int>5</int>
+            <int>5</int>
+            <int>9</int>
+            <int>9</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>9</int>
+            <int>4</int>
+            <int>4</int>
+            <int>10</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>10</int>
+            <int>10</int>
+            <int>6</int>
+            <int>6</int>
+            <int>10</int>
+            <int>6</int>
+            <int>6</int>
+            <int>12</int>
+            <int>6</int>
+            <int>6</int>
+            <int>10</int>
+            <int>6</int>
+            <int>6</int>
+            <int>10</int>
+            <int>10</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>10</int>
+            <int>4</int>
+            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>2</int>
+            <int>3</int>
+            <int>2</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>4</int>
+            <int>0</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>0</int>
+            <int>0</int>
+            <int>17</int>
+            <int>0</int>
+            <int>4</int>
+            <int>13</int>
+            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>0</int>
+            <int>4</int>
+            <int>4</int>
+            <int>0</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>0</int>
+            <int>0</int>
+            <int>18</int>
+            <int>0</int>
+            <int>2</int>
+            <int>0</int>
+            <int>2</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>0</int>
+            <int>4</int>
+            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>15</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>15</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>15</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>15</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>15</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>17</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>15</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>15</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>17</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>18</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>15</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>4</int>
+            <int>0</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>18</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>0</int>
+            <int>4</int>
+            <int>4</int>
+            <int>0</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>36</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>37</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>0</int>
+            <int>4</int>
+            <int>2</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>2</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>2</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>2</int>
+          </tileMap>
+          <storedObjects>
+            <StoredObject>
+              <x>496</x>
+              <y>272</y>
+              <type>shooter</type>
+              <enemyType>1</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>336</x>
+              <y>304</y>
+              <type>shooter</type>
+              <enemyType>1</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>272</x>
+              <y>144</y>
+              <type>enemy</type>
+              <enemyType>11</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>80</x>
+              <y>240</y>
+              <type>enemy</type>
+              <enemyType>9</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>624</x>
+              <y>272</y>
+              <type>enemy</type>
+              <enemyType>10</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>400</x>
+              <y>176</y>
+              <type>key</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>304</x>
+              <y>144</y>
+              <type>shooter</type>
+              <enemyType>1</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>240</x>
+              <y>368</y>
+              <type>stock</type>
+              <enemyType>1</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>560</x>
+              <y>368</y>
+              <type>stock</type>
+              <enemyType>2</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+          </storedObjects>
+          <code>function onLoad() { }
+function update() {
+if (!getFlag("sdjfksrooom") &amp;&amp; !anyEnemies()) {
+setFlag("sdjfksrooom", true);
+playSoundEffect(0);
+overwriteTile(12,5,54);
+}
+}</code>
+          <dark>false</dark>
+          <music>-1</music>
+        </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -93826,10 +94326,1335 @@ spawnKey(12,2);
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
-        <Room xsi:nil="true" />
-        <Room xsi:nil="true" />
-        <Room xsi:nil="true" />
-        <Room xsi:nil="true" />
+        <Room>
+          <tileMap>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>2</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>2</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>5</int>
+            <int>9</int>
+            <int>5</int>
+            <int>11</int>
+            <int>5</int>
+            <int>5</int>
+            <int>11</int>
+            <int>5</int>
+            <int>9</int>
+            <int>5</int>
+            <int>4</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>6</int>
+            <int>10</int>
+            <int>6</int>
+            <int>12</int>
+            <int>6</int>
+            <int>6</int>
+            <int>12</int>
+            <int>6</int>
+            <int>10</int>
+            <int>6</int>
+            <int>4</int>
+            <int>2</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>2</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>2</int>
+            <int>4</int>
+            <int>5</int>
+            <int>9</int>
+            <int>5</int>
+            <int>11</int>
+            <int>5</int>
+            <int>5</int>
+            <int>11</int>
+            <int>5</int>
+            <int>9</int>
+            <int>5</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>31</int>
+            <int>4</int>
+            <int>6</int>
+            <int>10</int>
+            <int>6</int>
+            <int>12</int>
+            <int>6</int>
+            <int>6</int>
+            <int>12</int>
+            <int>6</int>
+            <int>10</int>
+            <int>6</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>32</int>
+            <int>2</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>15</int>
+            <int>0</int>
+            <int>15</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>33</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>0</int>
+            <int>16</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>34</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>15</int>
+            <int>0</int>
+            <int>15</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>2</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>2</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+            <int>1</int>
+          </tileMap>
+          <storedObjects />
+          <dark>false</dark>
+          <music>-1</music>
+        </Room>
+        <Room>
+          <tileMap>
+            <int>2</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>2</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>2</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>2</int>
+            <int>4</int>
+            <int>5</int>
+            <int>11</int>
+            <int>5</int>
+            <int>9</int>
+            <int>5</int>
+            <int>7</int>
+            <int>5</int>
+            <int>9</int>
+            <int>5</int>
+            <int>9</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>9</int>
+            <int>5</int>
+            <int>9</int>
+            <int>5</int>
+            <int>7</int>
+            <int>5</int>
+            <int>9</int>
+            <int>5</int>
+            <int>11</int>
+            <int>5</int>
+            <int>4</int>
+            <int>4</int>
+            <int>6</int>
+            <int>12</int>
+            <int>6</int>
+            <int>10</int>
+            <int>6</int>
+            <int>8</int>
+            <int>6</int>
+            <int>10</int>
+            <int>6</int>
+            <int>10</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>10</int>
+            <int>6</int>
+            <int>10</int>
+            <int>6</int>
+            <int>8</int>
+            <int>6</int>
+            <int>10</int>
+            <int>6</int>
+            <int>12</int>
+            <int>6</int>
+            <int>4</int>
+            <int>2</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>2</int>
+            <int>33</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>31</int>
+            <int>34</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>15</int>
+            <int>16</int>
+            <int>15</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>32</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>15</int>
+            <int>15</int>
+            <int>0</int>
+            <int>15</int>
+            <int>15</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>16</int>
+            <int>0</int>
+            <int>35</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>15</int>
+            <int>15</int>
+            <int>0</int>
+            <int>15</int>
+            <int>15</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>2</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>15</int>
+            <int>0</int>
+            <int>15</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>2</int>
+            <int>4</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>4</int>
+            <int>4</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>4</int>
+            <int>2</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>2</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>2</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>2</int>
+          </tileMap>
+          <storedObjects>
+            <StoredObject>
+              <x>208</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>592</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>400</x>
+              <y>240</y>
+              <type>stock</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+          </storedObjects>
+          <code>var move_ = 0;
+
+var moved = false;
+
+function onLoad() { }
+
+function update() { 
+
+if (move_ &gt; 0) {
+
+move_ = move_ - 1;
+
+move(0, 2);
+
+if (move_ == 0) {
+
+playSoundEffect(0);
+
+overwriteTile(3,6,15);
+spawnKey(12,3);
+}
+
+}
+
+}
+
+function inRange() { }
+
+function touch() {
+
+if (getPlayerY() == 4 &amp;&amp; !moved) {
+
+move_ = 16;
+
+moved = true;
+
+overwriteTile(3,5,0);
+}
+
+}
+
+function hurt() { }</code>
+          <dark>false</dark>
+          <music>-1</music>
+        </Room>
+        <Room>
+          <tileMap>
+            <int>2</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>2</int>
+            <int>4</int>
+            <int>5</int>
+            <int>7</int>
+            <int>5</int>
+            <int>9</int>
+            <int>5</int>
+            <int>7</int>
+            <int>5</int>
+            <int>9</int>
+            <int>5</int>
+            <int>5</int>
+            <int>9</int>
+            <int>11</int>
+            <int>9</int>
+            <int>5</int>
+            <int>5</int>
+            <int>9</int>
+            <int>5</int>
+            <int>7</int>
+            <int>5</int>
+            <int>9</int>
+            <int>5</int>
+            <int>7</int>
+            <int>5</int>
+            <int>4</int>
+            <int>4</int>
+            <int>6</int>
+            <int>8</int>
+            <int>6</int>
+            <int>10</int>
+            <int>6</int>
+            <int>8</int>
+            <int>6</int>
+            <int>10</int>
+            <int>6</int>
+            <int>6</int>
+            <int>10</int>
+            <int>12</int>
+            <int>10</int>
+            <int>6</int>
+            <int>6</int>
+            <int>10</int>
+            <int>6</int>
+            <int>8</int>
+            <int>6</int>
+            <int>10</int>
+            <int>6</int>
+            <int>8</int>
+            <int>6</int>
+            <int>4</int>
+            <int>2</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>33</int>
+            <int>0</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>0</int>
+            <int>4</int>
+            <int>34</int>
+            <int>0</int>
+            <int>19</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>19</int>
+            <int>0</int>
+            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>19</int>
+            <int>0</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>0</int>
+            <int>19</int>
+            <int>0</int>
+            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>19</int>
+            <int>0</int>
+            <int>21</int>
+            <int>0</int>
+            <int>35</int>
+            <int>0</int>
+            <int>36</int>
+            <int>0</int>
+            <int>0</int>
+            <int>21</int>
+            <int>0</int>
+            <int>21</int>
+            <int>0</int>
+            <int>0</int>
+            <int>36</int>
+            <int>0</int>
+            <int>37</int>
+            <int>0</int>
+            <int>21</int>
+            <int>0</int>
+            <int>19</int>
+            <int>0</int>
+            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>19</int>
+            <int>0</int>
+            <int>21</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>21</int>
+            <int>20</int>
+            <int>21</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>21</int>
+            <int>0</int>
+            <int>19</int>
+            <int>0</int>
+            <int>4</int>
+            <int>2</int>
+            <int>0</int>
+            <int>19</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>19</int>
+            <int>0</int>
+            <int>4</int>
+            <int>4</int>
+            <int>0</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>0</int>
+            <int>4</int>
+            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>2</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>2</int>
+          </tileMap>
+          <storedObjects>
+            <StoredObject>
+              <x>400</x>
+              <y>240</y>
+              <type>key</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>720</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>592</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>208</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>80</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>208</x>
+              <y>336</y>
+              <type>enemy</type>
+              <enemyType>10</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>752</x>
+              <y>240</y>
+              <type>enemy</type>
+              <enemyType>9</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>112</x>
+              <y>176</y>
+              <type>enemy</type>
+              <enemyType>9</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>400</x>
+              <y>176</y>
+              <type>enemy</type>
+              <enemyType>11</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>80</x>
+              <y>336</y>
+              <type>enemy</type>
+              <enemyType>10</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>528</x>
+              <y>240</y>
+              <type>stock</type>
+              <enemyType>1</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>592</x>
+              <y>240</y>
+              <type>stock</type>
+              <enemyType>2</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>272</x>
+              <y>240</y>
+              <type>stock</type>
+              <enemyType>1</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>208</x>
+              <y>240</y>
+              <type>stock</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+          </storedObjects>
+          <dark>false</dark>
+          <music>-1</music>
+        </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -94047,7 +95872,7 @@ spawnKey(12,2);
             <int>0</int>
             <int>2</int>
             <int>3</int>
-            <int>3</int>
+            <int>0</int>
             <int>3</int>
             <int>2</int>
             <int>0</int>
@@ -94456,9 +96281,9 @@ function hurt() { }</code>
             <int>0</int>
             <int>36</int>
             <int>0</int>
-            <int>4</int>
+            <int>2</int>
             <int>13</int>
-            <int>4</int>
+            <int>2</int>
             <int>0</int>
             <int>37</int>
             <int>0</int>
@@ -94481,9 +96306,9 @@ function hurt() { }</code>
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>2</int>
+            <int>13</int>
             <int>0</int>
-            <int>2</int>
+            <int>13</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -94717,6 +96542,13 @@ function hurt() { }</code>
               <key>0</key>
             </StoredObject>
           </storedObjects>
+          <code>function onLoad() { }
+function update() {
+if (!getFlag("as1cloneroom") &amp;&amp; !anyEnemies()) {
+setFlag("as1cloneroom",true);
+spawnKey(12,8);
+}
+}</code>
           <dark>false</dark>
           <music>-1</music>
         </Room>
@@ -95254,11 +97086,988 @@ function hurt() { }</code>
               <key>0</key>
             </StoredObject>
           </storedObjects>
+          <code>function onLoad() { }
+function update() {
+if (!getFlag("rowroomfds") &amp;&amp; !anyEnemies()) {
+setFlag("rowroomfds",true);
+spawnKey(20,7);
+}
+}</code>
           <dark>false</dark>
           <music>-1</music>
         </Room>
-        <Room xsi:nil="true" />
-        <Room xsi:nil="true" />
+        <Room>
+          <tileMap>
+            <int>2</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>2</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>2</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>2</int>
+            <int>4</int>
+            <int>5</int>
+            <int>7</int>
+            <int>5</int>
+            <int>9</int>
+            <int>5</int>
+            <int>11</int>
+            <int>5</int>
+            <int>9</int>
+            <int>5</int>
+            <int>9</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>9</int>
+            <int>5</int>
+            <int>9</int>
+            <int>5</int>
+            <int>11</int>
+            <int>5</int>
+            <int>9</int>
+            <int>5</int>
+            <int>7</int>
+            <int>5</int>
+            <int>4</int>
+            <int>4</int>
+            <int>6</int>
+            <int>8</int>
+            <int>6</int>
+            <int>10</int>
+            <int>6</int>
+            <int>12</int>
+            <int>6</int>
+            <int>10</int>
+            <int>6</int>
+            <int>10</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>10</int>
+            <int>6</int>
+            <int>10</int>
+            <int>6</int>
+            <int>12</int>
+            <int>6</int>
+            <int>10</int>
+            <int>6</int>
+            <int>8</int>
+            <int>6</int>
+            <int>4</int>
+            <int>2</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>2</int>
+            <int>33</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>31</int>
+            <int>34</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>15</int>
+            <int>16</int>
+            <int>15</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>32</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>15</int>
+            <int>15</int>
+            <int>0</int>
+            <int>15</int>
+            <int>15</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>38</int>
+            <int>0</int>
+            <int>16</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>15</int>
+            <int>15</int>
+            <int>0</int>
+            <int>15</int>
+            <int>15</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>2</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>15</int>
+            <int>16</int>
+            <int>15</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>2</int>
+            <int>4</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>4</int>
+            <int>4</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>4</int>
+            <int>2</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>2</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>2</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>2</int>
+          </tileMap>
+          <storedObjects>
+            <StoredObject>
+              <x>80</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>720</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>400</x>
+              <y>240</y>
+              <type>stock</type>
+              <enemyType>6</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+          </storedObjects>
+          <dark>false</dark>
+          <music>-1</music>
+        </Room>
+        <Room>
+          <tileMap>
+            <int>2</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>2</int>
+            <int>4</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>5</int>
+            <int>7</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>9</int>
+            <int>5</int>
+            <int>9</int>
+            <int>11</int>
+            <int>9</int>
+            <int>5</int>
+            <int>9</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>7</int>
+            <int>5</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>4</int>
+            <int>4</int>
+            <int>10</int>
+            <int>10</int>
+            <int>10</int>
+            <int>6</int>
+            <int>8</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>10</int>
+            <int>6</int>
+            <int>10</int>
+            <int>12</int>
+            <int>10</int>
+            <int>6</int>
+            <int>10</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>8</int>
+            <int>6</int>
+            <int>10</int>
+            <int>10</int>
+            <int>10</int>
+            <int>4</int>
+            <int>2</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>20</int>
+            <int>0</int>
+            <int>0</int>
+            <int>15</int>
+            <int>0</int>
+            <int>15</int>
+            <int>0</int>
+            <int>0</int>
+            <int>20</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>33</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>20</int>
+            <int>0</int>
+            <int>20</int>
+            <int>0</int>
+            <int>20</int>
+            <int>0</int>
+            <int>20</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>34</int>
+            <int>0</int>
+            <int>0</int>
+            <int>15</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>20</int>
+            <int>21</int>
+            <int>20</int>
+            <int>21</int>
+            <int>20</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>15</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>0</int>
+            <int>35</int>
+            <int>0</int>
+            <int>19</int>
+            <int>0</int>
+            <int>37</int>
+            <int>0</int>
+            <int>19</int>
+            <int>0</int>
+            <int>36</int>
+            <int>0</int>
+            <int>19</int>
+            <int>19</int>
+            <int>19</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>2</int>
+            <int>0</int>
+            <int>0</int>
+            <int>15</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>15</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>20</int>
+            <int>0</int>
+            <int>21</int>
+            <int>0</int>
+            <int>21</int>
+            <int>0</int>
+            <int>20</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>20</int>
+            <int>0</int>
+            <int>0</int>
+            <int>15</int>
+            <int>0</int>
+            <int>15</int>
+            <int>0</int>
+            <int>0</int>
+            <int>20</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>2</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>2</int>
+          </tileMap>
+          <storedObjects>
+            <StoredObject>
+              <x>400</x>
+              <y>336</y>
+              <type>stock</type>
+              <enemyType>8</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>624</x>
+              <y>208</y>
+              <type>enemy</type>
+              <enemyType>12</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>176</x>
+              <y>336</y>
+              <type>enemy</type>
+              <enemyType>12</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>208</x>
+              <y>112</y>
+              <type>enemy</type>
+              <enemyType>13</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>720</x>
+              <y>368</y>
+              <type>enemy</type>
+              <enemyType>14</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>624</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>176</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>272</x>
+              <y>240</y>
+              <type>stock</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>400</x>
+              <y>240</y>
+              <type>stock</type>
+              <enemyType>2</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>528</x>
+              <y>240</y>
+              <type>stock</type>
+              <enemyType>1</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>400</x>
+              <y>144</y>
+              <type>stock</type>
+              <enemyType>7</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>112</x>
+              <y>176</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>block</name>
+                <code>var move_ = 0;
+
+var moved = false;
+
+function onLoad() { }
+
+function update() { 
+
+if (move_ &gt; 0) {
+
+move_ = move_ - 1;
+
+move(0, 2);
+
+if (move_ == 0) {
+
+playSoundEffect(0);
+
+overwriteTile(3,6,15);
+spawnKey(12,3);
+}
+
+}
+
+}
+
+function inRange() { }
+
+function touch() {
+
+if (getPlayerY() == 4 &amp;&amp; !moved) {
+
+move_ = 16;
+
+moved = true;
+
+overwriteTile(3,5,0);
+}
+
+}
+
+function hurt() { }</code>
+                <graphics>15</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+          </storedObjects>
+          <code>function onLoad() { }
+function update() {
+if (!getFlag("boxedinroomNI") &amp;&amp; getPlayerX() == 12 &amp;&amp; getPlayerY() == 3) {
+setFlag("boxedinroomNI", true);
+overwriteTile(11,3,0);
+overwriteTile(13,3,0);
+}
+}</code>
+          <dark>false</dark>
+          <music>-1</music>
+        </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -95334,9 +98143,9 @@ function hurt() { }</code>
             <int>10</int>
             <int>6</int>
             <int>6</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
             <int>6</int>
             <int>6</int>
             <int>10</int>
@@ -95659,6 +98468,60 @@ function hurt() { }</code>
               <data>
                 <graphics>0</graphics>
                 <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>400</x>
+              <y>176</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>evil</name>
+                <code>var counter = -1;
+var talked = false;
+function onLoad() { }
+function update() {
+if (counter == 99) {
+playSoundEffect(11);
+changeDirection(1);
+}
+if (counter &gt; 0) {
+setColor(255,255,255,255*(counter / 100));
+counter--;
+}
+else if (counter == 0) {
+die();
+}
+}
+function inRange() {
+if (!talked) {
+TextBox("I THOUGHT ID NEVER SEE YOU HERE IN MARYS OWN  PALACE");
+TextBox("PERHAPS YOULL MAKE IT AFTER ALL");
+TextBox("");
+TextBox("OH THAT MAKES ME LAUGH");
+counter = 100;
+talked = true;
+overwriteTile(11,2,0);
+overwriteTile(12,2,0);
+overwriteTile(13,2,0);
+}
+}
+function touch() { }
+function hurt() {
+if (!talked) {
+playSoundEffect(7);
+TextBox("SERIOUSLY THATS NOT GOING TO WORK");
+}
+}</code>
+                <graphics>6</graphics>
+                <gfxtype>Characters</gfxtype>
               </data>
               <dest>0</dest>
               <destx>0</destx>
@@ -96241,7 +99104,499 @@ overwriteTile(13,7,12);
           <dark>false</dark>
           <music>-1</music>
         </Room>
-        <Room xsi:nil="true" />
+        <Room>
+          <tileMap>
+            <int>2</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>2</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>2</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>2</int>
+            <int>4</int>
+            <int>7</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>11</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>11</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>11</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>11</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>7</int>
+            <int>4</int>
+            <int>4</int>
+            <int>8</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>12</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>12</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>12</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>12</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>8</int>
+            <int>4</int>
+            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>20</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>4</int>
+            <int>0</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>21</int>
+            <int>0</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>4</int>
+            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>4</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>0</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>0</int>
+            <int>4</int>
+            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>21</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>4</int>
+            <int>0</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>21</int>
+            <int>0</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>4</int>
+            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>21</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>4</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>21</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>0</int>
+            <int>4</int>
+            <int>4</int>
+            <int>37</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>2</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>2</int>
+          </tileMap>
+          <storedObjects>
+            <StoredObject>
+              <x>240</x>
+              <y>112</y>
+              <type>enemy</type>
+              <enemyType>11</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>592</x>
+              <y>176</y>
+              <type>enemy</type>
+              <enemyType>11</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>624</x>
+              <y>304</y>
+              <type>enemy</type>
+              <enemyType>11</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>528</x>
+              <y>368</y>
+              <type>enemy</type>
+              <enemyType>11</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>272</x>
+              <y>240</y>
+              <type>enemy</type>
+              <enemyType>11</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>48</x>
+              <y>272</y>
+              <type>enemy</type>
+              <enemyType>11</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>48</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>752</x>
+              <y>48</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>48</x>
+              <y>368</y>
+              <type>stock</type>
+              <enemyType>2</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+          </storedObjects>
+          <code>function onLoad() { }
+function update() {
+if (!getFlag("fakemazeroom") &amp;&amp; !anyEnemies()) {
+setFlag("fakemazeroom",true);
+spawnKey(12,1);
+}
+}</code>
+          <dark>false</dark>
+          <music>-1</music>
+        </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />

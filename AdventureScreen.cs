@@ -298,6 +298,14 @@ namespace aspectstar2
             animCount = 24;
             currentMode = adventureModes.drowning;
             PlaySound.Play(PlaySound.SoundEffectName.Drown);
+            foreach(AdventureObject obj in objects)
+            {
+                if (obj is AdventureBoss7)
+                {
+                    AdventureBoss7 ab7 = (AdventureBoss7)obj;
+                    ab7.location = new Vector2(Master.width / 2, 3 * 32);
+                }
+            }
             //objects.RemoveAll(isProjectile);
         }
 
@@ -310,7 +318,10 @@ namespace aspectstar2
                     List<AdventureObject> sortList = objects.OrderBy(o => o.location.Y).ToList();
                     foreach (AdventureObject obj in sortList)
                     {
-                        obj.Draw(spriteBatch, Color.White);
+                        if (obj is AdventurePlayer)
+                            obj.Draw(spriteBatch, playerColor);
+                        else
+                            obj.Draw(spriteBatch, Color.White);
                     }
                     DrawTextBox(spriteBatch, textString);
                     if (choice != -1)
@@ -946,22 +957,12 @@ namespace aspectstar2
             int i = x + (y * 25);
             tileMap[i] = newTile;
             if (Math.Floor(first_pos.X / 32) == x && Math.Floor(first_pos.Y / 32) == y) 
-                first_pos = new Vector2(player.location.X, player.location.Y);
+                first_pos = new Vector2(32 * (float)Math.Floor(player.location.X / 32), 32 * (float)Math.Floor(player.location.Y / 32));
         }
 
         void PlaySoundEffect(int i)
         {
             PlaySound.Play((PlaySound.SoundEffectName)i);
-            /*
-            switch (i)
-            {
-                case 0:
-                    PlaySound.Aspect();
-                    break;
-                case 1:
-                    PlaySound.Boom();
-                    break;
-            }*/
         }
 
         bool AnyEnemies()

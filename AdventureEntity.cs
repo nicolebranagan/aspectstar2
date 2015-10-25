@@ -87,6 +87,7 @@ namespace aspectstar2
                 .SetValue("becomeEnemy", new Action<int, bool>(BecomeEnemy))
                 .SetValue("spawnShooter", new Action<int, int, bool>(SpawnShooter))
                 .SetValue("changeFace", new Action<int>(ChangeFace))
+                .SetValue("changeDirection", new Action<int>(ChangeDirection))
                 .Execute("onLoad()");
         }
 
@@ -250,6 +251,11 @@ namespace aspectstar2
         void ChangeFace(int face)
         {
             graphicsRow = face;
+        }
+
+        void ChangeDirection(int dir)
+        {
+            faceDir = (Master.Directions)dir;
         }
 
         static Action<bool> getChooser(AdventureEntity ent, string callYes, string callNo)
