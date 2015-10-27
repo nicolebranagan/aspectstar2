@@ -176,7 +176,7 @@ namespace aspectstar2
                 {
                     Hurt();
                 }
-                parent.tileAction(location, width, height);
+                parent.tileAction(test, width, height);
             }
         }
 
