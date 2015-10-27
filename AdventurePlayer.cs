@@ -124,17 +124,17 @@ namespace aspectstar2
                     break; // Something has gone wrong
             }
             Vector2 test = location + move_dist;
-            if ((test.X - width) <= 0)
+            if (!parent.hblock && !parent.hloop && ((test.X - width) <= 0))
                 parent.enterNewRoom(-1, 0);
-            else if ((test.Y - height) <= 0)
+            else if (!parent.vblock && !parent.vloop && ((test.Y - height) <= 0))
                 parent.enterNewRoom(0, -1);
-            else if ((test.X + width) >= (25 * 32))
+            else if (!parent.hblock && !parent.hloop && ((test.X + width) >= (25 * 32)))
                 parent.enterNewRoom(1, 0);
-            else if ((test.Y + height) >= (13 * 32))
+            else if (!parent.hblock && !parent.hloop && ((test.Y + height) >= (13 * 32)))
                 parent.enterNewRoom(0, 1);
-            else if (!parent.isSolid(test, 1, width, height, faceDir))
+            else if (!parent.hblock && !parent.hloop && (!parent.isSolid(test, 1, width, height, faceDir)))
                 location = test;
-            else if (flickerCount <= 0)
+            else if (flickerCount <= 0 && !(recoiler is AdventureEntity))
                 recoiler.Move(-move_dist);
         }
 
@@ -159,24 +159,24 @@ namespace aspectstar2
         public override void Move(Vector2 move_dist)
         {
             Vector2 test = move_dist + location;
-            if ((test.X - width) <= 0)
+            if (!parent.hblock && !parent.hloop && ((test.X - width) <= 0))
                 parent.enterNewRoom(-1, 0);
-            else if ((test.Y - height) <= 0)
+            else if (!parent.vblock && !parent.vloop && ((test.Y - height) <= 0))
                 parent.enterNewRoom(0, -1);
-            else if ((test.X + width) >= (25 * 32))
+            else if (!parent.hblock && !parent.hloop && ((test.X + width) >= (25 * 32)))
                 parent.enterNewRoom(1, 0);
-            else if ((test.Y + height) >= (13 * 32))
+            else if (!parent.vblock && !parent.vloop && ((test.Y + height) >= (13 * 32)))
                 parent.enterNewRoom(0, 1);
             else if (parent.Collide(flickerCount))
                 ; // Deliberately left blank
             else
             {
                 base.Move(move_dist);
-                if ((z == 0) && (parent.isInjury(test, width, height)))
+                if ((z == 0) && (parent.isInjury(location, width, height)))
                 {
                     Hurt();
                 }
-                parent.tileAction(test, width, height);
+                parent.tileAction(location, width, height);
             }
         }
 

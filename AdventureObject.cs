@@ -107,9 +107,21 @@ namespace aspectstar2
         public virtual void Move(Vector2 move_dist)
         {
             Vector2 test = move_dist + location;
-            if ((test.X - width) >= 0 && (test.Y - height) >= 0 && (test.X + width) < (25 * 32) && (test.Y + height) < (13 * 32) )
+            if ((test.X - width) >= 0 && (test.Y - height) >= 0 && (test.X + width) < (25 * 32) && (test.Y + height) < (13 * 32))
+            {
                 if (!this.parent.isSolid(test, z, width, height, faceDir))
                     this.location = test;
+                return;
+            }
+
+            if (parent.hloop && test.X - width < 0)
+                location.X = 25 * 32 - 14 - 2;
+            else if (parent.hloop && test.X + width >= (25 * 32))
+                location.X = 14 + 2;
+            else if (parent.vloop && test.Y - height < 0)
+                location.Y = 13 * 32 - 6 - 2;
+            else if (parent.vloop && test.Y + height >= (13 * 32))
+                location.Y = 6 + 2;
         }
 
         public virtual void Jump()

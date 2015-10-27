@@ -96,6 +96,8 @@ namespace aspectstar2
         public List<AdventureObject> adventureObjects;
         public string code;
         public bool dark;
+        public bool hblock;
+        public bool vblock;
 
         public Room Clone()
         {
@@ -111,6 +113,8 @@ namespace aspectstar2
 
             newRoom.code = code;
             newRoom.dark = dark;
+            newRoom.hblock = hblock;
+            newRoom.vblock = vblock;
 
             return newRoom;
         }

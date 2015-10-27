@@ -10313,11 +10313,11 @@ THANKS FOR PLAYING</credits>
       <MapObject xsi:type="MapTeleporter">
         <x>56</x>
         <y>33</y>
-        <dest>9</dest>
+        <dest>11</dest>
         <destroomX>8</destroomX>
-        <destroomY>9</destroomY>
-        <destx>11</destx>
-        <desty>1</desty>
+        <destroomY>11</destroomY>
+        <destx>12</destx>
+        <desty>12</desty>
       </MapObject>
     </objects>
   </map>
@@ -10721,6 +10721,8 @@ THANKS FOR PLAYING</credits>
         </tileMap>
         <storedObjects />
         <dark>false</dark>
+        <hblock>false</hblock>
+        <vblock>false</vblock>
         <music>-1</music>
       </templateRoom>
       <name>1 Flooded Fort</name>
@@ -11237,6 +11239,8 @@ THANKS FOR PLAYING</credits>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -11582,6 +11586,7 @@ function update() {
 if (counter == 99) {
 playSoundEffect(11);
 changeDirection(1);
+overrideSettings(false, false);
 }
 if (counter &gt; 0) {
 setColor(255,255,255,255 * counter / 100);
@@ -11670,6 +11675,8 @@ clearObjects();
 
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>4</music>
         </Room>
         <Room xsi:nil="true" />
@@ -12086,6 +12093,8 @@ clearObjects();
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -12460,6 +12469,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>5</music>
         </Room>
         <Room>
@@ -12792,6 +12803,8 @@ function hurt() { }</code>
           </tileMap>
           <storedObjects />
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>5</music>
         </Room>
         <Room>
@@ -13210,6 +13223,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -13628,6 +13643,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -14029,6 +14046,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -14426,6 +14445,8 @@ function hurt() { }</code>
           <code>function onLoad() { }
 function update() { }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -14827,6 +14848,8 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -15228,6 +15251,8 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -15560,6 +15585,8 @@ function update() { }</code>
           </tileMap>
           <storedObjects />
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -15961,6 +15988,8 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -16386,6 +16415,8 @@ setFlag('arrowroom', true);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -16772,6 +16803,8 @@ function onLoad() {
 function update() {
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>true</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -17276,6 +17309,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -17643,6 +17678,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -18061,6 +18098,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -18462,6 +18501,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -18858,6 +18899,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -19210,6 +19253,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>5</music>
         </Room>
         <Room xsi:nil="true" />
@@ -19623,6 +19668,8 @@ function hurt() { }</code>
         </tileMap>
         <storedObjects />
         <dark>false</dark>
+        <hblock>false</hblock>
+        <vblock>false</vblock>
         <music>-1</music>
       </templateRoom>
       <name>Town</name>
@@ -20056,6 +20103,8 @@ function hurt() { }</code>
           </tileMap>
           <storedObjects />
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -20402,6 +20451,8 @@ function hurt() { }</code>
           </tileMap>
           <storedObjects />
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -20734,6 +20785,8 @@ function hurt() { }</code>
           </tileMap>
           <storedObjects />
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -21081,6 +21134,8 @@ function hurt() { }</code>
           </tileMap>
           <storedObjects />
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -21548,6 +21603,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -21907,6 +21964,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -22341,6 +22400,8 @@ TextBox("ENJOY THE TOWN");
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -22699,6 +22760,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -23141,6 +23204,8 @@ function hurt() { }</code>
         </tileMap>
         <storedObjects />
         <dark>false</dark>
+        <hblock>false</hblock>
+        <vblock>false</vblock>
         <music>-1</music>
       </templateRoom>
       <name />
@@ -23640,6 +23705,8 @@ setFlag("cave4",true);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>7</music>
         </Room>
         <Room xsi:nil="true" />
@@ -24026,6 +24093,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -24502,6 +24571,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -25002,6 +25073,8 @@ setFlag("cave1", true);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -25488,6 +25561,8 @@ setFlag("cave1", true);
           <code>function onLoad() { }
 function update() { }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -25936,6 +26011,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -26420,6 +26497,8 @@ setFlag("cave1", true);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -26850,6 +26929,8 @@ setFlag("cave1", true);
         </tileMap>
         <storedObjects />
         <dark>false</dark>
+        <hblock>false</hblock>
+        <vblock>false</vblock>
         <music>-1</music>
       </templateRoom>
       <name>2 Lava Lab</name>
@@ -27375,6 +27456,8 @@ setFlag("cave1", true);
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -27793,6 +27876,8 @@ setFlag("cave1", true);
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -28161,6 +28246,8 @@ setFlag("cave1", true);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -28533,6 +28620,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>5</music>
         </Room>
         <Room>
@@ -28985,6 +29074,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -29437,6 +29528,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -29843,6 +29936,8 @@ clearObjects();
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>4</music>
         </Room>
         <Room xsi:nil="true" />
@@ -30256,6 +30351,8 @@ clearObjects();
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -30700,6 +30797,8 @@ overwriteTile(6,5,18);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -31169,6 +31268,8 @@ overwriteTile(6,5,18);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -31587,6 +31688,8 @@ overwriteTile(6,5,18);
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -32046,6 +32149,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -32447,6 +32552,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -32865,6 +32972,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -33401,6 +33510,8 @@ function hurt() { }</code>
         </tileMap>
         <storedObjects />
         <dark>false</dark>
+        <hblock>false</hblock>
+        <vblock>false</vblock>
         <music>-1</music>
       </templateRoom>
       <name>3 Fantasy Forest</name>
@@ -33907,6 +34018,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -34376,6 +34489,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -34777,6 +34892,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -35192,6 +35309,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -35695,6 +35814,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -36035,6 +36156,8 @@ function hurt() { }</code>
           </tileMap>
           <storedObjects />
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -36453,6 +36576,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -36957,6 +37082,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -37359,6 +37486,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -37778,6 +37907,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -38216,6 +38347,8 @@ setFlag("room2b", true);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -38641,6 +38774,8 @@ clearObjects();
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>4</music>
         </Room>
         <Room>
@@ -38973,6 +39108,8 @@ clearObjects();
           </tileMap>
           <storedObjects />
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -39374,6 +39511,8 @@ clearObjects();
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -39758,6 +39897,8 @@ clearObjects();
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -40108,6 +40249,8 @@ clearObjects();
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -40440,6 +40583,8 @@ clearObjects();
           </tileMap>
           <storedObjects />
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -40877,6 +41022,8 @@ clearObjects();
           <code>function onLoad() { }
 function update() { }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -41306,6 +41453,8 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -41699,6 +41848,8 @@ setFlag("1lock", true);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -42082,6 +42233,8 @@ setFlag("torchwood", true);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>5</music>
         </Room>
         <Room>
@@ -42466,6 +42619,8 @@ setFlag("torchwood", true);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -42842,6 +42997,8 @@ setFlag("2locks", true);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -43209,6 +43366,8 @@ setFlag("2locks", true);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -43610,6 +43769,8 @@ setFlag("2locks", true);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -43972,6 +44133,8 @@ setFlag("2locks", true);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -44382,6 +44545,8 @@ spawnKey(12,7);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -44806,6 +44971,8 @@ spawnKey(12,7);
         </tileMap>
         <storedObjects />
         <dark>false</dark>
+        <hblock>false</hblock>
+        <vblock>false</vblock>
         <music>-1</music>
       </templateRoom>
       <name>4 Gloomy Garrison</name>
@@ -45308,6 +45475,8 @@ spawnKey(12,7);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -45731,6 +45900,8 @@ spawnKey(12,4);
 }
 }</code>
           <dark>true</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -46151,6 +46322,8 @@ clearObjects();
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>4</music>
         </Room>
         <Room xsi:nil="true" />
@@ -46526,6 +46699,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>5</music>
         </Room>
         <Room>
@@ -46907,6 +47082,8 @@ overwriteTile(0,10,13);
 }
 }</code>
           <dark>true</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -47268,6 +47445,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -47681,6 +47860,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -48082,6 +48263,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -48483,6 +48666,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -48952,6 +49137,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -49362,6 +49549,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -49781,6 +49970,8 @@ setFlag("2ghosthall",true);
 }
 }</code>
           <dark>true</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -50143,6 +50334,8 @@ setFlag("2ghosthall",true);
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -50595,6 +50788,8 @@ setFlag("2ghosthall",true);
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -51054,6 +51249,8 @@ spawnKey(12,7);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -51404,6 +51601,8 @@ spawnKey(12,7);
             </StoredObject>
           </storedObjects>
           <dark>true</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -51777,6 +51976,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>5</music>
         </Room>
         <Room xsi:nil="true" />
@@ -52224,6 +52425,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -52621,6 +52824,8 @@ playSoundEffect(1);
           <code>function onLoad() { }
 function update() { }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -53051,6 +53256,8 @@ function update() { }</code>
         </tileMap>
         <storedObjects />
         <dark>false</dark>
+        <hblock>false</hblock>
+        <vblock>false</vblock>
         <music>-1</music>
       </templateRoom>
       <name>Forest Path</name>
@@ -53684,6 +53891,8 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -54187,6 +54396,8 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -54635,6 +54846,8 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -55189,6 +55402,8 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -55672,6 +55887,8 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -56120,6 +56337,8 @@ function update() { }</code>
         </tileMap>
         <storedObjects />
         <dark>false</dark>
+        <hblock>false</hblock>
+        <vblock>false</vblock>
         <music>-1</music>
       </templateRoom>
       <name>5 Aspect Alley</name>
@@ -56608,6 +56827,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>5</music>
         </Room>
         <Room>
@@ -57094,6 +57315,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -57520,6 +57743,8 @@ playSoundEffect(0);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -58032,6 +58257,8 @@ clearObjects();
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>4</music>
         </Room>
         <Room xsi:nil="true" />
@@ -58588,6 +58815,8 @@ overwriteTile(13,3,0);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -58939,6 +59168,8 @@ overwriteTile(13,3,0);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -59455,6 +59686,8 @@ overwriteTile(13,3,0);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -59851,6 +60084,8 @@ overwriteTile(13,3,0);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -60293,6 +60528,8 @@ setFlag("roomupup", true);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -60803,6 +61040,8 @@ spawnKey(12,4);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -61187,6 +61426,8 @@ spawnKey(12,4);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -61691,6 +61932,8 @@ spawnKey(12,4);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -62110,6 +62353,8 @@ spawnKey(12,4);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -62571,6 +62816,8 @@ setFlag("noseRoom", true);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -62966,6 +63213,8 @@ setFlag("noseRoom", true);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -63408,6 +63657,8 @@ spawnKey(14,5);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -63892,6 +64143,8 @@ spawnKey(14,7);
 
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -64402,6 +64655,8 @@ setFlag("room5", true);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -64811,6 +65066,8 @@ setFlag("room5right", true);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -65169,6 +65426,7 @@ function update() {
 if (counter == 99) {
 playSoundEffect(11);
 changeDirection(1);
+overrideSettings(false, false);
 }
 if (counter &gt; 0) {
 setColor(255,255,255,255*(counter / 100));
@@ -65207,6 +65465,8 @@ TextBox("DONT WASTE YOUR TIME WITH THOSE PUNY BULLETS");
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -65650,6 +65910,8 @@ TextBox("DONT WASTE YOUR TIME WITH THOSE PUNY BULLETS");
         </tileMap>
         <storedObjects />
         <dark>false</dark>
+        <hblock>false</hblock>
+        <vblock>false</vblock>
         <music>-1</music>
       </templateRoom>
       <name>6 Railway Rampage</name>
@@ -66185,6 +66447,8 @@ TextBox("DONT WASTE YOUR TIME WITH THOSE PUNY BULLETS");
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>18</music>
         </Room>
         <Room xsi:nil="true" />
@@ -66596,6 +66860,8 @@ spawnKey(24,4);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>18</music>
         </Room>
         <Room>
@@ -66946,6 +67212,8 @@ spawnKey(24,4);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>18</music>
         </Room>
         <Room>
@@ -67347,6 +67615,8 @@ spawnKey(24,4);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>18</music>
         </Room>
         <Room xsi:nil="true" />
@@ -67788,6 +68058,8 @@ spawnKey(24,4);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -68196,6 +68468,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -68656,6 +68930,8 @@ playSoundEffect(1);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -69133,6 +69409,8 @@ setFlag("room4", true);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -69515,6 +69793,8 @@ TextBox("YOU HEAR MARYS VOICE CRY OUT FOR YOU");
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -69859,6 +70139,7 @@ function onLoad() { changeDirection(1); }
 function update() {
 if (counter == 99) {
 playSoundEffect(11);
+overrideSettings(false, false);
 }
 if (counter &gt; 0) {
 setColor(255,255,255,255 * counter / 100);
@@ -69950,6 +70231,8 @@ clearObjects();
 
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -70361,6 +70644,8 @@ setFlag("_dark", true);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -70813,6 +71098,8 @@ playSoundEffect(0);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -71231,6 +71518,8 @@ playSoundEffect(0);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -71709,6 +71998,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -72059,6 +72350,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -72568,6 +72861,8 @@ spawnGoldKey(12,10);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>4</music>
         </Room>
         <Room xsi:nil="true" />
@@ -73087,6 +73382,8 @@ spawnGoldKey(12,10);
         </tileMap>
         <storedObjects />
         <dark>false</dark>
+        <hblock>false</hblock>
+        <vblock>false</vblock>
         <music>-1</music>
       </templateRoom>
       <name>7 Techno Terror</name>
@@ -73559,6 +73856,8 @@ spawnGoldKey(12,10);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -73983,6 +74282,8 @@ overwriteTile(13,3,8);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>4</music>
         </Room>
         <Room xsi:nil="true" />
@@ -74671,6 +74972,8 @@ overwriteTile(13,3,8);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -75121,6 +75424,8 @@ overwriteTile(13,3,8);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -75590,6 +75895,8 @@ overwriteTile(13,3,8);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -75934,6 +76241,8 @@ overwriteTile(13,3,8);
           </tileMap>
           <storedObjects />
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>5</music>
         </Room>
         <Room xsi:nil="true" />
@@ -76372,6 +76681,8 @@ overwriteTile(13,3,8);
           <code>function onLoad() { }
 function update() { }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -76841,6 +77152,8 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -77329,6 +77642,8 @@ setFlag("mouseghost", true);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -77781,6 +78096,8 @@ setFlag("mouseghost", true);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -78277,6 +78594,8 @@ clearObjects();
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -78823,6 +79142,8 @@ overwriteTile(24,7,0);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -79243,6 +79564,8 @@ overwriteTile(24,7,0);
           <code>function onLoad() { }
 function update() { }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -79661,6 +79984,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>5</music>
         </Room>
         <Room>
@@ -80227,6 +80552,8 @@ die();
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -80747,6 +81074,8 @@ die();
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -81148,6 +81477,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -81617,6 +81948,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -82003,6 +82336,8 @@ function hurt() { }</code>
           <code>function onLoad() { }
 function update() { }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -82443,6 +82778,8 @@ function update() { }</code>
         </tileMap>
         <storedObjects />
         <dark>false</dark>
+        <hblock>false</hblock>
+        <vblock>false</vblock>
         <music>-1</music>
       </templateRoom>
       <name>8 Lost Labyrinth</name>
@@ -82777,6 +83114,8 @@ function update() { }</code>
           </tileMap>
           <storedObjects />
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -83109,6 +83448,8 @@ function update() { }</code>
           </tileMap>
           <storedObjects />
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -83491,6 +83832,8 @@ function update() { }</code>
           </tileMap>
           <storedObjects />
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -84026,6 +84369,8 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -84527,6 +84872,8 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -85028,6 +85375,8 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -85480,6 +85829,8 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -85915,6 +86266,8 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -86379,6 +86732,8 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -86764,6 +87119,8 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -87244,6 +87601,8 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -87696,6 +88055,8 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -88097,6 +88458,8 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -88601,6 +88964,8 @@ function update() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -89077,6 +89442,8 @@ spawnKey(20,7);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -89616,6 +89983,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -90051,6 +90420,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -90486,6 +90857,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -90951,6 +91324,8 @@ playSoundEffect(0);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -91411,6 +91786,8 @@ playSoundEffect(0);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -91926,6 +92303,8 @@ playSoundEffect(0);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -92385,6 +92764,8 @@ spawnKey(12,2);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -92766,6 +93147,8 @@ spawnKey(12,2);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -93150,6 +93533,8 @@ spawnKey(12,2);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -93231,7 +93616,7 @@ spawnKey(12,2);
       </xmlRooms>
     </Adventure>
     <Adventure>
-      <music>9</music>
+      <music>6</music>
       <tileset>6</tileset>
       <key>
         <int>0</int>
@@ -93629,6 +94014,8 @@ spawnKey(12,2);
         </tileMap>
         <storedObjects />
         <dark>false</dark>
+        <hblock>false</hblock>
+        <vblock>false</vblock>
         <music>-1</music>
       </templateRoom>
       <name>9 Marys Mayhem</name>
@@ -93785,6 +94172,340 @@ spawnKey(12,2);
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
+        <Room>
+          <tileMap>
+            <int>2</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>2</int>
+            <int>4</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>4</int>
+            <int>4</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>4</int>
+            <int>4</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>4</int>
+            <int>4</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>4</int>
+            <int>4</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>4</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>4</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>4</int>
+            <int>4</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>4</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>4</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>4</int>
+            <int>4</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>2</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>2</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>4</int>
+            <int>2</int>
+            <int>28</int>
+            <int>22</int>
+            <int>28</int>
+            <int>22</int>
+            <int>28</int>
+            <int>22</int>
+            <int>28</int>
+            <int>22</int>
+            <int>28</int>
+            <int>22</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>28</int>
+            <int>22</int>
+            <int>28</int>
+            <int>22</int>
+            <int>28</int>
+            <int>22</int>
+            <int>28</int>
+            <int>22</int>
+            <int>28</int>
+            <int>22</int>
+            <int>2</int>
+            <int>33</int>
+            <int>30</int>
+            <int>23</int>
+            <int>30</int>
+            <int>23</int>
+            <int>30</int>
+            <int>23</int>
+            <int>30</int>
+            <int>23</int>
+            <int>30</int>
+            <int>23</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>30</int>
+            <int>23</int>
+            <int>30</int>
+            <int>23</int>
+            <int>30</int>
+            <int>23</int>
+            <int>30</int>
+            <int>23</int>
+            <int>30</int>
+            <int>23</int>
+            <int>31</int>
+            <int>34</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>32</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+          </tileMap>
+          <storedObjects />
+          <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
+          <music>-1</music>
+        </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -93800,6 +94521,478 @@ spawnKey(12,2);
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
+        <Room>
+          <tileMap>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>20</int>
+            <int>20</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>37</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>20</int>
+            <int>20</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>47</int>
+            <int>47</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>21</int>
+            <int>21</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>21</int>
+            <int>21</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>47</int>
+            <int>47</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>47</int>
+            <int>47</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>35</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>36</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>47</int>
+            <int>47</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
+          </tileMap>
+          <storedObjects>
+            <StoredObject>
+              <x>176</x>
+              <y>240</y>
+              <type>stock</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>400</x>
+              <y>144</y>
+              <type>stock</type>
+              <enemyType>2</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>656</x>
+              <y>176</y>
+              <type>boss</type>
+              <enemyType>5</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>368</x>
+              <y>240</y>
+              <type>boss</type>
+              <enemyType>5</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>624</x>
+              <y>240</y>
+              <type>stock</type>
+              <enemyType>1</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>176</x>
+              <y>336</y>
+              <type>boss</type>
+              <enemyType>5</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>496</x>
+              <y>80</y>
+              <type>boss</type>
+              <enemyType>5</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+          </storedObjects>
+          <code>function onLoad() {
+setFlag("_hloop", true);
+setFlag("_vloop", true);
+}
+function update() {
+if (!getFlag("midboss5qq") &amp;&amp; !anyEnemies()) {
+playSoundEffect(0);
+setFlag("midboss5qq", true);
+TextBox("YOU CONTINUE TO IMPRESS ME KITTEN");
+setFlag("_vloop", false);
+overwriteTile(11,12,0);
+overwriteTile(12,12,0);
+overwriteTile(13,12,0);
+overwriteTile(11,0,0);
+overwriteTile(12,0,0);
+overwriteTile(13,0,0);
+}
+}</code>
+          <dark>false</dark>
+          <hblock>true</hblock>
+          <vblock>false</vblock>
+          <music>4</music>
+        </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -93815,9 +95008,394 @@ spawnKey(12,2);
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
-        <Room xsi:nil="true" />
-        <Room xsi:nil="true" />
-        <Room xsi:nil="true" />
+        <Room>
+          <tileMap>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>2</int>
+            <int>3</int>
+            <int>3</int>
+            <int>2</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>2</int>
+            <int>3</int>
+            <int>3</int>
+            <int>2</int>
+            <int>4</int>
+            <int>9</int>
+            <int>11</int>
+            <int>9</int>
+            <int>0</int>
+            <int>0</int>
+            <int>2</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>2</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>2</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>2</int>
+            <int>0</int>
+            <int>0</int>
+            <int>9</int>
+            <int>11</int>
+            <int>9</int>
+            <int>4</int>
+            <int>4</int>
+            <int>10</int>
+            <int>12</int>
+            <int>10</int>
+            <int>0</int>
+            <int>0</int>
+            <int>5</int>
+            <int>9</int>
+            <int>5</int>
+            <int>9</int>
+            <int>5</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>5</int>
+            <int>9</int>
+            <int>5</int>
+            <int>9</int>
+            <int>5</int>
+            <int>0</int>
+            <int>0</int>
+            <int>10</int>
+            <int>12</int>
+            <int>10</int>
+            <int>4</int>
+            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>6</int>
+            <int>10</int>
+            <int>6</int>
+            <int>10</int>
+            <int>6</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>6</int>
+            <int>10</int>
+            <int>6</int>
+            <int>10</int>
+            <int>6</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>4</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>4</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>4</int>
+            <int>4</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>20</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>20</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>4</int>
+            <int>4</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>4</int>
+            <int>4</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>4</int>
+            <int>4</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>4</int>
+            <int>4</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>4</int>
+            <int>2</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>2</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>2</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>3</int>
+            <int>2</int>
+          </tileMap>
+          <storedObjects>
+            <StoredObject>
+              <x>400</x>
+              <y>304</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>evil</name>
+                <code>var counter = -1;
+var talked = false;
+function onLoad() { }
+function update() {
+if (counter == 99) {
+playSoundEffect(11);
+changeDirection(1);
+overrideSettings(false, false);
+}
+if (counter &gt; 0) {
+setColor(255,255,255,255*(counter / 100));
+counter--;
+}
+else if (counter == 0) {
+die();
+}
+}
+function inRange() {
+if (!talked) {
+TextBox("I HOPE YOU APPRECIATE ALL THE WORK I PUT IN   FOR YOU");
+TextBox("TEARING APART THE VERY LAWS OF SPACE AND TIME ISNT EASY");
+counter = 100;
+talked = true;
+overwriteTile(11,7,0);
+overwriteTile(12,7,0);
+overwriteTile(13,7,0);
+}
+}
+function touch() { }
+function hurt() {
+if (!talked) {
+playSoundEffect(7);
+TextBox("SERIOUSLY DO YOU REALIZE HOW EASY IT WOULD BE FOR ME TO KILL YOU");
+}
+}</code>
+                <graphics>6</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+          </storedObjects>
+          <dark>false</dark>
+          <hblock>true</hblock>
+          <vblock>false</vblock>
+          <music>-1</music>
+        </Room>
         <Room>
           <tileMap>
             <int>2</int>
@@ -94310,6 +95888,8 @@ overwriteTile(12,5,54);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -94466,7 +96046,7 @@ overwriteTile(12,5,54);
             <int>6</int>
             <int>0</int>
             <int>0</int>
-            <int>0</int>
+            <int>15</int>
             <int>21</int>
             <int>21</int>
             <int>21</int>
@@ -94492,7 +96072,7 @@ overwriteTile(12,5,54);
             <int>15</int>
             <int>0</int>
             <int>15</int>
-            <int>0</int>
+            <int>15</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -94563,8 +96143,8 @@ overwriteTile(12,5,54);
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>0</int>
-            <int>0</int>
+            <int>15</int>
+            <int>15</int>
             <int>0</int>
             <int>0</int>
             <int>2</int>
@@ -94656,6 +96236,8 @@ overwriteTile(12,5,54);
           </tileMap>
           <storedObjects />
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -95082,6 +96664,8 @@ overwriteTile(3,5,0);
 
 function hurt() { }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -95653,6 +97237,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -96091,6 +97677,8 @@ function hurt() { }</code>
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -96550,6 +98138,8 @@ spawnKey(12,8);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -97094,6 +98684,8 @@ spawnKey(20,7);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -97478,6 +99070,8 @@ spawnKey(20,7);
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -98066,6 +99660,8 @@ overwriteTile(13,3,0);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
@@ -98491,6 +100087,7 @@ function update() {
 if (counter == 99) {
 playSoundEffect(11);
 changeDirection(1);
+overrideSettings(false, false);
 }
 if (counter &gt; 0) {
 setColor(255,255,255,255*(counter / 100));
@@ -98533,6 +100130,8 @@ TextBox("SERIOUSLY THATS NOT GOING TO WORK");
             </StoredObject>
           </storedObjects>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -99102,6 +100701,8 @@ overwriteTile(13,7,12);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room>
@@ -99595,6 +101196,8 @@ spawnKey(12,1);
 }
 }</code>
           <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
           <music>-1</music>
         </Room>
         <Room xsi:nil="true" />

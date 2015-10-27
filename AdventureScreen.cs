@@ -32,6 +32,10 @@ namespace aspectstar2
         string label;
         Color playerColor = Color.White;
 
+        public bool hloop = false;
+        public bool vloop = false;
+        public bool hblock = false;
+        public bool vblock = false;
         public bool dark = false;
         public bool lit
         {
@@ -673,6 +677,10 @@ namespace aspectstar2
             this.objects = new List<AdventureObject>();
             this.newobjects = new List<AdventureObject>();
             this.dark = newRoom.dark;
+            this.hloop = false;
+            this.vloop = false;
+            this.hblock = newRoom.hblock;
+            this.vblock = newRoom.vblock;
             objects.Add(player);
             foreach (AdventureObject aO in newRoom.adventureObjects)
             {
@@ -912,6 +920,7 @@ namespace aspectstar2
                 .SetValue("setPlayerColor", new Action<int, int, int, int>(this.SetPlayerColor))
                 .SetValue("setName", new Action<string>(this.SetName))
                 .SetValue("spawnBoss", new Action<int, int>(this.SpawnBoss))
+                .SetValue("teleport", new Action<int, int, int, int>(this.EnterNewRoom))
                 .Execute(code);
         }
 
@@ -1119,6 +1128,24 @@ namespace aspectstar2
             {
                 dark = value;
                 adventure.rooms[roomX, roomY].dark = value;
+            }
+            else if (flag == "_hloop")
+            {
+                hloop = value;
+            }
+            else if (flag == "_vloop")
+            {
+                vloop = value;
+            }
+            else if (flag == "_vblock")
+            {
+                vblock = value;
+                adventure.rooms[roomX, roomY].vblock = value;
+            }
+            else if (flag == "_hblock")
+            {
+                hblock = value;
+                adventure.rooms[roomX, roomY].hblock = value;
             }
             else
             {
