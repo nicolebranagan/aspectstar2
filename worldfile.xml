@@ -10314,8 +10314,8 @@ THANKS FOR PLAYING</credits>
         <x>56</x>
         <y>33</y>
         <dest>11</dest>
-        <destroomX>7</destroomX>
-        <destroomY>14</destroomY>
+        <destroomX>8</destroomX>
+        <destroomY>11</destroomY>
         <destx>12</destx>
         <desty>11</desty>
       </MapObject>
@@ -93616,7 +93616,7 @@ spawnKey(12,2);
       </xmlRooms>
     </Adventure>
     <Adventure>
-      <music>7</music>
+      <music>14</music>
       <tileset>6</tileset>
       <key>
         <int>0</int>

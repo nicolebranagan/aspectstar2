@@ -211,6 +211,9 @@ namespace aspectstar2
 
         void tileTouchAction(int i)
         {
+            if (i < 0 || i >= tileMap.Length)
+                return;
+
             tileType tile = (tileType)key[tileMap[i]];
             if (tile == tileType.Lock)
             {

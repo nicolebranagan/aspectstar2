@@ -394,3 +394,9 @@
 /processorParam:TextureFormat=Color
 /build:dungeon6.png
 
+#begin music_azureflux01.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:music_azureflux01.mp3
+
