@@ -133,6 +133,11 @@ namespace aspectstar2
         public abstract void Touch() ;
 
         public abstract bool inRange(AdventurePlayer player) ;
+
+        protected bool doesOverlap(AdventureObject obj)
+        {
+            return Math.Abs(location.X - obj.location.X) < (width + obj.width) && Math.Abs(location.Y - obj.location.Y) < (height + obj.height);
+        }
     }
 
     public class AdventureShooter : AdventureObject

@@ -205,7 +205,7 @@ namespace aspectstar2
             Vector2 playerloc = player.location;
 
             //if (Math.Sqrt( Math.Pow(location.X - playerloc.X, 2) + Math.Pow(location.Y - playerloc.Y, 2) ) <= Math.Max(width, height))
-            if (Math.Abs(location.X - playerloc.X) < width && Math.Abs(location.Y - playerloc.Y) < height)
+            if (doesOverlap(player))
             {
                 player.Hurt();
                 player.Recoil(location, this);
