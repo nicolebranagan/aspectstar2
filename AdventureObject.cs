@@ -115,11 +115,11 @@ namespace aspectstar2
             }
 
             if (parent.hloop && test.X - width < 0)
-                location.X = 25 * 32 - height - 2;
+                location.X = 25 * 32 - width - 2;
             else if (parent.hloop && test.X + width >= (25 * 32))
                 location.X = width + 2;
             else if (parent.vloop && test.Y - height < 0)
-                location.Y = 13 * 32 - width - 2;
+                location.Y = 13 * 32 - height - 2;
             else if (parent.vloop && test.Y + height >= (13 * 32))
                 location.Y = height + 2;
         }

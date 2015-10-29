@@ -96453,8 +96453,10 @@ overwriteTile(13,9,13);
             </StoredObject>
           </storedObjects>
           <code>function onLoad() {
+if(!getFlag("midboss5qq")) {
 setFlag("_hloop", true);
 setFlag("_vloop", true);
+}
 }
 function update() {
 if (!getFlag("midboss5qq") &amp;&amp; !anyEnemies()) {

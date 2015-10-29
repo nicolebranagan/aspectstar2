@@ -240,6 +240,28 @@ namespace aspectstar2
             }
             return summed;
         }
+
+        public static float absoluteMin(float var1, float var2, float var3)
+        {
+            float a1 = Math.Abs(var1);
+            float a2 = Math.Abs(var2);
+            float a3 = Math.Abs(var3);
+
+            if (a1 > a2)
+            {
+                if (a2 > a3)
+                    return var3;
+                else
+                    return var2;
+            }
+            else
+            {
+                if (a1 > a3)
+                    return var3;
+                else
+                    return var1;
+            }
+        }
     }
 
     public struct Textures

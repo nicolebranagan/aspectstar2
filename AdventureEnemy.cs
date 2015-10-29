@@ -80,6 +80,12 @@ namespace aspectstar2
                                 int x_tar = (int)(location.X - parent.player.location.X);
                                 int y_tar = (int)(location.Y - parent.player.location.Y);
                                 Master.Directions targetDir;
+
+                                if (parent.vloop)
+                                    y_tar = (int)Master.absoluteMin(y_tar, location.Y - (parent.player.location.Y - 13 * 32), location.Y - (parent.player.location.Y + 13 * 32));
+                                if (parent.hloop)
+                                    x_tar = (int)Master.absoluteMin(x_tar, location.X - (parent.player.location.X - Master.width), location.X - (parent.player.location.X + Master.width));
+
                                 if (Math.Abs(x_tar) > Math.Abs(y_tar))
                                 {
                                     if (x_tar > 0)

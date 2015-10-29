@@ -318,6 +318,8 @@ namespace aspectstar2
             this.height = 30;
             this.radius = 32;
 
+            defense = true;
+
             BestiaryEntry bossEntry = new BestiaryEntry();
             bossEntry.movementType = BestiaryEntry.MovementTypes.intelligent;
             bossEntry.speed = 5;
