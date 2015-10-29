@@ -150,8 +150,9 @@ namespace aspectstar2
         public override bool inRange(AdventurePlayer player)
         {
             Vector2 playerloc = player.location;
-            double del = Math.Sqrt(Math.Pow(location.X - playerloc.X, 2) + Math.Pow(location.Y - playerloc.Y, 2));
-            if (del <= Math.Max(width, height))
+            //double del = Math.Sqrt(Math.Pow(location.X - playerloc.X, 2) + Math.Pow(location.Y - playerloc.Y, 2));
+            //if (del <= Math.Max(width, height))
+            if (doesOverlap(player))
             {
                 jintEngine.Execute("inRange()");
                 if (solid) player.Recoil(this.location, this);
