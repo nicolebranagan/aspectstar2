@@ -114608,7 +114608,7 @@ if (getFlag("_active")) {
 setColor(255,255,255,0);
 overrideSettings(true, false);
 }
-else {
+else if (!(getPlayerX() == getThisX()) || !(getPlayerY() == getThisY())) {
 setColor(255,255,255,255);
 overrideSettings(true, true);
 }
