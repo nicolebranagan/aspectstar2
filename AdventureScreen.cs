@@ -910,6 +910,7 @@ namespace aspectstar2
                 .SetValue("getFlag", new Func<string, bool>(this.GetFlag))
                 .SetValue("setFlag", new Action<string, bool>(this.SetFlag))
                 .SetValue("overwriteTile", new Action<int, int, int>(this.OverwriteTile))
+                .SetValue("setSpawn", new Action<int, int>(this.SetSpawn))
                 .SetValue("playSoundEffect", new Action<int>(this.PlaySoundEffect))
                 .SetValue("anyEnemies", new Func<bool>(this.AnyEnemies))
                 .SetValue("clearObjects", new Action(this.ClearObjects))
@@ -968,8 +969,13 @@ namespace aspectstar2
         {
             int i = x + (y * 25);
             tileMap[i] = newTile;
-            if (Math.Floor(first_pos.X / 32) == x && Math.Floor(first_pos.Y / 32) == y) 
+            if (Math.Floor(first_pos.X / 32) == x && Math.Floor(first_pos.Y / 32) == y)
                 first_pos = new Vector2(32 * (float)Math.Floor(player.location.X / 32), 32 * (float)Math.Floor(player.location.Y / 32));
+        }
+
+        void SetSpawn(int x, int y)
+        {
+            first_pos = new Vector2(32 * x + 16, 32 * y + 16);
         }
 
         void PlaySoundEffect(int i)

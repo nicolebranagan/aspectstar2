@@ -15,6 +15,8 @@ namespace aspectstar2
         Engine jintEngine;
         EntityData data;
 
+        bool firstLoad = false;
+
         bool floating = false;
         public bool solid = true;
         bool wander = false;
@@ -31,7 +33,11 @@ namespace aspectstar2
         public override void Initialize(AdventureScreen parent, Game game)
         {
             base.Initialize(parent, game);
-            jintEngine = ActivateEngine(parent.ActivateEngine(data.code));
+            if (!firstLoad)
+            {
+                firstLoad = true;
+                jintEngine = ActivateEngine(parent.ActivateEngine(data.code));
+            }
 
             switch (data.gfxtype)
             {
