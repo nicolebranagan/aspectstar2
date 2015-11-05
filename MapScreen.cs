@@ -52,7 +52,9 @@ namespace aspectstar2
             this.game = game;
             this.master = game.master;
             this.player = new MapPlayer(this);
-            tileMap = Master.currentFile.map.tileMap;
+            //tileMap = Master.currentFile.map.tileMap;
+            tileMap = new int[Master.currentFile.map.tileMap.Length];
+            Master.currentFile.map.tileMap.CopyTo(tileMap, 0);
             key = Master.currentFile.map.key;
             objects = Master.currentFile.map.objects;
             foreach (MapObject obj in objects)

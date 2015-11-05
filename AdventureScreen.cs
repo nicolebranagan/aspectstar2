@@ -89,8 +89,8 @@ namespace aspectstar2
             this.tileset = adventure.tileset;
             this.key = adventure.key;
             this.beaten = beaten;
-            LoadRoom(destroomX, destroomY);
             label = adventure.name;
+            LoadRoom(destroomX, destroomY);
 
             this.first_pos = new Vector2(x * 32 + 16, y * 32 + 16);
             player.location = new Vector2(x * 32 + 16, y * 32 + 16);

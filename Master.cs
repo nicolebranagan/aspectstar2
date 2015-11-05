@@ -26,6 +26,22 @@ namespace aspectstar2
 
         public static Random globalRandom;
 
+        SavedGame _sG;
+        public SavedGame savedGame
+        {
+            get
+            {
+                if (_sG == null)
+                    return LoadGame();
+                else
+                    return _sG;
+            }
+            set
+            {
+                _sG = value;
+            }
+        }
+
         public enum Directions
         {
             Up = 1,
@@ -62,18 +78,11 @@ namespace aspectstar2
         /// </summary>
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-            // Set default controls
-            Master.controls = new Controls();
-            /*controls.Up = Keys.Up;
-            controls.Down = Keys.Down;
-            controls.Left = Keys.Left;
-            controls.Right = Keys.Right;
-            controls.A = Keys.X;
-            controls.B = Keys.Z;
-            controls.Start = Keys.Enter;*/
+            controls = new Controls();
 
             globalRandom = new Random();
+
+            savedGame = LoadGame();
 
             base.Initialize();
         }
@@ -201,7 +210,7 @@ namespace aspectstar2
             }
         }
 
-        public bool LoadGame()
+        SavedGame LoadGame()
         {
             try
             {
@@ -211,15 +220,21 @@ namespace aspectstar2
                 SavedGame sG;
                 sG = (SavedGame)xS.Deserialize(xTR);
 
-                currentGame = new Game(this);
-                currentScreen = currentGame.BeginFromSaved(sG);
+                //currentGame = new Game(this);
+                //currentScreen = currentGame.BeginFromSaved(sG);
                 fS.Close();
-                return true;
+                return sG;
             }
             catch (Exception)
             {
-                return false;
+                return null;
             }
+        }
+
+        public void LoadGameFromSaved(SavedGame sG)
+        {
+            currentGame = new Game(this);
+            currentScreen = currentGame.BeginFromSaved(sG);
         }
 
         public static Vector2 getMapTile(int index, Texture2D map)

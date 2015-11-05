@@ -67,6 +67,7 @@ namespace aspectstar2
     {
         Selections selection = Selections.NewGame;
         bool saveFailed = false;
+        SavedGame savedGame;
 
         enum Selections
         {
@@ -80,6 +81,9 @@ namespace aspectstar2
         public TitleScreen(Master master)
         {
             this.master = master;
+            this.savedGame = master.savedGame;
+            if (savedGame == null)
+                saveFailed = true;
             PlaySong.Play(PlaySong.SongName.Title);
         }
 
@@ -89,9 +93,7 @@ namespace aspectstar2
             //WriteText(spriteBatch, "PRE RELEASE DEMO", new Vector2((Master.width / 2) - (8 * 16), (Master.height / 2) - 96), Color.White);
 
             WriteText(spriteBatch, "NEW GAME", new Vector2((Master.width / 2) - (2 * 16), (Master.height / 2) - 40), Color.White);
-            if (saveFailed)
-                WriteText(spriteBatch, "NO SAVED GAME", new Vector2((Master.width / 2) - (2 * 16), (Master.height / 2) - 8), Color.White);
-            else
+            if (!saveFailed)
                 WriteText(spriteBatch, "CONTINUE", new Vector2((Master.width / 2) - (2 * 16), (Master.height / 2) - 8), Color.White);
             WriteText(spriteBatch, "OPTIONS", new Vector2((Master.width / 2) - (2 * 16), (Master.height / 2) + 24), Color.White);
 
@@ -123,11 +125,15 @@ namespace aspectstar2
                 if (Master.controls.Up && selection != 0)
                 {
                     selection = (Selections)((int)selection - 1);
+                    if (saveFailed && selection == Selections.Continue)
+                        selection = Selections.NewGame;
                     lag = 20;
                 }
                 else if (Master.controls.Down && (int)selection != 2)
                 {
                     selection = (Selections)((int)selection + 1);
+                    if (saveFailed && selection == Selections.Continue)
+                        selection = Selections.Options;
                     lag = 20;
                 }
                 else if (Master.controls.Start || Master.controls.A || Master.controls.B)
@@ -142,7 +148,7 @@ namespace aspectstar2
                         case Selections.Continue:
                             PlaySound.Play(PlaySound.SoundEffectName.Pause);
                             if (!saveFailed)
-                                saveFailed = !(master.LoadGame());
+                                master.LoadGameFromSaved(savedGame);
                             break;
                         case Selections.Options:
                             master.UpdateScreen(new SpecialScreen(new Game(master), 0, 0, x => master.UpdateScreen(this)));
