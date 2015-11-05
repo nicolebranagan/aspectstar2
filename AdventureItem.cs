@@ -148,7 +148,7 @@ namespace aspectstar2
             {
                 active = false;
                 game.bells++;
-                PlaySound.Play(PlaySound.SoundEffectName.Key);
+                PlaySound.Play(PlaySound.SoundEffectName.Coin);
             }
         }
     }

@@ -38,7 +38,7 @@ namespace aspectstar2
                 firstLoad = true;
                 jintEngine = ActivateEngine(parent.ActivateEngine(data.code));
             }
-
+            
             switch (data.gfxtype)
             {
                 case EntityData.GraphicsType.Maptile:

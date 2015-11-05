@@ -1020,6 +1020,7 @@ namespace aspectstar2
                 textString = text;
                 choice = -1;
                 currentMode = adventureModes.textBox;
+                stallCount = 20;
             }
             else
             {

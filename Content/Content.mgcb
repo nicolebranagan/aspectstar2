@@ -406,3 +406,9 @@
 /processorParam:Quality=Best
 /build:music_azureflux02.mp3
 
+#begin coin.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:coin.wav
+
