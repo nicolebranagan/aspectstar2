@@ -201,7 +201,7 @@ namespace aspectstar2
             {
                 if (Master.globalRandom.Next(0, 9) > 7 && (flickerCount == 0))
                 {
-                    AdventureEnemy bunny = new AdventureEnemy(Master.currentFile.bestiary[6]);
+                    AdventureEnemy bunny = new AdventureEnemy(Master.currentFile.bestiary[6], 6);
                     bunny.location = new Vector2(location.X, location.Y - 2);
                     bunny.faceDir = faceDir;
                     parent.addObject(bunny);

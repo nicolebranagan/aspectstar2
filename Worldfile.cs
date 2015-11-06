@@ -212,7 +212,7 @@ namespace aspectstar2
                     shooter.location = new Vector2(x, y);
                     return shooter;
                 case ObjectType.enemy:
-                    AdventureEnemy enemy = new AdventureEnemy(Master.currentFile.bestiary[enemyType]);
+                    AdventureEnemy enemy = new AdventureEnemy(Master.currentFile.bestiary[enemyType], enemyType);
                     enemy.location = new Vector2(x, y);
                     return enemy;
                 case ObjectType.goldkey:

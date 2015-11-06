@@ -766,6 +766,11 @@ namespace aspectstar2
             {
                 obj.Update();
             }
+            foreach (AdventureObject obj in this.objects)
+            {
+                if (obj is AdventureEntity)
+                    ((AdventureEntity)obj).enemyInRange(objects);
+            }
             objects.RemoveAll(isInactive);
             objects = objects.Concat(newobjects).ToList();
             newobjects = new List<AdventureObject>();
@@ -926,6 +931,8 @@ namespace aspectstar2
                 .SetValue("setName", new Action<string>(this.SetName))
                 .SetValue("spawnBoss", new Action<int, int>(this.SpawnBoss))
                 .SetValue("teleport", new Action<int, int, int, int>(this.EnterNewRoom))
+                .SetValue("getEnemyId", new Func<int, int>(this.GetEnemyId))
+                .SetValue("changeEnemy", new Action<int, int>(this.ChangeEnemy))
                 .Execute(code);
         }
 
@@ -1251,6 +1258,22 @@ namespace aspectstar2
             AdventureBoss1 boss1 = new AdventureBoss1();
             boss1.location = new Vector2(x * 32 + 16, y * 32 + 16);
             addObject(boss1);
+        }
+
+        int GetEnemyId(int enemy)
+        {
+            if (objects[enemy] is AdventureEnemy)
+            {
+                return ((AdventureEnemy)objects[enemy]).id;
+            }
+            else
+                return -2;
+        }
+
+        void ChangeEnemy(int enemy, int definition)
+        {
+            if (objects[enemy] is AdventureEnemy)
+                ((AdventureEnemy)objects[enemy]).ChangeEnemy(Master.currentFile.bestiary[definition], definition);
         }
 
         // Predicates

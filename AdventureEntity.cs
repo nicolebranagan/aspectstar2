@@ -170,6 +170,20 @@ namespace aspectstar2
                 return false;
         }
 
+        public void enemyInRange(List<AdventureObject> objects)
+        {
+            for (int i = 0; i < objects.Count; i++)
+            {
+                AdventureObject obj = objects[i];
+                if (obj is AdventureEnemy && doesOverlap(obj))
+                {
+                    jintEngine.Execute(String.Concat(
+                        "if (typeof enemyInRange == 'function') { enemyInRange(", i.ToString(),"); }"
+                        ));
+                }
+            }
+        }
+
         public override void Touch()
         {
             if (touchLag == 0)
@@ -243,7 +257,7 @@ namespace aspectstar2
 
         void BecomeEnemy(int enemy, bool fatal)
         {
-            AdventureEnemy aE = new AdventureEnemy(Master.currentFile.bestiary[enemy]);
+            AdventureEnemy aE = new AdventureEnemy(Master.currentFile.bestiary[enemy], enemy);
             aE.location = location;
             parent.addObject(aE);
             if (fatal)

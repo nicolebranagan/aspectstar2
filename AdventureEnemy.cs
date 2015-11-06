@@ -16,16 +16,32 @@ namespace aspectstar2
         protected int radius = 16;
         protected bool interenemycollide = false;
         protected bool defense = false;
+        public int id = -1;
 
         public AdventureEnemy()
         {
         }
 
-        public AdventureEnemy(BestiaryEntry definition)
+        public AdventureEnemy(BestiaryEntry definition, int id)
         {
             this.definition = definition;
+            this.id = id;
+
             this.texture = Master.texCollection.texEnemies;
             this.health = definition.health;
+            this.graphicsRow = definition.graphicsRow;
+            this.offset = new Vector2(definition.xOffset, definition.yOffset);
+            this.width = definition.width;
+            this.height = definition.height;
+            this.ghost = definition.ghost;
+        }
+
+        public void ChangeEnemy(BestiaryEntry definition, int id)
+        {
+            this.definition = definition;
+            this.id = id;
+            if (health > definition.health)
+                this.health = definition.health;
             this.graphicsRow = definition.graphicsRow;
             this.offset = new Vector2(definition.xOffset, definition.yOffset);
             this.width = definition.width;
