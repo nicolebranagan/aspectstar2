@@ -922,6 +922,7 @@ namespace aspectstar2
                 .SetValue("setCounter", new Action<string, int>(this.SetCounter))
                 .SetValue("getCounter", new Func<string, int>(this.GetCounter))
                 .SetValue("setPlayerColor", new Action<int, int, int, int>(this.SetPlayerColor))
+                .SetValue("setPlayerRow", new Action<int>(SetPlayerRow))
                 .SetValue("setName", new Action<string>(this.SetName))
                 .SetValue("spawnBoss", new Action<int, int>(this.SpawnBoss))
                 .SetValue("teleport", new Action<int, int, int, int>(this.EnterNewRoom))
@@ -1114,6 +1115,11 @@ namespace aspectstar2
         void SetPlayerColor(int r, int g, int b, int a)
         {
             playerColor = Color.FromNonPremultiplied(r, g, b, a);
+        }
+
+        void SetPlayerRow(int i)
+        {
+            player.row = i;
         }
 
         void SetName(string name)

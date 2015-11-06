@@ -280,6 +280,10 @@ namespace aspectstar2
 
     public class AdventureBoss5 : AdventureEnemy
     {
+        Rectangle bluetangle = new Rectangle(0, 576, 32, 16);
+        Rectangle greentangle = new Rectangle(0, 624, 32, 16);
+        Rectangle redtangle = new Rectangle(0, 672, 32, 16);
+
         Aspects _aspect;
         Aspects currentAspect
         {
@@ -344,17 +348,21 @@ namespace aspectstar2
             int dim_y = 64;
             int column = ((int)faceDir * 2) + currentFrame;
             int row;
+            Rectangle signifierRect;
 
             switch (currentAspect)
             {
                 case Aspects.Green:
                     row = 4;
+                    signifierRect = greentangle;
                     break;
                 case Aspects.Red:
                     row = 5;
+                    signifierRect = redtangle;
                     break;
                 default:
                     row = 0;
+                    signifierRect = bluetangle;
                     break;
             }
 
@@ -362,9 +370,11 @@ namespace aspectstar2
 
             Rectangle sourceRectangle = new Rectangle(dim_x * column, row * dim_y, dim_x, dim_y);
             Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y - (z * 2), dim_x, dim_y);
+            Rectangle signifierDestination = new Rectangle((int)screen_loc.X + 16, (int)screen_loc.Y - (z * 2) - 16, 32, 16);
 
             spriteBatch.Begin();
             spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, mask);
+            spriteBatch.Draw(Master.texCollection.texEnemies, signifierDestination, signifierRect, Color.White);
             spriteBatch.End();
         }
 
