@@ -10313,11 +10313,11 @@ THANKS FOR PLAYING</credits>
       <MapObject xsi:type="MapTeleporter">
         <x>56</x>
         <y>33</y>
-        <dest>11</dest>
-        <destroomX>7</destroomX>
-        <destroomY>14</destroomY>
+        <dest>9</dest>
+        <destroomX>8</destroomX>
+        <destroomY>9</destroomY>
         <destx>12</destx>
-        <desty>11</desty>
+        <desty>12</desty>
       </MapObject>
     </objects>
   </map>

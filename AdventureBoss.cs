@@ -468,7 +468,9 @@ namespace aspectstar2
 
     public class AdventureBoss7 : AdventureEnemy
     {
-        bool forward = true;
+        //bool forward = true;
+        Master.Directions stableDir = Master.Directions.Down;
+        int timer = 0;
 
         public AdventureBoss7()
         {
@@ -498,7 +500,7 @@ namespace aspectstar2
 
             int dim_x = 64;
             int dim_y = 64;
-            int column = forward ? 0 : 1;
+            int column = (int)stableDir;
             Vector2 screen_loc = location - offset;
 
             Rectangle sourceRectangle = new Rectangle(dim_x * column, 512, dim_x, dim_y);
@@ -511,10 +513,23 @@ namespace aspectstar2
 
         public override void Update()
         {
-            if (!forward && faceDir == Master.Directions.Down)
-                forward = true;
-            else if (forward && faceDir == Master.Directions.Up)
-                forward = false;
+            int del_x = (int)(parent.player.location.X - location.X);
+            int del_y = (int)(parent.player.location.Y - location.Y);
+
+            if (Math.Abs(del_x) > Math.Abs(del_y))
+            {
+                if (del_x > 0)
+                    stableDir = Master.Directions.Right;
+                else
+                    stableDir = Master.Directions.Left;
+            }
+            else
+            {
+                if (del_y > 0)
+                    stableDir = Master.Directions.Down;
+                else
+                    stableDir = Master.Directions.Up;
+            }
 
             base.Update();
         }
