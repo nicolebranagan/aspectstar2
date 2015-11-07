@@ -25,6 +25,8 @@ namespace aspectstar2
             Pause = 10,
             Special = 11,
             Coin = 12,
+            Laser = 13,
+            Heal = 14,
         }
 
         static SoundEffect die;
@@ -40,6 +42,8 @@ namespace aspectstar2
         static SoundEffect pause;
         static SoundEffect special;
         static SoundEffect coin;
+        static SoundEffect laser;
+        static SoundEffect heal;
 
         static SoundEffectInstance hurtInst;
         static SoundEffectInstance jumpInst;
@@ -64,6 +68,8 @@ namespace aspectstar2
             PlaySound.pause = Content.Load<SoundEffect>("pause");
             PlaySound.special = Content.Load<SoundEffect>("computer");
             PlaySound.coin = Content.Load<SoundEffect>("coin");
+            PlaySound.laser = Content.Load<SoundEffect>("laser");
+            PlaySound.heal = Content.Load<SoundEffect>("heal");
 
             hurtInst = hurt.CreateInstance();
             jumpInst = jump.CreateInstance();
@@ -124,6 +130,12 @@ namespace aspectstar2
                     break;
                 case SoundEffectName.Coin:
                     coin.Play();
+                    break;
+                case SoundEffectName.Heal:
+                    heal.Play();
+                    break;
+                case SoundEffectName.Laser:
+                    laser.Play();
                     break;
             }
         }

@@ -468,9 +468,7 @@ namespace aspectstar2
 
     public class AdventureBoss7 : AdventureEnemy
     {
-        //bool forward = true;
         Master.Directions stableDir = Master.Directions.Down;
-        int timer = 0;
 
         public AdventureBoss7()
         {

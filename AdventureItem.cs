@@ -85,7 +85,7 @@ namespace aspectstar2
                 game.life = game.life + 2;
                 if (game.life > game.possibleLife)
                     game.life = game.possibleLife;
-                PlaySound.Play(PlaySound.SoundEffectName.Aspect);
+                PlaySound.Play(PlaySound.SoundEffectName.Heal);
             }
         }
     }

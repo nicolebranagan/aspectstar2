@@ -203,7 +203,7 @@ namespace aspectstar2
                 if (game.life != game.possibleLife)
                 {
                     game.life = game.possibleLife;
-                    PlaySound.Play(PlaySound.SoundEffectName.Aspect);
+                    PlaySound.Play(PlaySound.SoundEffectName.Heal);
                     tileMap[i] = 0;
                 }
             }

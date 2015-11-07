@@ -83,6 +83,19 @@ namespace aspectstar2
                 source.Y = 64;
                 frame = 0;
             }
+            if (intangible)
+            {
+                if (faceDir == Master.Directions.Up || faceDir == Master.Directions.Down)
+                {
+                    source.Y = 96;
+                    frame = 0;
+                }
+                else
+                {
+                    source.Y = 80;
+                    frame = 0;
+                }
+            }
             spriteBatch.Draw(texture, location, source, Color.White, (float)Math.PI * frame / 2, new Vector2(8,8), 1, SpriteEffects.None, 0);
             spriteBatch.End();
         }

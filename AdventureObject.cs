@@ -143,6 +143,7 @@ namespace aspectstar2
     public class AdventureShooter : AdventureObject
     {
         bool track;
+        bool active = false;
 
         public AdventureShooter(bool track)
         {
@@ -199,8 +200,14 @@ namespace aspectstar2
                     }
                     AdventureProjectile aP = AdventureProjectile.getIntangibleProjectile(false, closeDir, location, 300);
                     parent.addObject(aP);
-                    stallCount = 5;
+                    stallCount = 4;
+
+                    if (active == false)
+                        PlaySound.Play(PlaySound.SoundEffectName.Laser);
+                    active = true;
                 }
+                else if (stallCount == 0)
+                    active = false;
                 else if (stallCount > 0)
                     stallCount = stallCount - 1;
             }
