@@ -21741,7 +21741,7 @@ function update() { }</code>
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>0</int>
+            <int>22</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -21766,11 +21766,11 @@ function update() { }</code>
             <int>0</int>
             <int>0</int>
             <int>0</int>
+            <int>23</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>0</int>
-            <int>0</int>
+            <int>22</int>
             <int>0</int>
             <int>0</int>
             <int>24</int>
@@ -21789,13 +21789,13 @@ function update() { }</code>
             <int>10</int>
             <int>0</int>
             <int>0</int>
+            <int>22</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
+            <int>22</int>
             <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
+            <int>23</int>
             <int>0</int>
             <int>0</int>
             <int>24</int>
@@ -21814,11 +21814,11 @@ function update() { }</code>
             <int>10</int>
             <int>0</int>
             <int>0</int>
+            <int>23</int>
             <int>0</int>
-            <int>22</int>
             <int>0</int>
             <int>0</int>
-            <int>22</int>
+            <int>23</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -21840,10 +21840,10 @@ function update() { }</code>
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>23</int>
-            <int>20</int>
-            <int>19</int>
-            <int>23</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -21954,7 +21954,7 @@ function hurt() { }</code>
             <int>11</int>
             <int>11</int>
             <int>0</int>
-            <int>0</int>
+            <int>22</int>
             <int>0</int>
             <int>20</int>
             <int>16</int>

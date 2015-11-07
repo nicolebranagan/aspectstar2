@@ -246,6 +246,7 @@ namespace aspectstar2
                     (obj is AdventureEnemy && ((AdventureEnemy)obj).isStationary())))
                     collided = true;
             }
+            tileAction(player.location, 10, 6);
             return collided;
         }
 
@@ -771,6 +772,8 @@ namespace aspectstar2
                 if (obj is AdventureEntity)
                     ((AdventureEntity)obj).enemyInRange(objects);
             }
+            if (!player.moving)
+                Collide(player.flickerCount);
             objects.RemoveAll(isInactive);
             objects = objects.Concat(newobjects).ToList();
             newobjects = new List<AdventureObject>();
