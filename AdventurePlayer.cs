@@ -178,8 +178,8 @@ namespace aspectstar2
                 parent.enterNewRoom(1, 0);
             else if (!parent.vblock && !parent.vloop && ((test.Y + height) >= (13 * 32)))
                 parent.enterNewRoom(0, 1);
-            else if (parent.Collide(flickerCount))
-                ; // Deliberately left blank
+            //else if (parent.Collide(flickerCount))
+            //    ; // Deliberately left blank
             else
             {
                 base.Move(move_dist);
