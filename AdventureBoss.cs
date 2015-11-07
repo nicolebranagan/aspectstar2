@@ -290,7 +290,6 @@ namespace aspectstar2
             get { return _aspect; }
             set
             {
-                PlaySound.Play(PlaySound.SoundEffectName.Aspect);
                 _aspect = value;
                 switch (value)
                 {
@@ -386,11 +385,20 @@ namespace aspectstar2
             int y = (int)Math.Floor(location.Y / 32);
 
             if (x == 5 && y == 7 && currentAspect != Aspects.Blue)
+            {
                 currentAspect = Aspects.Blue;
+                PlaySound.Play(PlaySound.SoundEffectName.Aspect);
+            }
             else if (x == 12 && y == 4 && currentAspect != Aspects.Red)
+            {
                 currentAspect = Aspects.Red;
+                PlaySound.Play(PlaySound.SoundEffectName.Aspect);
+            }
             else if (x == 19 && y == 7 && currentAspect != Aspects.Green)
+            {
                 currentAspect = Aspects.Green;
+                PlaySound.Play(PlaySound.SoundEffectName.Aspect);
+            }
         }
 
         public override void Touch()
