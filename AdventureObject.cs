@@ -40,7 +40,7 @@ namespace aspectstar2
             {
                 stallCount = 0;
                 currentFrame = currentFrame + 1;
-                if (currentFrame == 2)
+                if (currentFrame > 1)
                     currentFrame = 0;
             }
             else

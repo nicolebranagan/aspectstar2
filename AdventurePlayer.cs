@@ -31,6 +31,7 @@ namespace aspectstar2
 
         public override void Draw(SpriteBatch spriteBatch, Color mask)
         {
+            System.Diagnostics.Debug.WriteLine(currentFrame);
             if (!parent.isInjury(location, width, height) || z != 0)
             {
                 int dim_x = 32;
@@ -52,6 +53,7 @@ namespace aspectstar2
                 if (flickerCount % 7 == 0)
                     mask = Color.Red;
             }
+
             base.Draw(spriteBatch, mask);
         }
 
@@ -156,7 +158,6 @@ namespace aspectstar2
             if ((z == 0) && (parent.isSolid(this.location, 0, 0, 0, faceDir)))
             {
                 moving = false;
-                Flicker();
                 parent.Drown();
             }
 
