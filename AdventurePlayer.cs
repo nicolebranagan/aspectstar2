@@ -31,7 +31,6 @@ namespace aspectstar2
 
         public override void Draw(SpriteBatch spriteBatch, Color mask)
         {
-            System.Diagnostics.Debug.WriteLine(currentFrame);
             if (!parent.isInjury(location, width, height) || z != 0)
             {
                 int dim_x = 32;

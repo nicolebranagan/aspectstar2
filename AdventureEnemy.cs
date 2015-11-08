@@ -16,6 +16,7 @@ namespace aspectstar2
         protected int radius = 16;
         protected bool interenemycollide = false;
         protected bool defense = false;
+        protected int flickerTime = 40;
         public int id = -1;
 
         public AdventureEnemy()
@@ -196,7 +197,7 @@ namespace aspectstar2
             {
                 PlaySound.Play(PlaySound.SoundEffectName.Boom);
                 health = health - (defense ? 1 : damage);
-                flickerCount = 40;
+                flickerCount = flickerTime;
                 if (health <= 0)
                 {
                     active = false;

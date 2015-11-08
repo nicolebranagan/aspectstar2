@@ -10313,9 +10313,9 @@ THANKS FOR PLAYING</credits>
       <MapObject xsi:type="MapTeleporter">
         <x>56</x>
         <y>33</y>
-        <dest>11</dest>
-        <destroomX>7</destroomX>
-        <destroomY>14</destroomY>
+        <dest>10</dest>
+        <destroomX>5</destroomX>
+        <destroomY>2</destroomY>
         <destx>12</destx>
         <desty>11</desty>
       </MapObject>
@@ -83893,6 +83893,7 @@ function update() { }</code>
         <Room>
           <tileMap>
             <int>22</int>
+            <int>25</int>
             <int>23</int>
             <int>23</int>
             <int>23</int>
@@ -83914,8 +83915,7 @@ function update() { }</code>
             <int>23</int>
             <int>23</int>
             <int>23</int>
-            <int>23</int>
-            <int>23</int>
+            <int>25</int>
             <int>22</int>
             <int>23</int>
             <int>23</int>
@@ -84026,113 +84026,13 @@ function update() { }</code>
             <int>0</int>
             <int>0</int>
             <int>13</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
             <int>13</int>
-            <int>0</int>
-            <int>0</int>
-            <int>13</int>
-            <int>0</int>
-            <int>0</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>13</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>13</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>13</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>8</int>
-            <int>0</int>
-            <int>0</int>
-            <int>13</int>
-            <int>0</int>
-            <int>0</int>
-            <int>13</int>
-            <int>0</int>
             <int>0</int>
             <int>0</int>
             <int>10</int>
             <int>0</int>
             <int>0</int>
-            <int>0</int>
+            <int>13</int>
             <int>13</int>
             <int>0</int>
             <int>0</int>
@@ -84145,6 +84045,32 @@ function update() { }</code>
             <int>8</int>
             <int>8</int>
             <int>8</int>
+            <int>0</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>10</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>0</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>0</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -84155,8 +84081,82 @@ function update() { }</code>
             <int>0</int>
             <int>10</int>
             <int>0</int>
-            <int>10</int>
             <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>0</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>0</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>0</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>0</int>
+            <int>13</int>
+            <int>13</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>13</int>
+            <int>13</int>
+            <int>0</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>0</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>8</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>13</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>13</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -84218,7 +84218,103 @@ function update() { }</code>
             <int>8</int>
             <int>8</int>
           </tileMap>
-          <storedObjects />
+          <storedObjects>
+            <StoredObject>
+              <x>400</x>
+              <y>64</y>
+              <type>boss</type>
+              <enemyType>8</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>400</x>
+              <y>208</y>
+              <type>stock</type>
+              <enemyType>8</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>752</x>
+              <y>16</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>48</x>
+              <y>16</y>
+              <type>shooter</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+          </storedObjects>
+          <code>function onLoad() { }
+function update() {
+if (!getFlag("enteredBoss") &amp; getPlayerY() == 11) {
+setFlag("enteredBoss", true);
+overwriteTile(11,12,9);
+overwriteTile(12,12,9);
+overwriteTile(13,12,9);
+playSoundEffect(1);
+}
+if (!getFlag("beatBoss") &amp;&amp; !anyEnemies()) {
+setFlag("beatBoss", true);
+clearObjects();
+playSoundEffect(0);
+overwriteTile(22,5,0);
+overwriteTile(22,6,0);
+overwriteTile(22,7,0);
+overwriteTile(22,8,9);
+overwriteTile(23,5,0);
+overwriteTile(23,6,0);
+overwriteTile(23,7,0);
+overwriteTile(23,8,9);
+overwriteTile(24,5,0);
+overwriteTile(24,6,0);
+overwriteTile(24,7,0);
+overwriteTile(24,8,9);
+}
+}</code>
           <dark>false</dark>
           <hblock>false</hblock>
           <vblock>false</vblock>

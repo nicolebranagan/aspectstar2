@@ -484,6 +484,7 @@ namespace aspectstar2
             this.offset = new Vector2(32, 32);
             this.width = 30;
             this.height = 30;
+            this.flickerTime = 55;
 
             BestiaryEntry bossEntry = new BestiaryEntry();
             bossEntry.movementType = BestiaryEntry.MovementTypes.intelligent;
@@ -551,6 +552,175 @@ namespace aspectstar2
         public override void Touch()
         {
             //
+        }
+    }
+
+    public class AdventureBoss8 : AdventureEnemy
+    {
+        bool _active = false;
+        bool left = false;
+
+        public AdventureBoss8()
+        {
+            this.texture = Master.texCollection.texBosses;
+            this.offset = new Vector2(32, 32);
+            this.width = 30;
+            this.height = 30;
+
+            BestiaryEntry bossEntry = new BestiaryEntry();
+            bossEntry.movementType = BestiaryEntry.MovementTypes.stationary;
+            definition = bossEntry;
+            health = 18;
+        }
+
+        public override void Initialize(AdventureScreen parent, Game game)
+        {
+            base.Initialize(parent, game);
+
+            parent.addObject(new AdventureBoss8Helper(new Vector2(2 * 32 + 16, 3 * 32 + 16), true));
+
+            parent.addObject(new AdventureBoss8Helper(new Vector2(22 * 32 + 16, 11 * 32 + 16), false));
+        }
+
+        public override void Draw(SpriteBatch spriteBatch, Color mask)
+        {
+            if (flickerCount > 0)
+            {
+                flickerCount--;
+                if (flickerCount % 7 == 0)
+                    mask = Color.Black;
+            }
+
+            int dim_x = 64;
+            int dim_y = 64;
+            Vector2 screen_loc = location - offset;
+
+            Rectangle sourceRectangle = new Rectangle(_active ? 192 : 64, 576, dim_x, dim_y);
+            Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y - (z * 2), dim_x, dim_y);
+
+            spriteBatch.Begin();
+            spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, mask);
+            spriteBatch.End();
+        }
+
+        int fireCount = 0;
+        public override void Update()
+        {
+            if (!_active && parent.GetFlag("_active"))
+                fireCount = 15;
+            if (fireCount > 0)
+            {
+                fireCount--;
+                if (fireCount % 5 == 0)
+                    parent.addObject(AdventureProjectile.getFieryProjectile(false, Master.Directions.Down, new Vector2(location.X, location.Y + 32), 400));
+            }
+
+            _active = parent.GetFlag("_active");
+            if (!_active) { flickerCount = 0; fireCount = 0; }
+
+            if (left && location.X == 5 * 32)
+                left = false;
+            else if (!left && location.X == 20 * 32)
+                left = true;
+
+            if (!_active)
+            {
+                if (left) location.X = location.X - 2;
+                else location.X = location.X + 2;
+            }
+
+            base.Update();
+        }
+
+        public override void Hurt(bool ghostly, int damage)
+        {
+            if (_active)
+            {
+                fireCount = 0;
+                base.Hurt(ghostly, damage);
+            }
+            else
+                PlaySound.Play(PlaySound.SoundEffectName.Key);
+        }
+    }
+
+    public class AdventureBoss8Helper : AdventureObject
+    {
+        bool _active;
+        bool left, down;
+        int handOpen = 0;
+
+        public AdventureBoss8Helper(Vector2 location, bool left)
+        {
+            this.texture = Master.texCollection.texBosses;
+            this.offset = new Vector2(16, 16);
+            this.width = 14;
+            this.height = 14;
+            this.location = location;
+
+            this.left = left;
+            down = left;
+            if (!left) handOpen = 200;
+        }
+
+        public override void Draw(SpriteBatch spriteBatch, Color mask)
+        {
+            int dim_x = 32;
+            int dim_y = 32;
+            int column = (_active ? 4 : 0) + (left ? 0 : 1);
+            int row = (handOpen < 16 ? 0 : 1);
+            Vector2 screen_loc = location - offset;
+
+            Rectangle sourceRectangle = new Rectangle(dim_x * column, 576 + dim_y * row, dim_x, dim_y);
+            Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y - (z * 2), dim_x, dim_y);
+
+            spriteBatch.Begin();
+            spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, mask);
+            spriteBatch.End();
+        }
+
+        public override bool inRange(AdventurePlayer player)
+        {
+            return false;
+        }
+
+        public override void Touch()
+        {
+            return;
+        }
+
+        public override void Update()
+        {
+            _active = parent.GetFlag("_active");
+
+            handOpen--;
+            if (handOpen < 0)
+                handOpen = 400;
+            if (_active && handOpen > 100)
+                handOpen = 100;
+            if (_active)
+            {
+                if (handOpen < 16 && handOpen % 4 == 0)
+                    parent.addObject(new SeekerProjectile(parent, location, 300));
+            }
+            else if (handOpen == 12 || handOpen == 8 || handOpen == 4)
+            {
+                parent.addObject(AdventureProjectile.getIntangibleProjectile(false, (left ? Master.Directions.Right : Master.Directions.Left), location, 200));
+                PlaySound.Play(PlaySound.SoundEffectName.Laser);
+            }
+
+            if (down && location.Y == 11 * 32 + 16)
+                down = false;
+            else if (!down && location.Y == 3 * 32 + 16)
+                down = true;
+
+            if (handOpen > 16 || _active)
+            {
+                if (down) location.Y = location.Y + 2;
+                else location.Y = location.Y - 2;
+            }
+
+            base.Update();
         }
     }
 }
