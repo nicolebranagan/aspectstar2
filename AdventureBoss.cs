@@ -623,10 +623,15 @@ namespace aspectstar2
             else if (!left && location.X == 20 * 32)
                 left = true;
 
-            if (!_active)
+            if (_active || health < 4)
             {
                 if (left) location.X = location.X - 2;
                 else location.X = location.X + 2;
+            }
+
+            if (flickerCount == 1)
+            {
+                parent.SetCounter("_angrycount", 1);
             }
 
             base.Update();

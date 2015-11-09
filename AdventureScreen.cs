@@ -1206,7 +1206,7 @@ namespace aspectstar2
 
         Dictionary<string, int> counters = new Dictionary<string, int>();
 
-        void SetCounter(string flag, int value)
+        public void SetCounter(string flag, int value)
         {
             if (flag == "_bells")
                 game.bells = value;

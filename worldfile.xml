@@ -84318,10 +84318,37 @@ overwriteTile(24,8,9);
           <dark>false</dark>
           <hblock>false</hblock>
           <vblock>false</vblock>
-          <music>-1</music>
+          <music>4</music>
         </Room>
         <Room>
           <tileMap>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>23</int>
+            <int>23</int>
             <int>23</int>
             <int>22</int>
             <int>22</int>
@@ -84345,12 +84372,10 @@ overwriteTile(24,8,9);
             <int>22</int>
             <int>22</int>
             <int>22</int>
-            <int>22</int>
-            <int>22</int>
             <int>23</int>
             <int>23</int>
             <int>23</int>
-            <int>22</int>
+            <int>23</int>
             <int>22</int>
             <int>22</int>
             <int>22</int>
@@ -84373,31 +84398,6 @@ overwriteTile(24,8,9);
             <int>22</int>
             <int>22</int>
             <int>9</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>22</int>
-            <int>22</int>
-            <int>22</int>
-            <int>22</int>
-            <int>22</int>
-            <int>22</int>
-            <int>22</int>
-            <int>22</int>
-            <int>22</int>
-            <int>22</int>
-            <int>22</int>
-            <int>22</int>
-            <int>22</int>
-            <int>22</int>
-            <int>22</int>
-            <int>22</int>
-            <int>22</int>
-            <int>22</int>
-            <int>22</int>
-            <int>22</int>
-            <int>22</int>
-            <int>8</int>
             <int>9</int>
             <int>9</int>
             <int>23</int>
@@ -84573,7 +84573,7 @@ overwriteTile(24,8,9);
             <int>22</int>
             <int>22</int>
             <int>8</int>
-            <int>22</int>
+            <int>8</int>
             <int>22</int>
             <int>22</int>
             <int>22</int>
@@ -84597,7 +84597,7 @@ overwriteTile(24,8,9);
             <int>22</int>
             <int>22</int>
             <int>22</int>
-            <int>22</int>
+            <int>8</int>
             <int>22</int>
             <int>22</int>
             <int>22</int>
@@ -85985,23 +85985,23 @@ overwriteTile(24,8,9);
             <int>23</int>
             <int>24</int>
             <int>24</int>
-            <int>24</int>
             <int>9</int>
-            <int>9</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
             <int>9</int>
             <int>9</int>
             <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
             <int>24</int>
             <int>24</int>
             <int>23</int>
@@ -86102,7 +86102,7 @@ overwriteTile(24,8,9);
             <int>8</int>
             <int>8</int>
             <int>24</int>
-            <int>13</int>
+            <int>24</int>
             <int>24</int>
             <int>24</int>
             <int>22</int>
@@ -86319,23 +86319,6 @@ overwriteTile(24,8,9);
               <key>0</key>
             </StoredObject>
             <StoredObject>
-              <x>112</x>
-              <y>240</y>
-              <type>stock</type>
-              <enemyType>8</enemyType>
-              <data>
-                <graphics>0</graphics>
-                <gfxtype>Maptile</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>0</key>
-            </StoredObject>
-            <StoredObject>
               <x>400</x>
               <y>240</y>
               <type>enemy</type>
@@ -86374,6 +86357,40 @@ overwriteTile(24,8,9);
               <y>240</y>
               <type>enemy</type>
               <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>96</x>
+              <y>240</y>
+              <type>stock</type>
+              <enemyType>8</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>704</x>
+              <y>240</y>
+              <type>stock</type>
+              <enemyType>10</enemyType>
               <data>
                 <graphics>0</graphics>
                 <gfxtype>Maptile</gfxtype>
@@ -87827,27 +87844,211 @@ overwriteTile(24,8,9);
             <int>22</int>
             <int>22</int>
             <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
             <int>23</int>
+            <int>28</int>
             <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
             <int>22</int>
             <int>22</int>
             <int>22</int>
@@ -87856,224 +88057,48 @@ overwriteTile(24,8,9);
             <int>23</int>
             <int>23</int>
             <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
-            <int>23</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
             <int>22</int>
             <int>22</int>
             <int>23</int>
             <int>24</int>
             <int>24</int>
             <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
             <int>23</int>
             <int>22</int>
             <int>22</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
             <int>22</int>
             <int>22</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>10</int>
-            <int>24</int>
-            <int>10</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>10</int>
-            <int>24</int>
-            <int>24</int>
-            <int>10</int>
-            <int>24</int>
-            <int>24</int>
-            <int>10</int>
-            <int>24</int>
-            <int>24</int>
-            <int>10</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
             <int>22</int>
             <int>22</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
             <int>22</int>
             <int>22</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
             <int>22</int>
             <int>22</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
             <int>22</int>
             <int>22</int>
-            <int>24</int>
-            <int>10</int>
-            <int>24</int>
-            <int>24</int>
-            <int>10</int>
-            <int>24</int>
-            <int>24</int>
-            <int>10</int>
-            <int>24</int>
-            <int>24</int>
-            <int>10</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>10</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>10</int>
-            <int>24</int>
-            <int>10</int>
-            <int>24</int>
             <int>22</int>
             <int>22</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
             <int>22</int>
             <int>22</int>
             <int>22</int>
@@ -88082,22 +88107,14 @@ overwriteTile(24,8,9);
             <int>24</int>
             <int>24</int>
             <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
+            <int>22</int>
             <int>22</int>
             <int>22</int>
             <int>22</int>
@@ -88128,112 +88145,10 @@ overwriteTile(24,8,9);
           </tileMap>
           <storedObjects>
             <StoredObject>
-              <x>592</x>
-              <y>144</y>
-              <type>enemy</type>
-              <enemyType>6</enemyType>
-              <data>
-                <graphics>0</graphics>
-                <gfxtype>Maptile</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>0</key>
-            </StoredObject>
-            <StoredObject>
-              <x>688</x>
-              <y>240</y>
-              <type>enemy</type>
-              <enemyType>6</enemyType>
-              <data>
-                <graphics>0</graphics>
-                <gfxtype>Maptile</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>0</key>
-            </StoredObject>
-            <StoredObject>
-              <x>592</x>
+              <x>400</x>
               <y>336</y>
-              <type>enemy</type>
-              <enemyType>6</enemyType>
-              <data>
-                <graphics>0</graphics>
-                <gfxtype>Maptile</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>0</key>
-            </StoredObject>
-            <StoredObject>
-              <x>464</x>
-              <y>240</y>
-              <type>enemy</type>
-              <enemyType>6</enemyType>
-              <data>
-                <graphics>0</graphics>
-                <gfxtype>Maptile</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>0</key>
-            </StoredObject>
-            <StoredObject>
-              <x>272</x>
-              <y>336</y>
-              <type>enemy</type>
-              <enemyType>6</enemyType>
-              <data>
-                <graphics>0</graphics>
-                <gfxtype>Maptile</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>0</key>
-            </StoredObject>
-            <StoredObject>
-              <x>272</x>
-              <y>208</y>
-              <type>enemy</type>
-              <enemyType>6</enemyType>
-              <data>
-                <graphics>0</graphics>
-                <gfxtype>Maptile</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>0</key>
-            </StoredObject>
-            <StoredObject>
-              <x>112</x>
-              <y>112</y>
-              <type>enemy</type>
-              <enemyType>6</enemyType>
+              <type>heart</type>
+              <enemyType>0</enemyType>
               <data>
                 <graphics>0</graphics>
                 <gfxtype>Maptile</gfxtype>
@@ -90011,7 +89926,7 @@ overwriteTile(24,8,9);
             <int>6</int>
             <int>16</int>
             <int>6</int>
-            <int>16</int>
+            <int>6</int>
             <int>6</int>
             <int>6</int>
             <int>6</int>
@@ -90142,9 +90057,9 @@ overwriteTile(24,8,9);
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>10</int>
             <int>0</int>
-            <int>10</int>
+            <int>0</int>
+            <int>0</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -90192,9 +90107,9 @@ overwriteTile(24,8,9);
             <int>0</int>
             <int>0</int>
             <int>0</int>
+            <int>10</int>
             <int>0</int>
-            <int>0</int>
-            <int>0</int>
+            <int>10</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -90310,23 +90225,6 @@ overwriteTile(24,8,9);
           <storedObjects>
             <StoredObject>
               <x>112</x>
-              <y>48</y>
-              <type>shooter</type>
-              <enemyType>0</enemyType>
-              <data>
-                <graphics>0</graphics>
-                <gfxtype>Maptile</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>0</key>
-            </StoredObject>
-            <StoredObject>
-              <x>176</x>
               <y>48</y>
               <type>shooter</type>
               <enemyType>0</enemyType>
@@ -90915,12 +90813,29 @@ overwriteTile(24,8,9);
               <screen>0</screen>
               <key>0</key>
             </StoredObject>
+            <StoredObject>
+              <x>432</x>
+              <y>304</y>
+              <type>enemy</type>
+              <enemyType>17</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
 function update() {
 if (!getFlag("multisnake2") &amp;&amp; !anyEnemies()) {
 setFlag("multisnake2", true);
-spawnKey(20,7);
+spawnKey(19,7);
 }
 }</code>
           <dark>false</dark>
@@ -92898,9 +92813,9 @@ playSoundEffect(0);
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
+            <int>10</int>
+            <int>11</int>
+            <int>10</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -93140,23 +93055,6 @@ playSoundEffect(0);
           </tileMap>
           <storedObjects>
             <StoredObject>
-              <x>400</x>
-              <y>240</y>
-              <type>heart</type>
-              <enemyType>0</enemyType>
-              <data>
-                <graphics>0</graphics>
-                <gfxtype>Maptile</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>0</key>
-            </StoredObject>
-            <StoredObject>
               <x>304</x>
               <y>272</y>
               <type>enemy</type>
@@ -93246,6 +93144,40 @@ playSoundEffect(0);
               <y>368</y>
               <type>enemy</type>
               <enemyType>6</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>400</x>
+              <y>240</y>
+              <type>key</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>336</x>
+              <y>176</y>
+              <type>heart</type>
+              <enemyType>0</enemyType>
               <data>
                 <graphics>0</graphics>
                 <gfxtype>Maptile</gfxtype>
