@@ -58,6 +58,7 @@ namespace aspectstar2
     {
         bool left = true;
         bool aboveWater = true;
+        int waterTimer = 0;
 
         public AdventureBoss2()
         {
@@ -114,39 +115,61 @@ namespace aspectstar2
             else
                 stallCount++;
 
+            if (stallCount % 4 != 0)
+            {
+                if (waterTimer % 3 != 0)
+                    location = new Vector2(location.X + (left ? -2 : 2), location.Y);
+
+                if (aboveWater)
+                {
+                    if (Master.globalRandom.Next(60) < 1)
+                        waterTimer = waterTimer - 40;
+                    else
+                        waterTimer = waterTimer - 1;
+
+                    if (waterTimer % 50 == 0)
+                    {
+                        PlaySound.Play(PlaySound.SoundEffectName.Pew);
+                        var aP = new SeekerProjectile(parent, new Vector2(location.X, location.Y), 500);
+                        parent.addObject(aP);
+                    }
+
+                    if (waterTimer < 0)
+                    {
+                        aboveWater = false;
+                        waterTimer = 200;
+                    }
+                }
+                else if (!aboveWater)
+                {
+                    waterTimer--;
+
+                    if (waterTimer == 0)
+                    {
+                        if (Master.globalRandom.Next(60) < 1)
+                            waterTimer = waterTimer - 30;
+                        aboveWater = true;
+                        waterTimer = 400;
+                    }
+                }
+            }
+
             // Move
             if (location.X + width + 32 >= Master.width)
                 left = true;
             else if (location.X - width - 32 <= 0)
                 left = false;
-
-            if (stallCount % 4 != 0)
-            {
-                location = new Vector2(location.X + (left ? -2 : 2), location.Y);
-
-                if (aboveWater && Master.globalRandom.Next(30) < 1)
-                {
-                    aboveWater = false;
-                }
-                else if (!aboveWater && Master.globalRandom.Next(30) < 5)
-                {
-                    aboveWater = true;
-                    PlaySound.Play(PlaySound.SoundEffectName.Pew);
-                }
-
-                /*if (aboveWater && Master.globalRandom.Next(60) < 2)
-                {
-                    var aP = new AdventureProjectile(false, Master.Directions.Down, location, 300, 1);
-                    parent.addObject(aP);
-                    PlaySound.Play(PlaySound.SoundEffectName.Pew);
-                }*/
-            }
         }
 
         public override void Hurt(bool ghost, int damage)
         {
             if (aboveWater)
+            {
                 base.Hurt(ghost, damage);
+                aboveWater = false;
+                waterTimer = 100;
+                left = !left;
+            }
         }
     }
     public class AdventureBoss3 : AdventureEnemy
@@ -216,6 +239,7 @@ namespace aspectstar2
     public class AdventureBoss4 : AdventureEnemy
     {
         int visibleCounter = 25;
+        int randomCounter = 0;
 
         public AdventureBoss4()
         {
@@ -230,7 +254,7 @@ namespace aspectstar2
             bossEntry.intelligence = 7;
             bossEntry.decisiveness = 6;
             definition = bossEntry;
-            health = 12;
+            health = 9;
             ghost = true;
         }
 
@@ -274,7 +298,24 @@ namespace aspectstar2
             else
                 visibleCounter--;
 
+            if (randomCounter == 0)
+            {
+                definition.movementType = BestiaryEntry.MovementTypes.intelligent;
+            }
+            else
+                randomCounter--;
+
             base.Update();
+        }
+
+        public override bool inRange(AdventurePlayer player)
+        {
+            if (base.inRange(player))
+            {
+                randomCounter = 250;
+                definition.movementType = BestiaryEntry.MovementTypes.random;
+            }
+            return false;
         }
     }
 
