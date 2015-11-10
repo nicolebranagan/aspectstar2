@@ -96,6 +96,7 @@ namespace aspectstar2
                 .SetValue("changeDirection", new Action<int>(ChangeDirection))
                 .SetValue("getThisX", new Func<int>(GetThisX))
                 .SetValue("getThisY", new Func<int>(GetThisY))
+                .SetValue("explode", new Action<bool>(Explode))
                 .Execute("onLoad()");
         }
 
@@ -289,6 +290,14 @@ namespace aspectstar2
         int GetThisY()
         {
             return (int)Math.Floor(location.Y / 32);
+        }
+
+        void Explode(bool fatal)
+        {
+            AdventureExplosion aE = new AdventureExplosion(location);
+            parent.addObject(aE);
+            if (fatal)
+                active = false;
         }
 
         static Action<bool> getChooser(AdventureEntity ent, string callYes, string callNo)

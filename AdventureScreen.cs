@@ -31,6 +31,7 @@ namespace aspectstar2
 
         string label;
         Color playerColor = Color.White;
+        Color overlayColor = Color.White;
 
         public bool hloop = false;
         public bool vloop = false;
@@ -412,8 +413,8 @@ namespace aspectstar2
                     break;
                 case adventureModes.runMode:
                     //Color roomColor = (!dark || lit) ? Color.White : Color.FromNonPremultiplied(15,15,15,255);
-                    Color roomColor = Color.White;
-                    bool usePlayerColor = true;
+                    Color roomColor = overlayColor;
+                    bool usePlayerColor = (playerColor != Color.White);
                     if (dark)
                     {
                         usePlayerColor = false;
@@ -930,6 +931,7 @@ namespace aspectstar2
                 .SetValue("setCounter", new Action<string, int>(this.SetCounter))
                 .SetValue("getCounter", new Func<string, int>(this.GetCounter))
                 .SetValue("setPlayerColor", new Action<int, int, int, int>(this.SetPlayerColor))
+                .SetValue("setOverlayColor", new Action<int, int, int, int>(this.SetOverlayColor))
                 .SetValue("setPlayerRow", new Action<int>(SetPlayerRow))
                 .SetValue("setName", new Action<string>(this.SetName))
                 .SetValue("spawnBoss", new Action<int, int>(this.SpawnBoss))
@@ -1125,6 +1127,11 @@ namespace aspectstar2
         void SetPlayerColor(int r, int g, int b, int a)
         {
             playerColor = Color.FromNonPremultiplied(r, g, b, a);
+        }
+
+        void SetOverlayColor(int r, int g, int b, int a)
+        {
+            overlayColor = Color.FromNonPremultiplied(r, g, b, a);
         }
 
         void SetPlayerRow(int i)

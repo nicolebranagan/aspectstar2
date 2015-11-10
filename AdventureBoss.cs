@@ -66,7 +66,7 @@ namespace aspectstar2
             this.offset = new Vector2(32, 32);
             this.width = 30;
             this.height = 30;
-            this.health = 6;
+            this.health = 7;
         }
 
         public override void Draw(SpriteBatch spriteBatch, Color mask)
@@ -155,9 +155,9 @@ namespace aspectstar2
             }
 
             // Move
-            if (location.X + width + 32 >= Master.width)
+            if (location.X + width + 32 * 7 >= Master.width)
                 left = true;
-            else if (location.X - width - 32 <= 0)
+            else if (location.X - width - 32 * 7 <= 0)
                 left = false;
         }
 
