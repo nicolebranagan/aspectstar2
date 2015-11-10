@@ -59170,27 +59170,40 @@ clearObjects();
             </StoredObject>
           </storedObjects>
           <code>function onLoad() { }
+
 function update() {
+
 if (!getFlag("upperroom21") &amp;&amp; !anyEnemies()) {
-playSoundEffect(1);
-overwriteTile(12,3,23);
+
 setFlag("upperroom21", true);
-}
-if (!getFlag("upperroom22") &amp;&amp; getPlayerX() == 12 &amp;&amp; getPlayerY() == 3) {
-setFlag("upperroom22", true);
+
 playSoundEffect(0);
+
 overwriteTile(11,0,0);
+
 overwriteTile(12,0,0);
+
 overwriteTile(13,0,0);
+
 overwriteTile(11,1,0);
+
 overwriteTile(12,1,0);
+
 overwriteTile(13,1,0);
+
 overwriteTile(11,2,0);
+
 overwriteTile(12,2,0);
+
 overwriteTile(13,2,0);
+
 overwriteTile(11,3,0);
+
+overwriteTile(12,3,0);
 overwriteTile(13,3,0);
+
 }
+
 }</code>
           <dark>false</dark>
           <hblock>false</hblock>
@@ -115050,6 +115063,81 @@ function hurt() { }</code>
               <screen>0</screen>
               <key>0</key>
             </StoredObject>
+            <StoredObject>
+              <x>336</x>
+              <y>336</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>guard2</name>
+                <code>function onLoad() { }
+function update() { }
+function inRange() { }
+function touch() {
+TextBox("SHE MISSPELLED THE NAME OF THE PRINCESS");
+}
+function hurt() { }</code>
+                <graphics>0</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>656</x>
+              <y>336</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>guard4</name>
+                <code>function onLoad() { }
+function update() { }
+function inRange() { }
+function touch() {
+TextBox("THIS PERSON WONT BE HERE LONG");
+}
+function hurt() { }</code>
+                <graphics>0</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>464</x>
+              <y>336</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>guard3</name>
+                <code>function onLoad() { }
+function update() { }
+function inRange() { }
+function touch() {
+TextBox("I FORGET WHY THIS PERSON IS HERE BUT IM NOT   LETTING THEM OUT");
+}
+function hurt() { }</code>
+                <graphics>0</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
           </storedObjects>
           <dark>false</dark>
           <hblock>false</hblock>
@@ -122512,7 +122600,34 @@ spawnKey(12,1);
             <int>21</int>
             <int>21</int>
           </tileMap>
-          <storedObjects />
+          <storedObjects>
+            <StoredObject>
+              <x>400</x>
+              <y>240</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>guard0</name>
+                <code>function onLoad() { }
+function update() { }
+function inRange() { }
+function touch() {
+TextBox("WELCOME TO THE CAPITAL CITY");
+TextBox("BY LAW THE ONLY CITY WITH ADVANCED TECHNOLOGY");
+}
+function hurt() { }</code>
+                <graphics>0</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+          </storedObjects>
           <dark>false</dark>
           <hblock>false</hblock>
           <vblock>false</vblock>
