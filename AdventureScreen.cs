@@ -604,7 +604,7 @@ namespace aspectstar2
                     source = new Rectangle((int)sourceTile.X, (int)sourceTile.Y, 32, 32);
                     dest = new Rectangle(x * 32 - (int)screenOffset.X, y * 32 - (int)screenOffset.Y, 32, 32);
                     if (y - (int)limitOffset.Y < 13)
-                        spriteBatch.Draw(Master.texCollection.adventureTiles[adventure.tileset], dest, source, Color.White);
+                        spriteBatch.Draw(Master.texCollection.adventureTiles[adventure.tileset], dest, source, overlayColor);
                 }
             }
             spriteBatch.End();

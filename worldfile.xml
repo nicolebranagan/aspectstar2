@@ -23914,7 +23914,164 @@ function hurt() { }</code>
             <int>19</int>
             <int>19</int>
           </tileMap>
-          <storedObjects />
+          <storedObjects>
+            <StoredObject>
+              <x>112</x>
+              <y>336</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>cultist</name>
+                <code>function onLoad() {
+setWander(true);
+}
+function update() { }
+function inRange() { }
+function touch() { }
+function hurt() { }</code>
+                <graphics>9</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>688</x>
+              <y>272</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>cultist</name>
+                <code>function onLoad() {
+setWander(true);
+}
+function update() { }
+function inRange() { }
+function touch() { }
+function hurt() { }</code>
+                <graphics>9</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>336</x>
+              <y>208</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>cultist</name>
+                <code>function onLoad() { }
+function update() { }
+function inRange() { }
+function touch() {
+TextBox("THIS PLACE IS MOST SACRED TO US");
+TextBox("IT IS THE CLOSEST WE CAN GET TO HER");
+}
+function hurt() { }</code>
+                <graphics>9</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>464</x>
+              <y>208</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>cultist</name>
+                <code>function onLoad() { }
+function update() { }
+function inRange() { }
+function touch() {
+TextBox("WE FEAR THE COMING OF THE FALSE NICOLE");
+}
+function hurt() { }</code>
+                <graphics>9</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>400</x>
+              <y>176</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>master</name>
+                <code>var kill = false;
+function onLoad() {
+changeDirection(1);
+}
+function update() {
+if (kill) {
+explode(true);
+callMethod("cultist", "explode(true)");
+}
+}
+function inRange() { }
+function touch() {
+changeDirection(0);
+TextBox("WHY HAVE YOU COME TO BOTHER THE CULT OF THE   GOD EMPRESS");
+if (!getFlag("!bloodritual")) {
+TextBox("THE BLOOD RITUAL WILL COST YOU TWO UNITS OF   LIFE PERMANENTLY IN EXCHANGE FOR ONE GOLDEN   KEY");
+TextBox("IT WILL DRAIN YOUR LIFE TO THE UTMOST AND     THERE IS NO TURNING BACK");
+questionBox("DO YOU ACCEPT THESE TERMS", "yes()", "no()");
+}
+}
+function no() {
+TextBox("A WISE CHOICE");
+}
+function yes() {
+setCounter("_possibleLife", getCounter("_possibleLife") - 4);
+setCounter("_life", 1);
+setCounter("_goldKeys", getCounter("_goldKeys") + 1);
+setFlag("!bloodritual", true);
+TextBox("IT IS DONE");
+playSoundEffect(2);
+}
+
+function hurt() {
+TextBox("I HAVE NO TIME TO DEAL WITH YOUR PITIFUL      ATTACKS");
+TextBox("I HOPE WE DO NOT MEET AGAIN");
+kill = true;
+}</code>
+                <graphics>10</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+          </storedObjects>
           <code>function onLoad() {
 setOverlayColor(255,240,230,255);
 }
@@ -25480,25 +25637,40 @@ setFlag("cave4",true);
               <data>
                 <name>statue</name>
                 <code>function onLoad() { }
+
 function update() { }
+
 function inRange() {
+
 
 var life = getCounter("_possibleLife");
 
-if (life &lt;= 10)
-{
+
+if (!getFlag("!dungeon2stat")){
 TextBox("A GREAT LIGHT SHINES ON YOU");
+
 setCounter("_possibleLife", life + 2);
+
+setFlag("!dungeon2stat", true);
 playSoundEffect(0);
+
 }
-else
+
+else 
 {
+
 TextBox("YOU FEEL LIKE YOU MUST DEPART");
+
 playSoundEffect(1);
+
 overwriteTile(12,8,0);
+
 }
+
 }
+
 function touch() { }
+
 function hurt() { }</code>
                 <graphics>3</graphics>
                 <gfxtype>Maptile</gfxtype>
