@@ -941,6 +941,7 @@ namespace aspectstar2
                 .SetValue("teleport", new Action<int, int, int, int>(this.EnterNewRoom))
                 .SetValue("getEnemyId", new Func<int, int>(this.GetEnemyId))
                 .SetValue("changeEnemy", new Action<int, int>(this.ChangeEnemy))
+                .SetValue("enterCredits", new Action(this.EnterCredits))
                 .Execute(code);
         }
 
@@ -1299,6 +1300,13 @@ namespace aspectstar2
         {
             if (objects[enemy] is AdventureEnemy)
                 ((AdventureEnemy)objects[enemy]).ChangeEnemy(Master.currentFile.bestiary[definition], definition);
+        }
+
+        void EnterCredits()
+        {
+            leaver = x => game.enterCredits();
+            currentMode = adventureModes.fadeOut;
+            animCount = 250;
         }
 
         // Predicates

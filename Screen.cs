@@ -163,34 +163,69 @@ namespace aspectstar2
     {
         Game game;
         Action<bool> activator;
+        bool credits;
+        bool creditsDone = false;
 
         int lag = 20;
 
         int timeCount;
+        int timeLag = 1;
         string[] text;
 
-        public TextScreen(Game game, string text, Action<bool> activator)
+        public TextScreen(Game game, string text, Action<bool> activator, bool credits)
         {
             this.text = text.Split(Environment.NewLine.ToCharArray());
             this.game = game;
             this.activator = activator;
+            this.credits = credits;
             timeCount = Master.height;
         }
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
-            for(int i = 0; i < text.Length; i++)
+            if (credits)
             {
+                spriteBatch.Begin();
+                spriteBatch.Draw(Master.texCollection.credits, new Rectangle(Master.width - 128 - 32, Master.height - 128, 128, 96), Color.White);
+                spriteBatch.End();
+            }
+            for(int i = 0; i < text.Length; i++)
+            {   
                 WriteText(spriteBatch, text[i], new Vector2(Master.width / 2 - text[i].Length * 8, timeCount + 32 * i), Color.White);
+            }
+            if (creditsDone)
+            {
+                string deathCount;
+                if (game.deaths > 0)
+                    deathCount = string.Concat("YOU DIED ", game.deaths.ToString(), " TIMES");
+                else
+                    deathCount = "";
+                WriteText(spriteBatch, "CONGRATULATION", new Vector2(Master.width / 2 - 14 * 8, Master.height / 2 - 16), Color.White);
+                WriteText(spriteBatch, deathCount, new Vector2(Master.width / 2 - deathCount.Length * 8, Master.height / 2 + 16), Color.White);
             }
         }
 
         public override void Update(GameTime gameTime)
         {
             if (timeCount > Math.Min(-text.Length * 32, 0))
-                timeCount = timeCount - 1;
+            {
+                if (credits)
+                {
+                    timeLag = timeLag - 1;
+                    if (timeLag == 0)
+                    {
+                        timeLag = 1;
+                        timeCount = timeCount - 1;
+                    }
+                }
+                else
+                    timeCount = timeCount - 1;
+            }
             else
+            {
                 activator(true);
+                if (credits) creditsDone = true;
+            }
 
             if (lag > 0)
                 lag--;

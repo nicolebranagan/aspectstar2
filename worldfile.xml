@@ -24,34 +24,66 @@ MEOWING FRANTICALLY</opening>
 
 CREDITS
 
+
+
+
+
+
 DEVELOPER
+
 NICOLE
+
+
 
 PROGRAMMING
+
 NICOLE
 
-DESIGNER
+MONOGAME
+
+
+
+GAME DESIGN
+
 NICOLE
+
+
 
 GRAPHICS
+
 NICOLE
+
 OPENGAMEART
+
 REDSHRIKE
 
+
+
 MUSIC
+
 VISAGER
+
 AZUREFLUX
 
+
+
 SPECIAL THANKS TO
+
 YY
+
 ASPECT STAR 1 TEAM
 
-***
-MARION
+*** MARION ***
+
+
+
+
 
 
 
 A NICOLE PRODUCTION
+
+
 
 THANKS FOR PLAYING</credits>
   <map>
@@ -10324,9 +10356,9 @@ THANKS FOR PLAYING</credits>
         <y>22</y>
         <dest>11</dest>
         <destroomX>4</destroomX>
-        <destroomY>3</destroomY>
+        <destroomY>2</destroomY>
         <destx>12</destx>
-        <desty>10</desty>
+        <desty>12</desty>
       </MapObject>
     </objects>
   </map>
@@ -97767,8 +97799,19 @@ spawnKey(12,2);
               <enemyType>0</enemyType>
               <data>
                 <name>mary</name>
-                <code>function onLoad() { }
-function update() { }
+                <code>var end = false;
+function onLoad() { }
+function update() {
+if (end)
+	enterCredits();
+else if (getPlayerY() == 8) {
+TextBox("NICOLE YOU HAVE SAVED ME");
+TextBox("AND NOW I HAVE TO TELL YOU A SECRET");
+TextBox("THAT DARK LADY MARION WAS ME THE ENTIRE TIME");
+TextBox("I HOPE YOU ENJOYED THE LITTLE GAME I SET UP   FOR YOU");
+end = true;
+}
+}
 function inRange() { }
 function touch() { }
 function hurt() { }</code>
@@ -97786,7 +97829,7 @@ function hurt() { }</code>
           </storedObjects>
           <dark>false</dark>
           <hblock>false</hblock>
-          <vblock>false</vblock>
+          <vblock>true</vblock>
           <music>5</music>
         </Room>
         <Room xsi:nil="true" />

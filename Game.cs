@@ -279,5 +279,16 @@ namespace aspectstar2
 
             master.SaveGame(game);
         }
+
+        public void enterCredits()
+        {
+            PlaySong.Play(PlaySong.SongName.Credits);
+            master.UpdateScreen(new TextScreen(this, Master.currentFile.credits, 
+                delegate (bool x) {
+                    if (!x)
+                        master.UpdateScreen(new TitleScreen(master));
+                },
+                true));
+        }
     }
 }

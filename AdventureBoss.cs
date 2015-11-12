@@ -611,7 +611,7 @@ namespace aspectstar2
             BestiaryEntry bossEntry = new BestiaryEntry();
             bossEntry.movementType = BestiaryEntry.MovementTypes.stationary;
             definition = bossEntry;
-            health = 18;
+            health = 15;
         }
 
         public override void Initialize(AdventureScreen parent, Game game)
@@ -1021,6 +1021,7 @@ namespace aspectstar2
                 parent.TextBox("LOOKS LIKE YOU DID IT KITTEN                  TIME TO COLLECT YOUR REWARD", true);
                 parent.ClearObjects();
                 PlaySound.Play(PlaySound.SoundEffectName.Aspect);
+                PlaySong.Play(PlaySong.SongName.Item);
                 parent.OverwriteTile(10, 0, 2);
                 parent.OverwriteTile(11, 0, 0);
                 parent.OverwriteTile(12, 0, 0);
