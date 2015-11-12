@@ -823,7 +823,7 @@ namespace aspectstar2
             bossEntry.wanderer = false;
             definition = bossEntry;
             defense = true;
-            health = 11;
+            health = 10;
 
             aspect = (Aspect)Master.globalRandom.Next(1, 4);
             graphicsRow = (int)aspect;
@@ -915,13 +915,16 @@ namespace aspectstar2
         void enterPhase2()
         {
             PlaySound.Play(PlaySound.SoundEffectName.Enter);
-            parent.EnterNewRoom(4, 3, 12, 9);
+            parent.player.row = 0;
+            parent.SetName("");
+            parent.EnterNewRoom(4, 3, 12, 11);
         }
     }
 
 
     public class AdventureBoss9Phase2 : AdventureObject
     {
+        bool begin = false;
         int health = 9;
         int flickerCount = 0;
         int bulletCount = 10;
@@ -937,6 +940,12 @@ namespace aspectstar2
 
         public override void Update()
         {
+            if (!begin)
+            {
+                parent.TextBox("WHEN WILL YOU LEARN THAT YOUR BULLETS ARE     WORTHLESS AGAINST ME", true);
+                begin = true;
+            }
+
             if (left && location.X == 4 * 32 + 16)
                 left = false;
             else if (!left && location.X == 21 * 32 - 16)

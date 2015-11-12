@@ -670,6 +670,7 @@ namespace aspectstar2
             LoadRoom(room_x, room_y);
             first_pos = new Vector2(x * 32 + 16, y * 32 + 16);
             player.location = new Vector2(x * 32 + 16, y * 32 + 16);
+            player.faceDir = (y > 6 ? Master.Directions.Down : Master.Directions.Up);
             animCount = 250;
             currentMode = adventureModes.fadeIn;
         }
@@ -921,6 +922,7 @@ namespace aspectstar2
                 .SetValue("overwriteTile", new Action<int, int, int>(this.OverwriteTile))
                 .SetValue("setSpawn", new Action<int, int>(this.SetSpawn))
                 .SetValue("playSoundEffect", new Action<int>(this.PlaySoundEffect))
+                .SetValue("playBGM", new Action<int>(this.PlayBGM))
                 .SetValue("anyEnemies", new Func<bool>(this.AnyEnemies))
                 .SetValue("clearObjects", new Action(this.ClearObjects))
                 .SetValue("TextBox", new Action<string>(this._textBox))
@@ -995,6 +997,11 @@ namespace aspectstar2
         void PlaySoundEffect(int i)
         {
             PlaySound.Play((PlaySound.SoundEffectName)i);
+        }
+
+        void PlayBGM(int i)
+        {
+            PlaySong.Play((PlaySong.SongName)i);
         }
 
         bool AnyEnemies()
@@ -1140,7 +1147,7 @@ namespace aspectstar2
             player.row = i;
         }
 
-        void SetName(string name)
+        public void SetName(string name)
         {
             if (name != "")
                 label = name;

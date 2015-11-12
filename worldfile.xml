@@ -97515,6 +97515,31 @@ spawnKey(12,2);
             <int>20</int>
             <int>0</int>
             <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>20</int>
+            <int>4</int>
+            <int>4</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>0</int>
+            <int>0</int>
             <int>2</int>
             <int>3</int>
             <int>3</int>
@@ -97528,10 +97553,10 @@ spawnKey(12,2);
             <int>2</int>
             <int>0</int>
             <int>0</int>
-            <int>20</int>
-            <int>20</int>
-            <int>20</int>
-            <int>20</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
+            <int>21</int>
             <int>4</int>
             <int>4</int>
             <int>21</int>
@@ -97703,31 +97728,6 @@ spawnKey(12,2);
             <int>20</int>
             <int>20</int>
             <int>20</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>4</int>
-            <int>4</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
-            <int>21</int>
             <int>21</int>
             <int>21</int>
             <int>21</int>
@@ -97762,7 +97762,7 @@ spawnKey(12,2);
           <storedObjects>
             <StoredObject>
               <x>400</x>
-              <y>176</y>
+              <y>208</y>
               <type>entity</type>
               <enemyType>0</enemyType>
               <data>
@@ -98306,6 +98306,7 @@ timer--;
 if (timer == 1) {
 spawnFinal(12,7);
 playSoundEffect(0);
+playBGM(16);
 die();
 }
 }
@@ -98331,7 +98332,7 @@ function update() { }</code>
           <dark>false</dark>
           <hblock>false</hblock>
           <vblock>false</vblock>
-          <music>16</music>
+          <music>18</music>
         </Room>
         <Room xsi:nil="true" />
         <Room>
