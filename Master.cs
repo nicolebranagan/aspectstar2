@@ -121,6 +121,7 @@ namespace aspectstar2
             texCollection.texCharacters = Content.Load<Texture2D>("characters");
             texCollection.texProjectile = Content.Load<Texture2D>("projectile");
             texCollection.texBosses = Content.Load<Texture2D>("bosses");
+            texCollection.texFinal = Content.Load<Texture2D>("darkmarion");
             texCollection.texPlosion = Content.Load<Texture2D>("explosion");
 
             texCollection.adventureTiles = new Texture2D[8];
@@ -300,6 +301,7 @@ namespace aspectstar2
         public Texture2D texCharacters;
         public Texture2D texProjectile;
         public Texture2D texBosses;
+        public Texture2D texFinal;
 
         public Texture2D texShadows;
         public Texture2D texPlosion;

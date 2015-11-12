@@ -142,9 +142,17 @@ namespace aspectstar2
                 parent.enterNewRoom(0, -1);
             else if (!parent.hblock && !parent.hloop && ((test.X + width) >= (25 * 32)))
                 parent.enterNewRoom(1, 0);
-            else if (!parent.hblock && !parent.hloop && ((test.Y + height) >= (13 * 32)))
+            else if (!parent.hblock && !parent.vloop && ((test.Y + height) >= (13 * 32)))
                 parent.enterNewRoom(0, 1);
-            else if (!parent.hblock && !parent.hloop && (!parent.isSolid(test, 1, width, height, faceDir)))
+            else if (parent.hloop && test.X - width < 0)
+                    location.X = 25 * 32 - width - 2;
+            else if (parent.hloop && test.X + width >= (25 * 32))
+                location.X = width + 2;
+            else if (parent.vloop && test.Y - height < 0)
+                location.Y = 13 * 32 - height - 2;
+            else if (parent.vloop && test.Y + height >= (13 * 32))
+                location.Y = height + 2;
+            else if (!parent.isSolid(test, 1, width, height, faceDir))
                 location = test;
             else if (flickerCount <= 0 && !(recoiler is AdventureEntity))
                 recoiler.Move(-move_dist);

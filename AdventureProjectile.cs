@@ -131,6 +131,16 @@ namespace aspectstar2
                                 active = false;
                             }
                         }
+                        else if (obj is AdventureBoss9Phase2)
+                        {
+                            AdventureBoss9Phase2 boss9 = (AdventureBoss9Phase2)obj;
+                            if (friendly)
+                                boss9.Thud();
+                            else
+                                boss9.Hurt();
+
+                            active = false;
+                        }
                         else if (obj is AdventureProjectile)
                         {
                             AdventureProjectile proj = (AdventureProjectile)obj;

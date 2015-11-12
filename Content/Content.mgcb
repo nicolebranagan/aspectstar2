@@ -446,3 +446,15 @@
 /processorParam:TextureFormat=Color
 /build:town2.png
 
+#begin music_azureflux04.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:music_azureflux04.mp3
+
+#begin music_azureflux07.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:music_azureflux07.mp3
+

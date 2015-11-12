@@ -769,4 +769,268 @@ namespace aspectstar2
             base.Update();
         }
     }
+
+    public class AdventureBoss9 : AdventureEnemy
+    {
+        Aspect _aspect;
+
+        Aspect aspect
+        {
+            get
+            {
+                return _aspect;
+            }
+            set
+            {
+                _aspect = value;
+                switch (_aspect)
+                {
+                    case Aspect.None:
+                        definition.dependent = "";
+                        break;
+                    case Aspect.Blue:
+                        definition.dependent = "_blue";
+                        break;
+                    case Aspect.Green:
+                        definition.dependent = "_green";
+                        break;
+                    case Aspect.Red:
+                        definition.dependent = "_red";
+                        break;
+                }
+            }
+        }
+
+        int timerCount = 0;
+
+        enum Aspect
+        {
+            None = 0,
+            Blue = 1,
+            Green = 2,
+            Red = 3,
+        }
+
+        public AdventureBoss9()
+        {
+            this.texture = Master.texCollection.texFinal;
+
+            BestiaryEntry bossEntry = new BestiaryEntry();
+            bossEntry.movementType = BestiaryEntry.MovementTypes.intelligent;
+            bossEntry.speed = 7;
+            bossEntry.intelligence = 7;
+            bossEntry.decisiveness = 6;
+            bossEntry.wanderer = false;
+            definition = bossEntry;
+            defense = true;
+            health = 11;
+
+            aspect = (Aspect)Master.globalRandom.Next(1, 4);
+            graphicsRow = (int)aspect;
+        }
+
+        public override void Update()
+        {
+            graphicsRow = (int)aspect;
+            timerCount++;
+            if (timerCount > 500)
+            {
+                ShuffleAspect();
+                timerCount = 0;
+            }
+            base.Update();
+        }
+
+        void ShuffleAspect()
+        {
+            PlaySound.Play(PlaySound.SoundEffectName.Aspect);
+            if (parent.GetFlag("_blue"))
+            {
+                switch (aspect)
+                {
+                    case Aspect.Blue:
+                        aspect = (Aspect)Master.globalRandom.Next(2, 4);
+                        break;
+                    case Aspect.Green:
+                        aspect = Aspect.Red;
+                        break;
+                    case Aspect.Red:
+                        aspect = Aspect.Green;
+                        break;
+                }
+            }
+            else if (parent.GetFlag("_green"))
+            {
+                switch (aspect)
+                {
+                    case Aspect.Green:
+                        aspect = (Aspect)Master.globalRandom.Next(2, 4);
+                        if (aspect == Aspect.Green)
+                            aspect = Aspect.Blue;
+                        break;
+                    case Aspect.Blue:
+                        aspect = Aspect.Red;
+                        break;
+                    case Aspect.Red:
+                        aspect = Aspect.Blue;
+                        break;
+                }
+            }
+            else if (parent.GetFlag("_red"))
+            {
+                switch (aspect)
+                {
+                    case Aspect.Red:
+                        aspect = (Aspect)Master.globalRandom.Next(1, 3);
+                        break;
+                    case Aspect.Green:
+                        aspect = Aspect.Blue;
+                        break;
+                    case Aspect.Blue:
+                        aspect = Aspect.Green;
+                        break;
+                }
+            }
+            else
+            {
+                Aspect newAspect = (Aspect)Master.globalRandom.Next(1, 3);
+                if ((aspect == Aspect.Blue && newAspect == Aspect.Blue) ||
+                        (aspect == Aspect.Green && newAspect == Aspect.Green))
+                    newAspect = Aspect.Red;
+                aspect = newAspect;
+            }
+            graphicsRow = (int)aspect;
+        }
+
+        public override void Hurt(bool ghostly, int damage)
+        {
+            int a = health;
+            base.Hurt(ghostly, damage);
+            if (a != health)
+                ShuffleAspect();
+            if (health == 1)
+                enterPhase2();
+        }
+
+        void enterPhase2()
+        {
+            PlaySound.Play(PlaySound.SoundEffectName.Enter);
+            parent.EnterNewRoom(4, 3, 12, 9);
+        }
+    }
+
+
+    public class AdventureBoss9Phase2 : AdventureObject
+    {
+        int health = 9;
+        int flickerCount = 0;
+        int bulletCount = 10;
+        int laughCount = 0;
+        bool left;
+
+        public AdventureBoss9Phase2()
+        {
+            this.texture = Master.texCollection.texFinal;
+            graphicsRow = 0;
+            left = Master.globalRandom.Next(2) == 0;
+        }
+
+        public override void Update()
+        {
+            if (left && location.X == 4 * 32 + 16)
+                left = false;
+            else if (!left && location.X == 21 * 32 - 16)
+                left = true;
+
+            if (stallCount % 2 == 0)
+            {
+                if (left) location.X = location.X - 2;
+                else location.X = location.X + 2;
+            }
+            else if (bulletCount == 0)
+            {
+                parent.addObject(
+                    new AdventureProjectile(false, Master.Directions.Down, new Vector2(location.X, location.Y + 16), 300, 1));
+                bulletCount = 40;
+            }
+
+            if (bulletCount > 0)
+                bulletCount--;
+
+            if (flickerCount > 0)
+                flickerCount--;
+            if (laughCount > 1)
+                laughCount--;
+            if (laughCount == 1)
+            {
+                texture = Master.texCollection.texFinal;
+                graphicsRow = 0;
+                faceDir = Master.Directions.Down;
+            }
+
+            base.Update();
+        }
+
+        public override void Draw(SpriteBatch spriteBatch, Color mask)
+        {
+            if (flickerCount > 0)
+                mask = Color.Red;
+            base.Draw(spriteBatch, mask);
+        }
+
+        public override bool inRange(AdventurePlayer player)
+        {
+            return false;
+        }
+
+        public override void Touch()
+        {
+            
+        }
+
+        public void Thud()
+        {
+            PlaySound.Play(PlaySound.SoundEffectName.Key);
+            texture = Master.texCollection.texCharacters;
+            graphicsRow = 6;
+            faceDir = Master.Directions.Up;
+            laughCount = 99;
+        }
+
+        public void Hurt()
+        {
+            if (flickerCount == 0)
+            {
+                PlaySound.Play(PlaySound.SoundEffectName.Boom);
+                health--;
+                flickerCount = 18;
+                if (laughCount > 0)
+                    laughCount = 1;
+            }
+            if (health == 0)
+            {
+                parent.TextBox("LOOKS LIKE YOU DID IT KITTEN                  TIME TO COLLECT YOUR REWARD", true);
+                parent.ClearObjects();
+                PlaySound.Play(PlaySound.SoundEffectName.Aspect);
+                parent.OverwriteTile(10, 0, 2);
+                parent.OverwriteTile(11, 0, 0);
+                parent.OverwriteTile(12, 0, 0);
+                parent.OverwriteTile(13, 0, 0);
+                parent.OverwriteTile(14, 0, 2);
+                parent.OverwriteTile(11, 1, 0);
+                parent.OverwriteTile(12, 1, 0);
+                parent.OverwriteTile(13, 1, 0);
+                parent.OverwriteTile(11, 2, 0);
+                parent.OverwriteTile(12, 2, 0);
+                parent.OverwriteTile(13, 2, 0);
+
+                parent.OverwriteTile(11, 4, 0);
+                parent.OverwriteTile(11, 5, 0);
+                parent.OverwriteTile(12, 4, 0);
+                parent.OverwriteTile(12, 5, 0);
+                parent.OverwriteTile(13, 4, 0);
+                parent.OverwriteTile(13, 5, 0);
+            }
+        }
+    }
 }

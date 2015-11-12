@@ -935,6 +935,7 @@ namespace aspectstar2
                 .SetValue("setPlayerRow", new Action<int>(SetPlayerRow))
                 .SetValue("setName", new Action<string>(this.SetName))
                 .SetValue("spawnBoss", new Action<int, int>(this.SpawnBoss))
+                .SetValue("spawnFinal", new Action<int, int>(this.SpawnFinal))
                 .SetValue("teleport", new Action<int, int, int, int>(this.EnterNewRoom))
                 .SetValue("getEnemyId", new Func<int, int>(this.GetEnemyId))
                 .SetValue("changeEnemy", new Action<int, int>(this.ChangeEnemy))
@@ -978,7 +979,7 @@ namespace aspectstar2
             adventure.rooms[roomX, roomY].adventureObjects.Add(aK); // So that the key respawns even if you leave the room, but not the adventure
         }
 
-        void OverwriteTile(int x, int y, int newTile)
+        public void OverwriteTile(int x, int y, int newTile)
         {
             int i = x + (y * 25);
             tileMap[i] = newTile;
@@ -1006,13 +1007,13 @@ namespace aspectstar2
             return false;
         }
 
-        void ClearObjects()
+        public void ClearObjects()
         {
             foreach (AdventureObject obj in objects)
             {
                 if (!(obj is AdventurePlayer) && !(obj is AdventureExplosion) && !(obj is AdventureTeleporter))
                     obj.active = false;
-                if ((obj is AdventureEnemy) || (obj is AdventureShooter))
+                if ((obj is AdventureEnemy) || (obj is AdventureShooter) || (obj is AdventureBoss9Phase2) || (obj is AdventureBoss8Helper))
                 {
                     addObject(new AdventureExplosion(obj.location));
                 }
@@ -1268,6 +1269,13 @@ namespace aspectstar2
             AdventureBoss1 boss1 = new AdventureBoss1();
             boss1.location = new Vector2(x * 32 + 16, y * 32 + 16);
             addObject(boss1);
+        }
+
+        void SpawnFinal(int x, int y)
+        {
+            AdventureBoss9 boss9 = new AdventureBoss9();
+            boss9.location = new Vector2(x * 32 + 16, y * 32 + 16);
+            addObject(boss9);
         }
 
         int GetEnemyId(int enemy)
