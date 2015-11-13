@@ -10,6 +10,9 @@ namespace aspectstar2
     public class AdventurePlayer : AdventureObject
     {
         public int flickerCount = 0;
+
+        int flashCount = 0;
+
         public int row
         {
             get
@@ -52,6 +55,11 @@ namespace aspectstar2
                 if (flickerCount % 7 == 0)
                     mask = Color.Red;
             }
+            if (flashCount > 0)
+            {
+                if (flashCount % 3 == 0)
+                    mask = Color.LimeGreen;
+            }
 
             base.Draw(spriteBatch, mask);
         }
@@ -81,7 +89,7 @@ namespace aspectstar2
 
         public void Hurt()
         {
-            if (flickerCount == 0)
+            if (flickerCount == 0 && flashCount == 0)
             {
                 game.life = game.life - 1;
                 Flicker();
@@ -162,6 +170,9 @@ namespace aspectstar2
         {
             base.Update();
 
+            if (flashCount > 0)
+                flashCount--;
+
             if ((z == 0) && (parent.isSolid(this.location, 0, 0, 0, faceDir)))
             {
                 moving = false;
@@ -177,6 +188,8 @@ namespace aspectstar2
 
         public override void Move(Vector2 move_dist)
         {
+            if (flashCount > 0)
+                move_dist = move_dist * 2;
             Vector2 test = move_dist + location;
             if (!parent.hblock && !parent.hloop && ((test.X - width) <= 0))
                 parent.enterNewRoom(-1, 0);
@@ -208,6 +221,12 @@ namespace aspectstar2
         {
             // Do nothing
             return false;
+        }
+
+        public void Flash()
+        {
+            flashCount = 250;
+            PlaySound.Play(PlaySound.SoundEffectName.Aspect);
         }
     }
 }

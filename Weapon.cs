@@ -35,6 +35,8 @@ namespace aspectstar2
             FireballWeapon = 5,
             GhostlyWeapon = 6,
             FarWeapon = 7,
+            CatnipWeapon = 8,
+            PillWeapon = 9,
         }
 
         public storedWeapon packWeapon()
@@ -54,6 +56,10 @@ namespace aspectstar2
                 type = (int)WeaponType.FishWeapon;
             else if (this is TorchWeapon)
                 type = (int)WeaponType.TorchWeapon;
+            else if (this is CatnipWeapon)
+                type = (int)WeaponType.CatnipWeapon;
+            else if (this is PillWeapon)
+                type = (int)WeaponType.PillWeapon;
 
             storedWeapon sW = new storedWeapon();
             sW.type = type;
@@ -80,6 +86,10 @@ namespace aspectstar2
                     return new GhostlyWeapon();
                 case WeaponType.FarWeapon:
                     return new FarWeapon();
+                case WeaponType.CatnipWeapon:
+                    return new CatnipWeapon(packedWeapon.count);
+                case WeaponType.PillWeapon:
+                    return new PillWeapon(packedWeapon.count);
                 default:
                     return new NullWeapon();
             }
@@ -383,6 +393,141 @@ namespace aspectstar2
                 internalCount = 0;
 
             base.Update();
+        }
+    }
+
+    class CatnipWeapon : Weapon
+    {
+        int lag = 0;
+        int internalCount = 0;
+
+        public CatnipWeapon()
+        {
+
+        }
+
+        public CatnipWeapon(int count)
+        {
+            this.count = count;
+        }
+
+        public override void Activate(AdventurePlayer player, AdventureScreen screen, Game game)
+        {
+            if (lag < 1 && count > 0)
+            {
+                screen.player.Flash();
+                count--;
+                lag = 20;
+
+                if (count == 0)
+                    game.RemoveWeapon(this);
+            }
+        }
+
+        public override void Draw(SpriteBatch spriteBatch, int x, int y)
+        {
+            Rectangle sourceRectangle = new Rectangle(224, 64, 32, 32);
+            Rectangle destinationRectangle = new Rectangle(x, y, 32, 32);
+
+            if (count > 0)
+            {
+                spriteBatch.Begin();
+                spriteBatch.Draw(Master.texCollection.controls, destinationRectangle, sourceRectangle, Color.White);
+
+                sourceRectangle = new Rectangle(16 * count, 0, 16, 16);
+                destinationRectangle = new Rectangle(x + 16, y, 16, 16);
+                spriteBatch.Draw(Master.texCollection.arcadeFont, destinationRectangle, sourceRectangle, Color.White);
+                spriteBatch.End();
+            }
+        }
+
+        public override void Extra(Weapon weapon)
+        {
+            //if (count != 9)
+            count = count + 1;
+        }
+
+        public override void Update()
+        {
+            lag = lag - 1;
+
+            if (internalCount > 0)
+                internalCount = 0;
+        }
+
+        public override string getLabel()
+        {
+            internalCount++;
+            if (internalCount == 351)
+                internalCount = 0;
+            if (internalCount > 290)
+                return "USE RESPONSIBLY";
+            else
+                return "CATNIP";
+        }
+    }
+
+    class PillWeapon : Weapon
+    {
+        int lag = 0;
+
+        public PillWeapon()
+        {
+
+        }
+
+        public PillWeapon(int count)
+        {
+            this.count = count;
+        }
+
+        public override void Activate(AdventurePlayer player, AdventureScreen screen, Game game)
+        {
+            if (lag < 1 && count > 0)
+            {
+                game.life = game.life + 10;
+                if (game.life > game.possibleLife)
+                    game.life = game.possibleLife;
+                PlaySound.Play(PlaySound.SoundEffectName.Heal);
+                count--;
+                lag = 20;
+
+                if (count == 0)
+                    game.RemoveWeapon(this);
+            }
+        }
+
+        public override void Draw(SpriteBatch spriteBatch, int x, int y)
+        {
+            Rectangle sourceRectangle = new Rectangle(224, 32, 32, 32);
+            Rectangle destinationRectangle = new Rectangle(x, y, 32, 32);
+
+            if (count > 0)
+            {
+                spriteBatch.Begin();
+                spriteBatch.Draw(Master.texCollection.controls, destinationRectangle, sourceRectangle, Color.White);
+
+                sourceRectangle = new Rectangle(16 * count, 0, 16, 16);
+                destinationRectangle = new Rectangle(x + 16, y, 16, 16);
+                spriteBatch.Draw(Master.texCollection.arcadeFont, destinationRectangle, sourceRectangle, Color.White);
+                spriteBatch.End();
+            }
+        }
+
+        public override void Extra(Weapon weapon)
+        {
+            //if (count != 9)
+            count = count + 1;
+        }
+
+        public override void Update()
+        {
+            lag = lag - 1;
+        }
+
+        public override string getLabel()
+        {
+            return "CUREALL RESTORES 5 HEART";
         }
     }
 }

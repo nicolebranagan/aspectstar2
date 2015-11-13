@@ -1120,6 +1120,12 @@ namespace aspectstar2
                 case 5:
                     game.GetWeapon(new FarWeapon());
                     break;
+                case 6:
+                    game.GetWeapon(new CatnipWeapon());
+                    break;
+                case 7:
+                    game.GetWeapon(new PillWeapon());
+                    break;
             }
         }
 

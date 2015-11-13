@@ -10354,11 +10354,11 @@ THANKS FOR PLAYING</credits>
       <MapObject xsi:type="MapTeleporter">
         <x>53</x>
         <y>22</y>
-        <dest>11</dest>
-        <destroomX>4</destroomX>
-        <destroomY>2</destroomY>
+        <dest>1</dest>
+        <destroomX>3</destroomX>
+        <destroomY>8</destroomY>
         <destx>12</destx>
-        <desty>12</desty>
+        <desty>11</desty>
       </MapObject>
     </objects>
   </map>
@@ -20291,9 +20291,9 @@ TextBox("FOR SOMEONE LIKE YOU ITS BEST ONLY TO SAY MEOW");
             <int>11</int>
             <int>10</int>
             <int>10</int>
-            <int>12</int>
-            <int>12</int>
-            <int>12</int>
+            <int>25</int>
+            <int>25</int>
+            <int>25</int>
             <int>12</int>
             <int>12</int>
             <int>12</int>
@@ -20417,7 +20417,7 @@ TextBox("FOR SOMEONE LIKE YOU ITS BEST ONLY TO SAY MEOW");
             <int>0</int>
             <int>10</int>
             <int>0</int>
-            <int>0</int>
+            <int>22</int>
             <int>7</int>
             <int>8</int>
             <int>8</int>
@@ -20442,35 +20442,35 @@ TextBox("FOR SOMEONE LIKE YOU ITS BEST ONLY TO SAY MEOW");
             <int>26</int>
             <int>10</int>
             <int>0</int>
-            <int>22</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>0</int>
-            <int>0</int>
-            <int>26</int>
-            <int>26</int>
-            <int>25</int>
-            <int>25</int>
-            <int>26</int>
-            <int>0</int>
-            <int>25</int>
-            <int>26</int>
-            <int>26</int>
-            <int>25</int>
-            <int>0</int>
-            <int>10</int>
-            <int>0</int>
             <int>23</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>24</int>
+            <int>0</int>
+            <int>0</int>
+            <int>26</int>
+            <int>26</int>
+            <int>25</int>
+            <int>25</int>
+            <int>26</int>
+            <int>0</int>
+            <int>25</int>
+            <int>26</int>
+            <int>26</int>
+            <int>25</int>
+            <int>0</int>
+            <int>10</int>
+            <int>26</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -20491,8 +20491,8 @@ TextBox("FOR SOMEONE LIKE YOU ITS BEST ONLY TO SAY MEOW");
             <int>0</int>
             <int>0</int>
             <int>10</int>
-            <int>0</int>
-            <int>0</int>
+            <int>25</int>
+            <int>26</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -20593,8 +20593,8 @@ TextBox("FOR SOMEONE LIKE YOU ITS BEST ONLY TO SAY MEOW");
           </tileMap>
           <storedObjects>
             <StoredObject>
-              <x>304</x>
-              <y>272</y>
+              <x>336</x>
+              <y>112</y>
               <type>entity</type>
               <enemyType>0</enemyType>
               <data>
@@ -20610,6 +20610,50 @@ TextBox("DONT ASK ME HOW I KNOW THAT  ITS A SAD STORY");
 }
 function hurt() { }</code>
                 <graphics>2</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>48</x>
+              <y>336</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>d00d</name>
+                <code>function onLoad() {
+changeDirection(3);
+}
+function update() { }
+function inRange() { }
+function touch() {
+if (!getFlag("!town2freecatnip")) {
+TextBox("YOU WANT SOME CATNIP I CAN SEE THE LOOK IN    YOUR EYES");
+questionBox("FIRST HIT IS FREE", "yes()", "no()");
+}
+else {
+TextBox("I THINK IM OUT OF NIP NOW");
+TextBox("NOT REALLY VERY GOOD AT THIS DRUG DEALER THING");
+}
+}
+function hurt() { explode(true); playSoundEffect(1); }
+function yes() {
+TextBox("IT WONT DISAPPOINT YOU");
+playSoundEffect(0);
+giveWeapon(6);
+giveWeapon(6);
+setFlag("!town2freecatnip", true);
+}
+function no() {
+TextBox("YOURE MISSING OUT");
+}</code>
+                <graphics>1</graphics>
                 <gfxtype>Characters</gfxtype>
               </data>
               <dest>0</dest>
