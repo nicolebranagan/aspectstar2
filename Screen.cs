@@ -170,6 +170,8 @@ namespace aspectstar2
 
         int timeCount;
         int timeLag = 1;
+        int floatCount = 0;
+        bool up = true;
         string[] text;
 
         public TextScreen(Game game, string text, Action<bool> activator, bool credits)
@@ -186,7 +188,7 @@ namespace aspectstar2
             if (credits)
             {
                 spriteBatch.Begin();
-                spriteBatch.Draw(Master.texCollection.credits, new Rectangle(Master.width - 128 - 32, Master.height - 128, 128, 96), Color.White);
+                spriteBatch.Draw(Master.texCollection.credits, new Rectangle(Master.width - 128 - 32, Master.height - 127 + (floatCount - 5), 128, 96), Color.White);
                 spriteBatch.End();
             }
             for(int i = 0; i < text.Length; i++)
@@ -225,6 +227,19 @@ namespace aspectstar2
             {
                 activator(true);
                 if (credits) creditsDone = true;
+            }
+
+            if (floatCount <= 0)
+                up = true;
+            else if (floatCount >= 10)
+                up = false;
+
+            if (timeCount % 20 == 0)
+            {
+                if (up)
+                    floatCount = floatCount + 2;
+                else
+                    floatCount = floatCount - 2;
             }
 
             if (lag > 0)

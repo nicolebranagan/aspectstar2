@@ -9,7 +9,7 @@ namespace aspectstar2
 {
     public class AdventurePlayer : AdventureObject
     {
-        public int flickerCount = 1;
+        public int flickerCount = 0;
         public int row
         {
             get
