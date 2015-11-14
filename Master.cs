@@ -114,6 +114,7 @@ namespace aspectstar2
             texCollection.arcadeFont = Content.Load<Texture2D>("arcadefont");
             texCollection.controls = Content.Load<Texture2D>("menu");
             texCollection.credits = Content.Load<Texture2D>("credits");
+            texCollection.controller = Content.Load<Texture2D>("controller");
             texCollection.worldTiles = Content.Load<Texture2D>("protoworld");
             texCollection.texMapPlayer = Content.Load<Texture2D>("mapplayer");
             texCollection.specialTiles = Content.Load<Texture2D>("specialstage");
@@ -342,6 +343,7 @@ namespace aspectstar2
         public Texture2D arcadeFont;
         public Texture2D blank;
         public Texture2D credits;
+        public Texture2D controller;
 
         public Texture2D worldTiles;
         public Texture2D[] adventureTiles;

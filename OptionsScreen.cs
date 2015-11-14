@@ -14,6 +14,7 @@ namespace aspectstar2
         Selections selection = Selections.SaveAndExit;
         Options opti;
         int lag = 20;
+        int timer = 0;
 
         enum Selections
         {
@@ -43,42 +44,51 @@ namespace aspectstar2
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
+            Rectangle source, dest;
+
             WriteText(spriteBatch, "ASPECT STAR 2 OPTIONS", 2, Color.White);
 
             WriteText(spriteBatch, "SET KEYBOARD CONTROLS", 5, 6, Color.White);
 
-            WriteText(spriteBatch, "UP", 7, 8, selection == Selections.Up ? Color.Red : Color.White);
+            /*WriteText(spriteBatch, "UP", 7, 8, selection == Selections.Up ? Color.Red : Color.White);
             WriteText(spriteBatch, "DOWN", 9, 8, selection == Selections.Down ? Color.Red : Color.White);
             WriteText(spriteBatch, "LEFT", 11, 8, selection == Selections.Left ? Color.Red : Color.White);
             WriteText(spriteBatch, "RIGHT", 13, 8, selection == Selections.Right ? Color.Red : Color.White);
 
             WriteText(spriteBatch, "A", 7, 20, selection == Selections.A ? Color.Red : Color.White);
             WriteText(spriteBatch, "B", 9, 20, selection == Selections.B ? Color.Red : Color.White);
-            WriteText(spriteBatch, "START", 13, 20, selection == Selections.Start ? Color.Red : Color.White);
+            WriteText(spriteBatch, "START", 13, 20, selection == Selections.Start ? Color.Red : Color.White);*/
 
             if (opti.music)
-                WriteText(spriteBatch, "GAME MUSIC ENABLED", 16, 6, Color.White);
+                WriteText(spriteBatch, "GAME MUSIC ENABLED", 14, 6, Color.White);
             else
-                WriteText(spriteBatch, "GAME MUSIC DISABLED", 16, 6, Color.White);
+                WriteText(spriteBatch, "GAME MUSIC DISABLED", 14, 6, Color.White);
 
             if (opti.sound)
-                WriteText(spriteBatch, "SOUND EFFECTS ENABLED", 18, 6, Color.White);
+                WriteText(spriteBatch, "SOUND EFFECTS ENABLED", 16, 6, Color.White);
             else
-                WriteText(spriteBatch, "SOUND EFFECTS DISABLED", 18, 6, Color.White);
+                WriteText(spriteBatch, "SOUND EFFECTS DISABLED", 16, 6, Color.White);
 
             if (opti.fullscreen)
-                WriteText(spriteBatch, "ENTER WINDOWED MODE", 20, 6, Color.White);
+                WriteText(spriteBatch, "ENTER WINDOWED MODE", 18, 6, Color.White);
             else
-                WriteText(spriteBatch, "ENTER FULL SCREEN MODE", 20, 6, Color.White);
+                WriteText(spriteBatch, "ENTER FULL SCREEN MODE", 18, 6, Color.White);
 
-            WriteText(spriteBatch, "RETURN TO DEFAULT SETTINGS", 23, 6, Color.White);
-            WriteText(spriteBatch, "RETURN TO PREVIOUS OPTIONS", 25, 6, Color.White);
-            WriteText(spriteBatch, "EXIT OPTIONS AND SAVE CHANGES", 27, 6, Color.White);
+            WriteText(spriteBatch, "RETURN TO DEFAULT SETTINGS", 22, 6, Color.White);
+            WriteText(spriteBatch, "RETURN TO PREVIOUS OPTIONS", 24, 6, Color.White);
+            WriteText(spriteBatch, "EXIT OPTIONS AND SAVE CHANGES", 26, 6, Color.White);
 
+            spriteBatch.Begin();
+
+            source = new Rectangle(0, 0, 192, 80);
+            dest = new Rectangle(7 * 16, 7 * 16, 192, 80);
+            spriteBatch.Draw(Master.texCollection.controller, dest, source, Color.White);
+
+            // Draw arrow
             if ((int)selection < 100)
             {
-                Rectangle source = new Rectangle(128, 16, 16, 16);
-                Rectangle dest = new Rectangle(4 * 16, 0, 16, 16);
+                source = new Rectangle(128, 16, 16, 16);
+                dest = new Rectangle(4 * 16, 0, 16, 16);
                 
                 switch (selection)
                 {
@@ -86,41 +96,76 @@ namespace aspectstar2
                         dest.Y = 16 * 5;
                         break;
                     case Selections.Music:
-                        dest.Y = 16 * 16;
+                        dest.Y = 14 * 16;
                         break;
                     case Selections.Sound:
-                        dest.Y = 18 * 16;
+                        dest.Y = 16 * 16;
                         break;
                     case Selections.FullScreen:
-                        dest.Y = 20 * 16;
+                        dest.Y = 18 * 16;
                         break;
                     case Selections.Default:
-                        dest.Y = 23 * 16;
+                        dest.Y = 22 * 16;
                         break;
                     case Selections.ExitWithoutChanging:
-                        dest.Y = 25 * 16;
+                        dest.Y = 24 * 16;
                         break;
                     case Selections.SaveAndExit:
-                        dest.Y = 27 * 16;
+                        dest.Y = 26 * 16;
                         break;
                 }
-
-                spriteBatch.Begin();
                 spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.MonoGameOrange);
-                spriteBatch.End();
+            }
+            else if (timer % 8 == 0)
+            {
+                switch (selection)
+                {
+                    case Selections.Up:
+                        source = new Rectangle(32, 96, 16, 16);
+                        break;
+                    case Selections.Down:
+                        source = new Rectangle(32, 128, 16, 16);
+                        break;
+                    case Selections.Left:
+                        source = new Rectangle(16, 112, 16, 16);
+                        break;
+                    case Selections.Right:
+                        source = new Rectangle(48, 112, 16, 16);
+                        break;
+                    case Selections.A:
+                        source = new Rectangle(128, 120, 20, 20);
+                        break;
+                    case Selections.B:
+                        source = new Rectangle(156, 120, 20, 20);
+                        break;
+                    case Selections.Start:
+                        source = new Rectangle(84, 130, 24, 10);
+                        break;
+                    default:
+                        spriteBatch.End();
+                        return;
+                }
+                dest = new Rectangle(source.X + 7 * 16, source.Y - 80 + 7 * 16, source.Width, source.Height);
+                spriteBatch.Draw(Master.texCollection.controller, dest, source, Color.White);
             }
 
+            spriteBatch.End();
         }
 
         public override void Update(GameTime gameTime)
         {
-            KeyboardState state = Keyboard.GetState();
-            Keys[] downKeys = state.GetPressedKeys();
+            timer++;
+            if (timer > 10)
+                timer = 0;
+
             if (lag > 0)
             {
                 lag--;
                 return;
             }
+
+            KeyboardState state = Keyboard.GetState();
+            Keys[] downKeys = state.GetPressedKeys();
 
             if ((int)selection < 100)
             {
