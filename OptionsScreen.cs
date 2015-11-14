@@ -20,7 +20,8 @@ namespace aspectstar2
             Controls = 0,
             Music = 1,
             Sound = 2,
-            Exit = 3,
+            Default = 3,
+            Exit = 4,
 
             Up = 101,
             Down = 102,
@@ -35,12 +36,13 @@ namespace aspectstar2
         {
             this.master = master;
             opti = master.options;
+            PlaySong.Play(PlaySong.SongName.Silent);
         }
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
             WriteText(spriteBatch, "ASPECT STAR 2", 1, Color.White);
-            WriteText(spriteBatch, "OPTIONS", 2, Color.White);
+            WriteText(spriteBatch, "OPTIONS", 3, Color.White);
 
             WriteText(spriteBatch, "CHOOSE CONTROLS", 6, 6, Color.White);
 
@@ -56,14 +58,14 @@ namespace aspectstar2
             if (opti.music)
                 WriteText(spriteBatch, "GAME MUSIC ENABLED", 18, 6, Color.White);
             else
-                WriteText(spriteBatch, "GAME MUSIC DISABLE", 18, 6, Color.White);
+                WriteText(spriteBatch, "GAME MUSIC DISABLED", 18, 6, Color.White);
 
             if (opti.sound)
                 WriteText(spriteBatch, "SOUND EFFECTS ENABLED", 20, 6, Color.White);
             else
                 WriteText(spriteBatch, "SOUND EFFECTS DISABLED", 20, 6, Color.White);
 
-
+            WriteText(spriteBatch, "RETURN TO DEFAULT SETTINGS", 24, 6, Color.White);
             WriteText(spriteBatch, "EXIT OPTIONS AND SAVE CHANGES", 26, 6, Color.White);
 
             if ((int)selection < 100)
@@ -82,13 +84,16 @@ namespace aspectstar2
                     case Selections.Sound:
                         dest.Y = 20 * 16;
                         break;
+                    case Selections.Default:
+                        dest.Y = 24 * 16;
+                        break;
                     case Selections.Exit:
                         dest.Y = 26 * 16;
                         break;
                 }
 
                 spriteBatch.Begin();
-                spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.Cyan);
+                spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.MonoGameOrange);
                 spriteBatch.End();
             }
 
@@ -111,7 +116,7 @@ namespace aspectstar2
                     selection = (Selections)((int)selection - 1);
                     lag = 20;
                 }
-                else if (Master.controls.Down && (int)selection != 3)
+                else if (Master.controls.Down && (int)selection != 4)
                 {
                     selection = (Selections)((int)selection + 1);
                     lag = 20;
@@ -132,6 +137,11 @@ namespace aspectstar2
                             break;
                         case Selections.Sound:
                             opti.sound = !opti.sound;
+                            PlaySound.Play(PlaySound.SoundEffectName.Pause);
+                            break;
+                        case Selections.Default:
+                            opti = new Options();
+                            master.ActivateOptions(opti);
                             PlaySound.Play(PlaySound.SoundEffectName.Pause);
                             break;
                         case Selections.Exit:

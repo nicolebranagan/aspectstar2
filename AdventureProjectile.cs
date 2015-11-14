@@ -144,16 +144,19 @@ namespace aspectstar2
                         else if (obj is AdventureProjectile)
                         {
                             AdventureProjectile proj = (AdventureProjectile)obj;
-                            if (proj.damage > damage)
-                                active = false;
-                            else if (damage > proj.damage)
-                                proj.active = false;
-                            else if (proj.fiery && !fiery)
-                                active = false;
-                            else if (fiery && !proj.fiery)
-                                proj.active = false;
-                            else if (friendly)
-                                active = false;
+                            if (proj.ghostly == ghostly)
+                            {
+                                if (proj.damage > damage)
+                                    active = false;
+                                else if (damage > proj.damage)
+                                    proj.active = false;
+                                else if (proj.fiery && !fiery)
+                                    active = false;
+                                else if (fiery && !proj.fiery)
+                                    proj.active = false;
+                                else if (friendly)
+                                    active = false;
+                            }
                         }
                     }
             }
