@@ -54596,8 +54596,8 @@ function update() { }</code>
         <int>1</int>
         <int>1</int>
         <int>1</int>
-        <int>0</int>
-        <int>0</int>
+        <int>2</int>
+        <int>2</int>
         <int>1</int>
         <int>6</int>
         <int>0</int>
@@ -56887,9 +56887,9 @@ function update() { }</code>
             <int>5</int>
             <int>5</int>
             <int>5</int>
-            <int>5</int>
-            <int>5</int>
-            <int>5</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
             <int>5</int>
             <int>5</int>
             <int>5</int>
@@ -57618,7 +57618,432 @@ function update() { }</code>
           <vblock>false</vblock>
           <music>-1</music>
         </Room>
-        <Room xsi:nil="true" />
+        <Room>
+          <tileMap>
+            <int>1</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>2</int>
+            <int>1</int>
+            <int>3</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>6</int>
+            <int>4</int>
+            <int>3</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>7</int>
+            <int>4</int>
+            <int>3</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>3</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>3</int>
+            <int>0</int>
+            <int>0</int>
+            <int>9</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>9</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>3</int>
+            <int>0</int>
+            <int>0</int>
+            <int>8</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>8</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>3</int>
+            <int>0</int>
+            <int>0</int>
+            <int>17</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>17</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>3</int>
+            <int>0</int>
+            <int>0</int>
+            <int>8</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>8</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>3</int>
+            <int>0</int>
+            <int>0</int>
+            <int>8</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>0</int>
+            <int>13</int>
+            <int>8</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>3</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>9</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>3</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>4</int>
+            <int>1</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>5</int>
+            <int>1</int>
+          </tileMap>
+          <storedObjects>
+            <StoredObject>
+              <x>496</x>
+              <y>304</y>
+              <type>enemy</type>
+              <enemyType>4</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>240</x>
+              <y>240</y>
+              <type>enemy</type>
+              <enemyType>4</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>624</x>
+              <y>208</y>
+              <type>heart</type>
+              <enemyType>0</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>432</x>
+              <y>240</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>chara</name>
+                <code>function onLoad() { }
+function update() { }
+function inRange() { }
+function touch() {
+TextBox("YOU RESCUED ME");
+questionBox("I CAN GIVE YOU CHEAP PRESCRIPTION DRUGS ONLY 7BELLS", "yes()", "no()");
+}
+function hurt() { }
+function yes() {
+var bells = getCounter("_bells");
+if (bells &lt; 7)
+TextBox("I MEAN YOU SAVED ME AND ALL BUT I CANT BE THATGENEROUS");
+else {
+TextBox("GOOD TO DO BUSINESS WITH YOU");
+playSoundEffect(0);
+setCounter("_bells", bells - 7);
+giveWeapon(7);
+}
+}
+function no() {
+TextBox("IM JUST GOING TO STAY HERE I THINK");
+}</code>
+                <graphics>2</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+          </storedObjects>
+          <dark>false</dark>
+          <hblock>false</hblock>
+          <vblock>false</vblock>
+          <music>-1</music>
+        </Room>
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
         <Room xsi:nil="true" />
@@ -99485,9 +99910,9 @@ function update() { }</code>
             <int>47</int>
             <int>47</int>
             <int>47</int>
-            <int>15</int>
-            <int>38</int>
-            <int>15</int>
+            <int>47</int>
+            <int>47</int>
+            <int>47</int>
             <int>47</int>
             <int>47</int>
             <int>47</int>
@@ -99526,23 +99951,6 @@ function update() { }</code>
             <int>2</int>
           </tileMap>
           <storedObjects>
-            <StoredObject>
-              <x>400</x>
-              <y>368</y>
-              <type>stock</type>
-              <enemyType>6</enemyType>
-              <data>
-                <graphics>0</graphics>
-                <gfxtype>Maptile</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>0</key>
-            </StoredObject>
             <StoredObject>
               <x>304</x>
               <y>240</y>
@@ -101026,8 +101434,8 @@ overwriteTile(13,11,13);
             <int>23</int>
             <int>25</int>
             <int>34</int>
-            <int>47</int>
-            <int>47</int>
+            <int>15</int>
+            <int>38</int>
             <int>48</int>
             <int>50</int>
             <int>25</int>
@@ -101484,6 +101892,23 @@ overwriteTile(13,11,13);
               <y>208</y>
               <type>enemy</type>
               <enemyType>3</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>400</x>
+              <y>80</y>
+              <type>stock</type>
+              <enemyType>6</enemyType>
               <data>
                 <graphics>0</graphics>
                 <gfxtype>Maptile</gfxtype>
@@ -123238,7 +123663,97 @@ spawnKey(12,1);
             <int>0</int>
             <int>0</int>
           </tileMap>
-          <storedObjects />
+          <storedObjects>
+            <StoredObject>
+              <x>464</x>
+              <y>176</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>gal</name>
+                <code>function onLoad() { setWander(true); }
+function update() { }
+function inRange() { }
+function touch() {
+TextBox("THIS CITY IS SO BEAUTIFUL");
+}
+function hurt() { }</code>
+                <graphics>2</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>752</x>
+              <y>176</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>guard</name>
+                <code>function onLoad() { }
+function update() { }
+function inRange() { }
+function touch() {
+TextBox("THIS IS THE PRINCESSES OFFICAL RESIDENCE");
+TextBox("OF COURSE SHE DOESNT LIVE HERE");
+}
+function hurt() { }</code>
+                <graphics>0</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>80</x>
+              <y>240</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>guy</name>
+                <code>function onLoad() { changeDirection(3); }
+function update() { }
+function inRange() { }
+function touch() {
+questionBox("YOU LIKE SOMEONE WHO KNOWS HER CATNIP  9 BELLS", "yes()", "no()");
+}
+function hurt() { }
+function yes() {
+var bells = getCounter("_bells");
+if (bells &gt;= 9) {
+giveWeapon(6);
+setCounter("_bells", bells - 9);
+TextBox("OF COURSE ITS JUST ONE BAG");
+playSoundEffect(0);
+}
+else
+TextBox("IM GOING TO NEED A CREDIT REPORT");
+}
+function no() {
+}</code>
+                <graphics>1</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+          </storedObjects>
           <dark>false</dark>
           <hblock>false</hblock>
           <vblock>false</vblock>
@@ -123572,7 +124087,72 @@ spawnKey(12,1);
             <int>7</int>
             <int>0</int>
           </tileMap>
-          <storedObjects />
+          <storedObjects>
+            <StoredObject>
+              <x>240</x>
+              <y>144</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>guy</name>
+                <code>function onLoad() { }
+function update() { }
+function inRange() { }
+function touch() {
+questionBox("I HAVE A CHEAP SOURCE OF PILLS   10 BELLS", "yes()", "no()");
+}
+function hurt() { }
+function yes() {
+var bells = getCounter("_bells");
+if (bells &gt;= 10) {
+TextBox("GOOD GOOOD");
+playSoundEffect(0);
+giveWeapon(7);
+setCounter("_bells", bells-10);
+}
+else
+TextBox("TALK TO ME IF YOU CHANGE YOUR MIND");
+}
+function no() {
+TextBox("TALK TO ME AGAIN IF YOU CHANGE YOUR MIND");
+}</code>
+                <graphics>1</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>592</x>
+              <y>336</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>girl</name>
+                <code>function onLoad() { }
+function update() { }
+function inRange() { }
+function touch() {
+TextBox("THIS FOREST IS LIKE AN URBAN OASIS");
+}
+function hurt() { }</code>
+                <graphics>2</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+          </storedObjects>
           <dark>false</dark>
           <hblock>false</hblock>
           <vblock>false</vblock>
@@ -123906,7 +124486,98 @@ spawnKey(12,1);
             <int>4</int>
             <int>23</int>
           </tileMap>
-          <storedObjects />
+          <storedObjects>
+            <StoredObject>
+              <x>80</x>
+              <y>272</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>room</name>
+                <code>function onLoad() { }
+function update() { }
+function inRange() { }
+function touch() {
+TextBox("THIS DISTRICT IS MOB TERRITORY");
+}
+function hurt() { }</code>
+                <graphics>0</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>400</x>
+              <y>368</y>
+              <type>enemy</type>
+              <enemyType>15</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>656</x>
+              <y>304</y>
+              <type>enemy</type>
+              <enemyType>15</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>720</x>
+              <y>240</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>spawner</name>
+                <code>var timer = 0;
+function onLoad() { overrideSettings(false,false); }
+function update() {
+if (!anyEnemies() &amp;&amp; timer == 0) {
+becomeEnemy(15, false);
+timer = 50;
+}
+if (timer &gt; 0)
+timer--;
+}
+function inRange() { }
+function touch() { }
+function hurt() { }</code>
+                <graphics>0</graphics>
+                <gfxtype>Null</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+          </storedObjects>
           <dark>false</dark>
           <hblock>false</hblock>
           <vblock>false</vblock>
@@ -124253,7 +124924,60 @@ spawnKey(12,1);
             <int>15</int>
             <int>13</int>
           </tileMap>
-          <storedObjects />
+          <storedObjects>
+            <StoredObject>
+              <x>336</x>
+              <y>240</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>yo</name>
+                <code>function onLoad() { setWander(true); }
+function update() { }
+function inRange() { }
+function touch() { 
+TextBox("WHY DO I WANT TO TALK TO YOU");
+TextBox("I DONT EVEN KNOW WHO YOU ARE");
+}
+function hurt() { }</code>
+                <graphics>1</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>656</x>
+              <y>112</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>lady</name>
+                <code>function onLoad() { }
+function update() { }
+function inRange() { }
+function touch() {
+TextBox("IM NOT PROTESTING I SWEAR");
+TextBox("OH I THOUGHT YOU WERE A GUARD");
+}
+function hurt() { }</code>
+                <graphics>2</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+          </storedObjects>
           <dark>false</dark>
           <hblock>false</hblock>
           <vblock>false</vblock>
@@ -124587,7 +125311,60 @@ spawnKey(12,1);
             <int>12</int>
             <int>15</int>
           </tileMap>
-          <storedObjects />
+          <storedObjects>
+            <StoredObject>
+              <x>112</x>
+              <y>112</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>guard</name>
+                <code>function onLoad() { }
+function update() { }
+function inRange() { }
+function touch() {
+TextBox("NO LOITERING IN THE PARK CITIZEN");
+TextBox("SOMEONE MIGHT CONFUSE IT FOR A PROTEST");
+}
+function hurt() { }</code>
+                <graphics>0</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>528</x>
+              <y>272</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>guy</name>
+                <code>function onLoad() { setWander(true); }
+function update() { }
+function inRange() { }
+function touch() {
+TextBox("YOURE THE PRINCESSES GIRLFRIEND ARENT YOU");
+TextBox("IM JEALOUS");
+}
+function hurt() { explode(true); playSoundEffect(0); }</code>
+                <graphics>1</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+          </storedObjects>
           <dark>false</dark>
           <hblock>false</hblock>
           <vblock>false</vblock>
@@ -124936,6 +125713,31 @@ spawnKey(12,1);
               <desty>9</desty>
               <destroomX>4</destroomX>
               <destroomY>4</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>208</x>
+              <y>272</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>guy</name>
+                <code>function onLoad() { setWander(true); }
+function update() { }
+function inRange() { }
+function touch() {
+TextBox("THIS AREAS DUE TO BE DEMOLISHED FOR SUBWAY    CONSTRUCTION");
+}
+function hurt() { }</code>
+                <graphics>2</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
               <screen>0</screen>
               <key>0</key>
             </StoredObject>
@@ -125725,6 +126527,54 @@ function hurt() { }</code>
               <screen>0</screen>
               <key>0</key>
             </StoredObject>
+            <StoredObject>
+              <x>208</x>
+              <y>144</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>streetwalker</name>
+                <code>function onLoad() { setWander(true); }
+function update() { }
+function inRange() { }
+function touch() { TextBox("SO GLAD I DONT LIVE IN THE COUNTRYSIDE"); }
+function hurt() { }</code>
+                <graphics>1</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>656</x>
+              <y>272</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>smallllll</name>
+                <code>function onLoad() { }
+function update() { setWander(true); }
+function inRange() { }
+function touch() {
+TextBox("DO YOU LIKE THIS DRESS                        ITS THE LATEST FASHION");
+}
+function hurt() { }</code>
+                <graphics>2</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
           </storedObjects>
           <dark>false</dark>
           <hblock>false</hblock>
@@ -126059,7 +126909,72 @@ function hurt() { }</code>
             <int>21</int>
             <int>23</int>
           </tileMap>
-          <storedObjects />
+          <storedObjects>
+            <StoredObject>
+              <x>272</x>
+              <y>272</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>city</name>
+                <code>function onLoad() { setWander(true); }
+function update() { }
+function inRange() { }
+function touch() {
+TextBox("WHY SHOULD I HAVE TO WORK FOR A LIVING");
+}
+function hurt() { }</code>
+                <graphics>2</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>656</x>
+              <y>176</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>salesd00d</name>
+                <code>function onLoad() { }
+function update() { }
+function inRange() { }
+function touch() {
+questionBox("FISH FOR 5 BELLS  YOU IN", "yes()", "no()");
+}
+function hurt() { }
+function yes() {
+var bells = getCounter("_bells");
+if (bells &gt;= 5) {
+TextBox("GOOD TO HEAR");
+playSoundEffect(0);
+giveWeapon(1);
+setCounter("_bells", bells-5);
+}
+else
+TextBox("YOURE JACKIN ME STEVE");
+}
+function no() {
+TextBox("SOUNDS LIKE WE HAVE A DEAL THEN");
+}</code>
+                <graphics>1</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+          </storedObjects>
           <dark>false</dark>
           <hblock>false</hblock>
           <vblock>false</vblock>

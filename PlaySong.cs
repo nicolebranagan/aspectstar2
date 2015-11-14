@@ -35,7 +35,21 @@ namespace aspectstar2
 
         static Dictionary<SongName, Song> Songs = new Dictionary<SongName, Song>();
         static SongName currentSong = SongName.None;
-        static public bool enabled = true;
+
+        static bool _enabled = true;
+        static public bool enabled
+        {
+            get
+            {
+                return _enabled;
+            }
+            set
+            {
+                if (value == false)
+                    MediaPlayer.Stop();
+                _enabled = value;
+            }
+        }
 
         public static void Initialize(Microsoft.Xna.Framework.Content.ContentManager Content)
         {

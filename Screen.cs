@@ -17,6 +17,16 @@ namespace aspectstar2
         abstract public void Update(GameTime gameTime);
         abstract public void Draw(SpriteBatch spriteBatch, GameTime gameTime);
 
+        protected void WriteText(SpriteBatch spriteBatch, string text, int row, Color textColor)
+        {
+            WriteText(spriteBatch, text, new Vector2((Master.width / 2) - (8 * text.Length), row * 16), textColor);
+        }
+
+        protected void WriteText(SpriteBatch spriteBatch, string text, int row, int column, Color textColor)
+        {
+            WriteText(spriteBatch, text, new Vector2(column * 16, row * 16), textColor);
+        }
+
         protected void WriteText(SpriteBatch spriteBatch, string text, Vector2 pos, Color textColor)
         {
             Rectangle destRect;
@@ -146,12 +156,15 @@ namespace aspectstar2
                             PlaySound.Play(PlaySound.SoundEffectName.Aspect);
                             break;
                         case Selections.Continue:
-                            PlaySound.Play(PlaySound.SoundEffectName.Pause);
                             if (!saveFailed)
+                            {
+                                PlaySound.Play(PlaySound.SoundEffectName.Pause);
                                 master.LoadGameFromSaved(savedGame);
+                            }
                             break;
                         case Selections.Options:
-                            master.UpdateScreen(new SpecialScreen(new Game(master), 0, 0, x => master.UpdateScreen(this)));
+                            master.UpdateScreen(new OptionsScreen(master));
+                            PlaySound.Play(PlaySound.SoundEffectName.Pause);
                             break;
                     }
                 }

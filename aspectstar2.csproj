@@ -50,6 +50,7 @@
     <Compile Include="AdventureProjectile.cs" />
     <Compile Include="AdventureScreen.cs" />
     <Compile Include="BestiaryEntry.cs" />
+    <Compile Include="OptionsScreen.cs" />
     <Compile Include="PauseScreen.cs" />
     <Compile Include="PlaySong.cs" />
     <Compile Include="PlaySound.cs" />

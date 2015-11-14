@@ -25,6 +25,7 @@ namespace aspectstar2
         public const int height = 480;
 
         public static Random globalRandom;
+        public Options options;
 
         SavedGame _sG;
         public SavedGame savedGame
@@ -79,10 +80,11 @@ namespace aspectstar2
         protected override void Initialize()
         {
             controls = new Controls();
-
             globalRandom = new Random();
-
             savedGame = LoadGame();
+
+            options = LoadOptions();
+            ActivateOptions(options);
 
             base.Initialize();
         }
@@ -240,6 +242,48 @@ namespace aspectstar2
             currentScreen = currentGame.BeginFromSaved(sG);
         }
 
+        public void ActivateOptions(Options opt)
+        {
+            PlaySound.enabled = opt.sound;
+            PlaySong.enabled = opt.music;
+            controls.ChangeDefinition(opt);
+
+            options = opt;
+        }
+
+        public void SaveOptions(Options opt)
+        {
+            XmlSerializer xS = new XmlSerializer(typeof(Options));
+            try
+            {
+                StreamWriter sW = new StreamWriter("options.xml");
+                xS.Serialize(sW, opt);
+                sW.Close();
+            }
+            catch
+            {
+                
+            }
+        }
+
+        Options LoadOptions()
+        {
+            Options opti = new Options();
+            try
+            {
+                XmlSerializer xS = new XmlSerializer(typeof(Options));
+                FileStream fS = new FileStream("options.xml", FileMode.Open);
+                XmlTextReader xTR = new XmlTextReader(fS);
+                opti = (Options)xS.Deserialize(xTR);
+                fS.Close();
+            }
+            catch (Exception)
+            {
+            }
+
+            return opti;
+        }
+
         public static Vector2 getMapTile(int index, Texture2D map)
         {
             int width = map.Width / 32;
@@ -309,6 +353,20 @@ namespace aspectstar2
         public Texture2D texPlosion;
     }
 
+    public class Options
+    {
+        public bool sound = true;
+        public bool music = true;
+
+        public Keys Up = Keys.Up;
+        public Keys Down = Keys.Down;
+        public Keys Left = Keys.Left;
+        public Keys Right = Keys.Right;
+        public Keys A = Keys.X;
+        public Keys B = Keys.Z;
+        public Keys Start = Keys.Enter;
+    }
+
     public class Controls
     {
         // First step towards gamepad support? Though I need a gamepad to actually add that
@@ -352,6 +410,18 @@ namespace aspectstar2
             A = state.IsKeyDown(definitions[Key.A]);
             B = state.IsKeyDown(definitions[Key.B]);
             Start = state.IsKeyDown(definitions[Key.Start]);
+        }
+
+        public void ChangeDefinition(Options opti)
+        {
+            definitions = new Dictionary<Key, Keys>();
+            definitions.Add(Key.Up, opti.Up);
+            definitions.Add(Key.Down, opti.Down);
+            definitions.Add(Key.Left, opti.Left);
+            definitions.Add(Key.Right, opti.Right);
+            definitions.Add(Key.A, opti.A);
+            definitions.Add(Key.B, opti.B);
+            definitions.Add(Key.Start, opti.Start);
         }
     }
     
