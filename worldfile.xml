@@ -123722,25 +123722,25 @@ function hurt() { }</code>
               <enemyType>0</enemyType>
               <data>
                 <name>guy</name>
-                <code>function onLoad() { changeDirection(3); }
-function update() { }
-function inRange() { }
-function touch() {
-questionBox("YOU LIKE SOMEONE WHO KNOWS HER CATNIP  9 BELLS", "yes()", "no()");
-}
-function hurt() { }
-function yes() {
-var bells = getCounter("_bells");
-if (bells &gt;= 9) {
-giveWeapon(6);
-setCounter("_bells", bells - 9);
-TextBox("OF COURSE ITS JUST ONE BAG");
-playSoundEffect(0);
-}
-else
-TextBox("IM GOING TO NEED A CREDIT REPORT");
-}
-function no() {
+                <code>function onLoad() { changeDirection(3); }
+function update() { }
+function inRange() { }
+function touch() {
+questionBox("YOU LOOK LIKE SOMEONE WHO KNOWS HER CATNIP    9 BELLS", "yes()", "no()");
+}
+function hurt() { }
+function yes() {
+var bells = getCounter("_bells");
+if (bells &gt;= 9) {
+giveWeapon(6);
+setCounter("_bells", bells - 9);
+TextBox("OF COURSE ITS JUST ONE BAG");
+playSoundEffect(0);
+}
+else
+TextBox("IM GOING TO NEED A CREDIT REPORT");
+}
+function no() {
 }</code>
                 <graphics>1</graphics>
                 <gfxtype>Characters</gfxtype>
@@ -124089,6 +124089,31 @@ function no() {
           </tileMap>
           <storedObjects>
             <StoredObject>
+              <x>592</x>
+              <y>336</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>girl</name>
+                <code>function onLoad() { }
+function update() { }
+function inRange() { }
+function touch() {
+TextBox("THIS FOREST IS LIKE AN URBAN OASIS");
+}
+function hurt() { }</code>
+                <graphics>2</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
               <x>240</x>
               <y>144</y>
               <type>entity</type>
@@ -124111,37 +124136,12 @@ giveWeapon(7);
 setCounter("_bells", bells-10);
 }
 else
-TextBox("TALK TO ME IF YOU CHANGE YOUR MIND");
+TextBox("TALK TO ME IF YOU GET MORE BELLS");
 }
 function no() {
 TextBox("TALK TO ME AGAIN IF YOU CHANGE YOUR MIND");
 }</code>
                 <graphics>1</graphics>
-                <gfxtype>Characters</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>0</key>
-            </StoredObject>
-            <StoredObject>
-              <x>592</x>
-              <y>336</y>
-              <type>entity</type>
-              <enemyType>0</enemyType>
-              <data>
-                <name>girl</name>
-                <code>function onLoad() { }
-function update() { }
-function inRange() { }
-function touch() {
-TextBox("THIS FOREST IS LIKE AN URBAN OASIS");
-}
-function hurt() { }</code>
-                <graphics>2</graphics>
                 <gfxtype>Characters</gfxtype>
               </data>
               <dest>0</dest>

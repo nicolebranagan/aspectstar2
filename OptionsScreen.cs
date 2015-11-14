@@ -204,8 +204,8 @@ namespace aspectstar2
                             break;
                         case Selections.Default:
                             opti = new Options();
-                            master.ActivateOptions(opti);
-                            PlaySound.Play(PlaySound.SoundEffectName.Pause);
+                            PlaySound.Play(PlaySound.SoundEffectName.Key);
+                            Exit(true);
                             break;
                         case Selections.ExitWithoutChanging:
                             PlaySound.Play(PlaySound.SoundEffectName.Boom);
