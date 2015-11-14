@@ -247,6 +247,7 @@ namespace aspectstar2
             PlaySound.enabled = opt.sound;
             PlaySong.enabled = opt.music;
             controls.ChangeDefinition(opt);
+            ToggleFullScreen(opt.fullscreen);
 
             options = opt;
         }
@@ -264,6 +265,12 @@ namespace aspectstar2
             {
                 
             }
+        }
+
+        public void ToggleFullScreen(bool fullScreen)
+        {
+            graphics.IsFullScreen = fullScreen;
+            graphics.ApplyChanges();
         }
 
         Options LoadOptions()
@@ -357,6 +364,7 @@ namespace aspectstar2
     {
         public bool sound = true;
         public bool music = true;
+        public bool fullscreen = false;
 
         public Keys Up = Keys.Up;
         public Keys Down = Keys.Down;
@@ -365,12 +373,26 @@ namespace aspectstar2
         public Keys A = Keys.X;
         public Keys B = Keys.Z;
         public Keys Start = Keys.Enter;
+
+        public Options Clone()
+        {
+            Options newOptions = new Options();
+            newOptions.sound = sound;
+            newOptions.music = music;
+            newOptions.fullscreen = fullscreen;
+            newOptions.Up = Up;
+            newOptions.Down = Down;
+            newOptions.Left = Left;
+            newOptions.Right = Right;
+            newOptions.A = A;
+            newOptions.B = B;
+            newOptions.Start = Start;
+            return newOptions;
+        }
     }
 
     public class Controls
     {
-        // First step towards gamepad support? Though I need a gamepad to actually add that
-
         public bool Up, Down, Left, Right, A, B, Start;
 
         Dictionary<Key, Keys> definitions = new Dictionary<Key, Keys>();
@@ -388,15 +410,7 @@ namespace aspectstar2
 
         public Controls()
         {
-            // Default controls are now here
 
-            definitions.Add(Key.Up, Keys.Up);
-            definitions.Add(Key.Down, Keys.Down);
-            definitions.Add(Key.Left, Keys.Left);
-            definitions.Add(Key.Right, Keys.Right);
-            definitions.Add(Key.A, Keys.X);
-            definitions.Add(Key.B, Keys.Z);
-            definitions.Add(Key.Start, Keys.Enter);
         }
 
         public void Update()
@@ -410,6 +424,19 @@ namespace aspectstar2
             A = state.IsKeyDown(definitions[Key.A]);
             B = state.IsKeyDown(definitions[Key.B]);
             Start = state.IsKeyDown(definitions[Key.Start]);
+
+            // Rudimentary gamepad support, untested
+            GamePadState gpState = GamePad.GetState(PlayerIndex.One);
+            if (gpState.IsConnected)
+            {
+                Up = Up || gpState.IsButtonDown(Buttons.DPadUp);
+                Down = Down || gpState.IsButtonDown(Buttons.DPadDown);
+                Left = Left || gpState.IsButtonDown(Buttons.DPadLeft);
+                Right = Right || gpState.IsButtonDown(Buttons.DPadRight);
+                A = A || gpState.IsButtonDown(Buttons.A);
+                B = B || gpState.IsButtonDown(Buttons.B);
+                Start = Start || gpState.IsButtonDown(Buttons.Start);
+            }
         }
 
         public void ChangeDefinition(Options opti)

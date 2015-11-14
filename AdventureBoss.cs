@@ -371,7 +371,7 @@ namespace aspectstar2
             bossEntry.decisiveness = 7;
             bossEntry.wanderer = true;
             definition = bossEntry;
-            health = 5;
+            health = 4;
             currentAspect = (Aspects)Master.globalRandom.Next(0, 3);
         }
 
