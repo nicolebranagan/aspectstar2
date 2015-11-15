@@ -203,6 +203,7 @@ namespace aspectstar2
 
         public void SaveGame(SavedGame game)
         {
+            savedGame = game;
             XmlSerializer xS = new XmlSerializer(typeof(SavedGame));
             try
             {

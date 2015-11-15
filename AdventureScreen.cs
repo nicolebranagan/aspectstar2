@@ -21,7 +21,7 @@ namespace aspectstar2
         public AdventurePlayer player;
         List<AdventureObject> objects = new List<AdventureObject>();
         List<AdventureObject> newobjects = new List<AdventureObject>();
-        Adventure adventure;
+        public Adventure adventure;
         int roomX, roomY;
         Vector2 first_pos;
         int[] tileMap, key;

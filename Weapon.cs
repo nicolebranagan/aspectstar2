@@ -257,7 +257,10 @@ namespace aspectstar2
 
         public override void Extra(Weapon weapon)
         {
-            count = count + 5;
+            if (weapon is TorchWeapon)
+                count = count + ((TorchWeapon)weapon).count;
+            else
+                count = count + 5;
         }
 
         public override void Activate(AdventurePlayer player, AdventureScreen screen, Game game)

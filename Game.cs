@@ -232,8 +232,11 @@ namespace aspectstar2
         {
             List<AdventureItem> items = new List<AdventureItem>();
             items.Add(new AdventureHeart());
-            items.Add(new AdventureHeart());
             items.Add(new AdventureBell());
+            if (currentAdventure.adventure.spawnTorch)
+                items.Add(new AdventureTorch());
+            else
+                items.Add(new AdventureHeart());
             return items[Master.globalRandom.Next(items.Count)];
         }
 

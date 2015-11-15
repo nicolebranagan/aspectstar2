@@ -209,7 +209,7 @@ namespace aspectstar2
         public virtual void Die()
         {
             parent.addObject(new AdventureExplosion(this.location));
-            if (Master.globalRandom.Next(0, 10) <= 2)
+            if (Master.globalRandom.Next(0, 10) <= 3)
             {
                 AdventureItem aI = game.getRandomItem();
                 aI.location = location;

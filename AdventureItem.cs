@@ -218,4 +218,33 @@ namespace aspectstar2
                 works = true;
         }
     }
+
+    public class AdventureTorch : AdventureItem
+    {
+        public AdventureTorch()
+        {
+            this.texture = Master.texCollection.controls;
+        }
+
+        public override void Draw(SpriteBatch spriteBatch, Color mask)
+        {
+            Rectangle sourceRectangle = new Rectangle(224, 0, 16, 16);
+            Rectangle destinationRectangle = new Rectangle((int)(this.location.X - 8), (int)(this.location.Y - 8), 16, 16);
+
+            spriteBatch.Begin();
+            spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, Color.White);
+            spriteBatch.End();
+        }
+
+        public override void Touch()
+        {
+            if (active)
+            {
+                active = false;
+                game.GetWeapon(new TorchWeapon(1));
+                PlaySound.Play(PlaySound.SoundEffectName.Aspect);
+            }
+        }
+    }
+
 }

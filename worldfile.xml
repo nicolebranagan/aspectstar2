@@ -13063,6 +13063,31 @@ function hurt() { }</code>
             <int>11</int>
             <int>28</int>
             <int>11</int>
+            <int>28</int>
+            <int>11</int>
+            <int>28</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>8</int>
+            <int>8</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
+            <int>11</int>
             <int>11</int>
             <int>11</int>
             <int>11</int>
@@ -13080,32 +13105,7 @@ function hurt() { }</code>
             <int>11</int>
             <int>11</int>
             <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>8</int>
-            <int>8</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
-            <int>11</int>
+            <int>28</int>
             <int>11</int>
             <int>28</int>
             <int>11</int>
@@ -14616,7 +14616,7 @@ function update() { }</code>
             <int>11</int>
             <int>11</int>
             <int>11</int>
-            <int>8</int>
+            <int>9</int>
             <int>0</int>
             <int>0</int>
             <int>11</int>
@@ -14641,7 +14641,7 @@ function update() { }</code>
             <int>11</int>
             <int>0</int>
             <int>0</int>
-            <int>8</int>
+            <int>9</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -22774,7 +22774,7 @@ function inRange() { }
 function touch() { 
 questionBox("DO YOU WANT TO BUY A FISH FOR 2 BELLS", "yes()", "no()"); 
 }
-
+function hurt() { }
 
 function yes() {
 
@@ -25862,7 +25862,7 @@ function hurt() { }</code>
             <int>13</int>
             <int>13</int>
             <int>13</int>
-            <int>13</int>
+            <int>7</int>
             <int>13</int>
             <int>13</int>
             <int>9</int>
@@ -25887,8 +25887,8 @@ function hurt() { }</code>
             <int>7</int>
             <int>13</int>
             <int>13</int>
+            <int>15</int>
             <int>13</int>
-            <int>7</int>
             <int>13</int>
             <int>13</int>
             <int>8</int>
@@ -25969,18 +25969,18 @@ function hurt() { }</code>
             <int>8</int>
             <int>8</int>
             <int>13</int>
-            <int>13</int>
-            <int>7</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>7</int>
             <int>13</int>
             <int>13</int>
             <int>7</int>
             <int>13</int>
             <int>13</int>
             <int>13</int>
+            <int>13</int>
+            <int>13</int>
+            <int>7</int>
+            <int>13</int>
+            <int>13</int>
+            <int>13</int>
             <int>7</int>
             <int>13</int>
             <int>13</int>
@@ -25996,10 +25996,10 @@ function hurt() { }</code>
             <int>13</int>
             <int>13</int>
             <int>13</int>
-            <int>13</int>
-            <int>13</int>
-            <int>13</int>
             <int>15</int>
+            <int>13</int>
+            <int>13</int>
+            <int>7</int>
             <int>13</int>
             <int>13</int>
             <int>15</int>
@@ -26024,7 +26024,7 @@ function hurt() { }</code>
             <int>13</int>
             <int>13</int>
             <int>13</int>
-            <int>13</int>
+            <int>15</int>
             <int>13</int>
             <int>13</int>
             <int>13</int>
@@ -26094,64 +26094,6 @@ function hurt() { }</code>
             <int>8</int>
           </tileMap>
           <storedObjects>
-            <StoredObject>
-              <x>688</x>
-              <y>176</y>
-              <type>entity</type>
-              <enemyType>0</enemyType>
-              <data>
-                <name>pillar</name>
-                <code>function onLoad() { }
-function update() { }
-function inRange() { }
-function touch() {
-if (!getFlag("cave4")) {
-	spawnKey(21,3);
-	setFlag("cave4",true);
-}
-}
-function hurt() { }</code>
-                <graphics>15</graphics>
-                <gfxtype>Maptile</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>0</key>
-            </StoredObject>
-            <StoredObject>
-              <x>112</x>
-              <y>304</y>
-              <type>entity</type>
-              <enemyType>0</enemyType>
-              <data>
-                <name>pillar2</name>
-                <code>function onLoad() { }
-function update() { }
-function inRange() {
-if (!getFlag("cavefall2"))
-{
-overwriteTile(0, 7, 0);
-playSoundEffect(1);
-setFlag("cavefall2", true);
-}
-}
-function touch() { }
-function hurt() { }</code>
-                <graphics>15</graphics>
-                <gfxtype>Maptile</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>0</key>
-            </StoredObject>
             <StoredObject>
               <x>368</x>
               <y>400</y>
@@ -26227,6 +26169,92 @@ function hurt() { }</code>
               <enemyType>1</enemyType>
               <data>
                 <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>656</x>
+              <y>144</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>pillar</name>
+                <code>function onLoad() { }
+function update() { }
+function inRange() { }
+function touch() {
+if (!getFlag("cave4")) {
+	spawnKey(21,3);
+	setFlag("cave4",true);
+}
+}
+function hurt() { }</code>
+                <graphics>15</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>240</x>
+              <y>336</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>pillar2</name>
+                <code>function onLoad() { }
+function update() { }
+function inRange() { }
+function touch() {
+if (!getFlag("cavefall2"))
+{
+overwriteTile(0, 7, 0);
+playSoundEffect(1);
+setFlag("cavefall2", true);
+}
+}
+function hurt() { }</code>
+                <graphics>15</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>400</x>
+              <y>272</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>warning-chan</name>
+                <code>function onLoad() { }
+function update() { }
+function inRange() { }
+function touch() {
+TextBox("BY ORDER OF PRINCESS MARY                     LOOKING AT OUT OF PLACE COLUMNS IS A VIOLATIONOF THE IMPERIAL SECRECY LAW");
+}
+function hurt() {
+die();
+playSoundEffect(1);
+}</code>
+                <graphics>16</graphics>
                 <gfxtype>Maptile</gfxtype>
               </data>
               <dest>0</dest>
