@@ -314,6 +314,9 @@ namespace aspectstar2
 
         public void Drown()
         {
+            if (dead)
+                return;
+
             animCount = 24;
             currentMode = adventureModes.drowning;
             PlaySound.Play(PlaySound.SoundEffectName.Drown);
