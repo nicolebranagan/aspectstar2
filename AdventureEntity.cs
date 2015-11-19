@@ -97,6 +97,7 @@ namespace aspectstar2
                 .SetValue("getThisX", new Func<int>(GetThisX))
                 .SetValue("getThisY", new Func<int>(GetThisY))
                 .SetValue("explode", new Action<bool>(Explode))
+                .SetValue("hookDeath", new Action<string>(HookDeath))
                 .Execute("onLoad()");
         }
 
@@ -148,7 +149,28 @@ namespace aspectstar2
                             default:
                                 break; // Something has gone wrong
                         }
-                        this.Move(move_dist);
+
+                        if (!parent.isSolid(location + move_dist, 0, width, height, faceDir))
+                            Move(move_dist);
+                        else
+                        {
+                            // Reverse direction on hitting a wall so you don't look like too much of an idiot
+                            switch (faceDir)
+                            {
+                                case Master.Directions.Down:
+                                    faceDir = Master.Directions.Up;
+                                    break;
+                                case Master.Directions.Up:
+                                    faceDir = Master.Directions.Down;
+                                    break;
+                                case Master.Directions.Left:
+                                    faceDir = Master.Directions.Right;
+                                    break;
+                                case Master.Directions.Right:
+                                    faceDir = Master.Directions.Left;
+                                    break;
+                            }
+                        }
                     }
                 }
             }
@@ -298,6 +320,13 @@ namespace aspectstar2
             parent.addObject(aE);
             if (fatal)
                 active = false;
+        }
+
+        void HookDeath(string dieFunc)
+        {
+            parent.dieFunc = delegate() {
+                jintEngine.Execute(dieFunc);
+            };
         }
 
         static Action<bool> getChooser(AdventureEntity ent, string callYes, string callNo)

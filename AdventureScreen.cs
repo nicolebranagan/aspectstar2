@@ -49,11 +49,13 @@ namespace aspectstar2
             }
         }
         int torchCount = 0;
-        
 
         int animCount, stallCount, lag;
         string textString; int choice = 1; Action<bool> chooser;
         Action<bool> leaver;
+
+        public Action dieFunc;
+        bool dead;
 
         adventureModes currentMode = adventureModes.runMode;
         enum adventureModes
@@ -115,6 +117,8 @@ namespace aspectstar2
                 x = (int)Math.Floor((dest.X - width) / 32);
                 y = (int)Math.Floor((dest.Y - height) / 32);
                 i = x + (y * 25);
+                if (i >= tileMap.Length || i < 0)
+                    return true;
                 if (((tileType)key[tileMap[i]] == tileType.Solid) || ((tileType)key[tileMap[i]] == tileType.Lock) || ((tileType)key[tileMap[i]] == tileType.Wood) ||
                     (((tileType)key[tileMap[i]] == tileType.Crevasse) && z == 0))
                     return true;
@@ -125,6 +129,8 @@ namespace aspectstar2
                 x = (int)Math.Floor((dest.X + width) / 32);
                 y = (int)Math.Floor((dest.Y - height) / 32);
                 i = x + (y * 25);
+                if (i >= tileMap.Length || i < 0)
+                    return true;
                 if (((tileType)key[tileMap[i]] == tileType.Solid) || ((tileType)key[tileMap[i]] == tileType.Lock) || ((tileType)key[tileMap[i]] == tileType.Wood) ||
                     (((tileType)key[tileMap[i]] == tileType.Crevasse) && z == 0))
                     return true;
@@ -135,6 +141,8 @@ namespace aspectstar2
                 x = (int)Math.Floor((dest.X - width) / 32);
                 y = (int)Math.Floor((dest.Y + height) / 32);
                 i = x + (y * 25);
+                if (i >= tileMap.Length || i < 0)
+                    return true;
                 if (((tileType)key[tileMap[i]] == tileType.Solid) || ((tileType)key[tileMap[i]] == tileType.Lock) || ((tileType)key[tileMap[i]] == tileType.Wood) ||
                     (((tileType)key[tileMap[i]] == tileType.Crevasse) && z == 0))
                     return true;
@@ -145,6 +153,8 @@ namespace aspectstar2
                 x = (int)Math.Floor((dest.X + width) / 32);
                 y = (int)Math.Floor((dest.Y + height) / 32);
                 i = x + (y * 25);
+                if (i >= tileMap.Length || i < 0)
+                    return true;
                 if (((tileType)key[tileMap[i]] == tileType.Solid) || ((tileType)key[tileMap[i]] == tileType.Lock) || ((tileType)key[tileMap[i]] == tileType.Wood) ||
                     (((tileType)key[tileMap[i]] == tileType.Crevasse) && z == 0))
                     return true;
@@ -204,9 +214,9 @@ namespace aspectstar2
                 if (game.life != game.possibleLife)
                 {
                     game.life = game.possibleLife;
-                    PlaySound.Play(PlaySound.SoundEffectName.Heal);
-                    tileMap[i] = 0;
                 }
+                PlaySound.Play(PlaySound.SoundEffectName.Heal);
+                tileMap[i] = 0;
             }
         }
 
@@ -315,7 +325,6 @@ namespace aspectstar2
                     ab7.location = new Vector2(Master.width / 2, 3 * 32);
                 }
             }
-            //objects.RemoveAll(isProjectile);
         }
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
@@ -328,9 +337,20 @@ namespace aspectstar2
                     foreach (AdventureObject obj in sortList)
                     {
                         if (obj is AdventurePlayer)
-                            obj.Draw(spriteBatch, playerColor);
+                        {
+                            if (!dead)
+                                obj.Draw(spriteBatch, playerColor);
+                        }
                         else
-                            obj.Draw(spriteBatch, Color.White);
+                        {
+                            if (dead)
+                            {
+                                if (obj is AdventureEntity)
+                                    obj.Draw(spriteBatch, Color.White);
+                            }
+                            else
+                                obj.Draw(spriteBatch, Color.White);
+                        }
                     }
                     DrawTextBox(spriteBatch, textString);
                     if (choice != -1)
@@ -397,7 +417,16 @@ namespace aspectstar2
                     mask2.G = (byte)(animCount / 2);
                     mask2.B = (byte)(animCount / 2);
                     DrawRoom(spriteBatch, mask2);
-                    player.Draw(spriteBatch, mask2);
+                    if (!dead)
+                        player.Draw(spriteBatch, mask2);
+                    else
+                    {
+                        foreach(AdventureObject obj in objects)
+                        {
+                            if (obj is AdventureEntity)
+                                obj.Draw(spriteBatch, mask2);
+                        }
+                    }
                     break;
                 case adventureModes.fadeIn:
                     Color mask3 = Color.White;
@@ -427,7 +456,7 @@ namespace aspectstar2
                     {
                         if (obj is AdventurePlayer)
                             obj.Draw(spriteBatch, usePlayerColor ? playerColor : roomColor);
-                        else
+                        else if (obj.active)
                             obj.Draw(spriteBatch, roomColor);
                     }
                     break;
@@ -740,7 +769,13 @@ namespace aspectstar2
                 case adventureModes.deathFade:
                     animCount = animCount - 3;
                     if (animCount <= 0)
-                        game.warpAdventure(beaten);
+                    {
+                        dead = true;
+                        if (dieFunc != null)
+                            dieFunc();
+                        else
+                            game.warpAdventure(beaten);
+                    }
                     break;
                 case adventureModes.runMode:
                     UpdateRoom();
@@ -844,6 +879,7 @@ namespace aspectstar2
             animCount = 250;
             currentMode = adventureModes.deathFade;
             PlaySound.Play(PlaySound.SoundEffectName.Die);
+            PlaySong.Play(PlaySong.SongName.Silent);
         }
 
         public void addObject(AdventureObject obj)
@@ -938,6 +974,7 @@ namespace aspectstar2
                 .SetValue("setName", new Action<string>(this.SetName))
                 .SetValue("spawnBoss", new Action<int, int>(this.SpawnBoss))
                 .SetValue("spawnFinal", new Action<int, int>(this.SpawnFinal))
+                .SetValue("spawnEnemy", new Action<int, int, int>(this.SpawnEnemy))
                 .SetValue("teleport", new Action<int, int, int, int>(this.EnterNewRoom))
                 .SetValue("getEnemyId", new Func<int, int>(this.GetEnemyId))
                 .SetValue("changeEnemy", new Action<int, int>(this.ChangeEnemy))
@@ -1290,6 +1327,13 @@ namespace aspectstar2
             AdventureBoss9 boss9 = new AdventureBoss9();
             boss9.location = new Vector2(x * 32 + 16, y * 32 + 16);
             addObject(boss9);
+        }
+
+        void SpawnEnemy(int x, int y, int enemy)
+        {
+            AdventureEnemy aE = new AdventureEnemy(Master.currentFile.bestiary[enemy], enemy);
+            aE.location = new Vector2(x * 32 + 16, y * 32 + 16);
+            addObject(aE);
         }
 
         int GetEnemyId(int enemy)

@@ -89,6 +89,9 @@ namespace aspectstar2
 
         public void Hurt()
         {
+            if (game.life < 0)
+                return;
+
             if (flickerCount == 0 && flashCount == 0)
             {
                 game.life = game.life - 1;

@@ -10352,11 +10352,11 @@ THANKS FOR PLAYING</credits>
         <desty>11</desty>
       </MapObject>
       <MapObject xsi:type="MapTeleporter">
-        <x>53</x>
-        <y>22</y>
-        <dest>1</dest>
-        <destroomX>3</destroomX>
-        <destroomY>8</destroomY>
+        <x>55</x>
+        <y>30</y>
+        <dest>11</dest>
+        <destroomX>4</destroomX>
+        <destroomY>2</destroomY>
         <destx>12</destx>
         <desty>11</desty>
       </MapObject>
@@ -25527,7 +25527,7 @@ setFlag("cave4",true);
             <int>11</int>
             <int>0</int>
             <int>0</int>
-            <int>19</int>
+            <int>21</int>
             <int>19</int>
             <int>0</int>
             <int>0</int>
@@ -25552,7 +25552,7 @@ setFlag("cave4",true);
             <int>11</int>
             <int>0</int>
             <int>0</int>
-            <int>19</int>
+            <int>21</int>
             <int>19</int>
             <int>0</int>
             <int>0</int>
@@ -26208,36 +26208,6 @@ function hurt() { }</code>
               <key>0</key>
             </StoredObject>
             <StoredObject>
-              <x>240</x>
-              <y>336</y>
-              <type>entity</type>
-              <enemyType>0</enemyType>
-              <data>
-                <name>pillar2</name>
-                <code>function onLoad() { }
-function update() { }
-function inRange() { }
-function touch() {
-if (!getFlag("cavefall2"))
-{
-overwriteTile(0, 7, 0);
-playSoundEffect(1);
-setFlag("cavefall2", true);
-}
-}
-function hurt() { }</code>
-                <graphics>15</graphics>
-                <gfxtype>Maptile</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>0</key>
-            </StoredObject>
-            <StoredObject>
               <x>400</x>
               <y>272</y>
               <type>entity</type>
@@ -26255,6 +26225,38 @@ die();
 playSoundEffect(1);
 }</code>
                 <graphics>16</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>240</x>
+              <y>336</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>pillar2</name>
+                <code>function onLoad() { }
+function update() { }
+function inRange() { }
+function touch() {
+if (!getFlag("cavefall2"))
+{
+overwriteTile(0, 7, 0);
+overwriteTile(0, 6, 9);
+overwriteTile(0, 5, 9);
+playSoundEffect(1);
+setFlag("cavefall2", true);
+}
+}
+function hurt() { }</code>
+                <graphics>15</graphics>
                 <gfxtype>Maptile</gfxtype>
               </data>
               <dest>0</dest>
@@ -27685,18 +27687,43 @@ TextBox("A DANGEROUS ANSWER");
               <key>0</key>
             </StoredObject>
             <StoredObject>
-              <x>176</x>
-              <y>176</y>
+              <x>112</x>
+              <y>336</y>
               <type>entity</type>
               <enemyType>0</enemyType>
               <data>
                 <name>guard4</name>
-                <code>function onLoad() { }
+                <code>function onLoad() { setWander(true); }
 function update() { }
 function inRange() {
-TextBox("LOOKING AT OUT OF PLACE COLUMNS MAY VIOLATE   THE STATE SECRETS LAW");
+TextBox("DONT YOU LOVE THIS ARCHITECTURE");
 }
 function touch() { }
+function hurt() { }</code>
+                <graphics>0</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>144</x>
+              <y>112</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>guard5</name>
+                <code>function onLoad() { changeDirection(1); }
+function update() { }
+function inRange() { }
+function touch() {
+TextBox("WHO IS THIS HEAD ANYWAY");
+}
 function hurt() { }</code>
                 <graphics>0</graphics>
                 <gfxtype>Characters</gfxtype>
@@ -48227,31 +48254,6 @@ clearObjects();
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>2</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>13</int>
-            <int>13</int>
-            <int>19</int>
-            <int>19</int>
-            <int>13</int>
-            <int>13</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
-            <int>0</int>
             <int>2</int>
             <int>0</int>
             <int>0</int>
@@ -48282,6 +48284,31 @@ clearObjects();
             <int>0</int>
             <int>0</int>
             <int>3</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>13</int>
+            <int>13</int>
+            <int>19</int>
+            <int>19</int>
+            <int>13</int>
+            <int>13</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -48441,7 +48468,7 @@ setFlag("!dungeon4bigheart", true);
 die();
 }
 function hurt() { }</code>
-                <graphics>3</graphics>
+                <graphics>12</graphics>
                 <gfxtype>Maptile</gfxtype>
               </data>
               <dest>0</dest>
@@ -48918,7 +48945,7 @@ overwriteTile(0,10,13);
             <int>21</int>
             <int>21</int>
             <int>19</int>
-            <int>19</int>
+            <int>21</int>
             <int>18</int>
             <int>18</int>
             <int>18</int>
@@ -48943,7 +48970,7 @@ overwriteTile(0,10,13);
             <int>18</int>
             <int>18</int>
             <int>19</int>
-            <int>19</int>
+            <int>21</int>
             <int>11</int>
             <int>11</int>
             <int>11</int>
@@ -49202,7 +49229,7 @@ function hurt() { }</code>
           <dark>false</dark>
           <hblock>false</hblock>
           <vblock>false</vblock>
-          <music>-1</music>
+          <music>5</music>
         </Room>
         <Room xsi:nil="true" />
         <Room>
@@ -51981,7 +52008,7 @@ setFlag("2ghosthall",true);
             <int>0</int>
             <int>13</int>
             <int>0</int>
-            <int>0</int>
+            <int>21</int>
             <int>21</int>
             <int>13</int>
             <int>13</int>
@@ -53733,7 +53760,7 @@ function hurt() { }</code>
           <dark>false</dark>
           <hblock>false</hblock>
           <vblock>false</vblock>
-          <music>5</music>
+          <music>-1</music>
         </Room>
         <Room xsi:nil="true" />
         <Room>
@@ -60015,9 +60042,9 @@ playSoundEffect(0);
             <int>24</int>
             <int>24</int>
             <int>24</int>
-            <int>24</int>
-            <int>24</int>
-            <int>24</int>
+            <int>17</int>
+            <int>17</int>
+            <int>17</int>
             <int>24</int>
             <int>24</int>
             <int>24</int>
@@ -60410,31 +60437,33 @@ playSoundEffect(0);
               <key>0</key>
             </StoredObject>
           </storedObjects>
-          <code>function onLoad() { }
-function update() {
-if (!(getFlag("enterBoss")) &amp;&amp; getPlayerX() == 2) {
-overwriteTile(0,7,1);
-overwriteTile(0,6,1);
-overwriteTile(0,5,1);
-setFlag("enterBoss", true);
-}
-
-if (!(getFlag("beatBoss")) &amp;&amp; !(anyEnemies())) {
-overwriteTile(11,9,10);
-overwriteTile(12,9,10);
-overwriteTile(13,9,10);
-overwriteTile(11,10,10);
-overwriteTile(12,10,10);
-overwriteTile(13,10,10);
-overwriteTile(11,11,10);
-overwriteTile(12,11,10);
-overwriteTile(13,11,10);
-overwriteTile(12,12,10);
-
-playSoundEffect(0);
-setFlag("beatBoss", true);
-clearObjects();
-}
+          <code>function onLoad() { }
+function update() {
+if (!(getFlag("enterBoss")) &amp;&amp; getPlayerX() == 2) {
+overwriteTile(0,7,1);
+overwriteTile(0,6,1);
+overwriteTile(0,5,1);
+setFlag("enterBoss", true);
+}
+
+if (!(getFlag("beatBoss")) &amp;&amp; !(anyEnemies())) {
+overwriteTile(11,9,10);
+overwriteTile(12,9,10);
+overwriteTile(13,9,10);
+overwriteTile(11,10,10);
+overwriteTile(12,10,13);
+overwriteTile(13,10,10);
+overwriteTile(11,11,10);
+overwriteTile(12,11,10);
+overwriteTile(13,11,10);
+overwriteTile(12,12,10);
+setPlayerRow(0);
+setName("");
+
+playSoundEffect(0);
+setFlag("beatBoss", true);
+clearObjects();
+}
 }</code>
           <dark>false</dark>
           <hblock>false</hblock>
@@ -67739,7 +67768,7 @@ TextBox("DONT WASTE YOUR TIME WITH THOSE PUNY BULLETS");
       </xmlRooms>
     </Adventure>
     <Adventure>
-      <music>11</music>
+      <music>10</music>
       <tileset>5</tileset>
       <key>
         <int>0</int>
@@ -70663,7 +70692,7 @@ function hurt() { }</code>
               <enemyType>0</enemyType>
               <data>
                 <name>passenger</name>
-                <code>function onLoad() { }
+                <code>function onLoad() { changeDirection(3); }
 
 function update() { }
 
@@ -70683,6 +70712,48 @@ TextBox("TRAIN HAS TO WAIT UNTIL AFTER MARYS USUAL     AFTERNOON NAP TIME");
 
 function hurt() { }</code>
                 <graphics>1</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>624</x>
+              <y>272</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>heeler</name>
+                <code>function onLoad() { changeDirection(3); }
+function update() { }
+function inRange() { }
+function touch() {
+TextBox("WITH THE MYSTIC ARTS I CAN HEAL YOUR WOUNDS");
+questionBox("BUT IT WILL COST YOU 5 BELLS", "yes()", "no()");
+}
+function hurt() { }
+function yes() {
+var bells = getCounter("_bells");
+if (bells &gt;= 5) {
+setCounter("_bells", bells - 5);
+playSoundEffect(14);
+setCounter("_life", getCounter("_possibleLife"));
+TextBox("GO AND SIN NO MORE");
+}
+else {
+TextBox("I TAKE PITY ON YOU");
+setCounter("_life", getCounter("_life") + 1);
+}
+}
+function no() {
+TextBox("GO IN THE PEACE OF THE GOD EMPRESS");
+}</code>
+                <graphics>9</graphics>
                 <gfxtype>Characters</gfxtype>
               </data>
               <dest>0</dest>
@@ -74575,6 +74646,46 @@ function hurt() { }</code>
               <screen>0</screen>
               <key>0</key>
             </StoredObject>
+            <StoredObject>
+              <x>176</x>
+              <y>240</y>
+              <type>enemy</type>
+              <enemyType>6</enemyType>
+              <data>
+                <graphics>0</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>176</x>
+              <y>112</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>passenger</name>
+                <code>function onLoad() { changeDirection(3); }
+function update() { }
+function inRange() { }
+function touch() { TextBox("THE BUNNY IS THE NATIONAL ANIMAL OF THE EMPIRE SO THEY CAN ROAM WHEREVER THEY WISH"); }
+function hurt() { }</code>
+                <graphics>2</graphics>
+                <gfxtype>Characters</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
           </storedObjects>
           <dark>false</dark>
           <hblock>false</hblock>
@@ -74928,74 +75039,6 @@ function hurt() { }</code>
               <key>0</key>
             </StoredObject>
             <StoredObject>
-              <x>208</x>
-              <y>208</y>
-              <type>entity</type>
-              <enemyType>0</enemyType>
-              <data>
-                <name>bob1</name>
-                <code>var count = 25;
-function onLoad() { }
-function update() {
-count--;
-if (count &lt;= 0) {
-if (getFlag("_redlight"))
-count = 99;
-else
-count = 175;
-becomeEnemy(15, false);
-playSoundEffect(5);
-}
-}
-function inRange() { }
-function touch() { }
-function hurt() { }</code>
-                <graphics>41</graphics>
-                <gfxtype>Maptile</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>0</key>
-            </StoredObject>
-            <StoredObject>
-              <x>624</x>
-              <y>208</y>
-              <type>entity</type>
-              <enemyType>0</enemyType>
-              <data>
-                <name>bob2</name>
-                <code>var count = 60;
-function onLoad() { }
-function update() {
-count--;
-if (count &lt;= 0) {
-if (getFlag("_redlight"))
-count = 99;
-else
-count = 175;
-becomeEnemy(15, false);
-playSoundEffect(5);
-}
-}
-function inRange() { }
-function touch() { }
-function hurt() { }</code>
-                <graphics>41</graphics>
-                <gfxtype>Maptile</gfxtype>
-              </data>
-              <dest>0</dest>
-              <destx>0</destx>
-              <desty>0</desty>
-              <destroomX>0</destroomX>
-              <destroomY>0</destroomY>
-              <screen>0</screen>
-              <key>0</key>
-            </StoredObject>
-            <StoredObject>
               <x>80</x>
               <y>48</y>
               <type>shooter</type>
@@ -75058,6 +75101,74 @@ function hurt() { }</code>
               <dest>-1</dest>
               <destx>49</destx>
               <desty>35</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>208</x>
+              <y>208</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>bob1</name>
+                <code>var count = 25;
+function onLoad() { }
+function update() {
+count--;
+if (count &lt;= 0) {
+if (getFlag("_redlight"))
+count = 125;
+else
+count = 375;
+becomeEnemy(15, false);
+playSoundEffect(5);
+}
+}
+function inRange() { }
+function touch() { }
+function hurt() { }</code>
+                <graphics>41</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
+              <destroomX>0</destroomX>
+              <destroomY>0</destroomY>
+              <screen>0</screen>
+              <key>0</key>
+            </StoredObject>
+            <StoredObject>
+              <x>624</x>
+              <y>208</y>
+              <type>entity</type>
+              <enemyType>0</enemyType>
+              <data>
+                <name>bob2</name>
+                <code>var count = 60;
+function onLoad() { }
+function update() {
+count--;
+if (count &lt;= 0) {
+if (getFlag("_redlight"))
+count = 99;
+else
+count = 275;
+becomeEnemy(6, false);
+playSoundEffect(5);
+}
+}
+function inRange() { }
+function touch() { }
+function hurt() { }</code>
+                <graphics>41</graphics>
+                <gfxtype>Maptile</gfxtype>
+              </data>
+              <dest>0</dest>
+              <destx>0</destx>
+              <desty>0</desty>
               <destroomX>0</destroomX>
               <destroomY>0</destroomY>
               <screen>0</screen>
@@ -98172,11 +98283,11 @@ spawnKey(12,2);
             <int>2</int>
             <int>3</int>
             <int>3</int>
-            <int>3</int>
             <int>2</int>
+            <int>57</int>
             <int>0</int>
+            <int>57</int>
             <int>2</int>
-            <int>3</int>
             <int>3</int>
             <int>3</int>
             <int>2</int>
@@ -98198,9 +98309,9 @@ spawnKey(12,2);
             <int>13</int>
             <int>13</int>
             <int>13</int>
-            <int>13</int>
+            <int>18</int>
             <int>0</int>
-            <int>13</int>
+            <int>18</int>
             <int>13</int>
             <int>13</int>
             <int>13</int>
@@ -98296,22 +98407,69 @@ spawnKey(12,2);
               <enemyType>0</enemyType>
               <data>
                 <name>mary</name>
-                <code>var end = false;
-function onLoad() { }
-function update() {
-if (end)
-	enterCredits();
-else if (getPlayerY() == 8) {
-TextBox("NICOLE YOU HAVE SAVED ME");
-TextBox("AND NOW I HAVE TO TELL YOU A SECRET");
-TextBox("THAT DARK LADY MARION WAS ME THE ENTIRE TIME");
-TextBox("I HOPE YOU ENJOYED THE LITTLE GAME I SET UP   FOR YOU");
-end = true;
-}
-}
-function inRange() { }
-function touch() { }
-function hurt() { }</code>
+                <code>var end = false;
+var talked = false;
+function onLoad() { }
+function update() {
+if (end)
+	enterCredits();
+else if (getPlayerY() == 8 &amp;&amp; !talked &amp;&amp; getFlag("winCondition"))
+	ending2();
+else if (!talked &amp;&amp; getPlayerY() == 8) {
+TextBox("NICOLE YOU HAVE SAVED ME");
+TextBox("AND NOW I HAVE TO TELL YOU A SECRET");
+TextBox("THAT DARK LADY MARION WAS ME THE ENTIRE TIME");
+TextBox("I HOPE YOU ENJOYED THE LITTLE GAME I SET UP   FOR YOU");
+end = true;
+}
+}
+function inRange() { hurtPlayer(); }
+function touch() { }
+function hurt() { TextBox("IM BULLETPROOF YOU IDIOT"); }
+function ending2() {
+TextBox("MARY: NICOLE YOU HAVE SAVED ME AND NOW I HAVE");
+TextBox("NICOLE: I KNOW ALL ABOUT YOUR LITTLE SCHEME   MARY");
+TextBox("NICOLE: OR SHOULD I SAY DARK LADY MARION");
+TextBox("MARY: AWW YOU SAW THROUGH THE GAME I SET UP   FOR YOU");
+TextBox("NICOLE: AND I KNOW YOU ARE A TYRANT WHOSE     GUARDS TERRORIZE THE PEOPLE");
+questionBox("MARY: QUESTION IS ARE YOU GOING TO DO ANYTHINGABOUT IT", "yes()", "no()");
+}
+function yes() {
+TextBox("MARY: ID LIKE TO SEE YOU TRY");
+hookDeath("postDeath()");
+overwriteTile(10,12,3);
+overwriteTile(11,12,3);
+overwriteTile(12,12,3);
+overwriteTile(13,12,3);
+overwriteTile(14,12,3);
+overwriteTile(11,8,17);
+overwriteTile(13,8,17);
+playBGM(16);
+spawnShooter(11,8,true);
+spawnShooter(13,8,true);
+spawnEnemy(6,10, 18);
+spawnEnemy(7, 10, 18);
+spawnEnemy(8,10,18);
+spawnEnemy(18,10,18);
+spawnEnemy(17,10,18);
+spawnEnemy(16,10,18);
+spawnEnemy(12,10,18);
+spawnEnemy(9,6,18);
+spawnEnemy(15,6,18);
+talked = true;
+}
+function no() {
+TextBox("NICOLE: WELL");
+TextBox("NICOLE:");
+TextBox("NICOLE: NO IM NOT");
+TextBox("MARY: THATS WHAT I THOUGHT");
+end = true;
+}
+function postDeath() {
+TextBox("MARY: SIGH");
+TextBox("MARY: TIME TO GET OUT ANOTHER CLONE");
+end = true;
+}</code>
                 <graphics>5</graphics>
                 <gfxtype>Characters</gfxtype>
               </data>
@@ -98324,6 +98482,13 @@ function hurt() { }</code>
               <key>0</key>
             </StoredObject>
           </storedObjects>
+          <code>function onLoad() {
+// TODO: Add full win condition
+if (true) {
+setFlag("winCondition", true);
+}
+}
+function update() { }</code>
           <dark>false</dark>
           <hblock>false</hblock>
           <vblock>true</vblock>
@@ -127322,6 +127487,22 @@ TextBox("SOUNDS LIKE WE HAVE A DEAL THEN");
       <wanderer>false</wanderer>
       <ghost>false</ghost>
       <dependent />
+    </BestiaryEntry>
+    <BestiaryEntry>
+      <name>Deathguard</name>
+      <graphicsRow>18</graphicsRow>
+      <speed>10</speed>
+      <decisiveness>7</decisiveness>
+      <intelligence>9</intelligence>
+      <health>10</health>
+      <xOffset>16</xOffset>
+      <yOffset>40</yOffset>
+      <width>10</width>
+      <height>6</height>
+      <movementType>intelligent</movementType>
+      <wanderer>false</wanderer>
+      <ghost>false</ghost>
+      <dependent>_neverset</dependent>
     </BestiaryEntry>
   </bestiary>
   <stockEntities>

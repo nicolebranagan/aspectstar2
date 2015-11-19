@@ -18,6 +18,7 @@ namespace aspectstar2
         AdventureScreen currentAdventure;
         MapScreen currentMap;
 
+        public bool hasTorch = false;
         public bool[] beaten;
         public bool[] crystalKeys = { false, false, false, false, false, false, false, false };
         public int crystalKeyCount { get
@@ -71,7 +72,12 @@ namespace aspectstar2
 
             weapons = new List<Weapon>();
             foreach (var stored in sG.weapons)
-                weapons.Add(Weapon.unpackWeapon(stored));
+            {
+                Weapon w = Weapon.unpackWeapon(stored);
+                weapons.Add(w);
+                if (w is TorchWeapon)
+                    hasTorch = true;
+            }
 
             if (weapons.Count > 0)
                 weaponA = weapons[0];
@@ -215,6 +221,9 @@ namespace aspectstar2
                     weaponA = newWeapon;
                 else if (weaponB is NullWeapon)
                     weaponB = newWeapon;
+
+                if (newWeapon is TorchWeapon)
+                    hasTorch = true;
             }
         }
 
@@ -233,7 +242,7 @@ namespace aspectstar2
             List<AdventureItem> items = new List<AdventureItem>();
             items.Add(new AdventureHeart());
             items.Add(new AdventureBell());
-            if (currentAdventure.adventure.spawnTorch)
+            if (hasTorch && currentAdventure.adventure.hasDarkRooms)
                 items.Add(new AdventureTorch());
             else
                 items.Add(new AdventureHeart());

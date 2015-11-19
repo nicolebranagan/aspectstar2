@@ -162,11 +162,15 @@ namespace aspectstar2
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            if ((currentScreen == null || currentScreen is TitleScreen) &&
-                (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape)))
-                Exit();
+            KeyboardState state = Keyboard.GetState();
 
-            Master.controls.Update();
+            if ((currentScreen == null || currentScreen is TitleScreen) &&
+                (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || state.IsKeyDown(Keys.Escape)))
+                Exit();
+            else if ((state.IsKeyDown(Keys.LeftAlt) || state.IsKeyDown(Keys.RightAlt)) && (state.IsKeyDown(Keys.Enter)))
+                ToggleFullScreen();
+
+            controls.Update();
             currentScreen.Update(gameTime);
 
             base.Update(gameTime);
@@ -267,6 +271,12 @@ namespace aspectstar2
             {
                 
             }
+        }
+        
+        public void ToggleFullScreen()
+        {
+            graphics.IsFullScreen = !graphics.IsFullScreen;
+            graphics.ApplyChanges();
         }
 
         public void ToggleFullScreen(bool fullScreen)

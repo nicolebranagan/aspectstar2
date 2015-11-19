@@ -35,7 +35,7 @@ namespace aspectstar2
         public int[] key;
         public Room templateRoom;
         public string name = "DUNGEON";
-        public bool spawnTorch = false;
+        public bool hasDarkRooms = false;
 
         [XmlIgnore]
         public Room[,] rooms = new Room[16,16];
@@ -84,8 +84,8 @@ namespace aspectstar2
                     if (rooms[i, j] != null)
                     {
                         newAdv.rooms[i, j] = rooms[i, j].Clone();
-                        if (!newAdv.spawnTorch && rooms[i, j].dark)
-                            newAdv.spawnTorch = true;
+                        if (!newAdv.hasDarkRooms && rooms[i, j].dark)
+                            newAdv.hasDarkRooms = true;
                     }
                 }
 
