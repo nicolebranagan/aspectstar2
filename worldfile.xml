@@ -10352,15 +10352,6 @@ THANKS FOR PLAYING</credits>
         <desty>11</desty>
       </MapObject>
       <MapObject xsi:type="MapTeleporter">
-        <x>24</x>
-        <y>29</y>
-        <dest>5</dest>
-        <destroomX>6</destroomX>
-        <destroomY>11</destroomY>
-        <destx>21</destx>
-        <desty>8</desty>
-      </MapObject>
-      <MapObject xsi:type="MapTeleporter">
         <x>42</x>
         <y>34</y>
         <dest>8</dest>
@@ -10374,6 +10365,15 @@ THANKS FOR PLAYING</credits>
         <y>21</y>
         <dest>2</dest>
         <destroomX>10</destroomX>
+        <destroomY>2</destroomY>
+        <destx>12</destx>
+        <desty>11</desty>
+      </MapObject>
+      <MapObject xsi:type="MapTeleporter">
+        <x>56</x>
+        <y>33</y>
+        <dest>11</dest>
+        <destroomX>4</destroomX>
         <destroomY>2</destroomY>
         <destx>12</destx>
         <desty>11</desty>
