@@ -262,4 +262,40 @@ namespace aspectstar2
             //
         }
     }
+
+    public class AdventureHidden : AdventureObject
+    {
+        int enemy;
+
+        public AdventureHidden(int enemy)
+        {
+            this.enemy = enemy;
+        }
+
+        public override void Update()
+        {
+            if (!parent.isSolid(location, 0, 0, 0, Master.Directions.Down))
+            {
+                AdventureEnemy aE = new AdventureEnemy(Master.currentFile.bestiary[enemy], enemy);
+                aE.location = location;
+                parent.addObject(aE);
+                active = false;
+            }
+        }
+
+        public override void Draw(SpriteBatch spriteBatch, Color mask)
+        {
+            // Do nothing
+        }
+
+        public override bool inRange(AdventurePlayer player)
+        {
+            return false;
+        }
+
+        public override void Touch()
+        {
+            // Do nothing
+        }
+    }
 }

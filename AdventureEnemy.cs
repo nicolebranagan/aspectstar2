@@ -11,7 +11,7 @@ namespace aspectstar2
     {
         protected BestiaryEntry definition;
         protected int health;
-        protected int flickerCount;
+        protected int flickerCount = 2;
         protected bool ghost;
         protected int radius = 16;
         protected bool interenemycollide = false;

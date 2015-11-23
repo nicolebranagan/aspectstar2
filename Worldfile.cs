@@ -147,12 +147,17 @@ namespace aspectstar2
             teleporter = 7,
             stock = 8,
             special = 9,
+            hidden = 10,
         }
 
         public AdventureObject getAdventureObject()
         {
             switch (type)
             {
+                case ObjectType.hidden:
+                    AdventureHidden hidden = new AdventureHidden(enemyType);
+                    hidden.location = new Vector2(x, y);
+                    return hidden;
                 case ObjectType.special:
                     AdventureSpecial special = new AdventureSpecial(screen, key - 1);
                     special.location = new Vector2(x, y);

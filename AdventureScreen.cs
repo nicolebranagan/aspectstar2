@@ -537,17 +537,25 @@ namespace aspectstar2
             dest = new Rectangle((int)(12 * 32 + (16 * 4)), (int)(13 * 32 + 32), 16, 16);
             spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
 
-            // Beat level marker
-            if (beaten)
+            if (label == adventure.name)
             {
-                source = new Rectangle((128 + 48), 0, 16, 16);
-                dest = new Rectangle(48, 14 * 32, 16, 16);
-                spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
-            }
-            spriteBatch.End();
+                // Beat level marker
+                if (beaten)
+                {
+                    source = new Rectangle((128 + 48), 0, 16, 16);
+                    dest = new Rectangle(48, 14 * 32, 16, 16);
+                    spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
+                }
+                spriteBatch.End();
 
-            // Name
-            WriteText(spriteBatch, label, new Vector2(48 + (beaten ? 16 : 0), 14 * 32), Color.White);
+                // Name
+                WriteText(spriteBatch, (beaten ? label.Substring(1) : label), new Vector2(48 + (beaten ? 16 : 0), 14 * 32), Color.White);
+            }
+            else
+            {
+                spriteBatch.End();
+                WriteText(spriteBatch, label, new Vector2(48, 14 * 32), Color.White);
+            }
 
             // Key counts
             WriteText(spriteBatch, game.bells.ToString(), new Vector2(12 * 32 + 16, 13 * 32 + 16), Color.White);

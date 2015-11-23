@@ -246,5 +246,4 @@ namespace aspectstar2
             }
         }
     }
-
 }
