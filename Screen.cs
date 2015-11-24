@@ -46,6 +46,13 @@ namespace aspectstar2
                     sourceRect = new Rectangle((128), 0, 16, 16);
                     spriteBatch.Draw(Master.texCollection.controls, destRect, sourceRect, Color.White);
                 }
+                else if (asc == 46)
+                {
+                    sourceRect = new Rectangle(592, 8, 16, 8);
+                    destRect.Y = destRect.Y + 8;
+                    destRect.Height = 8;
+                    spriteBatch.Draw(font, destRect, sourceRect, textColor);
+                }
                 else if ((asc >= 48) && (asc <= 57))
                 {
                     asc = asc - 48;

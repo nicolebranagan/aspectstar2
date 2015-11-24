@@ -274,7 +274,7 @@ namespace aspectstar2
 
         public override void Update()
         {
-            if (!parent.isSolid(location, 0, 0, 0, Master.Directions.Down))
+            if (Vector2.Distance(location, parent.player.location) < 96 && !parent.isSolid(location, 0, 0, 0, Master.Directions.Down))
             {
                 AdventureEnemy aE = new AdventureEnemy(Master.currentFile.bestiary[enemy], enemy);
                 aE.location = location;
