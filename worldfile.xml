@@ -65510,11 +65510,11 @@ TextBox("IM JUST GOING TO STAY HERE I THINK");
             <int>10</int>
             <int>15</int>
             <int>10</int>
-            <int>11</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>11</int>
+            <int>0</int>
+            <int>0</int>
             <int>10</int>
             <int>15</int>
             <int>10</int>
@@ -65585,11 +65585,11 @@ TextBox("IM JUST GOING TO STAY HERE I THINK");
             <int>10</int>
             <int>10</int>
             <int>10</int>
-            <int>11</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>11</int>
+            <int>0</int>
+            <int>0</int>
             <int>10</int>
             <int>10</int>
             <int>10</int>
@@ -89386,7 +89386,7 @@ overwriteTile(13,3,8);
           </storedObjects>
           <code>function onLoad() { }
 function update() { }</code>
-          <dark>false</dark>
+          <dark>true</dark>
           <hblock>false</hblock>
           <vblock>false</vblock>
           <music>-1</music>
@@ -91294,8 +91294,7 @@ setFlag("mouseghost", true);
 function update() {
 if (!getFlag("UpRoom") &amp;&amp; !anyEnemies()) {
 setFlag("UpRoom", true);
-spawnKey(12,4);
-overwriteTile(12,4,18);
+spawnKey(12,11);
 clearObjects();
 }
 }</code>
@@ -92269,7 +92268,7 @@ overwriteTile(24,7,0);
           </storedObjects>
           <code>function onLoad() { }
 function update() { }</code>
-          <dark>false</dark>
+          <dark>true</dark>
           <hblock>false</hblock>
           <vblock>false</vblock>
           <music>-1</music>
@@ -95041,7 +95040,7 @@ function hurt() { }</code>
           </storedObjects>
           <code>function onLoad() { }
 function update() { }</code>
-          <dark>false</dark>
+          <dark>true</dark>
           <hblock>false</hblock>
           <vblock>false</vblock>
           <music>-1</music>
