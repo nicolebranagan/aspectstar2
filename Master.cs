@@ -252,6 +252,7 @@ namespace aspectstar2
         {
             PlaySound.enabled = opt.sound;
             PlaySong.enabled = opt.music;
+            PlaySong.SetVolume(opt.volume);
             controls.ChangeDefinition(opt);
             ToggleFullScreen(opt.fullscreen);
 
@@ -377,6 +378,7 @@ namespace aspectstar2
     {
         public bool sound = true;
         public bool music = true;
+        public int volume = 6;
         public bool fullscreen = false;
 
         public Keys Up = Keys.Up;
@@ -392,6 +394,7 @@ namespace aspectstar2
             Options newOptions = new Options();
             newOptions.sound = sound;
             newOptions.music = music;
+            newOptions.volume = volume;
             newOptions.fullscreen = fullscreen;
             newOptions.Up = Up;
             newOptions.Down = Down;

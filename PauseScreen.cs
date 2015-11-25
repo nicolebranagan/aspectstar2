@@ -51,8 +51,6 @@ namespace aspectstar2
 
             if (game.crystalKeyCount > 0)
             {
-
-
                 WriteText(spriteBatch, "CRYSTAL KEYS", new Vector2(32, 256 + 80), Color.White);
                 for (int j = 0; j < game.crystalKeys.Length; j++)
                 {

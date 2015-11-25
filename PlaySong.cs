@@ -81,7 +81,7 @@ namespace aspectstar2
 
         public static void Play(SongName song)
         {
-            if (enabled && currentSong != song)
+            if (enabled && (currentSong != song || MediaPlayer.State != MediaState.Playing))
             {
                 MediaPlayer.Stop();
                 currentSong = song;
@@ -89,9 +89,14 @@ namespace aspectstar2
                 {
                     MediaPlayer.Play(Songs[song]);
                 }
-                MediaPlayer.Volume = 0.4f;
+//                MediaPlayer.Volume = 0.6f;
                 MediaPlayer.IsRepeating = true;
             }
+        }
+
+        public static void SetVolume(int volume)
+        {
+            MediaPlayer.Volume = ((float)volume) / (float)10;
         }
     }
 }
