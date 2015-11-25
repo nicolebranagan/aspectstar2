@@ -96,6 +96,7 @@ namespace aspectstar2
             NewGame = 0,
             Continue = 1,
             Options = 2,
+            Quit = 3,
         }
 
         int lag = 20;
@@ -111,16 +112,13 @@ namespace aspectstar2
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
-            //WriteText(spriteBatch, "ASPECT STAR 2", new Vector2((Master.width / 2) - (8 * 13), (Master.height / 2) - 128), Color.White);
-            //WriteText(spriteBatch, "PRE RELEASE DEMO", new Vector2((Master.width / 2) - (8 * 16), (Master.height / 2) - 96), Color.White);
+            WriteText(spriteBatch, "NEW GAME", 13, 21, Color.White);
+            WriteText(spriteBatch, "CONTINUE", 15, 21, saveFailed ? Color.DarkGray : Color.White);
+            WriteText(spriteBatch, "OPTIONS", 17, 21, Color.White);
+            WriteText(spriteBatch, "EXIT PROGRAM", 19, 21, Color.White);
 
-            WriteText(spriteBatch, "NEW GAME", new Vector2((Master.width / 2) - (2 * 16), (Master.height / 2) - 40), Color.White);
-            if (!saveFailed)
-                WriteText(spriteBatch, "CONTINUE", new Vector2((Master.width / 2) - (2 * 16), (Master.height / 2) - 8), Color.White);
-            WriteText(spriteBatch, "OPTIONS", new Vector2((Master.width / 2) - (2 * 16), (Master.height / 2) + 24), Color.White);
-
-            WriteText(spriteBatch, "PRE RELEASE DEMO", new Vector2((Master.width / 2) - (8 * 16), (Master.height / 2) + 96 - 16), Color.White);
-            WriteText(spriteBatch, "NICOLE 2015", new Vector2((Master.width / 2) - (8 * 10), (Master.height / 2) + 96 ), Color.White);
+            WriteText(spriteBatch, "VERSION 0.99", 24, Color.White);
+            WriteText(spriteBatch, "COPYRIGHT NICOLE 2015", 26, Color.White);
 
             spriteBatch.Begin();
             Rectangle source = new Rectangle(128, 16, 16, 16);
@@ -129,7 +127,7 @@ namespace aspectstar2
 
             spriteBatch.Draw(Master.texCollection.title, dest, Color.White);
 
-            dest = new Rectangle((Master.width / 2) - (4 * 16), (Master.height / 2) - 40 + (32 * (int)selection), 16, 16);
+            dest = new Rectangle(19 * 16, 13 * 16 + (32 * (int)selection), 16, 16);
 
             spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.Cyan);
             spriteBatch.End();
@@ -151,7 +149,7 @@ namespace aspectstar2
                         selection = Selections.NewGame;
                     lag = 20;
                 }
-                else if (Master.controls.Down && (int)selection != 2)
+                else if (Master.controls.Down && (int)selection != 3)
                 {
                     selection = (Selections)((int)selection + 1);
                     if (saveFailed && selection == Selections.Continue)
@@ -177,6 +175,9 @@ namespace aspectstar2
                         case Selections.Options:
                             master.UpdateScreen(new OptionsScreen(master));
                             PlaySound.Play(PlaySound.SoundEffectName.Pause);
+                            break;
+                        case Selections.Quit:
+                            master.Exit();
                             break;
                     }
                 }

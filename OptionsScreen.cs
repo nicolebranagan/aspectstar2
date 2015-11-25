@@ -47,7 +47,7 @@ namespace aspectstar2
         {
             Rectangle source, dest;
 
-            WriteText(spriteBatch, "ASPECT STAR 2 V0.99 OPTIONS", 2, Color.White);
+            WriteText(spriteBatch, "ASPECT STAR 2 OPTIONS", 2, Color.White);
 
             WriteText(spriteBatch, "SET KEYBOARD CONTROLS", 5, 6, Color.White);
 
