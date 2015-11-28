@@ -10361,15 +10361,6 @@ THANKS FOR PLAYING</credits>
         <desty>3</desty>
       </MapObject>
       <MapObject xsi:type="MapTeleporter">
-        <x>56</x>
-        <y>33</y>
-        <dest>11</dest>
-        <destroomX>4</destroomX>
-        <destroomY>2</destroomY>
-        <destx>12</destx>
-        <desty>11</desty>
-      </MapObject>
-      <MapObject xsi:type="MapTeleporter">
         <x>34</x>
         <y>21</y>
         <dest>7</dest>
