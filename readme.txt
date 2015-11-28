@@ -5,7 +5,7 @@
      //                         
 
     ===ASPECT STAR  2===
-	 BY NICOLE BRANAGAN
+     BY NICOLE BRANAGAN
 	 
 Introduction
 ------------

@@ -60,10 +60,15 @@ namespace aspectstar2
             WriteText(spriteBatch, "B", 9, 20, selection == Selections.B ? Color.Red : Color.White);
             WriteText(spriteBatch, "START", 13, 20, selection == Selections.Start ? Color.Red : Color.White);*/
 
-            if (opti.music)
-                WriteText(spriteBatch, "MUSIC VOLUME", 14, 6, Color.White);
+            if (PlaySong.loaded)
+            {
+                if (opti.music)
+                    WriteText(spriteBatch, "MUSIC VOLUME", 14, 6, Color.White);
+                else
+                    WriteText(spriteBatch, "GAME MUSIC DISABLED", 14, 6, Color.White);
+            }
             else
-                WriteText(spriteBatch, "GAME MUSIC DISABLED", 14, 6, Color.White);
+                WriteText(spriteBatch, "GAME MUSIC NOT AVAILABLE", 14, 6, Color.DarkGray);
 
             if (opti.sound)
                 WriteText(spriteBatch, "SOUND EFFECTS ENABLED", 16, 6, Color.White);
@@ -81,11 +86,11 @@ namespace aspectstar2
 
             spriteBatch.Begin();
 
-            if (opti.music)
+            if (PlaySong.loaded && opti.music)
             {
                 spriteBatch.Draw(Master.texCollection.blank, new Rectangle(19 * 16 + opti.volume * 16 + 2, 14 * 16, (10 - opti.volume) * 16 - 2, 14), Color.FromNonPremultiplied(120, 120, 120, 255));
                 spriteBatch.Draw(Master.texCollection.blank, new Rectangle(19 * 16, 14 * 16, opti.volume * 16, 14),
-                    opti.volume > 8 ?
+                    opti.volume > 7 ?
                     Color.FromNonPremultiplied(216, 64, 96, 255) :
                     Color.FromNonPremultiplied(80, 128, 255, 255)
                     );
@@ -201,12 +206,15 @@ namespace aspectstar2
                             selection = Selections.Up;
                             break;
                         case Selections.Music:
-                            opti.music = !opti.music;
-                            PlaySound.Play(PlaySound.SoundEffectName.Pause);
-                            if (opti.music == false)
-                                PlaySong.Play(PlaySong.SongName.Silent);
-                            else
-                                PlaySong.Play(PlaySong.SongName.Title);
+                            if (PlaySong.loaded)
+                            {
+                                opti.music = !opti.music;
+                                PlaySound.Play(PlaySound.SoundEffectName.Pause);
+                                if (opti.music == false)
+                                    PlaySong.Play(PlaySong.SongName.Silent);
+                                else
+                                    PlaySong.Play(PlaySong.SongName.Title);
+                            }
                             break;
                         case Selections.Sound:
                             opti.sound = !opti.sound;
@@ -234,7 +242,7 @@ namespace aspectstar2
                     }
                 }
 
-                if (selection == Selections.Music && opti.music)
+                if (selection == Selections.Music && PlaySong.loaded && opti.music)
                 {
                     if (lag == 0)
                     {

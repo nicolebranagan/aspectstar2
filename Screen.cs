@@ -117,7 +117,7 @@ namespace aspectstar2
             WriteText(spriteBatch, "OPTIONS", 17, 21, Color.White);
             WriteText(spriteBatch, "EXIT PROGRAM", 19, 21, Color.White);
 
-            WriteText(spriteBatch, "VERSION 0.99", 24, Color.White);
+            WriteText(spriteBatch, "VERSION 1.00", 24, Color.White);
             WriteText(spriteBatch, "COPYRIGHT NICOLE 2015", 26, Color.White);
 
             spriteBatch.Begin();

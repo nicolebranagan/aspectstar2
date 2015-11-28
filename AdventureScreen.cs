@@ -956,9 +956,12 @@ namespace aspectstar2
 
         public bool interenemyCollide(Vector2 location, int radius, AdventureObject self)
         {
+            if (self is AdventureEnemy && ((AdventureEnemy)self).ghost)
+                return false;
+
             foreach (AdventureObject obj in objects)
             {
-                if (obj is AdventureEnemy && obj != self)
+                if (obj is AdventureEnemy && obj != self && !((AdventureEnemy)obj).ghost)
                 {
                     if (Vector2.Distance(obj.location, location) < radius)
                         return true;

@@ -81105,21 +81105,20 @@ TextBox("GO IN THE PEACE OF THE GOD EMPRESS");
               <enemyType>0</enemyType>
               <data>
                 <name>mysteryguy</name>
-                <code>function onLoad() { }
-function update() { }
-function inRange() { }
-function touch() {
-if (getFlag("_beaten")) {
-TextBox("01234567901234567901234567901234567901234567890");
-TextBox("LET ME POP OUT THIS WINDOW FOR YOU");
-overwriteTile(2,2,0);
-overwriteTile(2,1,0);
-}
-else {
-TextBox("IN CASE SOMETHING HAPPENS TO THE ENGINE I AM  IN CHARGE OF EVACUATION");
+                <code>function onLoad() { }
+function update() { }
+function inRange() { }
+function touch() {
+if (getFlag("_beaten")) {
+TextBox("LET ME POP OUT THIS WINDOW FOR YOU");
+overwriteTile(2,2,0);
+overwriteTile(2,1,0);
 }
-
-}
+else {
+TextBox("IN CASE SOMETHING HAPPENS TO THE ENGINE I AM  IN CHARGE OF EVACUATION");
+}
+
+}
 function hurt() { }</code>
                 <graphics>0</graphics>
                 <gfxtype>Characters</gfxtype>
@@ -97732,9 +97731,9 @@ overwriteTile(24,8,9);
             <int>23</int>
             <int>23</int>
             <int>9</int>
-            <int>8</int>
+            <int>9</int>
             <int>0</int>
-            <int>8</int>
+            <int>9</int>
             <int>9</int>
             <int>23</int>
             <int>23</int>
@@ -105115,9 +105114,9 @@ playSoundEffect(0);
             <int>0</int>
             <int>0</int>
             <int>0</int>
-            <int>10</int>
-            <int>11</int>
-            <int>10</int>
+            <int>0</int>
+            <int>0</int>
+            <int>0</int>
             <int>0</int>
             <int>0</int>
             <int>0</int>
@@ -105459,9 +105458,9 @@ playSoundEffect(0);
               <key>0</key>
             </StoredObject>
             <StoredObject>
-              <x>400</x>
-              <y>240</y>
-              <type>key</type>
+              <x>336</x>
+              <y>176</y>
+              <type>heart</type>
               <enemyType>0</enemyType>
               <data>
                 <graphics>0</graphics>
@@ -105476,8 +105475,8 @@ playSoundEffect(0);
               <key>0</key>
             </StoredObject>
             <StoredObject>
-              <x>336</x>
-              <y>176</y>
+              <x>400</x>
+              <y>240</y>
               <type>heart</type>
               <enemyType>0</enemyType>
               <data>
@@ -125141,6 +125140,7 @@ setFlag("_green", false);
 setFlag("_red", false);
 
 setPlayerColor(255,255,255,255);
+setPlayerRow(0);
 
 setName("");
 
@@ -127212,8 +127212,8 @@ spawnKey(12,5);
             <int>0</int>
             <int>0</int>
             <int>31</int>
-            <int>24</int>
-            <int>24</int>
+            <int>28</int>
+            <int>22</int>
             <int>24</int>
             <int>4</int>
             <int>0</int>
@@ -127237,8 +127237,8 @@ spawnKey(12,5);
             <int>50</int>
             <int>0</int>
             <int>32</int>
-            <int>25</int>
-            <int>25</int>
+            <int>30</int>
+            <int>23</int>
             <int>25</int>
             <int>4</int>
             <int>48</int>

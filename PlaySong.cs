@@ -50,6 +50,7 @@ namespace aspectstar2
                 _enabled = value;
             }
         }
+        public static bool loaded = false;
 
         public static void Initialize(Microsoft.Xna.Framework.Content.ContentManager Content)
         {
@@ -72,6 +73,7 @@ namespace aspectstar2
                 Songs[SongName.Dungeon9b] = Content.Load<Song>("music_azureflux02");
                 Songs[SongName.FinalBoss] = Content.Load<Song>("music_azureflux07");
                 Songs[SongName.Credits] = Content.Load<Song>("music_azureflux04");
+                loaded = true;
             }
             catch {
                 // No Music
@@ -81,7 +83,7 @@ namespace aspectstar2
 
         public static void Play(SongName song)
         {
-            if (enabled && (currentSong != song || MediaPlayer.State != MediaState.Playing))
+            if (loaded && enabled && (currentSong != song || MediaPlayer.State != MediaState.Playing))
             {
                 MediaPlayer.Stop();
                 currentSong = song;
