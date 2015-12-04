@@ -72,8 +72,9 @@ System Requirements
 -------------------
 
 Aspect Star 2 currently requires the Windows operating system, and the .NET
-Framework 4.5. Porting to other operating systems is considered an eventual
-goal. A DirectX 9.0c capable GPU is also required.
+Framework 4.5. A DirectX 9.0c capable GPU is also required.
+
+The Linux/OpenGL release version requires installation of the Mono runtime.
 
 Credits
 -------
@@ -98,6 +99,12 @@ Azureflux
 	Music sourced from Azureflux - Piko Piko Stereo, Licensed under 
 	CC - BY - NC - SA 4.0 license.
 	(http://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+Version History
+---------------
+
+v1.00 (11/28/2015) - Initial release version
+v1.01 (12/04/2015) - Initial OpenGL release
 	
 Distribution Rights
 -------------------

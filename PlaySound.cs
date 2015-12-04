@@ -69,9 +69,9 @@ namespace aspectstar2
             PlaySound.special = Content.Load<SoundEffect>("computer");
             PlaySound.coin = Content.Load<SoundEffect>("coin");
             PlaySound.laser = Content.Load<SoundEffect>("laser");
-            PlaySound.heal = Content.Load<SoundEffect>("heal");
+			PlaySound.heal = Content.Load<SoundEffect> ("heal");
 
-            hurtInst = hurt.CreateInstance();
+			hurtInst = hurt.CreateInstance();
             jumpInst = jump.CreateInstance();
             drowInst = drown.CreateInstance();
             keysInst = key.CreateInstance();

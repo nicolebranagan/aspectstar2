@@ -59,7 +59,7 @@ namespace aspectstar2
         Game currentGame = null;
 
         public Master()
-        {
+		{
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
 
