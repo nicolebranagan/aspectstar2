@@ -67,7 +67,7 @@ namespace aspectstar2
 
             int frame = frameCounter / 5;
 
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             Rectangle source = new Rectangle(0, 0, 16, 16);
             if (!friendly)
             {
@@ -97,7 +97,7 @@ namespace aspectstar2
                 }
             }
             spriteBatch.Draw(texture, location, source, Color.White, (float)Math.PI * frame / 2, new Vector2(8,8), 1, SpriteEffects.None, 0);
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public void projectileUpdate(List<AdventureObject> objects)

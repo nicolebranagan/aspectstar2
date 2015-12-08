@@ -125,9 +125,9 @@ namespace aspectstar2
         {
             Rectangle source = new Rectangle(0, 64, 32, 32);
             Rectangle dest = new Rectangle(x, y, 32, 32);
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public override string getLabel()
@@ -156,9 +156,9 @@ namespace aspectstar2
         {
             Rectangle source = new Rectangle(32, 64, 32, 32);
             Rectangle dest = new Rectangle(x, y, 32, 32);
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public override void Update()
@@ -214,13 +214,13 @@ namespace aspectstar2
 
             if (count > 0)
             {
-                spriteBatch.Begin();
+                //spriteBatch.Begin();
                 spriteBatch.Draw(Master.texCollection.controls, destinationRectangle, sourceRectangle, Color.White);
 
                 sourceRectangle = new Rectangle(16 * count, 0, 16, 16);
                 destinationRectangle = new Rectangle(x + 16, y, 16, 16);
                 spriteBatch.Draw(Master.texCollection.arcadeFont, destinationRectangle, sourceRectangle, Color.White);
-                spriteBatch.End();
+                //spriteBatch.End();
             }
         }
 
@@ -281,13 +281,13 @@ namespace aspectstar2
             Rectangle sourceRectangle = new Rectangle(96, 64, 32, 32);
             Rectangle destinationRectangle = new Rectangle(x, y, 32, 32);
 
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             spriteBatch.Draw(Master.texCollection.controls, destinationRectangle, sourceRectangle, Color.White);
 
             sourceRectangle = new Rectangle(16 * count, 0, 16, 16);
             destinationRectangle = new Rectangle(x + 16, y, 16, 16);
             spriteBatch.Draw(Master.texCollection.arcadeFont, destinationRectangle, sourceRectangle, Color.White);
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public override string getLabel()
@@ -314,9 +314,9 @@ namespace aspectstar2
         {
             Rectangle source = new Rectangle(128, 64, 32, 32);
             Rectangle dest = new Rectangle(x, y, 32, 32);
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public override string getLabel()
@@ -343,9 +343,9 @@ namespace aspectstar2
         {
             Rectangle source = new Rectangle(128 + 32, 64, 32, 32);
             Rectangle dest = new Rectangle(x, y, 32, 32);
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public override string getLabel()
@@ -374,9 +374,9 @@ namespace aspectstar2
         {
             Rectangle source = new Rectangle(128 + 64, 64, 32, 32);
             Rectangle dest = new Rectangle(x, y, 32, 32);
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public override string getLabel()
@@ -434,13 +434,13 @@ namespace aspectstar2
 
             if (count > 0)
             {
-                spriteBatch.Begin();
+                //spriteBatch.Begin();
                 spriteBatch.Draw(Master.texCollection.controls, destinationRectangle, sourceRectangle, Color.White);
 
                 sourceRectangle = new Rectangle(16 * count, 0, 16, 16);
                 destinationRectangle = new Rectangle(x + 16, y, 16, 16);
                 spriteBatch.Draw(Master.texCollection.arcadeFont, destinationRectangle, sourceRectangle, Color.White);
-                spriteBatch.End();
+                //spriteBatch.End();
             }
         }
 
@@ -507,13 +507,13 @@ namespace aspectstar2
 
             if (count > 0)
             {
-                spriteBatch.Begin();
+                //spriteBatch.Begin();
                 spriteBatch.Draw(Master.texCollection.controls, destinationRectangle, sourceRectangle, Color.White);
 
                 sourceRectangle = new Rectangle(16 * count, 0, 16, 16);
                 destinationRectangle = new Rectangle(x + 16, y, 16, 16);
                 spriteBatch.Draw(Master.texCollection.arcadeFont, destinationRectangle, sourceRectangle, Color.White);
-                spriteBatch.End();
+                //spriteBatch.End();
             }
         }
 

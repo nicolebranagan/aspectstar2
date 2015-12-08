@@ -84,7 +84,7 @@ namespace aspectstar2
             WriteText(spriteBatch, "RETURN TO PREVIOUS OPTIONS", 24, 6, Color.White);
             WriteText(spriteBatch, "EXIT OPTIONS AND SAVE CHANGES", 26, 6, Color.White);
 
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
 
             if (PlaySong.loaded && opti.music)
             {
@@ -158,14 +158,14 @@ namespace aspectstar2
                         source = new Rectangle(84, 130, 24, 10);
                         break;
                     default:
-                        spriteBatch.End();
+                        //spriteBatch.End();
                         return;
                 }
                 dest = new Rectangle(source.X + 7 * 16, source.Y - 80 + 7 * 16, source.Width, source.Height);
                 spriteBatch.Draw(Master.texCollection.controller, dest, source, Color.White);
             }
 
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public override void Update(GameTime gameTime)

@@ -67,12 +67,12 @@ namespace aspectstar2
             {
                 Rectangle source, dest;
                 Vector2 sourceTile;
-                spriteBatch.Begin();
+                //spriteBatch.Begin();
                 sourceTile = Master.getMapTile(graphicsRow, texture);
                 source = new Rectangle((int)sourceTile.X, (int)sourceTile.Y, 32, 32);
                 dest = new Rectangle((int)location.X - 16, (int)location.Y - 16, 32, 32);
                 spriteBatch.Draw(texture, dest, source, mask);
-                spriteBatch.End();
+                //spriteBatch.End();
             }
             else if (data.gfxtype != EntityData.GraphicsType.Null)
                 base.Draw(spriteBatch, mask);

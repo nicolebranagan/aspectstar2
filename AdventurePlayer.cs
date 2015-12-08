@@ -44,9 +44,9 @@ namespace aspectstar2
                 Rectangle sourceRectangle = new Rectangle(dim_x * column, 0, dim_x, dim_y);
                 Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y, dim_x, dim_y);
 
-                spriteBatch.Begin();
+                //spriteBatch.Begin();
                 spriteBatch.Draw(Master.texCollection.texShadows, destinationRectangle, sourceRectangle, Color.White);
-                spriteBatch.End();
+                //spriteBatch.End();
             }
 
             if (flickerCount > 0)
@@ -75,9 +75,9 @@ namespace aspectstar2
             Rectangle sourceRectangle = new Rectangle(dim_x * column, row * 48, dim_x, dim_y - ((24 - animCount) * 2));
             Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y + (24 - animCount) * 2, dim_x, dim_y - ((24 - animCount) * 2));
 
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             spriteBatch.Draw(Master.texCollection.texAdvPlayer, destinationRectangle, sourceRectangle, Color.White);
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public override void Jump()

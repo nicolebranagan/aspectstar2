@@ -35,7 +35,7 @@ namespace aspectstar2
 
             Texture2D font = Master.texCollection.arcadeFont;
 
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             for (int i = 0; i < text.Length; i++)
             {
                 destRect = new Rectangle((int)pos.X + i * 16, (int)pos.Y, 16, 16);
@@ -81,7 +81,7 @@ namespace aspectstar2
                     spriteBatch.Draw(font, destRect, sourceRect, textColor);
                 }
             }
-            spriteBatch.End();
+            //spriteBatch.End();
         }
     }
 
@@ -117,10 +117,10 @@ namespace aspectstar2
             WriteText(spriteBatch, "OPTIONS", 17, 21, Color.White);
             WriteText(spriteBatch, "EXIT PROGRAM", 19, 21, Color.White);
 
-            WriteText(spriteBatch, "VERSION 1.01", 24, Color.White);
+            WriteText(spriteBatch, "VERSION 1.05 OPENGL`", 24, Color.White);
             WriteText(spriteBatch, "COPYRIGHT NICOLE 2015", 26, Color.White);
 
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             Rectangle source = new Rectangle(128, 16, 16, 16);
             Rectangle dest = new Rectangle((Master.width / 2) - Master.texCollection.title.Width / 2, (Master.height / 2) - 192,
                 Master.texCollection.title.Width, Master.texCollection.title.Height);
@@ -130,7 +130,7 @@ namespace aspectstar2
             dest = new Rectangle(19 * 16, 13 * 16 + (32 * (int)selection), 16, 16);
 
             spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.Cyan);
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public override void Update(GameTime gameTime)
@@ -213,9 +213,9 @@ namespace aspectstar2
         {
             if (credits)
             {
-                spriteBatch.Begin();
+                //spriteBatch.Begin();
                 spriteBatch.Draw(Master.texCollection.credits, new Rectangle(Master.width - 128 - 32, Master.height - 127 + (floatCount - 5), 128, 96), Color.White);
-                spriteBatch.End();
+                //spriteBatch.End();
             }
             for(int i = 0; i < text.Length; i++)
             {   

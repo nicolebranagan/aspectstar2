@@ -42,9 +42,9 @@ namespace aspectstar2
             Rectangle sourceRectangle = new Rectangle(dim_x * column, 0, dim_x, dim_y);
             Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y - (z * 2), dim_x, dim_y);
 
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, mask);
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public override void Touch()
@@ -93,9 +93,9 @@ namespace aspectstar2
             Rectangle sourceRectangle = new Rectangle(dim_x * column, 64, dim_x, dim_y);
             Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y - (z * 2), dim_x, dim_y);
 
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, mask);
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public override void Touch()
@@ -208,9 +208,9 @@ namespace aspectstar2
             Rectangle sourceRectangle = new Rectangle(dim_x * column, 128, dim_x, dim_y);
             Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y - (z * 2), dim_x, dim_y);
 
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, mask);
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public override void Touch()
@@ -278,9 +278,9 @@ namespace aspectstar2
             Rectangle sourceRectangle = new Rectangle(dim_x * column, 192, dim_x, dim_y);
             Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y - (z * 2), dim_x, dim_y);
 
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, mask);
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public override void Touch()
@@ -412,10 +412,10 @@ namespace aspectstar2
             Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y - (z * 2), dim_x, dim_y);
             Rectangle signifierDestination = new Rectangle((int)screen_loc.X + 16, (int)screen_loc.Y - (z * 2) - 16, 32, 16);
 
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, mask);
             spriteBatch.Draw(Master.texCollection.texEnemies, signifierDestination, signifierRect, Color.White);
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public override void Update()
@@ -497,9 +497,9 @@ namespace aspectstar2
                 Rectangle sourceRectangle = new Rectangle(frame * 64, 384, 64, 128);
                 Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y - (z * 2), 64, 128);
 
-                spriteBatch.Begin();
+                //spriteBatch.Begin();
                 spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, mask);
-                spriteBatch.End();
+                //spriteBatch.End();
             }
 
             public override void Update()
@@ -554,9 +554,9 @@ namespace aspectstar2
             Rectangle sourceRectangle = new Rectangle(dim_x * column, 512, dim_x, dim_y);
             Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y - (z * 2), dim_x, dim_y);
 
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, mask);
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public override void Update()
@@ -639,9 +639,9 @@ namespace aspectstar2
             Rectangle sourceRectangle = new Rectangle(_active ? 192 : 64, 576, dim_x, dim_y);
             Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y - (z * 2), dim_x, dim_y);
 
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, mask);
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         int fireCount = 0;
@@ -720,9 +720,9 @@ namespace aspectstar2
             Rectangle sourceRectangle = new Rectangle(dim_x * column, 576 + dim_y * row, dim_x, dim_y);
             Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y - (z * 2), dim_x, dim_y);
 
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, mask);
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public override bool inRange(AdventurePlayer player)

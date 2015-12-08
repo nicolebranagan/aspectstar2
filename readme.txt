@@ -103,8 +103,9 @@ Azureflux
 Version History
 ---------------
 
-v1.00 (11/28/2015) - Initial release version
-v1.01 (12/04/2015) - Initial OpenGL release
+v1.00 (11/28/2015) - Initial DirectX release version, Windows
+v1.01 (12/04/2015) - Initial OpenGL release for Mono
+v1.05 (12/08/2015) - Fixed OpenGL fullscreen bugs
 	
 Distribution Rights
 -------------------

@@ -27,6 +27,8 @@ namespace aspectstar2
         public static Random globalRandom;
         public Options options;
 
+        Matrix scaleMatrix;
+
         SavedGame _sG;
         public SavedGame savedGame
         {
@@ -104,6 +106,13 @@ namespace aspectstar2
 
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            graphics.PreferMultiSampling = false;
+
+            float scaleFactor = Math.Min(GraphicsDevice.DisplayMode.Width / Master.width, GraphicsDevice.DisplayMode.Height / Master.height);
+            scaleMatrix = Matrix.CreateScale (scaleFactor) * 
+                Matrix.CreateTranslation((GraphicsDevice.DisplayMode.Width - (scaleFactor * Master.width)) / 2, 
+                    (GraphicsDevice.DisplayMode.Height - (scaleFactor * Master.height)) / 2, 0);
+            
 
             // Draw textures
             texCollection.blank = new Texture2D(GraphicsDevice, 1, 1);
@@ -183,9 +192,12 @@ namespace aspectstar2
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.Black);
-
+            if (graphics.IsFullScreen)
+				spriteBatch.Begin (SpriteSortMode.Deferred, null, SamplerState.PointClamp, null, null, null, scaleMatrix);
+			else
+				spriteBatch.Begin ();
             currentScreen.Draw(spriteBatch, gameTime);
-
+			spriteBatch.End();
             base.Draw(gameTime);
         }
 
@@ -276,13 +288,22 @@ namespace aspectstar2
         
         public void ToggleFullScreen()
         {
-            graphics.IsFullScreen = !graphics.IsFullScreen;
-            graphics.ApplyChanges();
+            ToggleFullScreen(!graphics.IsFullScreen);
         }
 
         public void ToggleFullScreen(bool fullScreen)
         {
             graphics.IsFullScreen = fullScreen;
+            if (fullScreen)
+            {
+                graphics.PreferredBackBufferWidth = GraphicsDevice.DisplayMode.Width;
+                graphics.PreferredBackBufferHeight = GraphicsDevice.DisplayMode.Height;
+            }
+            else
+            {
+                graphics.PreferredBackBufferWidth = Master.width;
+                graphics.PreferredBackBufferHeight = Master.height;
+            }
             graphics.ApplyChanges();
         }
 

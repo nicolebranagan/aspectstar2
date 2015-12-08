@@ -98,10 +98,10 @@ namespace aspectstar2
             Rectangle sourceRectangle = new Rectangle(dim_x * column, row * 48, dim_x, dim_y);
             Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y - (z * 2), dim_x, dim_y);
 
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, mask);
             //spriteBatch.Draw(Master.texCollection.blank, new Rectangle((int)location.X - width, (int)location.Y - height, width * 2, height * 2), Color.Red);
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public virtual void Move(Vector2 move_dist)
@@ -240,9 +240,9 @@ namespace aspectstar2
             Rectangle sourceRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y, dim_x, dim_y);
             Rectangle destinationRectangle = new Rectangle((int)location.X - 16, (int)location.Y - 16, dim_x, dim_y);
 
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, Color.White);
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public override void Update()

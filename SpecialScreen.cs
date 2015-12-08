@@ -150,7 +150,7 @@ namespace aspectstar2
 
             screenOffset = (int)yoffset - (Master.height);
 
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             for (int i = 0; i < currentMap.Length; i++)
             {
                 x = i % (width / 32);
@@ -164,7 +164,7 @@ namespace aspectstar2
                     spriteBatch.Draw(Master.texCollection.specialTiles, dest, source, levelMask);
                 }
             }
-            spriteBatch.End();
+            //spriteBatch.End();
 
             if (currentMode == SpecialModes.runMode || (currentMode == SpecialModes.DeathAnim))
             {
@@ -185,14 +185,14 @@ namespace aspectstar2
 
         void DrawStatusBar(SpriteBatch spriteBatch)
         {
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             spriteBatch.Draw(Master.texCollection.blank, new Rectangle(width, 0, Master.width - width, height), Color.Black);
             for (int i = 0; i < (Master.height / 16); i++)
             {
                 spriteBatch.Draw(Master.texCollection.controls, new Rectangle(width, i * 16, 16, 16),
                     new Rectangle(0, 16, 16, 16), Color.White);
             }
-            spriteBatch.End();
+            //spriteBatch.End();
 
             if (currentMode == SpecialModes.Paused && animCount < 100)
                 WriteText(spriteBatch, "PAUSED", new Vector2(width + 32, 32), Color.White);

@@ -34,9 +34,9 @@ namespace aspectstar2
                 source = new Rectangle(0, 48 + (graphicsRow - 1) * 32, width, height);
             Rectangle dest = new Rectangle((int)location.X - 16, (int)location.Y - 16, width, height);
 
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             spriteBatch.Draw(Master.texCollection.texSpecial, dest, source, Color.White);
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public virtual void Update()
@@ -258,7 +258,7 @@ namespace aspectstar2
 
         public override void Draw(SpriteBatch spriteBatch, Color mask)
         {
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             Rectangle source = new Rectangle(0, 0, 16, 16);
             if (!friendly)
                 source.Y = 16;
@@ -268,7 +268,7 @@ namespace aspectstar2
                 source.Y = 48;
             Rectangle dest = new Rectangle((int)location.X - 8, (int)location.Y - 8, 16, 16);
             spriteBatch.Draw(Master.texCollection.texProjectile, dest, source, Color.White);
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public override void Update()

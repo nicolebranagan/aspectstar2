@@ -75,8 +75,6 @@ namespace aspectstar2
             if (currentMode == mapModes.menuMode)
                 color = Color.FromNonPremultiplied(255, 255, 255, 100);
 
-            spriteBatch.Begin();
-
             if (player.location.X > (Master.width / 2))
                 screenOffset.X = player.location.X - (Master.width / 2);
             else
@@ -87,13 +85,15 @@ namespace aspectstar2
             else
                 screenOffset.Y = 0;
 
+            limitOffset = new Vector2((float)Math.Floor(screenOffset.X / 32), (float)Math.Floor(screenOffset.Y / 32));
+
             for (int i = 0; i < (Mapfile.width * Mapfile.height); i++)
             {
                 x = i % Mapfile.width;
                 y = i / Mapfile.width;
-                limitOffset = new Vector2((float)Math.Floor(screenOffset.X / 32), (float)Math.Floor(screenOffset.Y / 32));
-                if ((x >= limitOffset.X) && (x <= limitOffset.X + Master.width) &&
-                    (y >= limitOffset.Y) && (y <= limitOffset.Y + Master.height))
+                
+                if ((x >= limitOffset.X) && (x <= limitOffset.X + (Master.width / 32)) &&
+                    (y >= limitOffset.Y) && (y <= limitOffset.Y + (Master.height / 32)))
                 {
                     sourceTile = Master.getMapTile(tileMap[i], Master.texCollection.worldTiles);
                     source = new Rectangle((int)sourceTile.X, (int)sourceTile.Y, 32, 32);
@@ -101,7 +101,14 @@ namespace aspectstar2
                     spriteBatch.Draw(Master.texCollection.worldTiles, dest, source, color);
                 }
             }
-            spriteBatch.End();
+
+            // Draw black bars for fullscreen mode
+            spriteBatch.Draw(Master.texCollection.blank, new Rectangle(-32, -32, 32, Master.height + 64), Color.Black);
+            spriteBatch.Draw(Master.texCollection.blank, new Rectangle(Master.width, -32, 32, Master.height + 64), Color.Black);
+            spriteBatch.Draw(Master.texCollection.blank, new Rectangle(-32, -32, Master.width + 64, 32), Color.Black);
+            spriteBatch.Draw(Master.texCollection.blank, new Rectangle(-32, Master.height, Master.width + 64, 32), Color.Black);
+
+            //spriteBatch.End();
 
             if (currentMode == mapModes.runMode)
                 player.Draw(spriteBatch, Color.White, screenOffset);
@@ -117,13 +124,13 @@ namespace aspectstar2
                 line = new Vector2(line.X, line.Y + 32);
                 WriteText(spriteBatch, "QUIT", line, Color.White);
 
-                spriteBatch.Begin();
+                //spriteBatch.Begin();
                 source = new Rectangle(128, 16, 16, 16);
 
                 dest = new Rectangle((Master.width / 2) - (16 * 5), (Master.height / 2) - (16 * 3) + (32 * (int)selection), 16, 16);
 
                 spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.Red);
-                spriteBatch.End();
+                //spriteBatch.End();
             }
 
             DrawOverlay(spriteBatch);
@@ -221,13 +228,13 @@ namespace aspectstar2
 
             if (game.goldKeys != 0)
             {
-                spriteBatch.Begin();
+                //spriteBatch.Begin();
 
                 source = new Rectangle((128 + 48), 0, 16, 16);
                 dest = new Rectangle(Master.width - 64, 32, 16, 16);
                 spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
 
-                spriteBatch.End();
+                //spriteBatch.End();
 
                 WriteText(spriteBatch, game.goldKeys.ToString(), new Vector2(Master.width - 48, 32), Color.White);
             }

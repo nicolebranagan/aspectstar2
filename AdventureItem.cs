@@ -40,9 +40,9 @@ namespace aspectstar2
                 Rectangle sourceRectangle = new Rectangle((128 + 64), 0, 16, 16);
                 Rectangle destinationRectangle = new Rectangle((int)(this.location.X - 8), (int)(this.location.Y - 8), 16, 16);
 
-                spriteBatch.Begin();
+                //spriteBatch.Begin();
                 spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, Color.White);
-                spriteBatch.End();
+                //spriteBatch.End();
             }
         }
 
@@ -71,9 +71,9 @@ namespace aspectstar2
                 Rectangle sourceRectangle = new Rectangle(128, 0, 16, 16);
                 Rectangle destinationRectangle = new Rectangle((int)(this.location.X - 8), (int)(this.location.Y - 8), 16, 16);
 
-                spriteBatch.Begin();
+                //spriteBatch.Begin();
                 spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, Color.White);
-                spriteBatch.End();
+                //spriteBatch.End();
             }
         }
 
@@ -102,9 +102,9 @@ namespace aspectstar2
             Rectangle sourceRectangle = new Rectangle((128 + 48), 0, 16, 16);
             Rectangle destinationRectangle = new Rectangle((int)(this.location.X - 8), (int)(this.location.Y - 8), 16, 16);
 
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, Color.White);
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public override void Update()
@@ -137,9 +137,9 @@ namespace aspectstar2
             Rectangle sourceRectangle = new Rectangle((128 + 64 + 16), 0, 16, 16);
             Rectangle destinationRectangle = new Rectangle((int)(this.location.X - 8), (int)(this.location.Y - 8), 16, 16);
 
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, Color.White);
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public override void Touch()
@@ -197,9 +197,9 @@ namespace aspectstar2
             Rectangle sourceRectangle = new Rectangle(160, 32, 32, 32);
             Rectangle destinationRectangle = new Rectangle((int)(this.location.X - 16), (int)(this.location.Y - 16), 32, 32);
 
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, Color.White);
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public override void Touch()
@@ -231,9 +231,9 @@ namespace aspectstar2
             Rectangle sourceRectangle = new Rectangle(224, 0, 16, 16);
             Rectangle destinationRectangle = new Rectangle((int)(this.location.X - 8), (int)(this.location.Y - 8), 16, 16);
 
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, Color.White);
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public override void Touch()

@@ -34,9 +34,9 @@ namespace aspectstar2
             foreach (Weapon w in game.weapons)
             {
 
-                spriteBatch.Begin();
+                //spriteBatch.Begin();
                 spriteBatch.Draw(Master.texCollection.blank, new Rectangle(32 + (i * (32 + 16)), 64 + 16, 32, 32), (i == selection) ? Color.DarkRed : Color.Black);
-                spriteBatch.End();
+                //spriteBatch.End();
 
                 w.Draw(spriteBatch, 32 + (i * (32 + 16)), 64 + 16);
 
@@ -56,11 +56,11 @@ namespace aspectstar2
                 {
                     if (game.crystalKeys[j])
                     {
-                        spriteBatch.Begin();
+                        //spriteBatch.Begin();
                         Rectangle source = new Rectangle(128, 32, 32, 32);
                         Rectangle dest = new Rectangle(32 + j * (32 + 16), 256 + 80 + 32, 32, 32);
                         spriteBatch.Draw(Master.texCollection.controls, dest, source, getCrystalMask(animCount + 20 * j));
-                        spriteBatch.End();
+                        //spriteBatch.End();
                     }
                 }
             }

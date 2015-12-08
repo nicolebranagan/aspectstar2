@@ -118,9 +118,9 @@ namespace aspectstar2
             Rectangle sourceRectangle = new Rectangle(dim * column, 0, dim, dim);
             Rectangle destinationRectangle = new Rectangle((int)(screen_loc.X - offset.X), (int)(screen_loc.Y - offset.Y), dim, dim);
 
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, mask);
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public void Move()

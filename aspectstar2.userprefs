@@ -3,14 +3,16 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Master.cs">
     <Files>
       <File FileName="AdventureBoss.cs" Line="1" Column="1" />
-      <File FileName="Master.cs" Line="311" Column="4" />
-      <File FileName="PlaySound.cs" Line="54" Column="42" />
+      <File FileName="Master.cs" Line="291" Column="5" />
+      <File FileName="PlaySound.cs" Line="1" Column="1" />
+      <File FileName="SpecialScreen.cs" Line="1" Column="1" />
+      <File FileName="Tao.Sdl.dll.config" Line="1" Column="1" />
+      <File FileName="OpenTK.dll.config" Line="1" Column="1" />
+      <File FileName="Screen.cs" Line="38" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/home/thnkpad/Projects/aspectstar2/Master.cs" line="310" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

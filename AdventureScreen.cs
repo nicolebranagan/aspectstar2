@@ -361,7 +361,7 @@ namespace aspectstar2
                         WriteText(spriteBatch, "YES", new Vector2((Master.width / 2) - (16 * 11), 16 * 6), Color.White);
                         WriteText(spriteBatch, "NO", new Vector2((Master.width / 2) + (16 * 8), 16 * 6), Color.White);
 
-                        spriteBatch.Begin();
+                        //spriteBatch.Begin();
                         Rectangle source = new Rectangle(128, 16, 16, 16);
                         Rectangle dest;
 
@@ -371,7 +371,7 @@ namespace aspectstar2
                             dest = new Rectangle((Master.width / 2) + (16 * 6), 16 * 6, 16, 16);
                         
                         spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
-                        spriteBatch.End();
+                        //spriteBatch.End();
                     }
                     break;
                 case adventureModes.drowning:
@@ -472,7 +472,7 @@ namespace aspectstar2
             int x, y;
             Rectangle source, dest;
             Vector2 sourceTile;
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             for (int i = 0; i < (tileMap.Length); i++)
             {
                 x = i % 25;
@@ -482,14 +482,14 @@ namespace aspectstar2
                 dest = new Rectangle(x * 32, y * 32, 32, 32);
                 spriteBatch.Draw(Master.texCollection.adventureTiles[adventure.tileset], dest, source, mask);
             }
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public void DrawStatus(SpriteBatch spriteBatch)
         {
             int x, y;
             Rectangle source, dest;
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
 
             // Controls icons
             x = 18;
@@ -546,14 +546,14 @@ namespace aspectstar2
                     dest = new Rectangle(48, 14 * 32, 16, 16);
                     spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
                 }
-                spriteBatch.End();
+                //spriteBatch.End();
 
                 // Name
                 WriteText(spriteBatch, (beaten ? label.Substring(1) : label), new Vector2(48 + (beaten ? 16 : 0), 14 * 32), Color.White);
             }
             else
             {
-                spriteBatch.End();
+                //spriteBatch.End();
                 WriteText(spriteBatch, label, new Vector2(48, 14 * 32), Color.White);
             }
 
@@ -582,7 +582,7 @@ namespace aspectstar2
             Rectangle dest;
             Vector2 sourceTile, limitOffset;
             int x, y;
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
 
             int width, height;
 
@@ -655,7 +655,7 @@ namespace aspectstar2
                         spriteBatch.Draw(Master.texCollection.adventureTiles[adventure.tileset], dest, source, overlayColor);
                 }
             }
-            spriteBatch.End();
+            //spriteBatch.End();
 
 
             if (animCount == 0)
@@ -910,9 +910,9 @@ namespace aspectstar2
         void DrawTextBox(SpriteBatch spriteBatch, string text)
         {
             int height = 4 * 32 + 16;
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             spriteBatch.Draw(Master.texCollection.blank, new Rectangle(0, 0, Master.width, height), Color.Black);
-            spriteBatch.End();
+            //spriteBatch.End();
 
             text = text.ToUpper();
             int tiles = 46; // (int)Math.Floor((double)(Master.width - 64) / 16);
