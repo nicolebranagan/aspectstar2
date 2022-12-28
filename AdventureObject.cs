@@ -12,19 +12,19 @@ namespace aspectstar2
         protected Game game;
         protected AdventureScreen parent;
         protected Texture2D texture;
-        
-        protected int currentFrame = 0;
-        protected int stallCount = 0;
+
+        protected int currentFrame;
+        protected int stallCount;
         protected Vector2 offset = new Vector2(16,40);
         protected int width = 10;
         protected int height = 6;
-        protected int graphicsRow = 0;
+        protected int graphicsRow;
 
         public Master.Directions faceDir;
         public bool moving;
         public Vector2 location;
-        public int z = 0;
-        int vz = 0;
+        public int z;
+        int vz;
 
         public bool active = true;
 
@@ -86,10 +86,7 @@ namespace aspectstar2
         {
             int dim_x = 32;
             int dim_y;
-            if (parent.isInjury(location, 0, 0) && z == 0)
-                dim_y = 40;
-            else
-                dim_y = 48;
+            dim_y = parent.isInjury(location, 0, 0) && z == 0 ? 40 : 48;
 
             int column = ((int)faceDir * 2) + currentFrame;
             int row = graphicsRow;
@@ -130,9 +127,9 @@ namespace aspectstar2
                 this.vz = +5;
         }
 
-        public abstract void Touch() ;
+        public abstract void Touch();
 
-        public abstract bool inRange(AdventurePlayer player) ;
+        public abstract bool inRange(AdventurePlayer player);
 
         protected bool doesOverlap(AdventureObject obj)
         {
@@ -142,8 +139,8 @@ namespace aspectstar2
 
     public class AdventureShooter : AdventureObject
     {
-        bool track;
-        bool active = false;
+        readonly bool track;
+        new bool active;
 
         public AdventureShooter(bool track)
         {
@@ -184,25 +181,19 @@ namespace aspectstar2
                     int del_x = (int)(parent.player.location.X - location.X);
                     int del_y = (int)(parent.player.location.Y - location.Y);
 
-                    if (Math.Abs(del_x) > Math.Abs(del_y))
-                    {
-                        if (del_x > 0)
-                            closeDir = Master.Directions.Right;
-                        else
-                            closeDir = Master.Directions.Left;
-                    }
-                    else
-                    {
-                        if (del_y > 0)
-                            closeDir = Master.Directions.Down;
-                        else
-                            closeDir = Master.Directions.Up;
-                    }
+                    // TODO: https://rules.sonarsource.com/csharp/RSPEC-3358
+                    closeDir = Math.Abs(del_x) > Math.Abs(del_y) ?
+                        del_x > 0 ?
+                            Master.Directions.Right :
+                            Master.Directions.Left :
+                                del_y > 0 ?
+                                    Master.Directions.Down :
+                                    Master.Directions.Up;
                     AdventureProjectile aP = AdventureProjectile.getIntangibleProjectile(false, closeDir, location, 300);
                     parent.addObject(aP);
                     stallCount = 4;
 
-                    if (active == false)
+                    if (!active)
                         PlaySound.Play(PlaySound.SoundEffectName.Laser);
                     active = true;
                 }
@@ -222,8 +213,8 @@ namespace aspectstar2
     public class AdventureExplosion : AdventureObject
     {
         const int frameCount = 10;
-        int animCountMax = 4 * frameCount;
-        int animCount = 0;
+        readonly int animCountMax = 4 * frameCount;
+        int animCount;
 
         public AdventureExplosion(Vector2 location)
         {
@@ -265,7 +256,7 @@ namespace aspectstar2
 
     public class AdventureHidden : AdventureObject
     {
-        int enemy;
+        readonly int enemy;
 
         public AdventureHidden(int enemy)
         {

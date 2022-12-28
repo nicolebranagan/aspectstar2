@@ -14,8 +14,8 @@ namespace aspectstar2
         protected int flickerCount = 2;
         public bool ghost;
         protected int radius = 16;
-        protected bool interenemycollide = false;
-        protected bool defense = false;
+        protected bool interenemycollide;
+        protected bool defense;
         protected int flickerTime = 40;
         public int id = -1;
 
@@ -102,21 +102,14 @@ namespace aspectstar2
                                     y_tar = (int)Master.absoluteMin(y_tar, location.Y - (parent.player.location.Y - 13 * 32), location.Y - (parent.player.location.Y + 13 * 32));
                                 if (parent.hloop)
                                     x_tar = (int)Master.absoluteMin(x_tar, location.X - (parent.player.location.X - Master.width), location.X - (parent.player.location.X + Master.width));
-
-                                if (Math.Abs(x_tar) > Math.Abs(y_tar))
-                                {
-                                    if (x_tar > 0)
-                                        targetDir = Master.Directions.Left;
-                                    else
-                                        targetDir = Master.Directions.Right;
-                                }
-                                else
-                                {
-                                    if (y_tar > 0)
-                                        targetDir = Master.Directions.Up;
-                                    else
-                                        targetDir = Master.Directions.Down;
-                                }
+                                // TODO: https://rules.sonarsource.com/csharp/RSPEC-3358
+                                targetDir = Math.Abs(x_tar) > Math.Abs(y_tar) ?
+                                    x_tar > 0 ?
+                                        Master.Directions.Left :
+                                        Master.Directions.Right :
+                                            y_tar > 0 ?
+                                                Master.Directions.Up :
+                                                Master.Directions.Down;
                                 this.faceDir = targetDir;
                             }
                             else if (definition.wanderer)
@@ -244,10 +237,7 @@ namespace aspectstar2
 
         public bool isStationary()
         {
-            if (definition == null)
-                return false;
-            else
-                return definition.movementType == BestiaryEntry.MovementTypes.stationary;
+            return !(definition == null)&&definition.movementType == BestiaryEntry.MovementTypes.stationary;
         }
     }
 }

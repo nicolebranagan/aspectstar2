@@ -10,11 +10,11 @@ namespace aspectstar2
 {
     class PauseScreen : Screen
     {
-        AdventureScreen screen;
-        Game game;
-        int selection = 0;
+        readonly AdventureScreen screen;
+        readonly Game game;
+        int selection;
         int lag = 10;
-        int animCount = 0;
+        int animCount;
 
         public PauseScreen(AdventureScreen screen, Game game)
         {
@@ -26,7 +26,7 @@ namespace aspectstar2
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
             if (!screen.dark || screen.lit)
-                screen.DrawRoom(spriteBatch, Color.FromNonPremultiplied(255,255,255,100));
+                screen.DrawRoom(spriteBatch, Color.FromNonPremultiplied(255, 255, 255, 100));
 
             WriteText(spriteBatch, "ABILITIES AND WEAPONS", new Vector2(32, 32), Color.White);
 
@@ -68,7 +68,7 @@ namespace aspectstar2
             screen.DrawStatus(spriteBatch);
         }
 
-        Color getCrystalMask(int animCount)
+        public static Color getCrystalMask(int animCount)
         {
             while (animCount < 0)
                 animCount = animCount + 160;
@@ -77,14 +77,15 @@ namespace aspectstar2
                 animCount = animCount - 160;
 
             Color crystalMask = Color.White;
-            if (animCount > 120)
-                ;
-            else if (animCount > 80)
-                crystalMask.R = 0;
-            else if (animCount > 40)
-                crystalMask.G = 0;
-            else
-                crystalMask.B = 0;
+            if (animCount <= 120)
+            {
+                if (animCount > 80)
+                    crystalMask.R = 0;
+                else if (animCount > 40)
+                    crystalMask.G = 0;
+                else
+                    crystalMask.B = 0;
+            }
 
             return crystalMask;
         }

@@ -15,13 +15,13 @@ namespace aspectstar2
         Engine jintEngine;
         EntityData data;
 
-        bool firstLoad = false;
+        bool firstLoad;
 
-        bool floating = false;
+        bool floating;
         public bool solid = true;
-        bool wander = false;
+        bool wander;
 
-        int touchLag = 0;
+        int touchLag;
         Color filter = Color.White;
 
         public AdventureEntity(EntityData data)
@@ -38,7 +38,7 @@ namespace aspectstar2
                 firstLoad = true;
                 jintEngine = ActivateEngine(parent.ActivateEngine(data.code));
             }
-            
+
             switch (data.gfxtype)
             {
                 case EntityData.GraphicsType.Maptile:
@@ -201,7 +201,7 @@ namespace aspectstar2
                 if (obj is AdventureEnemy && doesOverlap(obj))
                 {
                     jintEngine.Execute(String.Concat(
-                        "if (typeof enemyInRange == 'function') { enemyInRange(", i.ToString(),"); }"
+                        "if (typeof enemyInRange == 'function') { enemyInRange(", i.ToString(), "); }"
                         ));
                 }
             }
@@ -218,7 +218,7 @@ namespace aspectstar2
 
         public void Hurt(int damage)
         {
-            jintEngine.Execute(string.Concat("hurt(",damage.ToString(),")"));
+            jintEngine.Execute(string.Concat("hurt(", damage.ToString(), ")"));
         }
 
         public void Execute(string exec)
@@ -324,7 +324,8 @@ namespace aspectstar2
 
         void HookDeath(string dieFunc)
         {
-            parent.dieFunc = delegate() {
+            parent.dieFunc = delegate
+            {
                 jintEngine.Execute(dieFunc);
             };
         }
@@ -333,10 +334,7 @@ namespace aspectstar2
         {
             return delegate (bool x)
             {
-                if (x)
-                    ent.jintEngine.Execute(callYes);
-                else
-                    ent.jintEngine.Execute(callNo);
+                ent.jintEngine.Execute(x ? callYes : callNo);
             };
         }
     }

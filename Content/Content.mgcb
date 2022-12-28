@@ -305,83 +305,83 @@
 /processorParam:Quality=Best
 /build:computer.wav
 
-#begin music_visager14.mp3
-/importer:Mp3Importer
+#begin music_visager14.ogg
+/importer:OggImporter
 /processor:SongProcessor
 /processorParam:Quality=Best
-/build:music_visager14.mp3
+/build:music_visager14.ogg
 
-#begin music_visager02.mp3
-/importer:Mp3Importer
+#begin music_visager02.ogg
+/importer:OggImporter
 /processor:SongProcessor
 /processorParam:Quality=Best
-/build:music_visager02.mp3
+/build:music_visager02.ogg
 
-#begin music_visager03.mp3
-/importer:Mp3Importer
+#begin music_visager03.ogg
+/importer:OggImporter
 /processor:SongProcessor
 /processorParam:Quality=Best
-/build:music_visager03.mp3
+/build:music_visager03.ogg
 
-#begin music_visager04.mp3
-/importer:Mp3Importer
+#begin music_visager04.ogg
+/importer:OggImporter
 /processor:SongProcessor
 /processorParam:Quality=Best
-/build:music_visager04.mp3
+/build:music_visager04.ogg
 
-#begin music_visager06.mp3
-/importer:Mp3Importer
+#begin music_visager06.ogg
+/importer:OggImporter
 /processor:SongProcessor
 /processorParam:Quality=Best
-/build:music_visager06.mp3
+/build:music_visager06.ogg
 
-#begin music_visager07.mp3
-/importer:Mp3Importer
+#begin music_visager07.ogg
+/importer:OggImporter
 /processor:SongProcessor
 /processorParam:Quality=Best
-/build:music_visager07.mp3
+/build:music_visager07.ogg
 
-#begin music_visager08.mp3
-/importer:Mp3Importer
+#begin music_visager08.ogg
+/importer:OggImporter
 /processor:SongProcessor
 /processorParam:Quality=Best
-/build:music_visager08.mp3
+/build:music_visager08.ogg
 
-#begin music_visager09.mp3
-/importer:Mp3Importer
+#begin music_visager09.ogg
+/importer:OggImporter
 /processor:SongProcessor
 /processorParam:Quality=Best
-/build:music_visager09.mp3
+/build:music_visager09.ogg
 
-#begin music_visager10.mp3
-/importer:Mp3Importer
+#begin music_visager10.ogg
+/importer:OggImporter
 /processor:SongProcessor
 /processorParam:Quality=Best
-/build:music_visager10.mp3
+/build:music_visager10.ogg
 
-#begin music_visager11.mp3
-/importer:Mp3Importer
+#begin music_visager11.ogg
+/importer:OggImporter
 /processor:SongProcessor
 /processorParam:Quality=Best
-/build:music_visager11.mp3
+/build:music_visager11.ogg
 
-#begin music_azureflux03.mp3
-/importer:Mp3Importer
+#begin music_azureflux03.ogg
+/importer:OggImporter
 /processor:SongProcessor
 /processorParam:Quality=Best
-/build:music_azureflux03.mp3
+/build:music_azureflux03.ogg
 
-#begin music_azureflux05.mp3
-/importer:Mp3Importer
+#begin music_azureflux05.ogg
+/importer:OggImporter
 /processor:SongProcessor
 /processorParam:Quality=Best
-/build:music_azureflux05.mp3
+/build:music_azureflux05.ogg
 
-#begin music_azureflux06.mp3
-/importer:Mp3Importer
+#begin music_azureflux06.ogg
+/importer:OggImporter
 /processor:SongProcessor
 /processorParam:Quality=Best
-/build:music_azureflux06.mp3
+/build:music_azureflux06.ogg
 
 #begin dungeon6.png
 /importer:TextureImporter
@@ -394,17 +394,17 @@
 /processorParam:TextureFormat=Color
 /build:dungeon6.png
 
-#begin music_azureflux01.mp3
-/importer:Mp3Importer
+#begin music_azureflux01.ogg
+/importer:OggImporter
 /processor:SongProcessor
 /processorParam:Quality=Best
-/build:music_azureflux01.mp3
+/build:music_azureflux01.ogg
 
-#begin music_azureflux02.mp3
-/importer:Mp3Importer
+#begin music_azureflux02.ogg
+/importer:OggImporter
 /processor:SongProcessor
 /processorParam:Quality=Best
-/build:music_azureflux02.mp3
+/build:music_azureflux02.ogg
 
 #begin coin.wav
 /importer:WavImporter
@@ -446,17 +446,17 @@
 /processorParam:TextureFormat=Color
 /build:town2.png
 
-#begin music_azureflux04.mp3
-/importer:Mp3Importer
+#begin music_azureflux04.ogg
+/importer:OggImporter
 /processor:SongProcessor
 /processorParam:Quality=Best
-/build:music_azureflux04.mp3
+/build:music_azureflux04.ogg
 
-#begin music_azureflux07.mp3
-/importer:Mp3Importer
+#begin music_azureflux07.ogg
+/importer:OggImporter
 /processor:SongProcessor
 /processorParam:Quality=Best
-/build:music_azureflux07.mp3
+/build:music_azureflux07.ogg
 
 #begin credits.png
 /importer:TextureImporter

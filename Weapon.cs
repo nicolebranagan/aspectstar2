@@ -22,7 +22,7 @@ namespace aspectstar2
 
         public virtual void Extra(Weapon weapon)
         {
-            
+
         }
 
         enum WeaponType
@@ -138,7 +138,7 @@ namespace aspectstar2
 
     class ProjectileWeapon : Weapon
     {
-        protected int cooldown = 0;
+        protected int cooldown;
 
         public override void Activate(AdventurePlayer player, AdventureScreen screen, Game game)
         {
@@ -163,12 +163,7 @@ namespace aspectstar2
 
         public override void Update()
         {
-            if (cooldown >= 0)
-            {
-                cooldown = cooldown - 1;
-            }
-            else
-                cooldown = 0;
+            cooldown = cooldown >= 0 ? cooldown - 1 : 0;
         }
 
         public override string getLabel()
@@ -179,7 +174,7 @@ namespace aspectstar2
 
     class FishWeapon : Weapon
     {
-        int lag = 0;
+        int lag;
 
         public FishWeapon()
         {
@@ -227,7 +222,7 @@ namespace aspectstar2
         public override void Extra(Weapon weapon)
         {
             //if (count != 9)
-                count = count + 1;
+            count = count + 1;
         }
 
         public override void Update()
@@ -257,10 +252,7 @@ namespace aspectstar2
 
         public override void Extra(Weapon weapon)
         {
-            if (weapon is TorchWeapon)
-                count = count + ((TorchWeapon)weapon).count;
-            else
-                count = count + 5;
+            count = weapon is TorchWeapon ? count + ((TorchWeapon)weapon).count : count + 5;
         }
 
         public override void Activate(AdventurePlayer player, AdventureScreen screen, Game game)
@@ -356,7 +348,7 @@ namespace aspectstar2
 
     class FarWeapon : ProjectileWeapon
     {
-        int internalCount = 0;
+        int internalCount;
 
         public override void Activate(AdventurePlayer player, AdventureScreen screen, Game game)
         {
@@ -384,10 +376,7 @@ namespace aspectstar2
             internalCount++;
             if (internalCount == 351)
                 internalCount = 0;
-            if (internalCount > 290)
-                return "ELECTRIC BOOGALOO";
-            else
-                return "PROJECTILE 2";
+            return internalCount > 290 ? "ELECTRIC BOOGALOO" : "PROJECTILE 2";
         }
 
         public override void Update()
@@ -401,8 +390,8 @@ namespace aspectstar2
 
     class CatnipWeapon : Weapon
     {
-        int lag = 0;
-        int internalCount = 0;
+        int lag;
+        int internalCount;
 
         public CatnipWeapon()
         {
@@ -463,16 +452,13 @@ namespace aspectstar2
             internalCount++;
             if (internalCount == 351)
                 internalCount = 0;
-            if (internalCount > 290)
-                return "USE RESPONSIBLY";
-            else
-                return "CATNIP";
+            return internalCount > 290 ? "USE RESPONSIBLY" : "CATNIP";
         }
     }
 
     class PillWeapon : Weapon
     {
-        int lag = 0;
+        int lag;
 
         public PillWeapon()
         {

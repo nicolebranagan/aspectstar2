@@ -14,7 +14,7 @@
     <MonoGamePlatform>Windows</MonoGamePlatform>
     <MonoGameContentBuilderExe>
     </MonoGameContentBuilderExe>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -70,16 +70,7 @@
     <Compile Include="Worldfile.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Jint">
-      <HintPath>..\..\..\..\..\Programs\Jint.dll</HintPath>
-    </Reference>
-    <Reference Include="MonoGame.Framework">
-      <HintPath>$(MSBuildProgramFiles32)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="Icon.ico" />
     <Content Include="worldfile.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -89,7 +80,37 @@
     <MonoGameContentReference Include="Content\Content.mgcb" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".editorconfig" />
     <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Jint">
+      <Version>2.11.58</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CSharp">
+      <Version>4.7.0</Version>
+    </PackageReference>
+    <PackageReference Include="Ryan.MonoGame.Content.Builder">
+      <Version>3.7.200</Version>
+    </PackageReference>
+    <PackageReference Include="Ryan.MonoGame.Framework.Content.Pipeline">
+      <Version>3.7.100</Version>
+    </PackageReference>
+    <PackageReference Include="Ryan.MonoGame.Framework.DesktopGL">
+      <Version>3.7.200</Version>
+    </PackageReference>
+    <PackageReference Include="System.Numerics.Vectors">
+      <Version>4.5.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Reflection">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime">
+      <Version>4.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="XSerializer">
+      <Version>0.4.4</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />

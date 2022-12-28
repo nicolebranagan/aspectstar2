@@ -33,11 +33,11 @@ namespace aspectstar2
             Silent = 18,
         }
 
-        static Dictionary<SongName, Song> Songs = new Dictionary<SongName, Song>();
+        static readonly Dictionary<SongName, Song> Songs = new Dictionary<SongName, Song>();
         static SongName currentSong = SongName.None;
 
         static bool _enabled = true;
-        static public bool enabled
+        public static bool enabled
         {
             get
             {
@@ -45,12 +45,12 @@ namespace aspectstar2
             }
             set
             {
-                if (value == false)
+                if (!value)
                     MediaPlayer.Stop();
                 _enabled = value;
             }
         }
-        public static bool loaded = false;
+        public static bool loaded;
 
         public static void Initialize(Microsoft.Xna.Framework.Content.ContentManager Content)
         {
@@ -75,7 +75,8 @@ namespace aspectstar2
                 Songs[SongName.Credits] = Content.Load<Song>("music_azureflux04");
                 loaded = true;
             }
-            catch {
+            catch
+            {
                 // No Music
                 enabled = false;
             }
@@ -91,7 +92,7 @@ namespace aspectstar2
                 {
                     MediaPlayer.Play(Songs[song]);
                 }
-//                MediaPlayer.Volume = 0.6f;
+                //                MediaPlayer.Volume = 0.6f;
                 MediaPlayer.IsRepeating = true;
             }
         }

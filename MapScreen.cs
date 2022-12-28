@@ -10,9 +10,8 @@ namespace aspectstar2
 {
     public class MapScreen : Screen
     {
-        Game game;
-
-        MapPlayer player;
+        readonly Game game;
+        readonly MapPlayer player;
 
         public Vector2 playerloc
         {
@@ -21,14 +20,13 @@ namespace aspectstar2
         }
 
         Vector2 screenOffset = new Vector2(0, 0);
-
-        int[] tileMap; int[] key;
-
-        List<MapObject> objects;
+        readonly int[] tileMap;
+        readonly int[] key;
+        readonly List<MapObject> objects;
 
         int controlLag = 20;
         Selections selection = Selections.Continue;
-        bool saved = false;
+        bool saved;
 
         mapModes currentMode = mapModes.runMode;
 
@@ -110,10 +108,7 @@ namespace aspectstar2
                 Vector2 line = new Vector2((Master.width / 2) - (16 * 3), (Master.height / 2) - (16 * 3));
                 WriteText(spriteBatch, "CONTINUE", line, Color.White);
                 line = new Vector2(line.X, line.Y + 32);
-                if (saved)
-                    WriteText(spriteBatch, "SAVED", line, Color.White);
-                else
-                    WriteText(spriteBatch, "SAVE", line, Color.White);
+                WriteText(spriteBatch, saved ? "SAVED" : "SAVE", line, Color.White);
                 line = new Vector2(line.X, line.Y + 32);
                 WriteText(spriteBatch, "QUIT", line, Color.White);
 
@@ -236,10 +231,7 @@ namespace aspectstar2
         public bool tileSolid(int x, int y)
         {
             int i = x + (y * Mapfile.width);
-            if (i < 0)
-                return false;
-            else
-                return key[tileMap[i]] == 1;
+            return !(i < 0)&&key[tileMap[i]] == 1;
         }
 
         public void checkObjects(int x, int y)
@@ -259,7 +251,7 @@ namespace aspectstar2
             player.location = new Vector2(x * 32, y * 32);
             player.faceDir = Master.Directions.Down;
         }
-        
+
         public void ChangeTile(int x, int y, int tile)
         {
             int i = x + (y * Mapfile.width);
