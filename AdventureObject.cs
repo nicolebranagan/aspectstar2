@@ -181,7 +181,14 @@ namespace aspectstar2
                     int del_x = (int)(parent.player.location.X - location.X);
                     int del_y = (int)(parent.player.location.Y - location.Y);
 
-                    closeDir = Math.Abs(del_x) > Math.Abs(del_y) ? del_x > 0 ? Master.Directions.Right : Master.Directions.Left : del_y > 0 ? Master.Directions.Down : Master.Directions.Up;
+                    // TODO: https://rules.sonarsource.com/csharp/RSPEC-3358
+                    closeDir = Math.Abs(del_x) > Math.Abs(del_y) ?
+                        del_x > 0 ?
+                            Master.Directions.Right :
+                            Master.Directions.Left :
+                                del_y > 0 ?
+                                    Master.Directions.Down :
+                                    Master.Directions.Up;
                     AdventureProjectile aP = AdventureProjectile.getIntangibleProjectile(false, closeDir, location, 300);
                     parent.addObject(aP);
                     stallCount = 4;

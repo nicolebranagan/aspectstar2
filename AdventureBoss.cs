@@ -562,11 +562,11 @@ namespace aspectstar2
             // TODO: https://rules.sonarsource.com/csharp/RSPEC-3358
             stableDir = Math.Abs(del_x) > Math.Abs(del_y) ?
                 del_x > 0 ?
-                Master.Directions.Right :
-                Master.Directions.Left :
-                del_y > 0 ?
-                Master.Directions.Down :
-                Master.Directions.Up;
+                    Master.Directions.Right :
+                    Master.Directions.Left :
+                        del_y > 0 ?
+                            Master.Directions.Down :
+                            Master.Directions.Up;
 
             base.Update();
         }

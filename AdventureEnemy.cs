@@ -102,8 +102,14 @@ namespace aspectstar2
                                     y_tar = (int)Master.absoluteMin(y_tar, location.Y - (parent.player.location.Y - 13 * 32), location.Y - (parent.player.location.Y + 13 * 32));
                                 if (parent.hloop)
                                     x_tar = (int)Master.absoluteMin(x_tar, location.X - (parent.player.location.X - Master.width), location.X - (parent.player.location.X + Master.width));
-
-                                targetDir = Math.Abs(x_tar) > Math.Abs(y_tar) ? x_tar > 0 ? Master.Directions.Left : Master.Directions.Right : y_tar > 0 ? Master.Directions.Up : Master.Directions.Down;
+                                // TODO: https://rules.sonarsource.com/csharp/RSPEC-3358
+                                targetDir = Math.Abs(x_tar) > Math.Abs(y_tar) ?
+                                    x_tar > 0 ?
+                                        Master.Directions.Left :
+                                        Master.Directions.Right :
+                                            y_tar > 0 ?
+                                                Master.Directions.Up :
+                                                Master.Directions.Down;
                                 this.faceDir = targetDir;
                             }
                             else if (definition.wanderer)

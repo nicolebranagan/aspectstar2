@@ -113,7 +113,14 @@ namespace aspectstar2
             int del_x = (int)(location.X - far_location.X);
             int del_y = (int)(location.Y - far_location.Y);
 
-            faceDir = Math.Abs(del_x) > Math.Abs(del_y) ? del_x > 0 ? Master.Directions.Right : Master.Directions.Left : del_y > 0 ? Master.Directions.Down : Master.Directions.Up;
+            // TODO: https://rules.sonarsource.com/csharp/RSPEC-3358
+            faceDir = Math.Abs(del_x) > Math.Abs(del_y) ?
+                del_x > 0 ?
+                    Master.Directions.Right :
+                    Master.Directions.Left :
+                        del_y > 0 ?
+                            Master.Directions.Down :
+                            Master.Directions.Up;
 
             Vector2 move_dist = new Vector2(0, 0);
             switch (faceDir)
