@@ -35,7 +35,7 @@ namespace aspectstar2
         public int[] key;
         public Room templateRoom;
         public string name = "DUNGEON";
-        public bool hasDarkRooms = false;
+        public bool hasDarkRooms;
 
         [XmlIgnore]
         public Room[,] rooms = new Room[16,16];

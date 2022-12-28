@@ -155,8 +155,8 @@ namespace aspectstar2
 
     public class AdventureTeleporter : AdventureItem
     {
-        int dest, destx, desty, destroomX, destroomY;
-        
+        readonly int dest, destx, desty, destroomX, destroomY;
+
         public AdventureTeleporter(int dest, int destx, int desty, int destroomX, int destroomY)
         {
             this.dest = dest;
@@ -180,7 +180,7 @@ namespace aspectstar2
     }
     public class AdventureSpecial : AdventureItem
     {
-        int screen, key;
+        readonly int screen, key;
         Vector2 lastloc;
         bool works = true;
 

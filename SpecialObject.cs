@@ -21,17 +21,14 @@ namespace aspectstar2
         public bool active = true;
         public int radius = 12;
 
-        protected int stallCount = 0;
+        protected int stallCount;
 
         public virtual void Draw(SpriteBatch spriteBatch, Color mask)
         {
             Vector2 offset = new Vector2(16, 16);
             Rectangle source;
 
-            if (graphicsRow == 0)
-                source = new Rectangle(0, 0, width, height);
-            else
-                source = new Rectangle(0, 48 + (graphicsRow - 1) * 32, width, height);
+            source = graphicsRow == 0 ? new Rectangle(0, 0, width, height) : new Rectangle(0, 48 + (graphicsRow - 1) * 32, width, height);
             Rectangle dest = new Rectangle((int)location.X - 16, (int)location.Y - 16, width, height);
 
             spriteBatch.Begin();
@@ -91,17 +88,17 @@ namespace aspectstar2
     public class SpecialEnemy : SpecialObject
     {
         //  Behavior
-        int shootingRate;
-        int speed;
-        int amplitude;
-        int time;
-        bool track;
-        Behaviors currentBehavior;
+        readonly int shootingRate;
+        readonly int speed;
+        readonly int amplitude;
+        readonly int time;
+        readonly bool track;
+        readonly Behaviors currentBehavior;
 
         // Internal tracking
-        int animCount = 0;
+        int animCount;
         int countRate;
-        bool down = true;
+        readonly bool down = true;
 
         enum Behaviors
         {
@@ -211,10 +208,7 @@ namespace aspectstar2
             {
                 if (countRate == 0)
                 {
-                    if (track)
-                        parent.addObject(new SpecialProjectile(parent, location, new Vector2(0, 2), false, true));
-                    else
-                        parent.addObject(new SpecialProjectile(parent, location, new Vector2(0, 2), false, false));
+                    parent.addObject(track ? new SpecialProjectile(parent, location, new Vector2(0, 2), false, true) : new SpecialProjectile(parent, location, new Vector2(0, 2), false, false));
                     countRate = 100 - shootingRate;
                 }
                 else
@@ -237,7 +231,7 @@ namespace aspectstar2
         public bool friendly, fiery, ghostly;
         Vector2 direction;
 
-        public SpecialProjectile(SpecialScreen parent, Vector2 location, Vector2 direction, 
+        public SpecialProjectile(SpecialScreen parent, Vector2 location, Vector2 direction,
             bool friendly = false, bool tracking = false, bool fiery = false, bool ghostly = false)
         {
             this.location = location; next_loc = location;
@@ -281,7 +275,7 @@ namespace aspectstar2
 
     class SpecialExplosion : SpecialObject
     {
-        AdventureExplosion exp;
+        readonly AdventureExplosion exp;
 
         public SpecialExplosion(Vector2 location)
         {

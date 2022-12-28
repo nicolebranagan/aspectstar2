@@ -12,24 +12,26 @@ namespace aspectstar2
         public Master master { get; private set; }
         public int life = 5;
         public int possibleLife = 10;
-        public int goldKeys = 0;
-        public int bells = 0;
-        public int deaths = 0;
+        public int goldKeys;
+        public int bells;
+        public int deaths;
         AdventureScreen currentAdventure;
         MapScreen currentMap;
 
-        public bool hasTorch = false;
+        public bool hasTorch;
         public bool[] beaten;
         public bool[] crystalKeys = { false, false, false, false, false, false, false, false };
-        public int crystalKeyCount { get
+        public int crystalKeyCount
+        {
+            get
             {
-                return crystalKeys.Count(o => o == true);
+                return crystalKeys.Count(o => o);
             }
             private set {; }
         }
         public int[] top;
         int dest;
-        
+
         public Weapon weaponA;
         public Weapon weaponB;
         public List<Weapon> weapons;
@@ -99,10 +101,7 @@ namespace aspectstar2
                 beaten = new bool[Master.currentFile.adventures.Count];
                 for (int i = 0; i < beaten.Length; i++)
                 {
-                    if (i < sG.beaten.Length)
-                        beaten[i] = sG.beaten[i];
-                    else
-                        beaten[i] = false;
+                    beaten[i] = i < sG.beaten.Length &&sG.beaten[i];
                 }
             }
             else
@@ -213,7 +212,7 @@ namespace aspectstar2
                     condition = true;
                     w.Extra(newWeapon);
                 }
-            
+
             if (!condition)
             {
                 weapons.Add(newWeapon);
@@ -295,8 +294,9 @@ namespace aspectstar2
         public void enterCredits()
         {
             PlaySong.Play(PlaySong.SongName.Credits);
-            master.UpdateScreen(new TextScreen(this, Master.currentFile.credits, 
-                delegate (bool x) {
+            master.UpdateScreen(new TextScreen(this, Master.currentFile.credits,
+                delegate (bool x)
+                {
                     if (!x)
                         master.UpdateScreen(new TitleScreen(master));
                 },

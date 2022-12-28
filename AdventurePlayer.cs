@@ -9,9 +9,9 @@ namespace aspectstar2
 {
     public class AdventurePlayer : AdventureObject
     {
-        public int flickerCount = 0;
+        public int flickerCount;
 
-        int flashCount = 0;
+        int flashCount;
 
         public int row
         {
@@ -113,20 +113,7 @@ namespace aspectstar2
             int del_x = (int)(location.X - far_location.X);
             int del_y = (int)(location.Y - far_location.Y);
 
-            if (Math.Abs(del_x) > Math.Abs(del_y))
-            {
-                if (del_x > 0)
-                    faceDir = Master.Directions.Right;
-                else
-                    faceDir = Master.Directions.Left;
-            }
-            else
-            {
-                if (del_y > 0)
-                    faceDir = Master.Directions.Down;
-                else
-                    faceDir = Master.Directions.Up;
-            }
+            faceDir = Math.Abs(del_x) > Math.Abs(del_y) ? del_x > 0 ? Master.Directions.Right : Master.Directions.Left : del_y > 0 ? Master.Directions.Down : Master.Directions.Up;
 
             Vector2 move_dist = new Vector2(0, 0);
             switch (faceDir)
@@ -156,7 +143,7 @@ namespace aspectstar2
             else if (!parent.hblock && !parent.vloop && ((test.Y + height) >= (13 * 32)))
                 parent.enterNewRoom(0, 1);
             else if (parent.hloop && test.X - width < 0)
-                    location.X = 25 * 32 - width - 2;
+                location.X = 25 * 32 - width - 2;
             else if (parent.hloop && test.X + width >= (25 * 32))
                 location.X = width + 2;
             else if (parent.vloop && test.Y - height < 0)

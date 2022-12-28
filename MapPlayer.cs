@@ -9,11 +9,10 @@ namespace aspectstar2
 {
     class MapPlayer
     {
-        MapScreen parent;
-
-        Texture2D texture;
-        int currentFrame = 0;
-        int stallCount = 0;
+        readonly MapScreen parent;
+        readonly Texture2D texture;
+        int currentFrame;
+        int stallCount;
 
         Master.Directions _faceDir, _nextDir;
         public Master.Directions faceDir
@@ -32,8 +31,8 @@ namespace aspectstar2
         }
         public Vector2 location;
 
-        int moveCount = 0;
-        bool renewMove = false;
+        int moveCount;
+        bool renewMove;
         public bool moving
         {
             get { return moveCount > 0; }

@@ -16,10 +16,9 @@ namespace aspectstar2
         bool ghostly;
 
         bool intangible;
+        readonly int damage = 1;
 
-        int damage = 1;
-
-        int frameCounter = 0;
+        int frameCounter;
 
         public AdventureProjectile()
         { }
@@ -96,7 +95,7 @@ namespace aspectstar2
                     frame = 0;
                 }
             }
-            spriteBatch.Draw(texture, location, source, Color.White, (float)Math.PI * frame / 2, new Vector2(8,8), 1, SpriteEffects.None, 0);
+            spriteBatch.Draw(texture, location, source, Color.White, (float)Math.PI * frame / 2, new Vector2(8, 8), 1, SpriteEffects.None, 0);
             spriteBatch.End();
         }
 
@@ -105,7 +104,7 @@ namespace aspectstar2
             foreach (AdventureObject obj in objects)
             {
                 if (obj != this)
-                    if ( Math.Sqrt( Math.Pow(location.X - obj.location.X, 2) + Math.Pow(location.Y - obj.location.Y + (obj.z * 2), 2) ) < 16)
+                    if (Math.Sqrt(Math.Pow(location.X - obj.location.X, 2) + Math.Pow(location.Y - obj.location.Y + (obj.z * 2), 2)) < 16)
                     {
                         if (obj is AdventurePlayer)
                         {
@@ -222,7 +221,7 @@ namespace aspectstar2
     public class SeekerProjectile : AdventureProjectile
     {
         Vector2 move_dist;
-        int speed = 4;
+        readonly int speed = 4;
 
         public SeekerProjectile(AdventureScreen parent, Vector2 location, int deathTimer)
         {
@@ -246,7 +245,7 @@ namespace aspectstar2
         }
 
         public override void Update()
-        {   
+        {
             if (deathTimer % speed != 0)
                 Move(move_dist);
 

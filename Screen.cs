@@ -14,8 +14,8 @@ namespace aspectstar2
     {
         protected Master master;
 
-        abstract public void Update(GameTime gameTime);
-        abstract public void Draw(SpriteBatch spriteBatch, GameTime gameTime);
+        public abstract void Update(GameTime gameTime);
+        public abstract void Draw(SpriteBatch spriteBatch, GameTime gameTime);
 
         protected void WriteText(SpriteBatch spriteBatch, string text, int row, Color textColor)
         {
@@ -67,7 +67,7 @@ namespace aspectstar2
                 else if (asc == 60)
                 {
                     sourceRect = new Rectangle(128, 16, 16, 16);
-                    spriteBatch.Draw(Master.texCollection.controls, new Vector2(destRect.X - 2, destRect.Y - 2), sourceRect, textColor, (float)Math.PI, new Vector2(16,16), 1, SpriteEffects.None, 0);
+                    spriteBatch.Draw(Master.texCollection.controls, new Vector2(destRect.X - 2, destRect.Y - 2), sourceRect, textColor, (float)Math.PI, new Vector2(16, 16), 1, SpriteEffects.None, 0);
                 }
                 else if (asc == 62)
                 {
@@ -88,8 +88,8 @@ namespace aspectstar2
     public class TitleScreen : Screen
     {
         Selections selection = Selections.NewGame;
-        bool saveFailed = false;
-        SavedGame savedGame;
+        readonly bool saveFailed;
+        readonly SavedGame savedGame;
 
         enum Selections
         {
@@ -187,18 +187,18 @@ namespace aspectstar2
 
     public class TextScreen : Screen
     {
-        Game game;
-        Action<bool> activator;
-        bool credits;
-        bool creditsDone = false;
+        readonly Game game;
+        readonly Action<bool> activator;
+        readonly bool credits;
+        bool creditsDone;
 
         int lag = 20;
 
         int timeCount;
         int timeLag = 1;
-        int floatCount = 0;
+        int floatCount;
         bool up = true;
-        string[] text;
+        readonly string[] text;
 
         public TextScreen(Game game, string text, Action<bool> activator, bool credits)
         {
@@ -217,17 +217,14 @@ namespace aspectstar2
                 spriteBatch.Draw(Master.texCollection.credits, new Rectangle(Master.width - 128 - 32, Master.height - 127 + (floatCount - 5), 128, 96), Color.White);
                 spriteBatch.End();
             }
-            for(int i = 0; i < text.Length; i++)
-            {   
+            for (int i = 0; i < text.Length; i++)
+            {
                 WriteText(spriteBatch, text[i], new Vector2(Master.width / 2 - text[i].Length * 8, timeCount + 32 * i), Color.White);
             }
             if (creditsDone)
             {
                 string deathCount;
-                if (game.deaths > 0)
-                    deathCount = string.Concat("YOU DIED ", game.deaths.ToString(), " TIMES");
-                else
-                    deathCount = "";
+                deathCount = game.deaths > 0 ? string.Concat("YOU DIED ", game.deaths.ToString(), " TIMES") : "";
                 WriteText(spriteBatch, "CONGRATULATION", new Vector2(Master.width / 2 - 14 * 8, Master.height / 2 - 16), Color.White);
                 WriteText(spriteBatch, deathCount, new Vector2(Master.width / 2 - deathCount.Length * 8, Master.height / 2 + 16), Color.White);
             }
@@ -262,10 +259,7 @@ namespace aspectstar2
 
             if (timeCount % 20 == 0)
             {
-                if (up)
-                    floatCount = floatCount + 2;
-                else
-                    floatCount = floatCount - 2;
+                floatCount = up ? floatCount + 2 : floatCount - 2;
             }
 
             if (lag > 0)

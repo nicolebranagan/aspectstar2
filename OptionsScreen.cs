@@ -15,7 +15,7 @@ namespace aspectstar2
         Selections selection = Selections.SaveAndExit;
         Options opti;
         int lag = 20;
-        int timer = 0;
+        int timer;
 
         enum Selections
         {
@@ -62,23 +62,14 @@ namespace aspectstar2
 
             if (PlaySong.loaded)
             {
-                if (opti.music)
-                    WriteText(spriteBatch, "MUSIC VOLUME", 14, 6, Color.White);
-                else
-                    WriteText(spriteBatch, "GAME MUSIC DISABLED", 14, 6, Color.White);
+                WriteText(spriteBatch, opti.music ? "MUSIC VOLUME" : "GAME MUSIC DISABLED", 14, 6, Color.White);
             }
             else
                 WriteText(spriteBatch, "GAME MUSIC NOT AVAILABLE", 14, 6, Color.DarkGray);
 
-            if (opti.sound)
-                WriteText(spriteBatch, "SOUND EFFECTS ENABLED", 16, 6, Color.White);
-            else
-                WriteText(spriteBatch, "SOUND EFFECTS DISABLED", 16, 6, Color.White);
+            WriteText(spriteBatch, opti.sound ? "SOUND EFFECTS ENABLED" : "SOUND EFFECTS DISABLED", 16, 6, Color.White);
 
-            if (opti.fullscreen)
-                WriteText(spriteBatch, "ENTER WINDOWED MODE", 18, 6, Color.White);
-            else
-                WriteText(spriteBatch, "ENTER FULL SCREEN MODE", 18, 6, Color.White);
+            WriteText(spriteBatch, opti.fullscreen ? "ENTER WINDOWED MODE" : "ENTER FULL SCREEN MODE", 18, 6, Color.White);
 
             WriteText(spriteBatch, "RETURN TO DEFAULT SETTINGS", 22, 6, Color.White);
             WriteText(spriteBatch, "RETURN TO PREVIOUS OPTIONS", 24, 6, Color.White);
@@ -105,7 +96,7 @@ namespace aspectstar2
             {
                 source = new Rectangle(128, 16, 16, 16);
                 dest = new Rectangle(4 * 16, 0, 16, 16);
-                
+
                 switch (selection)
                 {
                     case Selections.Controls:
@@ -210,10 +201,7 @@ namespace aspectstar2
                             {
                                 opti.music = !opti.music;
                                 PlaySound.Play(PlaySound.SoundEffectName.Pause);
-                                if (opti.music == false)
-                                    PlaySong.Play(PlaySong.SongName.Silent);
-                                else
-                                    PlaySong.Play(PlaySong.SongName.Title);
+                                PlaySong.Play(!opti.music ? PlaySong.SongName.Silent : PlaySong.SongName.Title);
                             }
                             break;
                         case Selections.Sound:

@@ -24,7 +24,7 @@ namespace aspectstar2
         public const int width = 800;
         public const int height = 480;
 
-        public static Random globalRandom;
+        public static Random globalRandom = new Random();
         public Options options;
 
         SavedGame _sG;
@@ -32,10 +32,7 @@ namespace aspectstar2
         {
             get
             {
-                if (_sG == null)
-                    return LoadGame();
-                else
-                    return _sG;
+                return _sG ?? LoadGame();
             }
             set
             {
@@ -51,12 +48,12 @@ namespace aspectstar2
             Right = 3
         }
 
-        GraphicsDeviceManager graphics;
+        readonly GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
         Screen currentScreen;
 
-        Game currentGame = null;
+        Game currentGame;
 
         public Master()
         {
@@ -107,7 +104,7 @@ namespace aspectstar2
 
             // Draw textures
             texCollection.blank = new Texture2D(GraphicsDevice, 1, 1);
-            texCollection.blank.SetData(new Color[] { Color.White });
+            texCollection.blank.SetData(new[] { Color.White });
 
             // Load in-game content
             texCollection.title = Content.Load<Texture2D>("title");
@@ -194,7 +191,7 @@ namespace aspectstar2
             currentGame = new Game(this);
             if (currentFile.opening != null)
             {
-                UpdateScreen(new TextScreen(currentGame, currentFile.opening, delegate(bool x) { currentGame.Begin(); }, false));
+                UpdateScreen(new TextScreen(currentGame, currentFile.opening, delegate { currentGame.Begin(); }, false));
             }
             else
                 currentGame.Begin();
@@ -217,7 +214,7 @@ namespace aspectstar2
             }
             catch
             {
-
+                //TODO: Handle this error
             }
         }
 
@@ -270,10 +267,10 @@ namespace aspectstar2
             }
             catch
             {
-                
+                //TODO: Handle this error
             }
         }
-        
+
         public void ToggleFullScreen()
         {
             graphics.IsFullScreen = !graphics.IsFullScreen;
@@ -286,7 +283,7 @@ namespace aspectstar2
             graphics.ApplyChanges();
         }
 
-        Options LoadOptions()
+        public static Options LoadOptions()
         {
             Options opti = new Options();
             try
@@ -299,6 +296,7 @@ namespace aspectstar2
             }
             catch (Exception)
             {
+                //TODO: Handle this error
             }
 
             return opti;
@@ -306,10 +304,10 @@ namespace aspectstar2
 
         public static Vector2 getMapTile(int index, Texture2D map)
         {
-            int width = map.Width / 32;
-            int height = map.Height / 32;
+            int tileWidth = map.Width / 32;
+            int tileHeight = map.Height / 32;
 
-            return new Vector2(index % width * 32, index / width * 32);
+            return new Vector2(index % tileWidth * 32, index / tileWidth * 32);
         }
 
         public static int[] sumRooms(int[] roomleft, int[] roomright, int roomwidth, int roomheight)
@@ -331,22 +329,16 @@ namespace aspectstar2
 
             if (a1 > a2)
             {
-                if (a2 > a3)
-                    return var3;
-                else
-                    return var2;
+                return a2 > a3 ? var3 : var2;
             }
             else
             {
-                if (a1 > a3)
-                    return var3;
-                else
-                    return var1;
+                return a1 > a3 ? var3 : var1;
             }
         }
     }
 
-    public struct Textures
+    public struct Textures : IEquatable<Textures>
     {
         // Game textures
 
@@ -372,6 +364,10 @@ namespace aspectstar2
 
         public Texture2D texShadows;
         public Texture2D texPlosion;
+
+        public override bool Equals(object obj) => obj is Textures textures && Equals(textures);
+        public bool Equals(Textures other) => EqualityComparer<Texture2D>.Default.Equals(title, other.title) && EqualityComparer<Texture2D>.Default.Equals(controls, other.controls) && EqualityComparer<Texture2D>.Default.Equals(arcadeFont, other.arcadeFont) && EqualityComparer<Texture2D>.Default.Equals(blank, other.blank) && EqualityComparer<Texture2D>.Default.Equals(credits, other.credits) && EqualityComparer<Texture2D>.Default.Equals(controller, other.controller) && EqualityComparer<Texture2D>.Default.Equals(worldTiles, other.worldTiles) && EqualityComparer<Texture2D[]>.Default.Equals(adventureTiles, other.adventureTiles) && EqualityComparer<Texture2D>.Default.Equals(specialTiles, other.specialTiles) && EqualityComparer<Texture2D>.Default.Equals(texMapPlayer, other.texMapPlayer) && EqualityComparer<Texture2D>.Default.Equals(texAdvPlayer, other.texAdvPlayer) && EqualityComparer<Texture2D>.Default.Equals(texSpecial, other.texSpecial) && EqualityComparer<Texture2D>.Default.Equals(texEnemies, other.texEnemies) && EqualityComparer<Texture2D>.Default.Equals(texCharacters, other.texCharacters) && EqualityComparer<Texture2D>.Default.Equals(texProjectile, other.texProjectile) && EqualityComparer<Texture2D>.Default.Equals(texBosses, other.texBosses) && EqualityComparer<Texture2D>.Default.Equals(texFinal, other.texFinal) && EqualityComparer<Texture2D>.Default.Equals(texShadows, other.texShadows) && EqualityComparer<Texture2D>.Default.Equals(texPlosion, other.texPlosion);
+        public override int GetHashCode() => base.GetHashCode();
     }
 
     public class Options
@@ -379,7 +375,7 @@ namespace aspectstar2
         public bool sound = true;
         public bool music = true;
         public int volume = 6;
-        public bool fullscreen = false;
+        public bool fullscreen;
 
         public Keys Up = Keys.Up;
         public Keys Down = Keys.Down;
@@ -424,11 +420,6 @@ namespace aspectstar2
             Start,
         }
 
-        public Controls()
-        {
-
-        }
-
         public void Update()
         {
             KeyboardState state = Keyboard.GetState();
@@ -467,5 +458,5 @@ namespace aspectstar2
             definitions.Add(Key.Start, opti.Start);
         }
     }
-    
+
 }

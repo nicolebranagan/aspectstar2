@@ -11,7 +11,7 @@ namespace aspectstar2
 {
     public class AdventureScreen : Screen
     {
-        Game game;
+        readonly Game game;
 
         public bool fromMap;
         public bool beaten;
@@ -24,20 +24,21 @@ namespace aspectstar2
         public Adventure adventure;
         int roomX, roomY;
         Vector2 first_pos;
-        int[] tileMap, key;
+        private int[] tileMap;
+        private readonly int[] key;
         Engine jintEngine;
 
-        public int Keys = 0;
+        public int Keys;
 
         string label;
         Color playerColor = Color.White;
         Color overlayColor = Color.White;
 
-        public bool hloop = false;
-        public bool vloop = false;
-        public bool hblock = false;
-        public bool vblock = false;
-        public bool dark = false;
+        public bool hloop;
+        public bool vloop;
+        public bool hblock;
+        public bool vblock;
+        public bool dark;
         public bool lit
         {
             get { return (torchCount > 0); }
@@ -48,7 +49,7 @@ namespace aspectstar2
                 torchCount += 900;
             }
         }
-        int torchCount = 0;
+        int torchCount;
 
         int animCount, stallCount, lag;
         string textString; int choice = 1; Action<bool> chooser;
@@ -200,7 +201,7 @@ namespace aspectstar2
         void tileStepAction(int i)
         {
             tileType tile = (tileType)key[tileMap[i]];
-            if (tile == tileType.Warp && (player.z == 0 || 
+            if (tile == tileType.Warp && (player.z == 0 ||
                 (tileMap.Length > i && (tileType)tileMap[i+1] == tileType.Warp) || (i > 0 && (tileType)tileMap[i-1] == tileType.Warp)))
             {
                 PlaySound.Play(PlaySound.SoundEffectName.Leave);
@@ -252,8 +253,8 @@ namespace aspectstar2
             bool collided = false;
             foreach (AdventureObject obj in objects)
             {
-                if (obj.inRange(player) && 
-                    (flickerCount <= 0 || 
+                if (obj.inRange(player) &&
+                    (flickerCount <= 0 ||
                     (obj is AdventureEnemy && ((AdventureEnemy)obj).isStationary())))
                     collided = true;
             }
@@ -320,7 +321,7 @@ namespace aspectstar2
             animCount = 24;
             currentMode = adventureModes.drowning;
             PlaySound.Play(PlaySound.SoundEffectName.Drown);
-            foreach(AdventureObject obj in objects)
+            foreach (AdventureObject obj in objects)
             {
                 if (obj is AdventureBoss7)
                 {
@@ -365,11 +366,8 @@ namespace aspectstar2
                         Rectangle source = new Rectangle(128, 16, 16, 16);
                         Rectangle dest;
 
-                        if (choice == 0)
-                            dest = new Rectangle((Master.width / 2) - (16 * 13), 16 * 6, 16, 16);
-                        else
-                            dest = new Rectangle((Master.width / 2) + (16 * 6), 16 * 6, 16, 16);
-                        
+                        dest = choice == 0 ? new Rectangle((Master.width / 2) - (16 * 13), 16 * 6, 16, 16) : new Rectangle((Master.width / 2) + (16 * 6), 16 * 6, 16, 16);
+
                         spriteBatch.Draw(Master.texCollection.controls, dest, source, Color.White);
                         spriteBatch.End();
                     }
@@ -424,7 +422,7 @@ namespace aspectstar2
                         player.Draw(spriteBatch, mask2);
                     else
                     {
-                        foreach(AdventureObject obj in objects)
+                        foreach (AdventureObject obj in objects)
                         {
                             if (obj is AdventureEntity)
                                 obj.Draw(spriteBatch, mask2);
@@ -450,8 +448,7 @@ namespace aspectstar2
                     if (dark)
                     {
                         usePlayerColor = false;
-                        if (lit) roomColor = Color.FromNonPremultiplied(200, 200, 200, 255);
-                        else roomColor = Color.FromNonPremultiplied(15, 15, 15, 255);
+                        roomColor = lit ? Color.FromNonPremultiplied(200, 200, 200, 255) : Color.FromNonPremultiplied(15, 15, 15, 255);
                     }
                     DrawRoom(spriteBatch, roomColor);
                     List<AdventureObject> sortedList = objects.OrderBy(o => o.location.Y).ToList();
@@ -591,20 +588,14 @@ namespace aspectstar2
                 width = 50;
                 height = 13;
                 screenOffset.Y = 0;
-                if (scrollDown)
-                    screenOffset.X = ((width / 2) - animCount) * 32;
-                else
-                    screenOffset.X = -(animCount) * 32;
+                screenOffset.X = scrollDown ? ((width / 2) - animCount) * 32 : -(animCount) * 32;
             }
             else
             {
                 width = 25;
                 height = 26;
                 screenOffset.X = 0;
-                if (scrollDown)
-                    screenOffset.Y = ((height / 2) - animCount) * 32;
-                else
-                    screenOffset.Y = -(animCount) * 32;
+                screenOffset.Y = scrollDown ? ((height / 2) - animCount) * 32 : -(animCount) * 32;
             }
 
             int[] newroom;
@@ -615,14 +606,7 @@ namespace aspectstar2
             {
                 newroom = adventure.rooms[roomX, roomY].tileMap;
                 oldroom = adventure.rooms[roomX - Math.Sign(animCount), roomY].tileMap;
-                if (scrollDown)
-                {
-                    room = Master.sumRooms(oldroom, newroom, 25, 13);
-                }
-                else
-                {
-                    room = Master.sumRooms(newroom, oldroom, 25, 13);
-                }
+                room = scrollDown ? Master.sumRooms(oldroom, newroom, 25, 13) : Master.sumRooms(newroom, oldroom, 25, 13);
             }
             else
             {
@@ -671,10 +655,7 @@ namespace aspectstar2
             }
             else
             {
-                if (Xscroll)
-                    stallCount = 2;
-                else
-                    stallCount = 3;
+                stallCount = Xscroll ? 2 : 3;
                 animCount = (Math.Abs(animCount) - 1) * Math.Sign(animCount);
             }
         }
@@ -742,10 +723,7 @@ namespace aspectstar2
                 objects.Add(aO);
             }
 
-            if (newRoom.music != -1)
-                PlaySong.Play((PlaySong.SongName)newRoom.music);
-            else
-                PlaySong.Play((PlaySong.SongName)adventure.music);
+            PlaySong.Play(newRoom.music != -1 ? (PlaySong.SongName)newRoom.music : (PlaySong.SongName)adventure.music);
 
             // Run room code
             ActivateScript();
@@ -777,7 +755,7 @@ namespace aspectstar2
                     animCount = animCount - 2;
                     if (animCount <= 0)
                         leaver(beaten);
-                        //game.warpAdventure(beaten);
+                    //game.warpAdventure(beaten);
                     break;
                 case adventureModes.fadeIn:
                     animCount = animCount - 8;
@@ -829,7 +807,7 @@ namespace aspectstar2
                     ((AdventureEntity)obj).enemyInRange(objects);
             }
             //if (!player.moving)
-                Collide(player.flickerCount);
+            Collide(player.flickerCount);
             objects.RemoveAll(isInactive);
             objects = objects.Concat(newobjects).ToList();
             newobjects = new List<AdventureObject>();
@@ -984,7 +962,7 @@ namespace aspectstar2
                 .SetValue("anyEnemies", new Func<bool>(this.AnyEnemies))
                 .SetValue("clearObjects", new Action(this.ClearObjects))
                 .SetValue("TextBox", new Action<string>(this._textBox))
-                .SetValue("callMethod", new Action<string,string>(this.CallMethod))
+                .SetValue("callMethod", new Action<string, string>(this.CallMethod))
                 .SetValue("giveWeapon", new Action<int>(this.GiveWeapon))
                 .SetValue("getPlayerX", new Func<int>(this.GetPlayerX))
                 .SetValue("getPlayerY", new Func<int>(this.GetPlayerY))
@@ -1086,9 +1064,9 @@ namespace aspectstar2
                 }
             }
         }
-        
-        Queue<string> textStack = new Queue<string>();
-        
+
+        readonly Queue<string> textStack = new Queue<string>();
+
         void _textBox(string text)
         {
             TextBox(text, true);
@@ -1110,7 +1088,7 @@ namespace aspectstar2
 
             if (replace)
             {
-                chooser = delegate (bool b)
+                chooser = delegate
                 {
                     if (textStack.Count != 0)
                         TextBox(textStack.Dequeue(), false);
@@ -1134,14 +1112,14 @@ namespace aspectstar2
             else
             {
                 textStack.Enqueue(text);
-                chooser = delegate (bool b)
+                chooser = delegate
                 {
                     if (textStack.Count == 1)
                         QuestionBox(textStack.Dequeue(), choose);
                     else
                         TextBox(textStack.Dequeue(), false);
                 };
-             }
+            }
         }
 
         void CallMethod(string name, string message)
@@ -1215,13 +1193,10 @@ namespace aspectstar2
 
         public void SetName(string name)
         {
-            if (name != "")
-                label = name;
-            else
-                label = adventure.name;
+            label = name != "" ? name : adventure.name;
         }
 
-        Dictionary<string, bool> flags = new Dictionary<string, bool>();
+        readonly Dictionary<string, bool> flags = new Dictionary<string, bool>();
 
         public void SetFlag(string flag, bool value)
         {
@@ -1285,7 +1260,7 @@ namespace aspectstar2
             return false;
         }
 
-        Dictionary<string, int> counters = new Dictionary<string, int>();
+        readonly Dictionary<string, int> counters = new Dictionary<string, int>();
 
         public void SetCounter(string flag, int value)
         {
@@ -1360,12 +1335,7 @@ namespace aspectstar2
 
         int GetEnemyId(int enemy)
         {
-            if (objects[enemy] is AdventureEnemy)
-            {
-                return ((AdventureEnemy)objects[enemy]).id;
-            }
-            else
-                return -2;
+            return objects[enemy] is AdventureEnemy ? ((AdventureEnemy)objects[enemy]).id : -2;
         }
 
         void ChangeEnemy(int enemy, int definition)
@@ -1390,10 +1360,7 @@ namespace aspectstar2
 
         public static bool isProjectile(AdventureObject proj)
         {
-            if (proj is AdventureProjectile)
-                return true;
-            else
-                return false;
+            return proj is AdventureProjectile;
         }
     }
 }

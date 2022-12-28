@@ -58,7 +58,7 @@ namespace aspectstar2
     {
         bool left = true;
         bool aboveWater = true;
-        int waterTimer = 0;
+        int waterTimer;
 
         public AdventureBoss2()
         {
@@ -122,10 +122,7 @@ namespace aspectstar2
 
                 if (aboveWater)
                 {
-                    if (Master.globalRandom.Next(60) < 1)
-                        waterTimer = waterTimer - 40;
-                    else
-                        waterTimer = waterTimer - 1;
+                    waterTimer = Master.globalRandom.Next(60) < 1 ? waterTimer - 40 : waterTimer - 1;
 
                     if (waterTimer % 50 == 0)
                     {
@@ -220,16 +217,13 @@ namespace aspectstar2
 
         public override void Update()
         {
-            if (stallCount == 7)
+            if (stallCount == 7 && Master.globalRandom.Next(0, 9) > 7 && (flickerCount == 0))
             {
-                if (Master.globalRandom.Next(0, 9) > 7 && (flickerCount == 0))
-                {
-                    AdventureEnemy bunny = new AdventureEnemy(Master.currentFile.bestiary[6], 6);
-                    bunny.location = new Vector2(location.X, location.Y - 2);
-                    bunny.faceDir = faceDir;
-                    parent.addObject(bunny);
-                    PlaySound.Play(PlaySound.SoundEffectName.Aspect);
-                }
+                AdventureEnemy bunny = new AdventureEnemy(Master.currentFile.bestiary[6], 6);
+                bunny.location = new Vector2(location.X, location.Y - 2);
+                bunny.faceDir = faceDir;
+                parent.addObject(bunny);
+                PlaySound.Play(PlaySound.SoundEffectName.Aspect);
             }
 
             base.Update();
@@ -239,7 +233,7 @@ namespace aspectstar2
     public class AdventureBoss4 : AdventureEnemy
     {
         int visibleCounter = 25;
-        int randomCounter = 0;
+        int randomCounter;
 
         public AdventureBoss4()
         {
@@ -450,70 +444,71 @@ namespace aspectstar2
 
     public class AdventureBoss6 : AdventureEnemy
     {
-            int frameCount = 0;
+        int frameCount;
 
-            public AdventureBoss6()
+        public AdventureBoss6()
+        {
+            this.texture = Master.texCollection.texBosses;
+            this.offset = new Vector2(32, 96);
+            this.width = 32;
+            this.height = 32;
+            this.radius = 32;
+
+            BestiaryEntry bossEntry = new BestiaryEntry();
+            bossEntry.movementType = BestiaryEntry.MovementTypes.stationary;
+            definition = bossEntry;
+            health = 5;
+
+            defense = true;
+        }
+
+        public override void Draw(SpriteBatch spriteBatch, Color mask)
+        {
+            frameCount++;
+            if (frameCount == 30)
+                frameCount = 0;
+            int frame = frameCount / 10;
+            if (flickerCount > 0)
             {
-                this.texture = Master.texCollection.texBosses;
-                this.offset = new Vector2(32, 96);
-                this.width = 32;
-                this.height = 32;
-                this.radius = 32;
-
-                BestiaryEntry bossEntry = new BestiaryEntry();
-                bossEntry.movementType = BestiaryEntry.MovementTypes.stationary;
-                definition = bossEntry;
-                health = 5;
-
-                defense = true;
-            }
-
-            public override void Draw(SpriteBatch spriteBatch, Color mask)
-            {
-                frameCount++;
-                if (frameCount == 30)
-                    frameCount = 0;
-                int frame = frameCount / 10;
-                if (flickerCount > 0)
+                switch (frame)
                 {
-                    if (frame == 1)
+                    case 1:
                         flickerCount--;
-                    switch (frame)
-                    {
-                        case 0:
-                            frame = 2;
-                            break;
-                        case 2:
-                            frame = 0;
-                            break;
-                    }
-
-                    frame = frame + 3;
-
+                        break;
+                    case 0:
+                        frame = 2;
+                        break;
+                    case 2:
+                        frame = 0;
+                        break;
                 }
 
-                Vector2 screen_loc = location - offset;
+                frame = frame + 3;
 
-                Rectangle sourceRectangle = new Rectangle(frame * 64, 384, 64, 128);
-                Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y - (z * 2), 64, 128);
-
-                spriteBatch.Begin();
-                spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, mask);
-                spriteBatch.End();
             }
 
-            public override void Update()
-            {
-                parent.SetFlag("_redlight", flickerCount > 0);
-                base.Update();
-            }
+            Vector2 screen_loc = location - offset;
 
-            public override void Die()
-            {
-                parent.SetFlag("_die", true);
-                base.Die();
-            }
+            Rectangle sourceRectangle = new Rectangle(frame * 64, 384, 64, 128);
+            Rectangle destinationRectangle = new Rectangle((int)screen_loc.X, (int)screen_loc.Y - (z * 2), 64, 128);
+
+            spriteBatch.Begin();
+            spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, mask);
+            spriteBatch.End();
         }
+
+        public override void Update()
+        {
+            parent.SetFlag("_redlight", flickerCount > 0);
+            base.Update();
+        }
+
+        public override void Die()
+        {
+            parent.SetFlag("_die", true);
+            base.Die();
+        }
+    }
 
     public class AdventureBoss7 : AdventureEnemy
     {
@@ -564,20 +559,14 @@ namespace aspectstar2
             int del_x = (int)(parent.player.location.X - location.X);
             int del_y = (int)(parent.player.location.Y - location.Y);
 
-            if (Math.Abs(del_x) > Math.Abs(del_y))
-            {
-                if (del_x > 0)
-                    stableDir = Master.Directions.Right;
-                else
-                    stableDir = Master.Directions.Left;
-            }
-            else
-            {
-                if (del_y > 0)
-                    stableDir = Master.Directions.Down;
-                else
-                    stableDir = Master.Directions.Up;
-            }
+            // TODO: https://rules.sonarsource.com/csharp/RSPEC-3358
+            stableDir = Math.Abs(del_x) > Math.Abs(del_y) ?
+                del_x > 0 ?
+                Master.Directions.Right :
+                Master.Directions.Left :
+                del_y > 0 ?
+                Master.Directions.Down :
+                Master.Directions.Up;
 
             base.Update();
         }
@@ -598,8 +587,8 @@ namespace aspectstar2
 
     public class AdventureBoss8 : AdventureEnemy
     {
-        bool _active = false;
-        bool left = false;
+        bool _active;
+        bool left;
 
         public AdventureBoss8()
         {
@@ -644,7 +633,7 @@ namespace aspectstar2
             spriteBatch.End();
         }
 
-        int fireCount = 0;
+        int fireCount;
         public override void Update()
         {
             if (!_active && parent.GetFlag("_active"))
@@ -666,8 +655,7 @@ namespace aspectstar2
 
             if (_active || health < 4)
             {
-                if (left) location.X = location.X - 2;
-                else location.X = location.X + 2;
+                location.X = left ? location.X - 2 : location.X + 2;
             }
 
             if (flickerCount == 1)
@@ -693,8 +681,9 @@ namespace aspectstar2
     public class AdventureBoss8Helper : AdventureObject
     {
         bool _active;
-        bool left, down;
-        int handOpen = 0;
+        private readonly bool left;
+        private bool down;
+        int handOpen;
 
         public AdventureBoss8Helper(Vector2 location, bool left)
         {
@@ -762,8 +751,7 @@ namespace aspectstar2
 
             if (handOpen > 16 || _active)
             {
-                if (down) location.Y = location.Y + 2;
-                else location.Y = location.Y - 2;
+                location.Y = down ? location.Y + 2 : location.Y - 2;
             }
 
             base.Update();
@@ -801,7 +789,7 @@ namespace aspectstar2
             }
         }
 
-        int timerCount = 0;
+        int timerCount;
 
         enum Aspect
         {
@@ -924,11 +912,11 @@ namespace aspectstar2
 
     public class AdventureBoss9Phase2 : AdventureObject
     {
-        bool begin = false;
+        bool begin;
         int health = 9;
-        int flickerCount = 0;
+        int flickerCount;
         int bulletCount = 10;
-        int laughCount = 0;
+        int laughCount;
         bool left;
 
         public AdventureBoss9Phase2()
@@ -953,8 +941,7 @@ namespace aspectstar2
 
             if (stallCount % 2 == 0)
             {
-                if (left) location.X = location.X - 2;
-                else location.X = location.X + 2;
+                location.X = left ? location.X - 2 : location.X + 2;
             }
             else if (bulletCount == 0)
             {
@@ -994,7 +981,7 @@ namespace aspectstar2
 
         public override void Touch()
         {
-            
+
         }
 
         public void Thud()
